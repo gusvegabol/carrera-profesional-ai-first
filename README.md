@@ -12,9 +12,9 @@ La información verificable disponible describe solo el arranque mínimo de PCS 
 
 ## Estado actual
 
-La capa PCS del host ya existe y su estado vivo indica que el arranque mínimo está hecho, pero la definición operativa del host sigue pendiente de consolidación.
+La capa PCS del host ya existe y su estado vivo indica que el arranque mínimo está hecho. La definición operativa del MVP ya tiene una primera materialización revisable.
 
-El foco operativo verificado es completar el arranque mínimo y consolidar la definición operativa del host.
+El foco operativo verificado es revisar el paquete de Fase 1 y consolidar la siguiente fase solo si la base documental se aprueba.
 
 Para estado operativo vivo, consultar `./.pcs/estado/estado-actual.md` si existe.
 
@@ -49,10 +49,13 @@ PCS gobierna únicamente su capa operativa `.pcs/` y no sustituye la documentaci
 
 No se ha verificado documentación raíz propia del anfitrión fuera de `.pcs/`.
 
+Nota mínima de alcance: el primer documento base del MVP vive en `docs/alcance-mvp.md`.
+
 Documentos confirmados durante esta validación:
 
 - `./.pcs/estado/estado-actual.md`
 - `./.pcs/sesiones/sesion-20260614-2132-inicio-pcs-en-carrera-ai.md`
+- `./docs/alcance-mvp.md`
 
 [PENDIENTE: identificar README, documentación funcional o documentación técnica propia del host si existen]
 
@@ -72,4 +75,4 @@ Documentos confirmados durante esta validación:
 
 ## Siguiente gesto recomendado
 
-Abrir la primera sesión real del host cuando exista una tarea concreta y documentar entonces el alcance funcional efectivo de `carrera-profesional-ai-first`.
+Revisar `docs/alcance-mvp.md` como base del MVP y decidir si la Fase 2 debe arrancar.
