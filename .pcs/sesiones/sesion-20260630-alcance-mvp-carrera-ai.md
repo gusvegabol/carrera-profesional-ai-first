@@ -294,3 +294,11 @@ Objetivo al retomar:
 
 La Fase 1 ya quedó materializada como sesión específica en `.pcs/sesiones/sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai.md` y como documento base en `docs/alcance-mvp.md`.
 
+## 18. Actualización — Continuidad hacia la entrevista profesional
+
+El alcance MVP debe reinterpretarse desde la entrevista conversacional profunda como núcleo operativo.
+
+La bóveda `boveda-entrevista-profesional/` ya actúa como semilla que alimentará el futuro playbook de entrevista.
+
+Esta nota no modifica `docs/alcance-mvp.md`; solo deja continuidad documental para el siguiente trabajo.
+

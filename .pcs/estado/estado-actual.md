@@ -2,7 +2,7 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: pendiente_de_actualizacion
-fecha_actualizacion: 2026-06-30 22:33
+fecha_actualizacion: 2026-07-01 18:13
 ultima_sesion_relacionada: sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai
 host: carrera-ai
 ---
@@ -15,34 +15,40 @@ La capa PCS del host ya no está solo en arranque mínimo: existe una sesión ma
 
 La Fase 1 ya quedó materializada como paquete documental revisable y ahora se está evaluando el contenido de `docs/alcance-mvp.md` por parte del usuario y de ChatGPT.
 
+La capa operativa ha detectado una desviación respecto a la idea original: el proyecto no debe quedarse en documentos mínimos ni en preguntas genéricas. El foco se ha corregido hacia la entrevista conversacional profunda como capacidad nuclear del sistema, y la bóveda `boveda-entrevista-profesional/` ya quedó consolidada como paso previo al playbook.
+
+La bóveda ya quedó creada y validada, y la trazabilidad del reenfoque también quedó validada por ChatGPT. El siguiente trabajo recomendado empieza por `01_conceptos/` y `04_patrones_de_preguntas/`, mientras `docs/alcance-mvp.md` sigue pendiente de reinterpretación desde la entrevista como núcleo.
+
+PCS canónico no se modifica en este reajuste. La memoria operativa del host sigue viviendo en `.pcs/`.
+
 ## Foco operativo
 
-Consolidar la definición operativa del proyecto, acompañar la evaluación de `docs/alcance-mvp.md` por parte del usuario y de ChatGPT, y si se aprueba pasar a la Fase 2: entradas mínimas.
+Investigar y desarrollar la bóveda de entrevista profesional hasta convertirla en base del futuro playbook, usando la entrevista conversacional profunda como la capacidad nuclear a validar en el MVP.
 
 ## Próximos pasos
 
-- Revisar el paquete de Fase 1 ya materializado.
-- Evaluar `docs/alcance-mvp.md` con el usuario y ChatGPT antes de decidir si queda aprobado como base operativa.
-- Decidir si el `README.md` debe seguir ampliándose o si basta con la nota mínima añadida.
-- Determinar si procede registrar formalmente la decisión candidata y la acción candidata derivadas de la revisión.
+- Desarrollar los conceptos y patrones nucleares de `boveda-entrevista-profesional/`.
+- Evaluar si la entrevista conversacional profunda realmente funciona como núcleo del sistema.
+- Replantear el MVP a partir de la entrevista antes de ampliar el alcance a nuevas fases.
 
 ## Acciones abiertas relevantes
 
 - No hay acciones formales registradas todavía.
-- Queda como acción candidata revisar y validar el paquete de Fase 1 de `Carrera Profesional AI-First`.
+- Queda como acción candidata investigar y desarrollar `boveda-entrevista-profesional/` hasta producir un primer playbook.
 
 ## Decisiones vigentes relevantes
 
 - `hosts/hosts.yaml` registra `carrera-ai` como host PCS.
 - La carpeta `.pcs/` es la memoria operativa del host.
 - Se mantiene la separación de capas entre PCS canónico, proyecto anfitrión, `.pcs/`, Notion, Drive y CODEX.
-- No hay todavía una decisión formal nueva; el enfoque AI-First sin aplicación propia sigue documentado como candidato.
+- No hay todavía una decisión formal nueva; queda como decisión candidata validar primero la entrevista conversacional profunda como núcleo del sistema.
 
 ## Bloqueos o riesgos
 
 - El propósito funcional local del host sigue pendiente de consolidación en artefactos base del repositorio.
 - Existe riesgo de volver a derivar hacia desarrollar una aplicación propia antes de validar el sistema AI-First.
 - Existe riesgo de ampliar el proyecto hasta convertirlo en un segundo cerebro generalista en lugar de mantener el foco en carrera profesional.
+- Si la entrevista no funciona, el enfoque AI-First conversacional no justifica continuar.
 - Notion no debe confundirse con estado vivo ni sustituir sin criterio a la capa `.pcs/`.
 
 ## Nota de vigencia

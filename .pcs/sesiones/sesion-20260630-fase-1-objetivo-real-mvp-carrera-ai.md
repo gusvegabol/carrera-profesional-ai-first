@@ -154,3 +154,22 @@ Para retomar esta sesión, leer primero:
 - Respuesta Notion: pendiente de cierre
 - Host resuelto: `carrera-ai` -> `C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first`
 
+## 19. Actualización — Reenfoque hacia entrevista profesional
+
+Se corrigió la deriva que reducía el sistema a documentos mínimos y preguntas genéricas.
+
+La idea original vuelve a quedar en primer plano: la entrevista conversacional profunda debe ser la capacidad nuclear del MVP y la fuente para extraer experiencia profesional tácita con evidencia.
+
+La bóveda `boveda-entrevista-profesional/` ya quedó consolidada como paso previo al playbook de entrevista y como base documental para la investigación futura.
+
+La decisión formal sobre reformular el MVP desde la entrevista como núcleo sigue pendiente y no se formaliza aquí.
+
+`docs/alcance-mvp.md` no se modifica en esta intervención.
+
+## 20. Actualización — Estado tras validación de bóveda
+
+ChatGPT validó la consolidación de la bóveda contra Drive sincronizado y también la trazabilidad del reenfoque hacia entrevista profesional profunda.
+
+La siguiente línea de trabajo debe centrarse en `01_conceptos/` y `04_patrones_de_preguntas/`, todavía sin generar el primer playbook.
+
+Esta intervención no modifica `docs/alcance-mvp.md`.
