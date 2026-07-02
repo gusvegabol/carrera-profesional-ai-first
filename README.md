@@ -76,3 +76,21 @@ Documentos confirmados durante esta validación:
 ## Siguiente gesto recomendado
 
 Revisar `docs/alcance-mvp.md` como base del MVP y decidir si la Fase 2 debe arrancar.
+
+
+## Carpetas auxiliares excluidas
+
+Todo el contenido de `.tmp/` debe considerarse material temporal, auxiliar o de trabajo local.
+
+La carpeta `.tmp/` no forma parte del proyecto operativo, no forma parte de la bóveda `boveda-entrevista-profesional/` y no debe usarse como fuente de verdad.
+
+Su contenido no debe leerse, resumirse, indexarse, modificarse ni usarse salvo petición explícita del usuario.
+
+Esto incluye, entre otros posibles contenidos:
+
+- `.tmp/notas/`
+- borradores temporales
+- exports parciales
+- pruebas
+- resultados intermedios
+- material auxiliar recopilado por el usuario

@@ -44,10 +44,10 @@ Suele aparecer cuando la persona:
 
 ## Relación con otros conceptos o patrones
 Este concepto se relaciona con:
-- `CONCEPTO_EXPERIENCIA_TACITA_VALIDABLE`, porque el relato debe terminar en evidencia;
-- `CONCEPTO_TRANSICION_PROFESIONAL`, porque toda historia profesional cruza cambios;
-- `PATRON_NARRATIVA_MAS_EVIDENCIA`, porque la narración debe aterrizarse;
-- `PATRON_4S_TRANSICION`, porque la historia también se lee como afrontamiento.
+- [[CONCEPTO_EXPERIENCIA_TACITA_VALIDABLE]], porque el relato debe terminar en evidencia;
+- [[CONCEPTO_TRANSICION_PROFESIONAL]], porque toda historia profesional cruza cambios;
+- [[PATRON_NARRATIVA_MAS_EVIDENCIA]], porque la narración debe aterrizarse;
+- [[PATRON_4S_TRANSICION]], porque la historia también se lee como afrontamiento.
 
 ## Fuente base
-Deriva de: `boveda-entrevista-profesional/08_fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales.md`.
+Deriva de: [[Análisis estructural de la reconstrucción de trayectorias profesionales]].

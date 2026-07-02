@@ -1,4 +1,3 @@
-
 # Bóveda de conocimiento — Entrevista Profesional
 
 ## 1. Idea central

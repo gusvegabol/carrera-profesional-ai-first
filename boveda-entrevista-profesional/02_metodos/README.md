@@ -2,6 +2,10 @@
 
 Esta carpeta reunirá métodos y enfoques útiles para aprender a entrevistar mejor.
 
+## Convención de nombres
+
+Los documentos de esta carpeta deben usar la raíz `METODO_`. Ejemplo: `METODO_ENTREVISTA_EVENTOS_CONDUCTUALES.md`. La convención completa de nombres está definida en el README.md raíz de la bóveda.
+
 ## Función
 
 - Comparar técnicas.

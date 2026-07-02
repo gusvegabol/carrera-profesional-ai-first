@@ -2,6 +2,10 @@
 
 Esta carpeta reunirá los conceptos base que permiten hablar con precisión sobre entrevista profesional.
 
+## Convención de nombres
+
+Los documentos de esta carpeta deben usar la raíz `CONCEPTO_`. Ejemplo: `CONCEPTO_EXPERIENCIA_TACITA_VALIDABLE.md`. La convención completa de nombres está definida en el README.md raíz de la bóveda.
+
 ## Función
 
 - Definir términos.

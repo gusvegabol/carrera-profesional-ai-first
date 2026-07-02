@@ -21,6 +21,7 @@ Convención de nombres:
 | Nombre skill | Cuándo se ejecuta | Fecha última revisión |
 |---|---|---|
 | `drive-mueve-fichero` | Cuando hay que mover ficheros de Google Drive por nombre, URL o ID a carpetas del proyecto, exportar Google Docs u otros ficheros exportables a `.md`, verificar la carpeta final o, si procede, enviar el origen a la papelera. | 2026-06-15 17:41 |
+| `pcs-obsidian-corrige-links` | Cuando hay que convertir referencias documentales crudas en notas de Obsidian de este repo a wikilinks y verificar que no queden restos. | 2026-07-03 00:27 |
 | `pcs-generar-system-prompt-host-anfitrion` | Cuando se necesita generar en `.tmp/` el system prompt corto de un workspace ChatGPT para un host anfitrión PCS ya registrado en `hosts/hosts.yaml`. | 2026-06-18 17:19 |
 | `pcs-gestionar-hosts` | Cuando hay que crear, registrar, añadir, actualizar o archivar un host PCS en `hosts/hosts.yaml`, o validar YAML/frontmatter relacionado con ese flujo. | 2026-06-15 10:49 |
 | `pcs-gestionar-notion-codex` | Cuando CODEX recibe una URL o page ID aprobado desde `pcs-prompts-codex`, especialmente en ciclos de trabajo ligados a un host PCS, al repositorio local o a una respuesta coordinada en Notion. | 2026-06-15 13:46 |

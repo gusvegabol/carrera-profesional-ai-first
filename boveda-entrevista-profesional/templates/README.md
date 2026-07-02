@@ -2,6 +2,10 @@
 
 Esta carpeta contiene material heredado u opcional para reutilizar con criterio.
 
+## Convención de nombres
+
+Los documentos de esta carpeta deben usar la raíz `TEMPLATE_`. Ejemplo: `TEMPLATE_NOTA_ENTREVISTA.md`. La convención completa de nombres está definida en el README.md raíz de la bóveda.
+
 ## Función
 
 - Conservar plantillas útiles.

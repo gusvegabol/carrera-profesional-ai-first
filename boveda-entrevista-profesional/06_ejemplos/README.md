@@ -2,6 +2,10 @@
 
 Esta carpeta servirá para mostrar ejemplos concretos de buena y mala práctica.
 
+## Convención de nombres
+
+Los documentos de esta carpeta deben usar la raíz `EJEMPLO_`. Ejemplo: `EJEMPLO_TRANSICION_PROFESIONAL_RECONSTRUIDA.md`. La convención completa de nombres está definida en el README.md raíz de la bóveda.
+
 ## Función
 
 - Aterrizar conceptos.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Obsidian Corrige Links"
+  short_description: "Corrige enlaces de notas Obsidian en este repo."
+  default_prompt: "Use this skill to convert raw document references in repo notes into matching [[wikilinks]] and verify the edits."

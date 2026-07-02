@@ -302,3 +302,9 @@ La bóveda `boveda-entrevista-profesional/` ya actúa como semilla que alimentar
 
 Esta nota no modifica `docs/alcance-mvp.md`; solo deja continuidad documental para el siguiente trabajo.
 
+## 19. Actualización — Concreción del piloto
+
+El alcance del MVP queda concretado hacia un primer piloto de entrevista profesional profunda ejecutado por ChatGPT, con salida mínima de una competencia profesional validable y evidencia explícita.
+
+La sesión marco sigue abierta como contenedor de alcance general, pero ya con la concreción operativa del piloto como referencia viva.
+

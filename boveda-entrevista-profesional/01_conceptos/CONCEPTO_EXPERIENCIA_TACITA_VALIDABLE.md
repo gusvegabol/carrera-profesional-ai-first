@@ -44,10 +44,10 @@ Aparece cuando la persona describe:
 
 ## Relación con otros conceptos o patrones
 Este concepto se relaciona con:
-- `CONCEPTO_CARRERA_COMO_CONSTRUCCION_NARRATIVA`, porque el relato debe encontrar forma y sentido;
-- `CONCEPTO_TRANSICION_PROFESIONAL`, porque muchas transiciones obligan a rescatar experiencia oculta;
-- `PATRON_STAR_AMPLIADO`, porque la evidencia concreta se captura mejor en incidentes;
-- `PATRON_NARRATIVA_MAS_EVIDENCIA`, porque la historia debe terminar en pruebas.
+- [[CONCEPTO_CARRERA_COMO_CONSTRUCCION_NARRATIVA]], porque el relato debe encontrar forma y sentido;
+- [[CONCEPTO_TRANSICION_PROFESIONAL]], porque muchas transiciones obligan a rescatar experiencia oculta;
+- [[PATRON_STAR_AMPLIADO]], porque la evidencia concreta se captura mejor en incidentes;
+- [[PATRON_NARRATIVA_MAS_EVIDENCIA]], porque la historia debe terminar en pruebas.
 
 ## Fuente base
-Deriva de: `boveda-entrevista-profesional/08_fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales.md`.
+Deriva de: [[Análisis estructural de la reconstrucción de trayectorias profesionales]].

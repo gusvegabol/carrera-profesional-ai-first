@@ -2,6 +2,10 @@
 
 Esta carpeta contiene la base fundacional de la bóveda de entrevista profesional.
 
+## Convención de nombres
+
+Los documentos fundacionales de esta carpeta no necesitan prefijo semántico. Deben usar nombres naturales en minúscula y kebab-case, por ejemplo `idea-central.md`. La convención completa de nombres está definida en el README.md raíz de la bóveda.
+
 ## Función
 
 - Explicar por qué existe la bóveda.

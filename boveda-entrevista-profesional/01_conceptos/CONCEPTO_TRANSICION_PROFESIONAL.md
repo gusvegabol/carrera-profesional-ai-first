@@ -44,10 +44,10 @@ Aparece cuando la persona cuenta:
 
 ## Relación con otros conceptos o patrones
 Este concepto se relaciona con:
-- `CONCEPTO_CARRERA_COMO_CONSTRUCCION_NARRATIVA`, porque toda transición reescribe la historia;
-- `CONCEPTO_EXPERIENCIA_TACITA_VALIDABLE`, porque el cambio suele revelar experiencia escondida;
-- `PATRON_4S_TRANSICION`, porque ese patrón operacionaliza el análisis;
-- `PATRON_STAR_AMPLIADO`, porque muchas transiciones se entienden mejor a través de incidentes concretos.
+- [[CONCEPTO_CARRERA_COMO_CONSTRUCCION_NARRATIVA]], porque toda transición reescribe la historia;
+- [[CONCEPTO_EXPERIENCIA_TACITA_VALIDABLE]], porque el cambio suele revelar experiencia escondida;
+- [[PATRON_4S_TRANSICION]], porque ese patrón operacionaliza el análisis;
+- [[PATRON_STAR_AMPLIADO]], porque muchas transiciones se entienden mejor a través de incidentes concretos.
 
 ## Fuente base
-Deriva de: `boveda-entrevista-profesional/08_fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales.md`.
+Deriva de: [[Análisis estructural de la reconstrucción de trayectorias profesionales]].

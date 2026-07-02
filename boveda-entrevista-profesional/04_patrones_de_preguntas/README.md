@@ -2,6 +2,10 @@
 
 Esta carpeta reunirá patrones, secuencias y familias de preguntas para la entrevista profesional.
 
+## Convención de nombres
+
+Los documentos de esta carpeta deben usar la raíz `PATRON_`. Ejemplo: `PATRON_STAR_AMPLIADO.md`. La convención completa de nombres está definida en el README.md raíz de la bóveda.
+
 ## Función
 
 - Organizar preguntas por intención.

@@ -59,3 +59,11 @@ No se verificó `README.md` ni `AGENTS.md` previos en la raíz del host.
 - No inventar contexto funcional no documentado.
 - No editar `hosts/hosts.yaml` fuera del flujo guiado.
 - No duplicar el núcleo PCS dentro de este repositorio.
+
+## Exclusión operativa de `.tmp/`
+
+Los agentes automáticos no deben leer, recorrer, indexar, resumir, modificar ni usar ningún contenido dentro de `.tmp/` salvo autorización explícita del usuario.
+
+`.tmp/` es una zona temporal y auxiliar. No forma parte del proyecto operativo, de la bóveda `boveda-entrevista-profesional/` ni de ninguna fuente de verdad del host.
+
+Esta exclusión incluye `.tmp/notas/` y cualquier otro contenido temporal, borrador, export parcial, prueba o resultado intermedio.

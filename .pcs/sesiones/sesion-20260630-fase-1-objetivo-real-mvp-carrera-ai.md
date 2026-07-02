@@ -173,3 +173,28 @@ ChatGPT validó la consolidación de la bóveda contra Drive sincronizado y tamb
 La siguiente línea de trabajo debe centrarse en `01_conceptos/` y `04_patrones_de_preguntas/`, todavía sin generar el primer playbook.
 
 Esta intervención no modifica `docs/alcance-mvp.md`.
+
+## 21. Actualización — Playbook ChatGPT v1.3.1
+
+La fase de diseño del playbook ya quedó concretada hacia una versión candidata específica para ChatGPT como entrevistador real del MVP.
+
+La evolución conceptual quedó alineada así:
+
+- v1: ruta base + guardarraíles condicionales.
+- v1.1: calidad de inferencia y evidencia.
+- v1.2_CHATGPT: adaptación al entrevistador ChatGPT.
+- v1.3_CHATGPT: gobierno de ejecución para ChatGPT.
+- v1.3.1_CHATGPT: integración de reglas micro-operativas para chat por turnos.
+
+Aprendizajes clave recientes:
+
+- ChatGPT puede sobreinferir.
+- ChatGPT puede embellecer competencias.
+- ChatGPT puede aceptar validaciones pasivas.
+- ChatGPT puede confundir fluidez textual con evidencia.
+- ChatGPT no percibe tono, lenguaje corporal ni silencios reales.
+- Por eso necesita reglas explícitas de turno, evidencia y cierre.
+
+El objetivo mínimo del piloto queda formulado como extraer al menos una competencia profesional con evidencia verificable que la persona no había articulado claramente antes de la entrevista.
+
+No se cierra la sesión. Solo queda actualizado el registro vivo para reflejar que el playbook ya apunta a `PLAYBOOK_ENTREVISTA_PROFESIONAL_v1.3.1_CHATGPT.md` como versión candidata operativa.

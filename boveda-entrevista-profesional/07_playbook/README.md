@@ -2,6 +2,10 @@
 
 Esta carpeta queda reservada para la síntesis operativa futura de la bóveda.
 
+## Convención de nombres
+
+Los documentos de esta carpeta deben usar `PLAYBOOK_` para documentos de síntesis operativa completa y `SECCION_PLAYBOOK_` para piezas parciales del futuro playbook. Ejemplo: `PLAYBOOK_ENTREVISTA_PROFESIONAL_PROFUNDA.md`. La convención completa de nombres está definida en el README.md raíz de la bóveda.
+
 ## Función
 
 - Conducir la entrevista con criterio.

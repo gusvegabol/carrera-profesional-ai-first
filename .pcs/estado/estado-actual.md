@@ -2,7 +2,7 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: pendiente_de_actualizacion
-fecha_actualizacion: 2026-07-01 18:13
+fecha_actualizacion: 2026-07-03 00:00
 ultima_sesion_relacionada: sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai
 host: carrera-ai
 ---
@@ -20,6 +20,10 @@ La capa operativa ha detectado una desviación respecto a la idea original: el p
 La bóveda ya quedó creada y validada, y la trazabilidad del reenfoque también quedó validada por ChatGPT. El siguiente trabajo recomendado empieza por `01_conceptos/` y `04_patrones_de_preguntas/`, mientras `docs/alcance-mvp.md` sigue pendiente de reinterpretación desde la entrevista como núcleo.
 
 PCS canónico no se modifica en este reajuste. La memoria operativa del host sigue viviendo en `.pcs/`.
+
+La fase de trabajo reciente consolidó además que el MVP debe concretarse como un primer piloto de entrevista profesional profunda ejecutado por ChatGPT, con salida mínima de competencia profesional con evidencia verificable y reglas explícitas de gobierno para la conversación. La bóveda de entrevista ya quedó normalizada en sus `README.md` con la convención de nombres semánticos por carpeta.
+
+La sesión marco de alcance MVP y la sesión de Fase 1 siguen abiertas y continúan siendo la referencia viva para el cierre del objetivo real del MVP.
 
 ## Foco operativo
 
@@ -50,6 +54,7 @@ Investigar y desarrollar la bóveda de entrevista profesional hasta convertirla 
 - Existe riesgo de ampliar el proyecto hasta convertirlo en un segundo cerebro generalista en lugar de mantener el foco en carrera profesional.
 - Si la entrevista no funciona, el enfoque AI-First conversacional no justifica continuar.
 - Notion no debe confundirse con estado vivo ni sustituir sin criterio a la capa `.pcs/`.
+- `.tmp/` queda excluida por defecto del uso operativo y de lectura salvo autorización explícita.
 
 ## Nota de vigencia
 
@@ -65,3 +70,4 @@ Estado actualizado a partir de la materialización de la Fase 1. Refleja líneas
   - .pcs/sesiones/sesion-20260630-alcance-mvp-carrera-ai.md
   - docs/alcance-mvp.md
   - README.md
+  - boveda-entrevista-profesional/README.md y README de sus carpetas
