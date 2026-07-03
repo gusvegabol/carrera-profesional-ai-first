@@ -71,3 +71,19 @@ Estado actualizado a partir de la materialización de la Fase 1. Refleja líneas
   - docs/alcance-mvp.md
   - README.md
   - boveda-entrevista-profesional/README.md y README de sus carpetas
+
+## Actualización — Entrevista piloto Herfrailes RRHH
+
+Ya existe una primera entrevista piloto real/simulada-operativa registrada en la bóveda de entrevista profesional.
+
+El caso de `Herfrailes SL` produjo una competencia profesional profunda con evidencia fuerte:
+
+- `Diseño de sistemas internos socio-técnicos`
+- creación desde cero de un sistema interno de RRHH con automatización, normativa y experiencia del personal integradas
+
+El playbook `PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA` queda validado parcialmente para seguir probando, no aprobado definitivamente.
+
+El foco inmediato pasa a revisar el documento creado y decidir si conviene una segunda entrevista con otra tensión o un ajuste mínimo del método.
+
+PCS canónico no se modifica en este reajuste.
+La memoria operativa del host sigue viviendo en `.pcs/`.

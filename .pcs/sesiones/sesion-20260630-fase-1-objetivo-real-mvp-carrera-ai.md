@@ -198,3 +198,20 @@ Aprendizajes clave recientes:
 El objetivo mínimo del piloto queda formulado como extraer al menos una competencia profesional con evidencia verificable que la persona no había articulado claramente antes de la entrevista.
 
 No se cierra la sesión. Solo queda actualizado el registro vivo para reflejar que el playbook ya apunta a `PLAYBOOK_ENTREVISTA_PROFESIONAL_v1.3.1_CHATGPT.md` como versión candidata operativa.
+
+## 22. Actualización — Entrevista piloto Herfrailes RRHH
+
+Se registró la primera entrevista piloto real/simulada-operativa del MVP centrada en la organización del área de RRHH en `Herfrailes SL`.
+
+La entrevista produjo una unidad profesional de valor validada por la persona entrevistada:
+
+- `Diseño de sistemas internos socio-técnicos`
+- formulación observable: capacidad para diseñar, implantar y mantener desde cero sistemas operativos internos que integran procesos humanos, requisitos legales y automatización tecnológica
+
+La validación es fuerte en evidencia y parcial en cuanto a la madurez final del playbook:
+
+- la ruta situación concreta -> dificultad -> acción propia -> efecto -> competencia -> validación funcionó;
+- el caso confirma utilidad del enfoque de entrevista profunda;
+- el playbook candidato sigue necesitando más pilotos antes de considerarse cerrado o definitivo;
+- la sesión no se cierra;
+- el siguiente paso recomendado es revisar el documento creado y decidir si conviene una segunda entrevista con otra tensión.

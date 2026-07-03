@@ -24,6 +24,7 @@ Cuando exista riesgo de ambigüedad, las referencias a documentos físicos deben
 | `05_fricciones_y_antipatrones/` | `ANTIPATRON_` o `FRICCION_` |
 | `06_ejemplos/` | `EJEMPLO_` |
 | `07_playbook/` | `PLAYBOOK_` o `SECCION_PLAYBOOK_` |
+| `08_entrevistas_piloto/` | `PILOTO_` |
 | `08_fuentes/` | `FUENTE_` |
 | `templates/` | `TEMPLATE_` |
 
@@ -61,8 +62,9 @@ Ejemplos de excepción fundacional:
 - `03_roles/`: miradas desde distintos perfiles.
 - `04_patrones_de_preguntas/`: secuencias y tipos de preguntas.
 - `05_fricciones_y_antipatrones/`: errores a evitar.
-- `06_ejemplos/`: casos y muestras prácticas.
+- `06_ejemplos/`: casos y muestras prácticas didácticas.
 - `07_playbook/`: síntesis operativa futura.
+- `08_entrevistas_piloto/`: entrevistas piloto reales o semi-reales para validar el método.
 - `08_fuentes/`: referencias y material de apoyo.
 - `templates/`: material heredado u opcional para reutilizar con criterio.
 

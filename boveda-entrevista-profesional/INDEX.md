@@ -16,6 +16,7 @@ Esta bóveda organiza el conocimiento necesario para diseñar una entrevista pro
 - `05_fricciones_y_antipatrones/`: errores y señales de deriva.
 - `06_ejemplos/`: ejemplos de uso.
 - `07_playbook/`: síntesis operativa futura.
+- `08_entrevistas_piloto/`: entrevistas piloto reales o semi-reales.
 - `08_fuentes/`: referencias de apoyo.
 - `templates/`: material heredado u opcional.
 
@@ -53,6 +54,10 @@ Sirve para aterrizar buenas y malas prácticas con casos concretos.
 
 Preparará la síntesis ejecutable cuando la base conceptual esté madura.
 
+### `08_entrevistas_piloto/`
+
+Sirve para registrar pilotos reales o semi-reales que validan parcialmente el método.
+
 ### `08_fuentes/`
 
 Guardará referencias y material de apoyo para futuras investigaciones.
@@ -66,6 +71,8 @@ Contiene material heredado u opcional. No es la base conceptual de la bóveda.
 - `00_proposito/idea-central.md`
 - `00_proposito/preguntas-guia.md`
 - `00_proposito/principios-iniciales.md`
+- `08_entrevistas_piloto/README.md`
+- `08_entrevistas_piloto/PILOTO_001_ENTREVISTA_HERFRAILES_RRHH.md`
 - `README.md`
 - `INDEX.md`
 - `templates/README.md`
@@ -88,7 +95,7 @@ Contiene material heredado u opcional. No es la base conceptual de la bóveda.
 
 ## Estado inicial
 
-La bóveda está en fase semilla. Tiene propósito visible, estructura inicial y documentos fundacionales, pero aún no contiene investigación desarrollada ni playbook final.
+La bóveda está en fase semilla ampliada. Tiene propósito visible, estructura inicial, documentos fundacionales y ya incorpora un primer piloto para validar el método, pero aún no contiene investigación desarrollada ni playbook final.
 
 ## Siguiente paso recomendado
 
