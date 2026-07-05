@@ -2,7 +2,7 @@
 
 ## Estado de este documento
 
-Es un primer borrador, no la versión consolidada que prevé [[idea-central]] para [[PLAYBOOK_ENTREVISTA_PROFESIONAL]]. Su función es traducir en reglas operativas concretas lo que hasta ahora vive como criterio conceptual en [[CONCEPTO_ARCOS_DE_SESIÓN]], apoyándose en los tres patrones y en el antipatrón [[ANTIPATRON_SECUENCIAS_SIN_PAUSAS]] ya documentados.
+Es un primer borrador, no la versión consolidada que prevé [[idea-central]] para [[PLAYBOOK_ENTREVISTA_PROFESIONAL]]. Su función es traducir en reglas operativas concretas lo que hasta ahora vive como criterio conceptual en [[CONCEPTO_ARCO_DE_SESION]], apoyándose en los tres patrones y en el antipatrón [[ANTIPATRON_SECUENCIAS_SIN_PAUSAS]] ya documentados.
 
 Corresponde al alcance mínimo necesario para pilotar el MVP definido en conversaciones previas: validar si la entrevista profesional profunda es el mejor método para extraer al menos una competencia con evidencia verificable que el usuario no había articulado antes de empezar.
 
@@ -36,7 +36,7 @@ Todo lo demás que ocurra en la sesión —narrativa de sentido, exploración de
 
 1. **Apertura.** Encuadre breve, sin proyección identitaria (se deja fuera del MVP el bloque CCI/MCS). Se pide a la persona que elija una etapa profesional por la que empezar.
 2. **Cuerpo — por cada etapa elegida.** Se aplica el patrón que corresponda según los disparadores de la sección 4, con las pausas de reflejo obligatorias de la sección 5.
-3. **Transición entre etapas.** Antes de abrir una nueva etapa, se ofrece la posibilidad de detenerse o continuar (ver movimientos de transición en [[CONCEPTO_ARCOS_DE_SESIÓN]]).
+3. **Transición entre etapas.** Antes de abrir una nueva etapa, se ofrece la posibilidad de detenerse o continuar (ver movimientos de transición en [[CONCEPTO_ARCO_DE_SESION]]).
 4. **Cierre de sesión.** Se aplica cuando se cumple el criterio de la sección 7.
 
 ## 4. Tabla de disparadores de activación
@@ -106,11 +106,11 @@ Cuando la historia que cuenta la persona y la evidencia concreta que aporta desp
 
 Este documento opera sobre:
 
-- [[CONCEPTO_ARCOS_DE_SESIÓN]], del que es la traducción operativa en reglas ejecutables;
+- [[CONCEPTO_ARCO_DE_SESION]], del que es la traducción operativa en reglas ejecutables;
 - [[ANTIPATRON_SECUENCIAS_SIN_PAUSAS]], cuyas correcciones se incorporan directamente en la sección 5;
 - [[PATRON_STAR_AMPLIADO]], [[PATRON_4S_TRANSICION]], [[PATRON_NARRATIVA_MAS_EVIDENCIA]], cuyo momento de activación y límites de aplicación quedan aquí fijados;
 - [[CONCEPTO_SER_ESCUCHADO_Y_VALIDADO]], cuya condición relacional sostiene todos los movimientos de reflejo y reparación descritos.
 
 ## Fuente base
 
-Síntesis operativa derivada de [[CONCEPTO_ARCOS_DE_SESIÓN]] y de la revisión clínica transversal de los tres patrones existentes, con apoyo en [[Análisis estructural de la reconstrucción de trayectorias profesionales]] y [[Narrative career counseling - My career story and pictorial narratives]].
+Síntesis operativa derivada de [[CONCEPTO_ARCO_DE_SESION]] y de la revisión clínica transversal de los tres patrones existentes, con apoyo en [[Análisis estructural de la reconstrucción de trayectorias profesionales]] y [[Narrative career counseling - My career story and pictorial narratives]].

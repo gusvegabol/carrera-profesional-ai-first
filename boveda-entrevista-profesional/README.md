@@ -57,7 +57,7 @@ Ejemplos de excepción fundacional:
 ## Qué contiene hoy
 
 - `00_proposito/`: base fundacional de la bóveda.
-- `01_conceptos/`: términos y distinciones clave.
+- `01_conceptos/`: términos y distinciones clave, incluida la separación entre profundidad y cobertura profesional.
 - `02_metodos/`: enfoques y técnicas de entrevista.
 - `03_roles/`: miradas desde distintos perfiles.
 - `04_patrones_de_preguntas/`: secuencias y tipos de preguntas.
@@ -77,4 +77,4 @@ Ejemplos de excepción fundacional:
 
 ## Siguiente paso recomendado
 
-Desarrollar primero los conceptos base y los patrones de preguntas más nucleares antes de escribir el playbook.
+Desarrollar primero los conceptos base y los patrones de preguntas más nucleares, empezando por la distinción entre profundidad y cobertura profesional, antes de escribir o ampliar el playbook.

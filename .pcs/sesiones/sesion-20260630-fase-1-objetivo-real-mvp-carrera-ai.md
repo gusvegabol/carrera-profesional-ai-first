@@ -2,8 +2,8 @@
 id: sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai
 titulo: Fase 1 - Objetivo real del MVP de Carrera Profesional AI-First
 inicio: 2026-06-30 19:21
-cierre:
-estado: abierta
+cierre: 2026-07-05 17:50
+estado: cerrada
 tipo: sesion
 host: carrera-ai
 ---
@@ -20,7 +20,7 @@ host: carrera-ai
 | Nombre de sesión | Fase 1 - Objetivo real del MVP |
 | Fichero | `sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai.md` |
 | Fecha | 2026-06-30 |
-| Estado | Abierta |
+| Estado | Cerrada |
 | Naturaleza | Sesión documental revisable |
 | Ámbito | Consolidar el objetivo real de la Fase 1 del MVP |
 | Relación con PCS | Uso de PCS como marco de continuidad, gobernanza y trazabilidad |
@@ -215,3 +215,36 @@ La validación es fuerte en evidencia y parcial en cuanto a la madurez final del
 - el playbook candidato sigue necesitando más pilotos antes de considerarse cerrado o definitivo;
 - la sesión no se cierra;
 - el siguiente paso recomendado es revisar el documento creado y decidir si conviene una segunda entrevista con otra tensión.
+
+## 23. Actualización — Reclasificación del piloto Herfrailes
+
+El documento Herfrailes deja de tratarse como `EJEMPLO_` y queda reclasificado como `08_entrevistas_piloto/PILOTO_001_ENTREVISTA_HERFRAILES_RRHH.md`.
+
+- La carpeta `06_ejemplos/` queda reservada para material didáctico, sintético, anotado o calibrador.
+- La carpeta `08_entrevistas_piloto/` queda reservada para entrevistas piloto reales o semi-reales.
+- Esta reclasificación mejora la trazabilidad conceptual del MVP.
+- La reclasificación no cambia por sí sola la validación del método: sigue siendo parcial.
+- La sesión continúa abierta.
+
+## 24. Actualización — Piloto dirigido GESCAN
+
+- Se añadió `08_entrevistas_piloto/PILOTO_003_ENTREVISTA_GESCAN.md` a la bóveda.
+- Es un piloto dirigido realizado con otra IA conversacional.
+- Provocó tensiones deliberadas no reveladas hasta después del cierre.
+- Confirma útil la regla `reconocer antes de pedir más evidencia`.
+- Confirma que no todo dato nuevo debe abrir un hilo nuevo si no fortalece la hipótesis en curso.
+- La sesión sigue abierta.
+- La validación del playbook sigue siendo parcial.
+
+## 25. Cierre de la Fase 1 / MVP-A
+
+La Fase 1 queda cerrada como hipótesis mínima validada.
+
+Los pilotos realizados demostraron de forma suficiente la Pregunta A: una entrevista AI-First puede extraer una competencia profesional real con evidencia verificable.
+
+El siguiente trabajo no es repetir la misma extracción con más pilotos equivalentes, sino abrir la línea de cobertura profesional para construir un mapa inicial razonable de competencias y zonas pendientes.
+
+La nueva sesión viva relacionada pasa a ser `sesion-20260705-concepto-cobertura-profesional-carrera-ai.md`.
+
+PCS canónico no se modifica en este reajuste.
+La memoria operativa del host sigue viviendo en `.pcs/`.

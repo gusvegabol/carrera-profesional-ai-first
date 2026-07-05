@@ -6,7 +6,7 @@ Es el antipatrón de aplicar un patrón de indagación (STAR ampliado, 4S, Narra
 
 No es un error de contenido. Las preguntas, una a una, pueden estar perfectamente diseñadas. El fallo es de ritmo y de ausencia de lectura del estado de la persona mientras se avanza por ellas.
 
-Es el antipatrón que aparece cuando un patrón de contenido se ejecuta sin la capa de orquestación que decide cuándo frenar — la ausencia concreta que motivó la creación de [[CONCEPTO_ARCOS_DE_SESIÓN]].
+Es el antipatrón que aparece cuando un patrón de contenido se ejecuta sin la capa de orquestación que decide cuándo frenar — la ausencia concreta que motivó la creación de [[CONCEPTO_ARCO_DE_SESION]].
 
 ## Por qué es peligroso
 
@@ -38,7 +38,7 @@ El caso de Charles en [[Narrative career counseling - My career story and pictor
 ## Qué hacer en su lugar
 
 - insertar un movimiento de reflejo o validación después de cada fase de mayor carga (típicamente Acción en STAR, Estrategias en 4S), no solo al final del patrón completo;
-- ante cualquier señal de escalada emocional, frenar el protocolo en curso y cambiar de registro antes de continuar, siguiendo el criterio de [[CONCEPTO_ARCOS_DE_SESIÓN]];
+- ante cualquier señal de escalada emocional, frenar el protocolo en curso y cambiar de registro antes de continuar, siguiendo el criterio de [[CONCEPTO_ARCO_DE_SESION]];
 - cerrar siempre un bloque de contenido sensible con un anclaje de retorno a tierra antes de avanzar al siguiente tema;
 - dejar al menos una pausa de transición entre dos incidentes STAR distintos, aunque ambos parezcan de baja intensidad;
 - tratar el acortamiento sostenido de respuestas como señal de fatiga, no como el ritmo natural de la conversación.
@@ -57,7 +57,7 @@ El caso de Charles en [[Narrative career counseling - My career story and pictor
 
 Este antipatrón se relaciona con:
 
-- [[CONCEPTO_ARCOS_DE_SESIÓN]], porque es la ausencia concreta de esa capa de orquestación la que hace posible este antipatrón — el arco de sesión es la solución estructural, este documento es la advertencia empírica de por qué hace falta;
+- [[CONCEPTO_ARCO_DE_SESION]], porque es la ausencia concreta de esa capa de orquestación la que hace posible este antipatrón — el arco de sesión es la solución estructural, este documento es la advertencia empírica de por qué hace falta;
 - [[PATRON_STAR_AMPLIADO]], porque sus ocho pasos consecutivos son el ejemplo más claro de dónde puede aparecer este antipatrón si se ejecutan sin criterio de freno;
 - [[PATRON_4S_TRANSICION]], porque su cierre directo de "Estrategias" a "Plan", sin anclaje intermedio, es el segundo lugar más probable donde aparece;
 - [[CONCEPTO_SER_ESCUCHADO_Y_VALIDADO]], porque la ausencia de reflejo entre preguntas es, en el fondo, la ausencia de esa condición relacional aplicada en la práctica;

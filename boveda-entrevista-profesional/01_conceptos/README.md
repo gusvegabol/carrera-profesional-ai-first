@@ -12,6 +12,11 @@ Los documentos de esta carpeta deben usar la raíz `CONCEPTO_`. Ejemplo: `CONCEP
 - Separar ideas parecidas.
 - Evitar ambigüedades cuando la bóveda crezca.
 
+## Documentos actuales
+
+- `CONCEPTO_TRANSICION_PROFESIONAL.md`
+- `CONCEPTO_COBERTURA_PROFESIONAL.md`
+
 ## Contenido futuro
 
 - Entrevista profesional profunda.

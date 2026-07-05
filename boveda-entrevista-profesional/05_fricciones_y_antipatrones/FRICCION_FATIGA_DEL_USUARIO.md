@@ -60,7 +60,7 @@ Además, a diferencia de la escalada emocional aguda —que suele dejar señales
 Este antipatrón se relaciona con:
 
 - [[ANTIPATRON_SECUENCIAS_SIN_PAUSAS]], del que es el fenómeno general del que aquella es una causa aguda y específica — toda secuencia sin pausas produce fatiga, pero no toda fatiga viene de una secuencia sin pausas;
-- [[CONCEPTO_ARCOS_DE_SESIÓN]], porque el criterio de "etapa suficientemente cubierta" y el criterio de cierre de sesión que ese concepto define son, en la práctica, los mecanismos que previenen este antipatrón;
+- [[CONCEPTO_ARCO_DE_SESION]], porque el criterio de "etapa suficientemente cubierta" y el criterio de cierre de sesión que ese concepto define son, en la práctica, los mecanismos que previenen este antipatrón;
 - `PLAYBOOK_ENTREVISTA_PROFESIONAL_v0`, sección 7, cuyo criterio de cierre por "dos o más señales de fatiga seguidas" opera directamente sobre las señales descritas aquí;
 - [[CONCEPTO_EXPERIENCIA_TACITA_VALIDABLE]], porque la fatiga es precisamente el estado en el que una persona deja de rescatar la experiencia tácita más valiosa — la que requiere esfuerzo de memoria — y se conforma con la respuesta más accesible y menos costosa de dar;
 - [[CONCEPTO_SER_ESCUCHADO_Y_VALIDADO]], porque una persona que se siente genuinamente escuchada tolera mejor el esfuerzo cognitivo de la reconstrucción; la validación no elimina la fatiga, pero amplía el margen antes de que aparezca.

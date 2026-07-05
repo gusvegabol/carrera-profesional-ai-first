@@ -71,8 +71,14 @@ Contiene material heredado u opcional. No es la base conceptual de la bóveda.
 - `00_proposito/idea-central.md`
 - `00_proposito/preguntas-guia.md`
 - `00_proposito/principios-iniciales.md`
+- `01_conceptos/CONCEPTO_COBERTURA_PROFESIONAL.md`
+- `01_conceptos/CONCEPTO_TRANSICION_PROFESIONAL.md`
 - `08_entrevistas_piloto/README.md`
 - `08_entrevistas_piloto/PILOTO_001_ENTREVISTA_HERFRAILES_RRHH.md`
+- `08_entrevistas_piloto/PILOTO_003_ENTREVISTA_GESCAN.md`
+- `08_entrevistas_piloto/PILOTO_004_ENTREVISTA_EMPRESA_FAMILIAR.md`
+- `08_entrevistas_piloto/PILOTO_005_ENTREVISTA_REPONEDOR_SUPERMERCADO.md`
+- `05_fricciones_y_antipatrones/FRICCION_AMBIGUEDAD_PARQUEDAD_O_DESINTERES.md`
 - `README.md`
 - `INDEX.md`
 - `templates/README.md`
@@ -95,8 +101,8 @@ Contiene material heredado u opcional. No es la base conceptual de la bóveda.
 
 ## Estado inicial
 
-La bóveda está en fase semilla ampliada. Tiene propósito visible, estructura inicial, documentos fundacionales y ya incorpora un primer piloto para validar el método, pero aún no contiene investigación desarrollada ni playbook final.
+La bóveda está en fase semilla ampliada. Tiene propósito visible, estructura inicial, documentos fundacionales y ya incorpora pilotos reales o semi-reales, además de un primer concepto explícito de cobertura profesional, pero aún no contiene investigación desarrollada ni playbook final.
 
 ## Siguiente paso recomendado
 
-Crear primero los documentos de `01_conceptos/` y `04_patrones_de_preguntas/`, porque ahí se consolidan las piezas que luego alimentarán el playbook.
+Crear primero los documentos de `01_conceptos/` y `04_patrones_de_preguntas/`, porque ahí se consolidan las piezas que luego alimentarán el playbook y la futura capa de cobertura.

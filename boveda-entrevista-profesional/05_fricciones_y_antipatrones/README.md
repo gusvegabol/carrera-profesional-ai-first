@@ -21,6 +21,10 @@ Los documentos de esta carpeta pueden usar `ANTIPATRON_` para errores o derivas 
 - Sesgo del entrevistador.
 - Fatiga del usuario.
 
+## Documentos registrados
+
+- [[FRICCION_AMBIGUEDAD_PARQUEDAD_O_DESINTERES]]: fricción de canal textual donde no se puede distinguir con seguridad entre parquedad comunicativa y desinterés real; debe activarse el permiso de salida explícito desde la apertura.
+
 ## Distinción conceptual
 
 Antipatrón y fricción no son sinónimos, aunque la propia estructura de la bóveda los agrupe en la misma carpeta. La diferencia está en **dónde nace el problema**:
