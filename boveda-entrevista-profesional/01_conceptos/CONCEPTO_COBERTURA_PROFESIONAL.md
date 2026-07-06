@@ -15,11 +15,11 @@ No busca agotar toda la trayectoria ni certificarla de forma exhaustiva. Busca q
 
 ## Profundidad y cobertura
 
-La profundidad responde a una pregunta local:
+La profundidad responde a una pregunta local (A):
 
 > ¿aquí hay una competencia real con evidencia verificable?
 
-La cobertura responde a una pregunta de arquitectura:
+La cobertura responde a una pregunta (B) de arquitectura:
 
 > ¿qué parte de la trayectoria ya está razonablemente mirada y qué parte sigue pendiente?
 
@@ -66,7 +66,7 @@ Y se relaciona con el playbook actual en dos puntos:
 - sección 9.2: elegir una etapa o experiencia concreta para empezar;
 - sección 12: decidir cuándo hay suficiencia y cuándo cerrar.
 
-El playbook `PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA` sigue gobernando la profundidad. La cobertura profesional es una capa adicional todavía en diseño.
+El playbook [[PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA]] sigue gobernando la profundidad. La cobertura profesional es una capa adicional todavía en diseño.
 
 ## Preguntas abiertas
 
