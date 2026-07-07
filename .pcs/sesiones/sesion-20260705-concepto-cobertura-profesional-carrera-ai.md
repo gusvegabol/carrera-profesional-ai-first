@@ -115,3 +115,46 @@ Al cerrar esta sesión debe quedar claro:
 - Origen Notion: `https://app.notion.com/p/394f4196b42481f5a587d14516fbc2cd`
 - Estado de la sesión: abierta
 - Host resuelto: `carrera-ai` -> `C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first`
+
+## Actualización — Cadena documental de cobertura profesional y consolidación v2_0_0
+
+Durante esta sesión queda registrada la secuencia documental creada manualmente para definir el MVP del futuro playbook de cobertura profesional:
+
+- `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1.md`: primera definición operativa de cobertura desde la línea ChatGPT.
+- `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_1.md`: línea Claude sobre arquitectura multi-sesión, checkpoint, calibración de tiempo y reanudación.
+- `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_2.md`: síntesis explícita entre ambas líneas.
+- `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_3.md`: consolidación intermedia con `PATRON_STAR_SIMPLE` y control de escaneo.
+- `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v2_0_0.md`: versión consolidada vigente para la definición MVP de cobertura profesional.
+
+La versión `v2_0_0` queda registrada como referencia vigente, pero no como playbook operativo final. Las versiones previas se conservan como trazabilidad del proceso de diseño.
+
+La cobertura profesional queda así alineada con una arquitectura de orquestación multi-sesión separada del playbook de profundidad `v1.3.2`. El mapa de cobertura queda organizado con los estados `explorada`, `candidata`, `parcial` y `pendiente`, y el escaneo se distribuye en tres pisos: panorámica abierta, `PATRON_STAR_SIMPLE` como prevalidación ligera, y `PATRON_STAR_AMPLIADO` o `PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA` cuando procede profundizar.
+
+Queda también asentada la regla de volumen: `PATRON_STAR_SIMPLE` se aplica como máximo a una o dos candidatas por sesión de escaneo, nunca a todas las candidatas aparecidas.
+
+La sesión sigue abierta y su objetivo principal no cambia; esta actualización solo deja trazabilidad documental de la evolución hacia la futura capa de cobertura profesional.
+
+## Actualización — Estructura de artefactos de cobertura profesional
+
+Durante esta sesión quedó asentado que los artefactos generados por cobertura profesional viven en `boveda-entrevista-profesional/artefactos-cobertura-profesional/`.
+
+La carpeta no va numerada porque pertenece a ejecucion y aplicacion, no a taxonomia de conocimiento reutilizable.
+
+La estructura registrada para esa carpeta es:
+
+- `checkpoints/`
+- `competencias/`
+- `inmersiones/`
+- `mapas/`
+- `sesiones/`
+- `templates/`
+
+Se verifico ademas la existencia del README de la carpeta y de los templates operativos con frontmatter YAML:
+
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/templates/TEMPLATE_MAPA.md`
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/templates/TEMPLATE_SESION.md`
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/templates/TEMPLATE_INMERSION.md`
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/templates/TEMPLATE_CHECKPOINT.md`
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/templates/TEMPLATE_COMPETENCIA.md`
+
+El debate de identificadores y otros campos de frontmatter siguio abierto al cierre de esta actualizacion, sin convertirlo en decision cerrada.

@@ -2,7 +2,7 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
-fecha_actualizacion: 2026-07-05 19:19
+fecha_actualizacion: 2026-07-07
 ultima_sesion_relacionada: sesion-20260705-concepto-cobertura-profesional-carrera-ai
 host: carrera-ai
 ---
@@ -74,6 +74,28 @@ Estado actualizado a partir de la materialización de la Fase 1. Refleja líneas
   - README.md
   - boveda-entrevista-profesional/README.md y README de sus carpetas
 
+## Actualización — Cadena documental de cobertura profesional y consolidación v2_0_0
+
+La trazabilidad de cobertura profesional queda ahora alineada con la secuencia documental manual ya creada en la bóveda:
+
+- `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1.md`: primera definición operativa de cobertura como mapa inicial no exhaustivo, línea ChatGPT.
+- `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_1.md`: línea Claude, centrada en arquitectura multi-sesión, checkpoint, calibración de tiempo y reanudación.
+- `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_2.md`: primera síntesis explícita entre la línea ChatGPT y la línea Claude.
+- `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_3.md`: versión intermedia de consolidación, con integración de `PATRON_STAR_SIMPLE` y control de escaneo.
+- `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v2_0_0.md`: versión consolidada vigente y referencia actual para la definición MVP del futuro playbook de cobertura profesional.
+
+La referencia vigente pasa a ser `v2_0_0`, sin borrar la trazabilidad de las versiones previas. La capa de cobertura queda definida como orquestación multi-sesión separada del playbook de profundidad `v1.3.2`, con estos estados canónicos del mapa: `explorada`, `candidata`, `parcial` y `pendiente`.
+
+La arquitectura de escaneo queda separada en tres pisos:
+
+- panorámica abierta;
+- `PATRON_STAR_SIMPLE` como prevalidación ligera;
+- `PATRON_STAR_AMPLIADO` o `PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA` cuando procede una inmersión profunda.
+
+Se mantiene la regla de volumen: `PATRON_STAR_SIMPLE` se aplica, como máximo, a una o dos candidatas por sesión de escaneo y nunca a todas las candidatas detectadas.
+
+Queda como foco posterior, si procede, derivar un futuro `PLAYBOOK_COBERTURA_PROFESIONAL`, pero todavía no existe como playbook operativo final.
+
 ## Actualización — Entrevista piloto Herfrailes RRHH
 
 Ya existe una primera entrevista piloto real/simulada-operativa registrada en la bóveda de entrevista profesional.
@@ -89,6 +111,33 @@ El foco inmediato pasa a revisar el documento creado y decidir si conviene una s
 
 PCS canónico no se modifica en este reajuste.
 La memoria operativa del host sigue viviendo en `.pcs/`.
+
+## Actualización — Estructura de artefactos de cobertura profesional
+
+Queda registrada la consolidación de `boveda-entrevista-profesional/artefactos-cobertura-profesional/` como carpeta no numerada de ejecución y aplicacion dentro de la bóveda de entrevista profesional.
+
+Su función es almacenar artefactos generados por procesos de cobertura profesional entre IA y humano, mientras la documentación metodológica permanece en las carpetas numeradas de la bóveda.
+
+La estructura verificada incluye estas subcarpetas:
+
+- `checkpoints/`: estados parciales de inmersiones interrumpidas.
+- `competencias/`: una ficha por cada zona que llega a estado `explorada`.
+- `inmersiones/`: fichas completas cuando cobertura invoca profundidad.
+- `mapas/`: mapas vivos de cobertura.
+- `sesiones/`: registros de sesiones de cobertura, si se decide conservarlos.
+- `templates/`: plantillas para crear artefactos homogéneos.
+
+Tambien queda verificada la existencia de `boveda-entrevista-profesional/artefactos-cobertura-profesional/README.md` y de los templates operativos con frontmatter YAML:
+
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/templates/TEMPLATE_MAPA.md`
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/templates/TEMPLATE_SESION.md`
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/templates/TEMPLATE_INMERSION.md`
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/templates/TEMPLATE_CHECKPOINT.md`
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/templates/TEMPLATE_COMPETENCIA.md`
+
+Los templates incorporan frontmatter para identificacion, estado, fechas y relaciones entre artefactos, incluyendo campos como `id`, `tipo`, `estado`, `fecha_creacion`, `fecha_actualizacion`, `fecha_cierre`, `id_entrevistado`, `id_mapa`, `id_zona`, `id_inmersion` e `id_competencia`, segun corresponda.
+
+Queda en debate o pendiente de cierre el detalle fino de identificadores, entrevistados, zonas y la relacion con otros documentos de la bóveda; esta actualización solo deja constancia de la estructura ya creada y de su separacion entre conocimiento metodologico y ejecucion operativa.
 
 ## Actualización — Piloto dirigido GESCAN
 
