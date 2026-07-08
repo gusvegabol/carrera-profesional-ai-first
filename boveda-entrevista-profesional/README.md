@@ -1,8 +1,8 @@
 # Bóveda de entrevista profesional
 
-Esta bóveda existe dentro del host `carrera-ai` para construir, ordenar y hacer crecer conocimiento sobre entrevista profesional profunda.
+Esta bóveda existe dentro del host `carrera-ai` para construir, ordenar y hacer crecer conocimiento sobre entrevista profesional profunda y una capa separada de cobertura profesional.
 
-No es PCS canónico ni una aplicación independiente. Es una bóveda local del proyecto anfitrión para preparar un futuro playbook de entrevista profesional y para estudiar la entrevista como capacidad nuclear del sistema.
+No es PCS canónico ni una aplicación independiente. Es una bóveda local del proyecto anfitrión para preparar playbooks de entrevista profesional, estudiar la entrevista como capacidad nuclear del sistema y mantener una carpeta viva de cobertura profesional para artefactos operativos.
 
 ## Convención de nombres de ficheros
 
@@ -57,15 +57,16 @@ Ejemplos de excepción fundacional:
 ## Qué contiene hoy
 
 - `00_proposito/`: base fundacional de la bóveda.
-- `01_conceptos/`: términos y distinciones clave, incluida la separación entre profundidad y cobertura profesional.
-- `02_metodos/`: enfoques y técnicas de entrevista.
-- `03_roles/`: miradas desde distintos perfiles.
-- `04_patrones_de_preguntas/`: secuencias y tipos de preguntas.
-- `05_fricciones_y_antipatrones/`: errores a evitar.
-- `06_ejemplos/`: casos y muestras prácticas didácticas.
-- `07_playbook/`: síntesis operativa futura.
+- `01_conceptos/`: términos y distinciones clave, incluida la separación entre profundidad, cobertura, transición, narrativa y validación.
+- `02_metodos/`: carpeta preparada para enfoques y técnicas de entrevista, todavía sin documentos de contenido propios.
+- `03_roles/`: carpeta preparada para miradas desde distintos perfiles, todavía sin documentos de contenido propios.
+- `04_patrones_de_preguntas/`: secuencias y tipos de preguntas, con patrones de profundidad y cobertura ya registrados.
+- `05_fricciones_y_antipatrones/`: errores, sesgos y derivas a evitar.
+- `06_ejemplos/`: casos y muestras prácticas didácticas ya registradas.
+- `07_playbook/`: síntesis operativa y borradores ejecutables, tanto de profundidad como de cobertura.
 - `08_entrevistas_piloto/`: entrevistas piloto reales o semi-reales para validar el método.
-- `08_fuentes/`: referencias y material de apoyo.
+- `08_fuentes/`: referencias y material de apoyo ya utilizados como base de los conceptos y patrones.
+- `artefactos-cobertura-profesional/`: carpeta viva de cobertura profesional con mapas, sesiones, inmersiones, competencias, checkpoints, entrevistados y templates operativos.
 - `templates/`: material heredado u opcional para reutilizar con criterio.
 
 ## Regla de uso
@@ -77,4 +78,4 @@ Ejemplos de excepción fundacional:
 
 ## Siguiente paso recomendado
 
-Desarrollar primero los conceptos base y los patrones de preguntas más nucleares, empezando por la distinción entre profundidad y cobertura profesional, antes de escribir o ampliar el playbook.
+Desarrollar primero los conceptos base y los patrones de preguntas más nucleares, empezando por la distinción entre profundidad y cobertura profesional, y usar la carpeta viva de cobertura como soporte operativo antes de ampliar más el playbook.

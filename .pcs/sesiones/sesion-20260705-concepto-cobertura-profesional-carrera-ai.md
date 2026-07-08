@@ -116,6 +116,13 @@ Al cerrar esta sesión debe quedar claro:
 - Estado de la sesión: abierta
 - Host resuelto: `carrera-ai` -> `C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first`
 
+## 10. Referencia transversal
+
+- Sesión de mantenimiento documental creada después de esta apertura: `sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md`
+- Naturaleza de esa sesión: auditoría transversal de trazabilidad documental
+- Relación: no sustituye esta sesión conceptual de cobertura profesional y no debe absorber su objetivo central
+- Estado de esta sesión: sigue abierta
+
 ## Actualización — Cadena documental de cobertura profesional y consolidación v2_0_0
 
 Durante esta sesión queda registrada la secuencia documental creada manualmente para definir el MVP del futuro playbook de cobertura profesional:
@@ -158,3 +165,12 @@ Se verifico ademas la existencia del README de la carpeta y de los templates ope
 - `boveda-entrevista-profesional/artefactos-cobertura-profesional/templates/TEMPLATE_COMPETENCIA.md`
 
 El debate de identificadores y otros campos de frontmatter siguio abierto al cierre de esta actualizacion, sin convertirlo en decision cerrada.
+
+## Actualización posterior a la simulación 000
+
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/sesiones/SESION_COBERTURA_0000_20260708_1730.md` queda como evidencia metodológica reciente, no como entrevista real.
+- No se escribieron artefactos reales de mapa, zonas, checkpoints, inmersiones o competencias durante la simulación.
+- Los fallos detectados quedan separados entre diseño, lenguaje y técnica: colapso de responsabilidades en una sola zona, fuga de nomenclatura interna, generalización indebida e incidencia de generación del modelo.
+- `TEMPLATE_SESION.md` ya incorpora la sección de hilos abiertos y competencias candidatas para la próxima sesión.
+- `graphify` fue actualizado y solo debe usarse como apoyo de navegación y rehidratación.
+- Esta sesión sigue abierta y continúa siendo la referencia principal para rehidratar cobertura profesional.

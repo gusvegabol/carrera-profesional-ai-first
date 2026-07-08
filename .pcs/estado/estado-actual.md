@@ -2,7 +2,7 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
-fecha_actualizacion: 2026-07-07
+fecha_actualizacion: 2026-07-08
 ultima_sesion_relacionada: sesion-20260705-concepto-cobertura-profesional-carrera-ai
 host: carrera-ai
 ---
@@ -112,6 +112,48 @@ El foco inmediato pasa a revisar el documento creado y decidir si conviene una s
 PCS canónico no se modifica en este reajuste.
 La memoria operativa del host sigue viviendo en `.pcs/`.
 
+## Actualización — Auditoría transversal de trazabilidad documental
+
+Se ejecutó una auditoría transversal de `boveda-entrevista-profesional/` frente a la memoria operativa `.pcs/` para comprobar qué capas nuevas ya estaban recogidas y cuáles seguían desalineadas.
+
+### Ya recogido en `.pcs/`
+
+- La separación entre profundidad y cobertura profesional ya está asentada.
+- La sesión conceptual abierta `sesion-20260705-concepto-cobertura-profesional-carrera-ai.md` sigue siendo la referencia viva de cobertura.
+- Los pilotos tardíos `PILOTO_004_ENTREVISTA_EMPRESA_FAMILIAR.md` y `PILOTO_005_ENTREVISTA_REPONEDOR_SUPERMERCADO.md` ya quedaron incorporados como evidencia tardía.
+- La secuencia documental `v1 -> v1_0_1 -> v1_0_2 -> v1_0_3 -> v2_0_0` de cobertura profesional ya figura como trazabilidad vigente.
+- La carpeta `artefactos-cobertura-profesional/` ya quedó registrada como capa viva de ejecución.
+
+### Recogido solo parcialmente
+
+- `.pcs/estado/estado-actual.md` menciona la carpeta viva de cobertura, pero no detalla todavía sus reglas internas de IDs, plantillas y ciclo operativo.
+- La sesión abierta de cobertura sigue hablando de la estructura viva, pero no cita el conjunto completo de capas nuevas de la bóveda.
+- La auditoría detectó que el estado aún no refleja la existencia del primer playbook operativo de cobertura `07_playbook/PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_0.md`.
+
+### No recogido todavía
+
+- `08_entrevistas_piloto/PILOTO_002_ENTREVISTA_HERFRAILES_INFORMATICA.md` existe como primer registro empírico real y no aparece individualizado en el estado.
+- La bóveda ya contiene más documentos activos en `01_conceptos/` y `04_patrones_de_preguntas/` de los que el estado resume hoy.
+- `08_fuentes/` ya tiene fuentes de base que sostienen los conceptos y patrones nuevos, pero todavía no se reflejan en la memoria operativa.
+- `artefactos-cobertura-profesional/entrevistados/README.md` ya fija una política mínima para entrevistados, pero esa capa aún no aparece en el estado.
+- `artefactos-cobertura-profesional/_contadores.md` no existe todavía, pese a que el README de la carpeta lo da por necesario.
+
+### Riesgos vigentes
+
+- Hay deriva entre la bóveda real, sus README de carpeta y la memoria `.pcs/`.
+- El árbol documental ya se adelantó al resumen de estado, así que una futura rehidratación debe leer la bóveda con más detalle antes de confiar en un resumen.
+- La presencia de `PILOTO_002` introduce datos reales sensibles y conviene tratar esa pieza con cuidado operativo.
+
+### Siguiente gesto recomendado
+
+Mantener esta sesión de cobertura abierta como referencia conceptual y, cuando el flujo lo autorice, actualizar la documentación de trazabilidad de la bóveda para que su índice y sus README no sigan por detrás del inventario real.
+
+## Trazabilidad adicional
+
+- Nueva sesión de mantenimiento documental: `sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md`
+- Origen: auditoría transversal de `boveda-entrevista-profesional/` solicitada por el usuario
+- Estado de la bóveda: más desarrollada que el resumen histórico previo de `.pcs/`, pero todavía con desajustes documentales menores
+
 ## Actualización — Estructura de artefactos de cobertura profesional
 
 Queda registrada la consolidación de `boveda-entrevista-profesional/artefactos-cobertura-profesional/` como carpeta no numerada de ejecución y aplicacion dentro de la bóveda de entrevista profesional.
@@ -178,6 +220,16 @@ La bóveda ya distingue con claridad entre materiales de ejemplo y entrevistas p
 
 PCS canónico no se modifica en este reajuste.
 La memoria operativa del host sigue viviendo en `.pcs/`.
+
+## Actualización — Simulación 000 de cobertura y rehidratación viva
+
+La simulación `boveda-entrevista-profesional/artefactos-cobertura-profesional/sesiones/SESION_COBERTURA_0000_20260708_1730.md` queda registrada como evidencia metodológica reciente, no como entrevista real. No debe leerse como competencia profesional confirmada ni como mapa operativo válido para uso con entrevistados reales.
+
+La línea viva actual sigue siendo cobertura profesional. La sesión principal de trabajo y rehidratación es `sesion-20260705-concepto-cobertura-profesional-carrera-ai.md`, que permanece abierta.
+
+`TEMPLATE_SESION.md` ya incorpora la sección de hilos abiertos y competencias candidatas para la próxima sesión, y `graphify` quedó actualizado como apoyo de navegación y rehidratación, no como fuente única de verdad.
+
+La prioridad siguiente es corregir y refinar el playbook de cobertura antes de usarlo con entrevistados reales.
 
 ## Actualización — Cierre de Fase 1 y apertura de cobertura profesional
 

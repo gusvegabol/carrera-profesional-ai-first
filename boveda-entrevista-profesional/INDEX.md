@@ -15,9 +15,10 @@ Esta bóveda organiza el conocimiento necesario para diseñar una entrevista pro
 - `04_patrones_de_preguntas/`: patrones de interacción.
 - `05_fricciones_y_antipatrones/`: errores y señales de deriva.
 - `06_ejemplos/`: ejemplos de uso.
-- `07_playbook/`: síntesis operativa futura.
+- `07_playbook/`: síntesis operativa y borradores ejecutables.
 - `08_entrevistas_piloto/`: entrevistas piloto reales o semi-reales.
 - `08_fuentes/`: referencias de apoyo.
+- `artefactos-cobertura-profesional/`: capa viva de cobertura profesional.
 - `templates/`: material heredado u opcional.
 
 ## Función de cada carpeta
@@ -28,31 +29,31 @@ Define por qué existe la bóveda, qué problema resuelve y qué principios la s
 
 ### `01_conceptos/`
 
-Almacena definiciones que ayudan a pensar con precisión sobre entrevista, experiencia y evidencia.
+Almacena definiciones que ayudan a pensar con precisión sobre entrevista, experiencia, transición, narrativa, cobertura y validación.
 
 ### `02_metodos/`
 
-Recoge técnicas y marcos de entrevista que pueden inspirar la futura práctica de la bóveda.
+Carpeta preparada para técnicas y marcos de entrevista. Todavía no contiene documentos de contenido propios.
 
 ### `03_roles/`
 
-Describe cómo cambia la entrevista según el perfil que la conduce o la evalúa.
+Carpeta preparada para miradas por perfil. Todavía no contiene documentos de contenido propios.
 
 ### `04_patrones_de_preguntas/`
 
-Reúne preguntas, secuencias y disparadores de profundización.
+Reúne preguntas, secuencias y disparadores de profundización para profundidad y cobertura.
 
 ### `05_fricciones_y_antipatrones/`
 
-Documenta riesgos, sesgos y formas de superficialidad.
+Documenta riesgos, sesgos y formas de superficialidad que afectan a la entrevista profesional.
 
 ### `06_ejemplos/`
 
-Sirve para aterrizar buenas y malas prácticas con casos concretos.
+Sirve para aterrizar buenas y malas prácticas con casos concretos ya registrados.
 
 ### `07_playbook/`
 
-Preparará la síntesis ejecutable cuando la base conceptual esté madura.
+Contiene la síntesis operativa de profundidad y el borrador ejecutable de cobertura profesional.
 
 ### `08_entrevistas_piloto/`
 
@@ -60,7 +61,11 @@ Sirve para registrar pilotos reales o semi-reales que validan parcialmente el m�
 
 ### `08_fuentes/`
 
-Guardará referencias y material de apoyo para futuras investigaciones.
+Guarda referencias y material de apoyo ya utilizados como base de los conceptos y patrones.
+
+### `artefactos-cobertura-profesional/`
+
+Contiene la capa viva de ejecución de cobertura profesional: mapas, checkpoints, inmersiones, competencias, sesiones, entrevistados y templates.
 
 ### `templates/`
 
@@ -73,12 +78,52 @@ Contiene material heredado u opcional. No es la base conceptual de la bóveda.
 - `00_proposito/principios-iniciales.md`
 - `01_conceptos/CONCEPTO_COBERTURA_PROFESIONAL.md`
 - `01_conceptos/CONCEPTO_TRANSICION_PROFESIONAL.md`
+- `01_conceptos/CONCEPTO_CARRERA_COMO_CONSTRUCCION_NARRATIVA.md`
+- `01_conceptos/CONCEPTO_ARCO_DE_SESION.md`
+- `01_conceptos/CONCEPTO_ENTREVISTA_DE_EVENTOS_CONDUCTUALES.md`
+- `01_conceptos/CONCEPTO_EXPERIENCIA_TACITA_VALIDABLE.md`
+- `01_conceptos/CONCEPTO_SER_ESCUCHADO_Y_VALIDADO.md`
+- `04_patrones_de_preguntas/PATRON_STAR_SIMPLE.md`
+- `04_patrones_de_preguntas/PATRON_STAR_AMPLIADO.md`
+- `04_patrones_de_preguntas/PATRON_4S_TRANSICION.md`
+- `04_patrones_de_preguntas/PATRON_NARRATIVA_MAS_EVIDENCIA.md`
+- `05_fricciones_y_antipatrones/ANTIPATRON_AISLAMIENTO_FORZADO_DEL_MERITO.md`
+- `05_fricciones_y_antipatrones/ANTIPATRON_CIERRE_ANCLADO_AL_HILO_UNICO.md`
+- `05_fricciones_y_antipatrones/ANTIPATRON_RIGOR_SIN_AMORTIGUACION.md`
+- `05_fricciones_y_antipatrones/ANTIPATRON_SECUENCIAS_SIN_PAUSAS.md`
 - `08_entrevistas_piloto/README.md`
 - `08_entrevistas_piloto/PILOTO_001_ENTREVISTA_HERFRAILES_RRHH.md`
+- `08_entrevistas_piloto/PILOTO_002_ENTREVISTA_HERFRAILES_INFORMATICA.md`
 - `08_entrevistas_piloto/PILOTO_003_ENTREVISTA_GESCAN.md`
 - `08_entrevistas_piloto/PILOTO_004_ENTREVISTA_EMPRESA_FAMILIAR.md`
 - `08_entrevistas_piloto/PILOTO_005_ENTREVISTA_REPONEDOR_SUPERMERCADO.md`
 - `05_fricciones_y_antipatrones/FRICCION_AMBIGUEDAD_PARQUEDAD_O_DESINTERES.md`
+- `06_ejemplos/EJEMPLO_PILOTO_UNIDAD_PROFESIONAL_VALOR.md`
+- `06_ejemplos/EJEMPLO_SESION_COMPLETA_ANOTADA.md`
+- `07_playbook/DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1.md`
+- `07_playbook/DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_1.md`
+- `07_playbook/DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_2.md`
+- `07_playbook/DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_3.md`
+- `07_playbook/DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v2_0_0.md`
+- `07_playbook/PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_0.md`
+- `07_playbook/PLAYBOOK_ENTREVISTA_PROFESIONAL_v0.md`
+- `07_playbook/PLAYBOOK_ENTREVISTA_PROFESIONAL_v1.md`
+- `07_playbook/PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_1.md`
+- `07_playbook/PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_2_CHATGPT.md`
+- `07_playbook/PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_2_2_IA.md`
+- `07_playbook/PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_CHATGPT.md`
+- `07_playbook/PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_1_CHATGPT.md`
+- `07_playbook/PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA.md`
+- `08_fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales.md`
+- `08_fuentes/Narrative career counseling - My career story and pictorial narratives.md`
+- `artefactos-cobertura-profesional/README.md`
+- `artefactos-cobertura-profesional/entrevistados/README.md`
+- `artefactos-cobertura-profesional/templates/README.md`
+- `artefactos-cobertura-profesional/templates/TEMPLATE_CHECKPOINT.md`
+- `artefactos-cobertura-profesional/templates/TEMPLATE_COMPETENCIA.md`
+- `artefactos-cobertura-profesional/templates/TEMPLATE_INMERSION.md`
+- `artefactos-cobertura-profesional/templates/TEMPLATE_MAPA.md`
+- `artefactos-cobertura-profesional/templates/TEMPLATE_SESION.md`
 - `README.md`
 - `INDEX.md`
 - `templates/README.md`
@@ -101,8 +146,8 @@ Contiene material heredado u opcional. No es la base conceptual de la bóveda.
 
 ## Estado inicial
 
-La bóveda está en fase semilla ampliada. Tiene propósito visible, estructura inicial, documentos fundacionales y ya incorpora pilotos reales o semi-reales, además de un primer concepto explícito de cobertura profesional, pero aún no contiene investigación desarrollada ni playbook final.
+La bóveda está en fase semilla ampliada, con una capa viva de cobertura profesional ya materializada. Tiene propósito visible, estructura inicial, conceptos y patrones ya desarrollados, pilotos reales o semi-reales, fuentes base, playbooks de profundidad y cobertura en distintos niveles de madurez, y un árbol operativo de artefactos para cobertura. Aun así, la síntesis final de la metodología sigue en construcción.
 
 ## Siguiente paso recomendado
 
-Crear primero los documentos de `01_conceptos/` y `04_patrones_de_preguntas/`, porque ahí se consolidan las piezas que luego alimentarán el playbook y la futura capa de cobertura.
+Seguir consolidando la relación entre `01_conceptos/`, `04_patrones_de_preguntas/` y la capa viva de cobertura antes de cerrar una síntesis metodológica definitiva.

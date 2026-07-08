@@ -65,3 +65,6 @@ Este patrón alimenta:
 
 ## Fuente base
 Deriva de: [[Análisis estructural de la reconstrucción de trayectorias profesionales]].
+
+## Documentos relacionados directamente
+- [[PATRON_STAR_SIMPLE]]
