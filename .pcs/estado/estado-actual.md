@@ -245,3 +245,32 @@ El concepto de cobertura profesional queda documentado en `boveda-entrevista-pro
 
 PCS canónico no se modifica en este reajuste.
 La memoria operativa del host sigue viviendo en `.pcs/`.
+
+## Actualización — Propuesta documentada de regla de numeración para artefactos de cobertura
+
+Ya existe un documento específico para concentrar la propuesta mejorada de numeración y trazabilidad interna de `artefactos-cobertura-profesional/`:
+
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/REGLA_NUMERACION_ARTEFACTOS.md`
+
+Su finalidad es reunir en una sola pieza:
+
+- la propuesta de identificadores de entrevistado, mapa, zona, sesión, inmersión y competencia;
+- la ubicación y semántica de los contadores;
+- el criterio operativo de qué significa que un artefacto haya sido realmente creado;
+- la relación entre `checkpoint` e `inmersión`;
+- el impacto que tendría adoptar esa regla sobre templates y README de la carpeta.
+
+Esta pieza todavía no debe leerse como convención vigente del sistema. Por ahora queda registrada como propuesta a debatir antes de adaptar:
+
+- `artefactos-cobertura-profesional/templates/`;
+- `artefactos-cobertura-profesional/templates/README.md`;
+- `artefactos-cobertura-profesional/README.md`.
+
+El estado real del proyecto en esta línea es, por tanto, intermedio:
+
+- la necesidad de corregir la numeración de artefactos ya está identificada;
+- la propuesta mejorada ya está escrita y guardada en documento propio;
+- la adopción de esa regla y su traducción a templates y estructura viva sigue pendiente de decisión.
+
+PCS canónico no se modifica en este reajuste.
+La memoria operativa del host sigue viviendo en `.pcs/`.

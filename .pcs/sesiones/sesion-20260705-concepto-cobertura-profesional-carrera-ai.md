@@ -166,6 +166,27 @@ Se verifico ademas la existencia del README de la carpeta y de los templates ope
 
 El debate de identificadores y otros campos de frontmatter siguio abierto al cierre de esta actualizacion, sin convertirlo en decision cerrada.
 
+## Anotación urgente — Numeración de documentos en artefactos de cobertura profesional
+
+Queda registrada como linea urgente de trabajo para esta sesion abierta la correccion de la numeracion y convencion de identificadores dentro de `boveda-entrevista-profesional/artefactos-cobertura-profesional/`.
+
+La anotacion nace al detectar que la propuesta de numeracion reflejada en el `README.md` de esa carpeta tiene fallos y ya existe una propuesta mas precisa que debe retomarse como ultimo punto conocido cuando se rehidrate este contexto.
+
+La propuesta a retomar es esta:
+
+- `id_entrevistado: ENT-001`
+- `id_mapa: ENT-001-M01` con fichero `mapas/MAPA_ENT-001-M01.md`
+- Las sesiones de cobertura deben identificarse por fecha y mapa, sin contador artificial, por ejemplo `sesiones/SESION_COBERTURA_ENT-001-M01_2026-07-06.md`
+- Las zonas deben llevar contador propio y no reutilizable, por ejemplo `id_zona: ENT-001-M01-Z003`
+- Los checkpoints deben incorporar tambien la letra de intento para evitar colisiones entre reanudaciones de una misma zona, por ejemplo `checkpoints/CHECKPOINT_ENT-001-M01-Z003-a.md`
+- Las inmersiones deben conservar esa misma letra de intento, por ejemplo `inmersiones/INMERSION_ENT-001-M01-Z003-a.md`
+- Las competencias solo deben crearse cuando la evidencia lo justifique, por ejemplo `competencias/COMPETENCIA_ENT-001-M01-Z003-a.md`
+- Si existe un segundo intento sobre la misma zona, debe pasar a la siguiente letra, por ejemplo `INMERSION_ENT-001-M01-Z003-b.md`, sin crear competencia si la evidencia es debil
+
+La correccion clave derivada de ese analisis es que `TEMPLATE_CHECKPOINT.md` y el `README.md` de `artefactos-cobertura-profesional/` deben revisarse para que el checkpoint incluya la letra de intento en el nombre; de lo contrario, un segundo intento interrumpido sobre la misma zona colisionaria con el nombre del checkpoint anterior.
+
+Cuando se vuelva a rehidratar el contexto de cobertura profesional, esta tarea debe mencionarse de forma explicita y prioritaria como asunto urgente pendiente dentro de la sesion abierta.
+
 ## Actualización posterior a la simulación 000
 
 - `boveda-entrevista-profesional/artefactos-cobertura-profesional/sesiones/SESION_COBERTURA_0000_20260708_1730.md` queda como evidencia metodológica reciente, no como entrevista real.
@@ -174,3 +195,27 @@ El debate de identificadores y otros campos de frontmatter siguio abierto al cie
 - `TEMPLATE_SESION.md` ya incorpora la sección de hilos abiertos y competencias candidatas para la próxima sesión.
 - `graphify` fue actualizado y solo debe usarse como apoyo de navegación y rehidratación.
 - Esta sesión sigue abierta y continúa siendo la referencia principal para rehidratar cobertura profesional.
+
+## Actualización — Documento específico de regla de numeración de artefactos
+
+Durante esta sesión se ha materializado un documento específico para concentrar la propuesta mejorada de numeración, identificadores, contadores, nombres de fichero y relaciones mínimas entre artefactos de cobertura profesional.
+
+Ubicación del documento creado:
+
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/REGLA_NUMERACION_ARTEFACTOS.md`
+
+Finalidad del documento:
+
+- reunir en una sola pieza la propuesta de convención operativa para `artefactos-cobertura-profesional/`;
+- corregir las fricciones detectadas en la propuesta anterior de numeración;
+- dejar explícitas las dependencias futuras sobre templates y README de la carpeta;
+- separar con claridad la discusión de numeración del README general de `artefactos-cobertura-profesional/`.
+
+Estado actual de ese documento:
+
+- existe físicamente y ya sirve como base de trabajo;
+- por ahora sigue siendo una propuesta a debatir, no una convención adoptada;
+- no implica todavía que los templates, el `templates/README.md` ni el `README.md` general hayan sido actualizados para obedecerla;
+- tampoco implica que la carpeta `zonas/` o `TEMPLATE_ZONA.md` hayan quedado materializados ya.
+
+Esta actualización no cierra la discusión. Solo deja trazabilidad de que la propuesta ya existe como documento independiente y de que el siguiente debate debe centrarse en decidir si se adopta o no como convención operativa real.
