@@ -26,6 +26,12 @@ C:/Users/gusve/Documents/Apps/project-continuity-system/core/CONTRATO_CANONICO_G
 
 Este `AGENTS.md` orienta al agente localmente, pero no sustituye el contrato ni las entidades, plantillas, decisiones o protocolos del PCS Core.
 
+## Regla universal de ortografía española
+
+Cuando el agente redacte o modifique documentación en español, debe conservar la ortografía española, incluidas tildes, diéresis, eñes y signos de apertura de interrogación y exclamación cuando correspondan.
+
+Antes de dar por terminada cualquier documentación redactada en español, debe revisarla explícitamente desde el punto de vista ortográfico y corregir los errores detectados. No debe normalizar el español a ASCII salvo petición explícita.
+
 ## Rehidratación mínima obligatoria
 
 Cuando el usuario declare el host, el agente debe:
