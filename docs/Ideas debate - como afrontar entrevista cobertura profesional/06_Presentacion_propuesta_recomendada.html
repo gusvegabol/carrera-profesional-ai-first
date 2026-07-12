@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Una entrevista que escucha toda la trayectoria</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root {
+      --ink: #153936;
+      --paper: #f7f0e4;
+      --paper-deep: #e9dcc7;
+      --coral: #e7684a;
+      --sun: #f2c84b;
+      --mint: #b9d8ca;
+      --muted: #516964;
+      --shadow: 0 18px 45px rgba(21, 57, 54, .16);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: var(--paper); }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 12%, rgba(242, 200, 75, .25) 0 7rem, transparent 7.1rem),
+        radial-gradient(circle at 88% 83%, rgba(185, 216, 202, .54) 0 12rem, transparent 12.1rem),
+        var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    button, a { font: inherit; }
+
+    button:focus-visible, a:focus-visible {
+      outline: 3px solid var(--coral);
+      outline-offset: 4px;
+    }
+
+    #deck {
+      width: min(1120px, calc(100% - 2.5rem));
+      min-height: min(720px, calc(100vh - 7.6rem));
+      margin: 0 auto;
+      padding: 1.2rem 0 1rem;
+    }
+
+    .slide {
+      position: relative;
+      display: none;
+      min-height: inherit;
+      overflow: hidden;
+      align-content: center;
+      gap: clamp(1.4rem, 4vw, 4.5rem);
+      padding: clamp(1.25rem, 4vw, 3.8rem);
+      border: 1px solid rgba(21, 57, 54, .14);
+      border-radius: 1.75rem;
+      box-shadow: var(--shadow);
+      background: rgba(255, 252, 246, .72);
+      animation: arrive .42s ease both;
+    }
+
+    .slide.is-active { display: grid; }
+
+    .slide::before {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      color: var(--coral);
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .slide[data-slide="0"]::before { content: "01 / 07"; }
+    .slide[data-slide="1"]::before { content: "02 / 07"; }
+    .slide[data-slide="2"]::before { content: "03 / 07"; }
+    .slide[data-slide="3"]::before { content: "04 / 07"; }
+    .slide[data-slide="4"]::before { content: "05 / 07"; }
+    .slide[data-slide="5"]::before { content: "06 / 07"; }
+    .slide[data-slide="6"]::before { content: "07 / 07"; }
+
+    .eyebrow {
+      margin: 0 0 .65rem;
+      color: var(--coral);
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, p { margin-top: 0; }
+
+    h1, h2 {
+      max-width: 17ch;
+      margin-bottom: 1rem;
+      font-size: clamp(2.55rem, 6.7vw, 6.45rem);
+      line-height: .95;
+      letter-spacing: -.065em;
+    }
+
+    h2 { font-size: clamp(2.35rem, 5.3vw, 5.25rem); }
+    h1 { font-size: clamp(2.45rem, 4.5vw, 4.75rem); }
+
+    .lead {
+      max-width: 36rem;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+      line-height: 1.55;
+    }
+
+    .display-word { color: var(--coral); }
+
+    .two-column {
+      grid-template-columns: minmax(0, 1.02fr) minmax(18rem, .98fr);
+      align-items: center;
+    }
+
+    .slide[data-slide="0"] {
+      grid-template-columns: minmax(0, 1.02fr) minmax(18rem, .98fr);
+      align-items: center;
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 1.2rem;
+      padding: .45rem .7rem;
+      border: 1px solid rgba(21, 57, 54, .22);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .52);
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+
+    .opening-visual {
+      position: relative;
+      min-height: 25rem;
+    }
+
+    .portrait {
+      position: absolute;
+      right: 10%;
+      bottom: 7%;
+      width: min(15rem, 54vw);
+      aspect-ratio: .84;
+      border: .65rem solid var(--ink);
+      border-radius: 48% 52% 44% 56% / 42% 39% 61% 58%;
+      background: var(--sun);
+      transform: rotate(4deg);
+    }
+
+    .portrait::before {
+      position: absolute;
+      top: 15%;
+      left: 27%;
+      width: 44%;
+      height: 44%;
+      border-radius: 50% 46% 48% 52%;
+      background: var(--coral);
+      content: "";
+    }
+
+    .portrait::after {
+      position: absolute;
+      right: 15%;
+      bottom: 13%;
+      left: 15%;
+      height: 31%;
+      border-radius: 55% 50% 15% 15%;
+      background: var(--mint);
+      content: "";
+    }
+
+    .thread {
+      position: absolute;
+      top: 7%;
+      left: 3%;
+      width: 81%;
+      height: 70%;
+      border-top: .32rem dashed var(--coral);
+      border-radius: 50%;
+      transform: rotate(-11deg);
+    }
+
+    .thread::before, .thread::after {
+      position: absolute;
+      width: 1.35rem;
+      height: 1.35rem;
+      border: .22rem solid var(--ink);
+      border-radius: 50%;
+      background: var(--sun);
+      content: "";
+    }
+
+    .thread::before { top: -1rem; left: 1rem; }
+    .thread::after { right: 0; bottom: -.4rem; background: var(--mint); }
+
+    .note {
+      position: absolute;
+      z-index: 2;
+      width: 9rem;
+      padding: .8rem;
+      border: 1px solid rgba(21, 57, 54, .25);
+      box-shadow: 6px 7px 0 var(--ink);
+      background: #fff7a7;
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: .8rem;
+      font-weight: 700;
+      line-height: 1.28;
+      transform: rotate(-5deg);
+    }
+
+    .note--one { top: 4%; left: 14%; }
+    .note--two { right: 0; bottom: 2%; transform: rotate(7deg); background: #ffd9c9; }
+
+    .path-map {
+      position: relative;
+      display: grid;
+      min-height: 25rem;
+      place-items: center;
+      border: 1px dashed rgba(21, 57, 54, .28);
+      border-radius: 1.35rem;
+      background: rgba(185, 216, 202, .26);
+    }
+
+    .path-map::before {
+      width: 68%;
+      height: 53%;
+      border: .4rem dashed var(--coral);
+      border-radius: 61% 39% 57% 43% / 34% 62% 38% 66%;
+      content: "";
+      transform: rotate(-7deg);
+    }
+
+    .stop {
+      position: absolute;
+      display: grid;
+      width: 5.2rem;
+      min-height: 5.2rem;
+      place-items: center;
+      padding: .55rem;
+      border: .2rem solid var(--ink);
+      border-radius: 50%;
+      background: #fffdf7;
+      text-align: center;
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: .72rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .stop--a { top: 10%; left: 10%; background: var(--sun); }
+    .stop--b { top: 13%; right: 8%; background: #ffd9c9; }
+    .stop--c { bottom: 9%; left: 14%; background: var(--mint); }
+    .stop--d { right: 14%; bottom: 7%; background: #fffdf7; }
+
+    .quote {
+      max-width: 38rem;
+      margin: 1.45rem 0 0;
+      padding-left: 1rem;
+      border-left: .35rem solid var(--sun);
+      font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .decision-board {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .9rem;
+      min-height: 25rem;
+      padding: 1rem;
+      border-radius: 1.4rem;
+      background: var(--ink);
+      box-shadow: 10px 10px 0 var(--coral);
+    }
+
+    .pass-card {
+      display: grid;
+      align-content: end;
+      min-height: 20rem;
+      padding: 1.15rem;
+      border-radius: 1rem;
+      font-family: "Trebuchet MS", sans-serif;
+    }
+
+    .pass-card strong {
+      display: block;
+      margin-bottom: .45rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 4vw, 4.5rem);
+      line-height: .88;
+      letter-spacing: -.06em;
+    }
+
+    .pass-card--first { background: var(--sun); }
+    .pass-card--second { color: #fffdf7; background: var(--coral); }
+
+    .pass-card small { font-size: .88rem; font-weight: 700; line-height: 1.3; }
+
+    .bridge {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .8rem;
+      align-items: center;
+      max-width: 37rem;
+      margin-top: 1.8rem;
+      font-family: "Trebuchet MS", sans-serif;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .bridge span { padding: .8rem .45rem; border-radius: .8rem; background: var(--mint); }
+    .bridge span:nth-child(2) { background: var(--sun); }
+    .bridge span:nth-child(3) { background: #ffd9c9; }
+
+    .anchor-board {
+      display: grid;
+      gap: .95rem;
+      align-content: center;
+      min-height: 25rem;
+      padding: clamp(1rem, 3vw, 2rem);
+      border: .22rem solid var(--ink);
+      border-radius: 1.35rem;
+      background: #fffdf7;
+      transform: rotate(1deg);
+    }
+
+    .anchor-board .anchor {
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: .75rem;
+      align-items: center;
+      padding: .8rem;
+      border-bottom: 1px dashed rgba(21, 57, 54, .32);
+      font-family: "Trebuchet MS", sans-serif;
+      font-weight: 700;
+    }
+
+    .anchor-board .anchor:last-child { border-bottom: 0; }
+    .anchor-mark { width: 1rem; height: 1rem; border-radius: 50%; background: var(--coral); }
+    .anchor:nth-child(3) .anchor-mark { background: var(--sun); }
+    .anchor:nth-child(4) .anchor-mark { background: var(--mint); }
+
+    .episode-board {
+      display: grid;
+      gap: 1rem;
+      align-content: center;
+      min-height: 25rem;
+      padding: clamp(1rem, 3vw, 2rem);
+      border-radius: 1.35rem;
+      background: linear-gradient(140deg, var(--sun) 0 48%, #ffdfd4 48% 100%);
+    }
+
+    .episode-card {
+      padding: 1rem;
+      border: 1px solid rgba(21, 57, 54, .25);
+      border-radius: .9rem;
+      box-shadow: 5px 5px 0 rgba(21, 57, 54, .85);
+      background: #fffdf7;
+      font-family: "Trebuchet MS", sans-serif;
+    }
+
+    .episode-card strong { color: var(--coral); text-transform: uppercase; font-size: .73rem; letter-spacing: .08em; }
+    .episode-card p { margin: .45rem 0 0; font-weight: 700; line-height: 1.35; }
+    .episode-card--tilt { transform: rotate(-2deg); }
+    .episode-card--tilt-right { transform: rotate(2deg); }
+
+    .guarantee-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .9rem;
+      min-height: 25rem;
+      align-content: center;
+    }
+
+    .guarantee {
+      min-height: 10rem;
+      padding: 1.1rem;
+      border-radius: 1rem;
+      font-family: "Trebuchet MS", sans-serif;
+    }
+
+    .guarantee:nth-child(1) { background: var(--mint); }
+    .guarantee:nth-child(2) { background: var(--sun); }
+    .guarantee:nth-child(3) { background: #ffd9c9; }
+    .guarantee:nth-child(4) { color: #fffdf7; background: var(--ink); }
+    .guarantee strong { display: block; margin-bottom: .55rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem; line-height: .95; }
+    .guarantee p { margin: 0; font-size: .88rem; font-weight: 700; line-height: 1.35; }
+
+    .pilot-flow {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: .7rem;
+      align-items: center;
+      min-height: 20rem;
+      font-family: "Trebuchet MS", sans-serif;
+    }
+
+    .pilot-step {
+      min-height: 11rem;
+      padding: 1rem;
+      border: .18rem solid var(--ink);
+      border-radius: 1rem;
+      background: #fffdf7;
+    }
+
+    .pilot-step strong { display: block; margin-bottom: .65rem; color: var(--coral); font-size: 1.7rem; line-height: .9; }
+    .pilot-step p { margin: 0; font-size: .86rem; font-weight: 700; line-height: 1.35; }
+    .pilot-arrow { color: var(--coral); font-size: 2.2rem; font-weight: 900; }
+
+    .source-link {
+      display: inline-block;
+      margin-top: 1.6rem;
+      color: var(--ink);
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: .84rem;
+      font-weight: 800;
+      text-decoration-color: var(--coral);
+      text-decoration-thickness: .16rem;
+      text-underline-offset: .24rem;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      width: min(1120px, calc(100% - 2.5rem));
+      margin: 0 auto 1.2rem;
+    }
+
+    nav > button {
+      padding: .7rem 1rem;
+      border: 1px solid var(--ink);
+      border-radius: .65rem;
+      color: #fffdf7;
+      background: var(--ink);
+      cursor: pointer;
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: .86rem;
+      font-weight: 800;
+    }
+
+    nav > button:hover:not(:disabled) { color: var(--ink); background: var(--sun); }
+    nav > button:disabled { cursor: not-allowed; opacity: .42; }
+
+    #progress-dots { display: flex; justify-content: center; gap: .45rem; }
+
+    #progress-dots button {
+      width: .7rem;
+      height: .7rem;
+      padding: 0;
+      border: 1px solid var(--ink);
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    #progress-dots button[aria-selected="true"] { width: 1.85rem; border-radius: 999px; background: var(--coral); }
+
+    #slide-status {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    @keyframes arrive {
+      from { opacity: 0; transform: translateY(.8rem); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 760px) {
+      #deck { width: min(100% - 1.25rem, 1120px); min-height: calc(100vh - 6.3rem); padding-top: .6rem; }
+      .slide { min-height: inherit; padding: 1.15rem; border-radius: 1.15rem; }
+      .two-column, .slide[data-slide="0"] { grid-template-columns: 1fr; }
+      .opening-visual, .path-map, .decision-board, .anchor-board, .episode-board, .guarantee-grid { min-height: 18.5rem; }
+      .opening-visual { margin-top: -.5rem; }
+      .portrait { right: 9%; width: 11rem; }
+      .note { width: 7.6rem; font-size: .7rem; }
+      .decision-board { min-height: 18.5rem; }
+      .pass-card { min-height: 15rem; }
+      .pilot-flow { grid-template-columns: 1fr; gap: .65rem; }
+      .pilot-step { min-height: 0; }
+      .pilot-arrow { display: none; }
+      nav { width: min(100% - 1.25rem, 1120px); gap: .55rem; }
+      nav > button { padding: .62rem .7rem; font-size: .76rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main id="deck" aria-labelledby="deck-title">
+    <section class="slide is-active" id="slide-1" data-slide="0" aria-hidden="false">
+      <div>
+        <p class="eyebrow">Propuesta para un primer piloto</p>
+        <h1 id="deck-title">¿Cómo escuchamos toda una trayectoria sin convertirla en un <span class="display-word">formulario</span>?</h1>
+        <p class="lead">Una entrevista puede recoger una vida profesional completa si deja espacio para que cada persona recuerde, conecte y corrija su propio recorrido.</p>
+      </div>
+      <div class="opening-visual" aria-hidden="true">
+        <div class="thread"></div>
+        <div class="portrait"></div>
+        <div class="note note--one">"También aprendí mientras cuidaba."</div>
+        <div class="note note--two">"Ese cambio fue importante."</div>
+      </div>
+    </section>
+
+    <section class="slide two-column" id="slide-2" data-slide="1" aria-hidden="true">
+      <div>
+        <p class="eyebrow">El problema de partida</p>
+        <h2>Una trayectoria no siempre cabe en una línea recta.</h2>
+        <p class="lead">Cambios de sector, pausas, actividades simultáneas y aprendizajes fuera del empleo pueden quedar invisibles si solo pedimos un currículum ordenado.</p>
+        <p class="quote">La persona no debería tener que adaptar sus recuerdos al orden que necesita la herramienta.</p>
+      </div>
+      <div class="path-map" aria-hidden="true">
+        <span class="stop stop--a">Cambio de sector</span>
+        <span class="stop stop--b">Trabajo y cuidados</span>
+        <span class="stop stop--c">Aprendizaje informal</span>
+        <span class="stop stop--d">Proyecto paralelo</span>
+      </div>
+    </section>
+
+    <section class="slide two-column" id="slide-3" data-slide="2" aria-hidden="true">
+      <div>
+        <p class="eyebrow">La propuesta recomendada</p>
+        <h2><span class="display-word">Doble pasada</span>: cubrir primero, profundizar después.</h2>
+        <p class="lead">En vez de obligar a contar todo con el mismo nivel de detalle, se separan dos tareas: tener una vista de conjunto y comprender los episodios que más enseñan.</p>
+        <div class="bridge" aria-label="Resultado de la doble pasada">
+          <span>Más cobertura</span>
+          <span>Menos presión</span>
+          <span>Mejor contexto</span>
+        </div>
+      </div>
+      <div class="decision-board" aria-hidden="true">
+        <div class="pass-card pass-card--first"><strong>1</strong><small>Primero: panorama libre de toda la trayectoria.</small></div>
+        <div class="pass-card pass-card--second"><strong>2</strong><small>Después: uno o dos episodios para entender mejor.</small></div>
+      </div>
+    </section>
+
+    <section class="slide two-column" id="slide-4" data-slide="3" aria-hidden="true">
+      <div>
+        <p class="eyebrow">Primera pasada</p>
+        <h2>La persona empieza por donde le resulte más natural.</h2>
+        <p class="lead">La IA escucha el panorama sin imponer el orden. Señala anclas útiles y guarda preguntas pendientes para volver a ellas solo cuando encaje.</p>
+        <span class="label">No es un interrogatorio cronológico</span>
+      </div>
+      <div class="anchor-board" aria-label="Ejemplos de anclas que puede recoger la primera pasada">
+        <div class="anchor"><span class="anchor-mark"></span><span>Un momento de cambio: "dejé aquel puesto porque..."</span></div>
+        <div class="anchor"><span class="anchor-mark"></span><span>Una actividad simultánea: "a la vez montaba..."</span></div>
+        <div class="anchor"><span class="anchor-mark"></span><span>Una pregunta pendiente: "más adelante podemos volver a eso"</span></div>
+      </div>
+    </section>
+
+    <section class="slide two-column" id="slide-5" data-slide="4" aria-hidden="true">
+      <div>
+        <p class="eyebrow">Segunda pasada</p>
+        <h2>Elegimos pocos episodios que merecen ser entendidos.</h2>
+        <p class="lead">La conversación se detiene en uno o dos momentos significativos. Pregunta por la situación, las acciones y el resultado, sin tratar a la persona como si estuviera en un examen.</p>
+        <p class="quote">"¿Qué ocurrió, qué hiciste y qué cambió?" es una invitación a explicar, no una prueba.</p>
+      </div>
+      <div class="episode-board" aria-label="Tarjetas con los elementos de un episodio">
+        <div class="episode-card episode-card--tilt"><strong>Situación</strong><p>¿Qué estaba pasando y por qué importaba?</p></div>
+        <div class="episode-card"><strong>Acción</strong><p>¿Qué hiciste tú, con qué apoyos o límites?</p></div>
+        <div class="episode-card episode-card--tilt-right"><strong>Resultado</strong><p>¿Qué cambió, qué aprendiste o qué quedó abierto?</p></div>
+      </div>
+    </section>
+
+    <section class="slide two-column" id="slide-6" data-slide="5" aria-hidden="true">
+      <div>
+        <p class="eyebrow">Límites y garantías</p>
+        <h2>Escuchar mejor también exige saber qué no afirmar.</h2>
+        <p class="lead">La propuesta busca una conversación útil y prudente: conserva el control de la persona, muestra qué está respaldado y distingue los indicios de las conclusiones.</p>
+      </div>
+      <div class="guarantee-grid" aria-label="Cuatro garantías de la propuesta">
+        <div class="guarantee"><strong>No lineal</strong><p>Se puede avanzar, volver atrás y corregir el recorrido.</p></div>
+        <div class="guarantee"><strong>Con evidencia</strong><p>Las afirmaciones se apoyan en episodios y muestran su límite.</p></div>
+        <div class="guarantee"><strong>Con control</strong><p>La persona puede revisar, corregir o retirar información.</p></div>
+        <div class="guarantee"><strong>Sin confundir</strong><p>ESCO como correspondencia candidata posterior, no como una prueba de competencia individual.</p></div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-7" data-slide="6" aria-hidden="true">
+      <div>
+        <p class="eyebrow">¿Qué se probaría primero?</p>
+        <h2>Un perfil inicial útil, revisable y aprendido con entrevistas reales.</h2>
+        <p class="lead">El piloto no pretende certificar a nadie. Sirve para comprobar si esta forma de entrevistar cubre la trayectoria, respeta a la persona y produce un resumen que ambas partes puedan revisar.</p>
+      </div>
+      <div class="pilot-flow" aria-label="Flujo del piloto">
+        <div class="pilot-step"><strong>Conversar</strong><p>Panorama libre y episodios seleccionados.</p></div>
+        <span class="pilot-arrow" aria-hidden="true">→</span>
+        <div class="pilot-step"><strong>Revisar</strong><p>La persona corrige, matiza o rechaza el perfil.</p></div>
+        <span class="pilot-arrow" aria-hidden="true">→</span>
+        <div class="pilot-step"><strong>Aprender</strong><p>Entrevistas reales orientan las mejoras siguientes.</p></div>
+      </div>
+      <a class="source-link" href="05_Evaluacion_experta_y_recomendacion_de_enfoque.md">Leer la evaluación experta que fundamenta esta recomendación</a>
+    </section>
+  </main>
+
+  <nav aria-label="Navegación de la presentación">
+    <button type="button" id="previous-slide" aria-label="Pantalla anterior">Anterior</button>
+    <div id="progress-dots" role="tablist" aria-label="Pantallas de la presentación"></div>
+    <button type="button" id="next-slide" aria-label="Pantalla siguiente">Siguiente</button>
+  </nav>
+  <p id="slide-status" aria-live="polite"></p>
+
+  <script>
+    const slides = [...document.querySelectorAll('.slide')];
+    const dots = document.getElementById('progress-dots');
+    const status = document.getElementById('slide-status');
+    let current = 0;
+
+    function goTo(index) {
+      current = Math.min(Math.max(index, 0), slides.length - 1);
+      slides.forEach((slide, position) => {
+        slide.classList.toggle('is-active', position === current);
+        slide.setAttribute('aria-hidden', String(position !== current));
+      });
+      [...dots.children].forEach((dot, position) => {
+        dot.setAttribute('aria-selected', String(position === current));
+        dot.tabIndex = position === current ? 0 : -1;
+      });
+      document.getElementById('previous-slide').disabled = current === 0;
+      document.getElementById('next-slide').disabled = current === slides.length - 1;
+      status.textContent = `Pantalla ${current + 1} de ${slides.length}`;
+    }
+
+    slides.forEach((slide, index) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.role = 'tab';
+      dot.ariaLabel = `Ir a la pantalla ${index + 1}`;
+      dot.setAttribute('aria-controls', `slide-${index + 1}`);
+      dot.addEventListener('click', () => goTo(index));
+      dots.append(dot);
+    });
+
+    document.getElementById('previous-slide').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('next-slide').addEventListener('click', () => goTo(current + 1));
+    window.addEventListener('keydown', event => {
+      if (event.key === 'ArrowRight') goTo(current + 1);
+      if (event.key === 'ArrowLeft') goTo(current - 1);
+      if (event.key === 'Home') goTo(0);
+    });
+    goTo(0);
+  </script>
+</body>
+</html>
