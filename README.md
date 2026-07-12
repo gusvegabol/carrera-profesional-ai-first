@@ -8,7 +8,7 @@ La información verificable disponible describe solo el arranque mínimo de PCS 
 
 ## Objetivo del proyecto
 
-[PENDIENTE: documentar el objetivo funcional real de `carrera-profesional-ai-first`]
+Carrera AI convierte la entrevista asistida por IA en un Perfil Profesional Accionable capaz de capturar la carrera completa de una persona, no solo conceptos aislados, y de traducirla a evidencias, narrativas, competencias, trayectorias y correspondencias candidatas con estándares como ESCO.
 
 ## Estado actual
 
@@ -24,6 +24,7 @@ Estructura verificada en la raíz del host:
 
 - `.git/`
 - `.pcs/`
+- `docs/`
 
 Dentro de `.pcs/` se ha confirmado, como mínimo:
 
@@ -38,6 +39,8 @@ Este proyecto usa Project Continuity System (PCS) como capa de continuidad, gobe
 
 PCS gobierna únicamente su capa operativa `.pcs/` y no sustituye la documentación funcional, técnica o estructural propia del proyecto anfitrión.
 
+La gobernanza común aplicable a hosts se consulta por referencia viva en el PCS Core, especialmente en `C:/Users/gusve/Documents/Apps/project-continuity-system/core/CONTRATO_CANONICO_GOBERNANZA_HOSTS.md`, sin copiar esa norma dentro del host.
+
 ## Continuidad operativa
 
 - Las sesiones registran historia.
@@ -47,17 +50,13 @@ PCS gobierna únicamente su capa operativa `.pcs/` y no sustituye la documentaci
 
 ## Documentación propia del proyecto
 
-No se ha verificado documentación raíz propia del anfitrión fuera de `.pcs/`.
-
-Nota mínima de alcance: el primer documento base del MVP vive en `docs/alcance-mvp.md`.
-
 Documentos confirmados durante esta validación:
 
 - `./.pcs/estado/estado-actual.md`
 - `./.pcs/sesiones/sesion-20260614-2132-inicio-pcs-en-carrera-ai.md`
-- `./docs/alcance-mvp.md`
+- `./docs/DOCUMENTO_SPEC_CARRERA_AI.md`
 
-[PENDIENTE: identificar README, documentación funcional o documentación técnica propia del host si existen]
+[PENDIENTE: completar el inventario de documentación funcional y metodológica propia del host]
 
 ## Datos pendientes de completar
 
@@ -75,22 +74,4 @@ Documentos confirmados durante esta validación:
 
 ## Siguiente gesto recomendado
 
-Revisar `docs/alcance-mvp.md` como base del MVP y decidir si la Fase 2 debe arrancar.
-
-
-## Carpetas auxiliares excluidas
-
-Todo el contenido de `.tmp/` debe considerarse material temporal, auxiliar o de trabajo local.
-
-La carpeta `.tmp/` no forma parte del proyecto operativo, no forma parte de la bóveda `boveda-entrevista-profesional/` y no debe usarse como fuente de verdad.
-
-Su contenido no debe leerse, resumirse, indexarse, modificarse ni usarse salvo petición explícita del usuario.
-
-Esto incluye, entre otros posibles contenidos:
-
-- `.tmp/notas/`
-- borradores temporales
-- exports parciales
-- pruebas
-- resultados intermedios
-- material auxiliar recopilado por el usuario
+Revisar `docs/DOCUMENTO_SPEC_CARRERA_AI.md` como base funcional del proyecto y decidir si necesita refinamiento o un índice funcional adicional.

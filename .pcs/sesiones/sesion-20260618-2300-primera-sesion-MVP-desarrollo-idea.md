@@ -1,5 +1,11 @@
-# sesion-20260618-2300-primera-sesion-MVP-desarrollo-idea.md
-
+---
+id: sesion-20260618-2300-primera-sesion-MVP-desarrollo-idea
+titulo: Primera sesión MVP desarrollo de idea
+inicio: 2026-06-18 23:00
+cierre:
+estado: abierta
+tipo: sesion
+host: carrera-ai
 ---
 
 # Sesión PCS — Primera sesión MVP desarrollo de idea

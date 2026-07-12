@@ -16,6 +16,16 @@ Ruta del PCS core:
 
 El PCS core actúa como fuente normativa común. Este repositorio anfitrión conserva su contexto local y su memoria operativa vive en `./.pcs/`.
 
+## Contrato de gobernanza PCS
+
+Cuando la tarea afecte gobernanza PCS, creación o actualización de sesiones, acciones, decisiones, estado, hosts o fuentes compartidas, el agente debe aplicar el contrato canónico vigente en:
+
+```text
+C:/Users/gusve/Documents/Apps/project-continuity-system/core/CONTRATO_CANONICO_GOBERNANZA_HOSTS.md
+```
+
+Este `AGENTS.md` orienta al agente localmente, pero no sustituye el contrato ni las entidades, plantillas, decisiones o protocolos del PCS Core.
+
 ## Rehidratación mínima obligatoria
 
 Cuando el usuario declare el host, el agente debe:
@@ -41,10 +51,7 @@ Documentos verificados durante esta validación:
 
 - `./.pcs/estado/estado-actual.md`
 - `./.pcs/sesiones/sesion-20260614-2132-inicio-pcs-en-carrera-ai.md`
-
-No se verificó `README.md` ni `AGENTS.md` previos en la raíz del host.
-
-[PENDIENTE: identificar documentación local adicional del proyecto si existe]
+- `./docs/DOCUMENTO_SPEC_CARRERA_AI.md`
 
 ## Límites locales
 
@@ -59,6 +66,23 @@ No se verificó `README.md` ni `AGENTS.md` previos en la raíz del host.
 - No inventar contexto funcional no documentado.
 - No editar `hosts/hosts.yaml` fuera del flujo guiado.
 - No duplicar el núcleo PCS dentro de este repositorio.
+
+## Exclusión operativa de `.tmp/`
+
+Todo el contenido de `.tmp/` debe considerarse material temporal, auxiliar o de trabajo local.
+
+La carpeta `.tmp/` no forma parte del proyecto operativo, no forma parte de la bóveda `boveda-entrevista-profesional/` y no debe usarse como fuente de verdad.
+
+Su contenido no debe leerse, resumirse, indexarse, modificarse ni usarse salvo petición explícita del usuario.
+
+Esto incluye, entre otros posibles contenidos:
+
+- `.tmp/notas/`
+- borradores temporales
+- exports parciales
+- pruebas
+- resultados intermedios
+- material auxiliar recopilado por el usuario
 
 ## Exclusión operativa de `.tmp/`
 

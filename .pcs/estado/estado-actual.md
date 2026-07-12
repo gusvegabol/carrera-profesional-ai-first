@@ -2,8 +2,8 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
-fecha_actualizacion: 2026-07-08
-ultima_sesion_relacionada: sesion-20260705-concepto-cobertura-profesional-carrera-ai
+fecha_actualizacion: 2026-07-12
+ultima_sesion_relacionada: sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai
 host: carrera-ai
 ---
 
@@ -13,17 +13,27 @@ host: carrera-ai
 
 La capa PCS del host ya no está solo en arranque mínimo: existe una sesión marco de alcance MVP y una sesión específica de Fase 1 para consolidar el objetivo real del MVP de `Carrera Profesional AI-First` como sistema AI-First apoyado en ChatGPT, CODEX, Notion, Drive y PCS.
 
-La Fase 1 ya quedó materializada como paquete documental revisable y ahora se está evaluando el contenido de `docs/alcance-mvp.md` por parte del usuario y de ChatGPT.
+La Fase 1 ya quedó materializada como paquete documental revisable y ahora se está evaluando la base funcional del host, con `docs/DOCUMENTO_SPEC_CARRERA_AI.md` como referencia principal visible.
 
-La capa operativa ha detectado una desviación respecto a la idea original: el proyecto no debe quedarse en documentos mínimos ni en preguntas genéricas. El foco se ha corregido hacia la entrevista conversacional profunda como capacidad nuclear del sistema, y la bóveda `boveda-entrevista-profesional/` ya quedó consolidada como paso previo al playbook.
+La capa operativa ha detectado una desviación respecto a la idea original: el proyecto no debe quedarse en documentos mínimos ni en preguntas genéricas. El foco se ha corregido hacia la entrevista conversacional profunda como capacidad nuclear del sistema y, ahora, hacia la captura de la carrera completa de la persona mediante un Perfil Profesional Accionable. La bóveda `boveda-entrevista-profesional/` ya quedó consolidada como paso previo al playbook.
 
-La bóveda ya quedó creada y validada, y la trazabilidad del reenfoque también quedó validada por ChatGPT. El siguiente trabajo recomendado empieza por `01_conceptos/` y `04_patrones_de_preguntas/`, mientras `docs/alcance-mvp.md` sigue pendiente de reinterpretación desde la entrevista como núcleo.
+La bóveda ya quedó creada y validada, y la trazabilidad del reenfoque también quedó validada por ChatGPT. El siguiente trabajo recomendado empieza por `01_conceptos/` y `04_patrones_de_preguntas/`, mientras la base funcional principal visible del host queda en `docs/DOCUMENTO_SPEC_CARRERA_AI.md`.
 
 PCS canónico no se modifica en este reajuste. La memoria operativa del host sigue viviendo en `.pcs/`.
 
-La fase de trabajo reciente consolidó además que el MVP debe concretarse como un primer piloto de entrevista profesional profunda ejecutado por ChatGPT, con salida mínima de competencia profesional con evidencia verificable y reglas explícitas de gobierno para la conversación. La bóveda de entrevista ya quedó normalizada en sus `README.md` con la convención de nombres semánticos por carpeta.
+La fase de trabajo reciente consolidó además que el MVP debe concretarse como un primer piloto de entrevista profesional profunda ejecutado por ChatGPT, con salida mínima de competencia profesional con evidencia verificable y reglas explícitas de gobierno para la conversación. La evolución actual ya no apunta solo a un concepto bien definido, sino a una entrevista capaz de capturar la carrera completa de la persona. La bóveda de entrevista ya quedó normalizada en sus `README.md` con la convención de nombres semánticos por carpeta.
 
-La sesión marco de alcance MVP y la sesión de Fase 1 siguen abiertas y continúan siendo la referencia viva para el cierre del objetivo real del MVP.
+La comprobación de gobernanza del host quedó aprobada tras actualizar `AGENTS.md` y `README.md`, sin duplicar PCS Core ni alterar la capa `.pcs/`.
+
+En la revisión funcional inicial se comprobó que `docs/alcance-mvp.md` ya no existe. La referencia funcional principal visible ahora es `docs/DOCUMENTO_SPEC_CARRERA_AI.md`, mientras la bóveda de entrevista profesional actúa como soporte metodológico y documental del sistema.
+
+Dictamen provisional: `docs/DOCUMENTO_SPEC_CARRERA_AI.md` queda como documento funcional principal del host; la bóveda no lo sustituye, sino que lo alimenta y complementa.
+
+El trabajo actual pendiente del proyecto ya no es reescribir el `SPEC`, sino diseñar la nueva metodología de entrevista para capturar la carrera completa de una persona dentro del Perfil Profesional Accionable.
+
+La sesión marco de alcance MVP, la sesión de Fase 1 y la línea metodológica de cobertura siguen abiertas y continúan siendo la referencia viva para el cierre del objetivo real del MVP.
+
+Se abre ahora una nueva sesión para adaptar la parte funcional del host desde dentro del proyecto, con foco en la documentación propia y en el encaje honesto de `docs/DOCUMENTO_SPEC_CARRERA_AI.md`.
 
 ## Foco operativo
 
@@ -34,6 +44,9 @@ Definir el concepto de cobertura profesional y separar con precisión profundida
 - Desarrollar `boveda-entrevista-profesional/01_conceptos/CONCEPTO_COBERTURA_PROFESIONAL.md` como puente entre profundidad y cobertura.
 - Usar `sesion-20260705-concepto-cobertura-profesional-carrera-ai.md` para decidir qué significa un mapa inicial razonable de trayectoria.
 - Mantener `PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA` como playbook de profundidad mientras la cobertura queda en diseño.
+- Inventariar la documentacion funcional propia del host y decidir si `docs/DOCUMENTO_SPEC_CARRERA_AI.md` requiere refinamiento o un índice funcional adicional.
+- Mantener `docs/DOCUMENTO_SPEC_CARRERA_AI.md` como referencia central funcional mientras se decide si requiere refinamiento o un índice funcional adicional.
+- Definir si la nueva sesión funcional requiere una segunda sesión material para cambios documentales.
 
 ## Acciones abiertas relevantes
 
@@ -65,6 +78,7 @@ Estado actualizado a partir de la materialización de la Fase 1. Refleja líneas
 ## Trazabilidad
 
 - Última sesión: sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai
+- Nueva sesión abierta: sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai
 - Origen del cambio: materialización de la Fase 1 del alcance MVP en sesión específica y documento base
 - Documentos creados o modificados:
   - .pcs/estado/estado-actual.md
@@ -274,3 +288,50 @@ El estado real del proyecto en esta línea es, por tanto, intermedio:
 
 PCS canónico no se modifica en este reajuste.
 La memoria operativa del host sigue viviendo en `.pcs/`.
+
+## Actualización — Apertura de sesión sobre núcleo metodológico y Perfil Profesional Accionable
+
+Se abre `sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md` como nueva línea de trabajo para preparar el próximo playbook de cobertura profesional.
+
+Su objetivo es orientar la cobertura hacia la construcción progresiva de un Perfil Profesional Accionable: una representación viva de la trayectoria, experiencias, competencias, herramientas, uso de IA, evidencias, patrones, preferencias, opciones, narrativas, brechas, preguntas pendientes y correspondencias ESCO candidatas de una persona.
+
+La nueva sesión toma como base `docs/DOCUMENTO_SPEC_CARRERA_AI.md`, `docs/Núcleo Metodológico del Playbook/PERFIL_PROFESIONAL_ACCIONABLE_Y_EQUIVALENCIA_ESCO.md` y los documentos de la raíz de `docs/Núcleo Metodológico del Playbook/`. No sustituye la sesión conceptual previa de cobertura ni modifica el playbook de profundidad vigente.
+
+Las decisiones de partida quedan fijadas así:
+
+- la entrevista es el mecanismo de captura; el Perfil Profesional Accionable es el resultado que debe alimentar;
+- la cobertura sigue siendo distinta de la profundidad y debe invocarla cuando haga falta evidencia robusta;
+- ESCO se tratará como correspondencia candidata, explicable y revisable, nunca como asignación automática definitiva;
+- la próxima fase debe definir primero el modelo de información, los umbrales de evidencia, la incertidumbre y la validación antes de rediseñar artefactos, identificadores o playbooks operativos.
+
+El siguiente gesto recomendado es elaborar una matriz entre las capas del Perfil Profesional Accionable y el núcleo metodológico para decidir qué información se captura, con qué técnica, qué evidencia exige y qué relación ESCO puede proponerse.
+
+## Actualización — Apertura de línea de investigación operativa ESCO
+
+Se abre `sesion-20260710-2347-investigacion-operativa-esco-carrera-ai.md` como sesión hija de `sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md`.
+
+Su objetivo es aislar el subproblema de cómo obtener correspondencias ESCO candidatas a partir de una competencia, habilidad, ocupación, profesión o formulación profesional. Esta línea puede avanzar en paralelo a la SPEC general del playbook de cobertura profesional.
+
+La decisión de partida es que ESCO no debe usarse como asignación automática definitiva, sino como correspondencia candidata, explicable, trazable, versionada y revisable.
+
+Esta línea alimentará principalmente la Fase 2 del Perfil Profesional Accionable:
+
+- Fase 1: primera versión útil del perfil sin ESCO.
+- Fase 2: primera versión útil del perfil con correspondencias ESCO candidatas.
+- Fase 3: perfil completo por ciclos, con ESCO integrado como capa revisable.
+
+El siguiente gesto recomendado es investigar el uso oficial de ESCO en aplicaciones: API, descargas, versionado, identificadores, búsqueda y formatos de respuesta. Después se podrá diseñar el contrato de una futura skill ESCO que devuelva candidatos explicados, no códigos definitivos.
+
+## Actualizacion - Fases, pruebas sinteticas y relacion con ESCO
+
+El trabajo de cobertura profesional queda ordenado provisionalmente en tres fases de alcance creciente:
+
+- **Fase 1:** primera version util del Perfil Profesional Accionable, sin ESCO como requisito. Debe recoger trayectoria, experiencias significativas, evidencias, competencias candidatas, herramientas y sistemas, uso de IA y preguntas pendientes.
+- **Fase 2:** primera version util con correspondencias ESCO candidatas, explicadas, trazables, versionadas y revisables.
+- **Fase 3:** perfil completo por ciclos, con narrativas, preferencias, opciones, brechas y ESCO como capa revisable.
+
+La decision vigente es no redactar todavia la SPEC operativa final del playbook. Antes debe sintetizarse el nucleo metodologico en decisiones de diseno sobre informacion a capturar, tecnica, evidencia, incertidumbre y criterio de inmersion de profundidad. La Fase 1 es el alcance recomendado para el primer playbook operativo.
+
+La SPEC futura debera declarar las capacidades de la fase y las familias de pruebas sinteticas obligatorias, pero el detalle de casos y resultados vivira en documentos separados. Las pruebas sinteticas no validan el metodo con personas: prueban reglas y guardarrailes; los pilotos reales o semi-reales mantienen su funcion de evidencia limitada de utilidad.
+
+Podra explorarse una automejora acotada mediante agentes por caso sintetico, con intentos maximos, limites de cambio y revision transversal final. La investigacion ESCO continua por separado en la sesion hija vigente y alimentara la Fase 2, sin bloquear la definicion de la Fase 1.
