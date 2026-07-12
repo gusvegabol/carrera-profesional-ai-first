@@ -168,3 +168,73 @@ Se acuerda abrir y mantener en paralelo la investigacion operativa ESCO en `sesi
 Su objetivo no es crear todavia una skill cerrada que devuelva "el codigo correcto", sino investigar y definir un futuro generador de correspondencias candidatas ESCO. El flujo debera recibir, segun el caso, una competencia, habilidad, conocimiento, ocupacion, profesion o formulacion profesional junto con su contexto y evidencia; debera devolver candidatos ordenados con identificador o URI, etiqueta, tipo de concepto, version ESCO, explicacion de ajuste, dudas, alternativas y estado de revision.
 
 El alcance recomendado de la primera investigacion ESCO es habilidades/competencias y ocupaciones. Las cualificaciones quedan fuera hasta decidir su semantica y sus requisitos de evidencia. La futura skill, si se justifica, debera superar su propio catalogo de casos sinteticos antes de integrarse en la Fase 2.
+
+## Actualización - Cuatro enfoques, evaluación y presentación de la propuesta
+
+### Contexto inmediato
+
+El 2026-07-12 se completó una exploración comparativa de cuatro formas de afrontar una entrevista por IA que cubra toda la trayectoria profesional. La exploración parte de una premisa que esta sesión ya establecía: los documentos metodológicos de base describen prácticas entre personas y no pueden trasladarse mecánicamente a una IA. Por ello, las propuestas preservan la conversación no lineal, la revisión por la persona y los límites de toda inferencia.
+
+### Capa episódica
+
+Se redactaron cuatro propuestas en `docs/Ideas debate - como afrontar entrevista cobertura profesional/`:
+
+1. Una línea de vida flexible y reconstruible.
+2. Una doble pasada de panorama e inmersión selectiva.
+3. Un atlas conversacional de episodios, transiciones y capacidades.
+4. Un dossier de hipótesis contrastables y evidencia progresiva.
+
+Un evaluador especializado comparó las cuatro ideas mediante siete criterios con igual peso: no linealidad, evidencia, adaptación responsable de métodos humanos a una IA, carga y control de la persona, viabilidad de MVP, privacidad y prudencia, y validación e incertidumbre. El informe resultante recomienda la Idea 2 como base inicial, con una puntuación total de `32,5` sobre `35`.
+
+La exploración también produjo `06_Presentacion_propuesta_recomendada.html`, una presentación autónoma y accesible para explicar esa recomendación a una persona no experta.
+
+### Capa semántica
+
+La doble pasada se recomienda porque separa dos tareas que compiten: cubrir una trayectoria completa y obtener evidencia conductual suficiente. No se propone como una secuencia rígida. Para corregir sus debilidades, el informe exige incorporar:
+
+- de la Idea 1, el inicio libre, las anclas, los retornos opcionales y los estados de cobertura que no confundan el orden de conversación con la representación de la trayectoria;
+- de la Idea 4, un registro ligero de afirmaciones candidatas con base, límites, evidencia pendiente y confirmación, corrección, rechazo o retirada por la persona.
+
+La Idea 3 no se descarta, pero se sitúa como evolución posible tras demostrar utilidad en un piloto. ESCO conserva el alcance definido por esta sesión: una capa posterior de correspondencia candidata, explicable y revisable, nunca una prueba automática de competencia o una certificación.
+
+La evaluación es una recomendación debatible. No crea una decisión PCS, no adopta un playbook, no modifica `docs/DOCUMENTO_SPEC_CARRERA_AI.md` y no altera el playbook de profundidad vigente.
+
+### Ideas y líneas cognitivas abiertas
+
+- Determinar si la recomendación debe adoptarse, modificarse o descartarse como base del primer piloto.
+- Definir, solo tras esa decisión, el contrato del piloto de cobertura: salida inicial, revisión por la persona, privacidad, señales de utilidad y límites de interpretación.
+- Precisar cómo se intercalan panorámica e inmersión sin convertir las dos pasadas en un guion obligatorio.
+- Decidir más adelante si un atlas de relaciones aporta valor suficiente frente a su complejidad y carga cognitiva.
+
+### Acciones derivadas
+
+- No se crea una acción formal en esta actualización. La posible definición del piloto queda condicionada a una decisión explícita sobre la recomendación.
+
+### Decisiones derivadas
+
+- No se crea una decisión formal. El informe de evaluación debe tratarse como fundamento para debate, no como adopción canónica.
+
+### Documentos afectados
+
+- `.pcs/estado/estado-actual.md`.
+- `docs/Ideas debate - como afrontar entrevista cobertura profesional/01_Conservadora_linea_de_vida_flexible_y_reconstruible.md`.
+- `docs/Ideas debate - como afrontar entrevista cobertura profesional/02_Conservadora_doble_pasada_panorama_e_inmersion_selectiva.md`.
+- `docs/Ideas debate - como afrontar entrevista cobertura profesional/03_Innovadora_atlas_conversacional_de_episodios_transiciones_y_capacidades.md`.
+- `docs/Ideas debate - como afrontar entrevista cobertura profesional/04_Innovadora_dossier_de_hipotesis_contrastables_y_evidencia_progresiva.md`.
+- `docs/Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`.
+- `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`.
+- `docs/superpowers/plans/2026-07-12-presentacion-propuesta-entrevista.md`.
+
+### Rehidratación futura
+
+- **Dónde quedó el trabajo:** existe una recomendación metodológica explicada, pero todavía no adoptada, para el primer piloto de cobertura profesional.
+- **Leer primero:** `docs/Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md` y `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`.
+- **Líneas abiertas a retomar:** adopción o ajuste de la doble pasada, definición del piloto y decisión posterior sobre la evolución hacia un atlas relacional.
+- **Riesgos de malinterpretación:** no tratar las puntuaciones como evidencia empírica, no convertir ESCO en prueba individual y no leer esta actualización histórica como sustituto de `estado-actual.md`.
+- **Siguiente gesto recomendado:** debatir la recomendación antes de materializar cambios en el playbook, el SPEC o los artefactos de ejecución.
+
+### Trazabilidad de la actualización
+
+- Estado de la sesión: abierta.
+- Estado de proyecto relacionado: `.pcs/estado/estado-actual.md` actualizado el 2026-07-12.
+- PCS canónico: no modificado.
