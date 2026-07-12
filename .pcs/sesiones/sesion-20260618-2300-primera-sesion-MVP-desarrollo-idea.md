@@ -2,8 +2,8 @@
 id: sesion-20260618-2300-primera-sesion-MVP-desarrollo-idea
 titulo: Primera sesión MVP desarrollo de idea
 inicio: 2026-06-18 23:00
-cierre:
-estado: abierta
+cierre: 2026-07-12 16:09
+estado: cerrada
 tipo: sesion
 host: carrera-ai
 ---
@@ -39,6 +39,8 @@ El usuario ha planteado previamente la idea de abandonar el desarrollo de una ap
 La motivación principal es evitar la sobrecarga de desarrollar una app propia cuando, para uso personal, ChatGPT, CODEX, Notion y Drive pueden cubrir de forma más flexible y rápida las necesidades reales del proyecto.
 
 El proyecto nace como un sistema personal para analizar, ordenar, desarrollar y proyectar la carrera profesional del usuario, manteniendo continuidad operativa mediante PCS.
+
+Esta sesión queda cerrada y superada por `sesion-20260630-alcance-mvp-carrera-ai.md`, que recoge el alcance MVP ya consolidado.
 
 ---
 

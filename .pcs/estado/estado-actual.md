@@ -31,7 +31,7 @@ Dictamen provisional: `docs/DOCUMENTO_SPEC_CARRERA_AI.md` queda como documento f
 
 El trabajo actual pendiente del proyecto ya no es reescribir el `SPEC`, sino diseñar la nueva metodología de entrevista para capturar la carrera completa de una persona dentro del Perfil Profesional Accionable.
 
-La sesión marco de alcance MVP, la sesión de Fase 1 y la línea metodológica de cobertura siguen abiertas y continúan siendo la referencia viva para el cierre del objetivo real del MVP.
+La sesión marco de alcance MVP sigue abierta como referencia de base para el arranque del proyecto, pero ya no es la línea central de trabajo. La sesión de Fase 1 ya quedó cerrada y pasó a ser referencia histórica. La referencia viva principal ha pasado a la línea metodológica de cobertura y al núcleo metodológico del Perfil Profesional Accionable.
 
 Se abre ahora una nueva sesión para adaptar la parte funcional del host desde dentro del proyecto, con foco en la documentación propia y en el encaje honesto de `docs/DOCUMENTO_SPEC_CARRERA_AI.md`.
 
@@ -42,7 +42,7 @@ Definir el concepto de cobertura profesional y separar con precisión profundida
 ## Próximos pasos
 
 - Desarrollar `boveda-entrevista-profesional/01_conceptos/CONCEPTO_COBERTURA_PROFESIONAL.md` como puente entre profundidad y cobertura.
-- Usar `sesion-20260705-concepto-cobertura-profesional-carrera-ai.md` para decidir qué significa un mapa inicial razonable de trayectoria.
+- Tomar `sesion-20260705-concepto-cobertura-profesional-carrera-ai.md` como antecedente para decidir qué significa un mapa inicial razonable de trayectoria dentro de la línea núcleo actual.
 - Mantener `PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA` como playbook de profundidad mientras la cobertura queda en diseño.
 - Inventariar la documentacion funcional propia del host y decidir si `docs/DOCUMENTO_SPEC_CARRERA_AI.md` requiere refinamiento o un índice funcional adicional.
 - Mantener `docs/DOCUMENTO_SPEC_CARRERA_AI.md` como referencia central funcional mientras se decide si requiere refinamiento o un índice funcional adicional.
@@ -71,19 +71,30 @@ Definir el concepto de cobertura profesional y separar con precisión profundida
 - Notion no debe confundirse con estado vivo ni sustituir sin criterio a la capa `.pcs/`.
 - `.tmp/` queda excluida por defecto del uso operativo y de lectura salvo autorización explícita.
 
+## Referencias históricas
+
+- `sesion-20260618-2300-primera-sesion-MVP-desarrollo-idea.md`: sesión inicial ya cerrada y superada por el alcance MVP.
+- `sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai.md`: fase cerrada que consolidó el objetivo real del MVP.
+- `sesion-20260630-alcance-mvp-carrera-ai.md`: sesión base del alcance MVP; conserva valor de contexto, pero ya no es la línea principal.
+- `sesion-20260705-concepto-cobertura-profesional-carrera-ai.md`: sesión fundacional del concepto de cobertura; útil como antecedente, pero el trabajo vivo ya está en la línea núcleo.
+
 ## Nota de vigencia
 
 Estado actualizado a partir de la materialización de la Fase 1. Refleja líneas vigentes y candidatas, no decisiones ni acciones ya formalizadas.
 
 ## Trazabilidad
 
-- Última sesión: sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai
+- Última sesión: sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai
+- Sesión anterior cerrada: sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai
+- Línea histórica de base: sesion-20260630-alcance-mvp-carrera-ai
+- Línea histórica fundacional: sesion-20260705-concepto-cobertura-profesional-carrera-ai
 - Nueva sesión abierta: sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai
-- Origen del cambio: materialización de la Fase 1 del alcance MVP en sesión específica y documento base
+- Origen del cambio: materialización de la Fase 1 del alcance MVP en sesión específica y evolución hacia la línea núcleo metodológica
 - Documentos creados o modificados:
   - .pcs/estado/estado-actual.md
   - .pcs/sesiones/sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai.md
   - .pcs/sesiones/sesion-20260630-alcance-mvp-carrera-ai.md
+  - .pcs/sesiones/sesion-20260618-2300-primera-sesion-MVP-desarrollo-idea.md
   - docs/alcance-mvp.md
   - README.md
   - boveda-entrevista-profesional/README.md y README de sus carpetas
@@ -99,6 +110,8 @@ La trazabilidad de cobertura profesional queda ahora alineada con la secuencia d
 - `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v2_0_0.md`: versión consolidada vigente y referencia actual para la definición MVP del futuro playbook de cobertura profesional.
 
 La referencia vigente pasa a ser `v2_0_0`, sin borrar la trazabilidad de las versiones previas. La capa de cobertura queda definida como orquestación multi-sesión separada del playbook de profundidad `v1.3.2`, con estos estados canónicos del mapa: `explorada`, `candidata`, `parcial` y `pendiente`.
+
+La línea viva actual para diseñar la nueva entrevista de cobertura es `sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md`, con `sesion-20260710-2347-investigacion-operativa-esco-carrera-ai.md` y `sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai.md` como ramas activas de trabajo.
 
 La arquitectura de escaneo queda separada en tres pisos:
 
@@ -133,7 +146,7 @@ Se ejecutó una auditoría transversal de `boveda-entrevista-profesional/` frent
 ### Ya recogido en `.pcs/`
 
 - La separación entre profundidad y cobertura profesional ya está asentada.
-- La sesión conceptual abierta `sesion-20260705-concepto-cobertura-profesional-carrera-ai.md` sigue siendo la referencia viva de cobertura.
+- La sesión conceptual `sesion-20260705-concepto-cobertura-profesional-carrera-ai.md` queda como antecedente fundacional; la referencia viva de cobertura pasa a `sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md`.
 - Los pilotos tardíos `PILOTO_004_ENTREVISTA_EMPRESA_FAMILIAR.md` y `PILOTO_005_ENTREVISTA_REPONEDOR_SUPERMERCADO.md` ya quedaron incorporados como evidencia tardía.
 - La secuencia documental `v1 -> v1_0_1 -> v1_0_2 -> v1_0_3 -> v2_0_0` de cobertura profesional ya figura como trazabilidad vigente.
 - La carpeta `artefactos-cobertura-profesional/` ya quedó registrada como capa viva de ejecución.
@@ -239,7 +252,7 @@ La memoria operativa del host sigue viviendo en `.pcs/`.
 
 La simulación `boveda-entrevista-profesional/artefactos-cobertura-profesional/sesiones/SESION_COBERTURA_0000_20260708_1730.md` queda registrada como evidencia metodológica reciente, no como entrevista real. No debe leerse como competencia profesional confirmada ni como mapa operativo válido para uso con entrevistados reales.
 
-La línea viva actual sigue siendo cobertura profesional. La sesión principal de trabajo y rehidratación es `sesion-20260705-concepto-cobertura-profesional-carrera-ai.md`, que permanece abierta.
+La línea viva actual sigue siendo cobertura profesional. La sesión principal de trabajo y rehidratación es `sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md`, con `sesion-20260710-2347-investigacion-operativa-esco-carrera-ai.md` y `sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai.md` como ramas activas.
 
 `TEMPLATE_SESION.md` ya incorpora la sección de hilos abiertos y competencias candidatas para la próxima sesión, y `graphify` quedó actualizado como apoyo de navegación y rehidratación, no como fuente única de verdad.
 
@@ -251,7 +264,7 @@ La Fase 1 / MVP-A queda cerrada como hipótesis mínima validada. Los pilotos 00
 
 El nuevo foco pasa a la cobertura profesional: construir un mapa inicial razonable de competencias y zonas pendientes, distinguiendo con claridad entre profundidad y cobertura.
 
-La nueva sesión viva relacionada es `sesion-20260705-concepto-cobertura-profesional-carrera-ai.md`.
+La nueva sesión viva relacionada es `sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md`.
 
 La cobertura profesional deja de ser solo una idea de arquitectura porque `PILOTO_005` mostró un hueco real: una dimensión profesional conocida de antemano no emergió durante la entrevista de profundidad y, desde dentro del texto, no había señales suficientes para detectarlo.
 
