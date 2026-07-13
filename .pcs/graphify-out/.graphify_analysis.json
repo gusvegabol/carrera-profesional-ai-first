@@ -80,13 +80,12 @@
     ],
     "2": [
       "sesiones_sesion_20260618_2300_primera_sesion_mvp_desarrollo_idea_21_siguiente_gesto_recomendado",
+      "sesiones_sesion_20260630_alcance_mvp_carrera_ai_16_trazabilidad",
       "sesiones_sesion_20260630_alcance_mvp_carrera_ai_1_identificaci_n",
       "sesiones_sesion_20260705_concepto_cobertura_profesional_carrera_ai_8_resultado_esperado",
-      "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_2_motivo_de_apertura",
       "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_3_relacion_con_la_sesion_padre",
       "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_4_decisiones_de_partida",
       "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_5_lineas_de_investigacion",
-      "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_6_preguntas_guia",
       "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_7_relacion_con_las_tres_fases_del_perfil",
       "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_8_riesgos",
       "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_md",
@@ -95,7 +94,11 @@
       "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_13_dictamen_provisional_de_centralidad_funcional",
       "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_6_lineas_de_trabajo",
       "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_md",
-      "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_sesion_pcs_adaptacion_funcional_del_host_carrera_ai_desde_dentro_del_proyecto"
+      "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_sesion_pcs_adaptacion_funcional_del_host_carrera_ai_desde_dentro_del_proyecto",
+      "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_2_motivo_de_apertura",
+      "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_4_resultado",
+      "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_md",
+      "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_sesion_pcs_publicacion_del_proyecto_en_github"
     ],
     "3": [
       "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_acciones_derivadas",
@@ -111,9 +114,11 @@
       "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_rehidratacion_futura",
       "sesiones_sesion_20260630_alcance_mvp_carrera_ai_3_objetivo",
       "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_actualizaci_n_cuatro_enfoques_evaluaci_n_y_presentaci_n_de_la_propuesta",
-      "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_capa_epis_dica",
-      "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_capa_sem_ntica",
-      "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_trazabilidad_de_la_actualizaci_n"
+      "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_trazabilidad_de_la_actualizaci_n",
+      "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_capa_epis_dica",
+      "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_capa_sem_ntica",
+      "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_md",
+      "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify"
     ],
     "4": [
       "sesiones_sesion_20260705_concepto_cobertura_profesional_carrera_ai_6_documentos_de_partida",
@@ -130,7 +135,8 @@
       "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_md",
       "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_nucleo_metodologico_revisado",
       "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_sesion_pcs_nucleo_metodologico_y_perfil_profesional_accionable",
-      "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_trazabilidad_de_la_decisi_n"
+      "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_trazabilidad_de_la_decisi_n",
+      "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_6_preguntas_guia"
     ],
     "5": [
       "sesiones_sesion_20260630_alcance_mvp_carrera_ai_5_capa_sem_ntica",
@@ -149,6 +155,21 @@
       "sesiones_sesion_20260705_concepto_cobertura_profesional_carrera_ai_sesi_n_pcs_concepto_cobertura_profesional"
     ],
     "6": [
+      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_alcance",
+      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_alternativas_descartadas",
+      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_contexto",
+      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_dec_20260710_2308_001_separar_corpus_graphify_separar_los_corpus_de_graphify_por_finalidad_documental",
+      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_decisi_n",
+      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_impacto_esperado",
+      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_md",
+      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_motivo",
+      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_relaciones",
+      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_revisi_n",
+      "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama",
+      "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_md",
+      "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_revisi_n_futura"
+    ],
+    "7": [
       "sesiones_sesion_20260630_alcance_mvp_carrera_ai_2_contexto_inmediato",
       "sesiones_sesion_20260630_fase_1_objetivo_real_mvp_carrera_ai_13_documentos_le_dos",
       "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_10_cambios_aplicados_en_pcs",
@@ -162,19 +183,6 @@
       "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_9_riesgos_de_continuidad",
       "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_md",
       "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_sesi_n_pcs_actualizaci_n_de_documentaci_n_solicitada_por_el_usuario"
-    ],
-    "7": [
-      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_alcance",
-      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_alternativas_descartadas",
-      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_contexto",
-      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_dec_20260710_2308_001_separar_corpus_graphify_separar_los_corpus_de_graphify_por_finalidad_documental",
-      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_decisi_n",
-      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_impacto_esperado",
-      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_md",
-      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_motivo",
-      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_relaciones",
-      "decisiones_dec_20260710_2308_001_separar_corpus_graphify_revisi_n",
-      "sesiones_sesion_20260630_alcance_mvp_carrera_ai_16_trazabilidad"
     ],
     "8": [
       "sesiones_sesion_20260630_alcance_mvp_carrera_ai_6_plan_de_fases_para_trabajar_el_alcance_mvp",
@@ -202,12 +210,12 @@
   "cohesion": {
     "0": 0.05,
     "1": 0.08,
-    "2": 0.17,
-    "3": 0.17,
-    "4": 0.13,
+    "2": 0.15,
+    "3": 0.2,
+    "4": 0.12,
     "5": 0.14,
-    "6": 0.15,
-    "7": 0.18,
+    "6": 0.23,
+    "7": 0.15,
     "8": 0.2,
     "9": 0.25
   },
@@ -253,14 +261,14 @@
       "degree": 12
     },
     {
-      "id": "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_sesion_pcs_investigacion_operativa_esco_para_carrera_ai",
-      "label": "Sesion PCS - Investigacion operativa ESCO para Carrera AI",
+      "id": "sesiones_sesion_20260630_alcance_mvp_carrera_ai_16_trazabilidad",
+      "label": "16. Trazabilidad",
       "degree": 12
     },
     {
-      "id": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_dec_20260710_2308_001_separar_corpus_graphify_separar_los_corpus_de_graphify_por_finalidad_documental",
-      "label": "DEC-20260710-2308-001-separar-corpus-graphify \u2014 Separar los corpus de Graphify por finalidad documental",
-      "degree": 10
+      "id": "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_sesion_pcs_investigacion_operativa_esco_para_carrera_ai",
+      "label": "Sesion PCS - Investigacion operativa ESCO para Carrera AI",
+      "degree": 12
     }
   ],
   "surprises": [],

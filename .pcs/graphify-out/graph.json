@@ -8,7 +8,7 @@
       "file_type": "document",
       "source_file": "decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md",
       "source_location": "L1",
-      "community": 7,
+      "community": 6,
       "norm_label": "dec-20260710-2308-001-separar-corpus-graphify.md",
       "id": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_md"
     },
@@ -16,8 +16,8 @@
       "label": "DEC-20260710-2308-001-separar-corpus-graphify \u2014 Separar los corpus de Graphify por finalidad documental",
       "file_type": "document",
       "source_file": "decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md",
-      "source_location": "L13",
-      "community": 7,
+      "source_location": "L15",
+      "community": 6,
       "norm_label": "dec-20260710-2308-001-separar-corpus-graphify \u2014 separar los corpus de graphify por finalidad documental",
       "id": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_dec_20260710_2308_001_separar_corpus_graphify_separar_los_corpus_de_graphify_por_finalidad_documental"
     },
@@ -25,8 +25,8 @@
       "label": "Decisi\u00f3n",
       "file_type": "document",
       "source_file": "decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md",
-      "source_location": "L15",
-      "community": 7,
+      "source_location": "L19",
+      "community": 6,
       "norm_label": "decision",
       "id": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_decisi_n"
     },
@@ -34,8 +34,8 @@
       "label": "Motivo",
       "file_type": "document",
       "source_file": "decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md",
-      "source_location": "L24",
-      "community": 7,
+      "source_location": "L28",
+      "community": 6,
       "norm_label": "motivo",
       "id": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_motivo"
     },
@@ -43,8 +43,8 @@
       "label": "Contexto",
       "file_type": "document",
       "source_file": "decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md",
-      "source_location": "L30",
-      "community": 7,
+      "source_location": "L34",
+      "community": 6,
       "norm_label": "contexto",
       "id": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_contexto"
     },
@@ -52,8 +52,8 @@
       "label": "Alternativas descartadas",
       "file_type": "document",
       "source_file": "decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md",
-      "source_location": "L36",
-      "community": 7,
+      "source_location": "L40",
+      "community": 6,
       "norm_label": "alternativas descartadas",
       "id": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_alternativas_descartadas"
     },
@@ -61,8 +61,8 @@
       "label": "Impacto esperado",
       "file_type": "document",
       "source_file": "decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md",
-      "source_location": "L43",
-      "community": 7,
+      "source_location": "L47",
+      "community": 6,
       "norm_label": "impacto esperado",
       "id": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_impacto_esperado"
     },
@@ -70,8 +70,8 @@
       "label": "Alcance",
       "file_type": "document",
       "source_file": "decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md",
-      "source_location": "L51",
-      "community": 7,
+      "source_location": "L55",
+      "community": 6,
       "norm_label": "alcance",
       "id": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_alcance"
     },
@@ -79,8 +79,8 @@
       "label": "Relaciones",
       "file_type": "document",
       "source_file": "decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md",
-      "source_location": "L57",
-      "community": 7,
+      "source_location": "L61",
+      "community": 6,
       "norm_label": "relaciones",
       "id": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_relaciones"
     },
@@ -88,10 +88,37 @@
       "label": "Revisi\u00f3n",
       "file_type": "document",
       "source_file": "decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md",
-      "source_location": "L64",
-      "community": 7,
+      "source_location": "L68",
+      "community": 6,
       "norm_label": "revision",
       "id": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_revisi_n"
+    },
+    {
+      "label": "DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "file_type": "document",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L1",
+      "community": 6,
+      "norm_label": "dec-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "id": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_md"
+    },
+    {
+      "label": "DEC-20260713-1344-001-integrar-graphify-tres-corpus \u2014 Mantener tres corpus Graphify y actualizaci\u00f3n sem\u00e1ntica local con Ollama",
+      "file_type": "document",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L13",
+      "community": 6,
+      "norm_label": "dec-20260713-1344-001-integrar-graphify-tres-corpus \u2014 mantener tres corpus graphify y actualizacion semantica local con ollama",
+      "id": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama"
+    },
+    {
+      "label": "Revisi\u00f3n futura",
+      "file_type": "document",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L68",
+      "community": 6,
+      "norm_label": "revision futura",
+      "id": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_revisi_n_futura"
     },
     {
       "label": "estado-actual.md",
@@ -115,7 +142,7 @@
       "label": "Foco operativo",
       "file_type": "document",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L26",
+      "source_location": "L30",
       "community": 9,
       "norm_label": "foco operativo",
       "id": "estado_estado_actual_foco_operativo"
@@ -124,7 +151,7 @@
       "label": "Pr\u00f3ximos pasos",
       "file_type": "document",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L30",
+      "source_location": "L34",
       "community": 9,
       "norm_label": "proximos pasos",
       "id": "estado_estado_actual_pr_ximos_pasos"
@@ -133,7 +160,7 @@
       "label": "Acciones abiertas relevantes",
       "file_type": "document",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L39",
+      "source_location": "L44",
       "community": 9,
       "norm_label": "acciones abiertas relevantes",
       "id": "estado_estado_actual_acciones_abiertas_relevantes"
@@ -142,7 +169,7 @@
       "label": "Decisiones vigentes relevantes",
       "file_type": "document",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L44",
+      "source_location": "L49",
       "community": 9,
       "norm_label": "decisiones vigentes relevantes",
       "id": "estado_estado_actual_decisiones_vigentes_relevantes"
@@ -151,7 +178,7 @@
       "label": "Bloqueos o riesgos",
       "file_type": "document",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L55",
+      "source_location": "L60",
       "community": 9,
       "norm_label": "bloqueos o riesgos",
       "id": "estado_estado_actual_bloqueos_o_riesgos"
@@ -160,7 +187,7 @@
       "label": "Referencias hist\u00f3ricas y de continuidad",
       "file_type": "document",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L65",
+      "source_location": "L72",
       "community": 9,
       "norm_label": "referencias historicas y de continuidad",
       "id": "estado_estado_actual_referencias_hist_ricas_y_de_continuidad"
@@ -710,7 +737,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260630-alcance-mvp-carrera-ai.md",
       "source_location": "L30",
-      "community": 6,
+      "community": 7,
       "norm_label": "2. contexto inmediato",
       "id": "sesiones_sesion_20260630_alcance_mvp_carrera_ai_2_contexto_inmediato"
     },
@@ -917,7 +944,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260630-alcance-mvp-carrera-ai.md",
       "source_location": "L287",
-      "community": 7,
+      "community": 2,
       "norm_label": "16. trazabilidad",
       "id": "sesiones_sesion_20260630_alcance_mvp_carrera_ai_16_trazabilidad"
     },
@@ -1016,7 +1043,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai.md",
       "source_location": "L112",
-      "community": 6,
+      "community": 7,
       "norm_label": "13. documentos leidos",
       "id": "sesiones_sesion_20260630_fase_1_objetivo_real_mvp_carrera_ai_13_documentos_le_dos"
     },
@@ -1223,7 +1250,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "source_location": "L1",
-      "community": 6,
+      "community": 7,
       "norm_label": "sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "id": "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_md"
     },
@@ -1232,7 +1259,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "source_location": "L11",
-      "community": 6,
+      "community": 7,
       "norm_label": "sesion pcs - actualizacion de documentacion solicitada por el usuario",
       "id": "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_sesi_n_pcs_actualizaci_n_de_documentaci_n_solicitada_por_el_usuario"
     },
@@ -1241,7 +1268,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "source_location": "L83",
-      "community": 6,
+      "community": 7,
       "norm_label": "5. hallazgos ya recogidos en `.pcs/`",
       "id": "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_5_hallazgos_ya_recogidos_en_pcs"
     },
@@ -1250,7 +1277,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "source_location": "L91",
-      "community": 6,
+      "community": 7,
       "norm_label": "6. hallazgos recogidos parcialmente",
       "id": "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_6_hallazgos_recogidos_parcialmente"
     },
@@ -1259,7 +1286,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "source_location": "L97",
-      "community": 6,
+      "community": 7,
       "norm_label": "7. hallazgos no recogidos",
       "id": "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_7_hallazgos_no_recogidos"
     },
@@ -1268,7 +1295,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "source_location": "L106",
-      "community": 6,
+      "community": 7,
       "norm_label": "8. cambios menores descartados para actualizacion inmediata",
       "id": "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_8_cambios_menores_descartados_para_actualizaci_n_inmediata"
     },
@@ -1277,7 +1304,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "source_location": "L111",
-      "community": 6,
+      "community": 7,
       "norm_label": "9. riesgos de continuidad",
       "id": "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_9_riesgos_de_continuidad"
     },
@@ -1286,7 +1313,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "source_location": "L118",
-      "community": 6,
+      "community": 7,
       "norm_label": "10. cambios aplicados en `.pcs/`",
       "id": "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_10_cambios_aplicados_en_pcs"
     },
@@ -1295,7 +1322,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "source_location": "L124",
-      "community": 6,
+      "community": 7,
       "norm_label": "11. cambios no aplicados",
       "id": "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_11_cambios_no_aplicados"
     },
@@ -1304,7 +1331,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "source_location": "L131",
-      "community": 6,
+      "community": 7,
       "norm_label": "12. validaciones realizadas",
       "id": "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_12_validaciones_realizadas"
     },
@@ -1313,7 +1340,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260708-actualizacion-documentacion-solicitada-usuario-carrera-ai.md",
       "source_location": "L138",
-      "community": 6,
+      "community": 7,
       "norm_label": "13. siguiente paso recomendado",
       "id": "sesiones_sesion_20260708_actualizacion_documentacion_solicitada_usuario_carrera_ai_13_siguiente_paso_recomendado"
     },
@@ -1435,24 +1462,6 @@
       "id": "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_actualizaci_n_cuatro_enfoques_evaluaci_n_y_presentaci_n_de_la_propuesta"
     },
     {
-      "label": "Capa epis\u00f3dica",
-      "file_type": "document",
-      "source_file": "sesiones/sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md",
-      "source_location": "L178",
-      "community": 3,
-      "norm_label": "capa episodica",
-      "id": "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_capa_epis_dica"
-    },
-    {
-      "label": "Capa sem\u00e1ntica",
-      "file_type": "document",
-      "source_file": "sesiones/sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md",
-      "source_location": "L191",
-      "community": 3,
-      "norm_label": "capa semantica",
-      "id": "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_capa_sem_ntica"
-    },
-    {
       "label": "Trazabilidad de la actualizaci\u00f3n",
       "file_type": "document",
       "source_file": "sesiones/sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md",
@@ -1498,15 +1507,6 @@
       "id": "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_sesion_pcs_investigacion_operativa_esco_para_carrera_ai"
     },
     {
-      "label": "2. Motivo de apertura",
-      "file_type": "document",
-      "source_file": "sesiones/sesion-20260710-2347-investigacion-operativa-esco-carrera-ai.md",
-      "source_location": "L30",
-      "community": 2,
-      "norm_label": "2. motivo de apertura",
-      "id": "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_2_motivo_de_apertura"
-    },
-    {
       "label": "3. Relacion con la sesion padre",
       "file_type": "document",
       "source_file": "sesiones/sesion-20260710-2347-investigacion-operativa-esco-carrera-ai.md",
@@ -1538,7 +1538,7 @@
       "file_type": "document",
       "source_file": "sesiones/sesion-20260710-2347-investigacion-operativa-esco-carrera-ai.md",
       "source_location": "L76",
-      "community": 2,
+      "community": 4,
       "norm_label": "6. preguntas guia",
       "id": "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_6_preguntas_guia"
     },
@@ -1604,6 +1604,78 @@
       "community": 2,
       "norm_label": "13. dictamen provisional de centralidad funcional",
       "id": "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_13_dictamen_provisional_de_centralidad_funcional"
+    },
+    {
+      "label": "sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "file_type": "document",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L1",
+      "community": 3,
+      "norm_label": "sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "id": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_md"
+    },
+    {
+      "label": "Sesi\u00f3n PCS - Integraci\u00f3n y operaci\u00f3n de Graphify",
+      "file_type": "document",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L11",
+      "community": 3,
+      "norm_label": "sesion pcs - integracion y operacion de graphify",
+      "id": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify"
+    },
+    {
+      "label": "Capa epis\u00f3dica",
+      "file_type": "document",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L27",
+      "community": 3,
+      "norm_label": "capa episodica",
+      "id": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_capa_epis_dica"
+    },
+    {
+      "label": "Capa sem\u00e1ntica",
+      "file_type": "document",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L39",
+      "community": 3,
+      "norm_label": "capa semantica",
+      "id": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_capa_sem_ntica"
+    },
+    {
+      "label": "sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "file_type": "document",
+      "source_file": "sesiones/sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "id": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_md"
+    },
+    {
+      "label": "Sesion PCS - Publicacion del proyecto en GitHub",
+      "file_type": "document",
+      "source_file": "sesiones/sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "source_location": "L11",
+      "community": 2,
+      "norm_label": "sesion pcs - publicacion del proyecto en github",
+      "id": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_sesion_pcs_publicacion_del_proyecto_en_github"
+    },
+    {
+      "label": "2. Motivo de apertura",
+      "file_type": "document",
+      "source_file": "sesiones/sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "source_location": "L29",
+      "community": 2,
+      "norm_label": "2. motivo de apertura",
+      "id": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_2_motivo_de_apertura"
+    },
+    {
+      "label": "4. Resultado",
+      "file_type": "document",
+      "source_file": "sesiones/sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "source_location": "L39",
+      "community": 2,
+      "norm_label": "4. resultado",
+      "id": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_4_resultado"
     }
   ],
   "links": [
@@ -1710,6 +1782,106 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama",
+      "target": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_decisi_n"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama",
+      "target": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_motivo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama",
+      "target": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_contexto"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama",
+      "target": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_alternativas_descartadas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama",
+      "target": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_impacto_esperado"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama",
+      "target": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_alcance"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama",
+      "target": "decisiones_dec_20260710_2308_001_separar_corpus_graphify_relaciones"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_md",
+      "target": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama",
+      "target": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_revisi_n_futura"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "decisiones/DEC-20260713-1344-001-integrar-graphify-tres-corpus.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "decisiones_dec_20260713_1344_001_integrar_graphify_tres_corpus_dec_20260713_1344_001_integrar_graphify_tres_corpus_mantener_tres_corpus_graphify_y_actualizaci_n_sem_ntica_local_con_ollama",
+      "target": "sesiones_sesion_20260630_alcance_mvp_carrera_ai_16_trazabilidad"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "estado/estado-actual.md",
       "source_location": "L12",
       "weight": 1.0,
@@ -1721,7 +1893,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L26",
+      "source_location": "L30",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "estado_estado_actual_md",
@@ -1731,7 +1903,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L30",
+      "source_location": "L34",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "estado_estado_actual_md",
@@ -1741,7 +1913,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L39",
+      "source_location": "L44",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "estado_estado_actual_md",
@@ -1751,7 +1923,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L44",
+      "source_location": "L49",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "estado_estado_actual_md",
@@ -1761,7 +1933,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L55",
+      "source_location": "L60",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "estado_estado_actual_md",
@@ -1771,7 +1943,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "estado/estado-actual.md",
-      "source_location": "L65",
+      "source_location": "L72",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "estado_estado_actual_md",
@@ -1910,11 +2082,31 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify",
+      "target": "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_contexto_inmediato"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "sesiones/sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md",
       "source_location": "L202",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_actualizaci_n_cuatro_enfoques_evaluaci_n_y_presentaci_n_de_la_propuesta",
+      "target": "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_ideas_y_lineas_cognitivas_abiertas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify",
       "target": "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_ideas_y_lineas_cognitivas_abiertas"
     },
     {
@@ -1930,12 +2122,42 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify",
+      "target": "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_acciones_derivadas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "sesiones/sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md",
       "source_location": "L213",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_actualizaci_n_cuatro_enfoques_evaluaci_n_y_presentaci_n_de_la_propuesta",
       "target": "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_decisiones_derivadas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify",
+      "target": "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_decisiones_derivadas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify",
+      "target": "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_problemas_o_bloqueos"
     },
     {
       "relation": "contains",
@@ -1950,11 +2172,31 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify",
+      "target": "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_documentos_afectados"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "sesiones/sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md",
       "source_location": "L231",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_actualizaci_n_cuatro_enfoques_evaluaci_n_y_presentaci_n_de_la_propuesta",
+      "target": "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_rehidratacion_futura"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify",
       "target": "sesiones_sesion_20260614_2132_inicio_pcs_en_carrera_ai_rehidratacion_futura"
     },
     {
@@ -2750,6 +2992,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_sesion_pcs_publicacion_del_proyecto_en_github",
+      "target": "sesiones_sesion_20260630_alcance_mvp_carrera_ai_1_identificaci_n"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "sesiones/sesion-20260630-fase-1-objetivo-real-mvp-carrera-ai.md",
       "source_location": "L30",
       "weight": 1.0,
@@ -2825,6 +3077,26 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_sesion_pcs_adaptacion_funcional_del_host_carrera_ai_desde_dentro_del_proyecto",
+      "target": "sesiones_sesion_20260630_alcance_mvp_carrera_ai_3_objetivo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify",
+      "target": "sesiones_sesion_20260630_alcance_mvp_carrera_ai_3_objetivo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_sesion_pcs_publicacion_del_proyecto_en_github",
       "target": "sesiones_sesion_20260630_alcance_mvp_carrera_ai_3_objetivo"
     },
     {
@@ -3065,6 +3337,26 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_sesion_pcs_adaptacion_funcional_del_host_carrera_ai_desde_dentro_del_proyecto",
+      "target": "sesiones_sesion_20260630_alcance_mvp_carrera_ai_16_trazabilidad"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify",
+      "target": "sesiones_sesion_20260630_alcance_mvp_carrera_ai_16_trazabilidad"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_sesion_pcs_publicacion_del_proyecto_en_github",
       "target": "sesiones_sesion_20260630_alcance_mvp_carrera_ai_16_trazabilidad"
     },
     {
@@ -3645,7 +3937,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_actualizaci_n_cuatro_enfoques_evaluaci_n_y_presentaci_n_de_la_propuesta",
-      "target": "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_capa_epis_dica"
+      "target": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_capa_epis_dica"
     },
     {
       "relation": "contains",
@@ -3655,7 +3947,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_actualizaci_n_cuatro_enfoques_evaluaci_n_y_presentaci_n_de_la_propuesta",
-      "target": "sesiones_sesion_20260710_2308_nucleo_metodologico_perfil_profesional_accionable_carrera_ai_capa_sem_ntica"
+      "target": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_capa_sem_ntica"
     },
     {
       "relation": "contains",
@@ -3695,7 +3987,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_sesion_pcs_investigacion_operativa_esco_para_carrera_ai",
-      "target": "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_2_motivo_de_apertura"
+      "target": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_2_motivo_de_apertura"
     },
     {
       "relation": "contains",
@@ -3761,16 +4053,6 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sesiones/sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai.md",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_sesion_pcs_adaptacion_funcional_del_host_carrera_ai_desde_dentro_del_proyecto",
-      "target": "sesiones_sesion_20260710_2347_investigacion_operativa_esco_carrera_ai_2_motivo_de_apertura"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "sesiones/sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai.md",
       "source_location": "L40",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3821,6 +4103,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "sesiones/sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_sesion_pcs_adaptacion_funcional_del_host_carrera_ai_desde_dentro_del_proyecto",
+      "target": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_2_motivo_de_apertura"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai.md",
       "source_location": "L70",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3846,8 +4138,68 @@
       "confidence_score": 1.0,
       "source": "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_sesion_pcs_adaptacion_funcional_del_host_carrera_ai_desde_dentro_del_proyecto",
       "target": "sesiones_sesion_20260712_adaptacion_funcional_desde_dentro_carrera_ai_13_dictamen_provisional_de_centralidad_funcional"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_md",
+      "target": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify",
+      "target": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_capa_epis_dica"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_sesi_n_pcs_integraci_n_y_operaci_n_de_graphify",
+      "target": "sesiones_sesion_20260713_1344_integracion_operacion_graphify_carrera_ai_capa_sem_ntica"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_md",
+      "target": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_sesion_pcs_publicacion_del_proyecto_en_github"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_sesion_pcs_publicacion_del_proyecto_en_github",
+      "target": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_2_motivo_de_apertura"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "sesiones/sesion-20260713-1525-publicacion-github-carrera-ai.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_sesion_pcs_publicacion_del_proyecto_en_github",
+      "target": "sesiones_sesion_20260713_1525_publicacion_github_carrera_ai_4_resultado"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bd62e90b41dff9d7c8cde57d36c4432a9cd7b0ae"
+  "built_at_commit": "153cd88b1d82734a9a3cab87214416645af53c22"
 }
