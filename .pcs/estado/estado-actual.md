@@ -19,9 +19,9 @@ La recomendación requiere complementar esa arquitectura con la conversación no
 
 También existe una presentación HTML autónoma para explicar la propuesta a personas no expertas: `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`. Resume el problema, la doble pasada, sus garantías y el piloto propuesto.
 
-La documentación de Graphify se mantiene separada en tres corpus documentales: `.pcs/`, `docs/` y `boveda-entrevista-profesional/`. `run-graphify.bat` los procesa de forma independiente y utiliza Ollama como backend local para la extracción semántica. Esta organización queda formalizada en `DEC-20260713-1344-001-integrar-graphify-tres-corpus`, vigente desde el 2026-07-13. La decisión afecta únicamente a la indexación y recuperación de contexto; no adopta un playbook, no modifica el SPEC ni convierte los artefactos del grafo en fuentes normativas.
+La documentación de Graphify se mantiene separada en tres corpus documentales: `.pcs/`, `docs/` y `boveda-entrevista-profesional/`. `run-graphify.bat` los procesa de forma independiente y utiliza Ollama como backend local para la extracción semántica. Esta organización queda formalizada en `DEC-20260713-1344-001-integrar-graphify-tres-corpus`, vigente desde el 2026-07-13. La decisión afecta únicamente a la indexación y recuperación de contexto; no adopta un playbook, no modifica el SPEC ni convierte los artefactos del grafo en fuentes normativas. Los `graphify-out/` derivados ya quedan versionados en GitHub, mientras sus subcarpetas `cache/` permanecen excluidas.
 
-Se ha abierto `sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md` para registrar esta línea operativa, sus límites y la revisión futura de utilidad. El grafo PCS puede orientar la selección de contexto histórico, pero el estado actual, las decisiones vigentes y las fuentes documentales conservan su autoridad.
+Se ha cerrado `sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md` tras dejar trazada la línea operativa, sus límites y la revisión futura de utilidad. El grafo PCS puede orientar la selección de contexto histórico, pero el estado actual, las decisiones vigentes y las fuentes documentales conservan su autoridad.
 
 También se creó el repositorio GitHub `gusvegabol/carrera-profesional-ai-first` y quedó cerrada la sesión operativa asociada a su incorporación. El trabajo local puede sincronizarse ya con ese remoto bajo la cuenta personal conectada.
 
@@ -81,7 +81,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`.
 - `DEC-20260710-2308-001-separar-corpus-graphify`: decisión histórica sustituida por la decisión vigente de los tres corpus.
 - `DEC-20260713-1344-001-integrar-graphify-tres-corpus`: decisión vigente sobre los tres corpus y la actualización local con Ollama.
-- `sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md`: sesión abierta de integración y operación de Graphify.
+- `sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md`: sesión cerrada de integración y operación de Graphify.
 - `sesion-20260713-1525-publicacion-github-carrera-ai.md`: sesión cerrada de alta del proyecto en GitHub bajo la cuenta personal conectada.
 - `run-graphify.bat`, `docs/AGENTS.md` y `docs/.graphifyignore`: configuración y reglas operativas relacionadas.
 - `AGENTS.md`, `.pcs/AGENTS.md` y `.pcs/.graphifyignore`: reglas generales y específicas de los corpus Graphify.

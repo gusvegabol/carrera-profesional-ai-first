@@ -2,8 +2,8 @@
 id: sesion-20260713-1344-integracion-operacion-graphify-carrera-ai
 titulo: Integración y operación de Graphify en Carrera AI
 inicio: 2026-07-13
-cierre:
-estado: abierta
+cierre: 2026-07-13
+estado: cerrada
 tipo: sesion
 host: carrera-ai
 ---
@@ -95,5 +95,5 @@ Las relaciones `INFERRED` y `AMBIGUOUS` deben verificarse en los documentos orig
 - Decisión derivada: `DEC-20260713-1344-001-integrar-graphify-tres-corpus.md`.
 - Estado relacionado: `.pcs/estado/estado-actual.md`.
 - Actualizador: `run-graphify.bat`.
-- Estado de la sesión: abierta, pendiente de revisión de utilidad.
+- Estado de la sesión: cerrada tras dejar versionados los grafos derivados.
 - PCS Core: no modificado.
