@@ -212,7 +212,8 @@ La evaluación es una recomendación debatible. No crea una decisión PCS, no ad
 
 ### Decisiones derivadas
 
-- No se crea una decisión formal. El informe de evaluación debe tratarse como fundamento para debate, no como adopción canónica.
+- El informe de evaluación sigue siendo un fundamento para debate y no una adopción canónica de playbook.
+- `DEC-20260710-2308-001-separar-corpus-graphify` formaliza una decisión operativa independiente: Graphify debe ejecutarse por corpus documental separado y no sobre la raíz completa del repositorio.
 
 ### Documentos afectados
 
@@ -224,6 +225,8 @@ La evaluación es una recomendación debatible. No crea una decisión PCS, no ad
 - `docs/Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`.
 - `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`.
 - `docs/superpowers/plans/2026-07-12-presentacion-propuesta-entrevista.md`.
+- `run-graphify.bat`, `docs/AGENTS.md` y `docs/.graphifyignore`.
+- `.pcs/decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md`.
 
 ### Rehidratación futura
 
@@ -236,5 +239,23 @@ La evaluación es una recomendación debatible. No crea una decisión PCS, no ad
 ### Trazabilidad de la actualización
 
 - Estado de la sesión: abierta.
-- Estado de proyecto relacionado: `.pcs/estado/estado-actual.md` actualizado el 2026-07-12.
+- Estado de proyecto relacionado: `.pcs/estado/estado-actual.md` actualizado el 2026-07-13.
+- Decisión PCS relacionada: `DEC-20260710-2308-001-separar-corpus-graphify`.
+- PCS canónico: no modificado.
+
+## Actualización - Decisión sobre corpus separados de Graphify
+
+El 2026-07-13 se formaliza la separación de los corpus que ya aplica `run-graphify.bat`: `boveda-entrevista-profesional/` se procesa como corpus operativo y metodológico de entrevista, mientras que `docs/` se procesa como corpus funcional, metodológico y de debate documental.
+
+El motivo es evitar relaciones artificiales, comunidades contaminadas y recuperación de contexto irrelevante entre carpetas con finalidades distintas. `docs/AGENTS.md` y `docs/.graphifyignore` hacen explícitos los límites y las exclusiones operativas de este corpus.
+
+La decisión no modifica el SPEC, el playbook de profundidad, el futuro playbook de cobertura ni el núcleo metodológico. Tampoco demuestra por sí misma la utilidad de Graphify. La separación se revisará más adelante con evidencia de uso, precisión de recuperación, coste de contexto, trazabilidad y necesidad de consultas transversales.
+
+### Trazabilidad de la decisión
+
+- Decisión vigente: `DEC-20260710-2308-001-separar-corpus-graphify.md`.
+- Estado actualizado: `.pcs/estado/estado-actual.md`.
+- Ejecución: `run-graphify.bat`.
+- Reglas del corpus `docs/`: `docs/AGENTS.md` y `docs/.graphifyignore`.
+- Estado de la sesión: abierta.
 - PCS canónico: no modificado.

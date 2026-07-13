@@ -26,6 +26,22 @@ C:/Users/gusve/Documents/Apps/project-continuity-system/core/CONTRATO_CANONICO_G
 
 Este `AGENTS.md` orienta al agente localmente, pero no sustituye el contrato ni las entidades, plantillas, decisiones o protocolos del PCS Core.
 
+## Corpus y grafos Graphify
+
+El repositorio mantiene tres corpus documentales independientes, cada uno con su propio grafo Graphify:
+
+- `./.pcs/graphify-out/`: memoria operativa PCS, formada por estado, decisiones y sesiones.
+- `./docs/graphify-out/`: SPEC, núcleo metodológico, ideas de debate, evaluación y presentación.
+- `./boveda-entrevista-profesional/graphify-out/`: documentación operativa y metodológica de la entrevista y sus artefactos relacionados.
+
+La separación evita mezclar documentos con finalidades, autoridades y ciclos de actualización diferentes. Los grafos son índices derivados para localizar contexto y realizar consultas dirigidas; las fuentes originales conservan la autoridad y deben verificarse antes de convertir una relación en una afirmación, acción o decisión.
+
+El actualizador común es `./run-graphify.bat`. Ejecuta Graphify de forma secuencial sobre las tres carpetas autorizadas y actualiza sus grafos independientes. No ejecutar Graphify sobre la raíz completa del repositorio ni fusionar estos corpus sin una decisión posterior que lo autorice.
+
+El uso del fichero `.bat` es intencionado: la extracción semántica se ejecuta con el modelo local de IA disponible a través de Ollama, mediante `--backend ollama`. Esto mantiene el procesamiento semántico bajo el entorno local y hace que la ejecución de referencia sea reproducible desde un único punto.
+
+Las reglas específicas de cada corpus se encuentran en [`./.pcs/AGENTS.md`](.pcs/AGENTS.md) y [`./docs/AGENTS.md`](docs/AGENTS.md). Los artefactos `graphify-out/` son regenerables y no sustituyen al estado PCS, las decisiones, la documentación metodológica ni los artefactos de la bóveda.
+
 ## Regla universal de ortografía española
 
 Cuando el agente redacte o modifique documentación en español, debe conservar la ortografía española, incluidas tildes, diéresis, eñes y signos de apertura de interrogación y exclamación cuando correspondan.
