@@ -1,10 +1,21 @@
+---
+id: documento-spec-carrera-ai
+titulo: Product Spec — Carrera AI
+version_producto: "2.0"
+revision_spec: 1
+estado: vigente
+fecha_revision: 2026-07-17
+---
+
 # Product Spec — Carrera AI
 
-## Perfil Profesional Accionable con equivalencia ESCO
+## Perfil Profesional Accionable
+
+> **Alcance de esta revisión:** Carrera AI 2.0 termina con un Perfil Profesional Accionable integral y revisable construido mediante cobertura, profundidad, evidencias y síntesis. La visión futura del producto puede incorporar interoperabilidad con estándares laborales, pero la investigación ESCO es paralela, no forma parte del criterio de finalización de 2.0 y solo podrá incorporarse mediante un hito posterior aprobado.
 
 ## 1. Resumen
 
-Carrera AI es una aplicación que ayuda a una persona a convertir su experiencia profesional real en un perfil profesional accionable, evidenciado e interoperable con estándares del mercado laboral, especialmente ESCO.
+Carrera AI ayuda a una persona a convertir su experiencia profesional real en un perfil profesional accionable, evidenciado y revisable.
 
 La app no se limita a generar un CV ni a listar competencias. Su objetivo es entender la trayectoria de una persona mediante entrevista asistida por IA, extraer información profesional relevante, organizarla en un modelo útil y traducirla a salidas prácticas:
 
@@ -15,8 +26,9 @@ La app no se limita a generar un CV ni a listar competencias. Su objetivo es ent
 * evidencias;
 * narrativas profesionales;
 * opciones laborales futuras;
-* brechas de desarrollo;
-* correspondencias con ESCO en capacidades/competencias, ocupaciones y cualificaciones.
+* brechas de desarrollo.
+
+Como visión futura, el perfil podrá incorporar correspondencias revisables con estándares del mercado laboral. Esa extensión no pertenece al alcance funcional obligatorio de Carrera AI 2.0.
 
 La entrevista es el mecanismo de captura.
 El producto real es el Perfil Profesional Accionable.
@@ -53,11 +65,11 @@ Carrera AI busca resolver esta desconexión entre experiencia vivida, valor prof
 
 ## 3. Objetivo del producto
 
-Construir un sistema que, mediante entrevista asistida por IA, genere un Perfil Profesional Accionable capaz de transformar la trayectoria profesional de una persona en información útil para tomar decisiones de carrera, construir narrativas, detectar oportunidades y mapear competencias, ocupaciones y cualificaciones a ESCO.
+Construir un sistema que, mediante entrevista asistida por IA, genere un Perfil Profesional Accionable capaz de transformar la trayectoria profesional de una persona en información útil para tomar decisiones de carrera, construir narrativas y detectar oportunidades mediante cobertura, profundidad, evidencias y síntesis de trayectoria.
 
 Definición operativa:
 
-> Carrera AI convierte experiencia profesional vivida en un perfil estructurado, evidenciado, narrable y traducible a estándares laborales.
+> Carrera AI 2.0 convierte experiencia profesional vivida en un perfil estructurado, evidenciado, narrable y revisable.
 
 ---
 
@@ -102,7 +114,7 @@ Carrera AI permite a una persona pasar de:
 a:
 
 ```text
-“Tengo una trayectoria estructurada, competencias demostradas, evidencias, herramientas, opciones profesionales realistas y equivalencias con estándares laborales como ESCO.”
+“Tengo una trayectoria estructurada, competencias demostradas, evidencias, herramientas y opciones profesionales realistas.”
 ```
 
 La app aporta valor en cuatro niveles:
@@ -121,7 +133,7 @@ Detecta opciones futuras, brechas y próximos pasos realistas.
 
 ### 5.4 Valor interoperable
 
-Traduce la información profesional a conceptos compatibles con ESCO: capacidades/competencias, ocupaciones y cualificaciones.
+Como extensión futura, podrá traducir la información profesional a estándares como ESCO. Esta capacidad es opcional, revisable y queda fuera del criterio de finalización de Carrera AI 2.0.
 
 ---
 
@@ -143,7 +155,7 @@ Debe empezar entendiendo:
 
 La app no debe producir etiquetas sin evidencia.
 
-Toda competencia, ocupación candidata o equivalencia ESCO debe conservar trazabilidad hacia la experiencia que la originó.
+Toda competencia u ocupación candidata debe conservar trazabilidad hacia la experiencia que la originó. Cuando una versión posterior incorpore correspondencias ESCO, estas deberán conservar la misma trazabilidad y nunca probarán ni certificarán una competencia por sí solas.
 
 ---
 
@@ -169,7 +181,8 @@ Debe incluir:
 10. Narrativas profesionales.
 11. Brechas y necesidades de desarrollo.
 12. Preguntas pendientes.
-13. Correspondencia ESCO.
+
+La correspondencia ESCO no forma parte obligatoria de esta entidad en Carrera AI 2.0. Podrá añadirse como extensión futura sin alterar la evidencia original.
 
 ---
 
@@ -232,8 +245,9 @@ Cada experiencia debe recoger:
 * aprendizaje;
 * evidencia;
 * competencias candidatas derivadas;
-* herramientas usadas;
-* posible relación con ESCO.
+* herramientas usadas.
+
+Una posible relación con ESCO es una extensión futura y no un campo exigible a 2.0.
 
 Ejemplo:
 
@@ -263,8 +277,9 @@ Cada competencia debe incluir:
 * nivel de confianza;
 * alcance;
 * límites;
-* validación por la persona;
-* posible equivalencia ESCO.
+* validación por la persona.
+
+Una posible equivalencia ESCO podrá añadirse en una versión posterior sin sustituir la competencia interna ni su evidencia.
 
 Ejemplo:
 
@@ -451,8 +466,7 @@ Cada opción debe incluir:
 * herramientas relevantes;
 * brechas;
 * riesgos;
-* siguientes pasos;
-* equivalencias ESCO posibles.
+* siguientes pasos.
 
 Ejemplo:
 
@@ -460,8 +474,6 @@ Ejemplo:
 opcion: administrativo de operaciones
 encaje: experiencia administrativa + adaptación sectorial + entorno operativo Rent Car
 brechas: confirmar herramientas sectoriales y nivel de Excel
-esco_ocupacion_candidata:
-estado: candidata
 ```
 
 ---
@@ -513,14 +525,13 @@ Ejemplos:
 * falta confirmar herramientas usadas en asesoría;
 * falta diferenciar tareas administrativas de tareas contables;
 * falta validar si la etapa autónoma debe narrarse como emprendimiento, aprendizaje o riesgo;
-* falta mapear ocupaciones ESCO con confianza suficiente;
 * falta saber preferencias actuales de la persona.
 
 ---
 
-### 8.13 Correspondencia ESCO
+### 8.13 Correspondencia ESCO futura
 
-Capa de interoperabilidad.
+Capa candidata de interoperabilidad, fuera del alcance y del criterio de finalización de Carrera AI 2.0. Este contrato se conserva como hipótesis de una versión posterior; ninguna correspondencia prueba ni certifica una competencia.
 
 Debe incluir correspondencias candidatas con:
 
@@ -589,8 +600,7 @@ La app debe comunicar:
 * no es un test;
 * no es solo un generador de CV;
 * la entrevista busca extraer valor profesional real;
-* la persona podrá revisar y validar;
-* las equivalencias ESCO serán candidatas hasta validación.
+* la persona podrá revisar y validar.
 
 Datos mínimos:
 
@@ -661,9 +671,9 @@ Salida:
 
 ---
 
-### 9.5 Mapeo ESCO candidato
+### 9.5 Flujo futuro — Mapeo ESCO candidato
 
-Objetivo: traducir el perfil al lenguaje estándar.
+Este flujo queda fuera de Carrera AI 2.0 y no bloquea su cierre. Su objetivo futuro sería traducir el perfil al lenguaje estándar sin certificar competencias.
 
 Proceso:
 
@@ -712,8 +722,9 @@ Salidas posibles:
 * preparación de entrevista;
 * mapa de brechas;
 * opciones profesionales;
-* plan de desarrollo;
-* equivalencias ESCO exportables.
+* plan de desarrollo.
+
+Las equivalencias ESCO exportables son una salida posible de una versión posterior.
 
 ---
 
@@ -734,12 +745,11 @@ Funcionalidades mínimas:
 7. Proponer primeras opciones profesionales.
 8. Generar narrativa profesional inicial.
 9. Detectar brechas y preguntas pendientes.
-10. Proponer correspondencias ESCO candidatas con estado y confianza.
-11. Permitir validación humana básica.
+10. Permitir validación humana básica.
 
 ---
 
-### 10.2 Fuera del MVP
+### 10.2 Fuera del MVP de Carrera AI 2.0
 
 No incluir inicialmente:
 
@@ -749,6 +759,7 @@ No incluir inicialmente:
 * recomendaciones automáticas definitivas;
 * base de datos compleja multiusuario;
 * frontend sofisticado;
+* integración operativa con ESCO, incluidos búsqueda, mappings, validación y exportación;
 * edición colaborativa;
 * analítica avanzada;
 * certificación formal de competencias;
@@ -798,13 +809,13 @@ El sistema debe producir textos profesionales reutilizables.
 
 El sistema debe detectar diferencias entre perfil actual y opciones objetivo.
 
-### RF-11 — Mapear a ESCO
+### RF-11 — Mapear a ESCO (requisito futuro)
 
-El sistema debe proponer correspondencias candidatas con ESCO.
+Una versión posterior podrá proponer correspondencias candidatas con ESCO. Este requisito no es exigible a Carrera AI 2.0.
 
 ### RF-12 — Validar o rechazar inferencias
 
-La persona debe poder validar, corregir o rechazar competencias, evidencias y equivalencias.
+La persona debe poder validar, corregir o rechazar competencias, evidencias e inferencias.
 
 ### RF-13 — Conservar incertidumbre
 
@@ -820,7 +831,7 @@ Toda inferencia debe poder rastrearse hasta una experiencia o evidencia.
 
 ### RNF-02 — Explicabilidad
 
-La app debe explicar por qué propone una competencia, narrativa, opción o equivalencia ESCO.
+La app debe explicar por qué propone una competencia, narrativa u opción. Las correspondencias ESCO futuras estarán sujetas a la misma obligación.
 
 ### RNF-03 — Prudencia
 
@@ -832,11 +843,11 @@ Los datos profesionales personales deben tratarse con especial cuidado.
 
 ### RNF-05 — Interoperabilidad
 
-El modelo debe prepararse para usar estándares como ESCO mediante API o datasets descargados.
+El modelo debe preservar trazabilidad y capacidad de extensión. La elección de API o datasets ESCO corresponde a una versión posterior.
 
 ### RNF-06 — Revisión humana
 
-Las equivalencias laborales relevantes deben admitir validación humana.
+Las inferencias laborales relevantes deben admitir validación humana.
 
 ### RNF-07 — Evolución
 
@@ -864,7 +875,6 @@ PerfilProfesional
   narrativas[]
   brechas[]
   preguntas_pendientes[]
-  esco_mappings[]
 ```
 
 ### Experiencia
@@ -896,7 +906,6 @@ Competencia
   experiencias_origen[]
   confianza
   estado_validacion
-  esco_mappings[]
 ```
 
 ### Herramienta
@@ -930,7 +939,7 @@ IAAplicada
   riesgos
 ```
 
-### ESCO Mapping
+### Extensión futura: ESCO Mapping
 
 ```text
 ESCO_Mapping
@@ -944,6 +953,8 @@ ESCO_Mapping
   estado
   dudas
 ```
+
+Esta entidad no forma parte del modelo mínimo exigido a Carrera AI 2.0.
 
 ---
 
@@ -959,8 +970,9 @@ La IA debe:
 * no forzar jerga profesional;
 * traducir lenguaje cotidiano a lenguaje laboral;
 * mostrar inferencias para validación;
-* explicar correspondencias ESCO;
 * generar salidas prácticas.
+
+Una versión posterior deberá explicar también cualquier correspondencia ESCO que proponga.
 
 La persona debe sentir:
 
@@ -991,7 +1003,9 @@ La persona debe sentir:
 * Número de preguntas pendientes relevantes.
 * Nivel de trazabilidad de narrativas.
 
-### Métricas ESCO
+### Métricas futuras de ESCO
+
+Estas métricas quedan fuera de la evaluación de Carrera AI 2.0:
 
 * Número de competencias internas con candidato ESCO.
 * Número de ocupaciones candidatas.
@@ -1009,9 +1023,9 @@ La IA puede producir competencias bonitas sin evidencia.
 
 Mitigación: toda competencia debe estar vinculada a experiencia y evidencia.
 
-### Riesgo 2 — Mapear mal a ESCO
+### Riesgo futuro — Mapear mal a ESCO
 
-Una equivalencia ESCO incorrecta puede distorsionar el perfil.
+Si una versión posterior incorpora ESCO, una equivalencia incorrecta puede distorsionar el perfil.
 
 Mitigación: estados de confianza, revisión humana y explicación del mapping.
 
@@ -1048,9 +1062,10 @@ Mitigación: presentar opciones razonadas, no decisiones cerradas.
 3. Las competencias extraídas pueden vincularse a evidencias.
 4. Las herramientas usadas pueden capturarse con contexto suficiente.
 5. El uso de IA aplicada puede convertirse en ventaja profesional detectable.
-6. La app puede proponer correspondencias ESCO útiles, aunque sean candidatas.
-7. Las narrativas generadas son reutilizables por la persona.
-8. El perfil ayuda a identificar opciones futuras realistas.
+6. Las narrativas generadas son reutilizables por la persona.
+7. El perfil ayuda a identificar opciones futuras realistas.
+
+Hipótesis futura no bloqueante: una versión posterior podrá evaluar si las correspondencias ESCO candidatas aportan utilidad sin distorsionar el perfil.
 
 ---
 
@@ -1064,7 +1079,6 @@ Entrevista de trayectoria
 → Competencias + evidencias
 → Herramientas + IA aplicada
 → Narrativa profesional inicial
-→ ESCO mappings candidatos
 → Preguntas pendientes
 ```
 
@@ -1076,7 +1090,6 @@ Basta con demostrar que, para una persona real, el sistema puede generar un perf
 * útil;
 * evidenciado;
 * narrable;
-* parcialmente mapeable a ESCO;
 * mejor que un CV tradicional como base de orientación.
 
 ---
@@ -1096,7 +1109,6 @@ La salida mínima del MVP debe ser un documento o vista con:
 9. Narrativa reutilizable.
 10. Brechas.
 11. Preguntas pendientes.
-12. Correspondencias ESCO candidatas.
 
 ---
 
@@ -1104,17 +1116,34 @@ La salida mínima del MVP debe ser un documento o vista con:
 
 El MVP tiene éxito si una persona puede decir:
 
-> “Este perfil representa mejor mi valor profesional que mi CV actual, me ayuda a explicar mi trayectoria y me ofrece una primera traducción útil hacia competencias, ocupaciones o cualificaciones reconocibles en el mercado laboral.”
+> “Este perfil representa fielmente mi valor profesional, está sustentado en evidencias, me resulta útil y me ayuda a explicar mi trayectoria con una narrativa que reconozco como propia.”
 
 ---
 
 ## 21. Decisiones pendientes
 
 1. Qué parte del perfil será documento y qué parte será dato estructurado.
-2. Si ESCO se integrará mediante API, dataset descargado o búsqueda asistida.
-3. Cómo validar mappings ESCO.
-4. Cómo guardar evidencias sin almacenar información sensible innecesaria.
-5. Cómo versionar cambios en el perfil.
-6. Qué salida se prioriza primero: CV, orientación, matching, narrativa o ESCO.
-7. Cómo medir la calidad de una entrevista de cobertura.
-8. Si la app debe funcionar primero como asistente conversacional, panel visual o generador de documentos.
+2. Cómo guardar evidencias sin almacenar información sensible innecesaria.
+3. Cómo versionar cambios en el perfil.
+4. Qué salida se prioriza primero: CV, orientación, matching o narrativa.
+5. Cómo medir la calidad de una entrevista de cobertura.
+6. Si la app debe funcionar primero como asistente conversacional, panel visual o generador de documentos.
+
+Decisiones futuras de integración ESCO, no bloqueantes para 2.0:
+
+* si se integrará mediante API, dataset descargado o búsqueda asistida;
+* cómo validar mappings ESCO;
+* qué salida interoperable se priorizará.
+
+---
+
+## 22. Historial de revisiones
+
+| Revisión | Fecha | Cambio | Motivo | Impacto global |
+| --- | --- | --- | --- | --- |
+| 1 | 2026-07-17 | Se asocia el SPEC a Carrera AI 2.0 y se separa ESCO del criterio de finalización | El Perfil Profesional Accionable debe poder validarse sin bloquearse por la investigación ESCO | No cambia 2.0; aclara su alcance aprobado |
+
+Fuentes de esta revisión:
+
+* [Versionado funcional de Carrera AI](VERSIONADO_CARRERA_AI.md).
+* [Decisión PCS de adopción del versionado](../.pcs/decisiones/DEC-20260717-1642-001-versionado-funcional-carrera-ai.md).

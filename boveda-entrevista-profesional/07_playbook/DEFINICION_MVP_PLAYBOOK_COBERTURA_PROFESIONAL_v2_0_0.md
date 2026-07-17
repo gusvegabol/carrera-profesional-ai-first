@@ -8,7 +8,7 @@ No es todavía un playbook ejecutable.
  
 Su función es fijar la base conceptual y arquitectónica que un futuro [[PLAYBOOK_COBERTURA_PROFESIONAL]] debería implementar.
  
-Esta versión `v1.0.4` parte de `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_3` e incorpora tres ajustes de limpieza y consolidación:
+Esta versión `v2.0.0` parte de `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_3` e incorpora tres ajustes de limpieza y consolidación:
  
 - adopta `explorada` como estado canónico, en lugar de `cubierta`;
     
