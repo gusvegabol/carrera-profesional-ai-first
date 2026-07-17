@@ -28,6 +28,7 @@ Al aterrizar en este host, el agente debería consultar primero:
 - `AGENTS.md`
 - `./.pcs/estado/estado-actual.md`, si existe
 - `./docs/AGENTS.md`
+- `./docs/VERSIONADO_CARRERA_AI.md` y `./docs/FLUJO_CAMBIO_VERSION_CARRERA_AI.md`, cuando la tarea afecte al versionado funcional
 - `./docs/DOCUMENTO_SPEC_CARRERA_AI.md`
 - `./docs/Núcleo Metodológico del Playbook/idea-central.md`
 - `./docs/Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`, cuando la tarea afecte al debate metodológico actual

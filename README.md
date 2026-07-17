@@ -4,11 +4,19 @@ Flujo operativo vigente: flujo PCS 2.0 (`Usuario -> Work -> Usuario`).
 
 ## Qué es este proyecto
 
-Carrera AI es un proyecto para convertir la experiencia profesional real de una persona en un Perfil Profesional Accionable mediante entrevista asistida por IA, con evidencias, narrativas, opciones profesionales y correspondencias candidatas con ESCO.
+Carrera AI es un proyecto para convertir la experiencia profesional real de una persona en un Perfil Profesional Accionable mediante entrevista asistida por IA, con evidencias, narrativas y opciones profesionales. La correspondencia con ESCO se investiga de forma paralela y no forma parte del alcance vigente.
 
 ## Objetivo del proyecto
 
 El objetivo es diseñar y validar una forma de entrevista que permita reconstruir trayectorias profesionales completas, extraer experiencia tácita útil y transformarla en salidas profesionales revisables por la propia persona.
+
+## Versión global actual
+
+`Carrera AI 2.0` está `en desarrollo`.
+
+Su objetivo es validar un primer Perfil Profesional Accionable integral y revisable mediante cobertura profesional, inmersión en profundidad, evidencias y síntesis de trayectoria. ESCO queda fuera del criterio de finalización de `2.0` y continúa como investigación paralela.
+
+La fuente funcional de verdad es [Versionado funcional de Carrera AI](docs/VERSIONADO_CARRERA_AI.md). El procedimiento de transición está en [Flujo de cambio de versión](docs/FLUJO_CAMBIO_VERSION_CARRERA_AI.md).
 
 ## Estado actual
 
@@ -54,6 +62,8 @@ Si el comando no figura en el índice o el alias indicado no existe en `C:/Users
 ## Documentación principal del proyecto
 
 - `./docs/DOCUMENTO_SPEC_CARRERA_AI.md`
+- `./docs/VERSIONADO_CARRERA_AI.md`
+- `./docs/FLUJO_CAMBIO_VERSION_CARRERA_AI.md`
 - `./docs/AGENTS.md`
 - `./docs/Núcleo Metodológico del Playbook/idea-central.md`
 - `./docs/Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`

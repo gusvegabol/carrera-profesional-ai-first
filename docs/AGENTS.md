@@ -8,6 +8,13 @@ Estas instrucciones se aplican a `docs/` y a sus subcarpetas, salvo que exista o
 
 ## Fuentes y jerarquía
 
+Para el versionado funcional:
+
+1. `VERSIONADO_CARRERA_AI.md` es la autoridad sobre la versión global, su genealogía, estado y composición.
+2. `FLUJO_CAMBIO_VERSION_CARRERA_AI.md` es el procedimiento local para las transiciones de versión.
+
+Estos documentos no desplazan a `DOCUMENTO_SPEC_CARRERA_AI.md` como autoridad sobre la definición del producto ni al núcleo metodológico como autoridad sobre la entrevista.
+
 Para consultas sobre la metodología de entrevista, priorizar en este orden:
 
 1. `DOCUMENTO_SPEC_CARRERA_AI.md` para objetivos y límites funcionales.

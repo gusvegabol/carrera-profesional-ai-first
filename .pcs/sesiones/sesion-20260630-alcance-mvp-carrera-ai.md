@@ -2,10 +2,11 @@
 id: sesion-20260630-alcance-mvp-carrera-ai
 titulo: Alcance MVP de Carrera Profesional AI-First
 inicio: 2026-06-30
-cierre:
-estado: abierta
+cierre: 2026-07-17 16:58
+estado: cerrada
 tipo: sesion
 host: carrera-ai
+linea_version_global: "1.x"
 ---
 
 # Sesión PCS — Alcance MVP de Carrera Profesional AI-First
@@ -20,7 +21,7 @@ host: carrera-ai
 | Nombre de sesión | Alcance MVP de Carrera Profesional AI-First |
 | Fichero | `sesion-20260630-alcance-mvp-carrera-ai.md` |
 | Fecha | 2026-06-30 |
-| Estado | Abierta |
+| Estado | Cerrada |
 | Naturaleza | Sesión dedicada al alcance MVP |
 | Ámbito | Definición operativa del MVP del proyecto anfitrión |
 | Relación con PCS | Uso de PCS como marco de continuidad, gobernanza y trazabilidad |
@@ -306,5 +307,11 @@ Esta nota no modifica `docs/alcance-mvp.md`; solo deja continuidad documental pa
 
 El alcance del MVP queda concretado hacia un primer piloto de entrevista profesional profunda ejecutado por ChatGPT, con salida mínima de una competencia profesional validable y evidencia explícita.
 
-La sesión marco sigue abierta como contenedor de alcance general, pero ya con la concreción operativa del piloto como referencia viva.
+En ese momento, la sesión marco seguía abierta como contenedor de alcance general, con la concreción operativa del piloto como referencia viva.
+
+## 20. Cierre histórico por delimitación de versión
+
+La sesión queda cerrada como antecedente de la línea global 1.x. Sus aprendizajes permanecen consultables, pero no admite trabajo de Carrera AI 2.0 ni se traslada retroactivamente a esa versión.
+
+El trabajo vigente de 2.0 continúa en las sesiones específicas de cobertura y adaptación funcional.
 

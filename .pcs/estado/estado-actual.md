@@ -3,7 +3,7 @@ id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
 fecha_actualizacion: 2026-07-17
-ultima_sesion_relacionada: sesion-20260717-1156-migracion-pcs-2-0-carrera-ai
+ultima_sesion_relacionada: sesion-20260717-1642-materializacion-versionado-carrera-ai
 host: carrera-ai
 ---
 
@@ -11,13 +11,19 @@ host: carrera-ai
 
 ## Situación actual
 
+Carrera AI 2.0 está en desarrollo sobre la versión base 1.6. Su objetivo es validar con una persona el recorrido cobertura profesional → inmersión en profundidad → evidencias → síntesis de trayectoria → Perfil Profesional Accionable integral y revisable.
+
+La fuente funcional de verdad sobre la versión global es `docs/VERSIONADO_CARRERA_AI.md`. El SPEC conserva la definición del producto, mientras PCS registra la continuidad operativa y la decisión humana que adoptó el modelo de versionado.
+
+ESCO permanece como investigación paralela fuera del criterio de finalización de 2.0 y como candidata provisional a una posible 2.5, que no está abierta.
+
 La orientación local de `carrera-ai` ha completado su migración a PCS 2.0. `README.md` y `AGENTS.md` aplican el paquete documental vigente, las reglas PCS 1.0 se han retirado de la capa `.codex/` activa y se conserva únicamente la skill local `pcs-obsidian-corrige-links`. El registro central está cerrado en `pcs_version: "2.0"` y `status: vigente`. La segunda pasada se clasificó como C y confirmó la idempotencia del flujo sin nuevas escrituras en el host.
 
 Se ha formalizado y materializado la retirada de Graphify de `carrera-ai` mediante `DEC-20260717-1058-001-retirada-graphify-carrera-ai`, siguiendo la decisión de referencia de PCS Core `DEC-20260715-0004-retirada-graphify-pcs-host`. La decisión local sustituye a `DEC-20260713-1344-001-integrar-graphify-tres-corpus`. La sesión de trabajo `sesion-20260717-1058-retirada-graphify-carrera-ai` registra la eliminación y quedó cerrada el 2026-07-17 tras completar la verificación.
 
 La razón operativa es que el coste de tiempo y recursos de la extracción semántica resulta desproporcionado para el ritmo documental del host y que las salidas dependen de modelos que no siempre generan estructuras válidas. La localización y verificación de relaciones documentales se realiza directamente sobre las fuentes Markdown y sus enlaces. Se han eliminado los tres directorios de salida, el script de ejecución, las configuraciones específicas y las instrucciones operativas asociadas.
 
-El trabajo vigente del host permanece en la revisión metodológica de la entrevista de cobertura profesional. `docs/DOCUMENTO_SPEC_CARRERA_AI.md` sigue siendo la referencia funcional visible; no se ha modificado para esta línea de trabajo. El núcleo metodológico y el Perfil Profesional Accionable continúan siendo el marco para diseñar la cobertura de trayectorias profesionales sin sustituir el playbook de profundidad existente.
+El trabajo vigente del host permanece en la revisión metodológica de la entrevista de cobertura profesional. `docs/DOCUMENTO_SPEC_CARRERA_AI.md` sigue definiendo el producto y se ha alineado de forma acotada con Carrera AI 2.0. El núcleo metodológico y el Perfil Profesional Accionable continúan siendo el marco para diseñar la cobertura de trayectorias profesionales sin sustituir el playbook de profundidad existente.
 
 Se han elaborado cuatro propuestas para que una IA cubra toda la vida profesional de una persona, dos conservadoras y dos innovadoras. El informe `docs/Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md` las compara con una rúbrica equilibrada y recomienda, de forma debatible, usar la Idea 2, doble pasada de panorama e inmersión selectiva, como arquitectura base de un primer piloto.
 
@@ -39,6 +45,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 
 ## Próximos pasos
 
+- Aplicar `docs/FLUJO_CAMBIO_VERSION_CARRERA_AI.md` en cualquier futura transición de versión.
 - Revisar la evaluación experta y la presentación con las personas que deban debatir el enfoque.
 - Decidir explícitamente si se adopta, modifica o descarta la recomendación para el primer piloto.
 - Si se adopta, definir el contrato del piloto: muestra de entrevistas, salida inicial revisable, control de privacidad, criterios de corrección y señales de utilidad.
@@ -47,16 +54,19 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 
 ## Acciones abiertas relevantes
 
+- `ACC-20260717-1642-001-materializar-versionado-carrera-ai` quedó completada; no deja trabajo abierto dentro de su alcance.
 - No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones permanecen registradas históricamente en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Es candidata a acción futura la definición del primer piloto, condicionada a una decisión explícita sobre la recomendación metodológica.
 
 ## Decisiones vigentes relevantes
 
+- `DEC-20260717-1642-001-versionado-funcional-carrera-ai` adopta el modelo global/componente, declara Carrera AI 2.0 en desarrollo y separa ESCO como investigación paralela no bloqueante.
+
 - `DEC-20260717-1058-001-retirada-graphify-carrera-ai` retira Graphify de la operación de `carrera-ai` y sustituye la decisión local anterior de mantener tres corpus Graphify.
 
 - `hosts/hosts.yaml` registra `carrera-ai` como host PCS.
 - La carpeta `.pcs/` conserva la memoria operativa local; el estado actual vive en este documento y no en una sesión histórica.
-- `docs/DOCUMENTO_SPEC_CARRERA_AI.md` es la referencia funcional visible del host; la revisión actual no lo modifica.
+- `docs/VERSIONADO_CARRERA_AI.md` gobierna la versión global y `docs/DOCUMENTO_SPEC_CARRERA_AI.md` conserva la autoridad sobre la definición del producto.
 - `DEC-20260713-1344-001-integrar-graphify-tres-corpus` queda como decisión sustituida por la retirada de Graphify.
 - `PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA` sigue gobernando la profundidad.
 - Cobertura y profundidad son capas complementarias; la cobertura no sustituye el playbook de profundidad.
@@ -74,6 +84,9 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 
 ## Referencias históricas y de continuidad
 
+- `docs/superpowers/specs/2026-07-17-versionado-carrera-ai-design.md`: diseño funcional aprobado.
+- `sesion-20260717-1642-materializacion-versionado-carrera-ai.md`: sesión técnica cerrada de implementación y validación.
+- `sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai.md`: sesión funcional activa de Carrera AI 2.0.
 - `sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md`: sesión abierta que registra el núcleo metodológico, las fases del perfil y la exploración posterior de enfoques.
 - `sesion-20260710-2347-investigacion-operativa-esco-carrera-ai.md`: línea paralela para investigar correspondencias ESCO candidatas sin bloquear la Fase 1.
 - `docs/Ideas debate - como afrontar entrevista cobertura profesional/01_Conservadora_linea_de_vida_flexible_y_reconstruible.md`.

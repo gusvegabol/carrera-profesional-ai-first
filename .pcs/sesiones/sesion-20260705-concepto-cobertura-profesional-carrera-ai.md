@@ -6,6 +6,7 @@ cierre:
 estado: abierta
 tipo: sesion
 host: carrera-ai
+version_global_contexto: "2.0"
 ---
 
 # Sesión PCS - Concepto cobertura profesional
@@ -127,6 +128,8 @@ Al cerrar esta sesión debe quedar claro:
 
 ## Actualización — Cadena documental de cobertura profesional y consolidación v2_0_0
 
+> `v2_0_0` identifica la versión semántica del componente de cobertura; no es la versión global Carrera AI 2.0.
+
 Durante esta sesión queda registrada la secuencia documental creada manualmente para definir el MVP del futuro playbook de cobertura profesional:
 
 - `DEFINICION_MVP_PLAYBOOK_COBERTURA_PROFESIONAL_v1.md`: primera definición operativa de cobertura desde la línea ChatGPT.
@@ -147,7 +150,7 @@ La sesión sigue abierta y su objetivo principal no cambia; esta actualización 
 
 Durante esta sesión quedó asentado que los artefactos generados por cobertura profesional viven en `boveda-entrevista-profesional/artefactos-cobertura-profesional/`.
 
-La carpeta no va numerada porque pertenece a ejecucion y aplicacion, no a taxonomia de conocimiento reutilizable.
+La carpeta no va numerada porque pertenece a ejecucion y aplicación, no a taxonomia de conocimiento reutilizable.
 
 La estructura registrada para esa carpeta es:
 
@@ -187,7 +190,7 @@ La propuesta a retomar es esta:
 
 La correccion clave derivada de ese analisis es que `TEMPLATE_CHECKPOINT.md` y el `README.md` de `artefactos-cobertura-profesional/` deben revisarse para que el checkpoint incluya la letra de intento en el nombre; de lo contrario, un segundo intento interrumpido sobre la misma zona colisionaria con el nombre del checkpoint anterior.
 
-Cuando se vuelva a rehidratar el contexto de cobertura profesional, esta tarea debe mencionarse de forma explicita y prioritaria como asunto urgente pendiente dentro de la sesion abierta.
+Cuando se vuelva a rehidratar el contexto de cobertura profesional, esta tarea debe mencionarse de forma explicita y prioritaria como asunto urgente pendiente dentro de la sesión abierta.
 
 ## Actualización posterior a la simulación 000
 
