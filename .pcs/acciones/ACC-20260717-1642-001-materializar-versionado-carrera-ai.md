@@ -5,8 +5,8 @@ estado: completada
 prioridad: alta
 responsable: Codex
 fecha_creacion: 2026-07-17
-fecha_actualizacion: 2026-07-17
-fecha_cierre: 2026-07-17 16:58
+fecha_actualizacion: 2026-07-17 17:34
+fecha_cierre: 2026-07-17 17:34
 tipo: accion
 host: carrera-ai
 ---

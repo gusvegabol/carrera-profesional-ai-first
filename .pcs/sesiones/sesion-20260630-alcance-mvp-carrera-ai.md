@@ -2,7 +2,7 @@
 id: sesion-20260630-alcance-mvp-carrera-ai
 titulo: Alcance MVP de Carrera Profesional AI-First
 inicio: 2026-06-30
-cierre: 2026-07-17 16:58
+cierre: 2026-07-17 17:34
 estado: cerrada
 tipo: sesion
 host: carrera-ai

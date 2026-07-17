@@ -48,7 +48,7 @@ La sesión padre conserva la arquitectura general:
 
 - fases del Perfil Profesional Accionable;
 - SPEC del playbook de cobertura profesional;
-- pruebas sinteticas por fase;
+- pruebas sintéticas por fase;
 - relación entre entrevista, evidencia, perfil y validación.
 
 Esta sesión hija se limita a estudiar y diseñar el subproblema ESCO:

@@ -2,7 +2,7 @@
 id: sesion-20260717-1642-materializacion-versionado-carrera-ai
 titulo: Materialización del versionado funcional de Carrera AI
 inicio: 2026-07-17 16:42
-cierre: 2026-07-17 16:58
+cierre: 2026-07-17 17:34
 estado: cerrada
 tipo: sesion
 host: carrera-ai
@@ -95,4 +95,4 @@ No quedan bloqueos para el alcance de materialización. La validación del produ
 - Acción relacionada: ACC-20260717-1642-001-materializar-versionado-carrera-ai.
 - Decisión relacionada: DEC-20260717-1642-001-versionado-funcional-carrera-ai.
 - Estado de proyecto relacionado: .pcs/estado/estado-actual.md.
-- Cierre: materialización y validaciones documentales completadas el 2026-07-17 a las 16:58.
+- Cierre: materialización y validaciones documentales completadas el 2026-07-17 a las 17:34.
