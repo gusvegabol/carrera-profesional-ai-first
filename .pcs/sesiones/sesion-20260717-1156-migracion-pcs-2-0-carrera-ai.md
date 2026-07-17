@@ -13,7 +13,7 @@ host: carrera-ai
 
 ## Contexto inmediato
 
-`carrera-ai` ha retirado Graphify y está preparado para validar el flujo de actualización de hosts de PCS 2.0. El registro central lo declara como `pcs_role: host`, `pcs_version: "1.0"`, `status: pendiente_de_actualizacion` y raíz `C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first`.
+Al abrirse esta sesión, `carrera-ai` había retirado Graphify y estaba preparado para validar el flujo de actualización de hosts de PCS 2.0. En ese preflight histórico, el registro central lo declaraba como `pcs_role: host`, `pcs_version: "1.0"`, `status: pendiente_de_actualizacion` y raíz `C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first`.
 
 El Core activo es `pcs-host` con `pcs_version: "2.0"`. La estructura local `.pcs/` contiene `sesiones/`, `acciones/`, `decisiones/` y `estado/`, con memoria histórica que debe preservarse.
 
@@ -105,7 +105,7 @@ La historia de los archivos retirados permanece disponible en Git.
 ## Problemas o bloqueos
 
 - La confirmación documental ya fue recibida y aplicada.
-- No quedan bloqueos físicos en el host; `pcs_version` y `status` deben modificarse desde PCS Core mediante sus respectivos flujos guiados.
+- Al finalizar la fase física no quedaban bloqueos en el host; el cierre de `pcs_version` y `status` se ejecutó posteriormente desde PCS Core.
 
 ## Documentos afectados
 
@@ -114,11 +114,11 @@ La historia de los archivos retirados permanece disponible en Git.
 
 ## Rehidratación futura
 
-- Dónde quedó el trabajo: migración física aplicada; cierre registral pendiente en PCS Core.
+- Dónde quedó el trabajo: migración PCS 2.0 y cierre registral completados.
 - Leer primero: esta sesión, `.pcs/estado/estado-actual.md`, README, AGENTS y la capa `.codex/`.
-- Líneas abiertas a retomar: commit del host, cierre registral y segunda pasada C.
+- Líneas abiertas a retomar: ninguna dentro de esta migración.
 - Riesgos de malinterpretación: no tratar referencias históricas a Graphify como reglas activas ni cambiar la metodología de Carrera AI dentro de esta migración.
-- Siguiente gesto recomendado: validar y consolidar el commit del host antes de modificar `hosts/hosts.yaml`.
+- Siguiente gesto recomendado: consultar el estado local y el registro central como fuentes vivas; conservar esta sesión como trazabilidad histórica.
 
 ## Checklist de consolidación
 
@@ -138,7 +138,7 @@ La historia de los archivos retirados permanece disponible en Git.
 - Sesión relacionada: `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Sesión del Core: `sesion-20260717-1156-validacion-flujo-pcs-2-0-carrera-ai`.
 - Estado de proyecto relacionado: `../estado/estado-actual.md`.
-- Cierre: validación física completada; el cierre registral corresponde ahora a PCS Core.
+- Cierre: validación física completada y cierre registral posterior verificado en PCS Core.
 
 ## Validación final
 
@@ -148,3 +148,9 @@ La historia de los archivos retirados permanece disponible en Git.
 - Los tres JSON de configuración saneados cargan correctamente y no contienen referencias operativas a Graphify.
 - El frontmatter de esta sesión y de `.pcs/estado/estado-actual.md` carga correctamente como YAML.
 - `git diff --check` no detecta errores de espacios ni marcadores sin resolver.
+
+## Resultado posterior del cierre registral
+
+- PCS Core actualizó `carrera-ai` a `pcs_version: "2.0"` y `status: vigente` mediante el cierre registral gobernado.
+- La segunda ejecución se clasificó como C y confirmó que el flujo era idempotente.
+- Las referencias a PCS 1.0 y `pendiente_de_actualizacion` conservadas en el contexto y el preflight de esta sesión describen exclusivamente el estado inicial histórico.

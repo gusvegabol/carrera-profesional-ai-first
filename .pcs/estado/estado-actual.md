@@ -11,7 +11,7 @@ host: carrera-ai
 
 ## Situación actual
 
-La orientación local de `carrera-ai` ha completado su migración física a PCS 2.0. `README.md` y `AGENTS.md` aplican el paquete documental vigente, las reglas PCS 1.0 se han retirado de la capa `.codex/` activa y se conserva únicamente la skill local `pcs-obsidian-corrige-links`. El registro central continúa temporalmente en `pcs_version: "1.0"` y `status: pendiente_de_actualizacion` hasta que PCS Core valide el commit del host y ejecute el cierre registral confirmado.
+La orientación local de `carrera-ai` ha completado su migración a PCS 2.0. `README.md` y `AGENTS.md` aplican el paquete documental vigente, las reglas PCS 1.0 se han retirado de la capa `.codex/` activa y se conserva únicamente la skill local `pcs-obsidian-corrige-links`. El registro central está cerrado en `pcs_version: "2.0"` y `status: vigente`. La segunda pasada se clasificó como C y confirmó la idempotencia del flujo sin nuevas escrituras en el host.
 
 Se ha formalizado y materializado la retirada de Graphify de `carrera-ai` mediante `DEC-20260717-1058-001-retirada-graphify-carrera-ai`, siguiendo la decisión de referencia de PCS Core `DEC-20260715-0004-retirada-graphify-pcs-host`. La decisión local sustituye a `DEC-20260713-1344-001-integrar-graphify-tres-corpus`. La sesión de trabajo `sesion-20260717-1058-retirada-graphify-carrera-ai` registra la eliminación y quedó cerrada el 2026-07-17 tras completar la verificación.
 
@@ -47,7 +47,6 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 
 ## Acciones abiertas relevantes
 
-- La migración física PCS 2.0 está completada; queda ejecutar desde PCS Core el cierre registral ya confirmado y la segunda pasada C de idempotencia.
 - No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones permanecen registradas históricamente en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Es candidata a acción futura la definición del primer piloto, condicionada a una decisión explícita sobre la recomendación metodológica.
 
