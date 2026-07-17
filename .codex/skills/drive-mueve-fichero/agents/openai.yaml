@@ -1,4 +1,0 @@
-interface:
-  display_name: "Drive mueve fichero"
-  short_description: "Mueve archivos de Drive y convierte no-md a .md"
-  default_prompt: "Usar esta skill para mover un archivo de Google Drive desde la raiz a una carpeta relativa dentro de Proyectos-IA/project-continuity-system. Resolver el destino por ruta, convertir a Markdown si el origen no es .md, verificar el padre final y conservar el original salvo que el usuario pida enviarlo a la papelera."

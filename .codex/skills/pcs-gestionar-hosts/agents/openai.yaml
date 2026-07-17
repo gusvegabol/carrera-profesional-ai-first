@@ -1,7 +1,0 @@
-interface:
-  display_name: "pcs-gestionar-hosts"
-  short_description: "Gestiona hosts PCS con preguntas guiadas"
-  default_prompt: "Use $pcs-gestionar-hosts to create, add, update, or archive a PCS host by asking one question at a time, translating answers to YAML, validating them with PyYAML, and confirming before writing hosts/hosts.yaml."
-
-policy:
-  allow_implicit_invocation: true

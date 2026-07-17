@@ -4,96 +4,95 @@
 
 Este repositorio corresponde al host `carrera-ai`.
 
-Su propósito local es:
-`[PENDIENTE: documentar el propósito funcional local de carrera-profesional-ai-first]`
+Su propósito local es desarrollar y revisar el enfoque de entrevista que permita construir un Perfil Profesional Accionable a partir de la trayectoria profesional completa de una persona.
+
+Flujo operativo vigente: flujo PCS 2.0 (`Usuario -> Work -> Usuario`).
 
 ## Relación con PCS
 
-Este host usa Project Continuity System (PCS) como marco común de continuidad, gobernanza y trazabilidad.
+Ruta del Core activo:
 
-Ruta del PCS core:
 `C:/Users/gusve/Documents/Apps/project-continuity-system`
 
-El PCS core actúa como fuente normativa común. Este repositorio anfitrión conserva su contexto local y su memoria operativa vive en `./.pcs/`.
+El Core actúa como fuente normativa común. Este repositorio conserva su contexto local y su memoria operativa vive en `./.pcs/`.
 
-## Contrato de gobernanza PCS
+Cuando una tarea afecte gobernanza PCS, sesiones, acciones, decisiones, estado, hosts o comandos `pcs::`, el agente debe consultar como referencia viva:
 
-Cuando la tarea afecte gobernanza PCS, creación o actualización de sesiones, acciones, decisiones, estado, hosts o fuentes compartidas, el agente debe aplicar el contrato canónico vigente en:
+`C:/Users/gusve/Documents/Apps/project-continuity-system/core/CONTRATO_CANONICO_GOBERNANZA_HOSTS.md`
 
-```text
-C:/Users/gusve/Documents/Apps/project-continuity-system/core/CONTRATO_CANONICO_GOBERNANZA_HOSTS.md
-```
+## Qué consultar primero
 
-Este `AGENTS.md` orienta al agente localmente, pero no sustituye el contrato ni las entidades, plantillas, decisiones o protocolos del PCS Core.
+Al aterrizar en este host, el agente debería consultar primero:
+
+- `README.md`
+- `AGENTS.md`
+- `./.pcs/estado/estado-actual.md`, si existe
+- `./docs/AGENTS.md`
+- `./docs/DOCUMENTO_SPEC_CARRERA_AI.md`
+- `./docs/Núcleo Metodológico del Playbook/idea-central.md`
+- `./docs/Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`, cuando la tarea afecte al debate metodológico actual
 
 ## Regla universal de ortografía española
 
 Cuando el agente redacte o modifique documentación en español, debe conservar la ortografía española, incluidas tildes, diéresis, eñes y signos de apertura de interrogación y exclamación cuando correspondan.
 
-Antes de dar por terminada cualquier documentación redactada en español, debe revisarla explícitamente desde el punto de vista ortográfico y corregir los errores detectados. No debe normalizar el español a ASCII salvo petición explícita.
+Antes de dar por terminada cualquier documentación redactada en español, debe revisarla explícitamente desde el punto de vista ortográfico y corregir los errores detectados.
 
 ## Rehidratación mínima obligatoria
 
-Cuando el usuario declare el host, el agente debe:
+Si el usuario declara el host o pide retomar trabajo desde contexto general, el agente debe:
 
-1. resolver el alias del host;
-2. consultar `hosts/hosts.yaml` del PCS core si está disponible;
-3. consultar `./.pcs/estado/estado-actual.md` si existe;
-4. resumir situación, acciones abiertas relevantes, decisiones vigentes condicionantes, riesgos y siguiente gesto recomendado;
+1. resolver el alias `carrera-ai` en `C:/Users/gusve/Documents/Apps/project-continuity-system/hosts/hosts.yaml`;
+2. consultar `./.pcs/estado/estado-actual.md`, si existe;
+3. revisar `./.pcs/sesiones/` abiertas o útiles solo si el estado no basta para responder;
+4. devolver un resumen breve de situación, acciones abiertas relevantes, decisiones vigentes condicionantes, riesgos y siguiente gesto recomendado;
 5. no abrir ni actualizar una sesión PCS solo por esa declaración.
+
+## Consulta documental proporcional
+
+Para preguntas metodológicas o de debate, priorizar en este orden:
+
+1. `./docs/DOCUMENTO_SPEC_CARRERA_AI.md` para objetivos y límites funcionales;
+2. `./docs/Núcleo Metodológico del Playbook/` para fundamentos y marcos metodológicos;
+3. `./docs/Ideas debate - como afrontar entrevista cobertura profesional/` para propuestas, evaluación y presentación del enfoque.
+
+Si existe contradicción, debe señalarse expresamente y prevalece la fuente de mayor autoridad dentro de ese orden.
+
+## Comandos PCS en Work
+
+Si una petición comienza por `pcs::`, el agente debe encaminarla sin reproducir sus flujos en este documento. Debe consultar, en este orden:
+
+1. `C:/Users/gusve/Documents/Apps/project-continuity-system/prompts/work-comandos/INDEX_COMANDOS.md`
+2. `C:/Users/gusve/Documents/Apps/project-continuity-system/prompts/work-comandos/COMANDOS_GOBERNANZA.md`
+3. el documento de flujo específico indicado por el índice
+
+Si el comando no figura en el índice o el alias indicado no existe en `hosts/hosts.yaml`, el agente debe avisar y detenerse sin realizar cambios.
 
 ## Regla de degradación
 
-Si faltan artefactos:
+Si faltan artefactos locales, el agente debe degradar en este orden:
 
 1. intentar `./.pcs/estado/estado-actual.md`;
-2. si falta, revisar `./.pcs/sesiones/` abiertas o en pausa;
-3. si falta `./.pcs/`, declarar el vacío de memoria operativa;
-4. si falta `hosts/hosts.yaml`, declarar el límite de resolución del host.
-
-## Documentos principales del host
-
-Documentos verificados durante esta validación:
-
-- `./.pcs/estado/estado-actual.md`
-- `./.pcs/sesiones/sesion-20260614-2132-inicio-pcs-en-carrera-ai.md`
-- `./docs/DOCUMENTO_SPEC_CARRERA_AI.md`
+2. si falta, revisar sesiones abiertas o útiles en `./.pcs/sesiones/`;
+3. si falta `./.pcs/`, declarar explícitamente que no existe memoria operativa local suficiente;
+4. si falta el Core activo o `hosts/hosts.yaml`, declarar el límite de resolución de alias y no inventar contexto.
 
 ## Límites locales
 
-- No hay todavía una descripción funcional confirmada del proyecto anfitrión.
-- El estado verificado es de arranque mínimo PCS, no de operación funcional madura.
-- No debe inferirse arquitectura, uso ni alcance del proyecto fuera de lo documentado en `.pcs/`.
-- La memoria operativa confirmada del host vive en `./.pcs/`.
-
-## Restricciones
-
-- No tratar sesiones como estado vivo.
+- No tratar una sesión como estado vivo.
 - No inventar contexto funcional no documentado.
-- No editar `hosts/hosts.yaml` fuera del flujo guiado.
-- No duplicar el núcleo PCS dentro de este repositorio.
+- No modificar `./docs/DOCUMENTO_SPEC_CARRERA_AI.md` por inferencia no verificada.
+- No convertir una recomendación metodológica en decisión formal sin soporte documental y sin la capa PCS correspondiente.
+- No editar `hosts/hosts.yaml` fuera del flujo guiado del Core.
+- No duplicar dentro del host la gobernanza universal del PCS.
+- No usar `./.tmp/` como fuente de verdad; solo puede leerse o escribirse cuando el usuario autorice de forma explícita una subruta concreta.
 
-## Exclusión operativa de `.tmp/`
+## Regla de detención
 
-Todo el contenido de `.tmp/` debe considerarse material temporal, auxiliar o de trabajo local.
+El agente debe detenerse y pedir aclaración si detecta:
 
-La carpeta `.tmp/` no forma parte del proyecto operativo, no forma parte de la bóveda `boveda-entrevista-profesional/` y no debe usarse como fuente de verdad.
-
-Su contenido no debe leerse, resumirse, indexarse, modificarse ni usarse salvo petición explícita del usuario.
-
-Esto incluye, entre otros posibles contenidos:
-
-- `.tmp/notas/`
-- borradores temporales
-- exports parciales
-- pruebas
-- resultados intermedios
-- material auxiliar recopilado por el usuario
-
-## Exclusión operativa de `.tmp/`
-
-Los agentes automáticos no deben leer, recorrer, indexar, resumir, modificar ni usar ningún contenido dentro de `.tmp/` salvo autorización explícita del usuario.
-
-`.tmp/` es una zona temporal y auxiliar. No forma parte del proyecto operativo, de la bóveda `boveda-entrevista-profesional/` ni de ninguna fuente de verdad del host.
-
-Esta exclusión incluye `.tmp/notas/` y cualquier otro contenido temporal, borrador, export parcial, prueba o resultado intermedio.
+- contradicción entre fuentes que gobiernan la misma afirmación;
+- ambigüedad entre metodología, propuesta, decisión y estado PCS;
+- necesidad de modificar gobernanza común del Core desde el host sin instrucción explícita;
+- falta de memoria local suficiente para reconstruir estado sin inventarlo;
+- petición de cambiar el nombre de `.pcs` o de editar `hosts/hosts.yaml` al margen del flujo guiado.

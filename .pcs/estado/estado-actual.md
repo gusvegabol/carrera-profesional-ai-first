@@ -3,13 +3,15 @@ id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
 fecha_actualizacion: 2026-07-17
-ultima_sesion_relacionada: sesion-20260717-1058-retirada-graphify-carrera-ai
+ultima_sesion_relacionada: sesion-20260717-1156-migracion-pcs-2-0-carrera-ai
 host: carrera-ai
 ---
 
 # estado-actual
 
 ## Situación actual
+
+La orientación local de `carrera-ai` ha completado su migración física a PCS 2.0. `README.md` y `AGENTS.md` aplican el paquete documental vigente, las reglas PCS 1.0 se han retirado de la capa `.codex/` activa y se conserva únicamente la skill local `pcs-obsidian-corrige-links`. El registro central continúa temporalmente en `pcs_version: "1.0"` y `status: pendiente_de_actualizacion` hasta que PCS Core valide el commit del host y ejecute el cierre registral confirmado.
 
 Se ha formalizado y materializado la retirada de Graphify de `carrera-ai` mediante `DEC-20260717-1058-001-retirada-graphify-carrera-ai`, siguiendo la decisión de referencia de PCS Core `DEC-20260715-0004-retirada-graphify-pcs-host`. La decisión local sustituye a `DEC-20260713-1344-001-integrar-graphify-tres-corpus`. La sesión de trabajo `sesion-20260717-1058-retirada-graphify-carrera-ai` registra la eliminación y quedó cerrada el 2026-07-17 tras completar la verificación.
 
@@ -45,7 +47,8 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 
 ## Acciones abiertas relevantes
 
-- No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones están registradas en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
+- La migración física PCS 2.0 está completada; queda ejecutar desde PCS Core el cierre registral ya confirmado y la segunda pasada C de idempotencia.
+- No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones permanecen registradas históricamente en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Es candidata a acción futura la definición del primer piloto, condicionada a una decisión explícita sobre la recomendación metodológica.
 
 ## Decisiones vigentes relevantes
@@ -68,9 +71,6 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - Un perfil persuasivo con evidencia insuficiente puede inflar capacidades u ocultar incertidumbre; la persona debe poder revisar, matizar, rechazar o retirar información.
 - ESCO no debe confundirse con prueba de competencia, cualificación o certificación individual.
 - La información de trayectoria profesional es personal y debe limitarse a lo necesario para el propósito de carrera.
-- Una eventual consulta transversal entre `boveda-entrevista-profesional/` y `docs/` debe conservar la procedencia de cada corpus; no debe resolverse fusionando grafos de forma silenciosa.
-- El grafo PCS puede quedar obsoleto tras cambios en estado, decisiones o sesiones; no debe usarse sin comprobar su fecha y cobertura.
-- No se prescribe una alternativa tecnológica a Graphify; cualquier necesidad futura de análisis semántico requerirá una decisión concreta y aprobada.
 - `.tmp/` queda excluida del uso operativo salvo autorización expresa.
 
 ## Referencias históricas y de continuidad
