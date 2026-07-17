@@ -10,6 +10,8 @@ host: carrera-ai
 
 # Sesión PCS - Concepto cobertura profesional
 
+> Nota de vigencia: cualquier referencia a Graphify en esta sesión es histórica. Su uso operativo quedó retirado el 2026-07-17 mediante `DEC-20260717-1058-001-retirada-graphify-carrera-ai`.
+
 ## 1. Identificación
 
 | Campo | Valor |
@@ -193,7 +195,7 @@ Cuando se vuelva a rehidratar el contexto de cobertura profesional, esta tarea d
 - No se escribieron artefactos reales de mapa, zonas, checkpoints, inmersiones o competencias durante la simulación.
 - Los fallos detectados quedan separados entre diseño, lenguaje y técnica: colapso de responsabilidades en una sola zona, fuga de nomenclatura interna, generalización indebida e incidencia de generación del modelo.
 - `TEMPLATE_SESION.md` ya incorpora la sección de hilos abiertos y competencias candidatas para la próxima sesión.
-- `graphify` fue actualizado y solo debe usarse como apoyo de navegación y rehidratación.
+- Referencia histórica: Graphify se actualizó entonces como apoyo de navegación y rehidratación; su uso quedó retirado el 2026-07-17 mediante `DEC-20260717-1058-001-retirada-graphify-carrera-ai`.
 - Esta sesión sigue abierta y continúa siendo la referencia principal para rehidratar cobertura profesional.
 
 ## Actualización — Documento específico de regla de numeración de artefactos

@@ -16,6 +16,8 @@ sesion_origen: sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accio
 
 > Esta decisión quedó sustituida el 2026-07-13 por `DEC-20260713-1344-001-integrar-graphify-tres-corpus`, que incorpora `.pcs/` como tercer corpus y fija `run-graphify.bat` con Ollama como actualizador común.
 
+> Referencia histórica: la línea completa de Graphify quedó retirada el 2026-07-17 mediante `DEC-20260717-1058-001-retirada-graphify-carrera-ai`. El contenido posterior describe únicamente la operación vigente en su momento.
+
 ## Decisión
 
 Graphify se ejecutará por corpus documental independiente y no sobre la raíz completa del repositorio. La entrada operativa vigente, `run-graphify.bat`, procesará por separado:

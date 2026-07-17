@@ -1,7 +1,0 @@
-graphify-out/
-.tmp/
-AGENTS.md
-.graphifyignore
-.graphify_*
-.graphify_python
-.graphify_root

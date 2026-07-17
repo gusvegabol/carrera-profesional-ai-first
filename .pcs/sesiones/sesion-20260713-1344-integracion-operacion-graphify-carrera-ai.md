@@ -10,6 +10,8 @@ host: carrera-ai
 
 # Sesión PCS - Integración y operación de Graphify
 
+> Registro histórico: esta sesión cerrada describe la integración vigente en 2026-07-13. Sus instrucciones operativas quedaron sustituidas por `DEC-20260717-1058-001-retirada-graphify-carrera-ai` y no deben aplicarse en el presente.
+
 ## Contexto inmediato
 
 El host `carrera-ai` utiliza Graphify como índice derivado para reducir la carga de contexto y dirigir consultas hacia documentos relevantes. La configuración actual mantiene tres corpus independientes:
@@ -61,7 +63,7 @@ Las relaciones `INFERRED` y `AMBIGUOUS` deben verificarse en los documentos orig
 
 ## Decisiones derivadas
 
-- `DEC-20260713-1344-001-integrar-graphify-tres-corpus` queda vigente y sustituye a `DEC-20260710-2308-001-separar-corpus-graphify`, porque la decisión anterior describía únicamente dos corpus.
+- En el momento de esta sesión, `DEC-20260713-1344-001-integrar-graphify-tres-corpus` quedó vigente y sustituyó a `DEC-20260710-2308-001-separar-corpus-graphify`; ambas decisiones son ahora históricas y están sustituidas.
 
 ## Problemas o bloqueos
 
@@ -83,7 +85,7 @@ Las relaciones `INFERRED` y `AMBIGUOUS` deben verificarse en los documentos orig
 
 ## Rehidratación futura
 
-- **Dónde quedó el trabajo:** Graphify está organizado en tres corpus independientes y se actualiza mediante `run-graphify.bat` con extracción semántica local a través de Ollama.
+- **Dónde quedó el trabajo entonces:** Graphify quedó organizado en tres corpus independientes y se actualizaba mediante `run-graphify.bat` con extracción semántica local a través de Ollama. Esta situación es histórica y fue retirada el 2026-07-17.
 - **Leer primero:** `.pcs/estado/estado-actual.md`, `DEC-20260713-1344-001-integrar-graphify-tres-corpus.md`, `.pcs/AGENTS.md` y `AGENTS.md`.
 - **Líneas abiertas a retomar:** medir utilidad, coste, precisión, obsolescencia y necesidad real de consultas transversales.
 - **Riesgos de malinterpretación:** no tratar el grafo como fuente normativa, no confundir sesiones históricas con estado vivo y no mezclar corpus sin una decisión posterior.

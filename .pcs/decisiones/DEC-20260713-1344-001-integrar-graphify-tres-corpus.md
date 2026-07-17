@@ -1,16 +1,20 @@
 ---
 id: DEC-20260713-1344-001-integrar-graphify-tres-corpus
 titulo: Mantener tres corpus Graphify y actualización semántica local con Ollama
-estado: vigente
+estado: sustituida
 fecha_registro: 2026-07-13
 fecha_adopcion: 2026-07-13
 fecha_vigencia: 2026-07-13
+fecha_sustitucion: 2026-07-17
 tipo: decision
 host: carrera-ai
 sesion_origen: sesion-20260713-1344-integracion-operacion-graphify-carrera-ai
+decision_sustituta: DEC-20260717-1058-001-retirada-graphify-carrera-ai
 ---
 
 # DEC-20260713-1344-001-integrar-graphify-tres-corpus — Mantener tres corpus Graphify y actualización semántica local con Ollama
+
+> Referencia histórica: esta decisión quedó sustituida el 2026-07-17 por `DEC-20260717-1058-001-retirada-graphify-carrera-ai`. El contenido posterior describe únicamente la operación vigente entre su adopción y su sustitución.
 
 ## Decisión
 

@@ -10,6 +10,8 @@ host: carrera-ai
 
 # Sesion PCS - Nucleo metodologico y Perfil Profesional Accionable
 
+> Nota de vigencia: cualquier referencia a Graphify en esta sesión es histórica. Su uso operativo quedó retirado el 2026-07-17 mediante `DEC-20260717-1058-001-retirada-graphify-carrera-ai`.
+
 ## 1. Identificacion
 
 | Campo | Valor |
@@ -213,7 +215,7 @@ La evaluación es una recomendación debatible. No crea una decisión PCS, no ad
 ### Decisiones derivadas
 
 - El informe de evaluación sigue siendo un fundamento para debate y no una adopción canónica de playbook.
-- `DEC-20260710-2308-001-separar-corpus-graphify` formaliza una decisión operativa independiente: Graphify debe ejecutarse por corpus documental separado y no sobre la raíz completa del repositorio.
+- Referencia histórica: `DEC-20260710-2308-001-separar-corpus-graphify` formalizó entonces una decisión operativa independiente sobre corpus separados; esa línea quedó sustituida y finalmente retirada el 2026-07-17.
 
 ### Documentos afectados
 
@@ -243,7 +245,9 @@ La evaluación es una recomendación debatible. No crea una decisión PCS, no ad
 - Decisión PCS relacionada: `DEC-20260710-2308-001-separar-corpus-graphify`.
 - PCS canónico: no modificado.
 
-## Actualización - Decisión sobre corpus separados de Graphify
+## Actualización histórica - Decisión sobre corpus separados de Graphify
+
+> Este apartado registra la situación del 2026-07-13. Sus instrucciones operativas quedaron retiradas mediante `DEC-20260717-1058-001-retirada-graphify-carrera-ai`.
 
 El 2026-07-13 se formaliza la separación de los corpus que ya aplica `run-graphify.bat`: `boveda-entrevista-profesional/` se procesa como corpus operativo y metodológico de entrevista, mientras que `docs/` se procesa como corpus funcional, metodológico y de debate documental.
 
@@ -253,9 +257,9 @@ La decisión no modifica el SPEC, el playbook de profundidad, el futuro playbook
 
 ### Trazabilidad de la decisión
 
-- Decisión vigente: `DEC-20260710-2308-001-separar-corpus-graphify.md`.
+- Decisión histórica sustituida: `DEC-20260710-2308-001-separar-corpus-graphify.md`.
 - Estado actualizado: `.pcs/estado/estado-actual.md`.
-- Ejecución: `run-graphify.bat`.
-- Reglas del corpus `docs/`: `docs/AGENTS.md` y `docs/.graphifyignore`.
+- Ejecución histórica: `run-graphify.bat`, eliminado el 2026-07-17.
+- Reglas históricas del corpus `docs/`: `docs/AGENTS.md` fue actualizado y `docs/.graphifyignore` fue eliminado el 2026-07-17.
 - Estado de la sesión: abierta.
 - PCS canónico: no modificado.
