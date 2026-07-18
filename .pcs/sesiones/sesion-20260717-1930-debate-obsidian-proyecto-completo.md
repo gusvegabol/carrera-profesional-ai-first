@@ -151,8 +151,8 @@ También se ha abierto la [acción de implantación](../acciones/ACC-20260718-17
 - `boveda-entrevista-profesional/.obsidian-agent/`.
 - `boveda-entrevista-profesional/.vault-operator/`.
 - `obsilo-shared/` y `vault-operator-shared/` en la raíz actual del proyecto.
-- `.pcs/` y sus reglas locales, si el debate concluye que deben incluirse en
-  la navegación.
+- `.pcs/` y sus reglas locales, incluidas en la navegación de la bóveda raíz
+  por decisión vigente.
 - `docs/` y demás carpetas con archivos Markdown no ignorados, como posibles
   fuentes del conocimiento transversal.
 - Esta sesión PCS.
