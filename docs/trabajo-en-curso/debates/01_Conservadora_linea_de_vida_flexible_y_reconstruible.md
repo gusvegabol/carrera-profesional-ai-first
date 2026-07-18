@@ -15,7 +15,7 @@ Esta propuesta mantiene la ventaja de una línea temporal para comprender evoluc
 - El **orden en que se conversa**, que pertenece a la persona.
 - El **orden en que se representa la trayectoria**, que la IA propone y la persona valida.
 
-Esto responde al requisito de Carrera AI de capturar etapas, simultaneidades, rupturas, retornos y reconversiones sin convertir la trayectoria en un CV. También conserva la trazabilidad: una competencia candidata nunca se deriva de un hueco temporal, sino de un episodio y de evidencia asociada. [Especificación de Carrera AI](../DOCUMENTO_SPEC_CARRERA_AI.md)
+Esto responde al requisito de Carrera AI de capturar etapas, simultaneidades, rupturas, retornos y reconversiones sin convertir la trayectoria en un CV. También conserva la trazabilidad: una competencia candidata nunca se deriva de un hueco temporal, sino de un episodio y de evidencia asociada. [Especificación de Carrera AI](../../DOCUMENTO_SPEC_CARRERA_AI.md)
 
 ## Recorrido de entrevista
 
@@ -101,7 +101,7 @@ Estas métricas son hipótesis de evaluación, no umbrales ya demostrados:
 
 ## Fuentes de apoyo
 
-- [DOCUMENTO_SPEC_CARRERA_AI.md](../DOCUMENTO_SPEC_CARRERA_AI.md)
+- [DOCUMENTO_SPEC_CARRERA_AI.md](../../DOCUMENTO_SPEC_CARRERA_AI.md)
 - [What is BEI Synergogy](<../../fuentes/What_is_BEI_Synergogy.md>)
 - [Narrative career counseling](<../../fuentes/Narrative career counseling - My career story and pictorial narratives.md>)
 - [Guidelines on Recognition of Prior Learning](<../../fuentes/Recognition of Prior Learning_Guidelines RPLpdf.md>)

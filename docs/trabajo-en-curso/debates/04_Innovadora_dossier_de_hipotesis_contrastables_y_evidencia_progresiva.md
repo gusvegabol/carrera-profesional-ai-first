@@ -8,7 +8,7 @@ La innovación consiste en convertir la corrección de la IA en parte del métod
 
 ## Problema que resuelve
 
-El riesgo principal de una entrevista por IA no es solo olvidar información: es fabricar una coherencia profesional atractiva con evidencia insuficiente. La especificación de Carrera AI exige trazabilidad, prudencia, explicación y validación humana; también advierte contra generar competencias bonitas sin evidencia. [Especificación de Carrera AI](../DOCUMENTO_SPEC_CARRERA_AI.md)
+El riesgo principal de una entrevista por IA no es solo olvidar información: es fabricar una coherencia profesional atractiva con evidencia insuficiente. La especificación de Carrera AI exige trazabilidad, prudencia, explicación y validación humana; también advierte contra generar competencias bonitas sin evidencia. [Especificación de Carrera AI](../../DOCUMENTO_SPEC_CARRERA_AI.md)
 
 Una conversación natural puede inducir asentimiento: la persona acepta una formulación porque suena bien, no porque sea exacta. El dossier introduce fricción útil y colaborativa. El entrevistado no es un validador pasivo de textos terminados; participa en la construcción y el control de las afirmaciones que formarán su perfil.
 
@@ -107,7 +107,7 @@ Existe también un riesgo de privacidad: el dossier conserva más trazabilidad q
 
 ## Fuentes de apoyo
 
-- [DOCUMENTO_SPEC_CARRERA_AI.md](../DOCUMENTO_SPEC_CARRERA_AI.md)
+- [DOCUMENTO_SPEC_CARRERA_AI.md](../../DOCUMENTO_SPEC_CARRERA_AI.md)
 - [What is BEI Synergogy](<../../fuentes/What_is_BEI_Synergogy.md>)
 - [Recognition of Prior Learning: Guidelines](<../../fuentes/Recognition of Prior Learning_Guidelines RPLpdf.md>)
 - [How SFIA works](<../../fuentes/How SFIA works - Levels of responsibility and skills.md>)

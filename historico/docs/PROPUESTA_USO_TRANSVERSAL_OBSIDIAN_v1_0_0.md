@@ -284,7 +284,7 @@ de cualquier movimiento o eliminación.
 ## Fuentes y trazabilidad
 
 - Sesión de origen:
-  [debate sobre Obsidian](../.pcs/sesiones/sesion-20260717-1930-debate-obsidian-proyecto-completo.md).
+  [debate sobre Obsidian](../../.pcs/sesiones/sesion-20260717-1930-debate-obsidian-proyecto-completo.md).
 - Configuración local observada:
   `boveda-entrevista-profesional/.obsidian/` y
   `boveda-entrevista-profesional/.vault-operator/`.

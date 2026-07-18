@@ -99,7 +99,7 @@ El tercero es la privacidad: las conexiones pueden revelar información sensible
 
 ## Fuentes de apoyo
 
-- [DOCUMENTO_SPEC_CARRERA_AI.md](../DOCUMENTO_SPEC_CARRERA_AI.md)
+- [DOCUMENTO_SPEC_CARRERA_AI.md](../../DOCUMENTO_SPEC_CARRERA_AI.md)
 - [Career Construct CCI Description](<../../fuentes/Career_construct_CCI_Description.md>)
 - [Narrative career counseling](<../../fuentes/Narrative career counseling - My career story and pictorial narratives.md>)
 - [Análisis estructural de la reconstrucción de trayectorias profesionales](<../../fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales.md>)

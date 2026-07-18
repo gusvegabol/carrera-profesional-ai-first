@@ -11,7 +11,7 @@ El resultado no pretende certificar competencias. Pretende crear una primera ver
 
 ## Problema que resuelve
 
-Una entrevista de cobertura no debe transformarse en una sesión de profundidad sobre cada empleo. El documento de especificación pide reconstruir trayectoria, herramientas, experiencias significativas, uso de IA, preferencias y restricciones; pero también exige que cada competencia tenga evidencia y que la persona pueda validar o rechazar inferencias. [Especificación de Carrera AI](../DOCUMENTO_SPEC_CARRERA_AI.md)
+Una entrevista de cobertura no debe transformarse en una sesión de profundidad sobre cada empleo. El documento de especificación pide reconstruir trayectoria, herramientas, experiencias significativas, uso de IA, preferencias y restricciones; pero también exige que cada competencia tenga evidencia y que la persona pueda validar o rechazar inferencias. [Especificación de Carrera AI](../../DOCUMENTO_SPEC_CARRERA_AI.md)
 
 La tensión es real: el barrido completo favorece amplitud, mientras que las técnicas conductuales favorecen detalle. La doble pasada hace visible esa tensión y evita prometer que todas las experiencias tendrán la misma calidad de evidencia.
 
@@ -94,7 +94,7 @@ Estas son propuestas de medición para debatir:
 
 ## Fuentes de apoyo
 
-- [DOCUMENTO_SPEC_CARRERA_AI.md](../DOCUMENTO_SPEC_CARRERA_AI.md)
+- [DOCUMENTO_SPEC_CARRERA_AI.md](../../DOCUMENTO_SPEC_CARRERA_AI.md)
 - [What is BEI Synergogy](<../../fuentes/What_is_BEI_Synergogy.md>)
 - [Skills pillar](<../../fuentes/Skills pillar.md>)
 - [How SFIA works](<../../fuentes/How SFIA works - Levels of responsibility and skills.md>)
