@@ -142,16 +142,13 @@ También se ha abierto la [acción de implantación](../acciones/ACC-20260718-17
 
 ## Problemas o bloqueos
 
-- Aún no se ha evaluado el conjunto exacto de Markdown alcanzable según las
-  reglas de `.gitignore`.
-- No está decidido si la navegación transversal exige una única bóveda, una
-  bóveda adicional o una configuración más limitada.
-- No se ha determinado la función efectiva ni el carácter regenerable de los
-  directorios internos de Obsidian y Vault Operator antes de decidir si se
-  conservan, migran o eliminan.
-- No se ha comprobado todavía si mover `obsilo-shared/` y
-  `vault-operator-shared/` al directorio común de aplicaciones conserva todas
-  las referencias, permisos y rutas requeridas por Vault Operator.
+- Debe crearse y verificarse una copia externa completa antes de retirar las
+  cinco rutas heredadas.
+- Cada bloque documental necesita un mapa de clasificación y la aprobación de
+  la persona responsable antes de mover documentos o corregir sus enlaces.
+- La inicialización de la bóveda raíz y la configuración de Hide Folders
+  requieren la intervención manual de la persona responsable después de que
+  no queden configuraciones Obsidian anidadas.
 - No debe confundirse la conveniencia de leer y enlazar documentos con la
   autorización para modificar su contenido o su gobernanza.
 
@@ -173,20 +170,14 @@ También se ha abierto la [acción de implantación](../acciones/ACC-20260718-17
 
 ## Rehidratación futura
 
-- Dónde quedó el trabajo: se ha abierto el debate sobre ampliar Obsidian al
-  conjunto de Markdown no excluido por `.gitignore`, incluido el destino de
-  sus directorios de configuración y soporte actuales. Existe una propuesta
-  comparativa que recomienda la alternativa de bóveda transversal gobernada,
-  todavía pendiente de adopción explícita.
+- Dónde quedó el trabajo: se adoptó la reorganización documental y una única
+  bóveda raíz de Obsidian mediante una [decisión vigente](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md). La [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md) permanece pendiente y no se han realizado movimientos, eliminaciones ni cambios de configuración.
 - Leer primero: `.gitignore`, `.pcs/AGENTS.md`, `README.md`,
-  `docs/AGENTS.md` y la configuración/documentación de
-  `boveda-entrevista-profesional/` relacionada con Obsidian; después,
-  `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`.
-- Líneas abiertas a retomar: alcance efectivo, inclusión de `.pcs/`, modelo de
-  bóveda, convenciones de enlaces, destino de `.obsidian/`,
-  `.obsidian-agent/` y `.vault-operator/`, posible traslado de
-  `obsilo-shared/` y `vault-operator-shared/`, riesgos y alternativa
-  recomendada.
+  `docs/AGENTS.md`, la [decisión vigente](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md), la [acción pendiente](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md) y la especificación aprobada.
+- Líneas abiertas a retomar: verificación de la copia externa, inventario y
+  mapa de clasificación, aprobación humana de cada bloque, configuración
+  manual de la bóveda raíz y corrección de enlaces tras los movimientos
+  aprobados.
 - Riesgos de malinterpretación: Obsidian sería una herramienta de lectura y
   navegación; no sustituye PCS Core, el estado actual, las decisiones ni las
   autoridades documentales del proyecto.
@@ -218,5 +209,4 @@ También se ha abierto la [acción de implantación](../acciones/ACC-20260718-17
 - Entregables de debate:
   - `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`.
   - `docs/PRESENTACION_PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.pptx`.
-- Cierre: sesión abierta; pendiente de decisión y, si procede, de una acción
-  de implantación.
+- Cierre: sesión abierta; decisión vigente y acción de implantación pendiente.
