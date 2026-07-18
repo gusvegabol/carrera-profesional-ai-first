@@ -6,3 +6,4 @@ obsilo-shared/
 .playwright-cli/
 .worktrees/
 .tmp/
+.superpowers/
