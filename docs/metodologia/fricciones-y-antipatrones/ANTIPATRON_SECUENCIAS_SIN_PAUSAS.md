@@ -61,7 +61,7 @@ Este antipatrón se relaciona con:
 - [[PATRON_STAR_AMPLIADO]], porque sus ocho pasos consecutivos son el ejemplo más claro de dónde puede aparecer este antipatrón si se ejecutan sin criterio de freno;
 - [[PATRON_4S_TRANSICION]], porque su cierre directo de "Estrategias" a "Plan", sin anclaje intermedio, es el segundo lugar más probable donde aparece;
 - [[CONCEPTO_SER_ESCUCHADO_Y_VALIDADO]], porque la ausencia de reflejo entre preguntas es, en el fondo, la ausencia de esa condición relacional aplicada en la práctica;
-- [[fatiga-del-usuario]], del listado original de fricciones previsto en [[idea-central]], del que este documento es una forma concreta y operacionalizada.
+- [[docs/metodologia/fricciones-y-antipatrones/FRICCION_FATIGA_DEL_USUARIO|fatiga-del-usuario]], del listado original de fricciones previsto en [[idea-central]], del que este documento es una forma concreta y operacionalizada.
 
 ## Fuente base
 

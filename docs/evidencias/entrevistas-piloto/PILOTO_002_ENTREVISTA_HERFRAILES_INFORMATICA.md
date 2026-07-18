@@ -114,7 +114,7 @@ Qué funcionó:
 Qué no funcionó / qué queda sin probar:
 - El protocolo de bloqueo al elegir etapa (sección 9.2) sigue sin validación real,
   porque en este piloto no hubo bloqueo.
-- El antipatrón [[Aislamiento forzado del mérito]] no se puso a prueba, porque la persona
+- El antipatrón [[docs/metodologia/fricciones-y-antipatrones/ANTIPATRON_AISLAMIENTO_FORZADO_DEL_MERITO|Aislamiento forzado del mérito]] no se puso a prueba, porque la persona
   aportó el matiz de delegación sin que hiciera falta forzar ninguna pregunta de aislamiento.
   Esto es una buena señal, pero no es lo mismo que comprobar el remedio bajo tensión real.
 - El guardarraíl emocional de nivel 2 (reconocimiento explícito de límites del sistema)
@@ -128,7 +128,7 @@ Qué habría que cambiar en este playbook:
 - Ninguna corrección urgente identificada a partir de este piloto. Se recomienda un
   segundo piloto que sí ponga a prueba el hueco de la sección 9.2 y, si es posible,
   una situación con más tensión en la atribución de mérito para validar de verdad
-  el remedio de [[Aislamiento forzado del mérito]].
+  el remedio de [[docs/metodologia/fricciones-y-antipatrones/ANTIPATRON_AISLAMIENTO_FORZADO_DEL_MERITO|Aislamiento forzado del mérito]].
 
 Decisión: Mantener el playbook v1.3.2 sin cambios estructurales. Repetir piloto
 con foco en los puntos no probados.
