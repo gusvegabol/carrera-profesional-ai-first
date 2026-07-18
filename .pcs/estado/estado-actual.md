@@ -2,8 +2,8 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
-fecha_actualizacion: 2026-07-17
-ultima_sesion_relacionada: sesion-20260717-1642-materializacion-versionado-carrera-ai
+fecha_actualizacion: 2026-07-18
+ultima_sesion_relacionada: sesion-20260717-1930-debate-obsidian-proyecto-completo
 host: carrera-ai
 ---
 
@@ -31,6 +31,8 @@ La recomendación requiere complementar esa arquitectura con la conversación no
 
 También existe una presentación HTML autónoma para explicar la propuesta a personas no expertas: `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`. Resume el problema, la doble pasada, sus garantías y el piloto propuesto.
 
+Como línea documental transversal pendiente de decisión, se ha abierto `sesion-20260717-1930-debate-obsidian-proyecto-completo` y se ha elaborado `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`, junto con su presentación. La propuesta compara cuatro alternativas y recomienda debatir una bóveda Obsidian gobernada en la raíz del repositorio, con exclusiones explícitas, enlaces con ruta completa cuando haya nombres duplicados y una migración reversible. No es una decisión formal, no crea una acción de implantación ni autoriza mover, borrar o reconfigurar directorios.
+
 Históricamente, la documentación de Graphify se mantuvo separada en tres corpus documentales: `.pcs/`, `docs/` y `boveda-entrevista-profesional/`. Esa organización quedó formalizada en `DEC-20260713-1344-001-integrar-graphify-tres-corpus`, ahora sustituida por la decisión de retirada. La decisión histórica afectaba únicamente a la indexación y recuperación de contexto; no adoptaba un playbook, no modificaba el SPEC ni convertía los artefactos del grafo en fuentes normativas.
 
 Se ha cerrado `sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md` tras dejar trazada la línea histórica de integración, sus límites y la revisión futura de utilidad. Sus conclusiones quedan superadas operativamente por la retirada de Graphify. El estado actual, las decisiones vigentes y las fuentes documentales conservan su autoridad.
@@ -41,7 +43,7 @@ La utilidad de esa separación y de Graphify queda superada por la decisión de 
 
 ## Foco operativo
 
-Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus salvaguardas requeridas, debe orientar el primer piloto de cobertura profesional.
+Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus salvaguardas requeridas, debe orientar el primer piloto de cobertura profesional. La propuesta de uso transversal de Obsidian permanece como línea secundaria de debate y no desplaza este foco metodológico.
 
 ## Próximos pasos
 
@@ -49,6 +51,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - Revisar la evaluación experta y la presentación con las personas que deban debatir el enfoque.
 - Decidir explícitamente si se adopta, modifica o descarta la recomendación para el primer piloto.
 - Si se adopta, definir el contrato del piloto: muestra de entrevistas, salida inicial revisable, control de privacidad, criterios de corrección y señales de utilidad.
+- Decidir explícitamente si se adopta, modifica o descarta la propuesta de uso transversal de Obsidian; si se aprobara, abrir una acción acotada de inventario, respaldo y prueba piloto antes de cualquier migración.
 - Mantener separadas la cobertura, la profundidad y la correspondencia ESCO mientras no exista una decisión posterior que cambie ese alcance.
 - No tratar la evaluación como validación con personas ni actualizar el SPEC o el playbook de profundidad por inferencia.
 
@@ -57,6 +60,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - `ACC-20260717-1642-001-materializar-versionado-carrera-ai` quedó completada; no deja trabajo abierto dentro de su alcance.
 - No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones permanecen registradas históricamente en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Es candidata a acción futura la definición del primer piloto, condicionada a una decisión explícita sobre la recomendación metodológica.
+- No existe una acción abierta para implantar el uso transversal de Obsidian; cualquier implantación queda condicionada a una decisión explícita posterior.
 
 ## Decisiones vigentes relevantes
 
@@ -72,6 +76,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - Cobertura y profundidad son capas complementarias; la cobertura no sustituye el playbook de profundidad.
 - La recomendación de doble pasada es un resultado debatible de evaluación, no una decisión formal ni un playbook adoptado.
 - ESCO solo puede entrar más adelante como correspondencia candidata, explicable y revisable.
+- No hay decisión vigente sobre el uso transversal de Obsidian; `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md` es una propuesta para debate.
 
 ## Bloqueos o riesgos
 
@@ -80,6 +85,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - Un perfil persuasivo con evidencia insuficiente puede inflar capacidades u ocultar incertidumbre; la persona debe poder revisar, matizar, rechazar o retirar información.
 - ESCO no debe confundirse con prueba de competencia, cualificación o certificación individual.
 - La información de trayectoria profesional es personal y debe limitarse a lo necesario para el propósito de carrera.
+- Mover o eliminar directorios de configuración de Obsidian o de Vault Operator antes de una decisión aprobada podría afectar la recuperación de configuraciones, automatizaciones o referencias locales.
 - `.tmp/` queda excluida del uso operativo salvo autorización expresa.
 
 ## Referencias históricas y de continuidad
@@ -95,6 +101,9 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - `docs/Ideas debate - como afrontar entrevista cobertura profesional/04_Innovadora_dossier_de_hipotesis_contrastables_y_evidencia_progresiva.md`.
 - `docs/Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`.
 - `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`.
+- `sesion-20260717-1930-debate-obsidian-proyecto-completo.md`: sesión abierta para debatir el uso transversal de Obsidian en el repositorio.
+- `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`: alternativas, recomendación debatible y plan reversible para el uso transversal de Obsidian.
+- `docs/PRESENTACION_PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.pptx`: presentación de apoyo para el debate.
 - `DEC-20260710-2308-001-separar-corpus-graphify`: decisión histórica sustituida por la decisión vigente de los tres corpus.
 - `DEC-20260713-1344-001-integrar-graphify-tres-corpus`: decisión histórica sustituida sobre los tres corpus y la actualización local con Ollama.
 - `sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md`: sesión cerrada de integración y operación de Graphify.
