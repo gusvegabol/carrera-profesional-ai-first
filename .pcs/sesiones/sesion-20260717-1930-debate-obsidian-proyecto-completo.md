@@ -42,55 +42,53 @@ por `.gitignore`. Este criterio debe analizarse antes de decidir la
 configuración, la estructura de bóveda, las convenciones de enlaces o la
 inclusión de carpetas operativas como `.pcs/`.
 
-## Capa semántica
+## Capa semántica (historial del debate)
 
-- La cuestión no es solo instalar o extender una herramienta, sino determinar
-  si una vista relacional común mejora la comprensión del proyecto.
-- El posible uso transversal de Obsidian no debe convertir todos los
+Durante el debate se establecieron los siguientes criterios de análisis. Este
+apartado conserva el razonamiento histórico; las decisiones resultantes están
+formalizadas en la [decisión vigente de adopción](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md).
+
+- Se debatió que la cuestión no consistía solo en instalar o extender una
+  herramienta, sino en determinar si una vista relacional común mejoraba la
+  comprensión del proyecto.
+- Se acordó que el uso transversal de Obsidian no convertiría todos los
   documentos Markdown en fuentes con la misma autoridad.
-- Deben mantenerse diferenciadas la documentación funcional, la metodología,
-  la continuidad PCS, las decisiones, las acciones y los artefactos de trabajo.
-- `.gitignore` define el alcance inicial indicado para el debate, pero no
-  resuelve por sí solo qué carpetas deben abrirse, indexarse o enlazarse dentro
-  de una bóveda.
-- La exclusión de configuraciones internas de Obsidian en
-  `boveda-entrevista-profesional/` no implica todavía una decisión sobre la
-  configuración futura de una bóveda transversal.
-- Los directorios `.obsidian/`, `.obsidian-agent/` y `.vault-operator/` que
-  residen dentro de `boveda-entrevista-profesional/` requieren una decisión de
-  destino: conservarlos allí, migrar una configuración pertinente o retirarlos
-  de forma controlada si dejan de tener función.
-- `obsilo-shared/` y `vault-operator-shared/` están hoy en la raíz de
-  `carrera-ai`; debe evaluarse si corresponde moverlos a
-  `C:\Users\gusve\Documents\Apps`, donde suelen situarse las carpetas
-  compartidas de una bóveda gestionada mediante el plugin Vault Operator.
+- Se mantuvo la diferenciación entre documentación funcional, metodología,
+  continuidad PCS, decisiones, acciones y artefactos de trabajo.
+- Se utilizó `.gitignore` como alcance inicial del debate, sin considerarlo
+  suficiente por sí solo para resolver las rutas de navegación, indexación o
+  enlace dentro de la bóveda.
+- Se decidió adoptar una bóveda raíz con configuración limpia y retirar de
+  forma controlada las configuraciones heredadas tras una copia externa
+  verificada.
+- Se decidió retirar, con la misma salvaguarda, `obsilo-shared/` y
+  `vault-operator-shared/`; no se trasladarán a `C:\Users\gusve\Documents\Apps`.
 
-## Actualización — Propuesta documentada y presentación
+## Actualización histórica — Propuesta documentada y presentación
 
 Se ha elaborado la propuesta
 `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md` y su presentación de
 síntesis `docs/PRESENTACION_PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.pptx`.
 
-La propuesta compara cuatro alternativas: mantener la bóveda localizada,
+La propuesta comparó cuatro alternativas: mantener la bóveda localizada,
 abrir la raíz sin política, abrir una bóveda transversal gobernada y crear una
-bóveda espejo. Recomienda la tercera alternativa: abrir la raíz de
-`carrera-ai` como bóveda de navegación, con exclusiones explícitas, enlaces
-con ruta cuando existan nombres repetidos y una migración reversible de
-configuración y datos compartidos.
+bóveda espejo. En aquel momento recomendó la tercera alternativa: abrir la
+raíz de `carrera-ai` como bóveda de navegación, con exclusiones explícitas,
+enlaces con ruta cuando existieran nombres repetidos y una migración reversible
+de configuración y datos compartidos.
 
 La propuesta distingue expresamente la navegación de la autoridad documental:
 Obsidian facilitaría la lectura y los enlaces, pero no alteraría la precedencia
 de estado, decisiones, sesiones, documentación funcional o metodología.
 
-Respecto a los directorios, la recomendación no es borrar: `.obsidian/` debe
-migrarse selectivamente a la nueva raíz; `.vault-operator/` debe migrarse o
-regenerarse tras respaldo; `.obsidian-agent/` requiere inventario antes de
-actuar; y `obsilo-shared/` junto con `vault-operator-shared/` deben trasladarse
-de forma controlada al directorio `Apps` si se adopta la nueva raíz de bóveda.
-No se ha ejecutado ningún movimiento, eliminación ni cambio de configuración.
+Respecto a los directorios, la propuesta inicial planteó migrar o regenerar
+parte de la configuración y trasladar los directorios compartidos. Esa
+recomendación histórica fue sustituida por la decisión vigente: se retirarán
+las cinco rutas heredadas tras una copia externa verificada. No se ha ejecutado
+ningún movimiento, eliminación ni cambio de configuración.
 
-La recomendación sigue siendo una propuesta debatible. Su adopción requerirá
-una decisión PCS explícita y una acción de implantación acotada.
+La propuesta dejó de ser debatible al aprobarse la decisión PCS y abrirse la
+acción de implantación acotada.
 
 ## Contexto histórico — cuestiones ya resueltas
 
