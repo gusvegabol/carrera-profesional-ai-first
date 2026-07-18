@@ -122,17 +122,23 @@ una decisión PCS explícita y una acción de implantación acotada.
 - Valorar si la navegación transversal debe ser solo local para Codex/Obsidian
   o si requiere cambios en la estructura documental del repositorio.
 
+## Actualización — Decisión y acción de implantación
+
+La persona responsable aprobó el diseño de reorganización documental y se ha formalizado la [decisión de adopción](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md). La decisión adopta la bóveda raíz con configuración limpia, exige una copia externa verificada antes de retirar las cinco rutas heredadas, prohíbe usar Obsidian CLI y limita los movimientos a bloques previamente aprobados.
+
+También se ha abierto la [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md). Permanece pendiente: no se han movido documentos, eliminado configuraciones ni inicializado la nueva bóveda. La clasificación de cada bloque requerirá aprobación posterior e independiente.
+
 ## Acciones derivadas
 
-- Acción: pendiente de determinar tras el debate.
-- Estado: no creada en esta apertura.
-- Enlace: no aplica.
+- Acción: [ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md).
+- Estado: pendiente.
+- Especificación: [diseño de reorganización documental y nueva bóveda Obsidian](../../docs/superpowers/specs/2026-07-18-reorganizacion-documental-obsidian-design.md).
 
 ## Decisiones derivadas
 
-- Decisión: pendiente de determinar tras el debate.
-- Estado: no creada en esta apertura.
-- Enlace: no aplica.
+- Decisión: [DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md).
+- Estado: vigente.
+- Especificación: [diseño de reorganización documental y nueva bóveda Obsidian](../../docs/superpowers/specs/2026-07-18-reorganizacion-documental-obsidian-design.md).
 
 ## Problemas o bloqueos
 
@@ -184,19 +190,16 @@ una decisión PCS explícita y una acción de implantación acotada.
 - Riesgos de malinterpretación: Obsidian sería una herramienta de lectura y
   navegación; no sustituye PCS Core, el estado actual, las decisiones ni las
   autoridades documentales del proyecto.
-- Siguiente gesto recomendado: debatir y decidir si se adopta la alternativa
-  recomendada. Si se aprueba, abrir una acción PCS limitada a inventario,
-  respaldo y bóveda piloto antes de modificar, mover o eliminar
-  configuraciones.
+- Siguiente gesto recomendado: ejecutar la [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md) empezando por el inventario y el mapa de clasificación; no mover ni eliminar archivos hasta contar con la aprobación de cada bloque y una copia externa verificada.
 
 ## Checklist de consolidación
 
 - [x] La capa episódica registra el motivo y el alcance inicial del debate.
 - [x] La capa semántica separa navegación documental de autoridad documental.
 - [ ] Las líneas cognitivas abiertas están identificadas.
-- [ ] Las acciones derivadas están creadas o marcadas como pendientes.
-- [ ] Las decisiones derivadas están creadas o marcadas como pendientes.
-- [ ] `ESTADO_PROYECTO` está actualizado o marcado como pendiente.
+- [x] Las acciones derivadas están creadas o marcadas como pendientes.
+- [x] Las decisiones derivadas están creadas o marcadas como pendientes.
+- [x] `ESTADO_PROYECTO` está actualizado o marcado como pendiente.
 - [x] Los documentos afectados están listados.
 - [x] La rehidratación futura permite retomar el hilo.
 - [ ] La sesión no contiene estado operativo vivo como única fuente.
@@ -208,10 +211,10 @@ una decisión PCS explícita y una acción de implantación acotada.
 - Sesiones relacionadas:
   - `sesion-20260712-adaptacion-funcional-desde-dentro-carrera-ai.md`.
   - `sesion-20260710-2308-nucleo-metodologico-perfil-profesional-accionable-carrera-ai.md`.
-- Acciones relacionadas: ninguna creada.
-- Decisiones relacionadas: ninguna creada.
-- Estado de proyecto relacionado: `.pcs/estado/estado-actual.md`, sin
-  modificación en esta apertura.
+- Acciones relacionadas: [ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md).
+- Decisiones relacionadas: [DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md).
+- Estado de proyecto relacionado: [estado actual](../estado/estado-actual.md).
+- Especificación aprobada: [diseño de reorganización documental y nueva bóveda Obsidian](../../docs/superpowers/specs/2026-07-18-reorganizacion-documental-obsidian-design.md).
 - Entregables de debate:
   - `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`.
   - `docs/PRESENTACION_PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.pptx`.

@@ -31,7 +31,7 @@ La recomendación requiere complementar esa arquitectura con la conversación no
 
 También existe una presentación HTML autónoma para explicar la propuesta a personas no expertas: `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`. Resume el problema, la doble pasada, sus garantías y el piloto propuesto.
 
-Como línea documental transversal pendiente de decisión, se ha abierto `sesion-20260717-1930-debate-obsidian-proyecto-completo` y se ha elaborado `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`, junto con su presentación. La propuesta compara cuatro alternativas y recomienda debatir una bóveda Obsidian gobernada en la raíz del repositorio, con exclusiones explícitas, enlaces con ruta completa cuando haya nombres duplicados y una migración reversible. No es una decisión formal, no crea una acción de implantación ni autoriza mover, borrar o reconfigurar directorios.
+Se ha adoptado la reorganización documental y una nueva bóveda Obsidian en la raíz mediante [DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md), a partir del [diseño aprobado](../../docs/superpowers/specs/2026-07-18-reorganizacion-documental-obsidian-design.md) y de la sesión de debate. La decisión crea la [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md), actualmente pendiente. No se han movido documentos, eliminado configuraciones ni inicializado la bóveda raíz; esos trabajos quedan condicionados a la copia externa verificada y a la aprobación humana de cada bloque de clasificación.
 
 Históricamente, la documentación de Graphify se mantuvo separada en tres corpus documentales: `.pcs/`, `docs/` y `boveda-entrevista-profesional/`. Esa organización quedó formalizada en `DEC-20260713-1344-001-integrar-graphify-tres-corpus`, ahora sustituida por la decisión de retirada. La decisión histórica afectaba únicamente a la indexación y recuperación de contexto; no adoptaba un playbook, no modificaba el SPEC ni convertía los artefactos del grafo en fuentes normativas.
 
@@ -43,7 +43,7 @@ La utilidad de esa separación y de Graphify queda superada por la decisión de 
 
 ## Foco operativo
 
-Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus salvaguardas requeridas, debe orientar el primer piloto de cobertura profesional. La propuesta de uso transversal de Obsidian permanece como línea secundaria de debate y no desplaza este foco metodológico.
+Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus salvaguardas requeridas, debe orientar el primer piloto de cobertura profesional. La implantación de la reorganización documental de Obsidian está abierta como línea operativa secundaria y no desplaza este foco metodológico.
 
 ## Próximos pasos
 
@@ -51,7 +51,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - Revisar la evaluación experta y la presentación con las personas que deban debatir el enfoque.
 - Decidir explícitamente si se adopta, modifica o descarta la recomendación para el primer piloto.
 - Si se adopta, definir el contrato del piloto: muestra de entrevistas, salida inicial revisable, control de privacidad, criterios de corrección y señales de utilidad.
-- Decidir explícitamente si se adopta, modifica o descarta la propuesta de uso transversal de Obsidian; si se aprobara, abrir una acción acotada de inventario, respaldo y prueba piloto antes de cualquier migración.
+- Ejecutar [ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md): elaborar el inventario y el mapa de clasificación, verificar la copia externa y obtener la aprobación humana de cada bloque antes de mover o eliminar nada.
 - Mantener separadas la cobertura, la profundidad y la correspondencia ESCO mientras no exista una decisión posterior que cambie ese alcance.
 - No tratar la evaluación como validación con personas ni actualizar el SPEC o el playbook de profundidad por inferencia.
 
@@ -60,7 +60,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - `ACC-20260717-1642-001-materializar-versionado-carrera-ai` quedó completada; no deja trabajo abierto dentro de su alcance.
 - No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones permanecen registradas históricamente en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Es candidata a acción futura la definición del primer piloto, condicionada a una decisión explícita sobre la recomendación metodológica.
-- No existe una acción abierta para implantar el uso transversal de Obsidian; cualquier implantación queda condicionada a una decisión explícita posterior.
+- `ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian` está pendiente para implantar por bloques la reorganización documental aprobada. No autoriza mover documentos ni retirar configuraciones antes de disponer de la copia externa verificada y de la aprobación humana de cada bloque.
 
 ## Decisiones vigentes relevantes
 
@@ -76,7 +76,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - Cobertura y profundidad son capas complementarias; la cobertura no sustituye el playbook de profundidad.
 - La recomendación de doble pasada es un resultado debatible de evaluación, no una decisión formal ni un playbook adoptado.
 - ESCO solo puede entrar más adelante como correspondencia candidata, explicable y revisable.
-- No hay decisión vigente sobre el uso transversal de Obsidian; `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md` es una propuesta para debate.
+- `DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian` adopta la bóveda raíz limpia y la migración por bloques validados. Las aprobaciones de clasificación de cada bloque continúan siendo decisiones posteriores e independientes.
 
 ## Bloqueos o riesgos
 
@@ -85,7 +85,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - Un perfil persuasivo con evidencia insuficiente puede inflar capacidades u ocultar incertidumbre; la persona debe poder revisar, matizar, rechazar o retirar información.
 - ESCO no debe confundirse con prueba de competencia, cualificación o certificación individual.
 - La información de trayectoria profesional es personal y debe limitarse a lo necesario para el propósito de carrera.
-- Mover o eliminar directorios de configuración de Obsidian o de Vault Operator antes de una decisión aprobada podría afectar la recuperación de configuraciones, automatizaciones o referencias locales.
+- Mover o eliminar directorios de configuración de Obsidian o de Vault Operator antes de verificar la copia externa y aprobar el bloque correspondiente podría afectar la recuperación de configuraciones, automatizaciones o referencias locales.
 - `.tmp/` queda excluida del uso operativo salvo autorización expresa.
 
 ## Referencias históricas y de continuidad
@@ -104,6 +104,8 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - `sesion-20260717-1930-debate-obsidian-proyecto-completo.md`: sesión abierta para debatir el uso transversal de Obsidian en el repositorio.
 - `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`: alternativas, recomendación debatible y plan reversible para el uso transversal de Obsidian.
 - `docs/PRESENTACION_PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.pptx`: presentación de apoyo para el debate.
+- `DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md`: decisión vigente de implantar la reorganización documental y la nueva bóveda raíz.
+- `ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md`: acción pendiente de inventario, copia externa, configuración limpia y migración por bloques aprobados.
 - `DEC-20260710-2308-001-separar-corpus-graphify`: decisión histórica sustituida por la decisión vigente de los tres corpus.
 - `DEC-20260713-1344-001-integrar-graphify-tres-corpus`: decisión histórica sustituida sobre los tres corpus y la actualización local con Ollama.
 - `sesion-20260713-1344-integracion-operacion-graphify-carrera-ai.md`: sesión cerrada de integración y operación de Graphify.
