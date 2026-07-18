@@ -23,20 +23,13 @@ al conjunto de archivos Markdown no excluidos por `.gitignore`, para facilitar
 su lectura, navegación, enlace y comprensión relacional sin alterar por ello
 la autoridad de cada tipo de documento.
 
-## Objetivo
+## Objetivo inicial del debate (contexto histórico)
 
 Evaluar la idoneidad, el alcance, los beneficios, los costes y los riesgos de
 utilizar Obsidian en todo el proyecto sobre los archivos Markdown no excluidos
 por `.gitignore`, en lugar de limitarlo a `boveda-entrevista-profesional/`.
 
-La sesión deberá permitir decidir, en una fase posterior, si se mantiene el
-alcance actual, se amplía Obsidian al proyecto completo o se adopta una
-solución intermedia con límites explícitos.
-
-También deberá resolver el destino de las configuraciones y directorios de
-soporte de Obsidian que viven hoy dentro de
-`boveda-entrevista-profesional/`, así como la conveniencia de reubicar los
-directorios compartidos de Vault Operator fuera de la raíz del proyecto.
+Este objetivo ya se resolvió mediante la [decisión vigente de adopción](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md): se establece una única bóveda raíz con configuración limpia y se retiran, tras una copia externa verificada, las configuraciones y directorios heredados definidos en ella. No quedan pendientes decisiones sobre el modelo de bóveda ni sobre el destino de esos directorios; queda pendiente su implantación controlada.
 
 ## Capa episódica
 
@@ -99,7 +92,11 @@ No se ha ejecutado ningún movimiento, eliminación ni cambio de configuración.
 La recomendación sigue siendo una propuesta debatible. Su adopción requerirá
 una decisión PCS explícita y una acción de implantación acotada.
 
-## Ideas y líneas cognitivas abiertas
+## Contexto histórico — cuestiones ya resueltas
+
+Las siguientes fueron líneas de análisis del debate. No representan decisiones
+pendientes: su resolución quedó formalizada en la [decisión vigente de
+adopción](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md).
 
 - Comparar una bóveda transversal con la bóveda localizada actual.
 - Determinar si `.pcs/` debe formar parte de la navegación de Obsidian, aunque
@@ -112,13 +109,9 @@ una decisión PCS explícita y una acción de implantación acotada.
   si se adopta el enfoque transversal.
 - Considerar el impacto sobre Git, sincronización, plugins, rendimiento,
   privacidad y mantenimiento.
-- Decidir el tratamiento de `.obsidian/`, `.obsidian-agent/` y
-  `.vault-operator/` dentro de `boveda-entrevista-profesional/`: conservar,
-  migrar parcialmente, regenerar para una nueva bóveda o retirar.
-- Decidir si `obsilo-shared/` y `vault-operator-shared/` deben trasladarse a
-  `C:\Users\gusve\Documents\Apps` para ubicarlos en el nivel superior de la
-  carpeta gestionada por Obsidian con Vault Operator, o si existe una opción
-  más adecuada que preserve su funcionamiento.
+- Establecer el tratamiento de `.obsidian/`, `.obsidian-agent/` y
+  `.vault-operator/` dentro de `boveda-entrevista-profesional/`.
+- Establecer el destino de `obsilo-shared/` y `vault-operator-shared/`.
 - Valorar si la navegación transversal debe ser solo local para Codex/Obsidian
   o si requiere cambios en la estructura documental del repositorio.
 
