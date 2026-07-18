@@ -69,7 +69,7 @@ Más que preguntas, son movimientos conversacionales de reflejo y apertura:
 
 Este concepto se relaciona con:
 
-- [[CONCEPTO_STAR_AMPLIADO]], porque el _probing_ de la Acción solo es tolerable para la persona si ya se siente escuchada y no evaluada;
+- [[docs/metodologia/patrones/PATRON_STAR_AMPLIADO|CONCEPTO_STAR_AMPLIADO]], porque el _probing_ de la Acción solo es tolerable para la persona si ya se siente escuchada y no evaluada;
 - [[CONCEPTO_EXPERIENCIA_TACITA_VALIDABLE]], porque la persona suele minimizar justo la experiencia que más vale la pena rescatar, y solo la comparte si se siente segura;
 - [[CONCEPTO_TRANSICION_PROFESIONAL]], porque las transiciones suelen venir cargadas de emoción (pérdida, incertidumbre, fracaso percibido), y ahí la validación es más necesaria que en cualquier otro momento;
 - [[CONCEPTO_CARRERA_COMO_CONSTRUCCION_NARRATIVA]], porque la coherencia narrativa que busca este concepto solo emerge en un espacio donde la persona se siente libre de explorar, no de justificarse.
