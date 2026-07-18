@@ -97,4 +97,4 @@ Este concepto se relaciona con:
 
 ## Fuente base
 
-Deriva de: [[Análisis estructural de la reconstrucción de trayectorias profesionales]].
+Deriva de: [[docs/fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales|Análisis estructural de la reconstrucción de trayectorias profesionales]].

@@ -64,7 +64,7 @@ Este patrón alimenta:
 - el futuro playbook de preguntas y repreguntas.
 
 ## Fuente base
-Deriva de: [[Análisis estructural de la reconstrucción de trayectorias profesionales]].
+Deriva de: [[docs/fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales|Análisis estructural de la reconstrucción de trayectorias profesionales]].
 
 ## Documentos relacionados directamente
 - [[PATRON_STAR_SIMPLE]]

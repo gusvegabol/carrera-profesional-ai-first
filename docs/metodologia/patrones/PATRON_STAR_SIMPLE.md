@@ -41,4 +41,4 @@ Este patrón alimenta:
 - la narrativa profesional inicial.
  
 ## Fuente base
-Deriva de: [[Análisis estructural de la reconstrucción de trayectorias profesionales]].
+Deriva de: [[docs/fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales|Análisis estructural de la reconstrucción de trayectorias profesionales]].

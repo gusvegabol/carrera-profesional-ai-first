@@ -58,4 +58,4 @@ Este patrón alimenta:
 - el futuro playbook de entrevista profesional profunda.
 
 ## Fuente base
-Deriva de: [[Análisis estructural de la reconstrucción de trayectorias profesionales]].
+Deriva de: [[docs/fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales|Análisis estructural de la reconstrucción de trayectorias profesionales]].

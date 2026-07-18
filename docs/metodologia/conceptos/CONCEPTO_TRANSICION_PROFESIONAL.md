@@ -50,4 +50,4 @@ Este concepto se relaciona con:
 - [[PATRON_STAR_AMPLIADO]], porque muchas transiciones se entienden mejor a través de incidentes concretos.
 
 ## Fuente base
-Deriva de: [[Análisis estructural de la reconstrucción de trayectorias profesionales]].
+Deriva de: [[docs/fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales|Análisis estructural de la reconstrucción de trayectorias profesionales]].

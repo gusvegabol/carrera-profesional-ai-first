@@ -76,4 +76,4 @@ Este concepto se relaciona con:
 
 ## Fuente base
 
-Deriva de: [[Narrative career counseling - My career story and pictorial narratives]].
+Deriva de: [[docs/fuentes/Narrative career counseling - My career story and pictorial narratives|Narrative career counseling - My career story and pictorial narratives]].

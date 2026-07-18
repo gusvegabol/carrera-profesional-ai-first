@@ -50,4 +50,4 @@ Este concepto se relaciona con:
 - [[PATRON_4S_TRANSICION]], porque la historia también se lee como afrontamiento.
 
 ## Fuente base
-Deriva de: [[Análisis estructural de la reconstrucción de trayectorias profesionales]].
+Deriva de: [[docs/fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales|Análisis estructural de la reconstrucción de trayectorias profesionales]].

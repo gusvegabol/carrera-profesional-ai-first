@@ -17,7 +17,7 @@ Tiene dos formas de manifestarse, igual de dañinas:
 - **Escalada no contenida**: el protocolo avanza hacia territorio emocionalmente denso (un incidente que resulta ser un despido humillante, una transición que resulta ser un duelo) y el sistema sigue aplicando los pasos siguientes del patrón como si nada hubiera cambiado.
 - **Fatiga acumulada silenciosa**: ninguna pregunta individual es dura, pero la sucesión de ocho pasos de STAR, seguidos de seis pasos de 4S, sin ningún respiro entre medio, agota a la persona igual que lo haría una sola pregunta invasiva — solo que de forma menos visible, y por tanto más difícil de detectar a tiempo.
 
-El caso de Charles en [[Narrative career counseling - My career story and pictorial narratives]]  ilustra el riesgo con precisión: una pregunta de trabajo ("¿qué hacías realmente en esa etapa?") puede desembocar, sin aviso, en el recuerdo de un padre abusivo. Un protocolo que no está diseñado para reconocer ese giro y ajustar el ritmo, sigue indagando "Acción" y "Resultado" sobre un incidente que ya dejó de ser profesional para volverse personal y doloroso.
+El caso de Charles en [[docs/fuentes/Narrative career counseling - My career story and pictorial narratives|Narrative career counseling - My career story and pictorial narratives]]  ilustra el riesgo con precisión: una pregunta de trabajo ("¿qué hacías realmente en esa etapa?") puede desembocar, sin aviso, en el recuerdo de un padre abusivo. Un protocolo que no está diseñado para reconocer ese giro y ajustar el ritmo, sigue indagando "Acción" y "Resultado" sobre un incidente que ya dejó de ser profesional para volverse personal y doloroso.
 
 ## Cómo se manifiesta en la conversación
 
@@ -65,4 +65,4 @@ Este antipatrón se relaciona con:
 
 ## Fuente base
 
-Deriva de la revisión clínica transversal realizada sobre [[PATRON_STAR_AMPLIADO]], [[PATRON_4S_TRANSICION]] y [[PATRON_NARRATIVA_MAS_EVIDENCIA]], con apoyo ilustrativo en el caso de Charles descrito en [[Narrative career counseling - My career story and pictorial narratives]].
+Deriva de la revisión clínica transversal realizada sobre [[PATRON_STAR_AMPLIADO]], [[PATRON_4S_TRANSICION]] y [[PATRON_NARRATIVA_MAS_EVIDENCIA]], con apoyo ilustrativo en el caso de Charles descrito en [[docs/fuentes/Narrative career counseling - My career story and pictorial narratives|Narrative career counseling - My career story and pictorial narratives]].
