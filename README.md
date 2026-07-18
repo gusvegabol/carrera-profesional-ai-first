@@ -27,8 +27,8 @@ Actualmente, el foco activo está en la revisión metodológica de la entrevista
 ## Estructura relevante del proyecto
 
 - `./.pcs/` como memoria operativa local del host.
-- `./docs/` como documentación funcional y metodológica del proyecto.
-- `./boveda-entrevista-profesional/` como bóveda de trabajo para conceptos, métodos, patrones, fricciones, ejemplos y playbook de entrevista.
+- `./docs/` como área única de documentación viva: producto, metodología, evidencias, fuentes y trabajo en curso.
+- `./historico/` como archivo de documentos sustituidos, preservando su ruta de procedencia y excluido de la navegación habitual de Obsidian.
 
 ## Relación con PCS
 
@@ -68,8 +68,8 @@ Si el comando no figura en el índice o el alias indicado no existe en `C:/Users
 - `./docs/metodologia/conceptos/idea-central.md`
 - `./docs/trabajo-en-curso/debates/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`
 - `./docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`
-- `./boveda-entrevista-profesional/README.md`
-- `./boveda-entrevista-profesional/INDEX.md`
+- `./docs/metodologia/playbooks/PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_0.md`
+- `./docs/metodologia/playbooks/PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA.md`
 
 ## Siguiente gesto recomendado
 

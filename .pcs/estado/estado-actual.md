@@ -31,7 +31,7 @@ La recomendación requiere complementar esa arquitectura con la conversación no
 
 También existe una presentación HTML autónoma para explicar la propuesta a personas no expertas: `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`. Resume el problema, la doble pasada, sus garantías y el piloto propuesto.
 
-Se ha adoptado la reorganización documental y una nueva bóveda Obsidian en la raíz mediante [DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md), a partir del [diseño aprobado](../../docs/superpowers/specs/2026-07-18-reorganizacion-documental-obsidian-design.md) y de la sesión de debate. La decisión crea la [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md), actualmente pendiente. No se han movido documentos, eliminado configuraciones ni inicializado la bóveda raíz; esos trabajos quedan condicionados a la copia externa verificada y a la aprobación humana de cada bloque de clasificación.
+Se ha adoptado la reorganización documental y una nueva bóveda Obsidian en la raíz mediante [DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md), a partir del [diseño aprobado](../../docs/superpowers/specs/2026-07-18-reorganizacion-documental-obsidian-design.md) y de la sesión de debate. La [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md) está en curso: la copia externa se verificó, se retiraron las configuraciones heredadas, se inicializó manualmente la bóveda raíz y se migraron los bloques aprobados a `docs/` e `historico/`. Solo queda la validación visual final en Obsidian antes de cerrar la acción.
 
 Históricamente, la documentación de Graphify se mantuvo separada en tres corpus documentales: `.pcs/`, `docs/` y `boveda-entrevista-profesional/`. Esa organización quedó formalizada en `DEC-20260713-1344-001-integrar-graphify-tres-corpus`, ahora sustituida por la decisión de retirada. La decisión histórica afectaba únicamente a la indexación y recuperación de contexto; no adoptaba un playbook, no modificaba el SPEC ni convertía los artefactos del grafo en fuentes normativas.
 
@@ -43,7 +43,7 @@ La utilidad de esa separación y de Graphify queda superada por la decisión de 
 
 ## Foco operativo
 
-Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus salvaguardas requeridas, debe orientar el primer piloto de cobertura profesional. La implantación de la reorganización documental de Obsidian está abierta como línea operativa secundaria y no desplaza este foco metodológico.
+Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus salvaguardas requeridas, debe orientar el primer piloto de cobertura profesional. La implantación de la reorganización documental de Obsidian está en su comprobación manual final y no desplaza este foco metodológico.
 
 ## Próximos pasos
 
@@ -51,7 +51,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - Revisar la evaluación experta y la presentación con las personas que deban debatir el enfoque.
 - Decidir explícitamente si se adopta, modifica o descarta la recomendación para el primer piloto.
 - Si se adopta, definir el contrato del piloto: muestra de entrevistas, salida inicial revisable, control de privacidad, criterios de corrección y señales de utilidad.
-- Ejecutar [ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md): elaborar el inventario y el mapa de clasificación, verificar la copia externa y obtener la aprobación humana de cada bloque antes de mover o eliminar nada.
+- Completar la validación visual de la bóveda raíz y cerrar, si es conforme, la [ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md).
 - Mantener separadas la cobertura, la profundidad y la correspondencia ESCO mientras no exista una decisión posterior que cambie ese alcance.
 - No tratar la evaluación como validación con personas ni actualizar el SPEC o el playbook de profundidad por inferencia.
 
@@ -60,7 +60,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - `ACC-20260717-1642-001-materializar-versionado-carrera-ai` quedó completada; no deja trabajo abierto dentro de su alcance.
 - No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones permanecen registradas históricamente en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Es candidata a acción futura la definición del primer piloto, condicionada a una decisión explícita sobre la recomendación metodológica.
-- `ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian` está pendiente para implantar por bloques la reorganización documental aprobada. No autoriza mover documentos ni retirar configuraciones antes de disponer de la copia externa verificada y de la aprobación humana de cada bloque.
+- `ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian` está en curso. Su único paso pendiente es la validación visual manual de la bóveda raíz después de la migración por bloques.
 
 ## Decisiones vigentes relevantes
 
@@ -85,7 +85,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 - Un perfil persuasivo con evidencia insuficiente puede inflar capacidades u ocultar incertidumbre; la persona debe poder revisar, matizar, rechazar o retirar información.
 - ESCO no debe confundirse con prueba de competencia, cualificación o certificación individual.
 - La información de trayectoria profesional es personal y debe limitarse a lo necesario para el propósito de carrera.
-- Mover o eliminar directorios de configuración de Obsidian o de Vault Operator antes de verificar la copia externa y aprobar el bloque correspondiente podría afectar la recuperación de configuraciones, automatizaciones o referencias locales.
+- La acción no debe cerrarse hasta que la persona responsable confirme visualmente la navegación, los enlaces y las exclusiones de la bóveda raíz.
 - `.tmp/` queda excluida del uso operativo salvo autorización expresa.
 
 ## Referencias históricas y de continuidad

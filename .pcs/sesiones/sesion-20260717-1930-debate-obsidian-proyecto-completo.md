@@ -117,7 +117,7 @@ adopción](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental
 
 La persona responsable aprobó el diseño de reorganización documental y se ha formalizado la [decisión de adopción](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md). La decisión adopta la bóveda raíz con configuración limpia, exige una copia externa verificada antes de retirar las cinco rutas heredadas, prohíbe usar Obsidian CLI y limita los movimientos a bloques previamente aprobados.
 
-También se ha abierto la [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md). Permanece pendiente: no se han movido documentos, eliminado configuraciones ni inicializado la nueva bóveda. La clasificación de cada bloque requerirá aprobación posterior e independiente.
+También se abrió la [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md). Su ejecución posterior verificó una copia externa, retiró las configuraciones heredadas, inicializó manualmente la bóveda raíz y migró los bloques que la persona responsable aprobó. La acción continúa en curso únicamente hasta la validación visual final en Obsidian.
 
 ## Acciones derivadas
 
@@ -133,13 +133,8 @@ También se ha abierto la [acción de implantación](../acciones/ACC-20260718-17
 
 ## Problemas o bloqueos
 
-- Debe crearse y verificarse una copia externa completa antes de retirar las
-  cinco rutas heredadas.
-- Cada bloque documental necesita un mapa de clasificación y la aprobación de
-  la persona responsable antes de mover documentos o corregir sus enlaces.
-- La inicialización de la bóveda raíz y la configuración de Hide Folders
-  requieren la intervención manual de la persona responsable después de que
-  no queden configuraciones Obsidian anidadas.
+- Confirmar visualmente la bóveda raíz después de la migración: navegación,
+  enlaces y exclusiones configuradas con Hide Folders.
 - No debe confundirse la conveniencia de leer y enlazar documentos con la
   autorización para modificar su contenido o su gobernanza.
 
@@ -161,30 +156,30 @@ También se ha abierto la [acción de implantación](../acciones/ACC-20260718-17
 
 ## Rehidratación futura
 
-- Dónde quedó el trabajo: se adoptó la reorganización documental y una única
-  bóveda raíz de Obsidian mediante una [decisión vigente](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md). La [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md) permanece pendiente y no se han realizado movimientos, eliminaciones ni cambios de configuración.
+- Dónde quedó el trabajo: se adoptó e implantó la reorganización documental y una única bóveda raíz de Obsidian mediante una [decisión vigente](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md). La [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md) está en curso y solo espera la validación visual manual final.
 - Leer primero: `.gitignore`, `.pcs/AGENTS.md`, `README.md`,
   `docs/AGENTS.md`, la [decisión vigente](../decisiones/DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian.md), la [acción pendiente](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md) y la especificación aprobada.
-- Líneas abiertas a retomar: verificación de la copia externa, inventario y
-  mapa de clasificación, aprobación humana de cada bloque, configuración
-  manual de la bóveda raíz y corrección de enlaces tras los movimientos
-  aprobados.
+- Líneas abiertas a retomar: validación visual manual de la bóveda raíz y, si
+  es conforme, cierre de la acción PCS. La evaluación de plugins adicionales
+  se mantiene fuera de esta acción.
 - Riesgos de malinterpretación: Obsidian sería una herramienta de lectura y
   navegación; no sustituye PCS Core, el estado actual, las decisiones ni las
   autoridades documentales del proyecto.
-- Siguiente gesto recomendado: ejecutar la [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md) empezando por el inventario y el mapa de clasificación; no mover ni eliminar archivos hasta contar con la aprobación de cada bloque y una copia externa verificada.
+- Siguiente gesto recomendado: abrir la bóveda raíz en Obsidian y confirmar
+  la navegación de los documentos vivos, las exclusiones y los enlaces antes
+  de cerrar la [acción de implantación](../acciones/ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian.md).
 
 ## Checklist de consolidación
 
 - [x] La capa episódica registra el motivo y el alcance inicial del debate.
 - [x] La capa semántica separa navegación documental de autoridad documental.
-- [ ] Las líneas cognitivas abiertas están identificadas.
+- [x] Las líneas cognitivas abiertas están identificadas.
 - [x] Las acciones derivadas están creadas o marcadas como pendientes.
 - [x] Las decisiones derivadas están creadas o marcadas como pendientes.
 - [x] `ESTADO_PROYECTO` está actualizado o marcado como pendiente.
 - [x] Los documentos afectados están listados.
 - [x] La rehidratación futura permite retomar el hilo.
-- [ ] La sesión no contiene estado operativo vivo como única fuente.
+- [x] La sesión no contiene estado operativo vivo como única fuente.
 
 ## Trazabilidad
 
@@ -200,4 +195,4 @@ También se ha abierto la [acción de implantación](../acciones/ACC-20260718-17
 - Entregables de debate:
   - `historico/docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`.
   - `docs/PRESENTACION_PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.pptx`.
-- Cierre: sesión abierta; decisión vigente y acción de implantación pendiente.
+- Cierre: sesión abierta; decisión vigente y acción de implantación en curso, pendiente de validación visual manual.

@@ -1,11 +1,11 @@
 ---
 id: ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian
 titulo: Implantar la reorganización documental de Obsidian
-estado: pendiente
+estado: en curso
 prioridad: alta
 responsable: Persona responsable y Codex
 fecha_creacion: 2026-07-18
-fecha_actualizacion: 2026-07-18 17:00
+fecha_actualizacion: 2026-07-18
 tipo: accion
 host: carrera-ai
 ---
@@ -24,9 +24,17 @@ Implantar por bloques la reorganización documental aprobada: inventariar y clas
 
 ## Seguimiento
 
-- Bloqueo actual: se requiere clasificación y aprobación humana de cada bloque antes de mover documentos; la inicialización y configuración de Obsidian se realizarán manualmente por la persona responsable.
-- Dependencias: mapa de clasificación completo, copia externa completa y verificada, y aprobación humana de los bloques.
-- Próximo paso: elaborar el inventario y el mapa de clasificación sin mover ni eliminar archivos.
+- Progreso: la copia externa completa se verificó en `D:\carrera-profesional-ai-first`; se retiraron las cinco rutas heredadas; la bóveda raíz se creó manualmente con Hide Folders; el mapa fue aprobado por bloques y sus movimientos se registraron mediante Git.
+- Bloqueo actual: falta la comprobación visual final de la persona responsable en Obsidian para confirmar navegación, enlaces y exclusiones después de la migración.
+- Dependencia restante: confirmación manual de la validación visual de la bóveda raíz.
+- Próximo paso: abrir la bóveda raíz, comprobar las notas vivas y sus enlaces, y confirmar el resultado para cerrar la acción.
+
+## Evidencia de avance
+
+- Estructura, plantillas y política Git: `d7b1e71`.
+- Mapa de clasificación aprobado: `15482ef` y `6366891`.
+- Migración documental por bloques: `51b9f52`, `154884a`, `c20b6fc`, `9303a48`, `8407597` y `828dd0c`.
+- La modificación local de `PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_0.md` permanece fuera de los commits de migración.
 
 ## Criterio de cierre
 
