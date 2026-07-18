@@ -30,8 +30,8 @@ Al aterrizar en este host, el agente debería consultar primero:
 - `./docs/AGENTS.md`
 - `./docs/VERSIONADO_CARRERA_AI.md` y `./docs/FLUJO_CAMBIO_VERSION_CARRERA_AI.md`, cuando la tarea afecte al versionado funcional
 - `./docs/DOCUMENTO_SPEC_CARRERA_AI.md`
-- `./docs/Núcleo Metodológico del Playbook/idea-central.md`
-- `./docs/Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`, cuando la tarea afecte al debate metodológico actual
+- `./docs/metodologia/conceptos/idea-central.md`
+- `./docs/trabajo-en-curso/debates/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`, cuando la tarea afecte al debate metodológico actual
 
 ## Regla universal de ortografía española
 
@@ -54,8 +54,8 @@ Si el usuario declara el host o pide retomar trabajo desde contexto general, el 
 Para preguntas metodológicas o de debate, priorizar en este orden:
 
 1. `./docs/DOCUMENTO_SPEC_CARRERA_AI.md` para objetivos y límites funcionales;
-2. `./docs/Núcleo Metodológico del Playbook/` para fundamentos y marcos metodológicos;
-3. `./docs/Ideas debate - como afrontar entrevista cobertura profesional/` para propuestas, evaluación y presentación del enfoque.
+2. `./docs/metodologia/` y `./docs/fuentes/` para fundamentos y marcos metodológicos;
+3. `./docs/trabajo-en-curso/debates/` para propuestas y evaluación del enfoque.
 
 Si existe contradicción, debe señalarse expresamente y prevalece la fuente de mayor autoridad dentro de ese orden.
 

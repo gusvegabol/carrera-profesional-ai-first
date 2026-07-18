@@ -18,8 +18,8 @@ Estos documentos no desplazan a `DOCUMENTO_SPEC_CARRERA_AI.md` como autoridad so
 Para consultas sobre la metodología de entrevista, priorizar en este orden:
 
 1. `DOCUMENTO_SPEC_CARRERA_AI.md` para objetivos y límites funcionales.
-2. `Núcleo Metodológico del Playbook/` para fundamentos, técnicas y marcos metodológicos.
-3. `Ideas debate - como afrontar entrevista cobertura profesional/` para propuestas, evaluación y presentación del enfoque.
+2. `metodologia/` y `fuentes/` para fundamentos, técnicas y marcos metodológicos.
+3. `trabajo-en-curso/debates/` para propuestas y evaluación del enfoque.
 
 Si existe una contradicción, prevalece la fuente documental de mayor autoridad y debe señalarse expresamente.
 
@@ -32,7 +32,7 @@ Para responder a una pregunta metodológica o de debate:
 3. Ampliar el contexto cuando las fuentes sean insuficientes, ambiguas o contradictorias.
 4. Citar el archivo y la ubicación de origen cuando se afirme algo concreto.
 
-No cargar de entrada toda la carpeta `Núcleo Metodológico del Playbook/` ni todas las ideas si la pregunta puede resolverse mediante una consulta acotada.
+No cargar de entrada toda la documentación de `metodologia/`, `fuentes/` ni todos los debates si la pregunta puede resolverse mediante una consulta acotada.
 
 ## Reglas de interpretación
 

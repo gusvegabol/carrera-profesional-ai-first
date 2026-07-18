@@ -55,7 +55,7 @@ El playbook futuro debera permitir que cada dato relevante mantenga su procedenc
 ### Especificacion y modelo objetivo
 
 - `docs/DOCUMENTO_SPEC_CARRERA_AI.md`
-- `docs/Núcleo Metodológico del Playbook/PERFIL_PROFESIONAL_ACCIONABLE_Y_EQUIVALENCIA_ESCO.md`
+- `docs/metodologia/conceptos/PERFIL_PROFESIONAL_ACCIONABLE_Y_EQUIVALENCIA_ESCO.md`
 
 ### Nucleo metodologico revisado
 
@@ -220,11 +220,11 @@ La evaluación es una recomendación debatible. No crea una decisión PCS, no ad
 ### Documentos afectados
 
 - `.pcs/estado/estado-actual.md`.
-- `docs/Ideas debate - como afrontar entrevista cobertura profesional/01_Conservadora_linea_de_vida_flexible_y_reconstruible.md`.
-- `docs/Ideas debate - como afrontar entrevista cobertura profesional/02_Conservadora_doble_pasada_panorama_e_inmersion_selectiva.md`.
-- `docs/Ideas debate - como afrontar entrevista cobertura profesional/03_Innovadora_atlas_conversacional_de_episodios_transiciones_y_capacidades.md`.
-- `docs/Ideas debate - como afrontar entrevista cobertura profesional/04_Innovadora_dossier_de_hipotesis_contrastables_y_evidencia_progresiva.md`.
-- `docs/Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`.
+- `docs/trabajo-en-curso/debates/01_Conservadora_linea_de_vida_flexible_y_reconstruible.md`.
+- `docs/trabajo-en-curso/debates/02_Conservadora_doble_pasada_panorama_e_inmersion_selectiva.md`.
+- `docs/trabajo-en-curso/debates/03_Innovadora_atlas_conversacional_de_episodios_transiciones_y_capacidades.md`.
+- `docs/trabajo-en-curso/debates/04_Innovadora_dossier_de_hipotesis_contrastables_y_evidencia_progresiva.md`.
+- `docs/trabajo-en-curso/debates/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`.
 - `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`.
 - `docs/superpowers/plans/2026-07-12-presentacion-propuesta-entrevista.md`.
 - `run-graphify.bat`, `docs/AGENTS.md` y `docs/.graphifyignore`.
@@ -233,7 +233,7 @@ La evaluación es una recomendación debatible. No crea una decisión PCS, no ad
 ### Rehidratación futura
 
 - **Dónde quedó el trabajo:** existe una recomendación metodológica explicada, pero todavía no adoptada, para el primer piloto de cobertura profesional.
-- **Leer primero:** `docs/Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md` y `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`.
+- **Leer primero:** `docs/trabajo-en-curso/debates/05_Evaluacion_experta_y_recomendacion_de_enfoque.md` y `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`.
 - **Líneas abiertas a retomar:** adopción o ajuste de la doble pasada, definición del piloto y decisión posterior sobre la evolución hacia un atlas relacional.
 - **Riesgos de malinterpretación:** no tratar las puntuaciones como evidencia empírica, no convertir ESCO en prueba individual y no leer esta actualización histórica como sustituto de `estado-actual.md`.
 - **Siguiente gesto recomendado:** debatir la recomendación antes de materializar cambios en el playbook, el SPEC o los artefactos de ejecución.

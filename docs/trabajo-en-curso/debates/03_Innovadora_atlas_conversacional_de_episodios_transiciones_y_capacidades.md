@@ -10,7 +10,7 @@ La innovación no es que la IA «descubra» un mapa oculto. Es que hace explíci
 
 Las trayectorias profesionales rara vez se explican solo por la sucesión de puestos. Un cambio puede originarse en una formación simultánea, una red de contactos, una restricción familiar, una herramienta aprendida fuera del empleo o una experiencia autónoma. La representación lineal puede registrar esos elementos, pero no siempre muestra por qué son importantes.
 
-La literatura de construcción de carrera y orientación narrativa trata la carrera como un proceso de construcción de significado y agencia a lo largo de la vida. El atlas toma esa idea como inspiración, con una precaución: una IA no interpreta el significado de una historia por sí sola. Propone conexiones y la persona las valida, matiza o descarta. [Career Construction Theory](https://www.marksavickas.com/files/1_Savickas_bio/Career_Construction_Theory/Publications/Book%20Chapters/Career_Construction_Theory%20and_Counseling_Model_%282020%29.pdf) [Narrative career counseling](<../Núcleo Metodológico del Playbook/Narrative career counseling - My career story and pictorial narratives.md>)
+La literatura de construcción de carrera y orientación narrativa trata la carrera como un proceso de construcción de significado y agencia a lo largo de la vida. El atlas toma esa idea como inspiración, con una precaución: una IA no interpreta el significado de una historia por sí sola. Propone conexiones y la persona las valida, matiza o descarta. [Career Construction Theory](https://www.marksavickas.com/files/1_Savickas_bio/Career_Construction_Theory/Publications/Book%20Chapters/Career_Construction_Theory%20and_Counseling_Model_%282020%29.pdf) [Narrative career counseling](<../../fuentes/Narrative career counseling - My career story and pictorial narratives.md>)
 
 ## Modelo del atlas
 
@@ -65,7 +65,7 @@ La IA cumple funciones observables: resumir, preguntar, citar la base de una con
 
 Además de las entidades del Perfil Profesional Accionable, el atlas genera una tabla de relaciones: origen, destino, tipo de relación, justificación, evidencia, estado, confianza y validación de la persona. Esto permite que una narrativa profesional posterior indique de dónde sale cada afirmación.
 
-Las correspondencias ESCO pueden añadirse al final como nodos externos candidatos conectados a competencias internas ya evidenciadas. ESCO proporciona un vocabulario estructurado de ocupaciones, conocimientos y habilidades; no debe dibujar relaciones que la propia entrevista aún no sostiene. [ESCO FAQ](https://esco.ec.europa.eu/en/about-esco/faq?page=1) [ESCO Booklet](<../Núcleo Metodológico del Playbook/ESCO_Booklet.md>)
+Las correspondencias ESCO pueden añadirse al final como nodos externos candidatos conectados a competencias internas ya evidenciadas. ESCO proporciona un vocabulario estructurado de ocupaciones, conocimientos y habilidades; no debe dibujar relaciones que la propia entrevista aún no sostiene. [ESCO FAQ](https://esco.ec.europa.eu/en/about-esco/faq?page=1) [ESCO Booklet](<../../fuentes/ESCO_Booklet.md>)
 
 ## Ventajas debatibles
 
@@ -100,7 +100,7 @@ El tercero es la privacidad: las conexiones pueden revelar información sensible
 ## Fuentes de apoyo
 
 - [DOCUMENTO_SPEC_CARRERA_AI.md](../DOCUMENTO_SPEC_CARRERA_AI.md)
-- [Career Construct CCI Description](<../Núcleo Metodológico del Playbook/Career_construct_CCI_Description.md>)
-- [Narrative career counseling](<../Núcleo Metodológico del Playbook/Narrative career counseling - My career story and pictorial narratives.md>)
-- [Análisis estructural de la reconstrucción de trayectorias profesionales](<../Núcleo Metodológico del Playbook/Análisis estructural de la reconstrucción de trayectorias profesionales.md>)
+- [Career Construct CCI Description](<../../fuentes/Career_construct_CCI_Description.md>)
+- [Narrative career counseling](<../../fuentes/Narrative career counseling - My career story and pictorial narratives.md>)
+- [Análisis estructural de la reconstrucción de trayectorias profesionales](<../../fuentes/Análisis estructural de la reconstrucción de trayectorias profesionales.md>)
 - [ESCO FAQ](https://esco.ec.europa.eu/en/about-esco/faq?page=1)

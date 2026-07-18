@@ -61,13 +61,13 @@ La entrevista conductual y STAR no se copian como un guion rígido. Se utilizan 
 
 El papel humano de escucha se sustituye por protocolos verificables: reflejo breve de lo entendido, confirmación de la persona, separación entre cita o relato y síntesis de la IA, y registro de incertidumbre. La IA no deduce sinceridad, motivación, competencia o estado emocional del tono, los silencios o la forma de escribir.
 
-La lógica es compatible con BEI, que busca hechos conductuales, y con la validación de aprendizajes previos, que distingue identificación y documentación de una evaluación o certificación posterior. [BEI y Synergogy](<../Núcleo Metodológico del Playbook/What_is_BEI_Synergogy.md>) [CEDEFOP: cuatro fases de validación](https://www.cedefop.europa.eu/en/tools/validation-non-formal-informal-learning/eu-guidelines/2023/22-four-phases-validation)
+La lógica es compatible con BEI, que busca hechos conductuales, y con la validación de aprendizajes previos, que distingue identificación y documentación de una evaluación o certificación posterior. [BEI y Synergogy](<../../fuentes/What_is_BEI_Synergogy.md>) [CEDEFOP: cuatro fases de validación](https://www.cedefop.europa.eu/en/tools/validation-non-formal-informal-learning/eu-guidelines/2023/22-four-phases-validation)
 
 ## Datos que produce
 
 Por cada ancla: denominación dada por la persona, periodo y precisión, contexto, actividades, responsabilidades, herramientas, posible uso de IA, episodios asociados, resultados, aprendizajes, evidencia, límites, conexiones propuestas y validación del entrevistado.
 
-Por cada competencia: afirmación en lenguaje humano, experiencias origen, evidencia que la sostiene, fuerza de la evidencia, alcance, contraejemplos o límites, confianza y estado de validación. ESCO solo se plantea después como correspondencia candidata, nunca como la estructura que ordena el relato. [Perfil Profesional Accionable y equivalencia ESCO](<../Núcleo Metodológico del Playbook/PERFIL_PROFESIONAL_ACCIONABLE_Y_EQUIVALENCIA_ESCO.md>)
+Por cada competencia: afirmación en lenguaje humano, experiencias origen, evidencia que la sostiene, fuerza de la evidencia, alcance, contraejemplos o límites, confianza y estado de validación. ESCO solo se plantea después como correspondencia candidata, nunca como la estructura que ordena el relato. [Perfil Profesional Accionable y equivalencia ESCO](<../../metodologia/conceptos/PERFIL_PROFESIONAL_ACCIONABLE_Y_EQUIVALENCIA_ESCO.md>)
 
 ## Ventajas debatibles
 
@@ -102,7 +102,7 @@ Estas métricas son hipótesis de evaluación, no umbrales ya demostrados:
 ## Fuentes de apoyo
 
 - [DOCUMENTO_SPEC_CARRERA_AI.md](../DOCUMENTO_SPEC_CARRERA_AI.md)
-- [What is BEI Synergogy](<../Núcleo Metodológico del Playbook/What_is_BEI_Synergogy.md>)
-- [Narrative career counseling](<../Núcleo Metodológico del Playbook/Narrative career counseling - My career story and pictorial narratives.md>)
-- [Guidelines on Recognition of Prior Learning](<../Núcleo Metodológico del Playbook/Recognition of Prior Learning_Guidelines RPLpdf.md>)
+- [What is BEI Synergogy](<../../fuentes/What_is_BEI_Synergogy.md>)
+- [Narrative career counseling](<../../fuentes/Narrative career counseling - My career story and pictorial narratives.md>)
+- [Guidelines on Recognition of Prior Learning](<../../fuentes/Recognition of Prior Learning_Guidelines RPLpdf.md>)
 - [CEDEFOP, fases de validación](https://www.cedefop.europa.eu/en/tools/validation-non-formal-informal-learning/eu-guidelines/2023/22-four-phases-validation)

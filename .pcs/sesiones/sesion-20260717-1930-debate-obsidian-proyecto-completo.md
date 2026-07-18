@@ -67,7 +67,7 @@ formalizadas en la [decisión vigente de adopción](../decisiones/DEC-20260718-1
 ## Actualización histórica — Propuesta documentada y presentación
 
 Se ha elaborado la propuesta
-`docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md` y su presentación de
+`historico/docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md` y su presentación de
 síntesis `docs/PRESENTACION_PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.pptx`.
 
 La propuesta comparó cuatro alternativas: mantener la bóveda localizada,
@@ -156,7 +156,7 @@ También se ha abierto la [acción de implantación](../acciones/ACC-20260718-17
 - `docs/` y demás carpetas con archivos Markdown no ignorados, como posibles
   fuentes del conocimiento transversal.
 - Esta sesión PCS.
-- `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`.
+- `historico/docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`.
 - `docs/PRESENTACION_PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.pptx`.
 
 ## Rehidratación futura
@@ -198,6 +198,6 @@ También se ha abierto la [acción de implantación](../acciones/ACC-20260718-17
 - Estado de proyecto relacionado: [estado actual](../estado/estado-actual.md).
 - Especificación aprobada: [diseño de reorganización documental y nueva bóveda Obsidian](../../docs/superpowers/specs/2026-07-18-reorganizacion-documental-obsidian-design.md).
 - Entregables de debate:
-  - `docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`.
+  - `historico/docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`.
   - `docs/PRESENTACION_PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.pptx`.
 - Cierre: sesión abierta; decisión vigente y acción de implantación pendiente.

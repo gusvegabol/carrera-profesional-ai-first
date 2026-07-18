@@ -4,7 +4,7 @@
 
 Crear una presentación HTML autónoma de siete pantallas para explicar, en unos diez minutos y a una audiencia no experta, por qué la entrevista recomendada combina un panorama libre de la trayectoria con una inmersión selectiva en uno o dos episodios.
 
-La fuente de contenido es [la evaluación experta](<../../Ideas debate - como afrontar entrevista cobertura profesional/05_Evaluacion_experta_y_recomendacion_de_enfoque.md>). La presentación explica una recomendación debatible; no certifica competencias ni convierte ESCO en prueba individual.
+La fuente de contenido es [la evaluación experta](<../../trabajo-en-curso/debates/05_Evaluacion_experta_y_recomendacion_de_enfoque.md>). La presentación explica una recomendación debatible; no certifica competencias ni convierte ESCO en prueba individual.
 
 ## Entrega y navegación
 

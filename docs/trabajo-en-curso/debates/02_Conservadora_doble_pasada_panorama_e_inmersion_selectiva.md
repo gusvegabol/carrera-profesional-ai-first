@@ -54,7 +54,7 @@ BEI y STAR aportan disciplina para pedir hechos, acciones y resultados; no autor
 - Conservar evidencia contraria o límites: «lo hice una vez», «con ayuda», «en ese contexto concreto».
 - No inferir nivel de dominio, intención o credibilidad por la calidad retórica de la respuesta.
 
-El enfoque también separa identificación y documentación de evaluación. CEDEFOP describe esas fases como partes distintas de la validación de aprendizajes no formales e informales; Carrera AI puede apoyar las primeras sin declarar certificación. [CEDEFOP](https://www.cedefop.europa.eu/en/tools/validation-non-formal-informal-learning) [Guías de RPL](<../Núcleo Metodológico del Playbook/Recognition of Prior Learning_Guidelines RPLpdf.md>)
+El enfoque también separa identificación y documentación de evaluación. CEDEFOP describe esas fases como partes distintas de la validación de aprendizajes no formales e informales; Carrera AI puede apoyar las primeras sin declarar certificación. [CEDEFOP](https://www.cedefop.europa.eu/en/tools/validation-non-formal-informal-learning) [Guías de RPL](<../../fuentes/Recognition of Prior Learning_Guidelines RPLpdf.md>)
 
 ## Datos y trazabilidad
 
@@ -95,8 +95,8 @@ Estas son propuestas de medición para debatir:
 ## Fuentes de apoyo
 
 - [DOCUMENTO_SPEC_CARRERA_AI.md](../DOCUMENTO_SPEC_CARRERA_AI.md)
-- [What is BEI Synergogy](<../Núcleo Metodológico del Playbook/What_is_BEI_Synergogy.md>)
-- [Skills pillar](<../Núcleo Metodológico del Playbook/Skills pillar.md>)
-- [How SFIA works](<../Núcleo Metodológico del Playbook/How SFIA works - Levels of responsibility and skills.md>)
+- [What is BEI Synergogy](<../../fuentes/What_is_BEI_Synergogy.md>)
+- [Skills pillar](<../../fuentes/Skills pillar.md>)
+- [How SFIA works](<../../fuentes/How SFIA works - Levels of responsibility and skills.md>)
 - [CEDEFOP, información sobre validación](https://www.cedefop.europa.eu/en/tools/validation-non-formal-informal-learning)
 - [ESCO, clasificación de ocupaciones](https://esco.ec.europa.eu/en/classification/occupation_main)

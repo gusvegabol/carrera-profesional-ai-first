@@ -67,7 +67,7 @@ La adaptación técnica y conversacional exige cuatro reglas:
 - La IA no infiere rasgos internos a partir del estilo de respuesta, tono o silencio.
 - La evidencia se calibra por su contenido y contexto, no por lo persuasiva que parezca la redacción.
 
-La validación de aprendizaje previo diferencia identificación, documentación, evaluación y certificación; esta entrevista se sitúa deliberadamente en las dos primeras fases salvo validación humana adicional. [CEDEFOP](https://www.cedefop.europa.eu/en/tools/validation-non-formal-informal-learning) [How SFIA works](<../Núcleo Metodológico del Playbook/How SFIA works - Levels of responsibility and skills.md>)
+La validación de aprendizaje previo diferencia identificación, documentación, evaluación y certificación; esta entrevista se sitúa deliberadamente en las dos primeras fases salvo validación humana adicional. [CEDEFOP](https://www.cedefop.europa.eu/en/tools/validation-non-formal-informal-learning) [How SFIA works](<../../fuentes/How SFIA works - Levels of responsibility and skills.md>)
 
 ## Datos que produce
 
@@ -108,9 +108,9 @@ Existe también un riesgo de privacidad: el dossier conserva más trazabilidad q
 ## Fuentes de apoyo
 
 - [DOCUMENTO_SPEC_CARRERA_AI.md](../DOCUMENTO_SPEC_CARRERA_AI.md)
-- [What is BEI Synergogy](<../Núcleo Metodológico del Playbook/What_is_BEI_Synergogy.md>)
-- [Recognition of Prior Learning: Guidelines](<../Núcleo Metodológico del Playbook/Recognition of Prior Learning_Guidelines RPLpdf.md>)
-- [How SFIA works](<../Núcleo Metodológico del Playbook/How SFIA works - Levels of responsibility and skills.md>)
-- [Exploring a New Competency Modeling Process with LLM](<../Núcleo Metodológico del Playbook/Exploring_a_New_Competency_Modeling_Process_with_LLM.md>)
+- [What is BEI Synergogy](<../../fuentes/What_is_BEI_Synergogy.md>)
+- [Recognition of Prior Learning: Guidelines](<../../fuentes/Recognition of Prior Learning_Guidelines RPLpdf.md>)
+- [How SFIA works](<../../fuentes/How SFIA works - Levels of responsibility and skills.md>)
+- [Exploring a New Competency Modeling Process with LLM](<../../fuentes/Exploring_a_New_Competency_Modeling_Process_with_LLM.md>)
 - [CEDEFOP, validación de aprendizaje no formal e informal](https://www.cedefop.europa.eu/en/tools/validation-non-formal-informal-learning)
 - [ESCO FAQ](https://esco.ec.europa.eu/en/about-esco/faq?page=1)
