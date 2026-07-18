@@ -186,11 +186,11 @@ Con honestidad, no en función de lo que confirmaría que el playbook v1.3.2 ya 
 ### Lo que no aguantó, o no estaba escrito
 
 - **El bloqueo real al elegir etapa ("no se me ocurre nada") no tiene protocolo en el playbook v1.3.2.** Lo que hizo el sistema en esta transcripción —normalizar la respuesta y bajar el umbral de "algo especial" a "algo que se complicó"— fue una intervención razonable, pero improvisada, no una regla documentada. Debería formalizarse como un paso explícito de la sección 9.2, no dejarse a la improvisación de cada sesión.
-    
+
 - **La atribución colectiva del mérito sigue sin resolverse como regla general.** La solución que funcionó aquí —preguntar "dentro de ese 'entre todos', ¿qué fue lo tuyo?" en vez de "pero qué hiciste tú, específicamente"— es mejor que la instrucción literal del playbook v1.3.2. Esto confirma la sospecha que dejé abierta en la revisión clínica: el criterio de "acción propia" tal como está escrito puede sonar a examen si se aplica de forma directa. Este hallazgo debería convertirse en un antipatrón propio — provisionalmente, [[ANTIPATRON_AISLAMIENTO_FORZADO_DEL_MERITO]] — documentado en 05_fricciones_y_antipatrones, con esta misma solución como remedio.
-    
+
 - **El registro de estado quedó implícito en las notas de este documento, no en un registro real que el sistema fuera escribiendo.** Esto es fiel a cómo funcionaría en una sesión real de chat: el registro vive en el razonamiento interno del sistema, no necesariamente visible. Pero como ejercicio de estrés, no llegamos a comprobar si un sistema real lo mantiene con fidelidad turno a turno sin ayuda externa — eso solo se puede verificar con un piloto real, no con una simulación escrita por mí mismo sabiendo de antemano dónde quería llevar la conversación.
-    
+
 
 ### Advertencia sobre este documento
 

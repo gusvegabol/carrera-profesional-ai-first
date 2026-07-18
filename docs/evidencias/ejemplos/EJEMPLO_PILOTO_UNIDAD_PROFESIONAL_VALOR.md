@@ -1,5 +1,5 @@
  # Ejemplo Piloto Unidad Profesional Valor
- 
+
 ## Estado de este documento
 
 Este documento es un ejemplo sintético mínimo para calibrar el primer piloto del playbook de entrevista profesional.

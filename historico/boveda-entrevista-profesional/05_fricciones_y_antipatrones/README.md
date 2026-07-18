@@ -29,7 +29,7 @@ Los documentos de esta carpeta pueden usar `ANTIPATRON_` para errores o derivas 
 
 Antipatrón y fricción no son sinónimos, aunque la propia estructura de la bóveda los agrupe en la misma carpeta. La diferencia está en **dónde nace el problema**:
 
-- **Antipatrón**: una elección de diseño o de comportamiento del entrevistador —humano o IA— que parece razonable pero produce mal resultado. Es evitable por definición: se corrige cambiando cómo se pregunta o se conduce la sesión. 
+- **Antipatrón**: una elección de diseño o de comportamiento del entrevistador —humano o IA— que parece razonable pero produce mal resultado. Es evitable por definición: se corrige cambiando cómo se pregunta o se conduce la sesión.
 - **Fricción**: un estado o condición que surge en la persona entrevistada, independientemente de si el entrevistador hizo algo mal. No siempre es evitable, solo detectable y gestionable. Puede tener una causa de diseño (un 'antipatrón' la provoca) o puede aparecer aunque el diseño sea impecable, simplemente por duración, tema, momento del día o circunstancia personal de quien responde.
 
 ## Relación con el playbook

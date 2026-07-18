@@ -220,4 +220,3 @@ Este piloto da lugar a [[FRICCION_AMBIGUEDAD_PARQUEDAD_O_DESINTERES]], pone a pr
 ## Fuente base
 
 Registro directo de sesión real ejecutada dentro de esta conversación, sobre [[PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA]], con información de contexto aportada después del cierre por la persona responsable del piloto.
-
