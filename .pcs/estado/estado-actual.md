@@ -2,7 +2,7 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
-fecha_actualizacion: 2026-07-18
+fecha_actualizacion: 2026-07-20
 ultima_sesion_relacionada: sesion-20260717-1930-debate-obsidian-proyecto-completo
 host: carrera-ai
 ---
@@ -47,6 +47,12 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 
 ## Próximos pasos
 
+- Para iniciar la prueba real de cobertura profesional, quedan pendientes estas decisiones del responsable:
+  1. Autorizar la ejecución experimental.
+  2. Indicar quién participará.
+  3. Definir el alcance de la trayectoria.
+  4. Aprobar qué datos pueden conservarse.
+  5. Escoger la convención de identificadores.
 - Aplicar `docs/FLUJO_CAMBIO_VERSION_CARRERA_AI.md` en cualquier futura transición de versión.
 - Revisar la evaluación experta y la presentación con las personas que deban debatir el enfoque.
 - Decidir explícitamente si se adopta, modifica o descarta la recomendación para el primer piloto.
@@ -57,6 +63,7 @@ Evaluar y decidir si la arquitectura recomendada de doble pasada, junto con sus 
 
 ## Acciones abiertas relevantes
 
+- La preparación documental del piloto real está completada en `docs/superpowers/specs/2026-07-19-preparacion-piloto-cobertura-profesional-design.md`, `docs/trabajo-en-curso/diseno/CHECKLIST_PREPILOTO_COBERTURA_PROFESIONAL.md` y `docs/trabajo-en-curso/diseno/MATRIZ_EVALUACION_PILOTO_COBERTURA_PROFESIONAL.md`; la ejecución queda bloqueada hasta recibir las cinco decisiones del responsable indicadas en los próximos pasos.
 - `ACC-20260717-1642-001-materializar-versionado-carrera-ai` quedó completada; no deja trabajo abierto dentro de su alcance.
 - No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones permanecen registradas históricamente en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Es candidata a acción futura la definición del primer piloto, condicionada a una decisión explícita sobre la recomendación metodológica.

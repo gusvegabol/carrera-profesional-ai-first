@@ -224,3 +224,22 @@ Estado actual de ese documento:
 - tampoco implica que la carpeta `zonas/` o `TEMPLATE_ZONA.md` hayan quedado materializados ya.
 
 Esta actualización no cierra la discusión. Solo deja trazabilidad de que la propuesta ya existe como documento independiente y de que el siguiente debate debe centrarse en decidir si se adopta o no como convención operativa real.
+
+## Actualización — Preparación del piloto real y decisiones pendientes del responsable
+
+La preparación documental del piloto real de cobertura profesional queda completada en:
+
+- `docs/superpowers/specs/2026-07-19-preparacion-piloto-cobertura-profesional-design.md`;
+- `docs/superpowers/plans/2026-07-19-preparacion-piloto-cobertura-profesional.md`;
+- `docs/trabajo-en-curso/diseno/CHECKLIST_PREPILOTO_COBERTURA_PROFESIONAL.md`;
+- `docs/trabajo-en-curso/diseno/MATRIZ_EVALUACION_PILOTO_COBERTURA_PROFESIONAL.md`.
+
+La doble pasada continúa siendo una orientación experimental y no una metodología adoptada. No deben crearse artefactos de una persona real ni abrirse la primera sesión del piloto hasta que el responsable complete estos pasos:
+
+1. Autorizar la ejecución experimental.
+2. Indicar quién participará.
+3. Definir el alcance de la trayectoria.
+4. Aprobar qué datos pueden conservarse.
+5. Escoger la convención de identificadores.
+
+Cuando se rehidrate esta sesión, estos cinco puntos deben mostrarse como el siguiente gesto necesario para iniciar la prueba real.
