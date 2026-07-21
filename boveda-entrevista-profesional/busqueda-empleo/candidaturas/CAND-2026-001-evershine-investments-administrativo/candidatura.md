@@ -32,7 +32,10 @@ Los datos de contacto se han tomado de [[datos-privados-candidatura]] y solo se 
 - La persona candidata confirma que desea continuar pese a que la Formación Profesional en Administración de Empresas y Gestión Contable no está finalizada.
 - El rango salarial incluye el mínimo de referencia de 20.000 € brutos anuales.
 - El CV y la carta están aprobados; las fechas contractuales de Herfrailes son 01/10/2011–03/10/2024.
+- La persona candidata revisó el aspecto del DOCX; ajustó el idioma del estilo a español y lo considera legible y correcto. La justificación del texto queda como posible mejora estética, no como bloqueo.
 - El enlace de candidatura está registrado en [[analisis-oferta]].
+
+La foto se incorporará manualmente si la persona candidata decide utilizarla.
 
 La aprobación no autoriza por sí misma ningún envío. Cualquier inscripción posterior requiere una instrucción explícita de la persona candidata.
 

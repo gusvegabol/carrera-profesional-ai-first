@@ -34,7 +34,7 @@ La fase 1 estará completada cuando exista un flujo documentado y validado que, 
 
 ## Evidencia de cierre
 
-La persona responsable validó [[busqueda-empleo/candidaturas/CAND-2026-001-evershine-investments-administrativo/candidatura|CAND-2026-001]] para una oferta real de EVERSHINE INVESTMENTS. Existen análisis, CV y carta de presentación en formatos DOCX y PDF; el enlace de la oferta y las fechas contractuales de Herfrailes quedaron registrados. No se ha realizado ningún envío ni se ha abierto ningún formulario externo.
+La persona responsable validó [[busqueda-empleo/candidaturas/CAND-2026-001-evershine-investments-administrativo/candidatura|CAND-2026-001]] para una oferta real de EVERSHINE INVESTMENTS. Existen análisis, CV y carta de presentación en formatos DOCX y PDF; el enlace de la oferta y las fechas contractuales de Herfrailes quedaron registrados. La persona responsable revisó el DOCX y validó su aspecto. No se ha realizado ningún envío ni se ha abierto ningún formulario externo.
 
 ## Relaciones
 
