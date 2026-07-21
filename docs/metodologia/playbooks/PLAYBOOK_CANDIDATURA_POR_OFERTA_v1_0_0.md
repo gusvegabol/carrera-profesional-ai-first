@@ -47,6 +47,14 @@ La redacción debe conservar estos límites:
 - el nivel de idiomas no se eleva por encima del documentado;
 - la tecnología histórica no se presenta como dominio actual sin confirmación nueva.
 
+### Transformación de voz narrativa
+
+[[datos-core-busqueda]] registra los hechos en tercera persona y no se copia literalmente en los documentos de candidatura.
+
+- Redactar en primera persona cada acción cuyo sujeto sea la persona candidata: «Diseñé», «Automaticé», «Clasifiqué».
+- Mantener la tercera persona cuando el sujeto sea distinto, por ejemplo: «el personal pasó a recibir…» o «las decisiones correspondían al Consejo de Dirección».
+- Cambiar únicamente la voz gramatical; no ampliar responsabilidades, métricas, titulaciones, tecnologías ni resultados.
+
 ## 5. Bloqueos obligatorios
 
 Detener la producción documental y registrar el motivo cuando ocurra cualquiera de estas condiciones:
@@ -62,13 +70,14 @@ Un bloqueo no se resuelve mediante suposición, ampliación retórica ni inferen
 
 Una vez resueltos los bloqueos, seguir este orden fijo:
 
-1. Preparar el texto del CV y de la carta de presentación.
-2. Realizar la revisión factual completa contra [[datos-core-busqueda]].
-3. Usar la skill `documents:documents` para crear los archivos DOCX.
-4. Usar la skill `pdf:pdf` para exportar los DOCX a PDF y verificar los PDF.
-5. Comprobar visualmente tanto los DOCX como los PDF: estructura, cortes, desbordamientos, legibilidad, datos y coherencia entre formatos.
-6. Registrar en [[TEMPLATE_CANDIDATURA]] y [[seguimiento-candidaturas]] las rutas del CV DOCX, CV PDF, carta DOCX y carta PDF.
-7. Marcar la candidatura como `pendiente_de_aprobacion`.
+1. Revisar cada logro seleccionado: identificar su sujeto, usar primera persona si la acción corresponde a la persona candidata y conservar tercera persona solo para otros sujetos.
+2. Preparar el texto del CV y de la carta de presentación.
+3. Realizar la revisión factual completa contra [[datos-core-busqueda]].
+4. Usar la skill `documents:documents` para crear los archivos DOCX.
+5. Usar la skill `pdf:pdf` para exportar los DOCX a PDF y verificar los PDF.
+6. Comprobar visualmente tanto los DOCX como los PDF: estructura, cortes, desbordamientos, legibilidad, datos y coherencia entre formatos.
+7. Registrar en [[TEMPLATE_CANDIDATURA]] y [[seguimiento-candidaturas]] las rutas del CV DOCX, CV PDF, carta DOCX y carta PDF.
+8. Marcar la candidatura como `pendiente_de_aprobacion`.
 
 La existencia de DOCX y PDF verificados no autoriza el envío. La aprobación y cualquier actuación posterior corresponden a una fase distinta y requieren intervención humana explícita.
 
@@ -92,6 +101,7 @@ La salida válida de fase 1 es una candidatura documentada, con sus archivos pre
 - [ ] Salario, modalidad, zona, jornada y contrato están visibles y no actuaron como filtros automáticos.
 - [ ] Hay un perfil principal, uno secundario y de tres a cinco logros factuales.
 - [ ] Cada frase del CV y de la carta se rastrea hasta [[datos-core-busqueda]].
+- [ ] Los verbos de acción de la persona candidata están en primera persona; la tercera persona solo describe a otros sujetos.
 - [ ] No queda ningún bloqueo obligatorio abierto.
 - [ ] Los DOCX y los PDF se comprobaron visualmente.
 - [ ] Las cuatro rutas documentales están registradas.
