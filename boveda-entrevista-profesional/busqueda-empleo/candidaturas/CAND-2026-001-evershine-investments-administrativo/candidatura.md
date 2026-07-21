@@ -2,8 +2,8 @@
 id: CAND-2026-001
 titulo: Candidatura a EVERSHINE INVESTMENTS — Administrativo/a
 fecha_creacion: 2026-07-21
-fecha_actualizacion: 2026-07-21
-estado: aprobada
+fecha_actualizacion: 2026-07-22
+estado: enviada
 tipo: candidatura
 ---
 
@@ -11,9 +11,9 @@ tipo: candidatura
 
 ## Estado
 
-`aprobada`
+`enviada`
 
-La documentación ha sido validada por la persona candidata. No se ha enviado la candidatura ni se ha abierto ningún formulario.
+La documentación fue validada por la persona candidata. El 2026-07-22, la persona candidata se inscribió en InfoJobs: adjuntó el CV y remitió el contenido de la carta de presentación como texto del formulario, sin adjuntar la carta como archivo.
 
 ## Documentos
 
@@ -37,7 +37,7 @@ Los datos de contacto se han tomado de [[datos-privados-candidatura]] y solo se 
 
 La foto se incorporará manualmente si la persona candidata decide utilizarla.
 
-La aprobación no autoriza por sí misma ningún envío. Cualquier inscripción posterior requiere una instrucción explícita de la persona candidata.
+El envío fue realizado directamente por la persona candidata.
 
 ## Trazabilidad
 
