@@ -26,7 +26,7 @@ Definir y materializar la primera fase de la rama operativa: analizar texto de o
 - Fecha objetivo: sin fecha fijada.
 - Bloqueo actual: ninguno; el diseño del proceso sigue en debate.
 - Dependencias: [[datos-core-busqueda]] debe seguir siendo factual y revisable.
-- Próximo paso: cerrar el diseño del proceso de adaptación por oferta y registrar la especificación aprobada.
+- Próximo paso: ejecutar una prueba con una oferta real.
 
 ## Criterio de cierre
 
