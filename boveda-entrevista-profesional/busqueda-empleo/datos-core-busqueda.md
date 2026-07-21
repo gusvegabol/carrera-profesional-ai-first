@@ -250,6 +250,7 @@ Perfil predominantemente autodidacta: identifica una necesidad profesional, comb
 5. Seleccionar experiencia histórica y formación solo cuando refuercen esa candidatura.
 6. Revisar antes de enviar: cargo, fechas, cifras, tecnologías actuales, nivel de idiomas, estudios no finalizados y decisiones colegiadas.
 7. Si falta una evidencia o hay una contradicción, abrir una pregunta de entrevista; no completar el CV mediante suposición.
+8. Para una candidatura aprobada, consultar [[datos-privados-candidatura]] solo para los datos de formulario y registrar su estado y documentos en [[seguimiento-candidaturas]]. Esta matriz sigue siendo exclusivamente factual y profesional.
 
 ---
 
