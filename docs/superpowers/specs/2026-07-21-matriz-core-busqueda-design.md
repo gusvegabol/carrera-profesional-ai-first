@@ -16,7 +16,7 @@ Se incorporarán los datos obtenidos en la entrevista y en las fuentes aportadas
 - trayectoria profesional corregida y estructurada;
 - logros verificables con contexto, acción, resultado y métricas cuando existan;
 - competencias actuales, históricas y transferibles;
-- formación reglada no finalizada, formación complementaria y aprendizaje autodidacta;
+- formación reglada no finalizada, formación complementaria, el Máster en Inteligencia Artificial en curso y aprendizaje autodidacta;
 - una pauta de adaptación de CV por oferta.
 
 ## Estructura propuesta
@@ -26,7 +26,7 @@ Se incorporarán los datos obtenidos en la entrevista y en las fuentes aportadas
 3. **Banco de logros:** fichas de evidencia reutilizables. Cada ficha distinguirá hechos, alcance, métricas, tecnologías y formulaciones aptas para CV.
 4. **Trayectoria profesional:** cargo, periodo, responsabilidades y contribución de cada etapa. Las fechas o atribuciones corregidas en entrevista prevalecerán sobre extractos iniciales de LinkedIn y se marcarán los datos aún pendientes de conciliación.
 5. **Competencias y herramientas:** nivel actual solo donde se haya confirmado; experiencia histórica separada para evitar presentar dominio vigente sin evidencia.
-6. **Formación:** estudios no terminados sin presentarlos como titulaciones; cursos seleccionables por relevancia; aprendizaje autodidacta descrito como método, no como certificado.
+6. **Formación:** estudios no terminados sin presentarlos como titulaciones; Máster en Inteligencia Artificial con Titulación Universitaria, en curso, impartido por BIG school con certificado de la Universidad Isabel I; cursos seleccionables por relevancia; aprendizaje autodidacta descrito como método, no como certificado. La formación en curso no se presentará como máster completado ni como titulación ya obtenida.
 7. **Adaptación por oferta:** una pauta para seleccionar un perfil principal, otro secundario y de tres a cinco logros relevantes, además de señalar información que no debe afirmarse o requiere confirmación.
 
 ## Reglas de trazabilidad y precisión
