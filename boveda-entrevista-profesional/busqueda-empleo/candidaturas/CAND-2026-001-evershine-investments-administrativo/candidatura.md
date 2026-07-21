@@ -3,7 +3,7 @@ id: CAND-2026-001
 titulo: Candidatura a EVERSHINE INVESTMENTS — Administrativo/a
 fecha_creacion: 2026-07-21
 fecha_actualizacion: 2026-07-21
-estado: pendiente_de_aprobacion
+estado: aprobada
 tipo: candidatura
 ---
 
@@ -11,9 +11,9 @@ tipo: candidatura
 
 ## Estado
 
-`pendiente_de_aprobacion`
+`aprobada`
 
-La documentación está preparada y requiere validación humana antes de cualquier uso externo. No se ha enviado la candidatura ni se ha abierto ningún formulario.
+La documentación ha sido validada por la persona candidata. No se ha enviado la candidatura ni se ha abierto ningún formulario.
 
 ## Documentos
 
@@ -29,10 +29,12 @@ Los datos de contacto se han tomado de [[datos-privados-candidatura]] y solo se 
 
 ## Control previo a aprobación
 
-- Confirmar que se desea continuar pese a que la Formación Profesional en Administración de Empresas y Gestión Contable no está finalizada.
-- Validar el rango salarial, cuyo límite inferior está por debajo del mínimo de referencia de 20.000 € brutos anuales.
-- Revisar el CV y la carta, especialmente las fechas y la selección de experiencia.
-- Obtener el enlace o canal de candidatura antes de aprobar cualquier envío.
+- La persona candidata confirma que desea continuar pese a que la Formación Profesional en Administración de Empresas y Gestión Contable no está finalizada.
+- El rango salarial incluye el mínimo de referencia de 20.000 € brutos anuales.
+- El CV y la carta están aprobados; las fechas contractuales de Herfrailes son 01/10/2011–03/10/2024.
+- El enlace de candidatura está registrado en [[analisis-oferta]].
+
+La aprobación no autoriza por sí misma ningún envío. Cualquier inscripción posterior requiere una instrucción explícita de la persona candidata.
 
 ## Trazabilidad
 

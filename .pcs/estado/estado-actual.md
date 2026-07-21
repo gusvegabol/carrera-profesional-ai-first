@@ -56,7 +56,7 @@ Mantener dos líneas separadas: evaluar si la arquitectura recomendada de doble 
 
 Se ha abierto además la sesión `sesion-20260721-1644-perfiles-sinteticos-para-evaluar-entrevistas` para debatir un posible banco de perfiles sintéticos que acelere la prueba de los playbooks. Es una línea abierta de investigación metodológica: no autoriza simulaciones, cambios de playbook ni sustituye la validación con personas reales.
 
-La sesión [[sesion-20260721-1651-tension-carrera-ai-y-busqueda-de-trabajo]] deliberó la tensión entre el desarrollo metodológico de Carrera AI y la prioridad personal de búsqueda de empleo. Su resultado vigente es no pausar ni bifurcar el host, sino establecer una rama operativa interna y separada para búsqueda de empleo. [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]] está en curso; las fases posteriores de asistencia en Chrome o acceso mediante conectores requieren su propio diseño y validación antes de ejecutarse.
+La sesión [[sesion-20260721-1651-tension-carrera-ai-y-busqueda-de-trabajo]] deliberó la tensión entre el desarrollo metodológico de Carrera AI y la prioridad personal de búsqueda de empleo. Su resultado vigente es no pausar ni bifurcar el host, sino establecer una rama operativa interna y separada para búsqueda de empleo. [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]] quedó completada con una candidatura real preparada y validada; las fases posteriores de asistencia en Chrome o acceso mediante conectores requieren su propio diseño y validación antes de ejecutarse.
 
 ## Aprendizajes de la primera prueba real de cobertura profesional
 
@@ -78,7 +78,7 @@ El segundo caso real, `ENT-002-M01`, se ejecutó el 2026-07-21 después de aplic
 - Delimitar `EXP-001-entrevista-y-storybank` antes de ejecutarlo y mantenerlo separado de cualquier integración de código.
 - Decidir explícitamente si se adopta, modifica o descarta la recomendación para el primer piloto.
 - Si se adopta, definir el contrato del piloto: muestra de entrevistas, salida inicial revisable, control de privacidad, criterios de corrección y señales de utilidad.
-- Completar [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]]: cerrar el diseño de adaptación por oferta y producir CV y cartas revisables a partir de la matriz factual.
+- Conservar y reutilizar el flujo validado de adaptación por oferta para futuras candidaturas, manteniendo la aprobación humana antes de cualquier envío.
 - Evaluar por separado si Vault Operator o Local REST API MCP aportan valor a la bóveda ya consolidada, sin reinstalar configuraciones heredadas.
 - Mantener separadas la cobertura, la profundidad y la correspondencia ESCO mientras no exista una decisión posterior que cambie ese alcance.
 - No tratar la evaluación como validación con personas ni actualizar el SPEC o el playbook de profundidad por inferencia.
@@ -89,7 +89,7 @@ El segundo caso real, `ENT-002-M01`, se ejecutó el 2026-07-21 después de aplic
 - `ACC-20260717-1642-001-materializar-versionado-carrera-ai` quedó completada; no deja trabajo abierto dentro de su alcance.
 - No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones permanecen registradas históricamente en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Es candidata a acción futura la definición del primer piloto, condicionada a una decisión explícita sobre la recomendación metodológica.
-- [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]] está en curso y tiene prioridad alta. Las fases de asistencia en Chrome y conectores de portales no son acciones autorizadas todavía.
+- [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]] está completada. Las fases de asistencia en Chrome y conectores de portales no son acciones autorizadas todavía.
 - `ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian` quedó completada el 2026-07-18. La evaluación de plugins adicionales es una iniciativa independiente.
 
 ## Decisiones vigentes relevantes
@@ -150,6 +150,6 @@ El segundo caso real, `ENT-002-M01`, se ejecutó el 2026-07-21 después de aplic
 - `sesion-20260717-1058-retirada-graphify-carrera-ai.md`: sesión cerrada de decisión, retirada física y verificación de Graphify.
 - [[sesion-20260721-1651-tension-carrera-ai-y-busqueda-de-trabajo]]: sesión de origen de la rama operativa de búsqueda de empleo.
 - [[DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo]]: decisión vigente de mantener la rama operativa dentro del host y separada de la investigación de entrevista.
-- [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]]: acción en curso para activar el flujo inicial de CV y cartas adaptados.
+- [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]]: acción completada que validó el flujo inicial de CV y cartas adaptados.
 - `run-graphify.bat`, `.pcs/.graphifyignore`, `docs/.graphifyignore` y los tres directorios `graphify-out/`: artefactos eliminados el 2026-07-17.
 - `AGENTS.md`, `.pcs/AGENTS.md`, `docs/AGENTS.md` y `.gitignore`: instrucciones limpiadas el 2026-07-17 para retirar el uso operativo de Graphify.

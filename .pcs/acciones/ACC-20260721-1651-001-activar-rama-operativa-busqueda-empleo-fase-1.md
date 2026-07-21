@@ -1,11 +1,11 @@
 ---
 id: ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1
 titulo: Activar la rama operativa de búsqueda de empleo — fase 1
-estado: en_curso
+estado: completada
 prioridad: alta
 fecha_creacion: 2026-07-21
 fecha_actualizacion: 2026-07-21
-fecha_cierre:
+fecha_cierre: 2026-07-21
 tipo: accion
 host: carrera-ai
 ---
@@ -24,9 +24,9 @@ Definir y materializar la primera fase de la rama operativa: analizar texto de o
 ## Seguimiento
 
 - Fecha objetivo: sin fecha fijada.
-- Bloqueo actual: validación humana pendiente de la candidatura piloto `CAND-2026-001`.
+- Bloqueo actual: ninguno dentro del alcance de la fase 1.
 - Dependencias: [[datos-core-busqueda]] debe seguir siendo factual y revisable.
-- Próximo paso: revisar y, si procede, aprobar la candidatura piloto antes de cualquier envío.
+- Próximo paso: conservar la candidatura aprobada; cualquier inscripción o envío requerirá una instrucción explícita de la persona responsable.
 
 ## Criterio de cierre
 
@@ -34,7 +34,7 @@ La fase 1 estará completada cuando exista un flujo documentado y validado que, 
 
 ## Evidencia de cierre
 
-Evidencia parcial disponible, sin cierre de la acción: se ha preparado [[busqueda-empleo/candidaturas/CAND-2026-001-evershine-investments-administrativo/candidatura|CAND-2026-001]] para una oferta real de EVERSHINE INVESTMENTS. Existen análisis, CV y carta de presentación en formatos DOCX y PDF, todos pendientes de validación humana. No se ha realizado ningún envío ni se ha abierto ningún formulario externo.
+La persona responsable validó [[busqueda-empleo/candidaturas/CAND-2026-001-evershine-investments-administrativo/candidatura|CAND-2026-001]] para una oferta real de EVERSHINE INVESTMENTS. Existen análisis, CV y carta de presentación en formatos DOCX y PDF; el enlace de la oferta y las fechas contractuales de Herfrailes quedaron registrados. No se ha realizado ningún envío ni se ha abierto ningún formulario externo.
 
 ## Relaciones
 

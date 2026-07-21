@@ -167,7 +167,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 | Periodo | Organización y cargo | Alcance para CV |
 | --- | --- | --- |
-| 2011–octubre de 2024 | Herfrailes S. L. — Director Ejecutivo | Dirección simultánea de RR. HH., IT, operaciones, logística y parte de administración. Coordinaba directamente a responsables de tienda y mantenía entrevistas semanales y canal de puerta abierta con el personal |
+| 01/10/2011–03/10/2024 | Herfrailes S. L. — Director Ejecutivo | Dirección simultánea de RR. HH., IT, operaciones, logística y parte de administración. Coordinaba directamente a responsables de tienda y mantenía entrevistas semanales y canal de puerta abierta con el personal |
 | 2009–2011 | INERZA, S. A. — Programador | Gestión de vivienda pública para el Gobierno de Canarias |
 | 2001–2009 | General de Software de Canarias, S. A. U. — Analista programador | Algoritmo de adjudicación de plazas para profesorado del Gobierno de Canarias |
 | 2000–2001 | Eurocanarias Oftalmológica — Analista programador | Sistema clínico a medida, presentaciones y hardware |
@@ -178,7 +178,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | 1985 | ELECMO Informática — Analista programador | Hardware |
 | 1984–1985 | GES Seguros y Reaseguros, S. A. — Programador freelance | Mailing de pólizas y gestión documental de siniestros |
 
-**Dato pendiente de conciliación:** LinkedIn sitúa la finalización formal de Herfrailes en enero de 2025; la persona candidata identifica octubre de 2024 como cierre operativo tras la venta de las empresas. Confirmar la fecha contractual antes de publicar un CV.
+**Fecha contractual confirmada:** Herfrailes S. L. comenzó el 01/10/2011 y finalizó el 03/10/2024. Esta fecha sustituye la discrepancia anterior con LinkedIn.
 
 ## 5. Competencias y herramientas
 
@@ -254,4 +254,4 @@ Perfil predominantemente autodidacta: identifica una necesidad profesional, comb
 
 ---
 
-**Estado de la matriz:** base factual enriquecida a partir de la entrevista. Lista para adaptar CV a una oferta concreta, con la fecha contractual de cierre en Herfrailes pendiente de conciliación.
+**Estado de la matriz:** base factual enriquecida a partir de la entrevista. Lista para adaptar CV a una oferta concreta.

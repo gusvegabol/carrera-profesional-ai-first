@@ -2,7 +2,7 @@
 id: CAND-2026-001-analisis-oferta
 titulo: Análisis de oferta — EVERSHINE INVESTMENTS — Administrativo/a
 fecha_creacion: 2026-07-21
-estado: pendiente_de_aprobacion
+estado: aprobada
 tipo: analisis_candidatura
 id_candidatura: CAND-2026-001
 ---
@@ -19,7 +19,7 @@ id_candidatura: CAND-2026-001
 - **Experiencia solicitada:** al menos un año.
 - **Estudios solicitados:** Ciclo Formativo de Grado Superior.
 - **Sector:** gestión de inversiones.
-- **Enlace:** no aportado.
+- **Enlace:** <https://www.infojobs.net/las-palmas-de-gran-canaria/administrativo/of-i4e4ba5ea3248a2bcef326dac31de2f?applicationOrigin=search-filtered%7Celement%7E7441812279&searchId=7441812279&page=1&sortBy=PUBLICATION_DATE>.
 
 Las funciones anunciadas abarcan atención telefónica y comunicación, gestión administrativa y de expedientes, elaboración, archivo y gestión documental, tareas de secretaría y apoyo administrativo general, tramitación de facturas, y uso de Microsoft Office o Google Workspace.
 
@@ -33,7 +33,7 @@ Existe un encaje relevante en gestión administrativa y documental, organizació
 - no consta experiencia directa documentada en un puesto de secretaría;
 - no consta experiencia directa documentada de atención telefónica ni en gestión de inversiones.
 
-La persona candidata confirma que desea presentarse pese a la brecha formativa. El rango salarial cruza el mínimo de referencia registrado en [[datos-core-busqueda]]: su límite inferior queda por debajo de 20.000 € y el superior, por encima.
+La persona candidata confirma que desea presentarse pese a la brecha formativa. El rango salarial incluye el mínimo de referencia registrado en [[datos-core-busqueda]], 20.000 € brutos anuales.
 
 ## Selección factual para adaptar la candidatura
 
@@ -57,9 +57,9 @@ El CV prioriza administración, gestión documental, precisión, organización y
 
 - No se ha usado foto.
 - No se ha incorporado localidad personal ni enlace profesional.
-- No se ha inventado un enlace de la oferta.
+- Se ha registrado el enlace aportado de la oferta.
 - Los datos privados se limitan a esta candidatura conforme a [[datos-privados-candidatura]].
-- La candidatura queda registrada en [[seguimiento-candidaturas]] como `pendiente_de_aprobacion`.
+- La candidatura queda registrada en [[seguimiento-candidaturas]] como `aprobada`.
 - No se ha realizado ningún envío, inscripción ni apertura de formulario externo.
 
 Documentación preparada: [[candidatura]].
