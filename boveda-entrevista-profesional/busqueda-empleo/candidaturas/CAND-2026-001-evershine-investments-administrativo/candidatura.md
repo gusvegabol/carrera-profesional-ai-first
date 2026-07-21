@@ -25,7 +25,7 @@ La documentación fue validada por la persona candidata. El 2026-07-22, la perso
 
 ## Datos y alcance autorizados
 
-Los datos de contacto se han tomado de [[datos-privados-candidatura]] y solo se autorizan para `CAND-2026-001`. El CV y la carta incluyen nombre, correo y teléfono; no incluyen localidad personal, enlace profesional ni foto.
+Los datos de contacto se han tomado de [[datos-privados-candidatura]] y solo se autorizan para `CAND-2026-001`. El CV y la carta incluyen nombre, correo y teléfono; no incluyen localidad personal ni enlace profesional. La versión final del CV enviada por la persona candidata incorpora una foto de perfil.
 
 ## Control previo a aprobación
 
@@ -35,7 +35,7 @@ Los datos de contacto se han tomado de [[datos-privados-candidatura]] y solo se 
 - La persona candidata revisó el aspecto del DOCX; ajustó el idioma del estilo a español y lo considera legible y correcto. La justificación del texto queda como posible mejora estética, no como bloqueo.
 - El enlace de candidatura está registrado en [[analisis-oferta]].
 
-La foto se incorporará manualmente si la persona candidata decide utilizarla.
+La persona candidata incorporó manualmente una foto de perfil en los archivos finales `cv.docx` y `cv.pdf` que presentó.
 
 El envío fue realizado directamente por la persona candidata.
 
