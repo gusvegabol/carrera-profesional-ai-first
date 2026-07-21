@@ -24,9 +24,9 @@ Definir y materializar la primera fase de la rama operativa: analizar texto de o
 ## Seguimiento
 
 - Fecha objetivo: sin fecha fijada.
-- Bloqueo actual: ninguno; el diseño del proceso sigue en debate.
+- Bloqueo actual: validación humana pendiente de la candidatura piloto `CAND-2026-001`.
 - Dependencias: [[datos-core-busqueda]] debe seguir siendo factual y revisable.
-- Próximo paso: ejecutar una prueba con una oferta real.
+- Próximo paso: revisar y, si procede, aprobar la candidatura piloto antes de cualquier envío.
 
 ## Criterio de cierre
 
@@ -34,7 +34,7 @@ La fase 1 estará completada cuando exista un flujo documentado y validado que, 
 
 ## Evidencia de cierre
 
-Pendiente.
+Evidencia parcial disponible, sin cierre de la acción: se ha preparado [[busqueda-empleo/candidaturas/CAND-2026-001-evershine-investments-administrativo/candidatura|CAND-2026-001]] para una oferta real de EVERSHINE INVESTMENTS. Existen análisis, CV y carta de presentación en formatos DOCX y PDF, todos pendientes de validación humana. No se ha realizado ningún envío ni se ha abierto ningún formulario externo.
 
 ## Relaciones
 
