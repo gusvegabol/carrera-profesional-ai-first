@@ -4,6 +4,10 @@
 
 Este email sirve para iniciar una conversación profesional sin vincularse a una oferta concreta. Antes de enviarlo, revisaré la variante elegida y obtendré la aprobación humana explícita de la persona candidata. Los únicos campos personalizables son la empresa, la persona destinataria y el motivo de contacto.
 
+- Desde la Dirección ejecutiva, he dirigido de forma transversal personas, operaciones, sistemas, logística y parte de la administración; también he diseñado procesos de selección, precontratación, incorporación y seguimiento, y he preparado informes para el Consejo de Dirección.
+- En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he analizado presupuestos para acelerar la información presupuestaria de Tesorería e Intervención al grupo de gobierno.
+- En Operaciones, he diseñado una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras, ajustándolo cuando detectaba desviaciones; además, he creado un sistema de seguimiento del mantenimiento de los vehículos de la empresa.
+
 ## Empresa concreta
 
 **Asunto:** Presentación profesional para [Empresa]
@@ -14,9 +18,9 @@ Este email sirve para iniciar una conversación profesional sin vincularse a una
 
 **Propuesta de valor:**
 
-Me interesa aportar mi experiencia profesional a un equipo con retos concretos.
-Me gustaría conocer el contexto, las prioridades y las necesidades del equipo.
-Busco explorar cómo podría contribuir de forma útil a los objetivos compartidos.
+Desde la Dirección ejecutiva, he dirigido de forma transversal personas, operaciones, sistemas, logística y parte de la administración; también he diseñado procesos de selección, precontratación, incorporación y seguimiento, y he preparado informes para el Consejo de Dirección.
+En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he analizado presupuestos para acelerar la información presupuestaria de Tesorería e Intervención al grupo de gobierno.
+En Operaciones, he diseñado una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras, ajustándolo cuando detectaba desviaciones; además, he creado un sistema de seguimiento del mantenimiento de los vehículos de la empresa.
 
 **Petición o disponibilidad:** Quedo disponible para conversar sobre posibles necesidades presentes o futuras de [Empresa].
 
@@ -26,7 +30,7 @@ Adjunto mi CV.
 
 ## Intermediario de colocación
 
-**Asunto:** Presentación profesional para oportunidades de [Empresa]
+**Asunto:** Presentación profesional para oportunidades compatibles
 
 **Saludo:** Hola, [Persona destinataria]:
 
@@ -34,11 +38,11 @@ Adjunto mi CV.
 
 **Propuesta de valor:**
 
-Quiero poner mi experiencia profesional al servicio de oportunidades con un encaje real.
-Me gustaría comprender la necesidad antes de valorar una contribución concreta.
-Quedo disponible para explicar mi enfoque y explorar conjuntamente dónde podría aportar más.
+Desde la Dirección ejecutiva, he dirigido de forma transversal personas, operaciones, sistemas, logística y parte de la administración; también he diseñado procesos de selección, precontratación, incorporación y seguimiento, y he preparado informes para el Consejo de Dirección.
+En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he analizado presupuestos para acelerar la información presupuestaria de Tesorería e Intervención al grupo de gobierno.
+En Operaciones, he diseñado una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras, ajustándolo cuando detectaba desviaciones; además, he creado un sistema de seguimiento del mantenimiento de los vehículos de la empresa.
 
-**Petición o disponibilidad:** Quedo disponible para una conversación sobre oportunidades en [Empresa] que puedan ser adecuadas.
+**Petición o disponibilidad:** Agradeceré que consideréis mi perfil para oportunidades compatibles con esta experiencia.
 
 **Cierre:** Gracias por tenerme en cuenta.
 
@@ -46,7 +50,7 @@ Adjunto mi CV.
 
 ## Contacto personal
 
-**Asunto:** Presentación profesional y consulta sobre [Empresa]
+**Asunto:** Presentación profesional y consulta
 
 **Saludo:** Hola, [Persona destinataria]:
 
@@ -54,12 +58,20 @@ Adjunto mi CV.
 
 **Propuesta de valor:**
 
-Estoy explorando conversaciones profesionales en las que pueda aportar valor de manera responsable.
-Me interesa escuchar el contexto, identificar necesidades y colaborar con un propósito claro.
-Me gustaría presentar mi experiencia con honestidad y encontrar un encaje útil para ambas partes.
+Desde la Dirección ejecutiva, he dirigido de forma transversal personas, operaciones, sistemas, logística y parte de la administración; también he diseñado procesos de selección, precontratación, incorporación y seguimiento, y he preparado informes para el Consejo de Dirección.
+En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he analizado presupuestos para acelerar la información presupuestaria de Tesorería e Intervención al grupo de gobierno.
+En Operaciones, he diseñado una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras, ajustándolo cuando detectaba desviaciones; además, he creado un sistema de seguimiento del mantenimiento de los vehículos de la empresa.
 
-**Petición o disponibilidad:** Si lo ves oportuno, agradeceré tu orientación sobre [Empresa] o una conversación breve.
+**Petición o disponibilidad:** Si lo ves oportuno, agradeceré que difundas este perfil o me pongas en contacto con una persona o entidad para la que pueda resultar pertinente, sin presuponer que conozcas una vacante.
 
 **Cierre:** Gracias por tu tiempo y por considerar mi mensaje.
 
 Adjunto mi CV.
+
+## Conversión a carta formal
+
+- Conservaré el núcleo factual sin cambios.
+- Sustituiré el asunto por la fecha y el destinatario.
+- Usaré un saludo formal y mantendré el cierre.
+- Copiaré el contenido a un DOCX solo si se solicita.
+- No añadiré hechos durante la conversión.
