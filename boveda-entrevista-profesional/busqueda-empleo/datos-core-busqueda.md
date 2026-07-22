@@ -202,7 +202,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 | Periodo | Organización y cargo | Alcance para CV |
 | --- | --- | --- |
-| 01/10/2011–03/10/2024 | Herfrailes S. L. — Director Ejecutivo | Dirección simultánea de RR. HH., IT, operaciones, logística y parte de administración. Coordinaba directamente a responsables de tienda y mantenía entrevistas semanales y canal de puerta abierta con el personal |
+| 01/10/2011–03/10/2024 | Herfrailes S. L. — Director Ejecutivo | Dirección simultánea de RR. HH., IT, operaciones, logística y parte de administración. Coordinaba directamente a responsables de tienda y mantenía entrevistas semanales y canal de puerta abierta con el personal. Este contenido corresponde a HER-06 y no se usa por defecto en CV; consultarlo solo si la candidatura justifica gestión de personas |
 | 2009–2011 | INERZA, S. A. — Programador | Gestión de vivienda pública para el Gobierno de Canarias |
 | 2001–2009 | General de Software de Canarias, S. A. U. — Analista programador | Algoritmo de adjudicación de plazas para profesorado del Gobierno de Canarias |
 | 2000–2001 | Eurocanarias Oftalmológica — Analista programador | Sistema clínico a medida, presentaciones y hardware |
