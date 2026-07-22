@@ -21,8 +21,8 @@ Este guion reúne únicamente hechos de `[[datos-core-busqueda]]`. Está prepara
 
 ### Resumen de valor
 
-He dirigido de forma transversal personas, operaciones, sistemas, logística y parte de la administración; analizo procesos, modelo información y convierto tareas manuales en flujos documentados y automatizados. He aplicado ese enfoque a la selección y acogida de personal, el control logístico, la gestión documental y los procesos administrativos.
-**Trazabilidad:** § 4 «Herfrailes S. L. — Director Ejecutivo»; § 3 «HER-01 — Sistema de selección, contratación y onboarding» / Contribución; § 3 «HER-03 — Algoritmo de pedido y control logístico» / Contribución.
+He dirigido de forma transversal personas, operaciones, sistemas, logística y parte de la administración; analizo procesos, modelo información y convierto tareas manuales en flujos documentados y automatizados. He aplicado ese enfoque a la selección y acogida de personal, la organización del trabajo, el control logístico, la gestión documental y los procesos administrativos.
+**Trazabilidad:** § 4 «Herfrailes S. L. — Director Ejecutivo»; § 3 «HER-01 — Sistema de selección, contratación y onboarding» / Contribución; § 3 «HER-03 — Algoritmo de pedido y control logístico» / Contribución; § 3 «HER-04 — Reorganización del trabajo y cultura de equipo por tienda» / Contribución.
 **Uso previsto:** resumen y email.
 
 ## Áreas de contribución seleccionadas
@@ -31,8 +31,10 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
 | --- | --- | --- | --- |
 | Dirección (Management) | He coordinado directamente a responsables de tienda, mantenido entrevistas semanales y un canal de puerta abierta con el personal. | § 4 «Herfrailes S. L. — Director Ejecutivo» / Alcance para CV. | Área de contribución y experiencia. |
 | Dirección (Management) | He diseñado procesos de selección, precontratación, incorporación y seguimiento, y he preparado informes para el Consejo de Dirección. | § 3 «HER-01» / Contribución y Alcance. | Área de contribución, experiencia y email. |
+| Dirección (Management) | He reorganizado el trabajo en equipos polivalentes por tienda para que las secciones se apoyaran según necesidad. | § 3 «HER-04 — Reorganización del trabajo y cultura de equipo por tienda» / Contribución. | Área de contribución y experiencia. |
 | Administración | He clasificado datos variables de documentos laborales, separado los datos personales sujetos a protección de datos y modelado puestos y requisitos. | § 3 «HER-02 — Gestión documental, privacidad y autoservicio de RR. HH.» / Contribución. | Área de contribución y experiencia. |
 | Operaciones | He diseñado una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras, ajustándolo cuando detectaba desviaciones. | § 3 «HER-03» / Contribución, Modelo y Mejora continua. | Área de contribución, experiencia y email. |
+| Operaciones | He diseñado y coordinado campañas de recogida de datos de procedencia de clientes para delimitar la zona de influencia de las tiendas. | § 3 «HER-05 — Segmentación de clientes por zona geográfica y servicio a domicilio» / Contribución. | Área de contribución, experiencia y email. |
 | Operaciones | He creado un sistema de seguimiento del mantenimiento de los vehículos de la empresa. | § 3 «HER-03» / Complemento logístico. | Área de contribución y experiencia. |
 
 ## Experiencia y logros para el CV maestro
@@ -67,10 +69,24 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
   **Trazabilidad:** § 3 «HER-03» / Resultado.
   **Uso previsto:** logro cuantificado y email.
 
+- He reorganizado el trabajo en equipos polivalentes por tienda, de modo que las secciones se apoyaran según necesidad.
+  **Trazabilidad:** § 3 «HER-04 — Reorganización del trabajo y cultura de equipo por tienda» / Contribución.
+  **Uso previsto:** experiencia y área de Dirección.
+
+- He diseñado y coordinado dos campañas de recogida de datos de procedencia de clientes para mapear la zona de influencia de las tiendas; el análisis identificó que el 42 % de la clientela de la tienda grande procedía de la zona en riesgo ante una nueva competencia.
+  **Trazabilidad:** § 3 «HER-05 — Segmentación de clientes por zona geográfica y servicio a domicilio» / Contribución y Resultado segunda aplicación.
+  **Uso previsto:** experiencia, logro de Operaciones y email.
+
+- He definido la política local de servicio a domicilio a partir de los datos de procedencia de clientes, con umbrales mínimos crecientes según la distancia.
+  **Trazabilidad:** § 3 «HER-05» / Primera aplicación.
+  **Uso previsto:** experiencia y logro de Operaciones.
+
+  **Límite de atribución:** no atribuir a Gustavo la decisión colegiada de abrir la tercera tienda; su contribución fue el diseño y la ejecución del análisis de datos.
+
 ### Granintra S. A. — Analista programador · 1990–1996
 
 - He implantado el análisis recibido para un sistema a medida de consignataria, naviera y carga y descarga de áridos, y he dirigido a dos programadores con hitos supervisados por una empresa externa.
-  **Trazabilidad:** § 3 «GRAN-01 — Sistema integrado de consignataria, naviera y áridos» / Encargo y Dirección técnica; § 4 «Granintra S. A. — Analista programador».
+  **Trazabilidad:** § 3 «GRAN-01 — Sistema integrado de consignataria, naviera y áridos» / Implantación y dirección técnica; § 4 «Granintra S. A. — Analista programador».
   **Uso previsto:** experiencia histórica y área de Operaciones.
 
 - He analizado e implantado la facturación de la zona de carga y descarga de áridos.
@@ -105,10 +121,13 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
 | Afirmación descartada | Motivo |
 | --- | --- |
 | «Tomé individualmente las decisiones de contratación». | § 3 «HER-01» / Precaución: las decisiones se tomaban en el Consejo de Dirección. |
-| «Máster en Inteligencia Artificial finalizado» o titulación universitaria obtenida. | § 6 «Formación en curso»: el máster está en curso; § 6 «Estudios reglados no finalizados»: los estudios de ingeniería y FP no finalizaron. |
+| «Máster en Inteligencia Artificial finalizado» o grado universitario obtenido. | § 6 «Formación en curso»: el máster está en curso; § 6 «Estudios reglados no finalizados»: los estudios de ingeniería y FP no finalizaron. |
 | Inglés profesional, avanzado o fluido. | § 1 «Posicionamiento y condiciones de búsqueda» / Idiomas: solo se confirma un nivel básico en conversación y lectura técnica funcional con apoyo. |
 | Presentar Java, PHP, JavaScript, C++, Oracle, UNIX, Transtool u otras tecnologías históricas como dominio actual. | § 5 «Experiencia tecnológica histórica»: solo pueden aparecer cuando sean relevantes y no deben presentarse como dominio actual sin nueva confirmación. |
 | Actividad como profesional independiente desde 2025. | § «Uso y límites»: no aporta evidencia suficiente para una candidatura por ahora. |
+| Detalles de HER-06 sobre conflictos, personas, tiendas o situaciones sensibles. | § 3 «HER-06 — Liderazgo directo y canales de comunicación» / Precaución: no usar por defecto y limitar, si procede, a liderazgo directo y canales de comunicación. |
+| Atribuir a Gustavo la apertura de la tercera tienda. | § 3 «HER-05» / Precaución: la decisión fue colegiada; su contribución fue el análisis de datos. |
+| Experiencia municipal. | § «Uso y límites» de [[datos-core-busqueda]]: el histórico municipal se conserva, pero no se usa en perfiles objetivo, logros seleccionables por defecto ni materiales de candidatura. |
 | Teléfono, correo electrónico, dirección postal o cualquier otro dato de contacto. | No se ha consultado `datos-privados-candidatura.md`, porque no es necesario para esta selección factual; debe incorporarse únicamente con autorización para el encabezado. |
 | Una prioridad permanente de Dirección (Management), Administración u Operaciones. | § «Uso y límites»: los tres perfiles objetivo permanecen disponibles sin prioridad fija; este CV los integra para una candidatura espontánea. |
 
