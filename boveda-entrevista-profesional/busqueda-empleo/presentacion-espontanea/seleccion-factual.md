@@ -114,7 +114,7 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
 | --- | --- | --- | --- |
 | Herramientas actuales de nivel medio-alto | He trabajado con Notion, ChatGPT, Codex, Work, Ollama, Obsidian, Trello, Office 365, SQL Server, Microsoft Visual Studio, Windows 11, VB.NET y Windows Server. | § 5 «Herramientas y tecnologías actuales — nivel medio-alto». | Competencias/herramientas. |
 | Idiomas | Español nativo; inglés básico en conversación y lectura técnica funcional con apoyo de herramientas cuando sea necesario. | § 1 «Posicionamiento y condiciones de búsqueda» / Idiomas. | Idiomas. |
-| Formación en curso | Máster en Inteligencia Artificial con Titulación Universitaria — BIG school, con certificado de la Universidad Isabel I, en curso. | § 6 «Formación en curso». | Formación. |
+| Formación en curso | Máster en Inteligencia Artificial con Certificación Universitaria — BIG school, con certificado de la Universidad Isabel I, en curso. | § 6 «Formación en curso». | Formación. |
 | Formación complementaria | Liderazgo en tiempos de cambio; Liderazgo y Gestión de Equipos de Alto Rendimiento; Innovación y emprendimiento. | § 6 «Formación complementaria relevante» / entradas de 2014–2015. | Formación, con selección según espacio. |
 
 ## Afirmaciones descartadas o no confirmadas
