@@ -1,6 +1,6 @@
-# Búsqueda de empleo
+# Job-up: búsqueda de empleo
 
-Esta carpeta es la rama operativa de búsqueda de empleo dentro de Carrera AI. Está separada de la investigación metodológica de entrevista y sirve para preparar candidaturas trazables a partir de información factual.
+Esta carpeta es la rama operativa Job-up de búsqueda de empleo dentro de Carrera AI. Está separada de la investigación metodológica de entrevista y sirve para preparar candidaturas trazables a partir de información factual.
 
 Su alcance termina en la preparación y revisión de cada candidatura. Cualquier inscripción o envío requiere la aprobación humana explícita de la persona candidata.
 
@@ -13,6 +13,7 @@ Su alcance termina en la preparación y revisión de cada candidatura. Cualquier
 - [[TEMPLATE_CANDIDATURA]]: plantilla de trazabilidad de una candidatura.
 - [[PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0]]: procedimiento operativo de preparación.
 - [[candidaturas/README]]: estructura y reglas de las carpetas de candidatura.
+- [[presentacion-espontanea/README|Materiales para candidatura espontánea]]: contiene el CV maestro y el email modular no vinculados a una oferta.
 
 ## Trazabilidad
 

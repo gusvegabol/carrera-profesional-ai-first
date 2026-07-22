@@ -2,7 +2,7 @@
 id: datos-core-busqueda
 titulo: Datos Core para Búsqueda de Empleo
 fecha_creacion: 2026-07-21
-fecha_actualizacion: 2026-07-21
+fecha_actualizacion: 2026-07-22
 estado: en_construccion
 tipo: base_datos
 ---
@@ -13,11 +13,12 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 ## Uso y límites
 
-- Mantener disponibles los tres perfiles objetivo, sin prioridad fija.
+- Mantener disponibles los perfiles de Dirección, Administración y Operaciones, sin prioridad fija.
 - Antes de redactar un CV, elegir un perfil principal, otro secundario y entre tres y cinco logros pertinentes para la oferta.
 - No afirmar una titulación, una responsabilidad, una métrica, un nivel técnico o un idioma por encima de lo registrado aquí.
 - Diferenciar siempre la contribución individual de las decisiones colegiadas, la validación externa y los resultados atribuidos a un equipo.
 - La etapa como profesional independiente desde 2025 no se utilizará por ahora: no aporta evidencia suficiente para una candidatura.
+- El histórico municipal se conserva para mantener la trayectoria completa, pero no se utilizará en perfiles objetivo, logros seleccionables por defecto ni materiales de candidatura.
 
 ## 1. Posicionamiento y condiciones de búsqueda
 
@@ -26,7 +27,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Nombre | Gustavo Vega Bolaños |
 | Ubicación para trabajo presencial | Gran Canaria |
 | Modalidad | Presencial, híbrida o remota según las condiciones y el tipo de puesto |
-| Perfiles disponibles | RR. HH. y operaciones; IT y sistemas; administración, logística y gestión pública |
+| Perfiles disponibles | Dirección; Administración; Operaciones |
 | Salario de referencia | Mínimo de 20.000 € brutos anuales para jornada completa |
 | Jornada parcial | Valorable según el resto de condiciones |
 | Sectores | Búsqueda abierta; cada oferta se evalúa según sus condiciones |
@@ -34,29 +35,29 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 ## 2. Perfiles profesionales objetivo
 
-### Perfil A — Dirección de RR. HH. y operaciones
+### Perfil A — Dirección
 
-**Propuesta de valor:** dirección transversal de personas, operaciones y sistemas; diseño de procesos de selección, contratación, onboarding, seguimiento y control documental.
+**Experiencia relacionada:** en Herfrailes S. L. ejerció como Director Ejecutivo con responsabilidades simultáneas sobre RR. HH., IT, operaciones, logística y parte de administración; coordinó a responsables de tienda y desarrolló los procesos documentados en `HER-01` a `HER-05`.
 
-**Competencias a priorizar:** selección estructurada, automatización del ciclo de vida de la persona empleada, documentación laboral, protección de datos, planificación de vacaciones y ausencias, formación, coordinación de responsables de tienda y mejora de procesos.
+**Competencias a priorizar:** coordinación de responsables de tienda, organización del trabajo, selección estructurada, automatización de procesos, documentación laboral, protección de datos, planificación de vacaciones y ausencias, y mejora de procesos.
 
-**Logros seleccionables:** `HER-01`, `HER-02`, `HER-03` y `GAL-01`.
+**Logros seleccionables:** `HER-01`, `HER-02`, `HER-04` y `HER-05`.
 
-### Perfil B — IT, sistemas y automatización
+### Perfil B — Administración
 
-**Propuesta de valor:** análisis de procesos y datos para diseñar sistemas a medida, automatizar documentación y decisiones operativas, e integrar herramientas de negocio.
+**Experiencia relacionada:** en Herfrailes S. L. clasificó datos variables de documentos laborales, separó datos personales, modeló puestos y requisitos, y automatizó vacaciones, permisos, nóminas solicitadas y el registro de entradas y salidas; en etapas técnicas desarrolló soluciones de contabilidad, gestión comercial y análisis funcional.
 
-**Competencias a priorizar:** análisis funcional, modelado de datos, bases de datos, VB.NET, SQL Server, automatización, algoritmos de asignación y previsión, validación con casos reales, sistemas Windows y aprendizaje técnico autónomo.
+**Competencias a priorizar:** documentación laboral, protección de datos, modelado de puestos y requisitos, planificación de ausencias, contabilidad, gestión comercial, análisis funcional y automatización.
 
-**Logros seleccionables:** `HER-01`, `HER-03`, `GSC-01`, `INERZA-01`, `GRAN-01` y `COMP-01`.
+**Logros seleccionables:** `HER-01`, `HER-02`, `COMP-01` y `GRAN-01`.
 
-### Perfil C — Administración, logística y gestión pública
+### Perfil C — Operaciones
 
-**Propuesta de valor:** mejora de procesos administrativos y de información, trazabilidad documental, recaudación, presupuestos, control logístico y coordinación entre áreas.
+**Experiencia relacionada:** en Herfrailes S. L. creó una base de datos de ventas y un algoritmo de pedido, implantó el seguimiento del mantenimiento de vehículos, reorganizó el trabajo por tiendas y coordinó dos campañas de datos de procedencia de clientes; en Granintra S. A. implantó un sistema para operaciones portuarias.
 
-**Competencias a priorizar:** documentación oficial, presupuestos, recaudación, contabilidad, gestión comercial, logística, aprovisionamiento, control de vehículos, trazabilidad y negociación operativa.
+**Competencias a priorizar:** análisis de datos de ventas, previsión y pedido, logística, aprovisionamiento, mantenimiento de vehículos, coordinación entre áreas, segmentación de clientes y mejora continua.
 
-**Logros seleccionables:** `HER-02`, `HER-03`, `INERZA-01`, `GAL-01`, `GRAN-01` y `COMP-01`.
+**Logros seleccionables:** `HER-03`, `HER-04`, `HER-05` y `GRAN-01`.
 
 ## 3. Banco de logros y evidencias
 
@@ -70,7 +71,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Alcance | Recibía aproximadamente 10 CV al día y realizaba unas 10 entrevistas al mes, con picos por bajas urgentes. Redactaba vacantes, cribaba CV, entrevistaba, preparaba informes para el Consejo de Dirección, realizaba onboarding y estructuraba seguimientos a 15, 30 y 90 días |
 | Resultado | El trabajo posterior a la entrevista pasó de 15–20 minutos a 5; los informes al Consejo, de 20 a 3 minutos; la documentación de contratación y onboarding pasó de unos 20 minutos a generación inmediata |
 | Evidencia complementaria | El proceso pasó de documentación manual de casi 60 documentos por persona a generación desde un perfil estructurado |
-| Uso en CV | RR. HH. y operaciones; IT y sistemas |
+| Uso en CV | Dirección; Administración |
 | Precaución | Las decisiones de contratación se tomaban en el Consejo de Dirección; no atribuirlas como decisión individual |
 
 ### HER-02 — Gestión documental, privacidad y autoservicio de RR. HH.
@@ -83,19 +84,53 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Evolución | Adaptó el sistema a cambios normativos de protección de datos y restringió el acceso a información personal sin impedir que Administración accediera a los datos necesarios |
 | Automatizaciones adicionales | Planificación anual de vacaciones a partir de preferencias, solicitudes de días libres y permisos, envío de nóminas por correo a quienes lo solicitaron, y registro de entradas y salidas conforme a la normativa aplicable |
 | Resultado | El personal pasó a recibir información en horas en vez de días; las solicitudes quedaron registradas y calendarizadas. El control y la trazabilidad aumentaron, aunque inicialmente añadió carga administrativa que posteriormente automatizó |
-| Uso en CV | RR. HH. y operaciones; administración |
+| Uso en CV | Dirección; Administración |
 
 ### HER-03 — Algoritmo de pedido y control logístico
 
 | Elemento | Detalle |
 | --- | --- |
-| Contexto | Herfrailes S. L.; operación de supermercados y central de compras |
+| Contexto | Herfrailes S. L.; operación de supermercados. Las compras, el marketing, las finanzas y la relación con proveedores correspondían a la central de compras de la franquicia SPAR, salvo cuando se indique expresamente |
 | Contribución | Diseñó una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras |
 | Modelo | Clasificó patrones de venta por ofertas, campañas de marketing, estacionalidad, espectáculos cercanos, olas de calor anunciadas con dos semanas de antelación y venta cruzada; el sistema estimaba ventas y generaba cantidades de pedido |
 | Mejora continua | Ante desviaciones, investigaba la causa, retiraba variables que habían dejado de ser relevantes e incorporaba factores previsibles al algoritmo |
 | Resultado | Reducción del 30 % en caducidades y del 80 % en productos sin venta durante más de un mes, sin afectar a las ventas mediante reposición próxima al just-in-time |
-| Complemento logístico | Creó formularios y acciones periódicas documentadas para limpieza y comprobación de frenos, ruedas y otros elementos de los vehículos |
-| Uso en CV | Operaciones, logística; IT y sistemas |
+| Complemento logístico | Creó un sistema de seguimiento del mantenimiento de los vehículos de la empresa |
+| Uso en CV | Operaciones |
+
+### HER-04 — Reorganización del trabajo y cultura de equipo por tienda
+
+| Elemento | Detalle |
+| --- | --- |
+| Contexto | Herfrailes S. L., primeros años tras la incorporación (2011–2014 aprox.) |
+| Problema | La plantilla no estaba dimensionada según la carga real de trabajo y el personal operaba por áreas sin apoyo cruzado entre secciones |
+| Contribución | Rediseñó la organización del trabajo para formar equipos polivalentes por tienda: frutas, charcutería, caja y reposición se apoyaban entre sí según necesidad. Reubicó y ajustó la plantilla conforme a la carga de trabajo detectada |
+| Resultado | La plantilla total pasó de 110 personas en 2011, con dos tiendas, a 65 en 2024, con tres tiendas. Parte de esta reducción responde a la reorganización inicial de tareas; otra parte, posterior, a la caída de ventas tras la crisis del COVID y a la entrada de nueva competencia en la zona de influencia |
+| Evidencia complementaria | La facturación pasó de 7 M€ en 2011 a 11 M€ en 2013, con las mismas dos tiendas, coincidiendo con el periodo de reorganización; posteriormente descendió hasta 9 M€ tras el COVID, ya con las tres tiendas abiertas |
+| Uso en CV | Dirección; Operaciones |
+| Precaución | No presentar la reducción de plantilla como logro aislado ni atribuirla por completo a la reorganización; debe acompañarse del contexto de mercado |
+
+### HER-05 — Segmentación de clientes por zona geográfica y servicio a domicilio
+
+| Elemento | Detalle |
+| --- | --- |
+| Contexto | Herfrailes S. L.; decisión operativa local, distinta de las funciones de compras y marketing centralizadas en la central de compras de la franquicia SPAR |
+| Contribución | Diseñó y coordinó dos campañas de recogida de datos de procedencia de clientes mediante formularios en caja para mapear la zona de influencia real de las tiendas |
+| Primera aplicación (2013) | Con los datos de las dos tiendas, definió la política del servicio a domicilio gratuito desde 30 € de compra y estableció umbrales mínimos crecientes según la distancia, hasta 100 € en las zonas más alejadas |
+| Resultado primera aplicación | Eliminó el uso del servicio por parte de clientes de hasta 5 km que solo aprovechaban el reparto gratuito para productos pesados y compraban el resto en comercios de su propia zona |
+| Segunda aplicación (aprox. 2014–2015) | Repitió la recogida de datos en la tienda grande para evaluar el impacto de la apertura anunciada de una tienda competidora a menos de 0,5 km |
+| Resultado segunda aplicación | Detectó que un 42 % de la clientela de la tienda grande procedía de la zona en riesgo; este dato alimentó la decisión del Consejo de Dirección de abrir una tercera tienda propia de 350 m² en 2017 |
+| Uso en CV | Dirección; Operaciones |
+| Precaución | Atribuir a Gustavo el diseño y la ejecución del análisis de datos, no la decisión colegiada de abrir la tercera tienda |
+
+### HER-06 — Liderazgo directo y canales de comunicación
+
+| Elemento | Detalle |
+| --- | --- |
+| Contexto | Herfrailes S. L., desde aproximadamente 2014; ampliación hacia 2020 |
+| Contribución | Implantó entrevistas semanales rotativas con el personal y una política de puertas abiertas para tratar asuntos no resueltos en la tienda. Realizaba visitas sin previo aviso para verificar el funcionamiento. Hacia 2020 puso en marcha un canal anónimo en línea |
+| Uso en CV | No usar por defecto; valorar solo en candidaturas donde la gestión de personas sea relevante |
+| Precaución | No incluir detalles de conflictos, personas, tiendas o situaciones sensibles. Si se utiliza, limitarse al liderazgo directo y a los canales de comunicación |
 
 ### GSC-01 — Adjudicación de plazas de profesorado
 
@@ -107,7 +142,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Escala y validación | En 2009 la población de referencia superaba los 24.000 docentes. Equipos de unas diez personas por provincia comprobaban por muestreo las adjudicaciones antes de cerrar el proceso |
 | Resultado | El primer año, la asignación pasó de una semana manual a 8 horas; el segundo año, a 2 horas, más 2–3 horas de comprobación |
 | Mantenimiento | Actualizaba el algoritmo cada año conforme a la normativa de cada convocatoria, iniciando el trabajo aproximadamente un mes después del cierre de julio |
-| Uso en CV | IT y sistemas; administración y gestión pública |
+| Uso en CV | Histórico factual; seleccionar solo cuando aporte una evidencia técnica o administrativa pertinente |
 
 ### INERZA-01 — Gestión de vivienda pública
 
@@ -116,7 +151,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Contexto | INERZA, S. A.; área de Vivienda del Gobierno de Canarias |
 | Rol | Programador dentro de un equipo; las tareas eran asignadas por el responsable mediante STRUTS |
 | Contribución | Diseñó bases de datos para solicitudes de vivienda pública, clasificó datos de baremación, generó documentación oficial de los pasos de cada solicitud y desarrolló programas específicos de apoyo para personal funcionario |
-| Uso en CV | IT y sistemas; administración y gestión pública |
+| Uso en CV | Histórico factual; seleccionar solo cuando aporte una evidencia técnica o administrativa pertinente |
 | Precaución | No atribuir dirección del proyecto ni autoría integral del sistema |
 
 ### GRAN-01 — Sistema integrado de consignataria, naviera y áridos
@@ -124,11 +159,11 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Elemento | Detalle |
 | --- | --- |
 | Contexto | Granintra S. A. |
-| Encargo | Análisis completo de un sistema a medida para consignataria, naviera y carga y descarga de áridos |
-| Dirección técnica | Coordinó a dos programadores y cumplió hitos supervisados por una empresa externa |
+| Implantación y dirección técnica | Implantó el análisis recibido para un sistema a medida de consignataria, naviera y carga y descarga de áridos; dirigió a dos programadores con hitos supervisados por una empresa externa |
+| Facturación de áridos | Analizó e implantó la parte de facturación de la zona de carga y descarga de áridos |
 | Complejidad | Asumió el encargo sin experiencia previa en Transtool, UNIX Santa Cruz ni el entorno empresarial. Se formó en UNIX, realizó un curso de una semana en Madrid sobre Transtool y validó intensivamente el entorno de terminales |
 | Resultado | Entregó la aplicación dentro del plazo de un año; después desarrolló funciones de seguimiento de camiones que entraban y cargaban en el muelle |
-| Uso en CV | IT y sistemas; logística y operaciones |
+| Uso en CV | Administración; Operaciones |
 
 ### GAL-01 — Transformación administrativa y recaudatoria municipal
 
@@ -140,7 +175,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Recaudación ejecutiva | Informatizó el proceso de apremio y generaba durante la noche la documentación para notificación al día siguiente |
 | Resultado | La recaudación por apremio aumentó un 120 % en número de notificaciones y un 60 % en importe recaudado; además, se facilitaron fraccionamientos de deuda |
 | Gestión financiera | Negoció con entidades bancarias intereses y posibles avales para cuentas de proyectos del Cabildo, y anticipos de cobro de tributos como IVTM, basura e IBI |
-| Uso en CV | Administración, finanzas y gestión pública; IT y sistemas |
+| Uso en CV | Histórico factual; no seleccionar por defecto para candidaturas |
 | Precaución | La mejora de tiempos de atención a solicitudes ciudadanas no dispone de evidencia cuantificada y no debe expresarse con cifras |
 
 ### COMP-01 — Sistemas empresariales, contabilidad y gestión comercial
@@ -167,7 +202,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 | Periodo | Organización y cargo | Alcance para CV |
 | --- | --- | --- |
-| 01/10/2011–03/10/2024 | Herfrailes S. L. — Director Ejecutivo | Dirección simultánea de RR. HH., IT, operaciones, logística y parte de administración. Coordinaba directamente a responsables de tienda y mantenía entrevistas semanales y canal de puerta abierta con el personal |
+| 01/10/2011–03/10/2024 | Herfrailes S. L. — Director Ejecutivo | Dirección simultánea de RR. HH., IT, operaciones, logística y parte de administración. Coordinaba directamente a responsables de tienda y mantenía entrevistas semanales y canal de puerta abierta con el personal. Este contenido corresponde a HER-06 y no se usa por defecto en CV; consultarlo solo si la candidatura justifica gestión de personas |
 | 2009–2011 | INERZA, S. A. — Programador | Gestión de vivienda pública para el Gobierno de Canarias |
 | 2001–2009 | General de Software de Canarias, S. A. U. — Analista programador | Algoritmo de adjudicación de plazas para profesorado del Gobierno de Canarias |
 | 2000–2001 | Eurocanarias Oftalmológica — Analista programador | Sistema clínico a medida, presentaciones y hardware |
@@ -180,6 +215,18 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 **Fecha contractual confirmada:** Herfrailes S. L. comenzó el 01/10/2011 y finalizó el 03/10/2024. Esta fecha sustituye la discrepancia anterior con LinkedIn.
 
+### 4.bis Escala y evolución de Herfrailes S. L.
+
+| Año | Tiendas | Superficie | Plantilla | Facturación anual | Contexto |
+| --- | --- | --- | --- | --- | --- |
+| 2011 | 2 | 500 m² + 250 m² | 110 personas | 7 M€ | Incorporación de Gustavo |
+| 2013 | 2 | Sin cambios | — | 11 M€ | Facturación con las mismas dos tiendas, coincidiendo con la reorganización del trabajo de HER-04 |
+| 2017 | 3 | + 350 m² | — | — | Apertura de la tercera tienda: decisión colegiada apoyada en el análisis de datos de HER-05 |
+| 2020 en adelante | 3 | Sin cambios | — | Descenso hasta 9 M€ | Caída de ventas por la crisis del COVID y nueva competencia en la zona de influencia |
+| 2024 | 3 | 500 + 250 + 350 m² | 65 personas | 9 M€ | Cierre de la etapa en Herfrailes |
+
+Cada tienda tenía dos responsables por turnos, que reportaban directamente a Gustavo. Las funciones de compras, marketing, finanzas y relación con proveedores correspondían a la central de compras de la franquicia SPAR; no se atribuyen a Gustavo salvo cuando se indique expresamente.
+
 ## 5. Competencias y herramientas
 
 ### Competencias transferibles
@@ -190,6 +237,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 - Dirección transversal de personas, operaciones, sistemas y logística.
 - Trazabilidad documental, protección de datos y control de accesos.
 - Validación mediante casos reales, análisis de desviaciones y mejora iterativa.
+- Diseño de canales de comunicación y seguimiento directo del personal.
 - Aprendizaje autónomo y adaptación rápida a tecnología o dominios nuevos.
 
 ### Herramientas y tecnologías actuales — nivel medio-alto
@@ -213,7 +261,7 @@ La experiencia histórica puede aparecer en un CV cuando sea relevante, pero no 
 
 ### Formación en curso
 
-- **Máster en Inteligencia Artificial con Titulación Universitaria** — BIG school, con certificado de la Universidad Isabel I. En curso; no presentar como máster finalizado ni como titulación obtenida.
+- **Máster en Inteligencia Artificial con Certificación Universitaria** — BIG school, con certificado de la Universidad Isabel I. En curso; no presentar como máster finalizado ni como titulación obtenida.
 
 ### Estudios reglados no finalizados
 
@@ -239,19 +287,19 @@ La experiencia histórica puede aparecer en un CV cuando sea relevante, pero no 
 
 ### Patrón de aprendizaje
 
-Perfil predominantemente autodidacta: identifica una necesidad profesional, combina formación breve, bibliografía y práctica, y aplica el aprendizaje en problemas reales. Usar esta formulación como contexto de aprendizaje, no como sustituto de una titulación oficial.
+El historial registrado combina formación breve, bibliografía y práctica aplicada a necesidades profesionales. Esta descripción resume la forma de aprendizaje documentada y no sustituye una titulación oficial.
 
 ## 7. Protocolo de adaptación a una oferta
 
 1. Extraer de la oferta las funciones, requisitos, tecnologías, sector, ubicación y condiciones.
 2. Seleccionar un perfil principal y uno secundario de esta nota.
-3. Elegir entre tres y cinco logros del banco que respondan directamente a las necesidades de la oferta.
+3. Elegir entre tres y cinco logros del banco que respondan directamente a las necesidades de la oferta. Usar HER-06 solo de forma breve cuando la gestión de personas sea relevante y sin detalles sensibles.
 4. Redactar un titular y un resumen con las palabras clave de la oferta solo si están respaldadas por los hechos registrados.
 5. Seleccionar experiencia histórica y formación solo cuando refuercen esa candidatura.
-6. Revisar antes de enviar: cargo, fechas, cifras, tecnologías actuales, nivel de idiomas, estudios no finalizados y decisiones colegiadas.
+6. Revisar antes de enviar: cargo, fechas, cifras, tecnologías actuales, nivel de idiomas, estudios no finalizados, límites de atribución a la central SPAR y decisiones colegiadas del Consejo de Dirección.
 7. Si falta una evidencia o hay una contradicción, abrir una pregunta de entrevista; no completar el CV mediante suposición.
 8. Para una candidatura aprobada, consultar [[datos-privados-candidatura]] solo para los datos de formulario y registrar su estado y documentos en [[seguimiento-candidaturas]]. Esta matriz sigue siendo exclusivamente factual y profesional.
 
 ---
 
-**Estado de la matriz:** base factual enriquecida a partir de la entrevista. Lista para adaptar CV a una oferta concreta.
+**Estado de la matriz:** base factual enriquecida a partir de la entrevista, con HER-01 a HER-06 y la escala agregada de Herfrailes. Lista para adaptar CV a una oferta concreta.
