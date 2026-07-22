@@ -1,8 +1,8 @@
-# Inicio de sesión Work — búsqueda de empleo
+# Inicio de sesión Work — Job-up
 
 ## Ámbito
 
-Esta nota inicia exclusivamente la rama operativa de búsqueda de empleo de Carrera AI. No modifica ni reinterpreta la investigación metodológica de entrevista.
+Esta nota inicia exclusivamente Job-up, la rama operativa de búsqueda de empleo de Carrera AI. No modifica ni reinterpreta la investigación metodológica de entrevista.
 
 ## Consulta inicial
 

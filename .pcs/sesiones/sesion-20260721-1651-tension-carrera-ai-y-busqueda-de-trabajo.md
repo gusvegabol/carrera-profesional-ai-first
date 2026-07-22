@@ -2,8 +2,8 @@
 id: sesion-20260721-1651-tension-carrera-ai-y-busqueda-de-trabajo
 titulo: Tensión entre Carrera AI y la búsqueda de trabajo
 inicio: 2026-07-21 16:51
-cierre:
-estado: abierta
+cierre: 2026-07-22 11:26
+estado: cerrada
 tipo: sesion
 host: carrera-ai
 sesion_relacionada: sesion-20260705-concepto-cobertura-profesional-carrera-ai
@@ -49,7 +49,7 @@ La persona responsable adoptó posteriormente mantener ambas líneas dentro del 
 
 ## Acciones derivadas
 
-- [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]] — en curso. Delimitar y activar la preparación de CV y cartas adaptados a partir de texto de ofertas.
+- [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]] — completada. Delimitó y activó la preparación de CV y cartas adaptados a partir de texto de ofertas.
 
 ## Decisiones derivadas
 
@@ -67,14 +67,20 @@ La persona responsable adoptó posteriormente mantener ambas líneas dentro del 
 - `.pcs/decisiones/DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo.md`
 - `.pcs/acciones/ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1.md`
 - `.pcs/estado/estado-actual.md`
+- `boveda-entrevista-profesional/busqueda-empleo/README.md`
+- `boveda-entrevista-profesional/busqueda-empleo/seguimiento-candidaturas.md`
+
+## Resultado de cierre
+
+La rama operativa quedó materializada en `boveda-entrevista-profesional/busqueda-empleo/` con una fuente factual, un procedimiento de adaptación por oferta, un registro de candidaturas y los documentos de la primera candidatura. La acción de fase 1 está completada y la candidatura `CAND-2026-001` figura como enviada por la persona candidata. La sesión queda cerrada porque ya no requiere trabajo documental adicional.
 
 ## Rehidratación futura
 
-- **Dónde quedó el trabajo:** se adoptó la rama operativa de búsqueda de empleo dentro del host; su fase 1 está en curso y la investigación metodológica de entrevista continúa separada.
-- **Leer primero:** `README.md`, [[estado-actual]], [[DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo]] y esta sesión.
-- **Líneas abiertas a retomar:** cerrar el diseño de adaptación por oferta, materializar la fase 1 y evaluar más adelante la asistencia en Chrome y los conectores de portales.
+- **Dónde quedó el trabajo:** la rama operativa de búsqueda de empleo está materializada y su fase 1 está completada; la investigación metodológica de entrevista continúa separada.
+- **Leer primero:** `boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md`, [[seguimiento-candidaturas]], [[estado-actual]] y [[DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo]].
+- **Líneas abiertas a retomar:** reutilizar el flujo para ofertas concretas y evaluar más adelante, en un alcance separado, la asistencia en Chrome y los conectores de portales.
 - **Riesgos de malinterpretación:** no confundir la rama operativa con una modificación del SPEC o de los playbooks; no enviar candidaturas sin aprobación humana por lote.
-- **Siguiente gesto recomendado:** completar la especificación del flujo de CV adaptados a una oferta y ejecutar la acción de fase 1.
+- **Siguiente gesto recomendado:** recibir una oferta concreta y preparar una candidatura revisable conforme al procedimiento operativo vigente.
 
 ## Trazabilidad
 
@@ -83,4 +89,4 @@ La persona responsable adoptó posteriormente mantener ambas líneas dentro del 
 - Acciones relacionadas: [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]].
 - Decisiones relacionadas: [[DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo]].
 - Estado de proyecto relacionado: [[estado-actual]].
-- Cierre: pendiente.
+- Cierre: sesión cerrada el 2026-07-22 tras verificar la materialización del sistema de búsqueda de empleo y la finalización de su fase 1.

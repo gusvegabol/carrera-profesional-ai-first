@@ -2,8 +2,8 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
-fecha_actualizacion: 2026-07-21
-ultima_sesion_relacionada: sesion-20260721-1651-tension-carrera-ai-y-busqueda-de-trabajo
+fecha_actualizacion: 2026-07-22
+ultima_sesion_relacionada: sesion-20260722-1131-job-up
 host: carrera-ai
 ---
 
@@ -25,7 +25,7 @@ La razón operativa es que el coste de tiempo y recursos de la extracción semá
 
 El trabajo vigente del host permanece en la revisión metodológica de la entrevista de cobertura profesional. `docs/DOCUMENTO_SPEC_CARRERA_AI.md` sigue definiendo el producto y se ha alineado de forma acotada con Carrera AI 2.0. El núcleo metodológico y el Perfil Profesional Accionable continúan siendo el marco para diseñar la cobertura de trayectorias profesionales sin sustituir el playbook de profundidad existente.
 
-Por [[DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo]], Carrera AI incorpora una rama operativa de búsqueda de empleo dentro del mismo host. Su finalidad es preparar con rapidez CV adaptados, cartas de presentación y candidaturas revisables a partir de información profesional factual. Esta rama no modifica el SPEC, los playbooks ni la investigación metodológica de entrevista; ambas líneas siguen separadas.
+Por [[DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo]], Carrera AI incorpora una rama operativa de búsqueda de empleo dentro del mismo host, denominada **Job-up**. Su finalidad es preparar con rapidez CV adaptados, cartas de presentación y candidaturas revisables a partir de información profesional factual. Esta rama no modifica el SPEC, los playbooks ni la investigación metodológica de entrevista; ambas líneas siguen separadas.
 
 En paralelo, la investigación GitHub dispone ya de estructura, flujo obligatorio,
 templates de fichas y comparativas. La calibración inicial se completó con la
@@ -52,7 +52,7 @@ La utilidad de esa separación y de Graphify queda superada por la decisión de 
 
 ## Foco operativo
 
-Mantener dos líneas separadas: evaluar si la arquitectura recomendada de doble pasada debe orientar el primer piloto de cobertura profesional, y activar la fase 1 de búsqueda de empleo para producir CV y cartas adaptados a ofertas concretas. La reorganización documental y la bóveda raíz de Obsidian ya están consolidadas y no desplazan ninguno de estos focos.
+Mantener dos líneas separadas: evaluar si la arquitectura recomendada de doble pasada debe orientar el primer piloto de cobertura profesional, y operar Job-up para valorar ofertas y producir candidaturas revisables cuando la persona responsable lo autorice. La reorganización documental y la bóveda raíz de Obsidian ya están consolidadas y no desplazan ninguno de estos focos.
 
 Se ha abierto además la sesión `sesion-20260721-1644-perfiles-sinteticos-para-evaluar-entrevistas` para debatir un posible banco de perfiles sintéticos que acelere la prueba de los playbooks. Es una línea abierta de investigación metodológica: no autoriza simulaciones, cambios de playbook ni sustituye la validación con personas reales.
 

@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Permitir iniciar una sesión Work de búsqueda de empleo con la invocación explícita `$iniciar-busqueda-empleo`.
+**Goal:** Permitir iniciar una sesión Work de búsqueda de empleo con la invocación explícita `$empleo-inicio-busqueda`.
 
 **Architecture:** La skill local contiene únicamente el procedimiento reutilizable y sigue la rehidratación PCS sin crear un comando nuevo. El documento de la bóveda contiene el protocolo operativo de esta rama y señala los documentos de trabajo. La skill solo se activa de forma explícita.
 
@@ -10,8 +10,8 @@
 
 ## Global Constraints
 
-- Crear la skill únicamente en `.codex/skills/iniciar-busqueda-empleo/`.
-- La skill debe activarse solo mediante `$iniciar-busqueda-empleo`.
+- Crear la skill únicamente en `.codex/skills/empleo-inicio-busqueda/`.
+- La skill debe activarse solo mediante `$empleo-inicio-busqueda`.
 - No modificar el Core PCS ni la investigación metodológica de entrevista.
 - No escribir, enviar candidaturas, usar Chrome ni contactar con terceros durante el inicio.
 - Redactar en español y usar wikilinks resolubles para documentos Markdown de la bóveda.
@@ -33,7 +33,7 @@
 Pedir a un agente fresco, sin proporcionarle la nueva skill, que responda únicamente a este mensaje:
 
 ```text
-$iniciar-busqueda-empleo
+$empleo-inicio-busqueda
 ```
 
 - [ ] **Step 2: Verificar el fallo esperado.**
@@ -43,8 +43,8 @@ Registrar como resultado basal que la invocación no puede cargar de forma fiabl
 ### Task 2: Crear la skill y el punto de entrada operativo
 
 **Files:**
-- Create: `.codex/skills/iniciar-busqueda-empleo/SKILL.md`
-- Create: `.codex/skills/iniciar-busqueda-empleo/agents/openai.yaml`
+- Create: `.codex/skills/empleo-inicio-busqueda/SKILL.md`
+- Create: `.codex/skills/empleo-inicio-busqueda/agents/openai.yaml`
 - Create: `boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md`
 
 **Interfaces:**
@@ -56,15 +56,15 @@ Registrar como resultado basal que la invocación no puede cargar de forma fiabl
 Ejecutar:
 
 ```powershell
-python 'C:\Users\gusve\.codex\skills\.system\skill-creator\scripts\init_skill.py' iniciar-busqueda-empleo --path '.codex/skills' --interface display_name='Iniciar búsqueda de empleo' --interface short_description='Abre la rama operativa de empleo' --interface default_prompt='Usa $iniciar-busqueda-empleo para continuar la búsqueda de empleo.'
+python 'C:\Users\gusve\.codex\skills\.system\skill-creator\scripts\init_skill.py' empleo-inicio-busqueda --path '.codex/skills' --interface display_name='Iniciar búsqueda de empleo' --interface short_description='Abre la rama operativa de empleo' --interface default_prompt='Usa $empleo-inicio-busqueda para continuar la búsqueda de empleo.'
 ```
 
 - [ ] **Step 2: Sustituir `SKILL.md` por el procedimiento mínimo.**
 
 ```markdown
 ---
-name: iniciar-busqueda-empleo
-description: Use when the user explicitly invokes $iniciar-busqueda-empleo in a fresh Work session to start or resume the empleo-search branch of carrera-ai.
+name: empleo-inicio-busqueda
+description: Use when the user explicitly invokes $empleo-inicio-busqueda in a fresh Work session to start or resume the empleo-search branch of carrera-ai.
 ---
 
 # Iniciar búsqueda de empleo
@@ -90,7 +90,7 @@ Dejar `agents/openai.yaml` con este contenido:
 interface:
   display_name: "Iniciar búsqueda de empleo"
   short_description: "Abre la rama operativa de empleo"
-  default_prompt: "Usa $iniciar-busqueda-empleo para continuar la búsqueda de empleo."
+  default_prompt: "Usa $empleo-inicio-busqueda para continuar la búsqueda de empleo."
 policy:
   allow_implicit_invocation: false
 ```
@@ -121,8 +121,8 @@ Indicar el estado de las candidaturas y las acciones relevantes, proponer el sig
 Ejecutar:
 
 ```powershell
-python 'C:\Users\gusve\.codex\skills\.system\skill-creator\scripts\quick_validate.py' '.codex/skills/iniciar-busqueda-empleo'
-git diff --check -- '.codex/skills/iniciar-busqueda-empleo' 'boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md'
+python 'C:\Users\gusve\.codex\skills\.system\skill-creator\scripts\quick_validate.py' '.codex/skills/empleo-inicio-busqueda'
+git diff --check -- '.codex/skills/empleo-inicio-busqueda' 'boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md'
 ```
 
 Esperado: `quick_validate.py` informa de una skill válida y `git diff --check` no devuelve errores.
@@ -130,14 +130,14 @@ Esperado: `quick_validate.py` informa de una skill válida y `git diff --check` 
 - [ ] **Step 6: Commit.**
 
 ```powershell
-git add -- '.codex/skills/iniciar-busqueda-empleo' 'boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md'
+git add -- '.codex/skills/empleo-inicio-busqueda' 'boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md'
 git commit -m "feat: añade inicio local de búsqueda de empleo"
 ```
 
 ### Task 3: Verificar la activación y los límites
 
 **Files:**
-- Test: `.codex/skills/iniciar-busqueda-empleo/SKILL.md`
+- Test: `.codex/skills/empleo-inicio-busqueda/SKILL.md`
 - Test: `boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md`
 
 **Interfaces:**
@@ -149,7 +149,7 @@ git commit -m "feat: añade inicio local de búsqueda de empleo"
 En una sesión Work fresca, enviar exactamente:
 
 ```text
-$iniciar-busqueda-empleo
+$empleo-inicio-busqueda
 ```
 
 - [ ] **Step 2: Comprobar la salida.**
@@ -169,7 +169,7 @@ Si la salida omite alguno de los cinco criterios, ajustar únicamente el texto d
 - [ ] **Step 4: Commit de una corrección, si existiera.**
 
 ```powershell
-git add -- '.codex/skills/iniciar-busqueda-empleo' 'boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md'
+git add -- '.codex/skills/empleo-inicio-busqueda' 'boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md'
 git commit -m "fix: ajusta inicio local de búsqueda de empleo"
 ```
 
