@@ -5,12 +5,13 @@ id_entrevistado:
 fecha_creacion:
 estado: abierta | cerrada | en_pausa
 fecha_cierre:
-motivo_cierre: objetivo_completado | peticion_persona | limite_tiempo_declarado | fallo_tecnico_modelo 
+motivo_cierre: objetivo_completado | peticion_persona | limite_tiempo_declarado | fallo_tecnico_modelo
 ---
 
 # Sesión de cobertura — <fecha>
 
 Mapa asociado: mapas/MAPA_<id_mapa>.md
+Transcripción verbatim: transcripciones/TRANSCRIPCION_<id_entrevistado>-<id_mapa>_<fecha>.md
 
 <!--
 Plantilla deliberadamente ligera — a diferencia de los otros cuatro tipos,
@@ -36,6 +37,8 @@ cada sección puede ser tan larga o corta como la sesión lo pida.
 ## Activación de profundidad, si ocurrió
 
 <Zona, patrón usado, referencia a la inmersión resultante.>
+
+Checkpoint: <Referencia a CHECKPOINT_<id_mapa>-<id_zona>-<intento>.md si quedó una inmersión parcial; indicar «no aplica» si la inmersión terminó.>
 
 ## Hilos abiertos y competencias candidatas para próxima sesión
 

@@ -38,6 +38,19 @@ La prueba usará como capa de orquestación el [Playbook de cobertura profesiona
 4. Confirmar la convención de identificadores específica del piloto.
 5. Preparar una copia de trabajo de las plantillas, sin modificar las plantillas canónicas mientras la convención siga en debate.
 
+Los templates canónicos se encuentran en `docs/templates/artefactos-cobertura-profesional/`:
+
+- [TEMPLATE_ENTREVISTADO.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_ENTREVISTADO.md)
+- [TEMPLATE_MAPA.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_MAPA.md)
+- [TEMPLATE_SESION.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_SESION.md)
+- [TEMPLATE_CHECKPOINT.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_CHECKPOINT.md)
+- [TEMPLATE_INMERSION.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_INMERSION.md)
+- [TEMPLATE_COMPETENCIA.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_COMPETENCIA.md)
+- [TEMPLATE_TRANSCRIPCION.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_TRANSCRIPCION.md)
+- [TEMPLATE_EVALUACION_PILOTO.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_EVALUACION_PILOTO.md)
+
+Los artefactos creados a partir de ellos se guardan en `boveda-entrevista-profesional/artefactos-cobertura-profesional/`; la carpeta de templates no debe contener registros de personas ni resultados de entrevistas.
+
 ### Durante cada sesión
 
 1. Registrar el tiempo que la persona declara tener y su permiso para detenerse.
@@ -67,9 +80,10 @@ El piloto necesita estos artefactos, todos dentro del área de evidencias o trab
 - un checkpoint solo si una inmersión queda parcial;
 - una inmersión por activación de profundidad;
 - una competencia solo cuando la evidencia lo justifique;
+- una transcripción verbatim por sesión, para permitir la auditoría turno a turno;
 - una nota de evaluación del piloto al terminar.
 
-Las plantillas existentes cubren estos tipos. La nomenclatura de fichero contiene dos variantes históricas (`ZONA_<n>` y una propuesta basada en identificadores de entrevistado, mapa, zona e intento). Para esta prueba se deberá escoger una sola convención antes de crear el primer artefacto; esa elección no se considerará adopción global.
+Los ocho templates canónicos anteriores cubren estos tipos. El template de competencia incluye las validaciones factual, de competencia y de valor profesional. El template de transcripción conserva los turnos literales de la sesión. El template de evaluación estructura la nota consolidada del piloto y sus incidencias. La nomenclatura de fichero contiene dos variantes históricas (`ZONA_<n>` y una propuesta basada en identificadores de entrevistado, mapa, zona e intento). Para esta prueba se deberá escoger una sola convención antes de crear el primer artefacto; esa elección no se considerará adopción global.
 
 ## Criterios de evaluación
 

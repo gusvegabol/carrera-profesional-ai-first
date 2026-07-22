@@ -8,6 +8,21 @@ Sigue el mismo criterio de extensión que [[PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3
 
 Este documento **no sustituye** a [[PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA]] ni modifica su alcance. Es la capa que decide cuándo invocarlo.
 
+## Templates canónicos de artefactos
+
+Antes de crear o actualizar un artefacto real, consultar el template correspondiente en la ruta canónica `docs/templates/artefactos-cobertura-profesional/`:
+
+- [TEMPLATE_ENTREVISTADO.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_ENTREVISTADO.md)
+- [TEMPLATE_MAPA.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_MAPA.md)
+- [TEMPLATE_SESION.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_SESION.md)
+- [TEMPLATE_CHECKPOINT.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_CHECKPOINT.md)
+- [TEMPLATE_INMERSION.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_INMERSION.md)
+- [TEMPLATE_COMPETENCIA.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_COMPETENCIA.md)
+- [TEMPLATE_TRANSCRIPCION.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_TRANSCRIPCION.md)
+- [TEMPLATE_EVALUACION_PILOTO.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_EVALUACION_PILOTO.md), para la nota de evaluación al terminar el piloto.
+
+Los artefactos reales se guardan en `boveda-entrevista-profesional/artefactos-cobertura-profesional/`, no en la carpeta de templates. Los templates son la estructura canónica reutilizable y no deben modificarse para resolver necesidades particulares de una persona.
+
 Como primer borrador (`v1_0_0`), no ha pasado todavía por ningún piloto real. A diferencia de v1.3.2, que llegó a esta forma tras cinco pilotos de profundidad, esta versión es puramente de diseño — su primera validación empírica queda pendiente.
 
 ---

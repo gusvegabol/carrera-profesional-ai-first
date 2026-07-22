@@ -243,3 +243,89 @@ La doble pasada continúa siendo una orientación experimental y no una metodolo
 5. Escoger la convención de identificadores.
 
 Cuando se rehidrate esta sesión, estos cinco puntos deben mostrarse como el siguiente gesto necesario para iniciar la prueba real.
+
+## Actualización — Prueba real de cobertura profesional y correcciones de templates
+
+El 2026-07-20 se ejecutó la primera prueba real de cobertura profesional con autorización expresa del responsable del piloto.
+
+### Decisiones del caso
+
+- Persona participante: el propio responsable del proyecto.
+- Alcance: el mínimo necesario para obtener al menos un artefacto útil.
+- Conservación: todos los datos obtenidos durante la entrevista, manteniendo la posibilidad de corregir, excluir o retirar información durante la revisión.
+- Convención de identificadores: `ENT-001`, `ENT-001-M01`, zonas con contador propio (`Z001`, `Z002`, etc.) e intentos con letra (`a`, `b`, etc.).
+
+### Resultado de la prueba
+
+La panorámica identificó zonas de RRHH, operaciones y logística, informática, hardware y cloud, y administración documental. La persona eligió RRHH para profundizar.
+
+Se completó una inmersión sobre la automatización y trazabilidad de selección, contratación, incorporación y seguimiento. Se obtuvo una competencia validada con evidencia fuerte, incluida validación factual, de competencia y de valor profesional.
+
+La sesión se cerró porque la persona indicó que ya no tenía tiempo. No se creó checkpoint porque la inmersión había terminado y no quedó una zona parcial.
+
+Los artefactos del caso se encuentran en `boveda-entrevista-profesional/artefactos-cobertura-profesional/`, con transcripción verbatim en `transcripciones/TRANSCRIPCION_ENT-001-M01_2026-07-20.md`.
+
+### Desviación detectada y corrección
+
+La primera materialización de los artefactos no siguió los templates canónicos porque se buscó inicialmente en la ruta histórica vacía de la bóveda y no en la ruta vigente `docs/templates/artefactos-cobertura-profesional/`.
+
+La corrección posterior consistió en:
+
+1. Normalizar entrevistado, mapa, sesión, inmersión y competencia conforme a sus templates canónicos.
+2. Añadir los campos de alcance y conservación aprobados al registro de entrevistado.
+3. Hacer explícitos los identificadores de zona e intento en los templates y artefactos.
+4. Añadir las tres validaciones de la competencia al template y al artefacto.
+5. Crear `TEMPLATE_TRANSCRIPCION.md` y conservar la transcripción verbatim de la prueba real.
+6. Enlazar la transcripción desde la sesión, el mapa y la inmersión.
+7. Registrar explícitamente el `no aplica` del checkpoint cuando la inmersión termina.
+8. Actualizar los playbooks y el contrato de preparación para señalar la ruta vigente de los templates y el nuevo artefacto de transcripción.
+
+Esta actualización deja constancia de la ejecución real y de la reparación documental. No cierra esta sesión PCS ni convierte el resultado experimental en adopción formal de la doble pasada.
+
+La evaluación consolidada de la primera prueba real queda en `boveda-entrevista-profesional/artefactos-cobertura-profesional/evaluaciones/EVALUACION_PILOTO_ENT-001-M01_2026-07-20.md`, con conclusión experimental `Modificar`.
+
+## Actualización — Template de evaluación del piloto
+
+Después de consolidar la evaluación de la primera prueba real se detectó que la nota de evaluación no tenía un template canónico propio. La matriz de evaluación definía el contenido, pero no la estructura reutilizable del documento.
+
+Se corrigió esta carencia mediante:
+
+- creación de `docs/templates/artefactos-cobertura-profesional/TEMPLATE_EVALUACION_PILOTO.md`;
+- adaptación de `EVALUACION_PILOTO_ENT-001-M01_2026-07-20.md` para enlazar y seguir ese template;
+- incorporación del template al inventario canónico del playbook de cobertura y del contrato de preparación del piloto;
+- verificación de frontmatter, secciones, enlaces locales y formato.
+
+El template de evaluación conserva la estructura A–G de la matriz, registra incidencias con impacto, corrección y cambio propuesto, y mantiene separada la conclusión experimental de cualquier adopción formal de la doble pasada.
+
+## Actualización — Aprendizajes de la primera prueba real
+
+La primera prueba real mostró que la arquitectura de cobertura profesional puede:
+
+- ampliar el mapa sin imponer una cronología;
+- detectar varias zonas y permitir que la persona elija dónde profundizar;
+- producir una competencia con evidencia concreta y validación explícita;
+- mantener visibles las zonas pendientes y los límites de lo explorado.
+
+También mostró que, antes de repetir la prueba, hay que:
+
+- crear la transcripción verbatim desde el inicio;
+- consultar y aplicar los templates canónicos antes de generar artefactos;
+- mantener un template específico para la evaluación del piloto;
+- explicar mejor qué detalles se buscan y qué significa el valor profesional;
+- reservar un cierre específico para revisar la utilidad del mapa con la persona.
+
+La evaluación consolidada queda en [[artefactos-cobertura-profesional/evaluaciones/EVALUACION_PILOTO_ENT-001-M01_2026-07-20]]. Su conclusión experimental es `Modificar`: la propuesta muestra valor, pero debe repetirse con estas correcciones. Esta conclusión no adopta formalmente la doble pasada como metodología.
+
+## Actualización — Segundo caso real de cobertura profesional (ENT-002)
+
+El 2026-07-21 se realizó un segundo caso real dentro de la línea experimental de cobertura, usando esta sesión PCS como contexto de trabajo. La persona participante autorizó expresamente el piloto, validó el alias `Carmen`, aprobó un alcance de muestra de trayectoria —caja, atención al cliente y apoyo a compañeras— y autorizó la conservación sin límite temporal, con exclusión de nombres de empresas, clientes y otros datos identificables innecesarios.
+
+Se materializó el caso separado `ENT-002` con mapa `ENT-002-M01`, transcripción verbatim, sesión de cobertura, inmersión, competencia y evaluación. La zona explorada fue «Incidencias de caja y apoyo a compañeras». La evidencia recogió una devolución financiada sin ticket y un descuadre por duplicación de devolución; la persona validó una formulación prudente centrada en detenerse, revisar, pedir confirmación cuando procede y acompañar a compañeras para que ganen autonomía.
+
+El mapa conserva como candidatas la formación operativa de nuevas incorporaciones en comercio minorista y la atención estacional a turistas con inglés funcional. La conclusión experimental del caso es `Continuar`: la entrevista generó un mapa parcial reconocido por la persona, mantuvo visibles los límites y no constituyó una certificación ni una adopción metodológica formal.
+
+Referencias de caso:
+
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/entrevistados/ENT-002.md`
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/mapas/MAPA_ENT-002-M01.md`
+- `boveda-entrevista-profesional/artefactos-cobertura-profesional/evaluaciones/EVALUACION_PILOTO_ENT-002-M01_2026-07-21.md`

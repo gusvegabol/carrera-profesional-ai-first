@@ -179,7 +179,7 @@ El 2026-07-12 se completó una exploración comparativa de cuatro formas de afro
 
 ### Capa episódica
 
-Se redactaron cuatro propuestas en `docs/Ideas debate - como afrontar entrevista cobertura profesional/`:
+Se redactaron cuatro propuestas en `docs/trabajo-en-curso/debates/`:
 
 1. Una línea de vida flexible y reconstruible.
 2. Una doble pasada de panorama e inmersión selectiva.
@@ -225,7 +225,7 @@ La evaluación es una recomendación debatible. No crea una decisión PCS, no ad
 - `docs/trabajo-en-curso/debates/03_Innovadora_atlas_conversacional_de_episodios_transiciones_y_capacidades.md`.
 - `docs/trabajo-en-curso/debates/04_Innovadora_dossier_de_hipotesis_contrastables_y_evidencia_progresiva.md`.
 - `docs/trabajo-en-curso/debates/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`.
-- `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`.
+- `docs/ideas-y-debates/cobertura-profesional/06_Presentacion_propuesta_recomendada.html`.
 - `docs/superpowers/plans/2026-07-12-presentacion-propuesta-entrevista.md`.
 - `run-graphify.bat`, `docs/AGENTS.md` y `docs/.graphifyignore`.
 - `.pcs/decisiones/DEC-20260710-2308-001-separar-corpus-graphify.md`.
@@ -233,7 +233,7 @@ La evaluación es una recomendación debatible. No crea una decisión PCS, no ad
 ### Rehidratación futura
 
 - **Dónde quedó el trabajo:** existe una recomendación metodológica explicada, pero todavía no adoptada, para el primer piloto de cobertura profesional.
-- **Leer primero:** `docs/trabajo-en-curso/debates/05_Evaluacion_experta_y_recomendacion_de_enfoque.md` y `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`.
+- **Leer primero:** `docs/trabajo-en-curso/debates/05_Evaluacion_experta_y_recomendacion_de_enfoque.md` y `docs/ideas-y-debates/cobertura-profesional/06_Presentacion_propuesta_recomendada.html`.
 - **Líneas abiertas a retomar:** adopción o ajuste de la doble pasada, definición del piloto y decisión posterior sobre la evolución hacia un atlas relacional.
 - **Riesgos de malinterpretación:** no tratar las puntuaciones como evidencia empírica, no convertir ESCO en prueba individual y no leer esta actualización histórica como sustituto de `estado-actual.md`.
 - **Siguiente gesto recomendado:** debatir la recomendación antes de materializar cambios en el playbook, el SPEC o los artefactos de ejecución.

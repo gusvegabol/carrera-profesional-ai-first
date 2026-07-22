@@ -192,3 +192,15 @@ También se abrió la [acción de implantación](../acciones/ACC-20260718-1700-0
   - `historico/docs/PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.md`.
   - `docs/PRESENTACION_PROPUESTA_USO_TRANSVERSAL_OBSIDIAN_v1_0_0.pptx`.
 - Cierre: 2026-07-18; decisión vigente y acción de implantación completada tras validación visual manual.
+
+## Actualización posterior — eliminación de ruta heredada
+
+El 2026-07-20 se comprobó y eliminó la carpeta heredada
+`docs/Ideas debate - como afrontar entrevista cobertura profesional/`. La carpeta
+ya estaba vacía en el working tree tras la migración de sus documentos a las
+rutas canónicas de `docs/trabajo-en-curso/debates/` y `docs/ideas-y-debates/`.
+
+Se actualizó el mapa de clasificación documental para que no presente la ruta
+eliminada como origen operativo. No cambian la decisión PCS ni la acción de
+implantación ya completada; esta nota solo completa la trazabilidad del cierre
+físico de la ruta heredada.

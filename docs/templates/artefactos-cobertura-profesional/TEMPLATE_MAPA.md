@@ -20,14 +20,18 @@ Referencia: <id_entrevistado>
 
 ### Zona <n> — <nombre de la zona>
 
+Identificador de zona: <id_zona, por ejemplo ENT-001-M01-Z003>
+
 Estado: explorada | candidata | parcial | pendiente
 
-Checkpoint: checkpoints/CHECKPOINT_<id_mapa>_ZONA_<n>.md (solo si estado: parcial)
-Inmersión(es): inmersiones/INMERSION_<id_mapa>_ZONA_<n>.md (una por cada activación cerrada)
-Competencia(s): competencias/COMPETENCIA_<id_mapa>_ZONA_<n>.md (solo si hubo competencia)
+Checkpoint: checkpoints/CHECKPOINT_<id_mapa>-<id_zona>-<intento>.md (solo si estado: parcial; si la inmersión terminó, indicar «no aplica»)
+Inmersión(es): inmersiones/INMERSION_<id_mapa>-<id_zona>-<intento>.md (una por cada activación cerrada; el intento usa `a`, `b`, etc.)
+Competencia(s): competencias/COMPETENCIA_<id_mapa>-<id_zona>-<intento>.md (solo si hubo competencia)
 
 Señal de origen: <texto breve que motivó registrar esta zona>
 Sesión de origen: sesiones/SESION_COBERTURA_<id_mapa>_<fecha>.md
+
+Transcripción de origen: transcripciones/TRANSCRIPCION_<id_entrevistado>-<id_mapa>_<fecha>.md
 
 ## Advertencia de límite
 

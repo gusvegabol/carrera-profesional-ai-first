@@ -8,7 +8,7 @@ La fuente de contenido es [la evaluación experta](<../../trabajo-en-curso/debat
 
 ## Entrega y navegación
 
-- Crear un único archivo autónomo en `docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`.
+- Crear un único archivo autónomo en `docs/ideas-y-debates/cobertura-profesional/06_Presentacion_propuesta_recomendada.html`.
 - Incluir HTML, CSS y JavaScript en el propio archivo; no cargar fuentes, bibliotecas, imágenes ni datos remotos.
 - Mostrar una pantalla por vez, con botones anterior/siguiente, puntos de progreso, teclas de flecha y la tecla Inicio para volver a la primera pantalla.
 - Adaptarse a pantalla de escritorio y móvil; respetar `prefers-reduced-motion`.

@@ -93,6 +93,16 @@ El sistema no tiene memoria implícita, así que debe reconstruir activamente, a
 
 No hace falta mostrar este registro en cada turno. Sí hace falta dejarlo explícito, aunque sea de forma breve, en los puntos de transición: antes de proponer una competencia, al cambiar de patrón, al cerrar una etapa, y siempre antes del cierre de sesión — porque no hay garantía de que la sesión llegue a un final ordenado, y un registro parcial recuperable vale más que una síntesis perfecta que nunca llegó a escribirse.
 
+## Templates de salida
+
+Cuando una inmersión de este playbook se ejecute dentro del piloto de cobertura profesional, los artefactos deben construirse consultando los templates canónicos de `docs/templates/artefactos-cobertura-profesional/`:
+
+- [TEMPLATE_INMERSION.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_INMERSION.md), para la inmersión.
+- [TEMPLATE_COMPETENCIA.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_COMPETENCIA.md), solo cuando la evidencia justifique una competencia.
+- [TEMPLATE_TRANSCRIPCION.md](../../templates/artefactos-cobertura-profesional/TEMPLATE_TRANSCRIPCION.md), para conservar los turnos verbatim de la sesión.
+
+Los documentos reales se guardan en `boveda-entrevista-profesional/artefactos-cobertura-profesional/`. La transcripción verbatim es un artefacto de auditoría obligatorio de la sesión; no sustituye a la inmersión ni a la competencia. La competencia debe conservar las validaciones factual, de competencia y de valor profesional.
+
 ---
 
 ## 8. Alcance del piloto

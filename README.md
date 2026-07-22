@@ -67,7 +67,7 @@ Si el comando no figura en el índice o el alias indicado no existe en `C:/Users
 - `./docs/AGENTS.md`
 - `./docs/metodologia/conceptos/idea-central.md`
 - `./docs/trabajo-en-curso/debates/05_Evaluacion_experta_y_recomendacion_de_enfoque.md`
-- `./docs/Ideas debate - como afrontar entrevista cobertura profesional/06_Presentacion_propuesta_recomendada.html`
+- `./docs/ideas-y-debates/cobertura-profesional/06_Presentacion_propuesta_recomendada.html`
 - `./docs/metodologia/playbooks/PLAYBOOK_COBERTURA_PROFESIONAL_v1_0_0.md`
 - `./docs/metodologia/playbooks/PLAYBOOK_ENTREVISTA_PROFESIONAL_v1_3_2_IA.md`
 
