@@ -5,7 +5,7 @@
 Este email sirve para iniciar una conversación profesional sin vincularse a una oferta concreta. Antes de enviarlo, revisaré la variante elegida y obtendré la aprobación humana explícita de la persona candidata. Los únicos campos personalizables son la empresa, la persona destinataria y el motivo de contacto.
 
 - Desde la Dirección ejecutiva, he dirigido de forma transversal personas, operaciones, sistemas, logística y parte de la administración; también he diseñado procesos de selección, precontratación, incorporación y seguimiento, y he preparado informes para el Consejo de Dirección.
-- En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he analizado presupuestos para acelerar la información presupuestaria de Tesorería e Intervención al grupo de gobierno.
+- En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he modelado puestos y requisitos.
 - En Operaciones, he diseñado una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras, ajustándolo cuando detectaba desviaciones; además, he creado un sistema de seguimiento del mantenimiento de los vehículos de la empresa.
 
 ## Empresa concreta
@@ -19,7 +19,7 @@ Este email sirve para iniciar una conversación profesional sin vincularse a una
 **Propuesta de valor:**
 
 Desde la Dirección ejecutiva, he dirigido de forma transversal personas, operaciones, sistemas, logística y parte de la administración; también he diseñado procesos de selección, precontratación, incorporación y seguimiento, y he preparado informes para el Consejo de Dirección.
-En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he analizado presupuestos para acelerar la información presupuestaria de Tesorería e Intervención al grupo de gobierno.
+En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he modelado puestos y requisitos.
 En Operaciones, he diseñado una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras, ajustándolo cuando detectaba desviaciones; además, he creado un sistema de seguimiento del mantenimiento de los vehículos de la empresa.
 
 **Petición o disponibilidad:** Quedo disponible para conversar sobre posibles necesidades presentes o futuras de [Empresa].
@@ -39,7 +39,7 @@ Adjunto mi CV.
 **Propuesta de valor:**
 
 Desde la Dirección ejecutiva, he dirigido de forma transversal personas, operaciones, sistemas, logística y parte de la administración; también he diseñado procesos de selección, precontratación, incorporación y seguimiento, y he preparado informes para el Consejo de Dirección.
-En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he analizado presupuestos para acelerar la información presupuestaria de Tesorería e Intervención al grupo de gobierno.
+En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he modelado puestos y requisitos.
 En Operaciones, he diseñado una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras, ajustándolo cuando detectaba desviaciones; además, he creado un sistema de seguimiento del mantenimiento de los vehículos de la empresa.
 
 **Petición o disponibilidad:** Agradeceré que consideréis mi perfil para oportunidades compatibles con esta experiencia.
@@ -59,7 +59,7 @@ Adjunto mi CV.
 **Propuesta de valor:**
 
 Desde la Dirección ejecutiva, he dirigido de forma transversal personas, operaciones, sistemas, logística y parte de la administración; también he diseñado procesos de selección, precontratación, incorporación y seguimiento, y he preparado informes para el Consejo de Dirección.
-En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he analizado presupuestos para acelerar la información presupuestaria de Tesorería e Intervención al grupo de gobierno.
+En Administración, he clasificado datos variables de documentos laborales, he separado los datos personales sujetos a protección de datos y he modelado puestos y requisitos.
 En Operaciones, he diseñado una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras, ajustándolo cuando detectaba desviaciones; además, he creado un sistema de seguimiento del mantenimiento de los vehículos de la empresa.
 
 **Petición o disponibilidad:** Si lo ves oportuno, agradeceré que difundas este perfil o me pongas en contacto con una persona o entidad para la que pueda resultar pertinente, sin presuponer que conozcas una vacante.
