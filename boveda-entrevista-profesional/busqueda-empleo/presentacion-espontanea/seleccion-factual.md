@@ -84,8 +84,12 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
 
 ### Granintra S. A. — Analista programador · 1990–1996
 
-- He realizado el análisis completo de un sistema a medida para consignataria, naviera y carga y descarga de áridos, y he coordinado técnicamente a dos programadores con hitos supervisados por una empresa externa.
+- He implantado el análisis recibido para un sistema a medida de consignataria, naviera y carga y descarga de áridos, y he dirigido a dos programadores con hitos supervisados por una empresa externa.
   **Trazabilidad:** § 3 «GRAN-01 — Sistema integrado de consignataria, naviera y áridos» / Encargo y Dirección técnica; § 4 «Granintra S. A. — Analista programador».
+  **Uso previsto:** experiencia histórica y área de Operaciones.
+
+- He analizado e implantado la facturación de la zona de carga y descarga de áridos.
+  **Trazabilidad:** § 3 «GRAN-01 — Sistema integrado de consignataria, naviera y áridos» / Facturación de la zona de carga y descarga de áridos; § 4 «Granintra S. A. — Analista programador».
   **Uso previsto:** experiencia histórica y área de Operaciones.
 
 - He entregado la aplicación dentro del plazo de un año y posteriormente he desarrollado funciones de seguimiento de camiones que entraban y cargaban en el muelle.
