@@ -2,7 +2,7 @@
 id: datos-privados-candidatura
 titulo: Datos Privados para Candidaturas
 fecha_creacion: 2026-07-21
-fecha_actualizacion: 2026-07-21
+fecha_actualizacion: 2026-07-22
 estado: plantilla
 tipo: datos_privados
 ---
@@ -33,6 +33,6 @@ tipo: datos_privados
 | Localidad | No incorporar |
 | Enlace profesional | No incorporar |
 | Foto | No incorporar; no ha sido adjuntada |
-| Alcance del consentimiento | Uso exclusivo para preparar `CAND-2026-001`; pendiente de aprobación humana y sin autorización de envío |
+| Alcance del consentimiento | Uso exclusivo para `CAND-2026-001`; candidatura aprobada y enviada por la persona candidata el 2026-07-22 mediante InfoJobs. No autoriza el uso de estos datos para otras candidaturas |
 
 Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-001-evershine-investments-administrativo/candidatura|CAND-2026-001]].

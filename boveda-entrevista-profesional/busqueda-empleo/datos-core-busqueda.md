@@ -17,7 +17,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 - Antes de redactar un CV, elegir un perfil principal, otro secundario y entre tres y cinco logros pertinentes para la oferta.
 - No afirmar una titulación, una responsabilidad, una métrica, un nivel técnico o un idioma por encima de lo registrado aquí.
 - Diferenciar siempre la contribución individual de las decisiones colegiadas, la validación externa y los resultados atribuidos a un equipo.
-- La etapa como profesional independiente desde 2025 no se utilizará por ahora: no aporta evidencia suficiente para una candidatura.
+- Desde 2024 existe una etapa de actualización profesional y formación en inteligencia artificial posterior al cierre de Herfrailes S. L.; no se presenta como actividad independiente ni como experiencia laboral por cuenta propia.
 - El histórico municipal se conserva para mantener la trayectoria completa, pero no se utilizará en perfiles objetivo, logros seleccionables por defecto ni materiales de candidatura.
 
 ## 1. Posicionamiento y condiciones de búsqueda
@@ -37,11 +37,11 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 ### Perfil A — Dirección
 
-**Experiencia relacionada:** en Herfrailes S. L. ejerció como Director Ejecutivo con responsabilidades simultáneas sobre RR. HH., IT, operaciones, logística y parte de administración; coordinó a responsables de tienda y desarrolló los procesos documentados en `HER-01` a `HER-05`.
+**Experiencia relacionada:** en Herfrailes S. L. ejerció como Director Ejecutivo con responsabilidades simultáneas sobre RR. HH., IT, operaciones, logística y parte de administración; coordinó a responsables de tienda y de sección, y desarrolló los procesos documentados en `HER-01` a `HER-09`.
 
-**Competencias a priorizar:** coordinación de responsables de tienda, organización del trabajo, selección estructurada, automatización de procesos, documentación laboral, protección de datos, planificación de vacaciones y ausencias, y mejora de procesos.
+**Competencias a priorizar:** coordinación de responsables de tienda y sección, organización y seguimiento de tareas, comunicación interna segmentada, selección estructurada, automatización de procesos, documentación laboral, protección de datos, planificación de vacaciones y ausencias, y mejora de procesos.
 
-**Logros seleccionables:** `HER-01`, `HER-02`, `HER-04` y `HER-05`.
+**Logros seleccionables:** `HER-01`, `HER-02`, `HER-04`, `HER-05`, `HER-08` y `HER-09`.
 
 ### Perfil B — Administración
 
@@ -53,11 +53,11 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 ### Perfil C — Operaciones
 
-**Experiencia relacionada:** en Herfrailes S. L. creó una base de datos de ventas y un algoritmo de pedido, implantó el seguimiento del mantenimiento de vehículos, reorganizó el trabajo por tiendas y coordinó dos campañas de datos de procedencia de clientes; en Granintra S. A. implantó un sistema para operaciones portuarias.
+**Experiencia relacionada:** en Herfrailes S. L., socio de CENCOSU S. L. —titular de los derechos de explotación de la franquicia internacional SPAR en Gran Canaria—, creó una base de datos de ventas y un algoritmo de pedido, implantó un sistema de redistribución de stock entre tiendas con vehículos propios, realizó el seguimiento del mantenimiento de vehículos, reorganizó el trabajo por tiendas y coordinó dos campañas de datos de procedencia de clientes; en Granintra S. A. implantó un sistema para operaciones portuarias.
 
-**Competencias a priorizar:** análisis de datos de ventas, previsión y pedido, logística, aprovisionamiento, mantenimiento de vehículos, coordinación entre áreas, segmentación de clientes y mejora continua.
+**Competencias a priorizar:** análisis de datos de ventas, previsión y pedido, optimización de stock, logística y distribución con vehículos propios, aprovisionamiento, mantenimiento de vehículos, coordinación entre áreas, segmentación de clientes y mejora continua.
 
-**Logros seleccionables:** `HER-03`, `HER-04`, `HER-05` y `GRAN-01`.
+**Logros seleccionables:** `HER-03`, `HER-04`, `HER-05`, `HER-07` y `GRAN-01`.
 
 ## 3. Banco de logros y evidencias
 
@@ -69,6 +69,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Problema | La selección, contratación y documentación se realizaban de forma manual, con escasa trazabilidad y tiempos elevados |
 | Contribución | Diseñó una solución que combinaba programación propia, Trello y Notion para gestionar candidaturas, precontratación, incorporación y seguimiento. Analizó documentos, modeló datos y separó datos personales de datos profesionales |
 | Alcance | Recibía aproximadamente 10 CV al día y realizaba unas 10 entrevistas al mes, con picos por bajas urgentes. Redactaba vacantes, cribaba CV, entrevistaba, preparaba informes para el Consejo de Dirección, realizaba onboarding y estructuraba seguimientos a 15, 30 y 90 días |
+| Comunicación de incorporación | Como parte del onboarding, publicaba en Workplace la incorporación de cada nueva persona para informar a todas las tiendas de su entrada en la empresa |
 | Resultado | El trabajo posterior a la entrevista pasó de 15–20 minutos a 5; los informes al Consejo, de 20 a 3 minutos; la documentación de contratación y onboarding pasó de unos 20 minutos a generación inmediata |
 | Evidencia complementaria | El proceso pasó de documentación manual de casi 60 documentos por persona a generación desde un perfil estructurado |
 | Uso en CV | Dirección; Administración |
@@ -131,6 +132,46 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Contribución | Implantó entrevistas semanales rotativas con el personal y una política de puertas abiertas para tratar asuntos no resueltos en la tienda. Realizaba visitas sin previo aviso para verificar el funcionamiento. Hacia 2020 puso en marcha un canal anónimo en línea |
 | Uso en CV | No usar por defecto; valorar solo en candidaturas donde la gestión de personas sea relevante |
 | Precaución | No incluir detalles de conflictos, personas, tiendas o situaciones sensibles. Si se utiliza, limitarse al liderazgo directo y a los canales de comunicación |
+
+### HER-07 — Optimización de stock, compras y logística entre tiendas
+
+| Elemento | Detalle |
+| --- | --- |
+| Contexto | Herfrailes S. L., socio de CENCOSU S. L., titular de los derechos de explotación de la franquicia internacional SPAR en Gran Canaria. La operación contaba con tres tiendas y vehículos propios; los productos centralizados los entregaba diariamente CENCOSU y los no centralizados los suministraban directamente los proveedores, con frecuencias de entre tres días y un mes |
+| Problema | Los pedidos se realizaban por cajas de un mínimo de 12 unidades. En una tienda con baja rotación, una caja podía mantener capital inmovilizado durante más de un mes, aunque la demanda agregada de las tres tiendas justificase la reposición |
+| Contribución | Programó un sistema que, tras el cierre al público, analizaba el stock y la rotación de las tres tiendas y generaba para cada responsable una lista de unidades que debía preparar para enviar a los otros dos almacenes. Los responsables empaquetaban los pedidos a primera hora y el chófer efectuaba una ruta específica A→B→C→B→A para optimizar las entregas |
+| Segundo ciclo diario | Al mediodía, una vez completada la entrega diaria de productos centralizados por CENCOSU, el sistema repetía el proceso solo para esos productos. Así se distribuían durante la tarde y podían reponerse ese mismo día en los lineales de las tres tiendas |
+| Reglas de surtido | Estableció una rotación mínima diaria de 0,17 unidades. Los productos que no alcanzaban 12 unidades mensuales entre las tres tiendas se retiraban del lineal, salvo que fueran de primera necesidad y no tuvieran sustituto |
+| Resultado | Redujo el stock inmovilizado, acortó el tiempo de retorno de la inversión de las compras y aumentó la rotación mensual a nivel de empresa |
+| Uso en CV | Operaciones; logística; aprovisionamiento; mejora de procesos |
+| Precaución | Atribuir a Gustavo el diseño y la programación del sistema, así como la organización operativa local. No atribuirle las funciones de compra centralizada ni la relación con proveedores, que correspondían a CENCOSU o a los proveedores directos |
+
+### HER-08 — Asignación y seguimiento de tareas operativas con Trello
+
+| Elemento        | Detalle                                                                                                                                                                                                                           |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contexto        | Herfrailes S. L., operación de supermercados vinculada a la franquicia internacional SPAR en Gran Canaria                                                                                                                         |
+| Problema        | Las tareas se comunicaban verbalmente, sin una constancia que permitiera asignarlas, comprobar su avance o hacer seguimiento posterior                                                                                            |
+| Contribución    | Implantó Trello como sistema de asignación, registro y seguimiento de tareas para responsables de tienda y de las secciones de Frescos, Carnicería-charcutería y Cajas. Asignaba la mayoría de las tareas, revisaba las que él mismo asignaba y ejecutaba las tareas que tenía asignadas personalmente |
+| Alcance         | El sistema cubría mantenimiento, seguimiento de mermas de frescos, limpieza por zonas, cambios de campaña, información sobre productos de la siguiente campaña e informes de evolución de campaña, entre otros asuntos operativos. Su listado diario de tareas pendientes de revisión llegó a reunir 200 tareas |
+| Automatización  | Durante los tres últimos años de su etapa, desarrolló con VB.NET y la API de Trello un sistema para automatizar en la medida de lo posible el seguimiento y la respuesta a las tareas. Los botones de la aplicación ejecutaban acciones en Trello; las notificaciones se emitían con su usuario |
+| Norma operativa | Las llamadas telefónicas se reservaron para temas urgentes; cualquier asunto no urgente debía registrarse en Trello para ser tratado                                                                                              |
+| Resultado       | Las instrucciones y tareas dejaron de depender exclusivamente de la comunicación verbal y quedaron registradas para su seguimiento. Las interrupciones por llamadas durante la jornada pasaron a ser insignificantes, aun manteniendo el control de un volumen diario de hasta 200 tareas pendientes de revisión |
+| Uso en CV       | Dirección; Operaciones; mejora de procesos                                                                                                                                                                                        |
+| Precaución      | Atribuir a Gustavo el diseño, la implantación, la asignación mayoritaria, la revisión de las tareas que asignaba, la ejecución de las que se le asignaban personalmente y la automatización parcial del sistema. No afirmar que todas las tareas ni todas las respuestas se automatizaran o que ejecutara personalmente cada tarea operativa |
+
+### HER-09 — Comunicación interna segmentada mediante Workplace
+
+| Elemento | Detalle |
+| --- | --- |
+| Contexto | Herfrailes S. L., socio de CENCOSU S. L., titular de los derechos de explotación de la franquicia internacional SPAR en Gran Canaria; sistema operativo entre 2015 y 2024 |
+| Problema | La información recibida desde la central —campañas, compras obligatorias, alcance de objetivos, nuevos proveedores y nuevas referencias, entre otros contenidos— llegaba por correo electrónico y debía imprimirse para distribuirse por duplicado con dos supermercados y, posteriormente, por triplicado con tres |
+| Contribución | Identificó Workplace from Facebook, posteriormente Workplace from Meta, y diseñó un sistema de publicaciones semiautomáticas para centralizar esa información en un tablón digital interno |
+| Acceso y destinatarios | Configuró permisos de acceso según el nivel de información: contenidos solo para Dirección o compartidos entre Dirección y responsables de tienda y sección; también daba acceso a Administración |
+| Integración con onboarding | El circuito incluía una publicación de cada nueva incorporación para que todas las tiendas conocieran a la persona que pasaba a formar parte de la empresa |
+| Resultado | Sustituyó la distribución física recurrente de comunicaciones por una fuente centralizada y con acceso segmentado para Dirección, Administración y responsables operativos. Ahorró casi cuatro cajas de 500 folios al mes y permitió que los responsables consultaran la información de forma inmediata, sin esperar a la llegada al día siguiente mediante chóferes y valijas |
+| Uso en CV | Dirección; Administración; Operaciones; comunicación interna; gestión de la información |
+| Precaución | No atribuir a Gustavo la emisión de las comunicaciones de la central; su contribución fue el diseño, la automatización parcial y la gestión de acceso al sistema interno |
 
 ### GSC-01 — Adjudicación de plazas de profesorado
 
@@ -202,7 +243,8 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 | Periodo | Organización y cargo | Alcance para CV |
 | --- | --- | --- |
-| 01/10/2011–03/10/2024 | Herfrailes S. L. — Director Ejecutivo | Dirección simultánea de RR. HH., IT, operaciones, logística y parte de administración. Coordinaba directamente a responsables de tienda y mantenía entrevistas semanales y canal de puerta abierta con el personal. Este contenido corresponde a HER-06 y no se usa por defecto en CV; consultarlo solo si la candidatura justifica gestión de personas |
+| 01/10/2011–03/10/2024 | Herfrailes S. L. — Director Ejecutivo | Dirección simultánea de RR. HH., IT, operaciones, logística y parte de administración en una empresa socia de CENCOSU S. L., titular de los derechos de explotación de la franquicia internacional SPAR en Gran Canaria. Coordinaba directamente a responsables de tienda y mantenía entrevistas semanales y canal de puerta abierta con el personal. Este contenido corresponde a HER-06 y no se usa por defecto en CV; consultarlo solo si la candidatura justifica gestión de personas |
+| 2024–actualidad | Actualización profesional y formación en IA | Tras el cierre de la etapa en Herfrailes, dedicó tiempo a su recuperación personal y a actualizarse profesionalmente mediante cursos de inteligencia artificial y un máster en curso. No se presenta como actividad independiente ni como experiencia laboral por cuenta propia |
 | 2009–2011 | INERZA, S. A. — Programador | Gestión de vivienda pública para el Gobierno de Canarias |
 | 2001–2009 | General de Software de Canarias, S. A. U. — Analista programador | Algoritmo de adjudicación de plazas para profesorado del Gobierno de Canarias |
 | 2000–2001 | Eurocanarias Oftalmológica — Analista programador | Sistema clínico a medida, presentaciones y hardware |
@@ -225,7 +267,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | 2020 en adelante | 3 | Sin cambios | — | Descenso hasta 9 M€ | Caída de ventas por la crisis del COVID y nueva competencia en la zona de influencia |
 | 2024 | 3 | 500 + 250 + 350 m² | 65 personas | 9 M€ | Cierre de la etapa en Herfrailes |
 
-Cada tienda tenía dos responsables por turnos, que reportaban directamente a Gustavo. Las funciones de compras, marketing, finanzas y relación con proveedores correspondían a la central de compras de la franquicia SPAR; no se atribuyen a Gustavo salvo cuando se indique expresamente.
+Herfrailes S. L. era socio de CENCOSU S. L., titular de los derechos de explotación de la franquicia internacional SPAR en Gran Canaria. Cada tienda tenía dos responsables por turnos, que reportaban directamente a Gustavo. Las funciones de compras centralizadas, marketing, finanzas y relación con proveedores correspondían a CENCOSU o a los proveedores directos; no se atribuyen a Gustavo salvo cuando se indique expresamente.
 
 ## 5. Competencias y herramientas
 
@@ -293,7 +335,7 @@ El historial registrado combina formación breve, bibliografía y práctica apli
 
 1. Extraer de la oferta las funciones, requisitos, tecnologías, sector, ubicación y condiciones.
 2. Seleccionar un perfil principal y uno secundario de esta nota.
-3. Elegir entre tres y cinco logros del banco que respondan directamente a las necesidades de la oferta. Usar HER-06 solo de forma breve cuando la gestión de personas sea relevante y sin detalles sensibles.
+3. Elegir entre tres y cinco logros del banco que respondan directamente a las necesidades de la oferta. Usar HER-06 solo de forma breve cuando la gestión de personas sea relevante y sin detalles sensibles. Valorar HER-07 para puestos de operaciones, aprovisionamiento, logística, distribución o mejora de procesos.
 4. Redactar un titular y un resumen con las palabras clave de la oferta solo si están respaldadas por los hechos registrados.
 5. Seleccionar experiencia histórica y formación solo cuando refuercen esa candidatura.
 6. Revisar antes de enviar: cargo, fechas, cifras, tecnologías actuales, nivel de idiomas, estudios no finalizados, límites de atribución a la central SPAR y decisiones colegiadas del Consejo de Dirección.
@@ -302,4 +344,4 @@ El historial registrado combina formación breve, bibliografía y práctica apli
 
 ---
 
-**Estado de la matriz:** base factual enriquecida a partir de la entrevista, con HER-01 a HER-06 y la escala agregada de Herfrailes. Lista para adaptar CV a una oferta concreta.
+**Estado de la matriz:** base factual enriquecida a partir de la entrevista, con HER-01 a HER-09 y la escala agregada de Herfrailes. Lista para adaptar CV a una oferta concreta.
