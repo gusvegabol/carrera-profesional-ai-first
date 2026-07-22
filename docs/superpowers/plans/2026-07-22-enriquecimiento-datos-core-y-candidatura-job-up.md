@@ -31,14 +31,14 @@
 
 **Produce:** un banco factual con `HER-04`, `HER-05`, una versión prudente de `HER-06`, escala de Herfrailes y perfiles sin gestión pública; una selección factual lista para el CV y emails.
 
-- [ ] Incorporar solo los hechos verificables de `HER-04`, `HER-05` y `HER-06`; trasladar los detalles sensibles de `HER-06` a una precaución de uso y no a texto candidatable.
-- [ ] Añadir la escala de Herfrailes y los límites de atribución a central SPAR y Consejo de Dirección.
-- [ ] Eliminar la gestión pública de perfiles objetivo, logros seleccionables por defecto y plantillas; preservar el histórico municipal sin usarlo en la selección factual.
-- [ ] Excluir parentescos, encuadres salariales y narrativas persuasivas de la fuente factual.
-- [ ] Revisar referencias, exclusiones políticas, atribuciones y ortografía.
-- [ ] Ejecutar comprobaciones de búsqueda para confirmar que la selección factual no contiene `Gáldar`, `Concejal`, `GAL-01`, `gestión pública`, `Ayuntamiento`, `Titulación Universitaria` ni la formulación antigua de Granintra.
-- [ ] Confirmar mediante diff que los nuevos hechos y límites de atribución están presentes.
-- [ ] Registrar un commit con solo los archivos de esta tarea.
+- [x] Incorporar solo los hechos verificables de `HER-04`, `HER-05` y `HER-06`; trasladar los detalles sensibles de `HER-06` a una precaución de uso y no a texto candidatable.
+- [x] Añadir la escala de Herfrailes y los límites de atribución a central SPAR y Consejo de Dirección.
+- [x] Eliminar la gestión pública de perfiles objetivo, logros seleccionables por defecto y plantillas; preservar el histórico municipal sin usarlo en la selección factual.
+- [x] Excluir parentescos, encuadres salariales y narrativas persuasivas de la fuente factual.
+- [x] Revisar referencias, exclusiones políticas, atribuciones y ortografía.
+- [x] Ejecutar comprobaciones de búsqueda para confirmar que la selección factual no contiene `Gáldar`, `Concejal`, `GAL-01`, `gestión pública`, `Ayuntamiento`, `Titulación Universitaria` ni la formulación antigua de Granintra.
+- [x] Confirmar mediante diff que los nuevos hechos y límites de atribución están presentes.
+- [x] Registrar un commit con solo los archivos de esta tarea.
 
 ### Task 2: Rehacer CV maestro DOCX y PDF
 
@@ -49,14 +49,14 @@
 
 **Produce:** un CV maestro en español, de dos páginas, con identidad de dirección ejecutiva y operaciones y PDF equivalente.
 
-- [ ] Sustituir el resumen centrado en RR. HH. por un posicionamiento de dirección ejecutiva que conecte personas, procesos, sistemas y operaciones.
-- [ ] Incluir resultados verificables de aprovisionamiento, mantenimiento de vehículos, organización del trabajo y análisis de datos, sin atribuir decisiones colegiadas ni efectos no medidos.
-- [ ] Mantener las acciones en primera persona y la formación como “Máster en Inteligencia Artificial con Certificación Universitaria”, en curso.
-- [ ] Excluir experiencia política, gestión pública, Ayuntamiento de Gáldar, concejalía, parentescos y detalles sensibles de conflictos.
-- [ ] Mantener el diseño existente cuando no impida el nuevo contenido; el resultado final debe tener dos páginas legibles.
-- [ ] Validar estructura y texto del DOCX; validar que el PDF contiene el contenido actualizado y tiene exactamente dos páginas.
-- [ ] Renderizar el PDF a PNG mediante Poppler e inspeccionar visualmente ambas páginas para confirmar legibilidad, ausencia de solapamientos y jerarquía clara.
-- [ ] Revisar ortografía española y registrar un commit con el DOCX y PDF.
+- [x] Sustituir el resumen centrado en RR. HH. por un posicionamiento de dirección ejecutiva que conecte personas, procesos, sistemas y operaciones.
+- [x] Incluir resultados verificables de aprovisionamiento, mantenimiento de vehículos, organización del trabajo y análisis de datos, sin atribuir decisiones colegiadas ni efectos no medidos.
+- [x] Mantener las acciones en primera persona y la formación como “Máster en Inteligencia Artificial con Certificación Universitaria”, en curso.
+- [x] Excluir experiencia política, gestión pública, Ayuntamiento de Gáldar, concejalía, parentescos y detalles sensibles de conflictos.
+- [x] Mantener el diseño existente cuando no impida el nuevo contenido; el resultado final debe tener dos páginas legibles.
+- [x] Validar estructura y texto del DOCX; validar que el PDF contiene el contenido actualizado y tiene exactamente dos páginas.
+- [x] Renderizar el PDF a PNG mediante Poppler e inspeccionar visualmente ambas páginas para confirmar legibilidad, ausencia de solapamientos y jerarquía clara.
+- [x] Revisar ortografía española y registrar un commit con el DOCX y PDF.
 
 ### Task 3: Rehacer los modelos de email y realizar la validación transversal
 

@@ -29,7 +29,7 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
 
 | Área | Afirmación en primera persona | Trazabilidad precisa | Uso previsto |
 | --- | --- | --- | --- |
-| Dirección (Management) | He diseñado procesos de selección, precontratación, incorporación y seguimiento, y he preparado informes para el Consejo de Dirección. | § 3 «HER-01» / Contribución y Alcance. | Área de contribución, experiencia y email. |
+| Dirección (Management) | Diseñé una solución para gestionar los procesos de selección, incorporación y seguimiento, y preparé informes para el Consejo de Dirección. | § 3 «HER-01» / Contribución y Alcance. | Área de contribución, experiencia y email. |
 | Dirección (Management) | He reorganizado el trabajo en equipos polivalentes por tienda para que las secciones se apoyaran según necesidad. | § 3 «HER-04 — Reorganización del trabajo y cultura de equipo por tienda» / Contribución. | Área de contribución y experiencia. |
 | Administración | He clasificado datos variables de documentos laborales, separado los datos personales sujetos a protección de datos y modelado puestos y requisitos. | § 3 «HER-02 — Gestión documental, privacidad y autoservicio de RR. HH.» / Contribución. | Área de contribución y experiencia. |
 | Operaciones | He diseñado una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras, ajustándolo cuando detectaba desviaciones. | § 3 «HER-03» / Contribución, Modelo y Mejora continua. | Área de contribución, experiencia y email. |
@@ -76,7 +76,7 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
   **Trazabilidad:** § 3 «HER-05 — Segmentación de clientes por zona geográfica y servicio a domicilio» / Contribución y Resultado segunda aplicación.
   **Uso previsto:** experiencia, logro de Operaciones y email.
 
-- He definido la política local de servicio a domicilio a partir de los datos de procedencia de clientes, con umbrales mínimos crecientes según la distancia.
+- He definido los criterios locales del servicio a domicilio a partir de los datos de procedencia de clientes, con umbrales mínimos crecientes según la distancia.
   **Trazabilidad:** § 3 «HER-05» / Primera aplicación.
   **Uso previsto:** experiencia y logro de Operaciones.
 
@@ -126,7 +126,6 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
 | Actividad como profesional independiente desde 2025. | § «Uso y límites»: no aporta evidencia suficiente para una candidatura por ahora. |
 | Detalles de HER-06 sobre conflictos, personas, tiendas o situaciones sensibles. | § 3 «HER-06 — Liderazgo directo y canales de comunicación» / Precaución: no usar por defecto y limitar, si procede, a liderazgo directo y canales de comunicación. |
 | Atribuir a Gustavo la apertura de la tercera tienda. | § 3 «HER-05» / Precaución: la decisión fue colegiada; su contribución fue el análisis de datos. |
-| Experiencia municipal. | § «Uso y límites» de [[datos-core-busqueda]]: el histórico municipal se conserva, pero no se usa en perfiles objetivo, logros seleccionables por defecto ni materiales de candidatura. |
 | Teléfono, correo electrónico, dirección postal o cualquier otro dato de contacto. | No se ha consultado `datos-privados-candidatura.md`, porque no es necesario para esta selección factual; debe incorporarse únicamente con autorización para el encabezado. |
 | Una prioridad permanente de Dirección (Management), Administración u Operaciones. | § «Uso y límites»: los tres perfiles objetivo permanecen disponibles sin prioridad fija; este CV los integra para una candidatura espontánea. |
 

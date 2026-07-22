@@ -37,7 +37,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 ### Perfil A — Dirección
 
-**Propuesta de valor:** dirección transversal de personas, procesos, sistemas y operaciones; organización del trabajo, seguimiento y mejora de procesos con trazabilidad documental.
+**Experiencia relacionada:** en Herfrailes S. L. ejerció como Director Ejecutivo con responsabilidades simultáneas sobre RR. HH., IT, operaciones, logística y parte de administración; coordinó a responsables de tienda y desarrolló los procesos documentados en `HER-01` a `HER-05`.
 
 **Competencias a priorizar:** coordinación de responsables de tienda, organización del trabajo, selección estructurada, automatización de procesos, documentación laboral, protección de datos, planificación de vacaciones y ausencias, y mejora de procesos.
 
@@ -45,7 +45,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 ### Perfil B — Administración
 
-**Propuesta de valor:** mejora de procesos administrativos y de información mediante modelado de datos, trazabilidad documental, automatización y control de accesos.
+**Experiencia relacionada:** en Herfrailes S. L. clasificó datos variables de documentos laborales, separó datos personales, modeló puestos y requisitos, y automatizó vacaciones, permisos, nóminas solicitadas y el registro de entradas y salidas; en etapas técnicas desarrolló soluciones de contabilidad, gestión comercial y análisis funcional.
 
 **Competencias a priorizar:** documentación laboral, protección de datos, modelado de puestos y requisitos, planificación de ausencias, contabilidad, gestión comercial, análisis funcional y automatización.
 
@@ -53,7 +53,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 ### Perfil C — Operaciones
 
-**Propuesta de valor:** organización del trabajo, control logístico y decisiones operativas basadas en datos para mejorar la disponibilidad, la trazabilidad y el seguimiento de procesos.
+**Experiencia relacionada:** en Herfrailes S. L. creó una base de datos de ventas y un algoritmo de pedido, implantó el seguimiento del mantenimiento de vehículos, reorganizó el trabajo por tiendas y coordinó dos campañas de datos de procedencia de clientes; en Granintra S. A. implantó un sistema para operaciones portuarias.
 
 **Competencias a priorizar:** análisis de datos de ventas, previsión y pedido, logística, aprovisionamiento, mantenimiento de vehículos, coordinación entre áreas, segmentación de clientes y mejora continua.
 
@@ -287,7 +287,7 @@ La experiencia histórica puede aparecer en un CV cuando sea relevante, pero no 
 
 ### Patrón de aprendizaje
 
-Perfil predominantemente autodidacta: identifica una necesidad profesional, combina formación breve, bibliografía y práctica, y aplica el aprendizaje en problemas reales. Usar esta formulación como contexto de aprendizaje, no como sustituto de una titulación oficial.
+El historial registrado combina formación breve, bibliografía y práctica aplicada a necesidades profesionales. Esta descripción resume la forma de aprendizaje documentada y no sustituye una titulación oficial.
 
 ## 7. Protocolo de adaptación a una oferta
 
