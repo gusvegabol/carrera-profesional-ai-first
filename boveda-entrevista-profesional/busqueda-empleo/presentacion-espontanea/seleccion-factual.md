@@ -29,7 +29,6 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
 
 | Área | Afirmación en primera persona | Trazabilidad precisa | Uso previsto |
 | --- | --- | --- | --- |
-| Dirección (Management) | He coordinado directamente a responsables de tienda, mantenido entrevistas semanales y un canal de puerta abierta con el personal. | § 4 «Herfrailes S. L. — Director Ejecutivo» / Alcance para CV. | Área de contribución y experiencia. |
 | Dirección (Management) | He diseñado procesos de selección, precontratación, incorporación y seguimiento, y he preparado informes para el Consejo de Dirección. | § 3 «HER-01» / Contribución y Alcance. | Área de contribución, experiencia y email. |
 | Dirección (Management) | He reorganizado el trabajo en equipos polivalentes por tienda para que las secciones se apoyaran según necesidad. | § 3 «HER-04 — Reorganización del trabajo y cultura de equipo por tienda» / Contribución. | Área de contribución y experiencia. |
 | Administración | He clasificado datos variables de documentos laborales, separado los datos personales sujetos a protección de datos y modelado puestos y requisitos. | § 3 «HER-02 — Gestión documental, privacidad y autoservicio de RR. HH.» / Contribución. | Área de contribución y experiencia. |
