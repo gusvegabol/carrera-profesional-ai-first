@@ -38,7 +38,7 @@ Atentamente,
 
 [Nombre y apellidos]
 
-> Si el mensaje se dirige a un equipo, sustituir el saludo por «Estimado equipo de [entidad]:» y usar «ustedes» y «tendrían» en todo el texto.
+> Si el mensaje se dirige a un equipo, sustituir el saludo por «Estimado equipo de [entidad]:» y cambiar todas las formas de tratamiento singular por plural formal: «usted» por «ustedes», «presentarle» por «presentarles», «lo valore» por «lo valoren» y «tendría» por «tendrían».
 
 ## Contacto personal
 
@@ -54,6 +54,6 @@ Mi experiencia se centra en dirigir personas, procesos, sistemas y operaciones, 
 
 Gracias por tu tiempo.
 
-Un abrazo,
+Un saludo,
 
 [Nombre y apellidos]
