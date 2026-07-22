@@ -34,7 +34,7 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
 | Administración | He clasificado datos variables de documentos laborales, separado los datos personales sujetos a protección de datos y modelado puestos y requisitos. | § 3 «HER-02 — Gestión documental, privacidad y autoservicio de RR. HH.» / Contribución. | Área de contribución y experiencia. |
 | Administración | He analizado presupuestos y he desarrollado soluciones para acelerar la información presupuestaria de Tesorería e Intervención al grupo de gobierno. | § 3 «GAL-01» / Contribución. | Área de contribución y experiencia histórica. |
 | Operaciones | He diseñado una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras, ajustándolo cuando detectaba desviaciones. | § 3 «HER-03» / Contribución, Modelo y Mejora continua. | Área de contribución, experiencia y email. |
-| Operaciones | He creado formularios y acciones periódicas documentadas para la limpieza y la comprobación de frenos, ruedas y otros elementos de vehículos. | § 3 «HER-03» / Complemento logístico. | Área de contribución y experiencia. |
+| Operaciones | He creado un sistema de seguimiento del mantenimiento de los vehículos de la empresa. | § 3 «HER-03» / Complemento logístico. | Área de contribución y experiencia. |
 
 ## Experiencia y logros para el CV maestro
 
