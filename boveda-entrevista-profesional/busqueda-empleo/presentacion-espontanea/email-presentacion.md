@@ -2,7 +2,7 @@
 
 ## Núcleo común
 
-Este email sirve para iniciar una conversación profesional sin vincularse a una oferta concreta. Antes de enviarlo, se revisará la variante elegida y se obtendrá la aprobación humana explícita de la persona candidata. Los únicos campos personalizables son la empresa, la persona destinataria y el motivo de contacto.
+Este email sirve para iniciar una conversación profesional sin vincularse a una oferta concreta. Antes de enviarlo, revisaré la variante elegida y obtendré la aprobación humana explícita de la persona candidata. Los únicos campos personalizables son la empresa, la persona destinataria y el motivo de contacto.
 
 ## Empresa concreta
 
