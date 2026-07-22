@@ -74,7 +74,7 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
   **Trazabilidad:** § 3 «GAL-01» / Plusvalías y Recaudación ejecutiva; § 4 «Ayuntamiento de Gáldar — Concejal de Hacienda y Patrimonio».
   **Uso previsto:** experiencia histórica, logro y área de Administración.
 
-- He contribuido a aumentar la recaudación por apremio un 120 % en número de notificaciones y un 60 % en importe recaudado, y he facilitado fraccionamientos de deuda.
+- Como resultado de las automatizaciones e informatización anteriores, la recaudación por apremio aumentó un 120 % en número de notificaciones y un 60 % en importe recaudado, y se facilitaron fraccionamientos de deuda.
   **Trazabilidad:** § 3 «GAL-01» / Resultado.
   **Uso previsto:** logro cuantificado.
 
@@ -129,7 +129,7 @@ He dirigido de forma transversal personas, operaciones, sistemas, logística y p
 | Presentar Java, PHP, JavaScript, C++, Oracle, UNIX, Transtool u otras tecnologías históricas como dominio actual. | § 5 «Experiencia tecnológica histórica»: solo pueden aparecer cuando sean relevantes y no deben presentarse como dominio actual sin nueva confirmación. |
 | Actividad como profesional independiente desde 2025. | § «Uso y límites»: no aporta evidencia suficiente para una candidatura por ahora. |
 | Teléfono, correo electrónico, dirección postal o cualquier otro dato de contacto. | No se ha consultado `datos-privados-candidatura.md`, porque no es necesario para esta selección factual; debe incorporarse únicamente con autorización para el encabezado. |
-| Una prioridad permanente de Dirección (Management), Administración u Operaciones. | § 1 «Uso y límites»: los tres perfiles objetivo permanecen disponibles sin prioridad fija; este CV los integra para una candidatura espontánea. |
+| Una prioridad permanente de Dirección (Management), Administración u Operaciones. | § «Uso y límites»: los tres perfiles objetivo permanecen disponibles sin prioridad fija; este CV los integra para una candidatura espontánea. |
 
 ## Control previo a la redacción
 
