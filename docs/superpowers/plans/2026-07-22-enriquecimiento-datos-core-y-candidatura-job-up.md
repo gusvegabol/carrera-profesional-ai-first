@@ -82,8 +82,8 @@
 
 **Produce:** evidencia de que los materiales quedan listos para revisión humana, sin envío ni publicación.
 
-- [ ] Revisar el diff completo desde la base de la rama y comprobar que no introduce datos privados, gestión pública o atribuciones incorrectas.
-- [ ] Repetir las comprobaciones de exclusión, las verificaciones de dos páginas y la inspección visual del PDF final.
-- [ ] Verificar la ortografía de los documentos Markdown y la correspondencia del PDF con el DOCX.
-- [ ] Dejar los materiales sin enviar y sin compartir; no realizar ninguna acción externa.
-- [ ] Registrar el resultado de revisión en el último commit o en el informe de revisión de la rama.
+- [x] Revisar el diff completo desde la base de la rama y comprobar que no introduce datos privados, gestión pública o atribuciones incorrectas.
+- [x] Repetir las comprobaciones de exclusión, las verificaciones de dos páginas y la inspección visual del PDF final.
+- [x] Verificar la ortografía de los documentos Markdown y la correspondencia del PDF con el DOCX.
+- [x] Dejar los materiales sin enviar y sin compartir; no realizar ninguna acción externa.
+- [x] Registrar el resultado de revisión en el último commit o en el informe de revisión de la rama.

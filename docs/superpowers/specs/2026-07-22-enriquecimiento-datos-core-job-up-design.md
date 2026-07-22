@@ -1,6 +1,6 @@
 # Diseño — Enriquecimiento factual y posicionamiento de Job-up
 
-**Fecha:** 2026-07-22  
+**Fecha:** 2026-07-22
 **Estado:** aprobado para documentación; pendiente de revisión de la especificación
 
 ## Propósito
