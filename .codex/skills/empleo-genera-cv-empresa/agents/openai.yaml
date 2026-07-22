@@ -1,0 +1,6 @@
+interface:
+  display_name: "Genera CV para empresa"
+  short_description: "Prepara una candidatura espontánea investigada"
+  default_prompt: "Usa $empleo-genera-cv-empresa para preparar una candidatura espontánea a una empresa concreta."
+policy:
+  allow_implicit_invocation: false
