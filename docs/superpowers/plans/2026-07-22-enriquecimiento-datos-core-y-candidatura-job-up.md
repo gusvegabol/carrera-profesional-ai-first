@@ -66,14 +66,14 @@
 
 **Produce:** tres emails breves, coherentes con el CV y listos para revisión: empresa, intermediario y contacto personal.
 
-- [ ] Reemplazar la enumeración de tareas por un núcleo de dirección ejecutiva y operativa con dos o tres resultados verificables.
-- [ ] Para empresa e intermediario, usar trato formal coherente de principio a fin; para contacto personal, trato profesional cercano.
-- [ ] Incorporar una apertura personalizable para empresas que se base en un reto, proyecto o contexto real y comprobable, sin afirmar conocimiento no verificado.
-- [ ] Cerrar con una invitación concreta y respetuosa a una conversación breve, sin prometer aportaciones no demostradas.
-- [ ] Mantener la exclusión política, la primera persona y la posibilidad de convertir el cuerpo en carta formal si se solicita.
-- [ ] Ejecutar búsquedas transversales de exclusiones y de formas verbales en tercera persona candidatable; revisar ortografía española.
-- [ ] Confirmar coherencia textual entre los hechos del CV, la selección factual y los emails.
-- [ ] Registrar un commit con el email y actualizar las casillas de este plan.
+- [x] Reemplazar la enumeración de tareas por un núcleo de dirección ejecutiva y operativa con dos o tres resultados verificables.
+- [x] Para empresa e intermediario, usar trato formal coherente de principio a fin; para contacto personal, trato profesional cercano.
+- [x] Incorporar una apertura personalizable para empresas que se base en un reto, proyecto o contexto real y comprobable, sin afirmar conocimiento no verificado.
+- [x] Cerrar con una invitación concreta y respetuosa a una conversación breve, sin prometer aportaciones no demostradas.
+- [x] Mantener la exclusión política, la primera persona y la posibilidad de convertir el cuerpo en carta formal si se solicita.
+- [x] Ejecutar búsquedas transversales de exclusiones y de formas verbales en tercera persona candidatable; revisar ortografía española.
+- [x] Confirmar coherencia textual entre los hechos del CV, la selección factual y los emails.
+- [x] Registrar un commit con el email y actualizar las casillas de este plan.
 
 ### Task 4: Revisión final de los materiales preparados
 
