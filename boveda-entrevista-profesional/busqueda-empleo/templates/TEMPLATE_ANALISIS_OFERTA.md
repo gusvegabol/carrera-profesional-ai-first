@@ -20,6 +20,8 @@ proposito: analisis_oferta
 - **Contrato:**
 - **Enlace o referencia de la oferta:**
 - **Fecha de análisis:**
+- **Nivel del puesto:**
+- **Riesgo de sobrecualificación:**
 
 ## Contenido factual de la oferta
 
@@ -31,11 +33,20 @@ proposito: analisis_oferta
 
 -
 
+### Palabras clave literales
+
+-
+
+### Requisitos no acreditados o parcialmente acreditados
+
+-
+
 ## Selección para la candidatura
 
 - **perfil principal:**
 - **perfil secundario:**
 - **Nivel de encaje:**
+- **Enfoque obligatorio del CV:**
 
 ### Logros seleccionados
 
@@ -59,3 +70,7 @@ proposito: analisis_oferta
 - [ ] Las afirmaciones excluidas no se incorporarán a los documentos.
 - [ ] Las dudas bloqueantes están resueltas o mantienen la candidatura detenida.
 - [ ] Se requiere revisión humana antes de preparar o enviar cualquier candidatura.
+- [ ] El titular, el resumen y los logros del CV reflejan el perfil principal y no arrastran el enfoque de otra candidatura.
+- [ ] Existe un [[TEMPLATE_GUION_ADAPTACION_CV]] y el documento final se ha construido desde ese guion.
+- [ ] Las palabras clave incorporadas están respaldadas por evidencias del core.
+- [ ] El CV es compatible con ATS y, siempre que la legibilidad lo permita, de una sola página.

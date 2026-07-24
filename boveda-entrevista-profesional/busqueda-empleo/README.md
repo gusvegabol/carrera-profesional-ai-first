@@ -11,6 +11,8 @@ Su alcance termina en la preparación y revisión de cada candidatura. Cualquier
 - [[seguimiento-candidaturas]]: registro de estados, documentos y observaciones.
 - [[TEMPLATE_ANALISIS_OFERTA]]: plantilla para analizar una oferta.
 - [[TEMPLATE_CANDIDATURA]]: plantilla de trazabilidad de una candidatura.
+- [[TEMPLATE_GUION_ADAPTACION_CV]]: guion previo para fijar el enfoque narrativo y evitar arrastres entre candidaturas.
+- [[TEMPLATE_VEREDICTO_FINAL_CV]]: revisión final de integridad, calidad y decisión antes de la aprobación humana.
 - [[PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0]]: procedimiento operativo de preparación.
 - [[candidaturas/README]]: estructura y reglas de las carpetas de candidatura.
 - [[presentacion-espontanea/README|Materiales para candidatura espontánea]]: contiene el CV maestro y el email modular no vinculados a una oferta.

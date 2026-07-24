@@ -15,13 +15,18 @@ tipo: candidatura
 
 La documentación fue validada por la persona candidata. El 2026-07-22, la persona candidata se inscribió en InfoJobs: adjuntó el CV y remitió el contenido de la carta de presentación como texto del formulario, sin adjuntar la carta como archivo.
 
-## Documentos
+## Documentos de la candidatura
+
+### Análisis y preparación
 
 - [[analisis-oferta|Análisis de la oferta]].
-- [[busqueda-empleo/candidaturas/CAND-2026-001-evershine-investments-administrativo/cv.docx|CV editable]].
-- [[busqueda-empleo/candidaturas/CAND-2026-001-evershine-investments-administrativo/cv.pdf|CV en PDF]].
-- [[busqueda-empleo/candidaturas/CAND-2026-001-evershine-investments-administrativo/carta-presentacion.docx|Carta de presentación editable]].
-- [[busqueda-empleo/candidaturas/CAND-2026-001-evershine-investments-administrativo/carta-presentacion.pdf|Carta de presentación en PDF]].
+
+### Documentos para revisión y envío
+
+- [[cv.docx|CV editable]].
+- [[cv.pdf|CV en PDF]].
+- [[carta-presentacion.docx|Carta de presentación editable]].
+- [[carta-presentacion.pdf|Carta de presentación en PDF]].
 
 ## Datos y alcance autorizados
 

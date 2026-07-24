@@ -15,6 +15,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 - Mantener disponibles los perfiles de Dirección, Administración y Operaciones, sin prioridad fija.
 - Antes de redactar un CV, elegir un perfil principal, otro secundario y entre tres y cinco logros pertinentes para la oferta.
+- El perfil principal debe gobernar el enfoque del CV: para ofertas administrativas se priorizarán administración, organización, documentación, datos y mejora de procesos; no se reutilizará automáticamente un enfoque de RR. HH. por proceder los logros de procesos laborales.
 - No afirmar una titulación, una responsabilidad, una métrica, un nivel técnico o un idioma por encima de lo registrado aquí.
 - Diferenciar siempre la contribución individual de las decisiones colegiadas, la validación externa y los resultados atribuidos a un equipo.
 - Desde 2024 existe una etapa de actualización profesional y formación en inteligencia artificial posterior al cierre de Herfrailes S. L.; no se presenta como actividad independiente ni como experiencia laboral por cuenta propia.
@@ -284,9 +285,13 @@ Herfrailes S. L. era socio de CENCOSU S. L., titular de los derechos de explotac
 
 ### Herramientas y tecnologías actuales — nivel medio-alto
 
-- Notion, ChatGPT, Codex, Work, Ollama, Obsidian, Trello, Office 365.
+- Notion, ChatGPT, Codex, Work, Ollama, Obsidian, Trello, Office 365; Word y Excel con nivel alto por uso habitual en la elaboración de informes.
 - SQL Server, Microsoft Visual Studio, Windows 11.
 - VB.NET y Windows Server.
+
+### Herramientas con experiencia previa no reciente
+
+- Power BI: formación mediante un curso de Udemy y experiencia práctica anterior. Hace años que no se utiliza de forma habitual; no presentarlo como dominio avanzado o actualizado sin confirmación adicional.
 
 ### Tecnología actual — nivel básico
 
@@ -313,6 +318,8 @@ La experiencia histórica puede aparecer en un CV cuando sea relevante, pero no 
 
 ### Formación complementaria relevante
 
+- Curso breve de prevención de riesgos laborales (PRL), realizado para el desempeño en Herfrailes S. L.; no equivale a experiencia específica en coordinación empresarial (CAE).
+- Power BI — curso realizado en Udemy; conocimiento y experiencia previa, con uso no reciente.
 - Liderazgo en tiempos de cambio — Telefónica Universitas (2015).
 - Liderazgo y Gestión de Equipos de Alto Rendimiento — Universidad Europea (2015).
 - Innovación y emprendimiento — Universidad Europea (2014).
@@ -339,6 +346,7 @@ El historial registrado combina formación breve, bibliografía y práctica apli
 4. Redactar un titular y un resumen con las palabras clave de la oferta solo si están respaldadas por los hechos registrados.
 5. Seleccionar experiencia histórica y formación solo cuando refuercen esa candidatura.
 6. Revisar antes de enviar: cargo, fechas, cifras, tecnologías actuales, nivel de idiomas, estudios no finalizados, límites de atribución a la central SPAR y decisiones colegiadas del Consejo de Dirección.
+7. Comprobar que el titular, el resumen y la experiencia descrita reflejan el perfil principal elegido y no arrastran el enfoque de otra candidatura; si el puesto es administrativo, revisar expresamente que administración y organización sean visibles y que RR. HH. no domine el documento salvo que la oferta lo requiera.
 7. Si falta una evidencia o hay una contradicción, abrir una pregunta de entrevista; no completar el CV mediante suposición.
 8. Para una candidatura aprobada, consultar [[datos-privados-candidatura]] solo para los datos de formulario y registrar su estado y documentos en [[seguimiento-candidaturas]]. Esta matriz sigue siendo exclusivamente factual y profesional.
 

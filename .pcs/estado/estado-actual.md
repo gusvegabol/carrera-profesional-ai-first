@@ -2,7 +2,7 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
-fecha_actualizacion: 2026-07-22
+fecha_actualizacion: 2026-07-24
 ultima_sesion_relacionada: sesion-20260722-1131-job-up
 host: carrera-ai
 ---
@@ -26,6 +26,12 @@ La razón operativa es que el coste de tiempo y recursos de la extracción semá
 El trabajo vigente del host permanece en la revisión metodológica de la entrevista de cobertura profesional. `docs/DOCUMENTO_SPEC_CARRERA_AI.md` sigue definiendo el producto y se ha alineado de forma acotada con Carrera AI 2.0. El núcleo metodológico y el Perfil Profesional Accionable continúan siendo el marco para diseñar la cobertura de trayectorias profesionales sin sustituir el playbook de profundidad existente.
 
 Por [[DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo]], Carrera AI incorpora una rama operativa de búsqueda de empleo dentro del mismo host, denominada **Job-up**. Su finalidad es preparar con rapidez CV adaptados, cartas de presentación y candidaturas revisables a partir de información profesional factual. Esta rama no modifica el SPEC, los playbooks ni la investigación metodológica de entrevista; ambas líneas siguen separadas.
+
+Job-up mantiene actualmente cinco candidaturas registradas: una enviada (`CAND-2026-001`), dos pendientes de aprobación (`CAND-2026-002` y `CAND-2026-004`), un borrador condicionado por la decisión pendiente sobre el contrato temporal (`CAND-2026-003`) y una candidatura pendiente de aprobación para Pro a Pro Hostelería Organizada (`CAND-2026-005`). En CAND-2026-003 constan autorizados los datos mínimos de contacto para sus documentos, que ya incorporan el enfoque de RR. HH. pertinente para una oferta administrativa de PRL; sigue sin estar disponible para envío mientras no se acepte el contrato temporal y no se realice la revisión humana.
+
+El flujo de adaptación por oferta ya incorpora análisis de nivel y sobrecualificación, palabras clave, requisitos no acreditados, guion narrativo, control de arrastre entre candidaturas, verificación documental de una página y un veredicto final previo a la aprobación humana. La ficha `candidatura.md` debe inventariar todos los documentos operativos de su carpeta —no solo el CV y la carta— y actualizarse al crear, añadir, sustituir o eliminar un artefacto. Los CV generados conservan nombre, titular y contacto centrados, además de un espacio reservado antes de «Perfil profesional» para facilitar la incorporación manual de fotografía.
+
+Job-up incorpora además un veredicto final del CV que evalúa primero la integridad factual y de privacidad y, solo después, cinco criterios de calidad de 1 a 5: primer escaneo, encaje competitivo, cobertura ATS respaldada, fuerza de la experiencia y adecuación narrativa. La decisión resultante no sustituye la aprobación humana. CAND-2026-004 es la primera aplicación, con integridad `apta`, media 4,0 y resultado `revisar_antes_de_aprobar`. La investigación contextual de empresa o sector es opcional y posterior al veredicto; requiere autorización de la persona responsable y mostrar previamente las URL propuestas. Si esa investigación justifica un ajuste de lenguaje corporativo, debe aplicarse de forma coherente al CV y a la carta de presentación. En CAND-2026-004 se investigó la fuente oficial de Globaenergy y se incorporó, con autorización expresa, ese ajuste de tono en ambos documentos sin añadir experiencia no acreditada.
 
 En paralelo, la investigación GitHub dispone ya de estructura, flujo obligatorio,
 templates de fichas y comparativas. La calibración inicial se completó con la
@@ -52,7 +58,7 @@ La utilidad de esa separación y de Graphify queda superada por la decisión de 
 
 ## Foco operativo
 
-Mantener dos líneas separadas: evaluar si la arquitectura recomendada de doble pasada debe orientar el primer piloto de cobertura profesional, y operar Job-up para valorar ofertas y producir candidaturas revisables cuando la persona responsable lo autorice. La reorganización documental y la bóveda raíz de Obsidian ya están consolidadas y no desplazan ninguno de estos focos.
+Mantener dos líneas separadas: evaluar si la arquitectura recomendada de doble pasada debe orientar el primer piloto de cobertura profesional, y operar Job-up para valorar ofertas y producir candidaturas revisables cuando la persona responsable lo autorice. En Job-up, continuar valorando ofertas concretas y refinando la redacción de la experiencia profesional para que sea más concreta y orientada al puesto, sin perder trazabilidad factual. CAND-2026-005 aporta la referencia vigente de presentación logística y de preparación para entrevista; las candidaturas anteriores conservan sus propios condicionantes. La reorganización documental y la bóveda raíz de Obsidian ya están consolidadas y no desplazan ninguno de estos focos.
 
 Se ha abierto además la sesión `sesion-20260721-1644-perfiles-sinteticos-para-evaluar-entrevistas` para debatir un posible banco de perfiles sintéticos que acelere la prueba de los playbooks. Es una línea abierta de investigación metodológica: no autoriza simulaciones, cambios de playbook ni sustituye la validación con personas reales.
 
@@ -78,7 +84,7 @@ El segundo caso real, `ENT-002-M01`, se ejecutó el 2026-07-21 después de aplic
 - Delimitar `EXP-001-entrevista-y-storybank` antes de ejecutarlo y mantenerlo separado de cualquier integración de código.
 - Decidir explícitamente si se adopta, modifica o descarta la recomendación para el primer piloto.
 - Si se adopta, definir el contrato del piloto: muestra de entrevistas, salida inicial revisable, control de privacidad, criterios de corrección y señales de utilidad.
-- Conservar y reutilizar el flujo validado de adaptación por oferta para futuras candidaturas, manteniendo la aprobación humana antes de cualquier envío.
+- Conservar y reutilizar el flujo validado de adaptación por oferta para futuras candidaturas, manteniendo el índice documental completo, la cabecera de CV con espacio para fotografía y la aprobación humana antes de cualquier envío.
 - Evaluar por separado si Vault Operator o Local REST API MCP aportan valor a la bóveda ya consolidada, sin reinstalar configuraciones heredadas.
 - Mantener separadas la cobertura, la profundidad y la correspondencia ESCO mientras no exista una decisión posterior que cambie ese alcance.
 - No tratar la evaluación como validación con personas ni actualizar el SPEC o el playbook de profundidad por inferencia.
@@ -90,6 +96,7 @@ El segundo caso real, `ENT-002-M01`, se ejecutó el 2026-07-21 después de aplic
 - No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones permanecen registradas históricamente en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Es candidata a acción futura la definición del primer piloto, condicionada a una decisión explícita sobre la recomendación metodológica.
 - [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]] está completada. Las fases de asistencia en Chrome y conectores de portales no son acciones autorizadas todavía.
+- CAND-2026-002, CAND-2026-004 y CAND-2026-005 están pendientes de aprobación humana. CAND-2026-003 continúa en borrador hasta decidir sobre el contrato temporal; su documentación ya incorpora los datos mínimos autorizados y el enfoque de RR. HH. relevante para PRL.
 - `ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian` quedó completada el 2026-07-18. La evaluación de plugins adicionales es una iniciativa independiente.
 
 ## Decisiones vigentes relevantes
@@ -120,6 +127,7 @@ El segundo caso real, `ENT-002-M01`, se ejecutó el 2026-07-21 después de aplic
 - Cualquier instalación futura de plugins debe ser limpia, reversible y evaluarse fuera de la acción de reorganización ya completada.
 - La investigación GitHub puede desviar la MVP hacia un sistema de coaching de entrevistas, una arquitectura multiagente o herramientas de CV si no se mantienen los límites del flujo.
 - La rama de búsqueda de empleo puede invadir el alcance metodológico de entrevista o automatizar candidaturas con controles insuficientes si no mantiene su frontera y la aprobación humana por lote.
+- La calidad narrativa de la experiencia profesional sigue siendo un punto de mejora: las estructuras ya verificadas son utilizables, pero algunas descripciones pueden ganar concreción y naturalidad en futuras iteraciones.
 - `.tmp/` queda excluida del uso operativo salvo autorización expresa.
 
 ## Referencias históricas y de continuidad
