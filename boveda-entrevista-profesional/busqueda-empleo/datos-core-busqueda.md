@@ -2,7 +2,7 @@
 id: datos-core-busqueda
 titulo: Datos Core para Búsqueda de Empleo
 fecha_creacion: 2026-07-21
-fecha_actualizacion: 2026-07-22
+fecha_actualizacion: 2026-07-26
 estado: en_construccion
 tipo: base_datos
 ---
@@ -27,12 +27,18 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | --- | --- |
 | Nombre | Gustavo Vega Bolaños |
 | Ubicación para trabajo presencial | Gran Canaria |
-| Modalidad | Presencial, híbrida o remota según las condiciones y el tipo de puesto |
+| Modalidad | Preferencia presencial; también disponible para puestos híbridos o remotos |
 | Perfiles disponibles | Dirección; Administración; Operaciones |
-| Salario de referencia | Mínimo de 20.000 € brutos anuales para jornada completa |
+| Salario de referencia | No menos de 20.000 € brutos anuales como referencia; valorar según tipo de contrato, jornada y responsabilidades |
 | Jornada parcial | Valorable según el resto de condiciones |
 | Sectores | Búsqueda abierta; cada oferta se evalúa según sus condiciones |
-| Idiomas | Español nativo. Inglés básico en conversación y lectura técnica funcional con apoyo de herramientas cuando sea necesario |
+| Idiomas | Castellano nativo. Inglés básico |
+| Disponibilidad de incorporación | Entre 7 y 15 días |
+| Desplazamiento | Todos los municipios de Gran Canaria, siempre que las condiciones del contrato compensen el desplazamiento en coche |
+| Permisos de conducción | B, A, A1 y A2 |
+| Viajes | Disponibilidad para viajar de forma esporádica por razones del cargo |
+| Visibilidad en Indeed | Las empresas pueden encontrar el perfil |
+| Contacto visible en el perfil de Indeed | Solo correo electrónico; no publicar el teléfono |
 
 ## 2. Perfiles profesionales objetivo
 
@@ -71,7 +77,8 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Contribución | Diseñó una solución que combinaba programación propia, Trello y Notion para gestionar candidaturas, precontratación, incorporación y seguimiento. Analizó documentos, modeló datos y separó datos personales de datos profesionales |
 | Alcance | Recibía aproximadamente 10 CV al día y realizaba unas 10 entrevistas al mes, con picos por bajas urgentes. Redactaba vacantes, cribaba CV, entrevistaba, preparaba informes para el Consejo de Dirección, realizaba onboarding y estructuraba seguimientos a 15, 30 y 90 días |
 | Comunicación de incorporación | Como parte del onboarding, publicaba en Workplace la incorporación de cada nueva persona para informar a todas las tiendas de su entrada en la empresa |
-| Resultado | El trabajo posterior a la entrevista pasó de 15–20 minutos a 5; los informes al Consejo, de 20 a 3 minutos; la documentación de contratación y onboarding pasó de unos 20 minutos a generación inmediata |
+| Resultado | El trabajo posterior a la entrevista pasó de 15–20 minutos a 5; los informes económicos al Consejo de Dirección, elaborados en Excel, pasaron de 20 a 3 minutos; la documentación de contratación y onboarding pasó de unos 20 minutos a generación inmediata |
+| Herramientas de análisis | Elaboró en Herfrailes S. L. hojas de cálculo avanzadas, dashboards y bases de datos relacionales en Excel, combinando datos procedentes de SQL Server con datos de ficheros CSV |
 | Evidencia complementaria | El proceso pasó de documentación manual de casi 60 documentos por persona a generación desde un perfil estructurado |
 | Uso en CV | Dirección; Administración |
 | Precaución | Las decisiones de contratación se tomaban en el Consejo de Dirección; no atribuirlas como decisión individual |
@@ -121,7 +128,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Primera aplicación (2013) | Con los datos de las dos tiendas, definió la política del servicio a domicilio gratuito desde 30 € de compra y estableció umbrales mínimos crecientes según la distancia, hasta 100 € en las zonas más alejadas |
 | Resultado primera aplicación | Eliminó el uso del servicio por parte de clientes de hasta 5 km que solo aprovechaban el reparto gratuito para productos pesados y compraban el resto en comercios de su propia zona |
 | Segunda aplicación (aprox. 2014–2015) | Repitió la recogida de datos en la tienda grande para evaluar el impacto de la apertura anunciada de una tienda competidora a menos de 0,5 km |
-| Resultado segunda aplicación | Detectó que un 42 % de la clientela de la tienda grande procedía de la zona en riesgo; este dato alimentó la decisión del Consejo de Dirección de abrir una tercera tienda propia de 350 m² en 2017 |
+| Resultado segunda aplicación | El análisis identificó que un 42 % de la clientela de la tienda grande procedía de la zona en riesgo; este dato aportó evidencia al Consejo de Dirección para decidir la apertura de una tercera tienda propia de 350 m² en 2017 |
 | Uso en CV | Dirección; Operaciones |
 | Precaución | Atribuir a Gustavo el diseño y la ejecución del análisis de datos, no la decisión colegiada de abrir la tercera tienda |
 
@@ -285,7 +292,7 @@ Herfrailes S. L. era socio de CENCOSU S. L., titular de los derechos de explotac
 
 ### Herramientas y tecnologías actuales — nivel medio-alto
 
-- Notion, ChatGPT, Codex, Work, Ollama, Obsidian, Trello, Office 365; Word y Excel con nivel alto por uso habitual en la elaboración de informes.
+- Notion, ChatGPT, Codex, Work, Ollama, Obsidian, Trello, Office 365; Word y Excel con nivel alto. En Herfrailes S. L. elaboraba todos los informes económicos para el Consejo de Dirección en Excel y desarrolló hojas de cálculo avanzadas, dashboards y bases de datos relacionales combinando datos de SQL Server y ficheros CSV.
 - SQL Server, Microsoft Visual Studio, Windows 11.
 - VB.NET y Windows Server.
 
@@ -310,24 +317,54 @@ La experiencia histórica puede aparecer en un CV cuando sea relevante, pero no 
 
 - **Máster en Inteligencia Artificial con Certificación Universitaria** — BIG school, con certificado de la Universidad Isabel I. En curso; no presentar como máster finalizado ni como titulación obtenida.
 
+### Bachillerato y COU
+
+- **Bachillerato y COU** — Instituto de Educación Secundaria Saulo Torón, Gáldar (Las Palmas, Gran Canaria), septiembre de 1979–mayo de 1983.
+  - 1.º de Bachillerato: septiembre de 1979–mayo de 1980.
+  - 2.º de Bachillerato: septiembre de 1980–mayo de 1981.
+  - 3.º de Bachillerato: septiembre de 1981–mayo de 1982.
+  - Curso de Orientación Universitaria (COU), rama de Ciencias: septiembre de 1982–mayo de 1983.
+- **Título oficial de Bachiller** — expedido por el Ministerio de Educación y Ciencia, Madrid, 11 de mayo de 1987.
+
+### Títulos oficiales y formación profesional acreditada
+
+- **Título oficial de Graduado Escolar** — Ministerio de Educación; expedido en Las Palmas de Gran Canaria, 28 de octubre de 1980.
+- **Formación Profesional, Técnico Administrativo** — Instituto de Formación Profesional Santa María de Guía, Santa María de Guía (Gran Canaria) (septiembre de 1988–junio de 1989) 
+
 ### Estudios reglados no finalizados
 
-- Ingeniería de Telecomunicaciones — Universidad de Las Palmas de Gran Canaria (1984–1986), no finalizada.
-- Ingeniería en Informática — Universidad de Las Palmas de Gran Canaria (1986–1987), no finalizada.
-- Formación Profesional en Administración de Empresas y Gestión Contable, no finalizada; cursada como vía rápida para reforzar conocimientos aplicados.
+- Ingeniería Técnica en Telecomunicaciones — Universidad Politécnica de Las Palmas, Las Palmas de Gran Canaria (septiembre de 1983–junio de 1985; dos cursos), carrera no finalizada.
+- Ingeniería Técnica en Informática — Universidad Politécnica de Las Palmas, Las Palmas de Gran Canaria (septiembre de 1985–junio de 1986; un curso), carrera no finalizada.
+- Formación Profesional, Técnico Administrativo — Instituto de Formación Profesional Santa María de Guía, Santa María de Guía (Gran Canaria) (septiembre de 1988–junio de 1989).
 
 ### Formación complementaria relevante
 
+- Jornada de formación sobre reclutamiento «El arte de reclutar» — Grupo CENCOSU–SPAR Gran Canaria, 9 de mayo de 2024. Contenidos acreditados: selección por competencias, igualdad de oportunidades, protección de datos, selección objetiva, herramientas de selección, incorporación y plan de desarrollo.
+- Curso de IA «De 0 a Agentes: domina la IA, gana competitividad y aprende cómo los agentes trabajan por ti» — BIG school, 6 horas, 29 de mayo de 2026. Certificado de asistencia; no equivale por sí solo al máster en IA en curso.
 - Curso breve de prevención de riesgos laborales (PRL), realizado para el desempeño en Herfrailes S. L.; no equivale a experiencia específica en coordinación empresarial (CAE).
 - Power BI — curso realizado en Udemy; conocimiento y experiencia previa, con uso no reciente.
-- Liderazgo en tiempos de cambio — Telefónica Universitas (2015).
+- «Leadership for Change / Liderazgo en tiempos de cambio», 2.ª edición — Universitas Telefónica, Telefónica Educación Digital, 10 de julio de 2015; duración estimada de 10 horas.
 - Liderazgo y Gestión de Equipos de Alto Rendimiento — Universidad Europea (2015).
 - Innovación y emprendimiento — Universidad Europea (2014).
 - Habilidades y competencias a través del coaching personal — Universidad de Cantabria (2014).
-- Programación web con PHP y MySQL — Consultec (2011).
-- Introducción a Hibernate — Intergrupo.net (2009).
-- Java J2SE, Java para móviles y Java2E (2007).
-- XML/XSL, Dreamweaver y Flash (2005–2006).
+- «CNeg001x: Diseño de Estrategias y Acciones Exitosas» — edX, Universidad Galileo, certificado de honor por superar la evaluación, 28 de junio de 2016.
+- «Programación de Páginas Web con PHP» — Consultec, Plan Avanza 2, 65 horas, realizado del 22 de noviembre de 2010 al 31 de marzo de 2011; certificado expedido el 17 de marzo de 2011.
+- «Introducción a Hibernate» — InterGrupo / Fundación Tripartita, 50 horas, certificado en Avilés el 20 de mayo de 2009.
+- «Introducción a Java J2SE» — Instituto de Formación Tecnológica / Alhambra Eidos, formación a distancia, puntuación 8,5 sobre 10, 17 de octubre de 2007.
+- «Programación Java en Entorno Servidor» — Garben Consultores / Programa FORINTEL, 20 horas, diciembre de 2007.
+- «Java y las Bases de Datos: JDBC» — Garben Consultores / Programa FORINTEL, 20 horas, diciembre de 2007.
+- «Desarrollo de Aplicaciones para Dispositivos Móviles J2ME» — Programa FORINTEL, 50 horas, 16 de febrero de 2007.
+- «Diseño Web: Flash» — Garben Consultores / Programa FORINTEL, 25 horas, junio de 2006.
+- «Introducción a Staffware Server Objects» — TIBCO Software Iberia, 23–25 de noviembre de 2005; certificado de asistencia y aprovechamiento satisfactorio.
+- «Programación XML» — Garben Consultores, 70 horas, diciembre de 2003.
+- «Introducción a ORACLE 8i» — Data Training / Centro de Formación, septiembre de 2003.
+- «Visual Basic 6» — Grupo EIDOS, formación a distancia, puntuación 10 sobre 10, 11 de febrero de 2000.
+- «Factores de éxito para la innovación en la empresa» — Cámara Oficial de Comercio, Industria y Navegación de Las Palmas, 8 horas, 16 de mayo de 2000.
+- «Recaudación de los Ingresos Locales» — Colegio de Secretarios, Interventores y Depositarios de Administración Local de Barcelona, 22–24 de noviembre de 1995.
+- «La Ley de Presupuestos Generales del Estado para 1997 y su Ley de Acompañamiento» — jornada de asistencia, 9 horas, Madrid, 6 de febrero de 1997.
+- «Crédito local y recaudación de ingresos municipales» — Colegio de Secretarios, Interventores y Depositarios de Administración Local de Barcelona, 33 horas lectivas, 12–15 de mayo de 1997.
+- «III Jornadas sobre Tributos Locales» — Ayuntamiento de Telde, 26 horas lectivas, 9–11 de febrero de 1998.
+- «Recaudación de Ingresos Locales» — Colegio de Secretarios, Interventores y Depositarios de Administración Local de Barcelona, 24 horas lectivas, 9–11 de diciembre de 1998.
 - PL/SQL Oracle 9i — Training Center (2005).
 - Máster en desarrollo de software — Alhambra EIDOS (2002–2003).
 - Visual Basic 5 y 6 avanzado (1999–2001).

@@ -9,15 +9,16 @@ tipo: datos_privados
 
 # Datos Privados para Candidaturas
 
-| Campo | Dato |
-| --- | --- |
-| Nombre completo | |
-| Correo | |
-| Teléfono | |
-| Localidad | |
-| Enlace profesional | |
-| Disponibilidad | |
-| Consentimiento de uso para candidaturas | |
+| Campo                                   | Dato                                                          |
+| --------------------------------------- | ------------------------------------------------------------- |
+| Nombre completo                         | Gustavo Vega                                                  |
+| Correo                                  | gusvegabol@gmail.com                                          |
+| Teléfono                                | 669549933                                                     |
+| Localidad                               |                                                               |
+| Enlace profesional                      | www.linkedin.com/in/gusvegabol                                |
+| Foto                                    | boveda-entrevista-profesional/busqueda-empleo/foto-perfil.png |
+| Disponibilidad                          |                                                               |
+| Consentimiento de uso para candidaturas |                                                               |
 
 > **Regla de uso:** estos datos no se copian a [[datos-core-busqueda]] ni se usan fuera de una candidatura aprobada.
 
@@ -91,3 +92,16 @@ Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-004-globaenergy-a
 | Alcance del consentimiento | Uso exclusivo para `CAND-2026-005`; autorización expresa comunicada el 2026-07-23. |
 
 Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-005-proapro-tecnico-distribucion-logistica/candidatura|CAND-2026-005]].
+
+### CAND-2026-007 — AROGADI CANARIAS S. L. / AGD Center — Gerente
+
+| Campo | Valor autorizado |
+| --- | --- |
+| Nombre | Gustavo Vega Bolaños |
+| Correo electrónico | gusvegabol@gmail.com |
+| Teléfono | 669 549 933 |
+| Fotografía | Sí, la fotografía de perfil disponible en la bóveda de búsqueda de empleo |
+| Enlace profesional | linkedin.com/in/gusvegabol |
+| Alcance del consentimiento | Uso exclusivo para `CAND-2026-007`; documentos preparados el 2026-07-26 y pendientes de revisión humana antes de compartirlos |
+
+Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-007-arogadi-gerente/candidatura|CAND-2026-007]].
