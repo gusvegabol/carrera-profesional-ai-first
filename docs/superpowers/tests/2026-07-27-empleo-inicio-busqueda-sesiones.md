@@ -97,6 +97,48 @@ Conclusión de esta ronda:
 - por tanto, la evidencia GREEN funcional sigue apoyándose en la ejecución
   aislada ya documentada más abajo.
 
+## Evidencia independiente de subagente fresco sobre la skill actualizada
+
+Esta evidencia procede de una lectura independiente del skill y del fixture por
+un subagente de contexto fresco. Registra comportamiento y requisitos
+observados por ese subagente. No se presenta como prueba de que ese subagente
+materializara escrituras en archivos.
+
+Observaciones literales aportadas:
+
+- timestamp de invocación observado: `2026-07-27 22:36`
+- clasificación de sesiones:
+  - `sesion-job-up-abierta.md` → activa Job-up (`abierta`)
+  - `sesion-job-up-pausada.md` → activa Job-up (`en pausa`)
+  - `sesion-job-up-incompleta.md` → activa Job-up (`abierta`)
+  - `sesion-job-up-cerrada.md` → preservada
+  - `sesion-metodologia-abierta.md` → preservada
+- requisito de cierre para sesiones Job-up activas:
+  - `cierre: 2026-07-27 22:36`
+  - conservar el cuerpo histórico
+  - exigir una traza mínima de cierre también en la sesión incompleta
+- requisito de nueva sesión:
+  - archivo: `sesion-20260727-2236-job-up.md`
+  - `id: sesion-20260727-2236-job-up`
+  - `inicio: 2026-07-27 22:36`
+  - `cierre:` vacío
+  - `estado: abierta`
+  - `tipo: sesion`
+  - `sesion_relacionada: sesion-job-up-incompleta`
+- requisito de actualización del estado:
+  - actualización dirigida de `estado-actual.md`
+  - parada antes de escribir si la fuente canónica de estado falta o es
+    ambigua
+- conclusión del subagente:
+  - la skill actualizada hace imposible volver al ciclo de vida opcional o
+    manual anterior
+
+Conclusión documental:
+
+- esta evidencia refuerza la lectura GREEN de la skill actualizada;
+- aun así, se mantiene separada de la evidencia de escrituras observadas en las
+  copias aisladas ejecutadas más abajo.
+
 ## Escenario 1 — invocación normal
 
 Invocación simulada:
