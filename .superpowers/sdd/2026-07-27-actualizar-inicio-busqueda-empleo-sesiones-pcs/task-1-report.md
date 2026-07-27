@@ -151,3 +151,46 @@ Resultado:
 - El alcance sigue limitado a Task 1.
 - No se han añadido cambios de implementación ni escrituras en `.pcs/`.
 - Se preservan los límites previos respecto a metodología, Core PCS, candidaturas y acciones externas.
+
+## Fix round 2 — 2026-07-27
+
+### Hallazgo atendido
+
+1. Se añadió al patrón canónico de la nueva sesión la exigencia explícita de la clave de frontmatter `sesion_relacionada:` cuando exista una sesión relacionada aplicable, alineada con `TEMPLATE_SESION.md`.
+
+### Archivos modificados en esta ronda
+
+- `docs/superpowers/specs/2026-07-22-inicio-busqueda-empleo-skill-design.md`
+- `.superpowers/sdd/2026-07-27-actualizar-inicio-busqueda-empleo-sesiones-pcs/task-1-report.md`
+
+### Validaciones de esta ronda
+
+#### 1. Comprobación de espacios y formato Git
+
+Comando:
+
+```powershell
+git -C 'C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first/.worktrees/codex-actualizar-job-up-sesiones' diff --check -- 'docs/superpowers/specs/2026-07-22-inicio-busqueda-empleo-skill-design.md' '.superpowers/sdd/2026-07-27-actualizar-inicio-busqueda-empleo-sesiones-pcs/task-1-report.md'
+```
+
+Resultado:
+
+- Sin errores de espacios o formato bloqueantes.
+- Se mantiene el aviso no bloqueante de normalización `LF -> CRLF` en el worktree de Windows.
+
+#### 2. Comprobación textual del nuevo requisito
+
+Comando:
+
+```powershell
+rg -n "sesion_relacionada:" 'C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first/.worktrees/codex-actualizar-job-up-sesiones/docs/superpowers/specs/2026-07-22-inicio-busqueda-empleo-skill-design.md'
+```
+
+Resultado:
+
+- Confirmada en el diseño la exigencia explícita de `sesion_relacionada:` dentro del patrón canónico de la nueva sesión.
+
+### Autoevaluación de la ronda
+
+- El cambio se limita al hallazgo pendiente de Task 1.
+- No se han introducido cambios fuera del diseño funcional y su informe de trazabilidad.
