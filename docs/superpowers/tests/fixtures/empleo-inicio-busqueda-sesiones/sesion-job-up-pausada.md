@@ -21,4 +21,3 @@ verificar cierres y continuidad.
 
 Representar una sesión Job-up que sigue viva documentalmente pero no está en
 edición activa.
-

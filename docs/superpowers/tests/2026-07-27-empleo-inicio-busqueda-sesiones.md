@@ -30,10 +30,11 @@ ordenaba cerrar sesiones previas, pero no exigía de forma expresa conservar el
 cuerpo histórico ni dejar una traza mínima de cierre en la propia sesión.
 
 Se ajustó únicamente `.codex/skills/empleo-inicio-busqueda/SKILL.md` para
-añadir esta exigencia:
+añadir esta exigencia literal:
 
+- cada sesión Job-up seleccionada para cierre cambia a
+  `cierre: <timestamp de invocación>` y `estado: cerrada`;
 - conservar intacto el cuerpo histórico existente;
-- añadir la hora de cierre de la invocación;
 - dejar una traza mínima de que la sesión se cerró al iniciar un nuevo bloque
   Job-up.
 
@@ -114,7 +115,12 @@ Observaciones literales aportadas:
   - `sesion-job-up-cerrada.md` → preservada
   - `sesion-metodologia-abierta.md` → preservada
 - requisito de cierre para sesiones Job-up activas:
-  - `cierre: 2026-07-27 22:36`
+  - `sesion-job-up-abierta.md` → `cierre: 2026-07-27 22:36` y
+    `estado: cerrada`
+  - `sesion-job-up-pausada.md` → `cierre: 2026-07-27 22:36` y
+    `estado: cerrada`
+  - `sesion-job-up-incompleta.md` → `cierre: 2026-07-27 22:36` y
+    `estado: cerrada`
   - conservar el cuerpo histórico
   - exigir una traza mínima de cierre también en la sesión incompleta
 - requisito de nueva sesión:
@@ -158,8 +164,13 @@ Evidencia observada:
   - `sesion-job-up-abierta.md`
   - `sesion-job-up-incompleta.md`
   - `sesion-job-up-pausada.md`
-- campo de cierre observado literalmente en la copia aislada tras el cierre:
-  - `sesion-job-up-abierta.md` → `cierre: 2026-07-27 10:15`
+- campos observados literalmente en la copia aislada tras el cierre:
+  - `sesion-job-up-abierta.md` → `cierre: 2026-07-27 10:15` y
+    `estado: cerrada`
+  - `sesion-job-up-pausada.md` → `cierre: 2026-07-27 10:15` y
+    `estado: cerrada`
+  - `sesion-job-up-incompleta.md` → `cierre: 2026-07-27 10:15` y
+    `estado: cerrada`
 - sesiones Job-up activas tras la invocación:
   - `sesion-20260727-1015-job-up.md`
 
@@ -193,6 +204,15 @@ Evidencia observada:
   - `sesion-job-up-incompleta.md`
   - `sesion-job-up-pausada.md`
   - `sesion-job-up-redaccion.md`
+- campos de cierre y estado esperados literalmente para cada sesión cerrada:
+  - `sesion-job-up-abierta.md` → `cierre: 2026-07-27 10:16` y
+    `estado: cerrada`
+  - `sesion-job-up-incompleta.md` → `cierre: 2026-07-27 10:16` y
+    `estado: cerrada`
+  - `sesion-job-up-pausada.md` → `cierre: 2026-07-27 10:16` y
+    `estado: cerrada`
+  - `sesion-job-up-redaccion.md` → `cierre: 2026-07-27 10:16` y
+    `estado: cerrada`
 - `sesion-metodologia-abierta.md`: preservada sin cambios
 - `sesion-job-up-cerrada.md`: preservada sin cambios
 
@@ -222,6 +242,7 @@ Invocación simulada:
 Evidencia observada en `sesion-job-up-incompleta.md`:
 
 - la sesión quedó cerrada;
+- el frontmatter quedó con `cierre: 2026-07-27 10:17` y `estado: cerrada`;
 - aparece `## Traza de cierre`;
 - el cuerpo original previo a la traza se conserva;
 - no aparecen identificadores `ACC-` ni `DEC-` inventados.
@@ -298,7 +319,8 @@ La skill queda en GREEN para el ciclo de sesiones de Job-up sobre fixture
 aislado:
 
 - crea una sesión nueva por invocación;
-- cierra solo las sesiones Job-up activas anteriores;
+- cierra solo las sesiones Job-up activas anteriores y cada una termina con
+  `cierre: <timestamp de invocación>` y `estado: cerrada`;
 - preserva sesiones ya cerradas y líneas no Job-up;
 - actualiza solo la traza dirigida del estado;
 - resuelve colisiones en el mismo minuto sin sobreescribir;

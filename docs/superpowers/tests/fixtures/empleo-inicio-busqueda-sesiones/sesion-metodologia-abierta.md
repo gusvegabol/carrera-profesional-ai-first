@@ -20,4 +20,3 @@ AI. No es Job-up y no debe cerrarse por una invocación de búsqueda de empleo.
 
 Mantener una línea abierta de metodología para verificar que el flujo Job-up
 no toca sesiones ajenas a la rama operativa.
-

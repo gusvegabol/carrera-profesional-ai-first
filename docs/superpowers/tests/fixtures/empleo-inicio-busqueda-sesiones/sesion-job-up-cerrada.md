@@ -19,4 +19,3 @@ para comprobar que el flujo no reescribe sesiones ya finalizadas.
 ## Objetivo
 
 Conservar la trazabilidad de una sesión Job-up ya cerrada.
-

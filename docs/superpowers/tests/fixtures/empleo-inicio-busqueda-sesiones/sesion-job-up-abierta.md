@@ -20,4 +20,3 @@ modifica la investigación metodológica de entrevista.
 ## Objetivo
 
 Reanudar la continuidad operativa de Job-up desde una sesión abierta.
-

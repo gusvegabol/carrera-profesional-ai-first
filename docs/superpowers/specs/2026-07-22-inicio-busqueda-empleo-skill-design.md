@@ -58,6 +58,8 @@ Una sesión previa se considera candidata a cierre automático solo si pertenece
 
 La sesión solo puede cerrarse automáticamente si su estado actual es uno de estos: `abierta`, `en pausa` o `en redacción`.
 
+Cada sesión Job-up seleccionada para cierre debe reescribirse de forma explícita con ambos cambios de frontmatter: `cierre: <timestamp de invocación>` y `estado: cerrada`. Ese cierre debe preservar intacto el cuerpo histórico previo y añadir una traza mínima de cierre dentro de la propia sesión.
+
 Las sesiones en estado `consolidada`, `cerrada` o `archivada` deben preservarse sin reescritura.
 
 Si la clasificación de una sesión resulta ambigua, inconclusa o se solapa con una línea no Job-up, esa ambigüedad se convierte en bloqueo de preflight: la invocación debe detenerse antes de cualquier escritura y explicar expresamente qué conflicto de clasificación impide continuar.
@@ -107,6 +109,7 @@ Si cualquiera de las comprobaciones previas falla, el flujo se aborta completo y
 - El inicio carga únicamente el contexto necesario y diferencia esta rama de la investigación de entrevista.
 - La salida inicial es breve, trazable y termina esperando la siguiente instrucción del usuario.
 - La invocación registra el ciclo de vida mínimo de sesión Job-up solo en `.pcs/sesiones/` y `.pcs/estado/estado-actual.md`.
+- Toda sesión Job-up seleccionada en `abierta`, `en pausa` o `en redacción` termina con `cierre: <timestamp de invocación>` y `estado: cerrada`, sin perder su cuerpo histórico y con traza mínima de cierre.
 - La actualización de `.pcs/estado/estado-actual.md` preserva intacto todo el contenido no Job-up y limita el cambio a la traza mínima necesaria de esa rama.
 - Una clasificación ambigua o solapada de sesiones bloquea la invocación antes de cualquier escritura y se explica como tal.
 - La invocación no produce acciones externas.

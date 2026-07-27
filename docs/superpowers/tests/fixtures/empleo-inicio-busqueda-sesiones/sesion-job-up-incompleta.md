@@ -21,4 +21,3 @@ historia por inferencia.
 ## Objetivo
 
 Representar una sesión Job-up previa parcialmente documentada.
-
