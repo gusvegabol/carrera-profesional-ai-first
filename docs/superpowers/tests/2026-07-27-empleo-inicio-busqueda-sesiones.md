@@ -19,6 +19,7 @@ Archivos:
 | `sesion-job-up-abierta.md` | `abierta` | Sesión Job-up abierta con referencia a una sesión previa relacionada. |
 | `sesion-job-up-pausada.md` | `en pausa` | Sesión Job-up pausada con referencia a una sesión previa relacionada. |
 | `sesion-job-up-cerrada.md` | `cerrada` | Sesión Job-up ya cerrada para comprobar que no se reabre ni se reescribe. |
+| `sesion-job-up-incompleta.md` | `abierta` | Sesión Job-up con frontmatter mínimo y cuerpo incompleto para el escenario 3. |
 | `sesion-metodologia-abierta.md` | `abierta` | Sesión no Job-up, claramente metodológica, para verificar exclusión. |
 
 ## Línea base observada
@@ -61,14 +62,15 @@ permanece intacta porque no existe ninguna escritura de ciclo de vida.
 
 ### 3. Sesión previa parcialmente documentada
 
-**Entrada de prueba:** una sesión Job-up previa con metadatos mínimos y cuerpo
-incompleto.
+**Entrada de prueba:** `sesion-job-up-incompleta.md`, una sesión Job-up previa
+con metadatos mínimos y cuerpo incompleto.
 
 **Esperado en la versión actual:** no se preserva y cierra porque no existe una
 escritura de ciclo de vida.
 
 **Resultado RED observado:** la skill no registra cierre, no completa el
-contenido histórico y no deja una traza documental nueva para esa sesión.
+contenido histórico de `sesion-job-up-incompleta.md` y no deja una traza
+documental nueva para esa sesión.
 
 ## Racionalización detectada
 
@@ -89,4 +91,3 @@ sesión viva nueva, sin cierre de previas y sin actualización del estado.
 - [ ] El puntero de estado queda actualizado hacia la nueva sesión.
 - [ ] No se crean acciones nuevas ni decisiones nuevas.
 - [ ] No se producen acciones externas.
-
