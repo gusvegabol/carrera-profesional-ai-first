@@ -84,7 +84,7 @@ Resultado:
 
 ## Autoevaluación
 
-- El diseño actualizado cubre los cinco requisitos del brief.
+- El diseño actualizado cubre los seis requisitos del brief: línea base RED, contrato acotado de escrituras, selección de sesiones Job-up, orden transaccional/preflight, preservación de límites y revisión ortográfica en español.
 - La referencia a la entidad y la plantilla canónica de sesión queda integrada en el propio contrato funcional, sin modificar PCS Core.
 - El documento mantiene la separación entre continuidad PCS, rama Job-up y límites externos.
 - No se han introducido cambios de implementación ni escrituras en `.pcs/`.
@@ -194,3 +194,49 @@ Resultado:
 
 - El cambio se limita al hallazgo pendiente de Task 1.
 - No se han introducido cambios fuera del diseño funcional y su informe de trazabilidad.
+
+## Fix round 3 — 2026-07-27
+
+### Hallazgos atendidos
+
+1. Se corrigió el diseño para exigir que la clave canónica `sesion_relacionada:` esté siempre presente en el frontmatter de cada nueva sesión.
+2. Se fijó que `sesion_relacionada:` se rellena con la sesión Job-up relevante más reciente cuando exista relación y que solo queda vacía cuando no exista ninguna relación aplicable.
+3. Se corrigió la autoevaluación del informe para que refleje con precisión los seis requisitos del brief original, en lugar de cinco.
+
+### Archivos modificados en esta ronda
+
+- `docs/superpowers/specs/2026-07-22-inicio-busqueda-empleo-skill-design.md`
+- `.superpowers/sdd/2026-07-27-actualizar-inicio-busqueda-empleo-sesiones-pcs/task-1-report.md`
+
+### Validaciones de esta ronda
+
+#### 1. Comprobación de espacios y formato Git
+
+Comando:
+
+```powershell
+git -C 'C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first/.worktrees/codex-actualizar-job-up-sesiones' diff --check -- 'docs/superpowers/specs/2026-07-22-inicio-busqueda-empleo-skill-design.md' '.superpowers/sdd/2026-07-27-actualizar-inicio-busqueda-empleo-sesiones-pcs/task-1-report.md'
+```
+
+Resultado:
+
+- Sin errores de espacios o formato bloqueantes.
+- Se mantiene el aviso no bloqueante de normalización `LF -> CRLF` en el worktree de Windows.
+
+#### 2. Comprobación textual del contrato final
+
+Comando:
+
+```powershell
+rg -n "sesion_relacionada:|siempre presente|más reciente|queda vacía solo|seis requisitos del brief" 'C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first/.worktrees/codex-actualizar-job-up-sesiones/docs/superpowers/specs/2026-07-22-inicio-busqueda-empleo-skill-design.md' 'C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first/.worktrees/codex-actualizar-job-up-sesiones/.superpowers/sdd/2026-07-27-actualizar-inicio-busqueda-empleo-sesiones-pcs/task-1-report.md'
+```
+
+Resultado:
+
+- Confirmada en el diseño la presencia obligatoria de `sesion_relacionada:` y su regla de relleno.
+- Confirmada en el informe la referencia correcta a los seis requisitos del brief.
+
+### Autoevaluación de la ronda
+
+- El cambio se limita al último hallazgo pendiente de Task 1 y a la corrección de precisión del informe.
+- No se han introducido cambios fuera del diseño funcional y su trazabilidad documental.

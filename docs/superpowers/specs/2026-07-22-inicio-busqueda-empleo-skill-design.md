@@ -41,7 +41,9 @@ La nueva sesión de Job-up debe seguir explícitamente la entidad y la plantilla
 - Nombre de archivo: `sesion-YYYYMMDD-HHMM-slug.md`.
 - `id` de frontmatter alineado con el nombre base del archivo.
 - Frontmatter mínimo con `titulo`, `inicio`, `cierre`, `estado: abierta` y `tipo: sesion`.
-- Clave canónica `sesion_relacionada:` cuando exista una sesión relacionada aplicable.
+- Clave canónica `sesion_relacionada:` siempre presente en el frontmatter.
+- `sesion_relacionada:` se rellena con la sesión Job-up relevante más reciente cuando exista una relación aplicable.
+- `sesion_relacionada:` queda vacía solo cuando no exista ninguna relación aplicable.
 - `host` es opcional como metadato auxiliar.
 
 La sesión nueva debe nacer como entidad histórica compatible con PCS, sin convertir su contenido en sustituto del estado vivo.
