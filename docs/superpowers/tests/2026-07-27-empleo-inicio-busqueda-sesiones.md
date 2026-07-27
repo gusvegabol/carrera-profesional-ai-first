@@ -48,7 +48,7 @@ Fixture de referencia:
 
 Archivos base:
 
-| Archivo | Estado inicial | Línea |
+| Archivo | Estado inicial | Clasificación |
 | --- | --- | --- |
 | `sesion-job-up-abierta.md` | `abierta` | Job-up |
 | `sesion-job-up-pausada.md` | `en pausa` | Job-up |
@@ -58,6 +58,44 @@ Archivos base:
 
 Para el escenario 2 se añadió, solo en la copia aislada, una sesión adicional
 `sesion-job-up-redaccion.md` con `estado: en redacción`.
+
+## Intento de reejecución con agente de contexto realmente fresco
+
+En esta ronda de corrección se intentó reejecutar los tres escenarios GREEN con
+`codex exec` en modo efímero sobre tres copias temporales aisladas del
+workspace, una por escenario. El objetivo era obtener salida literal de un
+agente realmente fresco que invocara la skill actualizada.
+
+Preparación aislada observada:
+
+- `scenario_1_normal`:
+  `C:\Users\gusve\AppData\Local\Temp\jobup-fresh-scenario-1-5kg4p_73`
+- `scenario_2_multiple_prior`:
+  `C:\Users\gusve\AppData\Local\Temp\jobup-fresh-scenario-2-k__sp854`
+- `scenario_3_incomplete`:
+  `C:\Users\gusve\AppData\Local\Temp\jobup-fresh-scenario-3-067ob3nl`
+
+Salida literal observada del arranque fresco:
+
+- el CLI sí abrió la copia aislada y mostró:
+  - `workdir: C:\Users\gusve\AppData\Local\Temp\jobup-fresh-scenario-1-5kg4p_73`
+  - `user`
+  - `Este directorio es una copia aislada de prueba de carrera-ai. Invoca exactamente $empleo-inicio-busqueda.`
+- pero la ejecución no llegó al mensaje final de la skill y terminó con un
+  bloqueo del entorno de cuenta/modelo. Se observaron literalmente estos
+  errores al probar modelos compatibles e incompatibles:
+  - `The 'gpt-5.6-luna' model requires a newer version of Codex.`
+  - `The 'gpt-5' model is not supported when using Codex with a ChatGPT account.`
+  - `The 'o4-mini' model is not supported when using Codex with a ChatGPT account.`
+  - `The 'o3' model is not supported when using Codex with a ChatGPT account.`
+
+Conclusión de esta ronda:
+
+- sí quedó demostrada la apertura de una sesión fresca sobre la copia aislada;
+- no quedó posible capturar comportamiento GREEN del skill en ese agente fresco
+  porque el entorno abortó antes de que la skill devolviera salida funcional;
+- por tanto, la evidencia GREEN funcional sigue apoyándose en la ejecución
+  aislada ya documentada más abajo.
 
 ## Escenario 1 — invocación normal
 
@@ -78,6 +116,8 @@ Evidencia observada:
   - `sesion-job-up-abierta.md`
   - `sesion-job-up-incompleta.md`
   - `sesion-job-up-pausada.md`
+- campo de cierre observado literalmente en la copia aislada tras el cierre:
+  - `sesion-job-up-abierta.md` → `cierre: 2026-07-27 10:15`
 - sesiones Job-up activas tras la invocación:
   - `sesion-20260727-1015-job-up.md`
 
