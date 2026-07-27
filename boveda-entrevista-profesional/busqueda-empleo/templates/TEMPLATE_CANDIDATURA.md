@@ -61,6 +61,7 @@ proposito: candidatura
 
 - [[cv.docx|CV editable]]
 - [[cv.pdf|CV en PDF]]
+- [[cv.tex|CV en LaTeX para procesamiento automático]]
 - [[carta-presentacion.docx|Carta de presentación editable]]
 - [[carta-presentacion.pdf|Carta de presentación en PDF]]
 

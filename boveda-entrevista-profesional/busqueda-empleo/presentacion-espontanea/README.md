@@ -8,6 +8,8 @@ Los tres artefactos base son:
 - `cv-maestro.pdf`
 - [[email-presentacion]]
 
+En futuras presentaciones espontáneas se generará también `cv-maestro.tex`, versión LaTeX estructurada para procesamiento automático por IA.
+
 Solo si un destinatario lo solicita, podrán crearse `carta-presentacion.docx` y `carta-presentacion.pdf`.
 
 Todo envío o compartición de estos materiales requiere la aprobación humana explícita de la persona candidata.

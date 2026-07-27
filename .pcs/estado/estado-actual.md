@@ -2,8 +2,8 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
-fecha_actualizacion: 2026-07-24
-ultima_sesion_relacionada: sesion-20260722-1131-job-up
+fecha_actualizacion: 2026-07-28
+ultima_sesion_relacionada: sesion-20260727-2109-busqueda-empleo
 host: carrera-ai
 ---
 
@@ -27,9 +27,13 @@ El trabajo vigente del host permanece en la revisión metodológica de la entrev
 
 Por [[DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo]], Carrera AI incorpora una rama operativa de búsqueda de empleo dentro del mismo host, denominada **Job-up**. Su finalidad es preparar con rapidez CV adaptados, cartas de presentación y candidaturas revisables a partir de información profesional factual. Esta rama no modifica el SPEC, los playbooks ni la investigación metodológica de entrevista; ambas líneas siguen separadas.
 
-Job-up mantiene actualmente cinco candidaturas registradas: una enviada (`CAND-2026-001`), dos pendientes de aprobación (`CAND-2026-002` y `CAND-2026-004`), un borrador condicionado por la decisión pendiente sobre el contrato temporal (`CAND-2026-003`) y una candidatura pendiente de aprobación para Pro a Pro Hostelería Organizada (`CAND-2026-005`). En CAND-2026-003 constan autorizados los datos mínimos de contacto para sus documentos, que ya incorporan el enfoque de RR. HH. pertinente para una oferta administrativa de PRL; sigue sin estar disponible para envío mientras no se acepte el contrato temporal y no se realice la revisión humana.
+Job-up mantiene actualmente diez candidaturas registradas: una enviada y posteriormente rechazada (`CAND-2026-001`), cuatro enviadas mediante InfoJobs (`CAND-2026-002` a `CAND-2026-005`), una presentación espontánea a Randstad pendiente de aprobación (`CAND-2026-006`) y cuatro candidaturas enviadas (`CAND-2026-007` a `CAND-2026-010`). CAND-2026-007 fue presentada a AGD Center el 2026-07-26. CAND-2026-008 fue presentada a Baleària mediante Indeed el 2026-07-27. CAND-2026-009 fue presentada a LIVVO mediante Indeed el 2026-07-27. CAND-2026-010 fue presentada a ACCIONA mediante Workday el 2026-07-27. Los estados detallados y los documentos asociados viven en `seguimiento-candidaturas.md` y en las carpetas de cada candidatura.
 
-El flujo de adaptación por oferta ya incorpora análisis de nivel y sobrecualificación, palabras clave, requisitos no acreditados, guion narrativo, control de arrastre entre candidaturas, verificación documental de una página y un veredicto final previo a la aprobación humana. La ficha `candidatura.md` debe inventariar todos los documentos operativos de su carpeta —no solo el CV y la carta— y actualizarse al crear, añadir, sustituir o eliminar un artefacto. Los CV generados conservan nombre, titular y contacto centrados, además de un espacio reservado antes de «Perfil profesional» para facilitar la incorporación manual de fotografía.
+La continuidad de Job-up se mantendrá en este estado, en las acciones y decisiones vigentes y en sus documentos operativos. Se ha adoptado que las sesiones PCS no permanezcan abiertas indefinidamente para representar una línea de trabajo de larga duración: cada bloque concreto de trabajo tendrá una sesión delimitada, que se consolidará o cerrará al dejar de estar en edición. Esta convención queda formalizada en [[DEC-20260724-1956-001-delimitar-sesiones-job-up]].
+
+La sesión [[sesion-20260724-2004-candidaturas-job-up]] quedó consolidada y cerrada el 2026-07-27. La sesión [[sesion-20260727-2109-busqueda-empleo]] quedó cerrada el 2026-07-28 tras finalizar el bloque delimitado de búsqueda de empleo del 2026-07-27. La continuidad de Job-up se mantiene en el estado operativo, en sus documentos operativos y, para cada nuevo bloque de trabajo, en una sesión PCS delimitada.
+
+El flujo de adaptación por oferta ya incorpora análisis de nivel y sobrecualificación, palabras clave, requisitos no acreditados, guion narrativo, control de arrastre entre candidaturas, verificación documental de una página y un veredicto final previo a la aprobación humana. La ficha `candidatura.md` debe inventariar todos los documentos operativos de su carpeta —incluidos CV en DOCX, PDF y LaTeX— y actualizarse al crear, añadir, sustituir o eliminar un artefacto. Los CV generados conservan nombre, titular y contacto centrados, además de un espacio reservado antes de «Perfil profesional» para facilitar la incorporación manual de fotografía. El flujo no abre ni inspecciona DOCX con LibreOffice en este host; la validación estructural se realiza con herramientas de lectura OOXML y la comprobación visual solo se declara cuando el renderizador está disponible.
 
 Job-up incorpora además un veredicto final del CV que evalúa primero la integridad factual y de privacidad y, solo después, cinco criterios de calidad de 1 a 5: primer escaneo, encaje competitivo, cobertura ATS respaldada, fuerza de la experiencia y adecuación narrativa. La decisión resultante no sustituye la aprobación humana. CAND-2026-004 es la primera aplicación, con integridad `apta`, media 4,0 y resultado `revisar_antes_de_aprobar`. La investigación contextual de empresa o sector es opcional y posterior al veredicto; requiere autorización de la persona responsable y mostrar previamente las URL propuestas. Si esa investigación justifica un ajuste de lenguaje corporativo, debe aplicarse de forma coherente al CV y a la carta de presentación. En CAND-2026-004 se investigó la fuente oficial de Globaenergy y se incorporó, con autorización expresa, ese ajuste de tono en ambos documentos sin añadir experiencia no acreditada.
 
@@ -58,7 +62,7 @@ La utilidad de esa separación y de Graphify queda superada por la decisión de 
 
 ## Foco operativo
 
-Mantener dos líneas separadas: evaluar si la arquitectura recomendada de doble pasada debe orientar el primer piloto de cobertura profesional, y operar Job-up para valorar ofertas y producir candidaturas revisables cuando la persona responsable lo autorice. En Job-up, continuar valorando ofertas concretas y refinando la redacción de la experiencia profesional para que sea más concreta y orientada al puesto, sin perder trazabilidad factual. CAND-2026-005 aporta la referencia vigente de presentación logística y de preparación para entrevista; las candidaturas anteriores conservan sus propios condicionantes. La reorganización documental y la bóveda raíz de Obsidian ya están consolidadas y no desplazan ninguno de estos focos.
+Mantener dos líneas separadas: evaluar si la arquitectura recomendada de doble pasada debe orientar el primer piloto de cobertura profesional, y operar Job-up para valorar ofertas y producir candidaturas revisables cuando la persona responsable lo autorice. En Job-up, continuar valorando ofertas concretas y refinando la redacción de la experiencia profesional para que sea más concreta y orientada al puesto, sin perder trazabilidad factual. Toda nueva candidatura debe incluir CV en DOCX, PDF y LaTeX, además de la carta en DOCX y PDF. La sesión de candidaturas nuevas y antiguas quedó consolidada y cerrada el 2026-07-27; el siguiente bloque deberá abrirse en una nueva sesión PCS delimitada. La reorganización documental y la bóveda raíz de Obsidian ya están consolidadas y no desplazan ninguno de estos focos.
 
 Se ha abierto además la sesión `sesion-20260721-1644-perfiles-sinteticos-para-evaluar-entrevistas` para debatir un posible banco de perfiles sintéticos que acelere la prueba de los playbooks. Es una línea abierta de investigación metodológica: no autoriza simulaciones, cambios de playbook ni sustituye la validación con personas reales.
 
@@ -96,7 +100,8 @@ El segundo caso real, `ENT-002-M01`, se ejecutó el 2026-07-21 después de aplic
 - No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones permanecen registradas históricamente en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Es candidata a acción futura la definición del primer piloto, condicionada a una decisión explícita sobre la recomendación metodológica.
 - [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]] está completada. Las fases de asistencia en Chrome y conectores de portales no son acciones autorizadas todavía.
-- CAND-2026-002, CAND-2026-004 y CAND-2026-005 están pendientes de aprobación humana. CAND-2026-003 continúa en borrador hasta decidir sobre el contrato temporal; su documentación ya incorpora los datos mínimos autorizados y el enfoque de RR. HH. relevante para PRL.
+- CAND-2026-002, CAND-2026-003, CAND-2026-004 y CAND-2026-005 ya fueron enviadas mediante InfoJobs y quedan pendientes de la respuesta de sus procesos de selección.
+- CAND-2026-006 está preparada como presentación espontánea a Randstad y queda pendiente de revisión y aprobación humana antes de compartirla.
 - `ACC-20260718-1700-001-implantar-reorganizacion-documental-obsidian` quedó completada el 2026-07-18. La evaluación de plugins adicionales es una iniciativa independiente.
 
 ## Decisiones vigentes relevantes
@@ -116,6 +121,7 @@ El segundo caso real, `ENT-002-M01`, se ejecutó el 2026-07-21 después de aplic
 - ESCO solo puede entrar más adelante como correspondencia candidata, explicable y revisable.
 - `DEC-20260718-1700-001-adoptar-reorganizacion-documental-obsidian` adopta la bóveda raíz limpia y la migración por bloques validados. Las aprobaciones de clasificación de cada bloque continúan siendo decisiones posteriores e independientes.
 - [[DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo]] crea la rama operativa de búsqueda de empleo dentro de Carrera AI y preserva la separación respecto de la investigación metodológica de entrevista.
+- [[DEC-20260724-1956-001-delimitar-sesiones-job-up]] mantiene Job-up como línea operativa de largo recorrido y establece sesiones PCS delimitadas para cada bloque concreto de trabajo.
 
 ## Bloqueos o riesgos
 

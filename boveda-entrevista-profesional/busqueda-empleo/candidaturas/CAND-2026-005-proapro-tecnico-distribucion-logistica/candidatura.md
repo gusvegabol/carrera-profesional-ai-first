@@ -2,13 +2,13 @@
 id_candidatura: CAND-2026-005
 empresa: PRO A PRO HOSTELERÍA ORGANIZADA
 puesto: Técnico/a de Distribución y Logística
-estado: pendiente_de_aprobacion
-fecha: 2026-07-23
+estado: enviada
+fecha: 2026-07-24
 ---
 
 # Candidatura CAND-2026-005
 
-Documentos preparados para revisión humana. Se autoriza exclusivamente para esta candidatura el uso de nombre y primer apellido, correo electrónico y teléfono. Se confirma la aceptación de modalidad híbrida en Agüimes. No se ha realizado ningún envío.
+Se autoriza exclusivamente para esta candidatura el uso de nombre y primer apellido, correo electrónico y teléfono. Se confirma la aceptación de modalidad híbrida en Agüimes. El 2026-07-24 a las 00:11, la persona candidata se inscribió en InfoJobs utilizando el CV y la carta de presentación contenidos en esta carpeta.
 
 ## Documentos de la candidatura
 
@@ -30,3 +30,9 @@ Documentos preparados para revisión humana. Se autoriza exclusivamente para est
 
 - No consta SGA, SOP formales, albaranes, experiencia con transportistas externos ni CFGS finalizado.
 - El salario no figura en la oferta.
+
+## Resultado de la inscripción
+
+- Inscripción realizada mediante InfoJobs el 2026-07-24 a las 00:11.
+- CV y carta de presentación de esta candidatura utilizados en la inscripción.
+- La candidatura queda pendiente de la respuesta del proceso de selección.

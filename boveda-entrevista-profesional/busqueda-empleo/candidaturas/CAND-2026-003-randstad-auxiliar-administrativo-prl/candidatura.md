@@ -2,8 +2,8 @@
 id: CAND-2026-003
 titulo: Candidatura a Randstad — Auxiliar Administrativo/a PRL
 fecha_creacion: 2026-07-23
-fecha_actualizacion: 2026-07-23
-estado: borrador
+fecha_actualizacion: 2026-07-24
+estado: enviada
 tipo: candidatura
 ---
 
@@ -11,9 +11,9 @@ tipo: candidatura
 
 ## Estado
 
-`borrador`
+`enviada`
 
-La documentación ya incorpora los datos de contacto autorizados exclusivamente para esta candidatura. Sigue sin estar lista para inscripción o envío mientras no se confirme la aceptación del contrato temporal y se realice la revisión humana.
+La documentación incorpora los datos de contacto autorizados exclusivamente para esta candidatura. El 2026-07-24, la persona candidata se inscribió en InfoJobs y envió el CV actualizado con fotografía y la carta de presentación.
 
 ## Documentos de la candidatura
 
@@ -43,7 +43,9 @@ La documentación ya incorpora los datos de contacto autorizados exclusivamente 
 - **Logros:** `HER-02`, `HER-01`, `HER-09`, `INERZA-01` y `COMP-01`.
 - **Formación adicional:** curso breve de PRL; no equivale a experiencia CAE.
 
-## Condiciones pendientes
+## Resultado de la inscripción
 
-- Confirmar aceptación del contrato temporal y su duración cuando se conozca.
-- Revisar y aprobar humanamente los documentos antes de cualquier envío.
+- Inscripción realizada mediante InfoJobs el 2026-07-24.
+- CV actualizado con fotografía enviado.
+- Carta de presentación enviada.
+- La candidatura queda pendiente únicamente de la respuesta del proceso de selección.

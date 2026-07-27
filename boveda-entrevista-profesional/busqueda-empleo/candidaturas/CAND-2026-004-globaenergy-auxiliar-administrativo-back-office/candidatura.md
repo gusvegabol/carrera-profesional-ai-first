@@ -2,15 +2,15 @@
 id_candidatura: CAND-2026-004
 empresa: Globaenergy
 puesto: Auxiliar Administrativo/a Back Office - Sector Energético
-estado: pendiente_de_aprobacion
-fecha: 2026-07-23
+estado: enviada
+fecha: 2026-07-24
 ---
 
 # Candidatura CAND-2026-004
 
 ## Estado
 
-Documentos preparados para revisión humana. La persona candidata acepta valorar el rango salarial de 17.000–20.000 € y ha autorizado para esta candidatura el uso de nombre y primer apellido, correo electrónico y teléfono. No se ha realizado ningún envío.
+La persona candidata acepta valorar el rango salarial de 17.000–20.000 € y ha autorizado para esta candidatura el uso de nombre y primer apellido, correo electrónico y teléfono. El 2026-07-24, la persona candidata se inscribió en InfoJobs utilizando los documentos que figuran en esta carpeta.
 
 - **Enlace al veredicto final del CV:** [[veredicto-final-cv]].
 - **Versión de CV evaluada:** [[cv.docx]].
@@ -39,3 +39,9 @@ Documentos preparados para revisión humana. La persona candidata acepta valorar
 ## Datos privados
 
 Autorizados exclusivamente para CAND-2026-004: nombre y primer apellido, correo electrónico y teléfono. No se autoriza localidad, enlace profesional ni fotografía.
+
+## Resultado de la inscripción
+
+- Inscripción realizada mediante InfoJobs el 2026-07-24.
+- Se utilizaron los documentos que figuran en esta carpeta.
+- La candidatura queda pendiente de la respuesta del proceso de selección.

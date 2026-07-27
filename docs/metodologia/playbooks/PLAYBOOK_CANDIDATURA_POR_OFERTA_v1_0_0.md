@@ -89,14 +89,15 @@ Una vez resueltos los bloqueos, seguir este orden fijo:
    En todo CV y carta, establecer el idioma de revisión en Español (España), no usar fuente inferior a 10 pt y justificar el texto de contenido; los títulos, saludos, despedidas y datos de contacto pueden conservar su alineación funcional.
 3. Realizar la revisión factual completa contra [[datos-core-busqueda]].
 4. Ejecutar una revisión de arrastre: comparar titular, resumen, competencias y experiencia con el guion de adaptación y comprobar que no aparecen el perfil dominante ni afirmaciones de otra candidatura.
-5. Usar la skill `documents:documents` para crear los archivos DOCX.
-6. Usar la skill `pdf:pdf` para exportar los DOCX a PDF y verificar los PDF.
-7. Comprobar visualmente tanto los DOCX como los PDF: estructura, cortes, desbordamientos, legibilidad, datos y coherencia entre formatos.
-8. Completar [[TEMPLATE_VEREDICTO_FINAL_CV]] sobre el CV ya generado: comprobar integridad, puntuar los cinco criterios, registrar evidencia y mejoras, calcular la decisión sin usar la media como puerta y corregir el CV si la decisión es `corregir_antes_de_revisar`.
-9. Si una investigación contextual autorizada justifica ajustar el lenguaje corporativo, aplicar el mismo criterio de tono al CV y a la carta de presentación. No se adapta solo uno de los dos documentos; la adaptación no puede añadir hechos, funciones, tecnologías, métricas o resultados no acreditados.
-10. Al crear cada artefacto, actualizar el índice «Documentos de la candidatura» de [[TEMPLATE_CANDIDATURA]]. Debe enumerar todos los documentos operativos existentes en la carpeta —análisis, guion, veredicto, informe de empresa y preparación de entrevista cuando exista, CV y carta en DOCX y PDF—, no solo el CV y la carta. Si posteriormente se añade, sustituye o elimina cualquier documento, actualizar de nuevo ese índice y comprobar que no queden enlaces a archivos inexistentes. Las capturas y otros archivos internos de control visual no forman parte del índice.
-11. Registrar en [[TEMPLATE_CANDIDATURA]] y [[seguimiento-candidaturas]] el estado, el enlace al veredicto y su decisión.
-12. Marcar la candidatura como `pendiente_de_aprobacion` solo cuando la decisión del veredicto no sea `corregir_antes_de_revisar`.
+5. Usar la skill `documents:documents` para crear los archivos DOCX. No abrir ni inspeccionar los DOCX con LibreOffice: en este host falla al iniciar y no es una vía válida de lectura o comprobación. Para validar el contenido y la estructura, usar herramientas estructurales como `python-docx` y comprobaciones OOXML.
+6. Generar también `cv.tex`, una versión del CV en LaTeX con estructura semántica y texto UTF-8, destinada a su tratamiento por IA. Debe conservar el mismo contenido factual que el CV revisado y quedar en la carpeta de la candidatura.
+7. Usar la skill `pdf:pdf` para exportar los DOCX a PDF y verificar los PDF. Si la conversión depende de LibreOffice y no está disponible, dejar constancia del bloqueo y no simular una verificación visual completada.
+8. Comprobar los DOCX mediante validación estructural y comprobar visualmente los PDF cuando exista un renderizador operativo: estructura, cortes, desbordamientos, legibilidad, datos y coherencia entre formatos.
+9. Completar [[TEMPLATE_VEREDICTO_FINAL_CV]] sobre el CV ya generado: comprobar integridad, puntuar los cinco criterios, registrar evidencia y mejoras, calcular la decisión sin usar la media como puerta y corregir el CV si la decisión es `corregir_antes_de_revisar`.
+10. Si una investigación contextual autorizada justifica ajustar el lenguaje corporativo, aplicar el mismo criterio de tono al CV, al CV en LaTeX y a la carta de presentación. No se adapta solo uno de los documentos; la adaptación no puede añadir hechos, funciones, tecnologías, métricas o resultados no acreditados.
+11. Al crear cada artefacto, actualizar el índice «Documentos de la candidatura» de [[TEMPLATE_CANDIDATURA]]. Debe enumerar todos los documentos operativos existentes en la carpeta —análisis, guion, veredicto, informe de empresa y preparación de entrevista cuando exista, CV en DOCX, PDF y LaTeX, y carta en DOCX y PDF—, no solo el CV y la carta. Si posteriormente se añade, sustituye o elimina cualquier documento, actualizar de nuevo ese índice y comprobar que no queden enlaces a archivos inexistentes. Las capturas y otros archivos internos de control visual no forman parte del índice.
+12. Registrar en [[TEMPLATE_CANDIDATURA]] y [[seguimiento-candidaturas]] el estado, el enlace al veredicto y su decisión.
+13. Marcar la candidatura como `pendiente_de_aprobacion` solo cuando la decisión del veredicto no sea `corregir_antes_de_revisar`.
 
 La existencia de DOCX y PDF verificados no autoriza el envío. La aprobación y cualquier actuación posterior corresponden a una fase distinta y requieren intervención humana explícita.
 
@@ -133,6 +134,8 @@ La salida válida de fase 1 es una candidatura documentada, con sus archivos pre
 - [ ] Los verbos de acción de la persona candidata están en primera persona; la tercera persona solo describe a otros sujetos.
 - [ ] No queda ningún bloqueo obligatorio abierto.
 - [ ] Los DOCX y los PDF se comprobaron visualmente.
+- [ ] El DOCX se validó estructuralmente sin abrirlo con LibreOffice.
+- [ ] Existe `cv.tex`, su contenido coincide con el CV revisado y se puede procesar como texto UTF-8.
 - [ ] El índice de [[TEMPLATE_CANDIDATURA]] enumera todos los artefactos operativos existentes de la carpeta, se actualizó al crear o modificar documentos y no contiene enlaces rotos.
 - [ ] El estado final es `pendiente_de_aprobacion`.
 - [ ] No se ha realizado ni autorizado ningún envío.

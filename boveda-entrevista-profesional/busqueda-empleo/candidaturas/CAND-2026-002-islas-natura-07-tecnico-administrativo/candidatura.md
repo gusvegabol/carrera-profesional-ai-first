@@ -2,8 +2,8 @@
 id: CAND-2026-002
 titulo: Candidatura a Islas Natura 07, S. A. — Técnico/a Administrativo/a de Empresa
 fecha_creacion: 2026-07-23
-fecha_actualizacion: 2026-07-23
-estado: pendiente_de_aprobacion
+fecha_actualizacion: 2026-07-24
+estado: enviada
 tipo: candidatura
 ---
 
@@ -11,7 +11,7 @@ tipo: candidatura
 
 ## Estado
 
-`pendiente_de_aprobacion`
+`enviada`
 
 ## Documentos de la candidatura
 
@@ -47,5 +47,11 @@ Uso exclusivo para `CAND-2026-002` de nombre y primer apellido, correo electrón
 - [x] Trabajo presencial en Las Palmas de Gran Canaria confirmado.
 - [x] La candidatura no presenta el CFGS como titulación obtenida.
 - [x] Power BI se presenta como experiencia previa, con uso no reciente.
-- [ ] Revisión humana final y aprobación del CV y la carta.
-- [ ] Inscripción o envío realizado por la persona candidata.
+- [x] Revisión humana final y aprobación del CV y la carta.
+- [x] Inscripción o envío realizado por la persona candidata.
+
+## Resultado de la inscripción
+
+- Inscripción realizada mediante InfoJobs el 2026-07-24.
+- Se utilizaron el CV y la carta de presentación que figuran en esta carpeta.
+- La candidatura queda pendiente de la respuesta del proceso de selección.

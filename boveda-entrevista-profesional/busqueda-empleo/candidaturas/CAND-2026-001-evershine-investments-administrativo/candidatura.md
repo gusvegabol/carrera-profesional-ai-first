@@ -2,8 +2,8 @@
 id: CAND-2026-001
 titulo: Candidatura a EVERSHINE INVESTMENTS — Administrativo/a
 fecha_creacion: 2026-07-21
-fecha_actualizacion: 2026-07-22
-estado: enviada
+fecha_actualizacion: 2026-07-24
+estado: rechazada
 tipo: candidatura
 ---
 
@@ -11,9 +11,9 @@ tipo: candidatura
 
 ## Estado
 
-`enviada`
+`rechazada`
 
-La documentación fue validada por la persona candidata. El 2026-07-22, la persona candidata se inscribió en InfoJobs: adjuntó el CV y remitió el contenido de la carta de presentación como texto del formulario, sin adjuntar la carta como archivo.
+La documentación fue validada por la persona candidata. El 2026-07-22, la persona candidata se inscribió en InfoJobs: adjuntó el CV y remitió el contenido de la carta de presentación como texto del formulario, sin adjuntar la carta como archivo. El 2026-07-24, la ficha de la inscripción en InfoJobs pasó a mostrar el estado «rechazado». InfoJobs no comunicó el motivo del rechazo.
 
 ## Documentos de la candidatura
 

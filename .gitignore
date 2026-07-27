@@ -7,3 +7,6 @@ obsilo-shared/
 .worktrees/
 .tmp/
 .superpowers/
+tools/
+work/
+tmp/

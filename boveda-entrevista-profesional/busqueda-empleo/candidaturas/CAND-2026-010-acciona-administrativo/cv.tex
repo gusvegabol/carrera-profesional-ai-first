@@ -1,0 +1,89 @@
+% CV estructurado para lectura y procesamiento automático.
+% Fuente original: cv.docx de CAND-2026-010.
+% Compilación recomendada: XeLaTeX o LuaLaTeX.
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+\definecolor{azulprincipal}{HTML}{1F4D78}
+\definecolor{azulsecundario}{HTML}{2E74B5}
+\definecolor{gris}{HTML}{555555}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.2em,topsep=0.2em}
+\titleformat{\section}{\large\bfseries\color{azulprincipal}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.2em}{0.4em}
+\titleformat{\subsection}{\normalsize\bfseries\color{azulsecundario}}{}{0pt}{}
+
+\newcommand{\cvtitle}[1]{\begin{center}\LARGE\bfseries\color{azulprincipal}#1\end{center}}
+\newcommand{\cvsubtitle}[1]{\begin{center}\large\color{gris}#1\end{center}}
+\newcommand{\entry}[2]{\textbf{#1} --- #2}
+
+\begin{document}
+
+\cvtitle{Gustavo Vega Bolaños}
+\cvsubtitle{Administración, operaciones, sistemas y gestión documental}
+
+\section*{Perfil profesional}
+Profesional con más de 13 años de experiencia en dirección transversal de administración, operaciones, personas y sistemas. En Herfrailes S. L. organicé procesos administrativos, elaboré informes económicos en Excel, gestioné documentación y datos, coordiné compras, logística y proveedores, y apoyé la operación de tres tiendas. Aporto capacidad para convertir información dispersa en registros fiables, plantillas, informes y tareas trazables, junto con una sólida base informática.
+
+\section*{Propuesta de valor}
+\begin{itemize}
+  \item Gestión administrativa y documental.
+  \item Compras y proveedores.
+  \item Presupuestos y comparativos.
+  \item Excel avanzado e informes económicos.
+  \item Plantillas y bases de datos.
+  \item Logística y stock.
+  \item Digitalización y archivo.
+  \item Seguimiento de incidencias.
+  \item Informática aplicada.
+\end{itemize}
+
+\section*{Experiencia profesional relevante}
+\subsection*{Director Ejecutivo --- Herfrailes S. L.}
+\textit{01/10/2011--03/10/2024 | Administración, operaciones, compras, logística, personas y sistemas}
+
+\begin{itemize}
+  \item Coordiné la operación administrativa y logística de tres tiendas, organizando necesidades, prioridades, recursos, documentación y seguimiento con responsables.
+  \item Gestioné compras, pedidos, proveedores, stock y redistribución entre tiendas; diseñé la redistribución de stock con dos ciclos diarios y vehículos propios.
+  \item Elaboré todos los informes económicos para el Consejo de Dirección en Excel; su preparación pasó de 20 a 3 minutos.
+  \item Construí hojas de cálculo avanzadas, dashboards y bases de datos relacionales en Excel combinando datos de SQL Server y ficheros CSV.
+  \item Diseñé sistemas para generar y distribuir documentación, digitalizar información, mantener registros y hacer seguimiento de incidencias y tareas.
+  \item Reduje un 30\,\% las caducidades y un 80\,\% los productos sin venta durante más de un mes mediante un sistema de previsión de pedidos y reposición.
+  \item Implanté herramientas informáticas y automatizaciones aplicadas a procesos administrativos, comunicación interna, seguimiento y control de información.
+\end{itemize}
+
+\section*{Competencias y herramientas}
+Administración, compras, proveedores, pedidos, presupuestos, comparativos, documentación, archivo, logística, stock, informes, datos, plantillas y resolución de incidencias.
+
+Excel y Word con nivel alto; dashboards, bases de datos relacionales, SQL Server, CSV, Office 365, Trello, Notion, VB.NET y Visual Studio.
+
+Experiencia informática complementaria en sistemas de gestión comercial, contabilidad y procesos administrativos.
+
+\section*{Formación}
+\begin{itemize}
+  \item \entry{FP Técnico Administrativo}{Instituto de Formación Profesional Santa María de Guía.}
+  \item \entry{Ingeniería Técnica en Telecomunicaciones}{dos cursos realizados; carrera no finalizada.}
+  \item \entry{Ingeniería Técnica en Informática}{un curso realizado; carrera no finalizada.}
+  \item \entry{Máster en Inteligencia Artificial con Certificación Universitaria}{BIG school; en curso.}
+\end{itemize}
+
+\section*{Información adicional}
+\begin{itemize}
+  \item Español nativo e inglés básico.
+  \item Permisos de conducir B, A, A1 y A2.
+  \item Residente en Gran Canaria, con vehículo y disponibilidad para desplazarse por la isla.
+  \item Incorporación en 7--15 días.
+  \item Disponibilidad para viajar ocasionalmente.
+\end{itemize}
+
+\end{document}

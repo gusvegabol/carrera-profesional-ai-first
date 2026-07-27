@@ -89,7 +89,7 @@ Empresa socia de CENCOSU S. L., titular de los derechos de explotación de la fr
   **Trazabilidad:** § 3 «HER-04 — Reorganización del trabajo y cultura de equipo por tienda» / Contribución.
   **Uso previsto:** experiencia y área de Dirección.
 
-- He diseñado y coordinado dos campañas de recogida de datos de procedencia de clientes para mapear la zona de influencia de las tiendas; el análisis identificó que el 42 % de la clientela de la tienda grande procedía de la zona en riesgo ante una nueva competencia.
+- He diseñado y coordinado dos campañas de recogida de datos de procedencia de clientes para mapear la zona de influencia de las tiendas. En la segunda aplicación, analicé los datos de la tienda grande y comprobé que el 42 % de la clientela procedía de la zona en riesgo ante una nueva competencia; el resultado aportó evidencia al Consejo de Dirección para decidir la apertura de una tercera tienda.
   **Trazabilidad:** § 3 «HER-05 — Segmentación de clientes por zona geográfica y servicio a domicilio» / Contribución y Resultado segunda aplicación.
   **Uso previsto:** experiencia, logro de Operaciones y email.
 
