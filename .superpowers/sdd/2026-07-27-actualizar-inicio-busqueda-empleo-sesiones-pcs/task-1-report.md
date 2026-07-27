@@ -93,3 +93,61 @@ Resultado:
 
 - `git diff --check` emitió un aviso de finales de línea `LF -> CRLF`, pero no reportó errores de formato.
 - La sesión fuente opcional `sesion-20260727-2109-busqueda-empleo.md` no estaba presente en el worktree.
+
+## Fix round 1 — 2026-07-27
+
+### Hallazgos atendidos
+
+1. Se añadió al contrato de diseño que la actualización de `.pcs/estado/estado-actual.md` debe ser mínima y dirigida, preservando intacto todo el contenido no Job-up.
+2. Se añadió como bloqueo de preflight cualquier clasificación ambigua, inconclusa o solapada con sesiones no Job-up, obligando a detener la invocación antes de escribir y a explicar la ambigüedad.
+3. Se fijó el patrón canónico de la nueva sesión por referencia explícita a `ENTIDAD_SESION.md` y `TEMPLATE_SESION.md`: nombre `sesion-YYYYMMDD-HHMM-slug.md`, `id` alineado, `inicio`, `cierre`, `estado: abierta`, `tipo: sesion`, `host` opcional y sesión relacionada cuando aplique.
+
+### Archivos modificados en esta ronda
+
+- `docs/superpowers/specs/2026-07-22-inicio-busqueda-empleo-skill-design.md`
+- `.superpowers/sdd/2026-07-27-actualizar-inicio-busqueda-empleo-sesiones-pcs/task-1-report.md`
+
+### Validaciones de esta ronda
+
+#### 1. Revisión del diff de corrección
+
+Comando:
+
+```powershell
+git -C 'C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first/.worktrees/codex-actualizar-job-up-sesiones' diff -- 'docs/superpowers/specs/2026-07-22-inicio-busqueda-empleo-skill-design.md'
+```
+
+Resultado:
+
+- El diff confirma únicamente la incorporación del cambio mínimo dirigido en `estado-actual.md`, el bloqueo de ambigüedad en preflight y el patrón canónico de la nueva sesión.
+
+#### 2. Comprobación de espacios y formato Git
+
+Comando:
+
+```powershell
+git -C 'C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first/.worktrees/codex-actualizar-job-up-sesiones' diff --check -- 'docs/superpowers/specs/2026-07-22-inicio-busqueda-empleo-skill-design.md' '.superpowers/sdd/2026-07-27-actualizar-inicio-busqueda-empleo-sesiones-pcs/task-1-report.md'
+```
+
+Resultado:
+
+- Sin errores de espacios o formato bloqueantes.
+- Se mantiene el aviso no bloqueante de normalización `LF -> CRLF` en el worktree de Windows.
+
+#### 3. Comprobación textual de cobertura de los hallazgos
+
+Comando:
+
+```powershell
+rg -n "mínima y dirigida|preservar intacto|ambigua|solapa|Patrón canónico de la nueva sesión|estado: abierta|tipo: sesion|host" 'C:/Users/gusve/Documents/Apps/carrera-profesional-ai-first/.worktrees/codex-actualizar-job-up-sesiones/docs/superpowers/specs/2026-07-22-inicio-busqueda-empleo-skill-design.md'
+```
+
+Resultado:
+
+- Confirmadas en el diseño las cláusulas exigidas por la revisión.
+
+### Autoevaluación de la ronda
+
+- El alcance sigue limitado a Task 1.
+- No se han añadido cambios de implementación ni escrituras en `.pcs/`.
+- Se preservan los límites previos respecto a metodología, Core PCS, candidaturas y acciones externas.

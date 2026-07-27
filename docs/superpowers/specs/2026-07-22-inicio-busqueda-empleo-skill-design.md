@@ -30,8 +30,21 @@ La versión actual de `$empleo-inicio-busqueda` solo rehidrata contexto y respon
 - La invocación puede crear una nueva sesión de Job-up en `.pcs/sesiones/`.
 - La invocación puede cerrar sesiones previas activas de Job-up dentro de `.pcs/sesiones/`.
 - La invocación puede actualizar `.pcs/estado/estado-actual.md` para reflejar la nueva sesión viva relacionada.
+- La actualización de `.pcs/estado/estado-actual.md` debe ser mínima y dirigida: solo puede tocar la trazabilidad necesaria de Job-up y debe preservar intacto todo el contenido no perteneciente a Job-up.
 - No se permite ninguna otra escritura local ni externa.
 - Si alguna validación previa falla, la invocación no debe escribir nada.
+
+## Patrón canónico de la nueva sesión
+
+La nueva sesión de Job-up debe seguir explícitamente la entidad y la plantilla canónica de PCS, tomando como referencia `ENTIDAD_SESION.md` y `TEMPLATE_SESION.md`.
+
+- Nombre de archivo: `sesion-YYYYMMDD-HHMM-slug.md`.
+- `id` de frontmatter alineado con el nombre base del archivo.
+- Frontmatter mínimo con `titulo`, `inicio`, `cierre`, `estado: abierta` y `tipo: sesion`.
+- `host` es opcional como metadato auxiliar.
+- La sesión relacionada debe declararse cuando aplique.
+
+La sesión nueva debe nacer como entidad histórica compatible con PCS, sin convertir su contenido en sustituto del estado vivo.
 
 ## Selección de sesiones Job-up
 
@@ -45,6 +58,8 @@ La sesión solo puede cerrarse automáticamente si su estado actual es uno de es
 
 Las sesiones en estado `consolidada`, `cerrada` o `archivada` deben preservarse sin reescritura.
 
+Si la clasificación de una sesión resulta ambigua, inconclusa o se solapa con una línea no Job-up, esa ambigüedad se convierte en bloqueo de preflight: la invocación debe detenerse antes de cualquier escritura y explicar expresamente qué conflicto de clasificación impide continuar.
+
 La selección debe respetar la entidad canónica de sesión PCS: cada sesión sigue siendo una entidad histórica, con identificación documental propia y sin convertirse en estado vivo por automatización.
 
 ## Secuencia
@@ -55,7 +70,7 @@ La selección debe respetar la entidad canónica de sesión PCS: cada sesión si
 4. Work identifica y valida las sesiones Job-up candidatas a cierre.
 5. Si la validación completa es correcta, Work cierra primero las sesiones activas previas de Job-up.
 6. Después crea la nueva sesión con estructura compatible con la entidad y la plantilla canónica de PCS.
-7. Finalmente actualiza `.pcs/estado/estado-actual.md` para dejar trazada la nueva sesión relacionada.
+7. Finalmente actualiza `.pcs/estado/estado-actual.md` con un cambio mínimo y dirigido para dejar trazada la nueva sesión relacionada sin alterar contenido ajeno a Job-up.
 8. Work lee `INICIO_SESION_WORK.md` y los documentos que este determina.
 9. Work confirma el ámbito, presenta el estado mínimo y espera instrucciones del usuario.
 
@@ -67,10 +82,12 @@ El flujo de escritura debe comportarse como una transacción documental acotada:
 2. calcular la ruta y el nombre de archivo de la nueva sesión;
 3. identificar sesiones Job-up potencialmente afectadas;
 4. validar que las sesiones detectadas existen, pertenecen a Job-up y están en un estado cerrable;
-5. ejecutar las escrituras en este orden fijo:
+5. bloquear el flujo si existe clasificación ambigua, inconclusa o solapada con sesiones no Job-up, explicando la ambigüedad antes de escribir;
+6. preparar la actualización mínima y dirigida de `.pcs/estado/estado-actual.md`, preservando todo el contenido no Job-up;
+7. ejecutar las escrituras en este orden fijo:
    - cerrar sesiones activas previas de Job-up;
    - crear la nueva sesión;
-   - actualizar el estado vivo.
+   - actualizar el estado vivo solo en la traza mínima de Job-up.
 
 Si cualquiera de las comprobaciones previas falla, el flujo se aborta completo y no debe dejar escrituras parciales.
 
@@ -88,4 +105,6 @@ Si cualquiera de las comprobaciones previas falla, el flujo se aborta completo y
 - El inicio carga únicamente el contexto necesario y diferencia esta rama de la investigación de entrevista.
 - La salida inicial es breve, trazable y termina esperando la siguiente instrucción del usuario.
 - La invocación registra el ciclo de vida mínimo de sesión Job-up solo en `.pcs/sesiones/` y `.pcs/estado/estado-actual.md`.
+- La actualización de `.pcs/estado/estado-actual.md` preserva intacto todo el contenido no Job-up y limita el cambio a la traza mínima necesaria de esa rama.
+- Una clasificación ambigua o solapada de sesiones bloquea la invocación antes de cualquier escritura y se explica como tal.
 - La invocación no produce acciones externas.
