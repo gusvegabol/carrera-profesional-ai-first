@@ -69,6 +69,7 @@ Sigue este orden y deja constancia de cada decisión:
 7. **Aplicar la metodología.** Sigue el playbook vigente
    `docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md` y la matriz
    de artefactos de `boveda-entrevista-profesional/busqueda-empleo/README.md`.
+   Antes de generar documentos, lee `boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/GUIA_FORMATO_CV_Y_CARTA.md` y usa `TEMPLATE_CV_FORMATO.docx` y `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx`. El guion gobierna el contenido de ambos documentos.
    Selecciona un perfil principal, uno secundario y de tres a cinco logros
    respaldados por `fuentes/datos-core-busqueda.md`; marca los requisitos no
    acreditados y mantén la trazabilidad frase por frase.
@@ -92,7 +93,29 @@ Sigue este orden y deja constancia de cada decisión:
 11. **Entregar para aprobación humana.** Cuando no queden bloqueos que impidan
     la salida y el veredicto lo permita, entrega el paquete en estado
     `pendiente_de_aprobacion`. Expón lo que debe revisar la persona y deja
-    claro que ninguna aprobación implícita permite enviar o contactar.
+   claro que ninguna aprobación implícita permite enviar o contactar.
+
+## Contrato documental obligatorio
+
+- Usa los nombres exactos `cv.docx`, `cv.pdf`, `cv.tex`,
+  `carta-presentacion.docx` y `carta-presentacion.pdf`.
+- Genera el CV y la carta con las plantillas visuales comunes, sin copiar el
+  contenido de una candidatura anterior como fuente factual.
+- Incluye la fotografía autorizada por defecto en CV y carta. Solo puede
+  excluirse cuando la persona responsable lo indique expresamente en la
+  invocación; registra esa exclusión en el expediente.
+- Justifica el contenido narrativo de CV y carta. Encabezados, contacto,
+  saludos, asuntos, títulos y firma pueden conservar alineación funcional.
+- Comprueba Calibri, jerarquía 14/12/11/10,5 pt, colores `#1F2937` y
+  `#5B6573`, una página como objetivo, texto seleccionable y ausencia de
+  tablas o columnas en el contenido narrativo.
+- La carta puede resumir el CV, pero no puede introducir ningún hecho, logro,
+  herramienta, requisito cumplido, dato de empresa o afirmación que no figure
+  en el guion y el análisis.
+- Antes de entregar, revisa marcadores, datos privados, fotografía, tono,
+  tratamiento, llamada a la acción, coherencia con `cv.tex` y enlaces del
+  índice. Si un elemento concreto no puede verificarse, bloquea solo el
+  artefacto afectado.
 
 ## Detenciones obligatorias
 

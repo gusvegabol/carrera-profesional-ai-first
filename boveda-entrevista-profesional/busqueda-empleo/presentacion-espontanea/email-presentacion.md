@@ -1,8 +1,23 @@
+---
+tipo: plantilla-email-presentacion-espontanea
+version: 1.1.0
+estado: activo
+fecha_version: 2026-07-29
+---
+
 # Email de presentación espontánea
 
 Estos tres modelos están listos para revisión humana antes de enviarse. Sustituir únicamente los campos entre corchetes y no incorporar hechos adicionales. El cuerpo de cada modelo puede trasladarse a una carta formal manteniendo el contenido factual y sustituyendo el asunto y el saludo por los datos de la persona destinataria.
 
-Los módulos de Trello y Workplace no se incluyen por defecto. Añadir solo el módulo que responda directamente a la necesidad de la oportunidad.
+Antes de redactar, registrar en el expediente: módulo de destinatario elegido,
+destinatario comprobado, hechos públicos utilizados, módulos profesionales
+seleccionados y llamada a la acción. Los módulos de Trello y Workplace no se
+incluyen por defecto. Añadir solo el módulo que responda directamente a la
+necesidad de la oportunidad y que esté respaldado por la selección factual.
+
+No improvisar empresa, cultura, necesidades, proyectos, contacto, logros,
+métricas ni herramientas. Las hipótesis deben quedar fuera del cuerpo factual
+o etiquetarse expresamente como hipótesis antes de la revisión humana.
 
 ## Módulos opcionales según la oportunidad
 

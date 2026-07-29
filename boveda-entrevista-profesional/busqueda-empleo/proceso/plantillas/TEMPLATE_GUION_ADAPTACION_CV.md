@@ -7,9 +7,9 @@ estado: vigente
 fecha_version: 2026-07-29
 ---
 
-# Guion de adaptación de CV por oferta
+# Guion de adaptación de CV y carta por candidatura
 
-> Este guion se completa después del análisis de la oferta y antes de redactar el CV. Su objetivo es separar la selección factual de la composición narrativa y evitar que una candidatura anterior arrastre su enfoque.
+> Este guion se completa después del análisis de la oferta y antes de redactar el CV o la carta. Su objetivo es separar la selección factual de la composición narrativa y evitar que una candidatura anterior arrastre su enfoque.
 
 ## Dirección de la candidatura
 
@@ -54,14 +54,31 @@ Dos o tres afirmaciones breves, verificables y específicas para la oferta. No a
 
 Si procede, una frase breve que explique el interés por el puesto y la aportación operativa. No debe ocultar cargos ni crear experiencia inexistente.
 
+## Aplicación documental
+
+Este guion gobierna simultáneamente `cv.docx`, `cv.pdf`, `cv.tex`, `carta-presentacion.docx` y `carta-presentacion.pdf`. La composición visual debe seguir [[GUIA_FORMATO_CV_Y_CARTA]] y las plantillas `TEMPLATE_CV_FORMATO.docx` y `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx`.
+
+- Fuente: Calibri.
+- Jerarquía: 14/12/11/10,5 pt.
+- Colores: `#1F2937` y `#5B6573`.
+- Alineación: el contenido narrativo del CV y de la carta debe quedar justificado; encabezados, contacto, saludo, asunto, títulos y firma pueden conservar alineación funcional.
+- Extensión: una página como objetivo operativo.
+- Fotografía: obligatoria en CV y carta salvo exclusión expresa en la invocación de la skill.
+- Texto: seleccionable, con encabezados estándar y viñetas reales; sin tablas ni columnas para el contenido narrativo.
+
+La carta puede desarrollar solo una selección de las evidencias del CV. No puede ampliar su selección factual ni introducir hechos, logros, herramientas, requisitos cumplidos o información de empresa que no estén en este guion y el análisis.
+
 ## Límites y control de arrastre
 
 - **Afirmaciones excluidas:**
 - **Datos privados autorizados para esta candidatura:**
 - **Contenido que no debe heredarse de otras candidaturas:**
 - **Palabras clave usadas y evidencia que las respalda:**
-- **Elementos visuales permitidos:** una página, texto seleccionable, encabezados estándar, viñetas; sin tablas, columnas, gráficos ni fotografía.
+- **Elementos visuales permitidos:** una página, texto seleccionable, encabezados estándar, viñetas y fotografía obligatoria, salvo exclusión expresa; sin tablas ni columnas para el contenido narrativo.
 - [ ] El texto se ha construido desde este guion y el análisis de esta oferta.
 - [ ] No se ha copiado contenido factual de otra candidatura sin volver a validarlo contra [[datos-core-busqueda]].
 - [ ] La experiencia histórica no pertinente, el histórico municipal restringido y la actividad independiente no autorizada no aparecen.
 - [ ] El perfil principal domina el titular, el resumen y la selección de experiencia.
+- [ ] La carta no amplía la selección factual del CV ni introduce información no respaldada.
+- [ ] La fotografía está incorporada, salvo que exista una exclusión expresa registrada en la invocación.
+- [ ] El contenido narrativo del CV y de la carta está justificado.
