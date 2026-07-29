@@ -106,9 +106,11 @@ La organización documental que se proponga debe respetar la diferencia entre:
 
 ## Resultado de la sesión
 
-Sesión abierta. El resultado inicial es la identificación de una definición
-explícita pero distribuida de Job-up y la delimitación del trabajo necesario
-para convertirla, si procede, en una arquitectura documental más clara.
+La sesión comenzó identificando una definición explícita pero distribuida de
+Job-up y terminó con su arquitectura documental aprobada e implantada en
+`main`. Job-up conserva su carácter de rama operativa de `carrera-ai`, con un
+único README funcional, estructura documental por función, histórico global y
+skills de entrada adaptadas.
 
 ### Actualización — diseño aprobado
 
@@ -120,8 +122,8 @@ global de `carrera-ai`.
 
 También incorpora una matriz de artefactos que distingue entre candidatura por
 oferta y presentación espontánea. La especificación resultante se registra en
-[[2026-07-29-organizacion-documental-job-up-design]]. No se han movido aún
-documentos ni se han alterado materiales operativos durante el diseño.
+[[2026-07-29-organizacion-documental-job-up-design]]. La implantación posterior
+se registra en la actualización de esta sesión.
 
 La persona responsable aprobó además que el playbook de candidatura por oferta
 controle su versión en frontmatter YAML. El archivo vigente tendrá un nombre
@@ -146,6 +148,29 @@ El detalle de ejecución del ciclo PCS quedará exclusivamente en
 El análisis de activación semántica de las skills se difiere a
 [[sesion-20260729-1534-activacion-semantica-skills-job-up]], creada en pausa.
 No cambia todavía `allow_implicit_invocation` ni las rutas de las skills.
+
+### Actualización — implantación integrada y verificada
+
+La reorganización aprobada se implantó en worktrees independientes y se integró
+en `main` el 2026-07-29 mediante el commit `55aaeb5` (`docs: integrar
+reorganización documental de Job-up`). El árbol principal quedó limpio y pasó
+la validación estructural de las tres skills:
+
+- `job-up-inicia-sesion`;
+- `job-up-genera-cv-empresa`;
+- `job-up-candidatura-oferta`.
+
+La documentación operativa quedó migrada a `fuentes/`, `proceso/plantillas/` y
+`seguimiento/`. `INICIO_SESION_WORK.md` quedó únicamente en `historico/`; el
+playbook vigente usa nombre estable y declara `1.1.0` en YAML, mientras que la
+versión `1.0.0` se conserva en `historico/` con la versión en el nombre.
+
+La nueva skill de candidatura por oferta acepta URL, fichero Markdown o texto
+pegado; mantiene la selección humana de sesión y la autorización privada por
+candidatura, y no realiza envíos ni contactos externos. Las candidaturas no
+reciben versionado documental trazable. La prueba documental, los enlaces
+locales, las rutas antiguas y los metadatos se verificaron después de la
+integración.
 
 ## Acciones derivadas
 
@@ -178,39 +203,42 @@ No cambia todavía `allow_implicit_invocation` ni las rutas de las skills.
 - `.pcs/decisiones/DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo.md`.
 - `.pcs/decisiones/DEC-20260724-1956-001-delimitar-sesiones-job-up.md`.
 - `boveda-entrevista-profesional/busqueda-empleo/README.md`.
-- `boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md`.
-- `boveda-entrevista-profesional/busqueda-empleo/seguimiento-candidaturas.md`.
-- Las plantillas y carpetas de ofertas y candidaturas, solo si la revisión
-  posterior determina que deben afectarse.
+- `boveda-entrevista-profesional/busqueda-empleo/fuentes/`.
+- `boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/`.
+- `boveda-entrevista-profesional/busqueda-empleo/seguimiento/seguimiento-candidaturas.md`.
+- `historico/boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md`.
+- `docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md` y su copia histórica.
+- `.codex/skills/job-up-inicia-sesion/`, `.codex/skills/job-up-genera-cv-empresa/` y `.codex/skills/job-up-candidatura-oferta/`.
+- La matriz de candidaturas y los documentos existentes afectados por la actualización de rutas.
 
 ## Rehidratación futura
 
-- **Dónde quedó el trabajo:** la sesión está abierta y ha establecido que
-  Job-up cuenta con un diseño aprobado de organización documental; falta que la
-  persona responsable revise la especificación escrita antes de crear el plan
-  de implantación.
-- **Leer primero:** este documento; la decisión de creación de Job-up; la
-  decisión sobre sesiones delimitadas; `estado-actual.md`; y
-  `boveda-entrevista-profesional/busqueda-empleo/README.md`.
-- **Líneas abiertas a retomar:** revisar la especificación, resolver las
-  observaciones que surjan y crear después un plan de implantación.
+- **Dónde quedó el trabajo:** el diseño y el plan están implantados en `main`,
+  con el commit `55aaeb5`; queda probar el comportamiento operativo de las
+  skills desde el árbol principal.
+- **Leer primero:** este documento; `estado-actual.md`; la decisión de creación
+  de Job-up; la decisión sobre sesiones delimitadas; el README de Job-up; y el
+  plan `docs/superpowers/plans/2026-07-29-organizacion-documental-job-up.md`.
+- **Líneas abiertas a retomar:** ejecutar pruebas de comportamiento de entrada,
+  sesión y autorización privada; la activación semántica de skills permanece
+  diferida en su sesión PCS específica.
 - **Riesgos de malinterpretación:** no tratar esta sesión como estado vivo ni
   convertir la hipótesis inicial en decisión o norma.
-- **Siguiente gesto recomendado:** revisar
-  `docs/superpowers/specs/2026-07-29-organizacion-documental-job-up-design.md`
-  antes de planificar movimientos o cambios documentales.
+- **Siguiente gesto recomendado:** ejecutar las pruebas de comportamiento de
+  las tres skills desde `main` y registrar cualquier ajuste en una nueva sesión
+  PCS delimitada.
 
 ## Checklist de consolidación
 
-- [ ] La capa episódica registra el recorrido histórico relevante.
-- [ ] La capa semántica resume lo necesario para continuidad IA.
-- [ ] Las líneas cognitivas abiertas están identificadas.
-- [ ] Las acciones derivadas están creadas o marcadas como pendientes.
-- [ ] Las decisiones derivadas están creadas o marcadas como pendientes.
-- [ ] ESTADO_PROYECTO está actualizado o marcado como pendiente.
-- [ ] Los documentos afectados están listados.
-- [ ] La rehidratación futura permite retomar el hilo.
-- [ ] La sesión no contiene estado operativo vivo como única fuente.
+- [x] La capa episódica registra el recorrido histórico relevante.
+- [x] La capa semántica resume lo necesario para continuidad IA.
+- [x] Las líneas cognitivas abiertas están identificadas.
+- [x] Las acciones derivadas están creadas o marcadas como pendientes.
+- [x] Las decisiones derivadas están creadas o marcadas como pendientes.
+- [x] ESTADO_PROYECTO está actualizado o marcado como pendiente.
+- [x] Los documentos afectados están listados.
+- [x] La rehidratación futura permite retomar el hilo.
+- [x] La sesión no contiene estado operativo vivo como única fuente.
 
 ## Trazabilidad
 

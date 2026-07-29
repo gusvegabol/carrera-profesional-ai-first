@@ -2,8 +2,8 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
-fecha_actualizacion: 2026-07-28
-ultima_sesion_relacionada: sesion-20260727-2109-busqueda-empleo
+fecha_actualizacion: 2026-07-29
+ultima_sesion_relacionada: sesion-20260729-1320-organizacion-documentacion-job-up
 host: carrera-ai
 ---
 
@@ -17,7 +17,7 @@ La fuente funcional de verdad sobre la versión global es `docs/VERSIONADO_CARRE
 
 ESCO permanece como investigación paralela fuera del criterio de finalización de 2.0 y como candidata provisional a una posible 2.5, que no está abierta.
 
-La orientación local de `carrera-ai` ha completado su migración a PCS 2.0. `README.md` y `AGENTS.md` aplican el paquete documental vigente, las reglas PCS 1.0 se han retirado de la capa `.codex/` activa y se conserva únicamente la skill local `pcs-obsidian-corrige-links`. El registro central está cerrado en `pcs_version: "2.0"` y `status: vigente`. La segunda pasada se clasificó como C y confirmó la idempotencia del flujo sin nuevas escrituras en el host.
+La orientación local de `carrera-ai` ha completado su migración a PCS 2.0. `README.md` y `AGENTS.md` aplican el paquete documental vigente, las reglas PCS 1.0 se han retirado de la capa `.codex/` activa y se conservan las skills operativas de Job-up junto con la skill local `pcs-obsidian-corrige-links`. El registro central está cerrado en `pcs_version: "2.0"` y `status: vigente`. La segunda pasada se clasificó como C y confirmó la idempotencia del flujo sin nuevas escrituras en el host.
 
 Se ha formalizado y materializado la retirada de Graphify de `carrera-ai` mediante `DEC-20260717-1058-001-retirada-graphify-carrera-ai`, siguiendo la decisión de referencia de PCS Core `DEC-20260715-0004-retirada-graphify-pcs-host`. La decisión local sustituye a `DEC-20260713-1344-001-integrar-graphify-tres-corpus`. La sesión de trabajo `sesion-20260717-1058-retirada-graphify-carrera-ai` registra la eliminación y quedó cerrada el 2026-07-17 tras completar la verificación.
 
@@ -27,9 +27,17 @@ El trabajo vigente del host permanece en la revisión metodológica de la entrev
 
 Por [[DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo]], Carrera AI incorpora una rama operativa de búsqueda de empleo dentro del mismo host, denominada **Job-up**. Su finalidad es preparar con rapidez CV adaptados, cartas de presentación y candidaturas revisables a partir de información profesional factual. Esta rama no modifica el SPEC, los playbooks ni la investigación metodológica de entrevista; ambas líneas siguen separadas.
 
-Job-up mantiene actualmente diez candidaturas registradas: una enviada y posteriormente rechazada (`CAND-2026-001`), cuatro enviadas mediante InfoJobs (`CAND-2026-002` a `CAND-2026-005`), una presentación espontánea a Randstad pendiente de aprobación (`CAND-2026-006`) y cuatro candidaturas enviadas (`CAND-2026-007` a `CAND-2026-010`). CAND-2026-007 fue presentada a AGD Center el 2026-07-26. CAND-2026-008 fue presentada a Baleària mediante Indeed el 2026-07-27. CAND-2026-009 fue presentada a LIVVO mediante Indeed el 2026-07-27. CAND-2026-010 fue presentada a ACCIONA mediante Workday el 2026-07-27. Los estados detallados y los documentos asociados viven en `seguimiento-candidaturas.md` y en las carpetas de cada candidatura.
+Job-up mantiene actualmente diez candidaturas registradas: una enviada y posteriormente rechazada (`CAND-2026-001`), cuatro enviadas mediante InfoJobs (`CAND-2026-002` a `CAND-2026-005`), una presentación espontánea a Randstad pendiente de aprobación (`CAND-2026-006`) y cuatro candidaturas enviadas (`CAND-2026-007` a `CAND-2026-010`). CAND-2026-007 fue presentada a AGD Center el 2026-07-26. CAND-2026-008 fue presentada a Baleària mediante Indeed el 2026-07-27. CAND-2026-009 fue presentada a LIVVO mediante Indeed el 2026-07-27. CAND-2026-010 fue presentada a ACCIONA mediante Workday el 2026-07-27. Los estados detallados y los documentos asociados viven en `boveda-entrevista-profesional/busqueda-empleo/seguimiento/seguimiento-candidaturas.md` y en las carpetas de cada candidatura.
 
 La continuidad de Job-up se mantendrá en este estado, en las acciones y decisiones vigentes y en sus documentos operativos. Se ha adoptado que las sesiones PCS no permanezcan abiertas indefinidamente para representar una línea de trabajo de larga duración: cada bloque concreto de trabajo tendrá una sesión delimitada, que se consolidará o cerrará al dejar de estar en edición. Esta convención queda formalizada en [[DEC-20260724-1956-001-delimitar-sesiones-job-up]].
+
+La reorganización documental de Job-up se implantó en `main` el 2026-07-29
+mediante el commit `55aaeb5`. El README de
+`boveda-entrevista-profesional/busqueda-empleo/` es la referencia funcional
+única; las fuentes, plantillas y seguimiento viven en sus áreas funcionales;
+`INICIO_SESION_WORK.md` quedó en `historico/`; y el playbook vigente usa nombre
+estable con versión YAML. Las tres skills de Job-up están renombradas y la
+skill `job-up-candidatura-oferta` acepta URL, fichero Markdown o texto pegado.
 
 La sesión [[sesion-20260724-2004-candidaturas-job-up]] quedó consolidada y cerrada el 2026-07-27. La sesión [[sesion-20260727-2109-busqueda-empleo]] quedó cerrada el 2026-07-28 tras finalizar el bloque delimitado de búsqueda de empleo del 2026-07-27. La continuidad de Job-up se mantiene en el estado operativo, en sus documentos operativos y, para cada nuevo bloque de trabajo, en una sesión PCS delimitada.
 
