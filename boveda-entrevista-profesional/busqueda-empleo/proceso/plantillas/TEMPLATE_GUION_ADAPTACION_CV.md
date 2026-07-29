@@ -1,6 +1,10 @@
 ---
+id: template-guion-adaptacion-cv
 tipo: plantilla
 proposito: guion_adaptacion_cv
+version: "1.0.0"
+estado: vigente
+fecha_version: 2026-07-29
 ---
 
 # Guion de adaptación de CV por oferta
