@@ -2,7 +2,7 @@
 id_candidatura: CAND-2026-009
 empresa: LIVVO Hotel Group / Grupo Martinón
 puesto: Técnico/a Administrativo/a de Recursos Humanos
-estado: enviada
+estado: rechazada
 fecha: 2026-07-27
 ---
 
@@ -10,7 +10,7 @@ fecha: 2026-07-27
 
 ## Estado
 
-Candidatura enviada a LIVVO Hotel Group / Grupo Martinón mediante Indeed el 27/07/2026, utilizando el CV y la carta de presentación propios generados para esta oferta. Pendiente de respuesta.
+Candidatura enviada a LIVVO Hotel Group / Grupo Martinón mediante Indeed el 27/07/2026, utilizando el CV y la carta de presentación propios generados para esta oferta. Indeed muestra actualmente «La empresa no te ha seleccionado».
 
 ## Identificación y trazabilidad
 
@@ -25,6 +25,8 @@ Candidatura enviada a LIVVO Hotel Group / Grupo Martinón mediante Indeed el 27/
 - **Canal de envío:** Indeed.
 - **Fecha de envío:** 27/07/2026.
 - **Documentos utilizados:** CV y carta de presentación propios de esta candidatura.
+- **Estado consultado en Indeed:** La empresa no te ha seleccionado.
+- **Fecha de consulta del estado:** 29/07/2026.
 
 ## Encaje
 
