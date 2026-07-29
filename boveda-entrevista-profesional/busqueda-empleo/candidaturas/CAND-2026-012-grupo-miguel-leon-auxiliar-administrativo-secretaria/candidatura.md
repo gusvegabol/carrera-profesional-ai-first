@@ -31,8 +31,8 @@ No se ha presentado ninguna candidatura ni se ha contactado con la empresa.
 - [[analisis-oferta|Análisis de oferta]] — preparado.
 - [[guion-adaptacion-cv|Guion de adaptación]] — preparado.
 - [[veredicto-final-cv|Veredicto final]] — integridad apta; revisar antes de aprobar.
-- [[cv.docx|CV editable]] — preparado para revisión humana.
-- [[cv.pdf|CV en PDF]] — preparado para revisión humana.
+- [[cv.docx|CV editable]] — preparado para revisión humana; fotografía incorporada.
+- [[cv.pdf|CV en PDF]] — preparado para revisión humana; fotografía incorporada.
 - [[cv.tex|CV en LaTeX]] — preparado para procesamiento automático.
 - [[carta-presentacion.docx|Carta editable]] — preparada para revisión humana.
 - [[carta-presentacion.pdf|Carta en PDF]] — preparada para revisión humana.
