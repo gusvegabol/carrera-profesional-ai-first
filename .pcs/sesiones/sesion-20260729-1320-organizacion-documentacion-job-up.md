@@ -129,6 +129,13 @@ estable sin versión; solo las copias bajo `historico/` incluirán la versión e
 el nombre. La propuesta conserva el contenido original de `v1.0.0` desde Git
 como histórico y promueve el contenido actual a `1.1.0`.
 
+Se identifica además que la arquitectura debe incluir las skills de entrada de
+Job-up. Se acuerda renombrar `empleo-inicio-busqueda` a
+`job-up-inicia-sesion` y `empleo-genera-cv-empresa` a
+`job-up-genera-cv-empresa`, y añadir `job-up-candidatura-oferta` para iniciar
+el flujo a partir de una URL. Esta última solo podrá vincularse a una sesión
+Job-up ya abierta; no creará una sesión PCS salvo petición explícita.
+
 ## Acciones derivadas
 
 - No se crea una acción PCS en la apertura. Solo se derivará una acción si la

@@ -214,6 +214,54 @@ La implantación recuperará el contenido exacto del commit de creación de
 mejoras posteriores, será la base del playbook vigente `1.1.0`. Así no se
 atribuye retrospectivamente a la versión histórica contenido que no tuvo.
 
+## Skills de entrada de Job-up
+
+Las skills de Codex son puntos de entrada operativos de la rama y deben
+aparecer en el README, aunque continúen físicamente bajo `.codex/skills/`.
+
+La reorganización renombrará las dos skills existentes para hacer explícita su
+pertenencia a Job-up:
+
+| Nombre actual | Nombre objetivo | Función |
+| --- | --- | --- |
+| `empleo-inicio-busqueda` | `job-up-inicia-sesion` | Abrir explícitamente un nuevo bloque Job-up y gestionar su ciclo PCS. |
+| `empleo-genera-cv-empresa` | `job-up-genera-cv-empresa` | Preparar una candidatura espontánea investigada para una empresa concreta. |
+
+Se añadirá una tercera skill:
+
+| Skill | Función |
+| --- | --- |
+| `job-up-candidatura-oferta` | Recibir una URL de oferta y activar el flujo de candidatura por oferta. |
+
+### Reglas de sesión para `job-up-candidatura-oferta`
+
+La skill de candidatura por oferta no abrirá una nueva sesión PCS por sí misma.
+Solo podrá vincular el trabajo a una única sesión Job-up que ya esté abierta.
+
+- Si existe una única sesión Job-up abierta, la candidatura se vincula a ella.
+- Si no existe ninguna, la skill se detiene y pide al usuario que abra
+  `job-up-inicia-sesion` o que indique explícitamente otra instrucción.
+- Si existen varias sesiones abiertas y no puede determinarse una única,
+  también se detiene y solicita resolución humana.
+- La petición de una URL de oferta no equivale por sí sola a autorización para
+  crear una sesión PCS.
+
+### Flujo de `job-up-candidatura-oferta`
+
+1. Recibir y validar la URL de la oferta.
+2. Obtener el contenido visible de la oferta y registrar su fuente.
+3. Resolver una única sesión Job-up abierta; detenerse si no existe o es
+   ambigua.
+4. Crear el análisis de la oferta dentro del expediente correspondiente.
+5. Aplicar el playbook canónico y la matriz de artefactos.
+6. Consultar datos privados solo si existe autorización para esa candidatura.
+7. Preparar los documentos y el veredicto final.
+8. Actualizar la ficha y el seguimiento de la candidatura.
+9. Entregar el paquete en `pendiente_de_aprobacion`, sin enviar ni contactar.
+
+Las tres skills tendrán `allow_implicit_invocation: false` y se documentarán
+como entradas separadas en el README de Job-up.
+
 ## Fuera de alcance
 
 - Enviar candidaturas, usar Chrome, conectores o contactos externos.
@@ -223,6 +271,8 @@ atribuye retrospectivamente a la versión histórica contenido que no tuvo.
 - Mover documentos a `historico/` solo porque sean antiguos.
 - Rediseñar los formatos de CV, carta o los criterios de evaluación de las
   candidaturas.
+- Implementar las skills renombradas o crear `job-up-candidatura-oferta`; eso
+  pertenece al plan de implantación posterior.
 
 ## Trazabilidad
 
