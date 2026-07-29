@@ -65,7 +65,7 @@ autoriza por sí sola la creación de una sesión PCS.
 - [Seguimiento](seguimiento/seguimiento-candidaturas.md): estados, fechas, documentos y bloqueos.
 - [Candidaturas](candidaturas/): expedientes concretos y sus artefactos.
 - [Presentación espontánea](presentacion-espontanea/README.md): materiales no vinculados a una oferta.
-- [Playbook de candidatura por oferta](../../../docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md): procedimiento metodológico canónico; su versión vigente se declara en el frontmatter YAML.
+- [Playbook de candidatura por oferta](../../docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md): procedimiento metodológico canónico; su versión vigente se declara en el frontmatter YAML.
 
 ### Flujo operativo
 
@@ -98,4 +98,4 @@ decisiones, acciones y el estado operativo; Job-up no duplica ese ciclo en este
 README. La [sesión de origen](../../.pcs/sesiones/sesion-20260721-1651-tension-carrera-ai-y-busqueda-de-trabajo.md), la [decisión de crear la rama](../../.pcs/decisiones/DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo.md) y la [acción de activación](../../.pcs/acciones/ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1.md) documentan la trazabilidad inicial.
 
 `INICIO_SESION_WORK.md` ya no es una entrada operativa paralela. Su contenido
-histórico se conserva en [historico](../../../historico/boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md); la orientación conceptual queda aquí y el ciclo exacto de sesiones corresponde a `job-up-inicia-sesion`.
+histórico se conserva en [historico](../../historico/boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md); la orientación conceptual queda aquí y el ciclo exacto de sesiones corresponde a `job-up-inicia-sesion`.
