@@ -163,6 +163,57 @@ La implantación se considerará correcta cuando:
 - no se hayan alterado indebidamente las fuentes PCS ni los playbooks
   metodológicos externos a este alcance.
 
+## Versionado del playbook de candidatura por oferta
+
+El playbook vigente tendrá un nombre estable, sin versión en el archivo:
+
+```text
+docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md
+```
+
+Su control de versión vivirá en el frontmatter YAML. La primera versión
+materializada bajo esta regla será `1.1.0`, porque incorpora capacidades
+compatibles respecto a la versión original: guion narrativo, veredicto final,
+controles de arrastre y ATS, CV en LaTeX y validación estructural.
+
+```yaml
+---
+id: playbook-candidatura-por-oferta
+tipo: playbook
+version: "1.1.0"
+estado: vigente
+fecha_version: 2026-07-29
+version_anterior: "1.0.0"
+sustituye: PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0
+---
+```
+
+Solo los documentos históricos incluirán la versión en el nombre. La versión
+original recuperada desde Git se conservará en:
+
+```text
+historico/docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0.md
+```
+
+Su YAML documentará el cierre de vigencia:
+
+```yaml
+---
+id: playbook-candidatura-por-oferta
+tipo: playbook
+version: "1.0.0"
+estado: retirada
+fecha_version: 2026-07-21
+fecha_retiro: 2026-07-29
+sustituida_por: "1.1.0"
+---
+```
+
+La implantación recuperará el contenido exacto del commit de creación de
+`v1.0.0` para la copia histórica. El contenido actual, que ya incorpora las
+mejoras posteriores, será la base del playbook vigente `1.1.0`. Así no se
+atribuye retrospectivamente a la versión histórica contenido que no tuvo.
+
 ## Fuera de alcance
 
 - Enviar candidaturas, usar Chrome, conectores o contactos externos.

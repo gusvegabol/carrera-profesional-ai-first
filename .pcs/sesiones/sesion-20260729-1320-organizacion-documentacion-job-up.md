@@ -123,6 +123,12 @@ oferta y presentación espontánea. La especificación resultante se registra en
 [[2026-07-29-organizacion-documental-job-up-design]]. No se han movido aún
 documentos ni se han alterado materiales operativos durante el diseño.
 
+La persona responsable aprobó además que el playbook de candidatura por oferta
+controle su versión en frontmatter YAML. El archivo vigente tendrá un nombre
+estable sin versión; solo las copias bajo `historico/` incluirán la versión en
+el nombre. La propuesta conserva el contenido original de `v1.0.0` desde Git
+como histórico y promueve el contenido actual a `1.1.0`.
+
 ## Acciones derivadas
 
 - No se crea una acción PCS en la apertura. Solo se derivará una acción si la
