@@ -2,7 +2,7 @@
 id_candidatura: CAND-2026-012
 empresa: Grupo Miguel León
 puesto: Auxiliar Administrativo/Secretaria
-estado: pendiente_de_aprobacion
+estado: enviada
 fecha: 2026-07-29
 sesion_job_up: sesion-20260729-1320-organizacion-documentacion-job-up
 ---
@@ -19,7 +19,10 @@ y `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx`; también se actualizó `cv.tex` y
 se sustituyeron los PDF correspondientes. La fotografía conserva proporción
 cuadrada 1:1.
 
-No se ha presentado ninguna candidatura ni se ha contactado con la empresa.
+Según comunicación de la persona candidata, la candidatura se presentó el
+29/07/2026 por dos canales: Indeed y el formulario «Trabaja con nosotros» de
+la web oficial de Grupo Miguel León. Queda pendiente de respuesta por parte
+de la empresa.
 
 ## Encaje
 
@@ -59,7 +62,8 @@ ni se sustituye la carta específica de Indeed.
 Autorización explícita del 29/07/2026 para nombre, primer apellido, correo y
 teléfono. Se han utilizado `Gustavo Vega`, `669549933` y
 `gusvegabol@gmail.com`. No se ha incorporado ningún otro dato privado. La
-autorización no permite enviar la candidatura.
+autorización se utilizó para preparar los documentos; el envío fue realizado
+directamente por la persona candidata a través de ambos canales.
 
 ## Control de salida
 
@@ -68,5 +72,5 @@ autorización no permite enviar la candidatura.
 - [x] Perfil y evidencias seleccionados.
 - [x] Autorización privada aplicable.
 - [x] CV, carta, LaTeX y veredicto generados.
-- [x] Estado `pendiente_de_aprobacion`.
-- [x] No se ha enviado ninguna candidatura ni se ha contactado con nadie.
+- [x] Estado `enviada`.
+- [x] Candidatura presentada por Indeed y por la web oficial; pendiente de respuesta.
