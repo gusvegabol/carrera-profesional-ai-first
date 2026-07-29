@@ -462,10 +462,10 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
   Ejecutar:
 
   ```powershell
-  rg -n "PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0|empleo-inicio-busqueda|empleo-genera-cv-empresa|INICIO_SESION_WORK.md|busqueda-empleo/(datos-core-busqueda|datos-privados-candidatura|seguimiento-candidaturas|templates/)" --glob '!historico/**' .
+  rg -n "PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0|empleo-inicio-busqueda|empleo-genera-cv-empresa|INICIO_SESION_WORK.md|busqueda-empleo/(datos-core-busqueda|datos-privados-candidatura|seguimiento-candidaturas|templates/)" --glob '!historico/**' --glob '!.pcs/**' --glob '!.superpowers/**' --glob '!docs/superpowers/specs/**' --glob '!docs/superpowers/plans/**' --glob '!docs/ideas-y-debates/**' .
   ```
 
-  Actualizar cada coincidencia operativa para usar el playbook sin versión en el nombre, los nombres nuevos de skills o la ruta funcional nueva. No reescribir referencias históricas dentro de `historico/`.
+  Actualizar cada coincidencia operativa para usar el playbook sin versión en el nombre, los nombres nuevos de skills o la ruta funcional nueva. Mantener las referencias históricas en `.pcs/`, `.superpowers/`, `historico/` y documentos de diseño, así como `sustituye: PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0` en el YAML del playbook vigente.
 
 - [ ] **Paso 3: Comprobar los enlaces Markdown locales modificados.**
 
