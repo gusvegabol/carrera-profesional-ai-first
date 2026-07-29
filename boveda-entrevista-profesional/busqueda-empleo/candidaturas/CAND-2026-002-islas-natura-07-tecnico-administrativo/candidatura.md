@@ -3,7 +3,7 @@ id: CAND-2026-002
 titulo: Candidatura a Islas Natura 07, S. A. — Técnico/a Administrativo/a de Empresa
 fecha_creacion: 2026-07-23
 fecha_actualizacion: 2026-07-24
-estado: enviada
+estado: rechazada
 tipo: candidatura
 ---
 
@@ -11,7 +11,7 @@ tipo: candidatura
 
 ## Estado
 
-`enviada`
+`rechazada`
 
 ## Documentos de la candidatura
 
@@ -53,5 +53,5 @@ Uso exclusivo para `CAND-2026-002` de nombre y primer apellido, correo electrón
 ## Resultado de la inscripción
 
 - Inscripción realizada mediante InfoJobs el 2026-07-24.
-- Se utilizaron el CV y la carta de presentación que figuran en esta carpeta.
-- La candidatura queda pendiente de la respuesta del proceso de selección.
+- InfoJobs muestra actualmente el estado «Descartado».
+- La candidatura queda registrada como rechazada y no pendiente de respuesta.

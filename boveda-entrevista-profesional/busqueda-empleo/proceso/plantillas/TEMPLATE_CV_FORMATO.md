@@ -29,6 +29,19 @@ Plantilla visual basada en `CAND-2026-010-acciona-administrativo/cv.docx`.
 4. Eliminar cualquier marcador no aplicable; nunca dejarlo visible.
 5. Revisar que el contenido narrativo quede justificado y que el documento ocupe una página.
 
+## Invariantes de sustitución
+
+La sustitución es únicamente de contenido. No puede modificar propiedades de
+formato del template: alineación, fuente, tamaño, color, negrita, espaciado,
+indentación, sangría, interlineado, tabla de cabecera, celda de fotografía ni
+proporción de la imagen. En particular, la cabecera debe conservar tres
+párrafos independientes y alineados al inicio (`start`/izquierda): nombre,
+titular y contacto. Nunca se debe aplicar centrado a la cabecera por conveniencia
+de la longitud del texto.
+
+Antes de entregar el documento, se debe comparar la cabecera sustituida con el
+template y verificar que solo han cambiado los textos y la fotografía autorizada.
+
 Cada punto y aparte de experiencia y formación debe ser un párrafo real. No
 se deben introducir saltos de línea internos para simular párrafos: la última
 línea de un párrafo justificado no puede quedar estirada artificialmente.

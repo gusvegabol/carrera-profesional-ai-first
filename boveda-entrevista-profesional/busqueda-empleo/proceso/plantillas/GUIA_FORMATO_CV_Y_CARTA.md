@@ -38,6 +38,7 @@ La carta puede seleccionar menos información que el CV, pero nunca puede añadi
 - Texto: seleccionable y extraíble; no se convierten párrafos en imágenes.
 - Estructura: encabezados estándar y viñetas reales; no se usan tablas ni columnas para el contenido narrativo.
 - El encabezado puede usar una tabla de dos celdas exclusivamente como mecanismo de composición para distribuir identidad y fotografía.
+- La cabecera debe conservar la composición del template en tres párrafos reales: nombre completo en 18 pt y negrita, titular en 11 pt e información de contacto en 10,5 pt. No se permite concatenar nombre, titular y contacto en una sola línea ni sustituir la jerarquía por texto plano.
 
 ## Marcadores de plantilla
 

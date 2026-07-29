@@ -122,6 +122,12 @@ Sigue este orden y deja constancia de cada decisión:
   textos pueden permanecer únicamente en el DOCX reutilizable de la plantilla.
 - Justifica el contenido narrativo de CV y carta. Encabezados, contacto,
   saludos, asuntos, títulos y firma pueden conservar alineación funcional.
+- Conserva la cabecera visual de las plantillas: nombre completo en un párrafo
+  independiente de 18 pt y negrita, titular en un segundo párrafo de 11 pt y
+  contacto en un tercer párrafo de 10,5 pt, todos alineados al inicio
+  (`start`/izquierda) como en el template. No concatenes nombre, titular y
+  contacto en una sola línea, no apliques centrado y no alteres ninguna
+  propiedad de formato al sustituir el contenido.
 - Comprueba Calibri, jerarquía 14/12/11/10,5 pt, colores `#1F2937` y
   `#5B6573`, una página como objetivo, texto seleccionable y ausencia de
   tablas o columnas en el contenido narrativo.

@@ -2,8 +2,8 @@
 id: sesion-20260729-1320-organizacion-documentacion-job-up
 titulo: Definición y organización documental de Job-up
 inicio: 2026-07-29 13:20
-cierre:
-estado: abierta
+cierre: 2026-07-30 00:13
+estado: cerrada
 tipo: sesion
 host: carrera-ai
 sesion_relacionada: sesion-20260727-2109-busqueda-empleo
@@ -342,6 +342,32 @@ revisión visual de CV y carta confirma fotografía cuadrada visible, una págin
 por documento, contenido sin cortes y el orden correcto de experiencia y
 formación. El estado permanece `pendiente_de_aprobacion`.
 
+## Actualización — candidaturas CAND-2026-013 a CAND-2026-015 y cierre
+
+El 29/07/2026 se comprobó que la oferta de CAND-2026-013 ya no estaba
+disponible en la web de ALDI, aunque la referencia externa todavía podía
+mostrarla. El expediente se actualizó a `detenida` con la oferta marcada como
+cerrada.
+
+Para CAND-2026-014 se generó el paquete documental con los templates vigentes,
+incluida la fotografía autorizada, y se presentó correctamente en el portal de
+ALDI el 29/07/2026. El expediente quedó en estado `enviada`.
+
+El 30/07/2026 se contrastaron en InfoJobs las candidaturas que figuraban como
+inscritas o descartadas. CAND-2026-003 (Randstad), CAND-2026-004 (Globaenergy)
+y CAND-2026-005 (Pro A Pro) quedaron confirmadas como `enviada`; CAND-2026-002
+(Islas Natura) pasó a `rechazada` porque InfoJobs la mostraba como descartada.
+También se creó el registro mínimo de CAND-2026-015 (Unide, Gestor de Cuentas /
+Key Account Manager), al figurar como inscrita, sin generar documentación de
+candidatura adicional. La oferta anónima de administrativo con conocimientos
+de contabilidad no se guardó, conforme a la instrucción expresa del usuario.
+
+Con estas comprobaciones queda cerrado este bloque de trabajo. Las nuevas
+candidaturas, el seguimiento de respuestas y cualquier trabajo pendiente de
+activación semántica de skills deberán abrirse en una sesión PCS nueva; el
+estado operativo vivo permanece en los expedientes y en el seguimiento, no en
+esta sesión histórica.
+
 ## Checklist de consolidación
 
 - [x] La capa episódica registra el recorrido histórico relevante.
@@ -353,6 +379,7 @@ formación. El estado permanece `pendiente_de_aprobacion`.
 - [x] Los documentos afectados están listados.
 - [x] La rehidratación futura permite retomar el hilo.
 - [x] La sesión no contiene estado operativo vivo como única fuente.
+- [x] No quedan tareas documentales abiertas dentro de este bloque.
 
 ## Trazabilidad
 
@@ -368,4 +395,5 @@ formación. El estado permanece `pendiente_de_aprobacion`.
   `DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo` y
   `DEC-20260724-1956-001-delimitar-sesiones-job-up`.
 - **Estado de proyecto relacionado:** `estado-actual`.
-- **Cierre:** pendiente.
+- **Cierre:** 2026-07-30. Sesión consolidada y cerrada; la continuidad
+  operativa queda en los expedientes y documentos de seguimiento indicados.

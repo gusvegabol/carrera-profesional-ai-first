@@ -45,6 +45,11 @@ Preparar una candidatura espontánea dirigida a una empresa concreta. El resulta
   la imagen embebida; no basta con detectar que existe una imagen.
 - Elimina del resultado cualquier pie o encabezado que identifique el archivo
   como `Plantilla`, `template` o instrucciones internas de composición.
+- Conserva la cabecera visual del template en tres párrafos reales: nombre
+  completo en 18 pt y negrita, titular en 11 pt y contacto en 10,5 pt,
+  alineados al inicio (`start`/izquierda) como en el template. No concatenes
+  nombre, titular y contacto en una sola línea, no apliques centrado y no
+  alteres ninguna propiedad de formato al sustituir el contenido.
 - En el CV, rellena `[EXPERIENCIA 1]` a `[EXPERIENCIA 6]` y `[FORMACION 1]` a
   `[FORMACION 3]` como párrafos independientes. No introduzcas varios párrafos
   mediante saltos internos en un único slot; elimina los slots no aplicables.
