@@ -1,6 +1,0 @@
-interface:
-  display_name: "Iniciar búsqueda de empleo"
-  short_description: "Abre la rama operativa de empleo"
-  default_prompt: "Usa $empleo-inicio-busqueda para continuar la búsqueda de empleo."
-policy:
-  allow_implicit_invocation: false
