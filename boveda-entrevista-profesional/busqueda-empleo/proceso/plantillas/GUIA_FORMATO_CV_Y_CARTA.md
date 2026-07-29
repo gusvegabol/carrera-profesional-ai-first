@@ -113,6 +113,8 @@ Antes de marcar la candidatura como `pendiente_de_aprobacion`, comprobar:
 - la foto corresponde a la persona y se ha autorizado su uso, salvo exclusión expresa;
 - el placeholder `[FOTO]` de la plantilla ha sido sustituido por la fotografía
   real autorizada; no basta con comprobar que el DOCX contiene una imagen;
+- los encabezados y pies de página no contienen texto interno de template,
+  instrucciones de composición ni marcadores antes de entregar el artefacto;
 - el nombre, teléfono, email y enlaces coinciden con los datos autorizados;
 - el tono, tratamiento y llamada a la acción son coherentes con destinatario y canal;
 - destinatario, fecha, asunto y localidad siguen las reglas cerradas de esta

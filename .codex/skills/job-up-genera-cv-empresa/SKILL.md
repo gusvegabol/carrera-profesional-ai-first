@@ -43,6 +43,8 @@ Preparar una candidatura espontánea dirigida a una empresa concreta. El resulta
 - Sustituye la imagen-placeholder `[FOTO]` de la plantilla por la fotografía
   real autorizada antes de guardar el CV o la carta. Comprueba el contenido de
   la imagen embebida; no basta con detectar que existe una imagen.
+- Elimina del resultado cualquier pie o encabezado que identifique el archivo
+  como `Plantilla`, `template` o instrucciones internas de composición.
 - En el CV, rellena `[EXPERIENCIA 1]` a `[EXPERIENCIA 6]` y `[FORMACION 1]` a
   `[FORMACION 3]` como párrafos independientes. No introduzcas varios párrafos
   mediante saltos internos en un único slot; elimina los slots no aplicables.

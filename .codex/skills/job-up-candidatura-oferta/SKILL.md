@@ -117,6 +117,9 @@ Sigue este orden y deja constancia de cada decisión:
   fotografía real autorizada antes de guardar el DOCX. Comprueba el contenido
   de la imagen embebida; detectar una imagen no demuestra que la foto haya sido
   incorporada.
+- Elimina del resultado cualquier pie o encabezado que identifique el archivo
+  como `Plantilla`, `template` o instrucciones internas de composición. Esos
+  textos pueden permanecer únicamente en el DOCX reutilizable de la plantilla.
 - Justifica el contenido narrativo de CV y carta. Encabezados, contacto,
   saludos, asuntos, títulos y firma pueden conservar alineación funcional.
 - Comprueba Calibri, jerarquía 14/12/11/10,5 pt, colores `#1F2937` y
