@@ -136,6 +136,13 @@ Job-up. Se acuerda renombrar `empleo-inicio-busqueda` a
 el flujo a partir de una URL. Esta última solo podrá vincularse a una sesión
 Job-up ya abierta; no creará una sesión PCS salvo petición explícita.
 
+Se aprobó además la simplificación de entrada: `INICIO_SESION_WORK.md` deja de
+ser una fuente de entrada paralela. Sus reglas conceptuales útiles se integran
+en el README, que mantendrá una capa de modelo mental y otra de uso operativo.
+El detalle de ejecución del ciclo PCS quedará exclusivamente en
+`job-up-inicia-sesion`; después, el documento sustituido se conservará bajo
+`historico/` con su ruta de procedencia.
+
 ## Acciones derivadas
 
 - No se crea una acción PCS en la apertura. Solo se derivará una acción si la

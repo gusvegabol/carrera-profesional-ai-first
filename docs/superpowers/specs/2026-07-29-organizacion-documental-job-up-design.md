@@ -81,16 +81,28 @@ planificación, no como instrucciones de uso diario.
 ## Contenido del README de Job-up
 
 El README sustituirá el índice actual de materiales y la referencia aislada a
-una candidatura antigua por estas secciones:
+una candidatura antigua. Mantendrá dos capas con una frontera explícita:
+
+1. **Modelo mental.** Qué es Job-up, misión, alcance, exclusiones, principios
+   y arquitectura conceptual.
+2. **Uso operativo.** Cómo empezar, mapa de la estructura, flujo de trabajo,
+   skills, playbooks, matriz de artefactos, trazabilidad y reglas de histórico.
+
+Esta separación es interna al README. Si la capa conceptual crece lo suficiente
+en el futuro, podrá extraerse a un documento de arquitectura sin alterar el
+README como punto de entrada.
+
+El README incluirá, como mínimo:
 
 1. Qué es Job-up y qué no es.
 2. Límites: separación de la entrevista metodológica, evidencia factual,
    privacidad y aprobación humana.
 3. Mapa de la estructura y papel de cada área.
-4. Flujo operativo desde la valoración de una oferta hasta su cierre.
-5. Matriz de artefactos por tipo de preparación.
-6. Enlaces a fuentes canónicas: decisiones PCS, estado, playbook y seguimiento.
-7. Reglas de trazabilidad y de traslado al histórico.
+4. Cómo empezar y qué skill corresponde a cada entrada operativa.
+5. Flujo operativo desde la valoración de una oferta hasta su cierre.
+6. Matriz de artefactos por tipo de preparación.
+7. Enlaces a fuentes canónicas: decisiones PCS, estado, playbook y seguimiento.
+8. Reglas de trazabilidad y de traslado al histórico.
 
 ## Matriz de artefactos
 
@@ -139,6 +151,8 @@ estado `pendiente_de_aprobacion`.
 - Mover `seguimiento-candidaturas.md` a `seguimiento/`.
 - Conservar `candidaturas/` y `presentacion-espontanea/` como expedientes
   operativos diferenciados.
+- Integrar en el README el contenido conceptual de `INICIO_SESION_WORK.md` y
+  trasladar este último a `historico/` una vez que deje de ser una entrada.
 - Mantener el playbook y las especificaciones de diseño en `docs/` y enlazarlos
   desde la raíz de Job-up.
 - Trasladar a `historico/` solo documentos sustituidos o no vigentes, con
@@ -158,6 +172,10 @@ La implantación se considerará correcta cuando:
 - cada expediente inventaríe sus documentos operativos reales;
 - se mantengan explícitos los límites de privacidad, evidencia factual y
   aprobación humana;
+- las skills de Job-up resuelvan las rutas nuevas y no conserven referencias
+  operativas a `INICIO_SESION_WORK.md`;
+- el README explique qué skill usar y no duplique el ciclo PCS ni la lógica
+  detallada de las skills;
 - los documentos históricos, si los hubiera, estén en `historico/` con su ruta
   de procedencia y autorización de traslado;
 - no se hayan alterado indebidamente las fuentes PCS ni los playbooks
@@ -261,6 +279,14 @@ Solo podrá vincular el trabajo a una única sesión Job-up que ya esté abierta
 
 Las tres skills tendrán `allow_implicit_invocation: false` y se documentarán
 como entradas separadas en el README de Job-up.
+
+`INICIO_SESION_WORK.md` dejará de ser una entrada paralela. Su contenido
+conceptual útil —ámbito, límites y orientación inicial— se integrará en el
+README. El ciclo exacto de apertura, cierre y trazabilidad de sesiones quedará
+solo en `job-up-inicia-sesion`, para evitar duplicar autoridad operativa. Una
+vez extraído el contenido, el documento se trasladará a
+`historico/boveda-entrevista-profesional/busqueda-empleo/`, preservando su ruta
+de procedencia.
 
 ## Fuera de alcance
 
