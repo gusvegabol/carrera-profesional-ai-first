@@ -1,4 +1,13 @@
-# Playbook de candidatura por oferta v1.0.0
+---
+id: playbook-candidatura-por-oferta
+tipo: playbook
+version: "1.1.0"
+estado: vigente
+fecha_version: 2026-07-29
+version_anterior: "1.0.0"
+sustituye: PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0
+---
+# Playbook de candidatura por oferta
 
 ## 1. Propósito y alcance
 
