@@ -20,9 +20,31 @@ Preparar una candidatura espontánea dirigida a una empresa concreta. El resulta
 3. **Separar hecho e hipótesis.** Redacta un breve contexto con dos apartados: «Hechos comprobados» y «Posibles puntos de encaje». Solo los hechos comprobados pueden aparecer como afirmaciones sobre la empresa. Si no encuentras un contexto fiable, usa una apertura neutra y dilo explícitamente.
 4. **Aplicar la compuerta de datos privados.** Antes de consultar o usar cualquier dato privado, exige autorización explícita para esta candidatura o una autorización escrita en la ficha privada que identifique el mismo expediente. Esa autorización no se extiende a otra candidatura, empresa o uso posterior. Si falta o es ambigua, no consultes, copies ni propagues los datos privados; bloquea solo los documentos que los necesiten y continúa con las partes públicas o factuales que no los requieran.
 5. **Seleccionar el CV.** Consulta el README canónico `boveda-entrevista-profesional/busqueda-empleo/README.md`, la fuente `boveda-entrevista-profesional/busqueda-empleo/fuentes/datos-core-busqueda.md`, `boveda-entrevista-profesional/busqueda-empleo/presentacion-espontanea/seleccion-factual.md` y el CV maestro. Prioriza Dirección, Administración y Operaciones. Mantén las acciones en primera persona, la atribución individual y las métricas registradas. No incluyas gestión pública, actividad política, Ayuntamiento de Gáldar, concejalía, parentescos ni información sensible.
+   Antes de componerlo, lee `boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/GUIA_FORMATO_CV_Y_CARTA.md` y usa `TEMPLATE_CV_FORMATO.docx`. Incluye la fotografía autorizada por defecto; solo la excluyas si la persona responsable lo indica expresamente en la invocación.
 6. **Redactar el email.** Parte de `boveda-entrevista-profesional/busqueda-empleo/presentacion-espontanea/email-presentacion.md`. Para una empresa usa tratamiento formal coherente: «Estimado equipo…», «me dirijo a ustedes», «su tiempo», «¿Tendrían disponibilidad…?». Personaliza solo asunto, empresa, saludo y apertura con hechos comprobados. Conserva dos o tres pruebas profesionales verificables y una llamada a una conversación breve. No uses «Hola» con «vosotros/vuestro» ni prometas resultados no demostrados.
+   Selecciona explícitamente un único módulo de destinatario (empresa concreta, intermediario o contacto personal) y anota la razón. Selecciona también los módulos opcionales de experiencia que procedan; si no hay evidencia de encaje, no los incluyas. El email no se convierte automáticamente en carta: si se solicita carta, usa `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx` y el contrato de la guía común.
 7. **Pasar controles.** Comprueba que el email está en español, en primera persona, sin afirmaciones inventadas, sin métricas nuevas y con todas las fuentes enlazadas fuera del cuerpo del email. Verifica que el PDF adjunto corresponde al CV seleccionado y que no se han filtrado datos privados. Si la empresa no tiene una fuente fiable o el destinatario no es oficial, marca la incertidumbre y no la ocultes. Cuando el proceso remita al playbook de candidatura por oferta, usa la versión estable `docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md`.
 8. **Entregar para revisión.** Presenta, en este orden: (a) empresa y destinatario investigados; (b) hechos comprobados con enlaces y fecha; (c) puntos de encaje, marcados como hipótesis; (d) email completo; (e) CV y nombre exacto del archivo que se adjuntaría; (f) dudas o campos pendientes. Termina solicitando aprobación humana del contenido y del adjunto. La aprobación no autoriza por sí sola un envío automático: el usuario debe enviarlo manualmente.
+
+## Contrato documental y antiimprovisación
+
+- El CV debe salir de `TEMPLATE_CV_FORMATO.docx`, conservar el contrato de
+  `GUIA_FORMATO_CV_Y_CARTA.md`, usar Calibri 14/12/11/10,5 pt, los colores
+  `#1F2937` y `#5B6573`, contenido justificado y texto seleccionable.
+- La fotografía es obligatoria por defecto y solo se excluye con instrucción
+  expresa en la invocación. Registra la decisión.
+- La salida del CV debe llamarse `cv.docx`, con su PDF equivalente cuando se
+  genere. No mezcles el formato de una candidatura anterior.
+- El email debe declarar el módulo elegido, el destinatario y la llamada a la
+  acción. Empresa, cultura, necesidad, proyectos y contacto se distinguen
+  entre hecho comprobado e hipótesis; nunca se presentan como hechos por
+  conveniencia retórica.
+- Cada afirmación del email y del CV debe proceder de una fuente factual o de
+  una hipótesis etiquetada. No se improvisan logros, herramientas, métricas,
+  necesidades, tono, tratamiento ni destinatario.
+- Antes de entregar, revisa coherencia entre el email y el CV, marcadores,
+  datos privados, fotografía, longitud, justificación, ortografía y estado de
+  aprobación humana. No se envía nada.
 
 ## Salida mínima
 

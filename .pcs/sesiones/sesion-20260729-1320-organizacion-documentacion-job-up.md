@@ -256,6 +256,40 @@ al cliente se incorporó como evidencia de HER-06 tras confirmar que Gustavo
 resolvía reclamaciones escaladas por responsables de tienda. El veredicto es
 `apta`, con media 4,0/5 y decisión `revisar_antes_de_aprobar`.
 
+## Actualización — formato documental común para CV y carta
+
+El 29/07/2026 se ejecutó el plan aprobado para reducir la improvisación en la
+generación de documentos de candidatura. Se creó el contrato común
+`GUIA_FORMATO_CV_Y_CARTA.md`, junto con las plantillas visuales
+`TEMPLATE_CV_FORMATO.docx` y `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx` y sus
+guías Markdown de uso.
+
+El contrato fija Calibri, la jerarquía 14/12/11/10,5 pt, los colores `#1F2937`
+y `#5B6573`, el contenido narrativo justificado, una página como objetivo,
+texto seleccionable y fotografía obligatoria por defecto en CV y carta. La
+fotografía solo puede excluirse mediante instrucción expresa en la invocación
+de la skill. La tabla de dos celdas se reserva al encabezado para distribuir
+identidad y fotografía; no se usa para el contenido narrativo.
+
+El guion de adaptación, el playbook de candidatura por oferta y las skills
+`job-up-candidatura-oferta` y `job-up-genera-cv-empresa` quedaron alineados con
+ese contrato. También se reforzó `email-presentacion.md` para exigir selección
+explícita de módulo, fuente factual, destinatario y llamada a la acción, sin
+improvisar necesidades, cultura, proyectos, contactos, logros, métricas ni
+herramientas.
+
+La validación estructural de las dos plantillas confirmó una imagen de
+fotografía en cada DOCX, fuente Calibri, paleta acordada, marcadores sin datos
+heredados de CAND-2026-010 y párrafos justificados. Se ejecutaron búsquedas de
+rutas y referencias reales y `git diff --check` quedó limpio. No se realizó
+renderizado visual porque el entorno no dispone de Word ni LibreOffice; esta
+limitación queda registrada y no se declara una revisión visual completada.
+
+La ejecución se mantiene en una rama de trabajo aislada pendiente de
+consolidación en `main`. El plan y el diseño aprobado permanecen trazados en
+`docs/superpowers/plans/2026-07-29-formato-documental-candidaturas.md` y
+`docs/superpowers/specs/2026-07-29-formato-documental-candidaturas-design.md`.
+
 ## Checklist de consolidación
 
 - [x] La capa episódica registra el recorrido histórico relevante.

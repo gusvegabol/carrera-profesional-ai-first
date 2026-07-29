@@ -82,7 +82,7 @@
 - [ ] Añadir el límite de justificación, una página, Calibri, tamaños y colores como contrato de salida.
 - [ ] Añadir controles para que la carta no amplíe la selección factual del CV.
 
-**También modificar:** `docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0.md`, para que no conserve reglas antiguas incompatibles con la fotografía obligatoria y la justificación del contenido.
+**También modificar:** `docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md`, para que no conserve reglas antiguas incompatibles con la fotografía obligatoria y la justificación del contenido.
 
 ### Task 5: Endurecer `job-up-candidatura-oferta`
 

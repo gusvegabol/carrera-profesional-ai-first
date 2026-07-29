@@ -27,6 +27,8 @@ El proceso utiliza:
 - [[TEMPLATE_ANALISIS_OFERTA]] para registrar el análisis;
 - [[TEMPLATE_CANDIDATURA]] para documentar la selección factual, los bloqueos y los archivos producidos.
 - [[TEMPLATE_GUION_ADAPTACION_CV]] para fijar el enfoque narrativo antes de generar los documentos.
+- [[GUIA_FORMATO_CV_Y_CARTA]] como contrato semántico y visual común del CV y la carta.
+- `TEMPLATE_CV_FORMATO.docx` y `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx` como plantillas visuales de salida.
 - [[TEMPLATE_VEREDICTO_FINAL_CV]] para documentar la revisión de integridad, calidad y decisión antes de la aprobación humana.
 
 ## 3. Análisis de entrada y descarte
@@ -94,11 +96,11 @@ Una vez resueltos los bloqueos, seguir este orden fijo:
 
 1. Revisar cada logro seleccionado: identificar su sujeto, usar primera persona si la acción corresponde a la persona candidata y conservar tercera persona solo para otros sujetos.
 2. Preparar el texto del CV y de la carta de presentación.
-   El CV se genera en una sola página siempre que la legibilidad lo permita, con estructura compatible con ATS: encabezados estándar, texto seleccionable, viñetas y sin tablas, columnas, gráficos ni fotografía.
-   En todo CV y carta, establecer el idioma de revisión en Español (España), no usar fuente inferior a 10 pt y justificar el texto de contenido; los títulos, saludos, despedidas y datos de contacto pueden conservar su alineación funcional.
+   El CV y la carta se generan a partir de sus plantillas visuales, en una sola página siempre que la legibilidad lo permita, con estructura compatible con ATS: encabezados estándar, texto seleccionable y viñetas. El encabezado puede usar una tabla de dos celdas únicamente para distribuir identidad y fotografía; no se usan tablas ni columnas para el contenido narrativo.
+   La fotografía es obligatoria en CV y carta salvo exclusión expresa registrada al invocar la skill. En ambos documentos, establecer el idioma de revisión en Español (España), usar Calibri con la jerarquía 14/12/11/10,5 pt y justificar el contenido; los títulos, saludos, despedidas y datos de contacto pueden conservar su alineación funcional.
 3. Realizar la revisión factual completa contra [[datos-core-busqueda]].
 4. Ejecutar una revisión de arrastre: comparar titular, resumen, competencias y experiencia con el guion de adaptación y comprobar que no aparecen el perfil dominante ni afirmaciones de otra candidatura.
-5. Usar la skill `documents:documents` para crear los archivos DOCX. No abrir ni inspeccionar los DOCX con LibreOffice: en este host falla al iniciar y no es una vía válida de lectura o comprobación. Para validar el contenido y la estructura, usar herramientas estructurales como `python-docx` y comprobaciones OOXML.
+   5. Usar la skill `documents:documents` para crear los archivos DOCX a partir de las plantillas. No abrir ni inspeccionar los DOCX con LibreOffice: en este host falla al iniciar y no es una vía válida de lectura o comprobación. Para validar el contenido y la estructura, usar herramientas estructurales como `python-docx` y comprobaciones OOXML.
 6. Generar también `cv.tex`, una versión del CV en LaTeX con estructura semántica y texto UTF-8, destinada a su tratamiento por IA. Debe conservar el mismo contenido factual que el CV revisado y quedar en la carpeta de la candidatura.
 7. Usar la skill `pdf:pdf` para exportar los DOCX a PDF y verificar los PDF. Si la conversión depende de LibreOffice y no está disponible, dejar constancia del bloqueo y no simular una verificación visual completada.
 8. Comprobar los DOCX mediante validación estructural y comprobar visualmente los PDF cuando exista un renderizador operativo: estructura, cortes, desbordamientos, legibilidad, datos y coherencia entre formatos.
@@ -134,6 +136,7 @@ La salida válida de fase 1 es una candidatura documentada, con sus archivos pre
 - [ ] Cada frase del CV y de la carta se rastrea hasta [[datos-core-busqueda]].
 - [ ] Existe un guion de adaptación y el documento no arrastra el enfoque ni el contenido factual de otra candidatura.
 - [ ] El titular, el resumen, las competencias y la experiencia priorizada responden a las funciones de la oferta.
+- [ ] CV y carta usan las plantillas visuales comunes, el contenido narrativo está justificado y la fotografía está incluida, salvo exclusión expresa registrada.
 - [ ] Las palabras clave integradas están respaldadas por el core y los requisitos no acreditados aparecen identificados.
 - [ ] Si existe riesgo de sobrecualificación, el lenguaje prioriza tareas y resultados operativos sin falsear los cargos.
 - [ ] Existe un [[TEMPLATE_VEREDICTO_FINAL_CV]], la integridad es `apta` y no quedan incidencias sin corregir.
