@@ -2,7 +2,8 @@
 id_candidatura: CAND-2026-011
 empresa: SIA MEDIA SERVICES
 puesto: Administrativo/a
-estado: pendiente_de_aprobacion
+estado: detenida
+estado_oferta: cerrada
 fecha: 2026-07-29
 sesion_job_up: sesion-20260729-1320-organizacion-documentacion-job-up
 ---
@@ -16,6 +17,10 @@ Indeed. El análisis factual, el guion de adaptación, el CV, la carta y el
 veredicto están preparados. La persona responsable autorizó el uso de nombre,
 primer apellido, teléfono y correo exclusivamente para esta candidatura.
 
+La empresa ha comunicado que la oferta está cerrada, aunque Indeed todavía la
+muestra como abierta. Por ello el expediente queda detenido y no pasa a
+aprobación ni a envío.
+
 No se ha presentado ninguna candidatura ni se ha contactado con la empresa.
 
 ## Identificación y trazabilidad
@@ -24,7 +29,7 @@ No se ha presentado ninguna candidatura ni se ha contactado con la empresa.
 - **Empresa:** SIA MEDIA SERVICES.
 - **Puesto:** Administrativo/a.
 - **Ubicación:** 35014 Las Palmas de Gran Canaria, Las Palmas provincia.
-- **Canal previsto:** por determinar; la oferta visible ofrece solicitar en la página de la empresa.
+- **Canal previsto:** no aplicable; la empresa ha comunicado el cierre de la oferta.
 - **Fecha de consulta:** 29/07/2026.
 - **Sesión Job-up:** [[../../../../.pcs/sesiones/sesion-20260729-1320-organizacion-documentacion-job-up|sesion-20260729-1320-organizacion-documentacion-job-up]].
 
@@ -69,7 +74,7 @@ SERVICES.
 - [x] Guion de adaptación preparado sin datos privados.
 - [x] Autorización privada aplicable a esta candidatura.
 - [x] CV, carta y veredicto final.
-- [x] Estado `pendiente_de_aprobacion`.
+- [x] Oferta cerrada registrada y candidatura detenida.
 - [x] No se ha enviado ninguna candidatura ni se ha contactado con nadie.
 
 ## Trazabilidad

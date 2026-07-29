@@ -4,7 +4,8 @@ tipo: analisis_oferta
 empresa: SIA MEDIA SERVICES
 puesto: Administrativo/a
 fecha_consulta: 2026-07-29
-estado: pendiente_de_aprobacion
+estado: detenida
+estado_oferta: cerrada
 sesion_job_up: sesion-20260729-1320-organizacion-documentacion-job-up
 procedencia: URL pública consultada en Indeed
 url_origen: https://es.indeed.com/viewjob?jk=c8c75571b56fce18
@@ -15,11 +16,12 @@ bloqueo: ninguno; pendiente de revisión y aprobación humana
 
 ## Procedencia y consulta
 
-- **Fuente:** oferta abierta en Indeed.
+- **Fuente:** oferta consultada en Indeed; la empresa ha indicado que la oferta ya está cerrada, aunque Indeed todavía la muestra como abierta.
 - **URL:** <https://es.indeed.com/viewjob?jk=c8c75571b56fce18>.
 - **Fecha de consulta:** 29/07/2026.
 - **Sesión Job-up:** [[../../../../.pcs/sesiones/sesion-20260729-1320-organizacion-documentacion-job-up|sesion-20260729-1320-organizacion-documentacion-job-up]].
 - **Contenido:** transcrito desde la descripción visible de la oferta; no se ha enviado ninguna candidatura.
+- **Estado de la oferta:** `cerrada` según la empresa; existe discrepancia con el estado todavía visible en Indeed.
 
 ## Identificación
 

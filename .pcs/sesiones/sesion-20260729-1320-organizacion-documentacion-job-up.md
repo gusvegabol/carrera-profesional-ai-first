@@ -244,6 +244,11 @@ página y carta de una página, sin cortes ni desbordamientos. La comprobación
 estructural de DOCX confirmó la presencia exclusiva de los datos privados
 autorizados; no aparecen segundo apellido, localidad privada ni LinkedIn.
 
+Posteriormente, la empresa comunicó que la oferta de CAND-2026-011 estaba
+cerrada, aunque Indeed todavía la mostraba como abierta. El expediente se
+actualizó a `detenida` con `estado_oferta: cerrada`; no procede la aprobación ni
+el envío.
+
 ## Checklist de consolidación
 
 - [x] La capa episódica registra el recorrido histórico relevante.
