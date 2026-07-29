@@ -63,7 +63,7 @@ Este guion gobierna simultáneamente `cv.docx`, `cv.pdf`, `cv.tex`, `carta-prese
 - Colores: `#1F2937` y `#5B6573`.
 - Alineación: el contenido narrativo del CV y de la carta debe quedar justificado; encabezados, contacto, saludo, asunto, títulos y firma pueden conservar alineación funcional.
 - Extensión: una página como objetivo operativo.
-- Fotografía: obligatoria en CV y carta salvo exclusión expresa en la invocación de la skill.
+- Fotografía: obligatoria en CV y carta salvo exclusión expresa en la invocación de la skill. La imagen-placeholder `[FOTO]` debe sustituirse por la fotografía real autorizada antes de entregar los artefactos y conservar proporción 1:1.
 - Texto: seleccionable, con encabezados estándar y viñetas reales; sin tablas ni columnas para el contenido narrativo.
 
 La carta puede desarrollar solo una selección de las evidencias del CV. No puede ampliar su selección factual ni introducir hechos, logros, herramientas, requisitos cumplidos o información de empresa que no estén en este guion y el análisis.
@@ -75,10 +75,14 @@ La carta puede desarrollar solo una selección de las evidencias del CV. No pued
 - **Contenido que no debe heredarse de otras candidaturas:**
 - **Palabras clave usadas y evidencia que las respalda:**
 - **Elementos visuales permitidos:** una página, texto seleccionable, encabezados estándar, viñetas y fotografía obligatoria, salvo exclusión expresa; sin tablas ni columnas para el contenido narrativo.
+- **Párrafos:** cada punto y aparte de experiencia y formación debe ser un párrafo real; no se simulan párrafos con saltos internos. Las cabeceras de puesto conservan negrita y sus descripciones usan estilo normal.
+- **Salida limpia:** los DOCX y PDF finales no pueden conservar pies, encabezados, marcadores ni instrucciones que identifiquen el documento como template.
 - [ ] El texto se ha construido desde este guion y el análisis de esta oferta.
 - [ ] No se ha copiado contenido factual de otra candidatura sin volver a validarlo contra [[datos-core-busqueda]].
 - [ ] La experiencia histórica no pertinente, el histórico municipal restringido y la actividad independiente no autorizada no aparecen.
 - [ ] El perfil principal domina el titular, el resumen y la selección de experiencia.
 - [ ] La carta no amplía la selección factual del CV ni introduce información no respaldada.
 - [ ] La fotografía está incorporada, salvo que exista una exclusión expresa registrada en la invocación.
+- [ ] La imagen incorporada es la fotografía real autorizada y no el placeholder `[FOTO]`.
+- [ ] Los pies y encabezados de los artefactos finales están limpios de texto de template.
 - [ ] El contenido narrativo del CV y de la carta está justificado.
