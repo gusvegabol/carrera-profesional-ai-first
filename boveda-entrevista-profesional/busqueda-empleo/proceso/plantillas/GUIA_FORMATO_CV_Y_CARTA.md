@@ -41,8 +41,10 @@ La carta puede seleccionar menos información que el CV, pero nunca puede añadi
 
 ## Marcadores de plantilla
 
-El CV utiliza los slots `[EXPERIENCIA 1]` a `[EXPERIENCIA 6]` y
-`[FORMACION 1]` a `[FORMACION 3]` como párrafos independientes. Nunca se
+El CV utiliza slots de experiencia y formación como párrafos independientes.
+La última etapa utiliza `[EXPERIENCIA 6 CABECERA]` y
+`[EXPERIENCIA 6 DESCRIPCION]` en runs separados dentro del mismo párrafo para
+mantener la cabecera en negrita y la descripción en estilo normal. Nunca se
 resuelve un slot de experiencia o formación introduciendo varios bloques
 separados por saltos de línea dentro del mismo párrafo.
 

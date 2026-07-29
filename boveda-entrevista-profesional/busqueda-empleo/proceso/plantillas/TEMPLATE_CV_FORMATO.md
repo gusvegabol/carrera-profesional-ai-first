@@ -15,9 +15,11 @@ Plantilla visual basada en `CAND-2026-010-acciona-administrativo/cv.docx`.
 2. Reemplazar `[FOTOGRAFÍA]` por la fotografía autorizada. La fotografía se mantiene siempre salvo exclusión expresa en la invocación. El hueco y la imagen deben conservar proporción cuadrada 1:1; la referencia es 270 × 270 px.
 3. Completar `[PERFIL PROFESIONAL]` y `[PROPUESTA DE VALOR]` desde el guion.
    Completar `[EXPERIENCIA 1]` a `[EXPERIENCIA 6]` como párrafos
-   independientes. Los marcadores impares representan la cabecera de cada
-   etapa o puesto y conservan negrita; los pares contienen la descripción
-   factual y permanecen en estilo normal justificado. Completar también
+   independientes. Los marcadores que ocupan una cabecera conservan negrita;
+   los que ocupan una descripción factual permanecen en estilo normal
+   justificado. En la última etapa, `[EXPERIENCIA 6 CABECERA]` y
+   `[EXPERIENCIA 6 DESCRIPCION]` ocupan el mismo párrafo, en runs separados,
+   para que solo la cabecera quede en negrita. Completar también
    `[COMPETENCIA 1]` a `[COMPETENCIA 4]` y `[FORMACION 1]` a `[FORMACION 3]`
    como párrafos independientes.
 4. Eliminar cualquier marcador no aplicable; nunca dejarlo visible.
