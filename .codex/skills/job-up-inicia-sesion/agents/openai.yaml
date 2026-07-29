@@ -1,0 +1,6 @@
+interface:
+  display_name: "Iniciar sesión de Job-up"
+  short_description: "Abre la rama operativa de Job-up"
+  default_prompt: "Usa $job-up-inicia-sesion para continuar la búsqueda de empleo."
+policy:
+  allow_implicit_invocation: false
