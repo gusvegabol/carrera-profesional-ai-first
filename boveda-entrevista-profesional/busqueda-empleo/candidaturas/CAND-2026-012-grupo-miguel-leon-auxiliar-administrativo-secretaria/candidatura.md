@@ -41,6 +41,18 @@ No se ha presentado ninguna candidatura ni se ha contactado con la empresa.
 - [[cv.tex|CV en LaTeX]] — preparado para procesamiento automático.
 - [[carta-presentacion.docx|Carta editable]] — preparada para revisión humana.
 - [[carta-presentacion.pdf|Carta en PDF]] — preparada para revisión humana.
+- [[carta-presentacion-web.docx|Carta editable para presentación directa en la web]] — preparada para revisión humana.
+- [[carta-presentacion-web.pdf|Carta en PDF para presentación directa en la web]] — preparada para revisión humana.
+
+## Adaptación para presentación directa en la web
+
+Se creó una variante independiente de la carta para el formulario «Trabaja con
+nosotros» de Grupo Miguel León. La adaptación se basa en la página oficial
+<https://miguelleon.es/trabaja-con-nosotros.html>, consultada el 29/07/2026:
+la empresa invita a profesionales de distintas áreas, incluida Administración,
+indica que su departamento de Recursos Humanos evalúa los CV recibidos y
+realiza entrevistas para distintos puestos. No se presenta una vacante concreta
+ni se sustituye la carta específica de Indeed.
 
 ## Autorización
 
