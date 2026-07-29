@@ -33,10 +33,11 @@ trata como contenido: pide un fichero Markdown o texto alternativo.
 
 Sigue este orden y deja constancia de cada decisión:
 
-1. **Identificar la procedencia.** Registra la URL de origen cuando exista.
-   Para un fichero o texto aportado, registra el tipo de material, la
-   referencia disponible y la fecha de recepción. Conserva el texto completo
-   de la oferta en el análisis; no sustituyas la fuente por un resumen.
+1. **Identificar la procedencia.** Registra la URL de origen y la fecha de
+   consulta o recepción cuando exista. Para un fichero o texto aportado,
+   registra el tipo de material, la referencia disponible y la fecha de
+   recepción. Conserva el texto completo de la oferta en el análisis; no
+   sustituyas la fuente por un resumen.
 2. **Extraer la oferta.** Identifica empresa, puesto, funciones, requisitos,
    salario, modalidad, zona, jornada y contrato cuando estén disponibles.
    Mantén visibles también los campos ausentes y no descartes por salario,
@@ -96,7 +97,10 @@ Sigue este orden y deja constancia de cada decisión:
 ## Detenciones obligatorias
 
 Detén el flujo y explica el motivo cuando ocurra cualquiera de estas
-condiciones:
+condiciones. Cuando la condición sea un bloqueo de autorización para datos
+privados, la detención afecta únicamente a los artefactos que necesitan esos
+datos: permite continuar el análisis factual autorizado y no debe interpretarse
+como una detención total del flujo.
 
 - la fuente no contiene una oferta completa y no puede obtenerse el contenido;
 - faltan datos esenciales imposibles de obtener;
@@ -107,7 +111,8 @@ condiciones:
 - la invocación delegada no produce exactamente una única sesión abierta;
 - existe una contradicción factual sin resolver;
 - un documento requiere datos privados cuya autorización por candidatura falta,
-  es ambigua o no cubre su uso;
+  es ambigua o no cubre su uso; bloquea solo ese documento o artefacto, y
+  continúa el análisis factual autorizado;
 - el veredicto exige corregir antes de revisar.
 
 No resuelvas una detención inventando datos, eligiendo una sesión por tu
@@ -117,7 +122,7 @@ permiso para crear una sesión.
 ## Lista de control de salida
 
 - [ ] La entrada conserva el texto completo de la oferta.
-- [ ] La procedencia y la fecha de recepción están registradas.
+- [ ] La procedencia y la fecha de recepción o consulta están registradas.
 - [ ] Solo se pidieron datos esenciales ausentes.
 - [ ] Hay una única sesión Job-up seleccionada humanamente cuando era necesario.
 - [ ] La autorización privada está vinculada a esta candidatura o los datos
