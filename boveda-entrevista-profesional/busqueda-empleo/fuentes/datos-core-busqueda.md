@@ -5,6 +5,8 @@ fecha_creacion: 2026-07-21
 fecha_actualizacion: 2026-07-26
 estado: en_construccion
 tipo: base_datos
+version: "1.0.0"
+fecha_version: 2026-07-29
 ---
 
 # Datos Core para Búsqueda de Empleo

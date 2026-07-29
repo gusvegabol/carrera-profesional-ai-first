@@ -1,46 +1,102 @@
 # Job-up: búsqueda de empleo
 
-Esta carpeta es la rama operativa Job-up de búsqueda de empleo dentro de Carrera AI. Está separada de la investigación metodológica de entrevista y sirve para preparar candidaturas trazables a partir de información factual.
+## Modelo mental de Job-up
 
-Su alcance termina en la preparación y revisión de cada candidatura. Cualquier inscripción o envío requiere la aprobación humana explícita de la persona candidata.
+Job-up es la rama operativa de Carrera AI para preparar candidaturas de empleo
+trazables a partir de información factual. Su misión es convertir una oferta o
+una oportunidad concreta en un paquete documental revisable por la persona
+candidata, sin enviar candidaturas ni contactar con empresas.
 
-## Trabajo diario
+Job-up cubre el análisis de ofertas, la selección factual, la preparación de
+CV, cartas y demás artefactos, el seguimiento y la entrega en
+`pendiente_de_aprobacion`. No sustituye la entrevista metodológica ni amplía
+su alcance a investigación de empresas, networking o relaciones profesionales.
 
-- [[datos-core-busqueda]]: fuente factual profesional para adaptar cada candidatura.
-- [[datos-privados-candidatura]]: datos de contacto autorizados para una candidatura concreta.
-- [[seguimiento-candidaturas]]: registro de estados, documentos y observaciones.
-- [[TEMPLATE_ANALISIS_OFERTA]]: plantilla para analizar una oferta.
-- [[TEMPLATE_CANDIDATURA]]: plantilla de trazabilidad de una candidatura.
-- [[TEMPLATE_GUION_ADAPTACION_CV]]: guion previo para fijar el enfoque narrativo y evitar arrastres entre candidaturas.
-- [[TEMPLATE_VEREDICTO_FINAL_CV]]: revisión final de integridad, calidad y decisión antes de la aprobación humana.
-- [[PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0]]: procedimiento operativo de preparación.
-- [[candidaturas/README]]: estructura y reglas de las carpetas de candidatura.
-- [[presentacion-espontanea/README|Materiales para candidatura espontánea]]: contiene el CV maestro y el email modular no vinculados a una oferta.
+### Límites de trabajo
 
-## Trazabilidad
+- La evidencia factual procede de la [fuente factual de búsqueda](fuentes/datos-core-busqueda.md); si falta un dato, se declara el límite y no se completa por inferencia.
+- Toda afirmación debe respetar la atribución individual, las decisiones colegiadas y los requisitos no acreditados.
+- La compuerta de datos privados exige una autorización específica para la candidatura. Puede reutilizarse una autorización escrita en la ficha privada solo para esa misma candidatura; no se copian ni se propagan datos no autorizados.
+- La revisión y aprobación humana son obligatorias antes de cualquier envío o contacto externo.
 
-- [Sesión de origen](../../.pcs/sesiones/sesion-20260721-1651-tension-carrera-ai-y-busqueda-de-trabajo.md).
-- [Decisión de crear la rama operativa](../../.pcs/decisiones/DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo.md).
-- [Acción completada de la fase 1](../../.pcs/acciones/ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1.md).
+### Arquitectura de la rama
 
-## Diseño y planificación
+```text
+busqueda-empleo/
+├─ README.md
+├─ fuentes/
+├─ proceso/plantillas/
+├─ seguimiento/
+├─ candidaturas/
+├─ presentacion-espontanea/
+└─ certificados-formacion/
+```
 
-### Especificaciones
+Las candidaturas son expedientes operativos y no llevan versionado documental
+trazable. Las fuentes y plantillas sí mantienen su versión en frontmatter. El
+histórico es global y conserva documentos sustituidos junto con su ruta de
+procedencia.
 
-- [Matriz factual para la búsqueda](../../docs/superpowers/specs/2026-07-21-matriz-core-busqueda-design.md).
-- [Proceso de CV adaptados por oferta](../../docs/superpowers/specs/2026-07-21-proceso-cv-adaptados-oferta-design.md).
-- [Voz narrativa de las candidaturas](../../docs/superpowers/specs/2026-07-21-voz-narrativa-candidaturas-design.md).
+## Uso operativo de Job-up
 
-### Planes
+### Cómo empezar y entradas disponibles
 
-- [Fase 1 de CV adaptados por oferta](../../docs/superpowers/plans/2026-07-21-fase-1-cv-adaptados-por-oferta.md).
-- [Voz narrativa de las candidaturas](../../docs/superpowers/plans/2026-07-21-voz-narrativa-candidaturas.md).
+Abre este README, identifica el tipo de trabajo y usa la skill correspondiente:
 
-## Candidatura registrada
+- `job-up-inicia-sesion`: abre explícitamente un bloque Job-up y gestiona su ciclo PCS.
+- `job-up-candidatura-oferta`: prepara una candidatura a partir de una oferta.
+- `job-up-genera-cv-empresa`: prepara una presentación espontánea para una empresa concreta.
 
-La candidatura [[candidatura]] incluye el [[analisis-oferta|análisis de la oferta]] y estos documentos:
+Una oferta puede entrar mediante cualquiera de estas modalidades:
 
-- [CV editable](candidaturas/CAND-2026-001-evershine-investments-administrativo/cv.docx).
-- [CV en PDF](candidaturas/CAND-2026-001-evershine-investments-administrativo/cv.pdf).
-- [Carta de presentación editable](candidaturas/CAND-2026-001-evershine-investments-administrativo/carta-presentacion.docx).
-- [Carta de presentación en PDF](candidaturas/CAND-2026-001-evershine-investments-administrativo/carta-presentacion.pdf).
+1. URL accesible públicamente.
+2. Fichero Markdown de estructura libre aportado por la persona usuaria.
+3. Texto de la oferta copiado y pegado en el chat.
+
+Si la URL no es accesible, puede utilizarse cualquiera de las otras dos
+modalidades. Si no existe una sesión Job-up abierta, la skill de oferta pedirá
+permiso antes de invocar `job-up-inicia-sesion`; la entrega de una oferta no
+autoriza por sí sola la creación de una sesión PCS.
+
+### Mapa de carpetas y enlaces canónicos
+
+- [Fuentes](fuentes/): [datos core](fuentes/datos-core-busqueda.md) y [datos privados de candidatura](fuentes/datos-privados-candidatura.md).
+- [Proceso y plantillas](proceso/plantillas/): [análisis de oferta](proceso/plantillas/TEMPLATE_ANALISIS_OFERTA.md), [ficha de candidatura](proceso/plantillas/TEMPLATE_CANDIDATURA.md), [guion de adaptación](proceso/plantillas/TEMPLATE_GUION_ADAPTACION_CV.md) y [veredicto final](proceso/plantillas/TEMPLATE_VEREDICTO_FINAL_CV.md).
+- [Seguimiento](seguimiento/seguimiento-candidaturas.md): estados, fechas, documentos y bloqueos.
+- [Candidaturas](candidaturas/): expedientes concretos y sus artefactos.
+- [Presentación espontánea](presentacion-espontanea/README.md): materiales no vinculados a una oferta.
+- [Playbook de candidatura por oferta](../../docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md): procedimiento metodológico canónico; su versión vigente se declara en el frontmatter YAML.
+
+### Flujo operativo
+
+1. Clasificar la petición y registrar la procedencia de la oferta.
+2. Resolver una única sesión Job-up abierta; ante ambigüedad, pedir elección.
+3. Analizar la oferta y seleccionar un perfil, evidencias y logros respaldados.
+4. Aplicar la compuerta de privacidad antes de consultar datos privados.
+5. Preparar los documentos y completar el veredicto final.
+6. Actualizar la ficha y el seguimiento de la candidatura.
+7. Entregar el paquete en `pendiente_de_aprobacion`, sin enviar ni contactar.
+
+### Matriz de artefactos
+
+| Artefacto | Candidatura por oferta | Presentación espontánea |
+| --- | --- | --- |
+| Análisis de oferta | Obligatorio | No aplica |
+| Ficha de candidatura | Obligatoria | Según destinatario concreto |
+| Guion de adaptación | Obligatorio | Selección factual general |
+| Veredicto final | Obligatorio antes de aprobar | Revisión proporcional |
+| CV DOCX y PDF | Obligatorios | Base obligatoria |
+| CV LaTeX | Obligatorio | Previsto para futuras versiones |
+| Carta DOCX y PDF | Obligatorias | Solo si la solicita el destinatario |
+| Email de presentación | Según el canal | Base obligatoria |
+| Informe de empresa o preparación de entrevista | Solo si se genera | Solo si se genera |
+
+### Trazabilidad, PCS e histórico
+
+El [seguimiento de candidaturas](seguimiento/seguimiento-candidaturas.md)
+refleja el estado vivo y los documentos asociados. PCS conserva las sesiones,
+decisiones, acciones y el estado operativo; Job-up no duplica ese ciclo en este
+README. La [sesión de origen](../../.pcs/sesiones/sesion-20260721-1651-tension-carrera-ai-y-busqueda-de-trabajo.md), la [decisión de crear la rama](../../.pcs/decisiones/DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo.md) y la [acción de activación](../../.pcs/acciones/ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1.md) documentan la trazabilidad inicial.
+
+`INICIO_SESION_WORK.md` ya no es una entrada operativa paralela. Su contenido
+histórico se conserva en [historico](../../historico/boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md); la orientación conceptual queda aquí y el ciclo exacto de sesiones corresponde a `job-up-inicia-sesion`.

@@ -1,6 +1,6 @@
 ---
-name: empleo-inicio-busqueda
-description: Use when the user explicitly invokes $empleo-inicio-busqueda in a fresh Work session to start or resume Job-up, the employment-search branch of carrera-ai.
+name: job-up-inicia-sesion
+description: Use when the user explicitly invokes $job-up-inicia-sesion in a fresh Work session to start or resume Job-up, the employment-search branch of carrera-ai.
 ---
 
 # Iniciar Job-up
@@ -14,14 +14,14 @@ description: Use when the user explicitly invokes $empleo-inicio-busqueda in a f
 5. Preparar la creación obligatoria de una nueva sesión PCS con nombre canónico `sesion-YYYYMMDD-HHMM-slug.md`, `id` alineado con el nombre base, `estado: abierta`, timestamp de invocación y `sesion_relacionada:` siempre presente; rellenarla con la sesión Job-up relevante más reciente o dejarla vacía solo cuando no exista relación aplicable.
 6. Preparar y validar una actualización mínima de `./.pcs/estado/estado-actual.md` que toque solo la trazabilidad dirigida de Job-up, preserve intacto todo el contenido no Job-up y apunte a la nueva sesión.
 7. Ejecutar las escrituras solo después de validar el conjunto completo y siempre en este orden fijo: cerrar sesiones Job-up previas, crear la nueva sesión, actualizar `./.pcs/estado/estado-actual.md`.
-8. Leer `boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md` y seguir su orden de consulta de Job-up.
+8. Leer `boveda-entrevista-profesional/busqueda-empleo/README.md` como referencia funcional única y seguir su orden de consulta de Job-up: fuentes en `fuentes/` y seguimiento en `seguimiento/seguimiento-candidaturas.md`. El playbook estable aplicable se consulta desde `docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md` cuando el trabajo lo requiera.
 9. Confirmar que el ámbito es Job-up, responder con el estado breve de candidaturas y acciones relevantes, proponer el siguiente paso seguro y esperar instrucciones.
 
 ## Validaciones previas obligatorias
 
 - Detenerse antes de cualquier escritura si hay ambigüedad o invalidez al resolver el host, localizar las fuentes canónicas, clasificar una sesión como Job-up o no Job-up, seleccionar `sesion_relacionada:`, resolver una colisión de nombre de archivo o preparar el conjunto completo de cambios.
 - Explicar expresamente la ambigüedad o invalidez detectada; no continuar por aproximación ni por coincidencia parcial.
-- Tratar la creación de la nueva sesión como obligatoria en cada invocación de `$empleo-inicio-busqueda`; no convertirla en una tarea opcional o manual posterior.
+- Tratar la creación de la nueva sesión como obligatoria en cada invocación de `$job-up-inicia-sesion`; no convertirla en una tarea opcional o manual posterior.
 - Preparar y validar todo el lote de escrituras antes de mutar archivos para evitar cierres parciales, creación parcial o actualización parcial del estado.
 - Si dos invocaciones comparten minuto, resolver la colisión con un sufijo incremental compatible con `ENTIDAD_SESION.md`; no sobrescribir ni duplicar nombres de archivo.
 

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Candidatura Job-up por oferta"
+  short_description: "Prepara una candidatura trazable desde una oferta"
+  default_prompt: "Usa $job-up-candidatura-oferta para preparar una candidatura por oferta y dejarla pendiente de aprobación humana."
+policy:
+  allow_implicit_invocation: false

@@ -1,6 +1,10 @@
 ---
+id: template-veredicto-final-cv
 tipo: veredicto_final_cv
 proposito: evaluar_integridad_calidad_y_decision_del_cv
+version: "1.0.0"
+estado: vigente
+fecha_version: 2026-07-29
 ---
 
 # Veredicto final del CV

@@ -56,5 +56,5 @@ Para `CAND-2026-006` se autoriza el uso de nombre completo, correo electrónico,
 
 - SPEC: [[../../../../docs/superpowers/specs/2026-07-24-candidatura-espontanea-randstad-design]].
 - Plan: [[../../../../docs/superpowers/plans/2026-07-24-candidatura-espontanea-randstad]].
-- Datos factuales: [[../datos-core-busqueda]].
+- Datos factuales: [[../../fuentes/datos-core-busqueda]].
 - Sesión Job-up: [[../../../../.pcs/sesiones/sesion-20260724-2004-candidaturas-job-up]].

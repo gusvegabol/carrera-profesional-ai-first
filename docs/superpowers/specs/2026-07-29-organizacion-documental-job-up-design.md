@@ -67,7 +67,7 @@ boveda-entrevista-profesional/busqueda-empleo/
 └─ presentacion-espontanea/
 
 docs/metodologia/playbooks/
-└─ PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0.md
+└─ PLAYBOOK_CANDIDATURA_POR_OFERTA.md
 
 historico/
 └─ boveda-entrevista-profesional/busqueda-empleo/  (solo documentos aprobados como históricos)
@@ -91,6 +91,11 @@ una candidatura antigua. Mantendrá dos capas con una frontera explícita:
 Esta separación es interna al README. Si la capa conceptual crece lo suficiente
 en el futuro, podrá extraerse a un documento de arquitectura sin alterar el
 README como punto de entrada.
+
+Desde su primera versión, el README utilizará las secciones estructurales
+estables «Modelo mental de Job-up» y «Uso operativo de Job-up». La futura
+extracción de la capa conceptual conservará el README como puerta de entrada y
+no obligará a rediseñar la capa operativa.
 
 El README incluirá, como mínimo:
 
@@ -131,7 +136,9 @@ canónica aplicable indique otra cosa.
 2. Para una oferta, consulta las fuentes factuales y registra el análisis en
    el expediente correspondiente.
 3. Solo cuando existe autorización para el caso, consulta los datos privados y
-   prepara los documentos definidos por el proceso.
+   prepara los documentos definidos por el proceso. Puede reutilizar una
+   autorización escrita en la ficha privada si delimita expresamente esa misma
+   candidatura; no autoriza otras ofertas, empresas ni usos posteriores.
 4. El expediente inventaría todos sus documentos operativos y el seguimiento
    refleja el estado vivo.
 5. La persona candidata revisa y aprueba antes de cualquier envío o contacto.
@@ -142,6 +149,11 @@ Si falta evidencia factual, debe declararse como límite y no completarse por
 inferencia. Si no existe autorización de datos privados, esos datos no se
 consultan ni se incorporan. Sin aprobación humana, la candidatura no supera el
 estado `pendiente_de_aprobacion`.
+
+Los datos privados aportados sin una autorización aplicable no se copian ni se
+propagan. Se bloquea únicamente la parte del flujo que necesite esos datos y se
+solicita una confirmación mínima de uso; el análisis factual o público que no
+los requiera puede continuar.
 
 ## Migración propuesta
 
@@ -232,6 +244,21 @@ La implantación recuperará el contenido exacto del commit de creación de
 mejoras posteriores, será la base del playbook vigente `1.1.0`. Así no se
 atribuye retrospectivamente a la versión histórica contenido que no tuvo.
 
+## Control de versión de fuentes y plantillas
+
+Las fuentes y plantillas de Job-up tendrán control de versión en frontmatter
+YAML, con campos adecuados a su tipo documental: `id`, `tipo`, `version`,
+`estado`, `fecha_version` y, cuando exista, `version_anterior`. El estado de
+una fuente o plantilla reflejará su vigencia documental, no el avance de una
+candidatura.
+
+Las candidaturas y los documentos de sus expedientes no tendrán versionado
+trazable. Su gestión se basa en el seguimiento, los artefactos producidos y el
+estado propio de la candidatura; añadir versiones a esos documentos no aporta
+mejora operativa. El traslado de una fuente o plantilla a `historico/` seguirá
+requiriendo sustitución identificada, confirmación humana y conservación de la
+ruta de procedencia; nunca será automático por su estado.
+
 ## Skills de entrada de Job-up
 
 Las skills de Codex son puntos de entrada operativos de la rama y deben
@@ -249,7 +276,20 @@ Se añadirá una tercera skill:
 
 | Skill | Función |
 | --- | --- |
-| `job-up-candidatura-oferta` | Recibir una URL de oferta y activar el flujo de candidatura por oferta. |
+| `job-up-candidatura-oferta` | Recibir una oferta mediante URL, fichero Markdown o texto pegado y activar el flujo de candidatura por oferta. |
+
+La oferta podrá recibirse en cualquiera de estas tres modalidades:
+
+- URL pública accesible.
+- Fichero Markdown de estructura libre aportado por la persona usuaria.
+- Texto de la oferta copiado y pegado en el chat.
+
+No se impondrá una plantilla al Markdown ni al texto, ya que las fuentes de
+ofertas utilizan formatos propios. La skill extraerá la información disponible
+y, si faltan datos esenciales para preparar la candidatura, señalará las
+ausencias y solicitará únicamente la información imprescindible. Una URL cuyo
+contenido no pueda leerse por permisos u otras restricciones podrá sustituirse
+por cualquiera de las otras dos modalidades.
 
 ### Reglas de sesión para `job-up-candidatura-oferta`
 
@@ -257,25 +297,37 @@ La skill de candidatura por oferta no abrirá una nueva sesión PCS por sí mism
 Solo podrá vincular el trabajo a una única sesión Job-up que ya esté abierta.
 
 - Si existe una única sesión Job-up abierta, la candidatura se vincula a ella.
-- Si no existe ninguna, la skill se detiene y pide al usuario que abra
-  `job-up-inicia-sesion` o que indique explícitamente otra instrucción.
-- Si existen varias sesiones abiertas y no puede determinarse una única,
-  también se detiene y solicita resolución humana.
-- La petición de una URL de oferta no equivale por sí sola a autorización para
-  crear una sesión PCS.
+- Si existen varias sesiones abiertas o no puede determinarse una única sesión
+  adecuada, la skill pide a la persona usuaria que elija aquella a la que debe
+  vincularse el trabajo.
+- Si no existe ninguna sesión Job-up abierta, la skill lo informa y pregunta si
+  desea ejecutar en ese momento `job-up-inicia-sesion`. Solo tras una respuesta
+  afirmativa explícita invoca esa skill y comprueba de nuevo que existe una
+  única sesión abierta.
+- La entrega de una oferta, por cualquiera de las tres modalidades, no equivale
+  por sí sola a autorización para crear una sesión PCS.
+- `job-up-candidatura-oferta` no crea directamente sesiones ni reproduce la
+  lógica de PCS de `job-up-inicia-sesion`.
 
 ### Flujo de `job-up-candidatura-oferta`
 
-1. Recibir y validar la URL de la oferta.
-2. Obtener el contenido visible de la oferta y registrar su fuente.
-3. Resolver una única sesión Job-up abierta; detenerse si no existe o es
-   ambigua.
-4. Crear el análisis de la oferta dentro del expediente correspondiente.
-5. Aplicar el playbook canónico y la matriz de artefactos.
-6. Consultar datos privados solo si existe autorización para esa candidatura.
-7. Preparar los documentos y el veredicto final.
-8. Actualizar la ficha y el seguimiento de la candidatura.
-9. Entregar el paquete en `pendiente_de_aprobacion`, sin enviar ni contactar.
+1. Recibir la oferta mediante URL, fichero Markdown o texto pegado.
+2. Obtener o extraer el contenido disponible y registrar su procedencia: URL
+   de origen cuando exista, o contenido aportado por la persona usuaria y fecha
+   de recepción.
+3. Identificar los datos esenciales que falten y solicitarlos solo cuando sean
+   necesarios para continuar.
+4. Resolver una única sesión Job-up abierta; si existen varias o hay
+   ambigüedad, pedir a la persona usuaria que elija una.
+5. Si no existe una sesión abierta, informar de ello y ofrecer ejecutar
+   `job-up-inicia-sesion`; continuar solo tras una confirmación afirmativa
+   explícita y la creación correcta de la sesión por esa skill.
+6. Crear el análisis de la oferta dentro del expediente correspondiente.
+7. Aplicar el playbook canónico y la matriz de artefactos.
+8. Consultar datos privados solo si existe autorización para esa candidatura.
+9. Preparar los documentos y el veredicto final.
+10. Actualizar la ficha y el seguimiento de la candidatura.
+11. Entregar el paquete en `pendiente_de_aprobacion`, sin enviar ni contactar.
 
 Las tres skills tendrán `allow_implicit_invocation: false` y se documentarán
 como entradas separadas en el README de Job-up.
@@ -303,6 +355,8 @@ de procedencia.
 ## Trazabilidad
 
 - Sesión PCS: [[sesion-20260729-1320-organizacion-documentacion-job-up]].
+- Línea futura de investigación y networking:
+  [[sesion-20260729-1614-investigacion-empresas-relaciones-profesionales]].
 - Decisión de alcance: [[DEC-20260721-1651-001-crear-rama-operativa-busqueda-empleo]].
 - Decisión de sesiones: [[DEC-20260724-1956-001-delimitar-sesiones-job-up]].
-- Playbook canónico: [[PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0]].
+- Playbook canónico: [[PLAYBOOK_CANDIDATURA_POR_OFERTA]].

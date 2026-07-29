@@ -69,7 +69,7 @@ Para `CAND-2026-007` se utilizaron nombre completo, correo electrónico, teléfo
 
 ## Control antes del envío
 
-- [x] Los logros principales están respaldados por [[../../datos-core-busqueda|datos-core-busqueda]].
+- [x] Los logros principales están respaldados por [[../../fuentes/datos-core-busqueda|datos-core-busqueda]].
 - [x] Las afirmaciones no acreditadas se han descartado o matizado.
 - [x] El CV y la carta han sido generados.
 - [x] Revisión humana final del CV.
@@ -79,5 +79,5 @@ Para `CAND-2026-007` se utilizaron nombre completo, correo electrónico, teléfo
 
 ## Trazabilidad
 
-- Registro general: [[../../seguimiento-candidaturas|seguimiento-candidaturas]].
+- Registro general: [[../../seguimiento/seguimiento-candidaturas|seguimiento-candidaturas]].
 - Sesión Job-up: [[../../../../.pcs/sesiones/sesion-20260724-2004-candidaturas-job-up|sesion-20260724-2004-candidaturas-job-up]].

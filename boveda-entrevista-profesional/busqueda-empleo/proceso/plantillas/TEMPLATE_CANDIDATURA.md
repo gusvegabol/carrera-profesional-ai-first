@@ -1,6 +1,10 @@
 ---
+id: template-candidatura
 tipo: plantilla
 proposito: candidatura
+version: "1.0.0"
+estado: vigente
+fecha_version: 2026-07-29
 ---
 
 # Ficha de candidatura

@@ -1,6 +1,10 @@
 ---
+id: template-analisis-oferta
 tipo: plantilla
 proposito: analisis_oferta
+version: "1.0.0"
+estado: vigente
+fecha_version: 2026-07-29
 ---
 
 # Análisis de oferta

@@ -46,4 +46,4 @@ Los documentos se conservan en esta carpeta como referencia de la candidatura. N
 
 ## Trazabilidad
 
-- Registro general: [[../../seguimiento-candidaturas|Seguimiento de candidaturas]].
+- Registro general: [[../../seguimiento/seguimiento-candidaturas|Seguimiento de candidaturas]].

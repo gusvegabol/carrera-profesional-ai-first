@@ -143,6 +143,10 @@ El detalle de ejecución del ciclo PCS quedará exclusivamente en
 `job-up-inicia-sesion`; después, el documento sustituido se conservará bajo
 `historico/` con su ruta de procedencia.
 
+El análisis de activación semántica de las skills se difiere a
+[[sesion-20260729-1534-activacion-semantica-skills-job-up]], creada en pausa.
+No cambia todavía `allow_implicit_invocation` ni las rutas de las skills.
+
 ## Acciones derivadas
 
 - No se crea una acción PCS en la apertura. Solo se derivará una acción si la

@@ -44,4 +44,4 @@ Encaje bueno condicionado. Las funciones de administración, compras, proveedore
 
 ## Trazabilidad
 
-- Registro general: [[../../seguimiento-candidaturas|Seguimiento de candidaturas]].
+- Registro general: [[../../seguimiento/seguimiento-candidaturas|Seguimiento de candidaturas]].
