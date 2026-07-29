@@ -73,6 +73,15 @@ Sigue este orden y deja constancia de cada decisión:
    Selecciona un perfil principal, uno secundario y de tres a cinco logros
    respaldados por `fuentes/datos-core-busqueda.md`; marca los requisitos no
    acreditados y mantén la trazabilidad frase por frase.
+   La selección del titular, el tono, la traducción de una experiencia
+   directiva a un puesto auxiliar o técnico, la experiencia histórica, las
+   herramientas antiguas y el tratamiento de la sobrecualificación deben estar
+   explicados en el guion; no son decisiones libres de redacción.
+   En la carta, no inventes destinatario, cargo, fecha, localidad ni asunto:
+   si no hay persona usa `Estimado equipo de [empresa]:`, la fecha es la de
+   generación, la localidad se omite si no está confirmada y el asunto se
+   deriva solo de empresa y puesto confirmados. Si falta un puesto confirmado,
+   bloquea la carta por asunto ambiguo y continúa con el CV si es posible.
 8. **Aplicar la autorización privada por candidatura.** Antes de consultar,
    copiar o incorporar cualquier dato de
    `fuentes/datos-privados-candidatura.md`, comprueba que existe autorización
@@ -112,6 +121,16 @@ Sigue este orden y deja constancia de cada decisión:
 - La carta puede resumir el CV, pero no puede introducir ningún hecho, logro,
   herramienta, requisito cumplido, dato de empresa o afirmación que no figure
   en el guion y el análisis.
+- La carta debe resolver también `[DESPEDIDA]`; el tratamiento, saludo,
+  despedida y llamada a la acción deben ser coherentes entre sí y con el canal.
+- No inventes persona destinataria, cargo, dirección, localidad, fecha, asunto,
+  vacante ni datos de contacto. Aplica los fallbacks de la guía común y deja
+  constancia de los campos omitidos o derivados.
+- El titular, la selección de tres a cinco logros, la experiencia histórica,
+  las herramientas antiguas y cualquier traducción de experiencia directiva a
+  un puesto auxiliar o técnico deben poder rastrearse al guion y a una fuente.
+- Si la salida requiere tratar la sobrecualificación, usa únicamente la
+  formulación aprobada en el guion; no la ocultes ni la compenses con promesas.
 - Antes de entregar, revisa marcadores, datos privados, fotografía, tono,
   tratamiento, llamada a la acción, coherencia con `cv.tex` y enlaces del
   índice. Si un elemento concreto no puede verificarse, bloquea solo el
@@ -162,5 +181,7 @@ permiso para crear una sesión.
 - [ ] El análisis, la ficha, el seguimiento y las rutas de documentos están
       actualizados.
 - [ ] La decisión del veredicto permite la salida.
+- [ ] Destinatario, fecha, asunto, localidad, saludo y despedida están
+      confirmados o resueltos mediante los fallbacks permitidos.
 - [ ] El estado final es `pendiente_de_aprobacion`.
 - [ ] No se ha enviado ninguna candidatura ni se ha contactado con nadie.

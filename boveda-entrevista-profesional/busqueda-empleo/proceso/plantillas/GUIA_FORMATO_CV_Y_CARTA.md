@@ -41,6 +41,13 @@ La carta puede seleccionar menos información que el CV, pero nunca puede añadi
 
 ## Marcadores de plantilla
 
+La carta utiliza exactamente estos marcadores, que deben resolverse antes de
+entregarla: `[DESTINATARIO]`, `[FECHA]`, `[ASUNTO]`, `[SALUDO]`, `[APERTURA]`,
+`[EVIDENCIA 1]`, `[EVIDENCIA 2]`, `[ENCAJE]`, `[CIERRE]`, `[DESPEDIDA]` y
+`[FIRMA]`. El CV utiliza los marcadores definidos en su plantilla y en el
+guion de adaptación. No se puede introducir un marcador nuevo sin actualizar
+la plantilla, esta guía y la skill que la utiliza.
+
 El orden recomendado de sustitución es:
 
 1. Identidad autorizada, contacto y fotografía.
@@ -52,11 +59,43 @@ El orden recomendado de sustitución es:
 
 Los marcadores de la plantilla son instrucciones de composición, no contenido para entregar. No puede quedar ningún marcador visible en un artefacto final.
 
+## Decisiones cerradas para evitar improvisaciones
+
+- No se inventan destinatario, cargo de la persona destinataria, dirección,
+  localidad, fecha, asunto, vacante, empresa, requisitos, herramientas,
+  métricas, logros ni datos de contacto.
+- Si no se conoce una persona concreta, `[DESTINATARIO]` usa la empresa o el
+  equipo confirmado; el `[SALUDO]` será `Estimado equipo de [empresa]:`.
+- `[FECHA]` usa la fecha de generación del documento. No se presenta como fecha
+  de envío ni se obtiene de una inferencia.
+- La localidad solo se incluye si figura en la oferta, en una fuente pública
+  fiable o en una instrucción autorizada. No se utiliza la localidad privada
+  de la persona por defecto. Si no está confirmada, se omite.
+- `[ASUNTO]` se deriva únicamente del puesto y la empresa confirmados. En una
+  candidatura espontánea sin puesto confirmado se usa `Presentación
+  profesional — [empresa]`; nunca se crea una vacante para completar el
+  campo.
+- Si falta información del destinatario, asunto o localidad, se aplica este
+  fallback y se deja constancia en el expediente. Si la ambigüedad impide una
+  carta o un email seguro, se bloquea ese artefacto, pero se continúa con el CV
+  cuando pueda generarse de forma factual.
+- El titular, el tono, el tratamiento, la llamada a la acción, la selección de
+  tres a cinco logros, la traducción de un cargo directivo a un puesto auxiliar
+  o técnico, la inclusión de experiencia histórica y el uso de herramientas
+  antiguas deben estar justificados por el guion y sus fuentes. La
+  sobrecualificación se trata solo según la estrategia explícita del guion.
+- En candidaturas espontáneas, los hechos de la empresa, las hipótesis de
+  encaje, el módulo de destinatario y los módulos opcionales del email se
+  seleccionan y etiquetan por separado. Una hipótesis nunca entra en el CV ni
+  se presenta como necesidad de la empresa.
+
 ## Controles contra improvisación
 
 Antes de marcar la candidatura como `pendiente_de_aprobacion`, comprobar:
 
 - cada afirmación del CV y de la carta tiene fuente identificable;
+- el titular, el perfil, los tres a cinco logros y la experiencia histórica
+  seleccionada corresponden al guion y no son una elección ornamental;
 - los logros y métricas no han sido redondeados ni ampliados;
 - las herramientas solo aparecen si están respaldadas;
 - los requisitos de la oferta se distinguen de los requisitos que realmente cumple la persona;
@@ -64,6 +103,10 @@ Antes de marcar la candidatura como `pendiente_de_aprobacion`, comprobar:
 - la foto corresponde a la persona y se ha autorizado su uso, salvo exclusión expresa;
 - el nombre, teléfono, email y enlaces coinciden con los datos autorizados;
 - el tono, tratamiento y llamada a la acción son coherentes con destinatario y canal;
+- destinatario, fecha, asunto y localidad siguen las reglas cerradas de esta
+  guía y no contienen inferencias;
+- la carta resuelve todos sus marcadores, incluido `[DESPEDIDA]`, y no amplía
+  los hechos seleccionados para el CV;
 - CV, carta y LaTeX no contienen contradicciones;
 - la salida cumple una página, texto seleccionable, cuerpo justificado y jerarquía visual;
 - no quedan marcadores, notas internas, hipótesis ni datos no autorizados;

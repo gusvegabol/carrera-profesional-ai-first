@@ -23,6 +23,13 @@ Preparar una candidatura espontánea dirigida a una empresa concreta. El resulta
    Antes de componerlo, lee `boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/GUIA_FORMATO_CV_Y_CARTA.md` y usa `TEMPLATE_CV_FORMATO.docx`. Incluye la fotografía autorizada por defecto; solo la excluyas si la persona responsable lo indica expresamente en la invocación.
 6. **Redactar el email.** Parte de `boveda-entrevista-profesional/busqueda-empleo/presentacion-espontanea/email-presentacion.md`. Para una empresa usa tratamiento formal coherente: «Estimado equipo…», «me dirijo a ustedes», «su tiempo», «¿Tendrían disponibilidad…?». Personaliza solo asunto, empresa, saludo y apertura con hechos comprobados. Conserva dos o tres pruebas profesionales verificables y una llamada a una conversación breve. No uses «Hola» con «vosotros/vuestro» ni prometas resultados no demostrados.
    Selecciona explícitamente un único módulo de destinatario (empresa concreta, intermediario o contacto personal) y anota la razón. Selecciona también los módulos opcionales de experiencia que procedan; si no hay evidencia de encaje, no los incluyas. El email no se convierte automáticamente en carta: si se solicita carta, usa `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx` y el contrato de la guía común.
+   No inventes persona destinataria, cargo, dirección, localidad, fecha, asunto
+   ni vacante. Si no se conoce una persona, usa `Estimado equipo de [empresa]:`;
+   la fecha es la de generación; la localidad se omite si no está confirmada;
+   y el asunto será `Presentación profesional — [empresa]` cuando no exista un
+   puesto confirmado. En una carta solicitada, aplica los mismos fallbacks y
+   bloquea solo la carta si la ambigüedad restante impide redactarla con
+   seguridad.
 7. **Pasar controles.** Comprueba que el email está en español, en primera persona, sin afirmaciones inventadas, sin métricas nuevas y con todas las fuentes enlazadas fuera del cuerpo del email. Verifica que el PDF adjunto corresponde al CV seleccionado y que no se han filtrado datos privados. Si la empresa no tiene una fuente fiable o el destinatario no es oficial, marca la incertidumbre y no la ocultes. Cuando el proceso remita al playbook de candidatura por oferta, usa la versión estable `docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md`.
 8. **Entregar para revisión.** Presenta, en este orden: (a) empresa y destinatario investigados; (b) hechos comprobados con enlaces y fecha; (c) puntos de encaje, marcados como hipótesis; (d) email completo; (e) CV y nombre exacto del archivo que se adjuntaría; (f) dudas o campos pendientes. Termina solicitando aprobación humana del contenido y del adjunto. La aprobación no autoriza por sí sola un envío automático: el usuario debe enviarlo manualmente.
 
@@ -41,7 +48,15 @@ Preparar una candidatura espontánea dirigida a una empresa concreta. El resulta
   conveniencia retórica.
 - Cada afirmación del email y del CV debe proceder de una fuente factual o de
   una hipótesis etiquetada. No se improvisan logros, herramientas, métricas,
-  necesidades, tono, tratamiento ni destinatario.
+  necesidades, titular, selección de logros, experiencia histórica, traducción
+  de experiencia directiva, tratamiento, llamada a la acción ni destinatario.
+- La sobrecualificación y el uso de herramientas antiguas solo se tratan si la
+  selección factual o el guion lo justifican. No se suavizan con afirmaciones
+  inventadas.
+- El email debe declarar el módulo de destinatario elegido y los módulos
+  opcionales incluidos. Solo los hechos comprobados pueden describir la
+  empresa; los puntos de encaje permanecen como hipótesis etiquetadas y no se
+  trasladan al CV como hechos.
 - Antes de entregar, revisa coherencia entre el email y el CV, marcadores,
   datos privados, fotografía, longitud, justificación, ortografía y estado de
   aprobación humana. No se envía nada.
@@ -61,6 +76,8 @@ Estado: pendiente de revisión y aprobación humana; no enviado.
 ## Reglas de seguridad y calidad
 
 - No inventes necesidades, proyectos, cultura, contacto ni vacantes.
+- No inventes fecha, localidad, cargo, asunto ni persona destinataria. Aplica
+  los fallbacks de la guía común y registra cualquier omisión.
 - No presentes una inferencia como «la empresa busca» o «necesita».
 - No envíes, publiques, compartas ni abras un canal externo sin una instrucción posterior y explícita; esta skill solo prepara el paquete.
 - Si la información pública contradice los datos del CV, conserva el dato profesional factual y señala la discrepancia.
