@@ -60,7 +60,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
 **Produce:** una referencia Git limpia y conocida desde la que crear todos los worktrees; un inventario de cambios locales que no se deben sobrescribir.
 
-- [ ] **Paso 1: Inventariar los cambios locales antes de crear worktrees.**
+- [x] **Paso 1: Inventariar los cambios locales antes de crear worktrees.**
 
   Ejecutar:
 
@@ -71,19 +71,19 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
   Clasificar cada cambio como «parte de esta implantación», «ajeno» o «pendiente de decisión». En particular, revisar los cambios actuales en `README.md`, `INICIO_SESION_WORK.md`, `seguimiento-candidaturas.md` y `TEMPLATE_ANALISIS_OFERTA.md` antes de tocar esas rutas.
 
-- [ ] **Paso 2: Resolver la base con la persona responsable.**
+- [x] **Paso 2: Resolver la base con la persona responsable.**
 
   Si todos los cambios pertenecen a la implantación, crear un commit de preparación limitado a esos cambios. Si alguno es ajeno o incompleto, no usarlo como base de los worktrees: conservarlo en el árbol principal y crear los worktrees desde el último commit común. No iniciar ningún movimiento sobre un archivo clasificado como «pendiente de decisión».
 
 
-- [ ] **Paso 3: Confirmar que la especificación es el contrato vigente antes de usarla.**
+- [x] **Paso 3: Confirmar que la especificación es el contrato vigente antes de usarla.**
 
   Comprobar que el flujo de `job-up-candidatura-oferta` termina en los pasos
   `9.`, `10.` y `11.`, que recoge la reutilización limitada de autorizaciones
   privadas y que no incorpora investigación ni networking al alcance. Si falta
   cualquiera de esos requisitos, no crear worktrees y pedir revisión humana.
 
-- [ ] **Paso 4: Crear la rama y los worktrees independientes desde la misma referencia.**
+- [x] **Paso 4: Crear la rama y los worktrees independientes desde la misma referencia.**
 
   Crear desde la base limpia los worktrees de las Tareas 2 y 3, que pueden
   ejecutarse en paralelo. Crear los worktrees de las Tareas 4 y 5 solo después
@@ -98,7 +98,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
   Resultado esperado: el mismo SHA base y un árbol limpio en cada worktree.
 
-- [ ] **Paso 5: Confirmar la preparación.**
+- [x] **Paso 5: Confirmar la preparación.**
 
   Registrar el SHA base y la clasificación de los cambios locales en el comentario de coordinación de la tarea. No crear decisiones PCS ni modificar el estado PCS.
 
@@ -117,7 +117,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
 **Produce:** playbook vigente `1.1.0` con nombre estable y copia histórica fiel `1.0.0`.
 
-- [ ] **Paso 1: Recuperar la versión histórica sin mezclar mejoras posteriores.**
+- [x] **Paso 1: Recuperar la versión histórica sin mezclar mejoras posteriores.**
 
   Obtener el archivo original desde Git con:
 
@@ -139,7 +139,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
   ---
   ```
 
-- [ ] **Paso 2: Crear el playbook vigente con nombre estable.**
+- [x] **Paso 2: Crear el playbook vigente con nombre estable.**
 
   Copiar el contenido actual a `docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md` y anteponer:
 
@@ -157,11 +157,11 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
   Ajustar el título visible para no presentar `v1.0.0` como versión vigente. No cambiar las reglas metodológicas del cuerpo.
 
-- [ ] **Paso 3: Retirar el archivo vigente con versión en el nombre.**
+- [x] **Paso 3: Retirar el archivo vigente con versión en el nombre.**
 
   Eliminar `docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0.md` solo después de que existan las dos copias nuevas y se hayan comprobado sus YAML.
 
-- [ ] **Paso 4: Comprobar exactitud e integridad.**
+- [x] **Paso 4: Comprobar exactitud e integridad.**
 
   Ejecutar:
 
@@ -175,7 +175,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
   Resultado esperado: el comando termina sin excepción. Verificar además que ambos YAML contienen `version`, `estado` y la relación de sustitución correcta.
 
-- [ ] **Paso 5: Revisar y comprometer.**
+- [x] **Paso 5: Revisar y comprometer.**
 
   Revisar ortografía española, `git diff --check` y el inventario de referencias al nombre antiguo. Crear un commit aislado:
 
@@ -203,7 +203,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
 **Produce:** estructura funcional coherente, README único de Job-up, fuentes y plantillas con versión documental, y documento de inicio conservado solo como histórico.
 
-- [ ] **Paso 1: Mover los artefactos sin alterar su contenido sustantivo.**
+- [x] **Paso 1: Mover los artefactos sin alterar su contenido sustantivo.**
 
   Aplicar este mapa exacto:
 
@@ -217,11 +217,11 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
   Preservar historial con `git mv` cuando el origen y destino estén versionados. No mover `candidaturas/`, `presentacion-espontanea/`, certificados ni archivos de CV.
 
-- [ ] **Paso 2: Marcar la pieza histórica correctamente.**
+- [x] **Paso 2: Marcar la pieza histórica correctamente.**
 
   En la copia histórica de `INICIO_SESION_WORK.md`, añadir un frontmatter YAML que indique que está retirada y que fue sustituida por el README y `job-up-inicia-sesion`. Mantener íntegro el contenido histórico; no convertirlo en una guía activa.
 
-- [ ] **Paso 3: Establecer el control de versión de fuentes y plantillas.**
+- [x] **Paso 3: Establecer el control de versión de fuentes y plantillas.**
 
   Añadir o completar el frontmatter YAML de estos seis documentos trasladados:
 
@@ -244,7 +244,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
   candidatura dentro de `fuentes/datos-privados-candidatura.md`; no copiar sus
   valores a los expedientes ni convertirlas en autorizaciones globales.
 
-- [ ] **Paso 4: Reescribir el README como referencia funcional única.**
+- [x] **Paso 4: Reescribir el README como referencia funcional única.**
 
   Estructurarlo con dos secciones principales y este contenido mínimo:
 
@@ -269,7 +269,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
   datos no autorizados. Explicar que, si no existe sesión abierta, la skill de
   oferta pedirá permiso antes de invocar `job-up-inicia-sesion`.
 
-- [ ] **Paso 5: Actualizar todas las rutas afectadas.**
+- [x] **Paso 5: Actualizar todas las rutas afectadas.**
 
   Localizar referencias mediante:
 
@@ -279,7 +279,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
   Corregir rutas Markdown relativas para que apunten a `fuentes/`, `proceso/plantillas/` y `seguimiento/`. Los wikilinks simples pueden mantener el nombre visible cuando sigan resolviendo de forma unívoca; convertirlos a ruta relativa solo si hay ambigüedad.
 
-- [ ] **Paso 6: Verificar la documentación trasladada y sus metadatos.**
+- [x] **Paso 6: Verificar la documentación trasladada y sus metadatos.**
 
   Comprobar que no existen los cuatro orígenes operativos antiguos y que existen los cinco destinos previstos:
 
@@ -297,7 +297,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
   `id`, `tipo`, `version: "1.0.0"` y `fecha_version: 2026-07-29`, y que no hay
   coincidencias de `version:` dentro de `candidaturas/`.
 
-- [ ] **Paso 7: Revisar y comprometer.**
+- [x] **Paso 7: Revisar y comprometer.**
 
   Revisar ortografía, ejecutar `git diff --check` y crear un commit aislado:
 
@@ -321,19 +321,19 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
 **Produce:** dos skills de Job-up con nombres, metadatos y rutas coherentes.
 
-- [ ] **Paso 1: Renombrar sin perder archivos de configuración.**
+- [x] **Paso 1: Renombrar sin perder archivos de configuración.**
 
   Usar `git mv` para que cada `SKILL.md` conserve su archivo `agents/openai.yaml` asociado. No dejar directorios duplicados con los nombres antiguos.
 
-- [ ] **Paso 2: Adaptar `job-up-inicia-sesion`.**
+- [x] **Paso 2: Adaptar `job-up-inicia-sesion`.**
 
   Cambiar el frontmatter `name` y la descripción para referirse a `job-up-inicia-sesion`. Sustituir la lectura de `INICIO_SESION_WORK.md` por la del README canónico y sus rutas nuevas: seguimiento en `seguimiento/` y fuentes en `fuentes/`. Mantener la secuencia PCS actual: validar, cerrar sesiones Job-up previas cuando corresponda, crear una sesión nueva y actualizar únicamente la traza Job-up del estado.
 
-- [ ] **Paso 3: Adaptar `job-up-genera-cv-empresa`.**
+- [x] **Paso 3: Adaptar `job-up-genera-cv-empresa`.**
 
   Cambiar el frontmatter `name`, el título y las rutas de `datos-core-busqueda.md` y los materiales de presentación espontánea. Mantener sus límites: investigación pública verificable, datos privados restringidos, ninguna comunicación externa y resultado pendiente de aprobación humana. Antes de usar datos privados, exigir una autorización aplicable a esa candidatura; aceptar una autorización escrita en la ficha privada solo cuando identifica el mismo expediente. No copiar ni propagar datos no autorizados y continuar únicamente las partes que no los requieran.
 
-- [ ] **Paso 4: Actualizar los metadatos de las dos skills.**
+- [x] **Paso 4: Actualizar los metadatos de las dos skills.**
 
   En ambos `agents/openai.yaml`, establecer nombres visibles y descripciones consistentes con Job-up, actualizar `default_prompt` para usar el nombre nuevo y conservar:
 
@@ -342,7 +342,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
     allow_implicit_invocation: false
   ```
 
-- [ ] **Paso 5: Ejecutar pruebas documentales de regresión.**
+- [x] **Paso 5: Ejecutar pruebas documentales de regresión.**
 
   Ejecutar:
 
@@ -352,7 +352,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
   Resultado esperado: ninguna coincidencia operativa; solo se admitirán menciones históricas justificadas fuera de `.codex/skills`.
 
-- [ ] **Paso 6: Revisar y comprometer.**
+- [x] **Paso 6: Revisar y comprometer.**
 
   Revisar ortografía, `git diff --check` y crear:
 
@@ -375,7 +375,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
 **Produce:** una skill explícita que inicia el flujo de candidatura por oferta desde URL, Markdown o texto, sin abrir sesiones por sí misma.
 
-- [ ] **Paso 1: Escribir una prueba de comportamiento en Markdown.**
+- [x] **Paso 1: Escribir una prueba de comportamiento en Markdown.**
 
   Crear `docs/superpowers/tests/2026-07-29-job-up-candidatura-oferta.md` con esta tabla de casos y resultado esperado:
 
@@ -390,7 +390,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
   | Cualquiera | una sesión Job-up abierta + autorización privada aplicable | usar solo los datos autorizados para ese expediente |
   | Cualquiera | una sesión Job-up abierta + autorización ausente o ambigua | no copiar ni propagar datos privados; bloquear solo los documentos que los requieran |
 
-- [ ] **Paso 2: Redactar la skill con el contrato de entrada.**
+- [x] **Paso 2: Redactar la skill con el contrato de entrada.**
 
   Usar este frontmatter mínimo:
 
@@ -403,15 +403,15 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
   Definir las tres modalidades y exigir contenido suficiente de la oferta; no imponer plantilla a Markdown ni texto.
 
-- [ ] **Paso 3: Implementar el flujo y las detenciones obligatorias.**
+- [x] **Paso 3: Implementar el flujo y las detenciones obligatorias.**
 
   Documentar, en este orden: identificar procedencia; extraer contenido disponible; registrar URL o material aportado y fecha; pedir solo datos esenciales ausentes; resolver una única sesión abierta; pedir selección humana si existen varias; si no existe ninguna, solicitar permiso para invocar `job-up-inicia-sesion` y comprobar la sesión creada; crear el análisis dentro del expediente; aplicar el playbook vigente y la matriz del README; comprobar la autorización privada aplicable; producir el paquete en `pendiente_de_aprobacion`; actualizar ficha y seguimiento. Declarar la detención obligatoria cuando no haya confirmación para invocar el launcher, la selección de sesión siga ambigua, falten datos esenciales imposibles de obtener o exista contradicción factual.
 
-- [ ] **Paso 4: Añadir límites explícitos.**
+- [x] **Paso 4: Añadir límites explícitos.**
 
   Incluir que la skill no abre ni cierra directamente sesiones PCS, no usa el contenido de una URL inaccesible si no se facilita por Markdown o texto, no inventa datos, no envía candidaturas ni realiza contactos. La entrega de una oferta no es autorización para crear sesión ni usar datos privados. Una respuesta afirmativa explícita a la propuesta de ejecutar `job-up-inicia-sesion` autoriza únicamente esa invocación delegada; no autoriza datos privados ni acciones externas.
 
-- [ ] **Paso 5: Crear la configuración de descubrimiento.**
+- [x] **Paso 5: Crear la configuración de descubrimiento.**
 
   Crear `agents/openai.yaml` con un nombre visible, descripción breve y prompt por defecto que invoquen `job-up-candidatura-oferta`, y con:
 
@@ -420,7 +420,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
     allow_implicit_invocation: false
   ```
 
-- [ ] **Paso 6: Verificar contra los seis casos.**
+- [x] **Paso 6: Verificar contra los seis casos.**
 
   Revisar línea por línea la skill contra la tabla de la prueba; cada resultado debe tener una instrucción inequívoca en el documento. Ejecutar `git diff --check` y buscar la ruta del playbook antiguo:
 
@@ -430,7 +430,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
   Resultado esperado: cero coincidencias.
 
-- [ ] **Paso 7: Revisar y comprometer.**
+- [x] **Paso 7: Revisar y comprometer.**
 
   Revisar ortografía española y crear:
 
@@ -453,11 +453,11 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
 **Produce:** rama de integración con enlaces válidos, rutas coherentes y verificación documentada.
 
-- [ ] **Paso 1: Integrar en el orden de dependencias.**
+- [x] **Paso 1: Integrar en el orden de dependencias.**
 
   Aplicar los commits en este orden: Tarea 2, Tarea 3, Tarea 4 y Tarea 5. Resolver un conflicto solo comparando el cambio con la especificación aprobada; si afecta a un archivo clasificado como «pendiente de decisión» en la Tarea 1, detenerse y pedir intervención humana.
 
-- [ ] **Paso 2: Sustituir referencias al playbook y a rutas antiguas.**
+- [x] **Paso 2: Sustituir referencias al playbook y a rutas antiguas.**
 
   Ejecutar:
 
@@ -467,11 +467,11 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
   Actualizar cada coincidencia operativa para usar el playbook sin versión en el nombre, los nombres nuevos de skills o la ruta funcional nueva. Mantener las referencias históricas en `.pcs/`, `.superpowers/`, `historico/` y documentos de diseño, así como `sustituye: PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0` en el YAML del playbook vigente.
 
-- [ ] **Paso 3: Comprobar los enlaces Markdown locales modificados.**
+- [x] **Paso 3: Comprobar los enlaces Markdown locales modificados.**
 
   Para cada enlace Markdown relativo que haya cambiado, resolver la ruta desde el directorio del archivo que lo contiene y comprobar que el destino existe. Para cada wikilink modificado, comprobar que solo exista un archivo activo con ese nombre. Corregir los enlaces rotos sin cambiar el contenido factual de candidaturas existentes.
 
-- [ ] **Paso 4: Verificar contratos de las skills.**
+- [x] **Paso 4: Verificar contratos de las skills.**
 
   Ejecutar:
 
@@ -481,7 +481,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
 
   Resultado esperado: tres nombres `job-up-*`, tres políticas explícitas en `false` y cero referencias activas al documento histórico de inicio. Revisar además que las dos skills que pueden consultar datos privados exigen autorización aplicable a la candidatura y que la skill de oferta no elige sesiones ambiguas ni crea directamente una sesión PCS.
 
-- [ ] **Paso 5: Ejecutar la comprobación final de estructura y contenido.**
+- [x] **Paso 5: Ejecutar la comprobación final de estructura y contenido.**
 
   Verificar que el README contiene las secciones «Modelo mental», «Uso operativo», «Matriz de artefactos», las tres skills y las tres modalidades de entrada. Confirmar que el playbook vigente declara `1.1.0`, el histórico declara `1.0.0` y que el único archivo vigente del playbook no lleva versión en el nombre.
 
@@ -490,7 +490,7 @@ Las entregas de playbook y estructura pueden ejecutarse en paralelo desde la mis
   control de versión y que el README excluye expresamente investigación de
   empresas y networking de la primera implantación.
 
-- [ ] **Paso 6: Revisar cambios locales y completar el cierre técnico.**
+- [x] **Paso 6: Revisar cambios locales y completar el cierre técnico.**
 
   Repetir `git status --short` y comparar con el inventario de la Tarea 1. Confirmar que ningún cambio ajeno se ha incluido. Ejecutar `git diff --check`, revisar ortografía española de los documentos alterados y crear el commit de integración solo si no quedan conflictos ni enlaces rotos:
 

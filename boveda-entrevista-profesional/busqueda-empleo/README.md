@@ -86,9 +86,10 @@ autoriza por sí sola la creación de una sesión PCS.
 | Guion de adaptación | Obligatorio | Selección factual general |
 | Veredicto final | Obligatorio antes de aprobar | Revisión proporcional |
 | CV DOCX y PDF | Obligatorios | Base obligatoria |
-| CV LaTeX | Previsto según el proceso | Previsto para futuras versiones |
-| Carta DOCX y PDF | Según el canal | Solo si la solicita el destinatario |
+| CV LaTeX | Obligatorio | Previsto para futuras versiones |
+| Carta DOCX y PDF | Obligatorias | Solo si la solicita el destinatario |
 | Email de presentación | Según el canal | Base obligatoria |
+| Informe de empresa o preparación de entrevista | Solo si se genera | Solo si se genera |
 
 ### Trazabilidad, PCS e histórico
 

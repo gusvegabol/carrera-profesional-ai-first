@@ -13,6 +13,7 @@ La gobernanza PCS reutilizable, los comandos `pcs::`, los flujos de hosts y las 
 | `pcs-obsidian-corrige-links` | Cuando hay que convertir referencias documentales crudas en notas de Obsidian de este repositorio a wikilinks y verificar que no queden restos. | Se conserva junto con `agents/openai.yaml` porque sigue siendo una ayuda local ligada a `boveda-entrevista-profesional/`. |
 | `job-up-inicia-sesion` | Cuando se invoca explícitamente para abrir un nuevo bloque Job-up y gestionar su ciclo PCS. | Entrada operativa de Job-up; requiere invocación explícita. |
 | `job-up-genera-cv-empresa` | Cuando se invoca explícitamente para preparar una candidatura espontánea investigada para una empresa concreta. | No envía ni contacta; entrega un paquete pendiente de aprobación humana. |
+| `job-up-candidatura-oferta` | Cuando se invoca explícitamente para preparar una candidatura a partir de una URL, un fichero Markdown o texto de una oferta. | Acepta tres modalidades de entrada y entrega un paquete pendiente de aprobación humana; no envía ni contacta. |
 
 ## Regla operativa
 
