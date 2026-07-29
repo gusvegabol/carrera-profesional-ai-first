@@ -14,7 +14,7 @@ description: Use when the user explicitly invokes $empleo-inicio-busqueda in a f
 5. Preparar la creación obligatoria de una nueva sesión PCS con nombre canónico `sesion-YYYYMMDD-HHMM-slug.md`, `id` alineado con el nombre base, `estado: abierta`, timestamp de invocación y `sesion_relacionada:` siempre presente; rellenarla con la sesión Job-up relevante más reciente o dejarla vacía solo cuando no exista relación aplicable.
 6. Preparar y validar una actualización mínima de `./.pcs/estado/estado-actual.md` que toque solo la trazabilidad dirigida de Job-up, preserve intacto todo el contenido no Job-up y apunte a la nueva sesión.
 7. Ejecutar las escrituras solo después de validar el conjunto completo y siempre en este orden fijo: cerrar sesiones Job-up previas, crear la nueva sesión, actualizar `./.pcs/estado/estado-actual.md`.
-8. Leer `boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md` y seguir su orden de consulta de Job-up.
+8. Leer `boveda-entrevista-profesional/busqueda-empleo/README.md` y seguir su orden de consulta de Job-up.
 9. Confirmar que el ámbito es Job-up, responder con el estado breve de candidaturas y acciones relevantes, proponer el siguiente paso seguro y esperar instrucciones.
 
 ## Validaciones previas obligatorias

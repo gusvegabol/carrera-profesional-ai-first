@@ -1,3 +1,11 @@
+---
+id: inicio-sesion-work-job-up
+tipo: entrada_operativa
+estado: retirada
+fecha_retiro: 2026-07-29
+sustituida_por: "README.md y job-up-inicia-sesion"
+---
+
 # Inicio de sesión Work — Job-up
 
 ## Ámbito
