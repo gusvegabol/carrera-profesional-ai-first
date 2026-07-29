@@ -3,7 +3,7 @@ id_candidatura: CAND-2026-011
 tipo: guion_adaptacion_cv
 empresa: SIA MEDIA SERVICES
 puesto: Administrativo/a
-estado: detenido
+estado: preparado
 fecha: 2026-07-29
 ---
 
@@ -39,8 +39,8 @@ flujos de seguimiento. Ha trabajado en entornos donde la coordinación entre
 administración y operación era necesaria para controlar tareas, documentación,
 recursos y resultados.»
 
-Este mensaje es un guion, no texto final aprobado. Debe adaptarse al CV y a la
-carta solo después de resolver la autorización privada.
+Este mensaje es un guion, no texto final aprobado. Se ha aplicado al CV y a la
+carta generados, pendientes todavía de revisión y aprobación humana.
 
 ## Palabras y conceptos a cubrir
 
@@ -64,12 +64,11 @@ carta solo después de resolver la autorización privada.
   concreta si no figura en `fuentes/datos-core-busqueda.md`.
 - No atribuir individualmente decisiones o resultados colectivos de Herfrailes
   S. L.
-- No incorporar nombre, correo, teléfono ni otros datos privados hasta contar
-  con autorización aplicable a `CAND-2026-011`.
+- Usar únicamente los datos privados autorizados para `CAND-2026-011`: nombre,
+  primer apellido, teléfono y correo. No incorporar segundo apellido,
+  localidad, LinkedIn ni otros datos privados.
 
 ## Estado
 
 El guion está preparado como material factual de adaptación. CV, carta y
-veredicto final permanecen bloqueados por la compuerta de privacidad de la
-candidatura.
-
+veredicto final han sido generados y quedan pendientes de revisión humana.

@@ -2,7 +2,7 @@
 id_candidatura: CAND-2026-011
 empresa: SIA MEDIA SERVICES
 puesto: Administrativo/a
-estado: detenida
+estado: pendiente_de_aprobacion
 fecha: 2026-07-29
 sesion_job_up: sesion-20260729-1320-organizacion-documentacion-job-up
 ---
@@ -12,10 +12,9 @@ sesion_job_up: sesion-20260729-1320-organizacion-documentacion-job-up
 ## Estado
 
 Expediente creado a partir de la oferta pública de SIA MEDIA SERVICES en
-Indeed. El análisis factual y el guion de adaptación están preparados. La
-candidatura queda detenida antes de generar CV, carta y veredicto porque no
-existe todavía una autorización privada escrita que identifique este
-expediente.
+Indeed. El análisis factual, el guion de adaptación, el CV, la carta y el
+veredicto están preparados. La persona responsable autorizó el uso de nombre,
+primer apellido, teléfono y correo exclusivamente para esta candidatura.
 
 No se ha presentado ninguna candidatura ni se ha contactado con la empresa.
 
@@ -45,20 +44,21 @@ No se ha presentado ninguna candidatura ni se ha contactado con la empresa.
 
 - [[analisis-oferta|Análisis de oferta]] — preparado.
 - [[guion-adaptacion-cv|Guion de adaptación]] — preparado.
-- CV DOCX — bloqueado por autorización privada.
-- CV PDF — bloqueado por autorización privada.
-- Carta DOCX — bloqueada por autorización privada.
-- Carta PDF — bloqueada por autorización privada.
-- Veredicto final — pendiente de generar los documentos y desbloquear la revisión.
+- [[cv.docx|CV editable]] — preparado para revisión humana.
+- [[cv.pdf|CV en PDF]] — preparado para revisión humana.
+- [[cv.tex|CV en LaTeX]] — preparado para procesamiento automático.
+- [[carta-presentacion.docx|Carta editable]] — preparada para revisión humana.
+- [[carta-presentacion.pdf|Carta en PDF]] — preparada para revisión humana.
+- [[veredicto-final-cv|Veredicto final]] — integridad apta; revisar antes de aprobar.
 
 ## Autorización y próximo paso
 
-No se han consultado ni incorporado datos de
-`fuentes/datos-privados-candidatura.md`. Para continuar con los artefactos que
-necesitan datos personales, la persona responsable debe proporcionar o
-confirmar una autorización escrita aplicable específicamente a `CAND-2026-011`
-y su alcance. Esa autorización no implica enviar la candidatura ni contactar
-con SIA MEDIA SERVICES.
+La autorización explícita del 29/07/2026 permite usar, solo para
+`CAND-2026-011`, nombre, primer apellido, teléfono y correo. Se han utilizado
+`Gustavo Vega`, `669549933` y `gusvegabol@gmail.com`. No se ha incorporado
+segundo apellido, localidad, LinkedIn ni ningún otro dato privado. La
+autorización no implica enviar la candidatura ni contactar con SIA MEDIA
+SERVICES.
 
 ## Control de salida
 
@@ -67,9 +67,9 @@ con SIA MEDIA SERVICES.
 - [x] Sesión Job-up única vinculada.
 - [x] Análisis factual preparado sin datos privados.
 - [x] Guion de adaptación preparado sin datos privados.
-- [ ] Autorización privada aplicable a esta candidatura.
-- [ ] CV, carta y veredicto final.
-- [ ] Estado `pendiente_de_aprobacion`.
+- [x] Autorización privada aplicable a esta candidatura.
+- [x] CV, carta y veredicto final.
+- [x] Estado `pendiente_de_aprobacion`.
 - [x] No se ha enviado ninguna candidatura ni se ha contactado con nadie.
 
 ## Trazabilidad
@@ -77,4 +77,3 @@ con SIA MEDIA SERVICES.
 - Registro general: [[../../seguimiento/seguimiento-candidaturas|Seguimiento de candidaturas]].
 - Análisis: [[analisis-oferta]].
 - Guion: [[guion-adaptacion-cv]].
-

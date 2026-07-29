@@ -4,11 +4,11 @@ tipo: analisis_oferta
 empresa: SIA MEDIA SERVICES
 puesto: Administrativo/a
 fecha_consulta: 2026-07-29
-estado: detenida
+estado: pendiente_de_aprobacion
 sesion_job_up: sesion-20260729-1320-organizacion-documentacion-job-up
 procedencia: URL pública consultada en Indeed
 url_origen: https://es.indeed.com/viewjob?jk=c8c75571b56fce18
-bloqueo: autorización privada específica para esta candidatura
+bloqueo: ninguno; pendiente de revisión y aprobación humana
 ---
 
 # Análisis de oferta — SIA MEDIA SERVICES
@@ -93,14 +93,13 @@ un software concreto de reservas o facturación en esta empresa.
 | Dos años en puesto similar | No concluyente | La trayectoria contiene experiencia relacionada, pero no se equipara automáticamente a dos años en el puesto anunciado. |
 | Organización, responsabilidad y proactividad | Requiere formulación prudente | Puede sostenerse mediante ejemplos de coordinación y mejora de procesos, no como adjetivo sin evidencia. |
 
-## Bloqueo de privacidad
+## Autorización de privacidad
 
-No se han consultado ni copiado datos de
-`fuentes/datos-privados-candidatura.md`. Falta una autorización escrita que
-identifique expresamente `CAND-2026-011` y su alcance. Por ello quedan
-bloqueados los artefactos que necesiten datos personales o contacto: CV, carta
-y veredicto final. El análisis factual y el guion de adaptación sí pueden
-continuar.
+El 29/07/2026, la persona responsable autorizó expresamente para `CAND-2026-011`
+el uso de nombre, primer apellido, teléfono y correo electrónico. Se utilizaron
+únicamente `Gustavo Vega`, `669549933` y `gusvegabol@gmail.com`. No se utilizaron
+segundo apellido, localidad, LinkedIn ni otros datos privados. La autorización
+no implica aprobación del envío.
 
 ## Contenido completo de la oferta
 
@@ -137,4 +136,3 @@ gustaría conocerte.
 
 Indeed muestra además **20.000 € al año**, mientras que el texto de la
 descripción indica «según convenio colectivo».
-

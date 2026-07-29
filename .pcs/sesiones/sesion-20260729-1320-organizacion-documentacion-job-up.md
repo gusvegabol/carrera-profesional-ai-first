@@ -228,6 +228,22 @@ integración.
   las tres skills desde `main` y registrar cualquier ajuste en una nueva sesión
   PCS delimitada.
 
+## Actualización — candidatura CAND-2026-011
+
+El 29/07/2026 se recibió autorización explícita para utilizar, únicamente en
+la candidatura de SIA MEDIA SERVICES, nombre, primer apellido, teléfono y
+correo. Se generaron `cv.docx`, `cv.pdf`, `cv.tex`,
+`carta-presentacion.docx`, `carta-presentacion.pdf` y
+`veredicto-final-cv.md`. El veredicto establece integridad `apta`, media
+orientativa 3,8 y decisión `revisar_antes_de_aprobar`. La candidatura queda
+`pendiente_de_aprobacion`; no se ha enviado ni contactado con la empresa.
+
+La conversión DOCX→PDF del entorno no fue utilizable. Los PDF se generaron
+con el motor alternativo disponible y se revisaron visualmente: CV de una
+página y carta de una página, sin cortes ni desbordamientos. La comprobación
+estructural de DOCX confirmó la presencia exclusiva de los datos privados
+autorizados; no aparecen segundo apellido, localidad privada ni LinkedIn.
+
 ## Checklist de consolidación
 
 - [x] La capa episódica registra el recorrido histórico relevante.
