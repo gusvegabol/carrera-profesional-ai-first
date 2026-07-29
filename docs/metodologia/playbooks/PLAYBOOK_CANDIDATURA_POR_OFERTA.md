@@ -100,9 +100,9 @@ Una vez resueltos los bloqueos, seguir este orden fijo:
    La fotografía es obligatoria en CV y carta salvo exclusión expresa registrada al invocar la skill. En ambos documentos, establecer el idioma de revisión en Español (España), usar Calibri con la jerarquía 14/12/11/10,5 pt y justificar el contenido; los títulos, saludos, despedidas y datos de contacto pueden conservar su alineación funcional.
 3. Realizar la revisión factual completa contra [[datos-core-busqueda]].
 4. Ejecutar una revisión de arrastre: comparar titular, resumen, competencias y experiencia con el guion de adaptación y comprobar que no aparecen el perfil dominante ni afirmaciones de otra candidatura.
-   5. Usar la skill `documents:documents` para crear los archivos DOCX a partir de las plantillas. No abrir ni inspeccionar los DOCX con LibreOffice: en este host falla al iniciar y no es una vía válida de lectura o comprobación. Para validar el contenido y la estructura, usar herramientas estructurales como `python-docx` y comprobaciones OOXML.
+   5. Usar la skill `documents:documents` para crear los archivos DOCX a partir de las plantillas. Para la conversión DOCX→PDF, invocar la instalación directa de LibreOffice mediante `soffice.com`, sin depender de `PATH`, y usar un perfil temporal aislado para evitar instancias concurrentes. No lanzar una segunda instancia si aparece el error de `bootstrap.ini`; detener la conversión y registrar el diagnóstico. Para validar el contenido y la estructura, usar también `python-docx` y comprobaciones OOXML.
 6. Generar también `cv.tex`, una versión del CV en LaTeX con estructura semántica y texto UTF-8, destinada a su tratamiento por IA. Debe conservar el mismo contenido factual que el CV revisado y quedar en la carpeta de la candidatura.
-7. Usar la skill `pdf:pdf` para exportar los DOCX a PDF y verificar los PDF. Si la conversión depende de LibreOffice y no está disponible, dejar constancia del bloqueo y no simular una verificación visual completada.
+   7. Usar la skill `pdf:pdf` para verificar los PDF exportados. Comprobar que cada PDF existe, tiene contenido y puede renderizarse para revisión visual. Si LibreOffice muestra el error de `bootstrap.ini`, dejar constancia del bloqueo y no simular una verificación visual completada.
 8. Comprobar los DOCX mediante validación estructural y comprobar visualmente los PDF cuando exista un renderizador operativo: estructura, cortes, desbordamientos, legibilidad, datos y coherencia entre formatos.
 9. Completar [[TEMPLATE_VEREDICTO_FINAL_CV]] sobre el CV ya generado: comprobar integridad, puntuar los cinco criterios, registrar evidencia y mejoras, calcular la decisión sin usar la media como puerta y corregir el CV si la decisión es `corregir_antes_de_revisar`.
 10. Si una investigación contextual autorizada justifica ajustar el lenguaje corporativo, aplicar el mismo criterio de tono al CV, al CV en LaTeX y a la carta de presentación. No se adapta solo uno de los documentos; la adaptación no puede añadir hechos, funciones, tecnologías, métricas o resultados no acreditados.
@@ -146,7 +146,7 @@ La salida válida de fase 1 es una candidatura documentada, con sus archivos pre
 - [ ] Los verbos de acción de la persona candidata están en primera persona; la tercera persona solo describe a otros sujetos.
 - [ ] No queda ningún bloqueo obligatorio abierto.
 - [ ] Los DOCX y los PDF se comprobaron visualmente.
-- [ ] El DOCX se validó estructuralmente sin abrirlo con LibreOffice.
+- [ ] El DOCX se validó estructuralmente y la exportación se realizó con el método directo documentado cuando correspondía.
 - [ ] Existe `cv.tex`, su contenido coincide con el CV revisado y se puede procesar como texto UTF-8.
 - [ ] El índice de [[TEMPLATE_CANDIDATURA]] enumera todos los artefactos operativos existentes de la carpeta, se actualizó al crear o modificar documentos y no contiene enlaces rotos.
 - [ ] El estado final es `pendiente_de_aprobacion`.

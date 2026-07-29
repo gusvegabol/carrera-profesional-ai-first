@@ -116,6 +116,15 @@ Sigue este orden y deja constancia de cada decisión:
   tratamiento, llamada a la acción, coherencia con `cv.tex` y enlaces del
   índice. Si un elemento concreto no puede verificarse, bloquea solo el
   artefacto afectado.
+- Para la conversión DOCX→PDF, usa la instalación directa de LibreOffice
+  mediante su ejecutable de consola (`soffice.com`), sin depender de que esté
+  en `PATH`, y con un perfil temporal aislado para evitar instancias
+  concurrentes. Ejecuta una sola conversión por documento y comprueba que el
+  PDF existe antes de continuar.
+- Si aparece el error de `bootstrap.ini`, detén la conversión, no abras una
+  segunda instancia ni repitas el lanzamiento automáticamente y registra el
+  diagnóstico. La validación estructural no sustituye a una verificación
+  visual que no haya podido completarse.
 
 ## Detenciones obligatorias
 

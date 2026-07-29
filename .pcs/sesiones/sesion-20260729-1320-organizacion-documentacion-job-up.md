@@ -290,6 +290,27 @@ consolidación en `main`. El plan y el diseño aprobado permanecen trazados en
 `docs/superpowers/plans/2026-07-29-formato-documental-candidaturas.md` y
 `docs/superpowers/specs/2026-07-29-formato-documental-candidaturas-design.md`.
 
+## Actualización — verificación LibreOffice y corrección visual
+
+La revisión posterior confirmó que LibreOffice está instalado en
+`C:\Program Files\LibreOffice\program\` y que el diagnóstico de la sesión
+`019faf0a-e68e-7812-96cc-856952550d44` es válido: el ejecutable directo puede
+arrancar correctamente. El mensaje mostrado sobre `bootstrap.ini` aparece en
+una ruta o instancia de arranque concreta; no debe interpretarse como ausencia
+de LibreOffice.
+
+Se actualizó el flujo para invocar `soffice.com` directamente, sin depender de
+`PATH`, con un perfil temporal aislado y una única conversión por documento. Si
+aparece el error de `bootstrap.ini`, el flujo debe detenerse y registrar el
+diagnóstico, sin abrir una segunda instancia ni reintentar automáticamente.
+
+La conversión directa de `TEMPLATE_CV_FORMATO.docx` y
+`TEMPLATE_CARTA_PRESENTACION_FORMATO.docx` generó PDFs de una página. La
+revisión visual detectó y corrigió un defecto de la carta: su encabezado con
+nombre y fotografía no se mostraba al exportar. Tras reconstruir la carta a
+partir del encabezado del CV, ambas plantillas muestran encabezado, fotografía,
+contenido y pie correctamente.
+
 ## Checklist de consolidación
 
 - [x] La capa episódica registra el recorrido histórico relevante.
