@@ -311,6 +311,25 @@ nombre y fotografía no se mostraba al exportar. Tras reconstruir la carta a
 partir del encabezado del CV, ambas plantillas muestran encabezado, fotografía,
 contenido y pie correctamente.
 
+## Actualización — regeneración de CAND-2026-012 con los nuevos templates
+
+El 29/07/2026 se regeneró el paquete documental de Grupo Miguel León
+(`CAND-2026-012`) usando `TEMPLATE_CV_FORMATO.docx` y
+`TEMPLATE_CARTA_PRESENTACION_FORMATO.docx`. Se conservaron el análisis, el
+guion y el contenido factual ya aprobado para revisión; se actualizaron
+`cv.docx`, `cv.pdf`, `cv.tex`, `carta-presentacion.docx` y
+`carta-presentacion.pdf`.
+
+La fotografía de perfil se incorporó en CV y carta. No se añadió segundo
+apellido, localidad privada, LinkedIn ni ningún otro dato no autorizado. La
+validación confirmó una página por documento, texto seleccionable, contenido
+justificado, fotografía visible y ausencia de marcadores.
+
+La conversión DOCX→PDF se realizó con `soffice.com` y perfil temporal aislado,
+sin instancias concurrentes. La revisión visual corrigió el orden de la
+experiencia profesional y la composición de la formación en el CV. El estado
+de la candidatura permanece `pendiente_de_aprobacion`; no se ha enviado.
+
 ## Checklist de consolidación
 
 - [x] La capa episódica registra el recorrido histórico relevante.

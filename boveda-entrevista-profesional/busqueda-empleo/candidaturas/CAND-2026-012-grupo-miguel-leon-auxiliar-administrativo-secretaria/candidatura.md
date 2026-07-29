@@ -14,6 +14,10 @@ sesion_job_up: sesion-20260729-1320-organizacion-documentacion-job-up
 El análisis, el guion, el CV, la carta y el veredicto están preparados. Se
 utilizan únicamente los datos privados autorizados para esta candidatura.
 
+El 29/07/2026 se regeneraron el CV y la carta con `TEMPLATE_CV_FORMATO.docx`
+y `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx`; también se actualizó `cv.tex` y
+se sustituyeron los PDF correspondientes.
+
 No se ha presentado ninguna candidatura ni se ha contactado con la empresa.
 
 ## Encaje
