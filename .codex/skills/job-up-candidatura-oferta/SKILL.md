@@ -123,6 +123,9 @@ Sigue este orden y deja constancia de cada decisión:
   en el guion y el análisis.
 - La carta debe resolver también `[DESPEDIDA]`; el tratamiento, saludo,
   despedida y llamada a la acción deben ser coherentes entre sí y con el canal.
+- En el CV, rellena `[EXPERIENCIA 1]` a `[EXPERIENCIA 6]` y `[FORMACION 1]` a
+  `[FORMACION 3]` como párrafos independientes. No introduzcas varios párrafos
+  mediante saltos internos en un único slot; elimina los slots no aplicables.
 - No inventes persona destinataria, cargo, dirección, localidad, fecha, asunto,
   vacante ni datos de contacto. Aplica los fallbacks de la guía común y deja
   constancia de los campos omitidos o derivados.

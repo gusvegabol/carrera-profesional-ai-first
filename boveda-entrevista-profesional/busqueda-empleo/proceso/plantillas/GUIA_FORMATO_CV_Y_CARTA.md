@@ -41,6 +41,11 @@ La carta puede seleccionar menos información que el CV, pero nunca puede añadi
 
 ## Marcadores de plantilla
 
+El CV utiliza los slots `[EXPERIENCIA 1]` a `[EXPERIENCIA 6]` y
+`[FORMACION 1]` a `[FORMACION 3]` como párrafos independientes. Nunca se
+resuelve un slot de experiencia o formación introduciendo varios bloques
+separados por saltos de línea dentro del mismo párrafo.
+
 La carta utiliza exactamente estos marcadores, que deben resolverse antes de
 entregarla: `[DESTINATARIO]`, `[FECHA]`, `[ASUNTO]`, `[SALUDO]`, `[APERTURA]`,
 `[EVIDENCIA 1]`, `[EVIDENCIA 2]`, `[ENCAJE]`, `[CIERRE]`, `[DESPEDIDA]` y
@@ -96,6 +101,9 @@ Antes de marcar la candidatura como `pendiente_de_aprobacion`, comprobar:
 - cada afirmación del CV y de la carta tiene fuente identificable;
 - el titular, el perfil, los tres a cinco logros y la experiencia histórica
   seleccionada corresponden al guion y no son una elección ornamental;
+- cada punto y aparte de experiencia y formación corresponde a un párrafo
+  real; no hay saltos internos usados para simular párrafos ni líneas
+  justificadas artificialmente;
 - los logros y métricas no han sido redondeados ni ampliados;
 - las herramientas solo aparecen si están respaldadas;
 - los requisitos de la oferta se distinguen de los requisitos que realmente cumple la persona;
