@@ -54,4 +54,4 @@ Documentos propios preparados para LIVVO/Grupo Martinón:
 
 ## Trazabilidad
 
-- Registro general: [[../../seguimiento-candidaturas|Seguimiento de candidaturas]].
+- Registro general: [[../../seguimiento/seguimiento-candidaturas|Seguimiento de candidaturas]].

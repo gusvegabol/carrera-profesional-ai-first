@@ -13,7 +13,7 @@ decision: revisar_antes_de_aprobar
 
 | Control | Resultado | Evidencia | Incidencia |
 | --- | --- | --- | --- |
-| Los logros principales proceden de la base factual | Apta | Herfrailes, INERZA, General de Software y Granintra están respaldados en [[../../datos-core-busqueda|datos-core-busqueda]]. | No se detecta. |
+| Los logros principales proceden de la base factual | Apta | Herfrailes, INERZA, General de Software y Granintra están respaldados en [[../../fuentes/datos-core-busqueda|datos-core-busqueda]]. | No se detecta. |
 | Las atribuciones directivas respetan las decisiones colegiadas | Apta | La expansión se presenta como decisión apoyada por datos y resuelta por el Consejo de Dirección. | No se detecta. |
 | La formación no finalizada no se presenta como titulación | Apta | Ingeniería y formación se describen con su estado real. | No se detecta. |
 | La informática está contextualizada | Apta | Se presenta como herramienta aplicada a operaciones y sistemas. | No se detecta. |
