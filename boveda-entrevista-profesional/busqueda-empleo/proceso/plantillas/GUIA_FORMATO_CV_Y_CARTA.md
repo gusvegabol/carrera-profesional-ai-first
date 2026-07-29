@@ -34,6 +34,7 @@ La carta puede seleccionar menos información que el CV, pero nunca puede añadi
 - Alineación: contenido narrativo justificado. La alineación funcional puede mantenerse en el encabezado, datos de contacto, saludo, asunto, títulos y firma.
 - Extensión: una página como objetivo operativo. Si la legibilidad exige superar una página, se detiene la generación para revisión humana.
 - Fotografía: obligatoria por defecto, tanto en CV como en carta, salvo que la persona responsable indique expresamente lo contrario al invocar la skill.
+- Proporción de fotografía: cuadrada, 1:1. La imagen de referencia es de 270 × 270 px; si se redimensiona, deben modificarse ancho y alto proporcionalmente, nunca solo una dimensión.
 - Texto: seleccionable y extraíble; no se convierten párrafos en imágenes.
 - Estructura: encabezados estándar y viñetas reales; no se usan tablas ni columnas para el contenido narrativo.
 - El encabezado puede usar una tabla de dos celdas exclusivamente como mecanismo de composición para distribuir identidad y fotografía.

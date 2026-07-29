@@ -330,6 +330,18 @@ sin instancias concurrentes. La revisión visual corrigió el orden de la
 experiencia profesional y la composición de la formación en el CV. El estado
 de la candidatura permanece `pendiente_de_aprobacion`; no se ha enviado.
 
+## Actualización — fotografía cuadrada en templates y CAND-2026-012
+
+Se corrigieron los templates de CV y carta para reservar la fotografía en
+proporción 1:1, tomando como referencia la imagen de 270 × 270 px. La
+redimensión actual modifica ancho y alto conjuntamente; no se deforma la
+imagen ni se crea un hueco vertical adicional.
+
+`CAND-2026-012` se volvió a generar desde los templates actualizados. La
+revisión visual de CV y carta confirma fotografía cuadrada visible, una página
+por documento, contenido sin cortes y el orden correcto de experiencia y
+formación. El estado permanece `pendiente_de_aprobacion`.
+
 ## Checklist de consolidación
 
 - [x] La capa episódica registra el recorrido histórico relevante.

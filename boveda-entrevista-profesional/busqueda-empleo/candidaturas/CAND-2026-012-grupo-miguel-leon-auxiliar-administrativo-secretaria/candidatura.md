@@ -16,7 +16,8 @@ utilizan únicamente los datos privados autorizados para esta candidatura.
 
 El 29/07/2026 se regeneraron el CV y la carta con `TEMPLATE_CV_FORMATO.docx`
 y `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx`; también se actualizó `cv.tex` y
-se sustituyeron los PDF correspondientes.
+se sustituyeron los PDF correspondientes. La fotografía conserva proporción
+cuadrada 1:1.
 
 No se ha presentado ninguna candidatura ni se ha contactado con la empresa.
 
