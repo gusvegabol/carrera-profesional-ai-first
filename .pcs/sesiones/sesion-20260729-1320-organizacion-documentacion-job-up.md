@@ -249,6 +249,13 @@ cerrada, aunque Indeed todavía la mostraba como abierta. El expediente se
 actualizó a `detenida` con `estado_oferta: cerrada`; no procede la aprobación ni
 el envío.
 
+También se preparó CAND-2026-012 para Grupo Miguel León a partir de la oferta
+consultada en la pestaña activa de Indeed. La autorización de nombre, primer
+apellido, correo y teléfono permitió generar el paquete completo. La atención
+al cliente se incorporó como evidencia de HER-06 tras confirmar que Gustavo
+resolvía reclamaciones escaladas por responsables de tienda. El veredicto es
+`apta`, con media 4,0/5 y decisión `revisar_antes_de_aprobar`.
+
 ## Checklist de consolidación
 
 - [x] La capa episódica registra el recorrido histórico relevante.

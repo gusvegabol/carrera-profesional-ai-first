@@ -134,13 +134,13 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Uso en CV | Dirección; Operaciones |
 | Precaución | Atribuir a Gustavo el diseño y la ejecución del análisis de datos, no la decisión colegiada de abrir la tercera tienda |
 
-### HER-06 — Liderazgo directo y canales de comunicación
+### HER-06 — Liderazgo directo, atención a clientes y canales de comunicación
 
 | Elemento | Detalle |
 | --- | --- |
 | Contexto | Herfrailes S. L., desde aproximadamente 2014; ampliación hacia 2020 |
-| Contribución | Implantó entrevistas semanales rotativas con el personal y una política de puertas abiertas para tratar asuntos no resueltos en la tienda. Realizaba visitas sin previo aviso para verificar el funcionamiento. Hacia 2020 puso en marcha un canal anónimo en línea |
-| Uso en CV | No usar por defecto; valorar solo en candidaturas donde la gestión de personas sea relevante |
+| Contribución | Implantó entrevistas semanales rotativas con el personal y una política de puertas abiertas para tratar asuntos no resueltos en la tienda. Cuando los responsables de tienda no podían resolverlas, atendía y solventaba reclamaciones de clientes. Realizaba visitas sin previo aviso para verificar el funcionamiento. Hacia 2020 puso en marcha un canal anónimo en línea |
+| Uso en CV | Valorar en candidaturas donde la atención a clientes, la gestión de personas o la resolución de incidencias sea relevante |
 | Precaución | No incluir detalles de conflictos, personas, tiendas o situaciones sensibles. Si se utiliza, limitarse al liderazgo directo y a los canales de comunicación |
 
 ### HER-07 — Optimización de stock, compras y logística entre tiendas
@@ -261,7 +261,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | 2000 | Canary Network — Analista programador | Mantenimiento de gestión comercial y formación informática |
 | 1996–1999 | Ayuntamiento de Gáldar — Concejal de Hacienda y Patrimonio | Gestión pública, transformación administrativa, recaudación y negociación financiera |
 | 1990–1996 | Granintra S. A. — Analista programador | Sistema de consignataria, naviera y áridos; coordinación técnica |
-| 1985–1990 | Computerland Las Palmas — Analista programador | Software de gestión comercial y contabilidad, formación y hardware |
+| 1985–1990 | Computerland Las Palmas — Analista programador / vendedor | Desarrollo y mantenimiento de software de gestión comercial y contabilidad, venta de hardware y servicios, formación y trato directo con clientes |
 | 1985 | ELECMO Informática — Analista programador | Hardware |
 | 1984–1985 | GES Seguros y Reaseguros, S. A. — Programador freelance | Mailing de pólizas y gestión documental de siniestros |
 
