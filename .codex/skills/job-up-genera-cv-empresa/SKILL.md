@@ -40,6 +40,9 @@ Preparar una candidatura espontánea dirigida a una empresa concreta. El resulta
   `#1F2937` y `#5B6573`, contenido justificado y texto seleccionable.
 - La fotografía es obligatoria por defecto y solo se excluye con instrucción
   expresa en la invocación. Registra la decisión.
+- Sustituye la imagen-placeholder `[FOTO]` de la plantilla por la fotografía
+  real autorizada antes de guardar el CV o la carta. Comprueba el contenido de
+  la imagen embebida; no basta con detectar que existe una imagen.
 - En el CV, rellena `[EXPERIENCIA 1]` a `[EXPERIENCIA 6]` y `[FORMACION 1]` a
   `[FORMACION 3]` como párrafos independientes. No introduzcas varios párrafos
   mediante saltos internos en un único slot; elimina los slots no aplicables.

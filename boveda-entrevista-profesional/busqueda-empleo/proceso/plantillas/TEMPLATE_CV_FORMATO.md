@@ -12,7 +12,11 @@ Plantilla visual basada en `CAND-2026-010-acciona-administrativo/cv.docx`.
 ## Orden de sustitución
 
 1. Sustituir `[NOMBRE]`, `[TITULAR]`, `[EMAIL]` y `[TELÉFONO]` únicamente por datos autorizados.
-2. Reemplazar `[FOTOGRAFÍA]` por la fotografía autorizada. La fotografía se mantiene siempre salvo exclusión expresa en la invocación. El hueco y la imagen deben conservar proporción cuadrada 1:1; la referencia es 270 × 270 px.
+2. La plantilla conserva una imagen-placeholder para reservar el espacio, pero
+   nunca se entrega con ella. Sustituir `[FOTOGRAFÍA]` por la fotografía
+   autorizada antes de guardar el documento final. La fotografía se mantiene
+   siempre salvo exclusión expresa en la invocación. El hueco y la imagen deben
+   conservar proporción cuadrada 1:1; la referencia es 270 × 270 px.
 3. Completar `[PERFIL PROFESIONAL]` y `[PROPUESTA DE VALOR]` desde el guion.
    Completar `[EXPERIENCIA 1]` a `[EXPERIENCIA 6]` como párrafos
    independientes. Los marcadores que ocupan una cabecera conservan negrita;
