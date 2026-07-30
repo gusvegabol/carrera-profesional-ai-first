@@ -92,9 +92,12 @@ El fichero `.env` situado junto al script contendrá la raíz absoluta del proye
 
 ```env
 RUTA_PROYECTO=C:\Users\gusve\Documents\Apps\carrera-profesional-ai-first
+SOFFICE_PATH=C:\Program Files\LibreOffice\program\soffice.com
 ```
 
-Si el `.env`, la variable o la ruta del proyecto no existen o no son válidos, el script se detendrá antes de escribir.
+`SOFFICE_PATH` deberá apuntar al ejecutable de consola `soffice.com`, no a `soffice` resuelto mediante `PATH`.
+
+Si el `.env`, cualquiera de las variables o sus rutas no existen o no son válidos, el script se detendrá antes de escribir.
 
 ## 5. Contrato de `datos-generacion.json`
 
@@ -208,7 +211,7 @@ El script deberá:
 2. copiar o abrir las plantillas necesarias;
 3. sustituir literalmente los marcadores;
 4. insertar la fotografía en CV y carta;
-5. convertir los DOCX a PDF mediante el método validado;
+5. convertir los DOCX a PDF mediante la ruta absoluta de `SOFFICE_PATH` y un perfil LibreOffice único para esa conversión;
 6. validar los cinco artefactos en la carpeta temporal;
 7. preparar una copia de respaldo temporal de los archivos finales existentes que vayan a sobrescribirse;
 8. publicar los cinco resultados en las rutas finales indicadas en el JSON;
@@ -255,15 +258,17 @@ Antes de convertir este diseño en un plan de implementación se ejecutará una 
 
 La prueba deberá verificar:
 
-- ruta exacta de `soffice.com`;
-- uso de un perfil LibreOffice aislado;
+- que `SOFFICE_PATH` apunta a `soffice.com` y no depende de `PATH`;
+- uso de un perfil LibreOffice único por conversión;
 - conversión repetible de CV y carta;
 - ausencia del error `bootstrap.ini`;
 - ejecución sin abrir una segunda instancia;
 - existencia, apertura y renderizado de los dos PDF;
 - limpieza de la carpeta temporal.
 
-La generación PDF no se considerará resuelta por configuración teórica. Si la prueba falla, se revisará el diseño técnico antes de redactar el plan de implementación.
+En Windows, la conversión del generador no reutilizará la invocación interna de `render_docx.py`, porque esa ruta ejecuta `soffice` por nombre y puede quedarse colgada al combinar el perfil y el entorno de ejecución. El generador invocará directamente `SOFFICE_PATH` con `--headless`, `--nologo`, `--nodefault`, `--nofirststartwizard`, `--norestore`, `-env:UserInstallation=file:///...` y `--convert-to pdf`.
+
+La generación PDF no se considerará resuelta por configuración teórica. La prueba técnica de referencia realizada el 2026-07-30 confirmó conversión directa de las dos plantillas y de documentos reales de CV y carta con esta estrategia; la implementación deberá repetir esa validación dentro de su prueba automatizada.
 
 ## 10. Registro de errores
 
