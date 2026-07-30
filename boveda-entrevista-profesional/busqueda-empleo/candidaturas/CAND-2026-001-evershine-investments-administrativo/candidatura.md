@@ -4,6 +4,7 @@ titulo: Candidatura a EVERSHINE INVESTMENTS — Administrativo/a
 fecha_creacion: 2026-07-21
 fecha_actualizacion: 2026-07-24
 estado: rechazada
+presentada: true
 tipo: candidatura
 ---
 

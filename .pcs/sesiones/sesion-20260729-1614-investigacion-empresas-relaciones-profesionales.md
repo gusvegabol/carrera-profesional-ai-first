@@ -2,8 +2,8 @@
 id: sesion-20260729-1614-investigacion-empresas-relaciones-profesionales
 titulo: Investigación de empresas y relaciones profesionales en Job-up
 inicio: 2026-07-29 16:14
-cierre:
-estado: en pausa
+cierre: 2026-07-30T13:45:41+01:00
+estado: cerrada
 tipo: sesion
 host: carrera-ai
 sesion_relacionada: sesion-20260729-1320-organizacion-documentacion-job-up
@@ -89,3 +89,7 @@ línea cognitiva abierta; no representa estado operativo vivo.
 - [ ] Definir privacidad, conservación y autorización de datos.
 - [ ] Diseñar artefactos y relación con el seguimiento de candidaturas.
 - [ ] Obtener aprobación antes de cambiar la arquitectura de Job-up.
+
+## Cierre documental
+
+Sesión cerrada al iniciar el nuevo bloque Job-up del 2026-07-30. La línea futura queda conservada como historial y no amplía el alcance operativo vigente.

@@ -3,6 +3,7 @@ id_candidatura: CAND-2026-008
 empresa: Baleària
 puesto: Auxiliar Administrativo/a de Clientes y Facturación
 estado: enviada
+presentada: true
 fecha: 2026-07-27
 ---
 

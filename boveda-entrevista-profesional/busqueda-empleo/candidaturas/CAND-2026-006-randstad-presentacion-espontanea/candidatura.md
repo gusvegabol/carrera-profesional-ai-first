@@ -4,6 +4,7 @@ titulo: Presentación espontánea a Randstad — Dirección y Operaciones
 fecha_creacion: 2026-07-24
 fecha_actualizacion: 2026-07-24
 estado: pendiente_de_aprobacion
+presentada: false
 tipo: candidatura_espontanea
 ---
 

@@ -2,8 +2,8 @@
 id: sesion-20260729-1534-activacion-semantica-skills-job-up
 titulo: Activación semántica de las skills de Job-up
 inicio: 2026-07-29 15:34
-cierre:
-estado: en pausa
+cierre: 2026-07-30T13:45:41+01:00
+estado: cerrada
 tipo: sesion
 host: carrera-ai
 sesion_relacionada: sesion-20260729-1320-organizacion-documentacion-job-up
@@ -77,4 +77,8 @@ No se crean decisiones ni acciones PCS en esta sesión. La elección de polític
 ## 9. Trazabilidad
 
 - Sesión relacionada: [[sesion-20260729-1320-organizacion-documentacion-job-up]].
-- Estado: en pausa; no representa estado operativo vivo ni modifica el seguimiento PCS.
+- Estado histórico previo: en pausa; no representa estado operativo vivo ni modifica el seguimiento PCS.
+
+## Cierre documental
+
+Sesión cerrada al iniciar el nuevo bloque Job-up del 2026-07-30. La línea cognitiva queda conservada como historial y no se adopta ninguna política pendiente.

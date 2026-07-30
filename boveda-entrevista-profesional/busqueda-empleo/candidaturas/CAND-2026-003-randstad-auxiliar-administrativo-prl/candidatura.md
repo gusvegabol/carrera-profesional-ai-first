@@ -4,6 +4,7 @@ titulo: Candidatura a Randstad — Auxiliar Administrativo/a PRL
 fecha_creacion: 2026-07-23
 fecha_actualizacion: 2026-07-24
 estado: enviada
+presentada: true
 tipo: candidatura
 ---
 

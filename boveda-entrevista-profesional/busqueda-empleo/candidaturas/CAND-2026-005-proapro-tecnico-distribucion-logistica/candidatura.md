@@ -3,6 +3,7 @@ id_candidatura: CAND-2026-005
 empresa: PRO A PRO HOSTELERÍA ORGANIZADA
 puesto: Técnico/a de Distribución y Logística
 estado: enviada
+presentada: true
 fecha: 2026-07-24
 ---
 

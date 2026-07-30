@@ -3,6 +3,7 @@ id_candidatura: CAND-2026-011
 empresa: SIA MEDIA SERVICES
 puesto: Administrativo/a
 estado: detenida
+presentada: false
 estado_oferta: cerrada
 fecha: 2026-07-29
 sesion_job_up: sesion-20260729-1320-organizacion-documentacion-job-up

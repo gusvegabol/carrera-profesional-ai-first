@@ -3,6 +3,7 @@ id_candidatura: CAND-2026-010
 empresa: ACCIONA
 puesto: Administrativo/a
 estado: enviada
+presentada: true
 fecha: 2026-07-27
 ---
 

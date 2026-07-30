@@ -3,6 +3,7 @@ id_candidatura: CAND-2026-013
 empresa: ALDI
 puesto: Adjunto/a de tienda — 40 horas — indefinido
 estado: detenida
+presentada: false
 fecha: 2026-07-29
 sesion_job_up: sesion-20260729-1320-organizacion-documentacion-job-up
 ---

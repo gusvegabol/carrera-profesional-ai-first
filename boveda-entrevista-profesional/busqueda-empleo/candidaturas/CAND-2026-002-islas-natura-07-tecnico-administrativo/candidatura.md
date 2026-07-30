@@ -4,6 +4,7 @@ titulo: Candidatura a Islas Natura 07, S. A. — Técnico/a Administrativo/a de 
 fecha_creacion: 2026-07-23
 fecha_actualizacion: 2026-07-24
 estado: rechazada
+presentada: true
 tipo: candidatura
 ---
 

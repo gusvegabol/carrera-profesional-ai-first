@@ -4,6 +4,7 @@ titulo: Gerente — AROGADI CANARIAS S. L. / AGD Center
 fecha_creacion: 2026-07-26
 fecha_actualizacion: 2026-07-26
 estado: enviada
+presentada: true
 tipo: candidatura
 ---
 

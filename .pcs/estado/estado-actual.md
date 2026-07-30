@@ -2,8 +2,8 @@
 id: estado-actual
 titulo: carrera-profesional-ai-first
 estado: vigente
-fecha_actualizacion: 2026-07-30
-ultima_sesion_relacionada: sesion-20260729-1320-organizacion-documentacion-job-up
+fecha_actualizacion: 2026-07-31
+ultima_sesion_relacionada: sesion-20260730-2038-job-up
 host: carrera-ai
 ---
 
@@ -72,7 +72,9 @@ La utilidad de esa separación y de Graphify queda superada por la decisión de 
 
 ## Foco operativo
 
-Mantener dos líneas separadas: evaluar si la arquitectura recomendada de doble pasada debe orientar el primer piloto de cobertura profesional, y operar Job-up para valorar ofertas y producir candidaturas revisables cuando la persona responsable lo autorice. En Job-up, continuar valorando ofertas concretas y refinando la redacción de la experiencia profesional para que sea más concreta y orientada al puesto, sin perder trazabilidad factual. Toda nueva candidatura documental debe incluir CV en DOCX, PDF y LaTeX, además de carta en DOCX y PDF, salvo que el flujo determine que solo procede registrar un estado externo. La sesión `sesion-20260729-1320-organizacion-documentacion-job-up` quedó consolidada y cerrada el 2026-07-30; el siguiente bloque deberá abrirse en una nueva sesión PCS delimitada. La reorganización documental, la limpieza de temporales y la bóveda raíz de Obsidian ya están consolidadas.
+Mantener dos líneas separadas: evaluar si la arquitectura recomendada de doble pasada debe orientar el primer piloto de cobertura profesional, y operar Job-up para valorar ofertas y producir candidaturas revisables cuando la persona responsable lo autorice. En Job-up, continuar valorando ofertas concretas y refinando la redacción de la experiencia profesional para que sea más concreta y orientada al puesto, sin perder trazabilidad factual. Toda nueva candidatura documental debe incluir CV en DOCX, PDF y LaTeX, además de carta en DOCX y PDF, salvo que el flujo determine que solo procede registrar un estado externo. La sesión `sesion-20260730-1345-job-up` quedó cerrada al iniciar el nuevo bloque y la sesión `sesion-20260730-2038-job-up` quedó cerrada el 2026-07-31. La reorganización documental, la limpieza de temporales y la bóveda raíz de Obsidian ya están consolidadas.
+
+El nuevo flujo de creación documental para candidaturas por oferta está implementado y verificado técnicamente. Queda pendiente realizar una prueba real completa con una candidatura de oferta: generar los cinco artefactos, revisar visualmente el resultado y confirmar su aprobación humana. Este debe ser el primer trabajo de Job-up al iniciar una nueva sesión de Work.
 
 Se ha abierto además la sesión `sesion-20260721-1644-perfiles-sinteticos-para-evaluar-entrevistas` para debatir un posible banco de perfiles sintéticos que acelere la prueba de los playbooks. Es una línea abierta de investigación metodológica: no autoriza simulaciones, cambios de playbook ni sustituye la validación con personas reales.
 
@@ -99,6 +101,7 @@ El segundo caso real, `ENT-002-M01`, se ejecutó el 2026-07-21 después de aplic
 - Decidir explícitamente si se adopta, modifica o descarta la recomendación para el primer piloto.
 - Si se adopta, definir el contrato del piloto: muestra de entrevistas, salida inicial revisable, control de privacidad, criterios de corrección y señales de utilidad.
 - Conservar y reutilizar el flujo validado de adaptación por oferta para futuras candidaturas, manteniendo el índice documental completo, la cabecera de CV con espacio para fotografía y la aprobación humana antes de cualquier envío.
+- Realizar como siguiente trabajo de Job-up una prueba real del nuevo flujo de creación documental con una candidatura de oferta, incluyendo la revisión visual y la aprobación humana de los artefactos generados.
 - Evaluar por separado si Vault Operator o Local REST API MCP aportan valor a la bóveda ya consolidada, sin reinstalar configuraciones heredadas.
 - Mantener separadas la cobertura, la profundidad y la correspondencia ESCO mientras no exista una decisión posterior que cambie ese alcance.
 - No tratar la evaluación como validación con personas ni actualizar el SPEC o el playbook de profundidad por inferencia.
@@ -110,6 +113,7 @@ El segundo caso real, `ENT-002-M01`, se ejecutó el 2026-07-21 después de aplic
 - No queda trabajo abierto para materializar la retirada de Graphify; la eliminación y las comprobaciones permanecen registradas históricamente en `sesion-20260717-1058-retirada-graphify-carrera-ai`.
 - Es candidata a acción futura la definición del primer piloto, condicionada a una decisión explícita sobre la recomendación metodológica.
 - [[ACC-20260721-1651-001-activar-rama-operativa-busqueda-empleo-fase-1]] está completada. Las fases de asistencia en Chrome y conectores de portales no son acciones autorizadas todavía.
+- La prueba real del nuevo flujo de creación documental para una candidatura de oferta sigue pendiente y debe abordarse al iniciar la próxima sesión de Work de Job-up.
 - CAND-2026-003, CAND-2026-004 y CAND-2026-005 fueron enviadas mediante InfoJobs y quedan pendientes de respuesta; CAND-2026-002 figura como rechazada/descartada.
 - CAND-2026-006 está preparada como presentación espontánea a Randstad y queda pendiente de revisión y aprobación humana antes de compartirla.
 - CAND-2026-012 y CAND-2026-014 fueron enviadas y quedan pendientes de respuesta; CAND-2026-015 solo conserva el registro de inscripción externa de InfoJobs.

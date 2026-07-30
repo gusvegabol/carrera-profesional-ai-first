@@ -3,6 +3,7 @@ id_candidatura: CAND-2026-012
 empresa: Grupo Miguel León
 puesto: Auxiliar Administrativo/Secretaria
 estado: enviada
+presentada: true
 fecha: 2026-07-29
 sesion_job_up: sesion-20260729-1320-organizacion-documentacion-job-up
 ---

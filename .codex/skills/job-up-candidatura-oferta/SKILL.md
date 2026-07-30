@@ -82,6 +82,12 @@ Sigue este orden y deja constancia de cada decisión:
    generación, la localidad se omite si no está confirmada y el asunto se
    deriva solo de empresa y puesto confirmados. Si falta un puesto confirmado,
    bloquea la carta por asunto ambiguo y continúa con el CV si es posible.
+   Después de completar y revisar el guion, crea
+   `datos-generacion.json` dentro de la carpeta de la candidatura conforme a
+   `boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/TEMPLATE_DATOS_GENERACION_CANDIDATURA.json`.
+   El JSON debe contener los textos finales de CV, carta y LaTeX, las rutas
+   relativas al proyecto de las plantillas, la fotografía autorizada y las
+   cinco salidas. No delegues la redacción ni la adaptación al script.
 8. **Aplicar la autorización privada por candidatura.** Antes de consultar,
    copiar o incorporar cualquier dato de
    `fuentes/datos-privados-candidatura.md`, comprueba que existe autorización
@@ -92,10 +98,21 @@ Sigue este orden y deja constancia de cada decisión:
    autorización falta, es ambigua o no cubre el dato, excluye ese dato y
    bloquea únicamente los documentos que lo necesitan; continúa con la parte
    factual que sí esté respaldada.
-9. **Preparar y revisar.** Completa análisis, guion de adaptación, CV, carta,
-   veredicto final y el índice de documentos según el playbook. Detente ante
-   una contradicción factual, un bloqueo obligatorio abierto o una decisión
-   `corregir_antes_de_revisar`.
+   Antes de invocar el generador, comprueba que la ficha contiene en su
+   frontmatter `estado` y `presentada` con valor booleano. Si falta alguno, o
+   el estado global no coincide, detén el flujo.
+9. **Generar y revisar.** Completa análisis, guion de adaptación y
+   `datos-generacion.json`; después invoca el generador Python pasando la ruta
+   del JSON, por ejemplo `python RUTA_PROYECTO/scripts/job-up/generar_candidatura.py ruta/al/datos-generacion.json`.
+   El generador debe producir `cv.docx`, `cv.pdf`,
+   `carta-presentacion.docx`, `carta-presentacion.pdf` y `cv.tex` solo después
+   de superar todas sus validaciones. Si falla, lee el registro de error,
+   corrige el JSON o las entradas desde la IA y permite una nueva ejecución
+   manual cuando proceda; no hagas reintentos automáticos ni generes
+   manualmente una variante paralela. Completa
+   después el veredicto final y el índice de documentos según el playbook.
+   Detente ante una contradicción factual, un bloqueo obligatorio abierto, un
+   error del generador o una decisión `corregir_antes_de_revisar`.
 10. **Actualizar el seguimiento.** Actualiza la ficha de candidatura y
     `seguimiento/seguimiento-candidaturas.md` con estado, sesión, procedencia,
     autorización aplicable, bloqueos, veredicto y rutas existentes.
@@ -113,10 +130,12 @@ Sigue este orden y deja constancia de cada decisión:
 - Incluye la fotografía autorizada por defecto en CV y carta. Solo puede
   excluirse cuando la persona responsable lo indique expresamente en la
   invocación; registra esa exclusión en el expediente.
-- Sustituye siempre la imagen-placeholder `[FOTO]` de la plantilla por la
-  fotografía real autorizada antes de guardar el DOCX. Comprueba el contenido
-  de la imagen embebida; detectar una imagen no demuestra que la foto haya sido
-  incorporada.
+- Sustituye la única imagen de la celda derecha de la cabecera de cada plantilla
+  DOCX por la fotografía real autorizada antes de guardar el DOCX. No busques la
+  foto por nombre ni reemplaces la primera imagen del documento: si la plantilla
+  no contiene exactamente ese único slot estructural, detén la generación.
+  Comprueba el contenido binario de la imagen embebida; detectar una imagen no
+  demuestra que la foto haya sido incorporada.
 - Elimina del resultado cualquier pie o encabezado que identifique el archivo
   como `Plantilla`, `template` o instrucciones internas de composición. Esos
   textos pueden permanecer únicamente en el DOCX reutilizable de la plantilla.
@@ -136,9 +155,19 @@ Sigue este orden y deja constancia de cada decisión:
   en el guion y el análisis.
 - La carta debe resolver también `[DESPEDIDA]`; el tratamiento, saludo,
   despedida y llamada a la acción deben ser coherentes entre sí y con el canal.
-- En el CV, rellena `[EXPERIENCIA 1]` a `[EXPERIENCIA 6]` y `[FORMACION 1]` a
-  `[FORMACION 3]` como párrafos independientes. No introduzcas varios párrafos
-  mediante saltos internos en un único slot; elimina los slots no aplicables.
+- En el CV, rellena los pares `[EXPERIENCIA 1 CABECERA]` /
+  `[EXPERIENCIA 1 DESCRIPCION]` hasta `[EXPERIENCIA 6 CABECERA]` /
+  `[EXPERIENCIA 6 DESCRIPCION]`, además de `[FORMACION 1]` a `[FORMACION 3]`,
+  como párrafos independientes según la plantilla. No introduzcas varios
+  párrafos mediante saltos internos en un único slot; elimina los slots no
+  aplicables.
+- Si se seleccionan menos de seis experiencias, conserva todos los pares de
+  experiencia en `datos-generacion.json` y deja con valor `""` los pares no
+  utilizados. Si la cabecera de una experiencia está vacía, el generador debe
+  eliminar la línea completa de esa experiencia, incluido su retorno de carro;
+  no debe dejar un párrafo vacío. La cabecera y la descripción deben estar
+  ambas vacías o ambas informadas. Esta regla se aplica tanto al CV DOCX como
+  a `cv.tex`.
 - No inventes persona destinataria, cargo, dirección, localidad, fecha, asunto,
   vacante ni datos de contacto. Aplica los fallbacks de la guía común y deja
   constancia de los campos omitidos o derivados.
@@ -151,15 +180,40 @@ Sigue este orden y deja constancia de cada decisión:
   tratamiento, llamada a la acción, coherencia con `cv.tex` y enlaces del
   índice. Si un elemento concreto no puede verificarse, bloquea solo el
   artefacto afectado.
-- Para la conversión DOCX→PDF, usa la instalación directa de LibreOffice
-  mediante su ejecutable de consola (`soffice.com`), sin depender de que esté
-  en `PATH`, y con un perfil temporal aislado para evitar instancias
-  concurrentes. Ejecuta una sola conversión por documento y comprueba que el
-  PDF existe antes de continuar.
-- Si aparece el error de `bootstrap.ini`, detén la conversión, no abras una
-  segunda instancia ni repitas el lanzamiento automáticamente y registra el
-  diagnóstico. La validación estructural no sustituye a una verificación
-  visual que no haya podido completarse.
+- El generador debe leer, desde el `.env` situado junto al script, estas
+  variables:
+  `RUTA_PROYECTO` y `SOFFICE_PATH`.
+  `SOFFICE_PATH` debe apuntar a la ruta absoluta de `soffice.com`; no se debe
+  depender de `PATH` ni ejecutar `soffice` por nombre. En este entorno la ruta
+  validada es `C:\Program Files\LibreOffice\program\soffice.com`.
+- La ubicación canónica del generador es
+  `scripts/job-up/generar_candidatura.py`; la invocación debe funcionar desde
+  cualquier directorio y usar el `.env` de esa carpeta.
+- Solo se permite regenerar si el frontmatter de `candidatura.md` contiene
+  `presentada: false` y el estado es compatible. La skill no interpreta
+  observaciones en lenguaje natural para decidirlo.
+- Para cada DOCX, el generador debe hacer una invocación separada y única de
+  `SOFFICE_PATH`, con un perfil LibreOffice exclusivo y no reutilizable para
+  esa conversión dentro de `.tmp/job-up-lo/<id-ejecucion>/profile`; el DOCX
+  debe copiarse al staging corto `.tmp/job-up-lo/<id-ejecucion>/` y el PDF
+  validado debe volver a `.tmp/job-up-generador/<id-candidatura>/<ejecucion>/`.
+  Esta ruta corta es obligatoria en Windows porque la ruta larga de la
+  candidatura puede provocar el código `3221226505`. No debe convertir el
+  CV y la carta en una misma invocación ni compartir perfil entre ambos,
+  mediante
+  `--headless`, `--nologo`, `--nodefault`, `--nofirststartwizard`,
+  `--norestore`, `-env:UserInstallation=file:///...` y
+  `--convert-to pdf`. No debe forzar `HOME` o `XDG_CONFIG_HOME` en Windows.
+- No se debe reutilizar `render_docx.py` como mecanismo de conversión del
+  generador: en este entorno ejecuta `soffice` por nombre y puede quedarse
+  bloqueado. La verificación PDF se realizará después con las herramientas de
+  PDF y el renderizador Poppler disponible.
+- Comprueba que cada PDF existe, no está vacío, puede abrirse y puede
+  renderizarse antes de continuar con el veredicto. Si falla cualquier fase
+  del generador —JSON, sustitución, DOCX, LibreOffice o PDF—, detén la
+  ejecución actual, no abras una segunda instancia ni repitas automáticamente
+  y registra el diagnóstico en
+  `boveda-entrevista-profesional/busqueda-empleo/registros-generacion/`.
 
 ## Detenciones obligatorias
 
@@ -181,6 +235,12 @@ como una detención total del flujo.
   es ambigua o no cubre su uso; bloquea solo ese documento o artefacto, y
   continúa el análisis factual autorizado;
 - el veredicto exige corregir antes de revisar.
+- `datos-generacion.json` no existe, no es accesible, no es JSON válido o no
+  cumple el contrato de la plantilla;
+- falta `RUTA_PROYECTO`, `SOFFICE_PATH`, una plantilla, la fotografía o una
+  salida requerida;
+- el generador Python devuelve un error o no produce los cinco artefactos;
+- LibreOffice no puede convertir un DOCX, no responde o produce un PDF vacío.
 
 No resuelvas una detención inventando datos, eligiendo una sesión por tu
 cuenta, ampliando el alcance de una autorización o convirtiendo una oferta en
@@ -197,6 +257,11 @@ permiso para crear una sesión.
 - [ ] El análisis, la ficha, el seguimiento y las rutas de documentos están
       actualizados.
 - [ ] La decisión del veredicto permite la salida.
+- [ ] Existe un `datos-generacion.json` válido y conforme a su plantilla.
+- [ ] El generador Python produjo los cinco artefactos esperados.
+- [ ] La conversión utilizó la ruta absoluta validada de `soffice.com` y un
+      perfil único por documento.
+- [ ] Los PDF existen, tienen contenido y se renderizaron correctamente.
 - [ ] Destinatario, fecha, asunto, localidad, saludo y despedida están
       confirmados o resueltos mediante los fallbacks permitidos.
 - [ ] El estado final es `pendiente_de_aprobacion`.

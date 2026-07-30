@@ -3,6 +3,7 @@ id_candidatura: CAND-2026-014
 empresa: ALDI Canarias Supermercados, S.L.U.
 puesto: Supervisor/a Suplente Expedición_Canarias
 estado: enviada
+presentada: true
 fecha: 2026-07-29
 sesion_job_up: sesion-20260729-1320-organizacion-documentacion-job-up
 ---

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "carrera-ai://job-up/datos-generacion/1.0",
+  "title": "Datos de generación de candidatura por oferta",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id_candidatura", "ruta_candidatura", "entradas", "salidas", "cv", "carta", "latex"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "id_candidatura": {"type": "string", "pattern": "^CAND-[0-9]{4}-[0-9]{3}$"},
+    "ruta_candidatura": {"$ref": "#/$defs/projectRelativePath"},
+    "entradas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["template_cv", "template_carta", "template_latex", "foto"],
+      "properties": {
+        "template_cv": {"const": "boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/TEMPLATE_CV_FORMATO.docx"},
+        "template_carta": {"const": "boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/TEMPLATE_CARTA_PRESENTACION_FORMATO.docx"},
+        "template_latex": {"const": "boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/TEMPLATE_CV_FORMATO.tex"},
+        "foto": {"$ref": "#/$defs/projectRelativePath"}
+      }
+    },
+    "salidas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cv_docx", "cv_pdf", "carta_docx", "carta_pdf", "cv_tex"],
+      "properties": {
+        "cv_docx": {"$ref": "#/$defs/projectRelativePath"},
+        "cv_pdf": {"$ref": "#/$defs/projectRelativePath"},
+        "carta_docx": {"$ref": "#/$defs/projectRelativePath"},
+        "carta_pdf": {"$ref": "#/$defs/projectRelativePath"},
+        "cv_tex": {"$ref": "#/$defs/projectRelativePath"}
+      }
+    },
+    "cv": {"$ref": "#/$defs/cvFields"},
+    "carta": {"$ref": "#/$defs/cartaFields"},
+    "latex": {"$ref": "#/$defs/cvFields"}
+  },
+  "$defs": {
+    "projectRelativePath": {"type": "string", "minLength": 1, "pattern": "^(?![A-Za-z]:)(?![\\\\/])(?!.*(?:^|/|\\\\)\\.\\.(?:/|\\\\|$)).+$"},
+    "slot": {"type": "string", "pattern": "^[^\\r\\n\\u0000-\\u001F]*$"},
+    "requiredSlot": {"type": "string", "minLength": 1, "pattern": "^[^\\r\\n\\u0000-\\u001F]*$"},
+    "cvFields": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["[NOMBRE]", "[TITULAR]", "[EMAIL]", "[TELÉFONO]", "[LINKEDIN]", "[PERFIL PROFESIONAL]", "[PROPUESTA DE VALOR]", "[EXPERIENCIA 1 CABECERA]", "[EXPERIENCIA 1 DESCRIPCION]", "[EXPERIENCIA 2 CABECERA]", "[EXPERIENCIA 2 DESCRIPCION]", "[EXPERIENCIA 3 CABECERA]", "[EXPERIENCIA 3 DESCRIPCION]", "[EXPERIENCIA 4 CABECERA]", "[EXPERIENCIA 4 DESCRIPCION]", "[EXPERIENCIA 5 CABECERA]", "[EXPERIENCIA 5 DESCRIPCION]", "[EXPERIENCIA 6 CABECERA]", "[EXPERIENCIA 6 DESCRIPCION]", "[COMPETENCIA 1]", "[COMPETENCIA 2]", "[COMPETENCIA 3]", "[COMPETENCIA 4]", "[FORMACION 1]", "[FORMACION 2]", "[FORMACION 3]", "[INFORMACION ADICIONAL]"],
+      "patternProperties": {"^\\[.+\\]$": {"$ref": "#/$defs/slot"}},
+      "properties": {
+        "[NOMBRE]": {"$ref": "#/$defs/requiredSlot"},
+        "[TITULAR]": {"$ref": "#/$defs/requiredSlot"},
+        "[PERFIL PROFESIONAL]": {"$ref": "#/$defs/requiredSlot"},
+        "[PROPUESTA DE VALOR]": {"$ref": "#/$defs/requiredSlot"}
+      }
+    },
+    "cartaFields": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["[NOMBRE]", "[TITULAR]", "[EMAIL]", "[TELÉFONO]", "[LINKEDIN]", "[DESTINATARIO]", "[FECHA]", "[ASUNTO]", "[SALUDO]", "[APERTURA]", "[EVIDENCIA 1]", "[EVIDENCIA 2]", "[ENCAJE]", "[CIERRE]", "[DESPEDIDA]", "[FIRMA]"],
+      "patternProperties": {"^\\[.+\\]$": {"$ref": "#/$defs/slot"}},
+      "properties": {
+        "[NOMBRE]": {"$ref": "#/$defs/requiredSlot"},
+        "[TITULAR]": {"$ref": "#/$defs/requiredSlot"},
+        "[DESTINATARIO]": {"$ref": "#/$defs/requiredSlot"},
+        "[FECHA]": {"$ref": "#/$defs/requiredSlot"},
+        "[ASUNTO]": {"$ref": "#/$defs/requiredSlot"},
+        "[SALUDO]": {"$ref": "#/$defs/requiredSlot"},
+        "[APERTURA]": {"$ref": "#/$defs/requiredSlot"},
+        "[CIERRE]": {"$ref": "#/$defs/requiredSlot"},
+        "[DESPEDIDA]": {"$ref": "#/$defs/requiredSlot"},
+        "[FIRMA]": {"$ref": "#/$defs/requiredSlot"}
+      }
+    }
+  }
+}

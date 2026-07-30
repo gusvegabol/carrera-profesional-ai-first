@@ -1,0 +1,6 @@
+python-docx>=1.2,<2
+Pillow>=12,<13
+pypdf>=6,<7
+pypdfium2>=4.30,<5
+jsonschema>=4.23,<5
+filelock>=3.16,<4

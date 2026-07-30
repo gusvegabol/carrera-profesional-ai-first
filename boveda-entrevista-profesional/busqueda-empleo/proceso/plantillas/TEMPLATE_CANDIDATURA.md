@@ -47,7 +47,15 @@ fecha_version: 2026-07-29
 
 ## Estado
 
-- **Estado:** `preparada` | `pendiente_de_aprobacion` | `aprobada` | `enviada` | `detenida` | `duplicada` | `fallida`
+El frontmatter de la ficha debe contener también:
+
+```yaml
+estado: en_preparacion
+presentada: false
+```
+
+- **Estado:** `en_preparacion` | `pendiente_de_aprobacion` | `aprobada` | `enviada` | `rechazada` | `detenida` | `duplicada` | `fallida`
+- **Presentada:** `true` | `false` (obligatorio; no se infiere de observaciones)
 - **Ruta de la carpeta:** `candidaturas/CAND-YYYY-NNN-slug/`
 
 ## Documentos de la candidatura

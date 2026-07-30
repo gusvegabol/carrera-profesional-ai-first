@@ -107,3 +107,17 @@ Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-005-proapro-tecni
 | Alcance del consentimiento | Uso exclusivo para `CAND-2026-007`; documentos preparados el 2026-07-26 y pendientes de revisión humana antes de compartirlos |
 
 Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-007-arogadi-gerente/candidatura|CAND-2026-007]].
+
+### CAND-2026-017 — LIDL — Responsable de Almacén Transporte
+
+| Campo | Dato autorizado |
+| --- | --- |
+| Nombre | Gustavo Vega |
+| Apellido 1 | Vega |
+| Correo electrónico | gusvegabol@gmail.com |
+| Teléfono | 669 549 933 |
+| Enlace profesional | linkedin.com/in/gusvegabol |
+| Fotografía | Sí, fotografía de perfil disponible en la bóveda de búsqueda de empleo |
+| Alcance del consentimiento | Uso exclusivo para `CAND-2026-017`; autorización expresa comunicada el 2026-07-30. |
+
+Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-017-lidl-responsable-almacen-transporte/candidatura|CAND-2026-017]].

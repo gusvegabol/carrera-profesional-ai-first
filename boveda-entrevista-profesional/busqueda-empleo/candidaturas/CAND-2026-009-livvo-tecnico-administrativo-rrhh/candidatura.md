@@ -3,6 +3,7 @@ id_candidatura: CAND-2026-009
 empresa: LIVVO Hotel Group / Grupo Martinón
 puesto: Técnico/a Administrativo/a de Recursos Humanos
 estado: rechazada
+presentada: true
 fecha: 2026-07-27
 ---
 

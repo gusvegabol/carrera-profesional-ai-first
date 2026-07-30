@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "carrera-ai://job-up/registros-generacion-error/1.0",
+  "title": "Registro de error del generador documental",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "fecha", "resultado", "execution_id", "id_candidatura", "entrada_recibida", "fase", "codigo_error", "campo_o_ruta", "mensaje", "documentos_publicados", "documentos_restaurados", "documentos_sin_publicar_o_restaurar"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "fecha": {"type": "string", "format": "date-time"},
+    "resultado": {"const": "fallido"},
+    "execution_id": {"type": "string", "pattern": "^[A-Za-z0-9-]{8,64}$"},
+    "id_candidatura": {"type": ["string", "null"], "pattern": "^CAND-[0-9]{4}-[0-9]{3}$"},
+    "entrada_recibida": {"type": "string", "minLength": 1},
+    "fase": {"type": "string", "enum": ["carga_json", "configuracion", "validacion_estado", "validacion_entradas", "generacion_docx", "conversion_pdf", "generacion_latex", "validacion_salidas", "publicacion", "restauracion", "limpieza"]},
+    "codigo_error": {"type": "string", "pattern": "^[A-Z0-9_]{3,64}$"},
+    "campo_o_ruta": {"type": ["string", "null"]},
+    "mensaje": {"type": "string", "minLength": 1},
+    "documentos_publicados": {"type": "array", "items": {"type": "string"}},
+    "documentos_restaurados": {"type": "array", "items": {"type": "string"}},
+    "documentos_sin_publicar_o_restaurar": {"type": "array", "items": {"type": "string"}}
+  }
+}

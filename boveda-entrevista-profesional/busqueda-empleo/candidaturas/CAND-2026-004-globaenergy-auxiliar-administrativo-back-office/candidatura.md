@@ -3,6 +3,7 @@ id_candidatura: CAND-2026-004
 empresa: Globaenergy
 puesto: Auxiliar Administrativo/a Back Office - Sector Energético
 estado: enviada
+presentada: true
 fecha: 2026-07-24
 ---
 

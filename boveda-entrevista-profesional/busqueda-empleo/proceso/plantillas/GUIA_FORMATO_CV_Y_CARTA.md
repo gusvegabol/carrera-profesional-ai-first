@@ -17,7 +17,7 @@ El documento de origen es siempre el guion de adaptación de CV de la candidatur
 | --- | --- | --- |
 | Titular | Titular principal adaptado al puesto | Puede reaparecer en la apertura si aporta contexto |
 | Perfil profesional | Resumen principal | Se transforma en una apertura breve, no se copia completo |
-| Competencias clave | Selección visible de 6–8 competencias | Solo se incluyen las que sostienen el encaje |
+| Competencias clave | Selección visible de hasta 4 competencias | Solo se incluyen las que sostienen el encaje; el límite responde a los cuatro slots de la plantilla DOCX |
 | Experiencia relevante | Evidencias y funciones priorizadas | Máximo dos evidencias desarrolladas |
 | Valor diferencial | Bloque de propuesta de valor | Argumento central de encaje |
 | Sobrecualificación o límites | Tratamiento definido por el guion | Solo si el guion indica que debe abordarse |

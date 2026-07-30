@@ -14,8 +14,14 @@ description: Use when the user explicitly invokes $job-up-inicia-sesion in a fre
 5. Preparar la creación obligatoria de una nueva sesión PCS con nombre canónico `sesion-YYYYMMDD-HHMM-slug.md`, `id` alineado con el nombre base, `estado: abierta`, timestamp de invocación y `sesion_relacionada:` siempre presente; rellenarla con la sesión Job-up relevante más reciente o dejarla vacía solo cuando no exista relación aplicable.
 6. Preparar y validar una actualización mínima de `./.pcs/estado/estado-actual.md` que toque solo la trazabilidad dirigida de Job-up, preserve intacto todo el contenido no Job-up y apunte a la nueva sesión.
 7. Ejecutar las escrituras solo después de validar el conjunto completo y siempre en este orden fijo: cerrar sesiones Job-up previas, crear la nueva sesión, actualizar `./.pcs/estado/estado-actual.md`.
-8. Leer `boveda-entrevista-profesional/busqueda-empleo/README.md` como referencia funcional única y seguir su orden de consulta de Job-up: fuentes en `fuentes/` y seguimiento en `seguimiento/seguimiento-candidaturas.md`. El playbook estable aplicable se consulta desde `docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md` cuando el trabajo lo requiera.
-9. Confirmar que el ámbito es Job-up, responder con el estado breve de candidaturas y acciones relevantes, proponer el siguiente paso seguro y esperar instrucciones.
+8. Ejecutar la limpieza técnica limitada de registros de generación: eliminar
+   únicamente JSON con `fecha` ISO 8601 válida y más de 48 horas, conservar
+   README y esquemas, e informar de cada registro inválido o no eliminable.
+   Revisar `.tmp/job-up-generador/` y `.tmp/job-up-lo/` y comunicar los
+   temporales encontrados,
+   sin eliminarlos automáticamente y sin tocar otras rutas de `.tmp/`.
+9. Leer `boveda-entrevista-profesional/busqueda-empleo/README.md` como referencia funcional única y seguir su orden de consulta de Job-up: fuentes en `fuentes/` y seguimiento en `seguimiento/seguimiento-candidaturas.md`. El playbook estable aplicable se consulta desde `docs/metodologia/playbooks/PLAYBOOK_CANDIDATURA_POR_OFERTA.md` cuando el trabajo lo requiera.
+10. Confirmar que el ámbito es Job-up, responder con el estado breve de candidaturas y acciones relevantes, proponer el siguiente paso seguro y esperar instrucciones.
 
 ## Validaciones previas obligatorias
 
@@ -33,11 +39,17 @@ description: Use when the user explicitly invokes $job-up-inicia-sesion in a fre
 - No omitir `sesion_relacionada:` en la nueva sesión; la clave debe existir siempre, con valor o vacía cuando corresponda.
 - No crear una nueva sesión con un nombre ya existente ni continuar si la colisión no puede resolverse con seguridad.
 - No continuar después de una coincidencia ambigua, de una clasificación dudosa o de una selección incierta de la sesión relacionada.
+- La limpieza técnica solo puede afectar a
+  `boveda-entrevista-profesional/busqueda-empleo/registros-generacion/*.json`
+  y a la inspección informativa de `.tmp/job-up-generador/` y
+  `.tmp/job-up-lo/`. No puede borrar
+  temporales ni tocar otras rutas.
 
 ## Límites
 
 - Trabajar solo en Job-up, la rama operativa de búsqueda de empleo.
 - No modificar la investigación de entrevista.
 - No crear comandos nuevos en PCS Core ni alterar la metodología de entrevista.
-- Solo se permiten escrituras del ciclo de vida de sesión en `./.pcs/sesiones/` y `./.pcs/estado/estado-actual.md`.
+- Solo se permiten escrituras del ciclo de vida de sesión en `./.pcs/sesiones/` y `./.pcs/estado/estado-actual.md`, además de la eliminación técnica de
+  registros JSON antiguos en la ruta autorizada.
 - No realizar modificaciones de candidaturas, envíos, navegación en Chrome, contactos externos ni otras acciones externas por esta invocación.

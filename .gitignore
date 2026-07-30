@@ -6,6 +6,10 @@ obsilo-shared/
 .playwright-cli/
 .worktrees/
 .tmp/
+scripts/job-up/.env
+__pycache__/
+boveda-entrevista-profesional/busqueda-empleo/registros-generacion/*.json
+!boveda-entrevista-profesional/busqueda-empleo/registros-generacion/SCHEMA_REGISTRO_GENERACION_ERROR_1.0.json
 .superpowers/
 tools/
 work/

@@ -3,6 +3,7 @@ id_candidatura: CAND-2026-015
 empresa: Unide
 puesto: Gestor Cuentas - Key Account Manager - UNIDE - Gran Canarias (Las Palmas)
 estado: enviada
+presentada: true
 fecha_actualizacion: 2026-07-30
 ---
 
