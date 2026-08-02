@@ -121,3 +121,17 @@ Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-007-arogadi-geren
 | Alcance del consentimiento | Uso exclusivo para `CAND-2026-017`; autorización expresa comunicada el 2026-07-30. |
 
 Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-017-lidl-responsable-almacen-transporte/candidatura|CAND-2026-017]].
+
+### CAND-2026-019 — ASIC CONSULTORES CANARIAS — Responsable de Automatización e Inteligencia Artificial
+
+| Campo | Dato autorizado |
+| --- | --- |
+| Nombre | Gustavo |
+| Apellido 1 | Vega |
+| Correo electrónico | gusvegabol@gmail.com |
+| Teléfono | 669 549 933 |
+| Enlace profesional | linkedin.com/in/gusvegabol |
+| Fotografía | Sí, fotografía de perfil disponible en la bóveda de búsqueda de empleo |
+| Alcance del consentimiento | Uso exclusivo para `CAND-2026-019`; autorización expresa comunicada el 2026-07-31. |
+
+Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia/candidatura|CAND-2026-019]].

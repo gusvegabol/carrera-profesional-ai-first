@@ -17,6 +17,59 @@ La oferta no autoriza por sí sola la creación de una sesión PCS ni el uso de
 datos privados. Esta skill no crea ni cierra sesiones directamente y no
 reproduce la lógica de `job-up-inicia-sesion`.
 
+## Punto de control reanudable de generación
+
+La generación documental tiene un punto de control explícito. Un bloqueo de
+revisión humana no reinicia la candidatura ni se trata como un error técnico.
+
+El CV admite hasta dos páginas y la carta de presentación una. Si el
+generador detecta que el CV supera dos páginas o que la carta supera una:
+
+1. conserva los DOCX y PDF disponibles en
+   `boveda-entrevista-profesional/busqueda-empleo/candidaturas/<id>/revisiones-generacion/<execution_id>/`;
+2. crea `revision-generacion.json` en la carpeta de la candidatura, con el
+   documento afectado, páginas reales, páginas esperadas, artefactos
+   conservados y la siguiente acción;
+3. crea un registro detallado en
+   `boveda-entrevista-profesional/busqueda-empleo/registros-generacion/`;
+4. sincroniza `candidatura.md` y `seguimiento-candidaturas.md` con estado
+   `detenida` y `presentada: false`;
+5. muestra al usuario la ruta del documento conservado, las páginas reales y
+   el límite aplicable, y espera una respuesta explícita de sí o no.
+
+La persona responsable solo debe responder sí o no tras revisar el PDF
+conservado. El agente crea `revision-generacion-decision.json` en la misma
+carpeta: tras un sí registra `aceptar_excepcion` con las páginas reales del
+CV; tras un no registra `corregir_y_reanudar` cuando disponga de un
+`datos-generacion.json` corregido. No debe pedir a la persona que ejecute
+comandos.
+
+```json
+{"decision": "corregir_y_reanudar", "confirmado_por": "persona usuaria"}
+```
+
+o, si se acepta expresamente una extensión legible:
+
+```json
+{"decision": "aceptar_excepcion", "paginas_aceptadas": 2, "confirmado_por": "persona usuaria"}
+```
+
+El agente reanuda sobre el mismo `datos-generacion.json` con:
+
+```text
+python scripts/job-up/generar_candidatura.py <ruta>/datos-generacion.json --reanudar
+```
+
+Antes de continuar, el generador exige la decisión registrada, verifica que la
+candidatura sigue sin presentar y no repite el análisis de la oferta ni la
+sesión Job-up. Si la generación reanudada supera las validaciones, la
+candidatura pasa a `pendiente_de_aprobacion`; el envío sigue requiriendo una
+aprobación humana separada.
+
+No borrar manualmente `revision-generacion.json`, el registro de error ni los
+artefactos conservados hasta cerrar la revisión. Si falta la decisión, la
+reanudación se detiene con una instrucción explícita.
+
 ## Entradas admitidas
 
 Acepta exactamente cualquiera de estas modalidades:
@@ -107,9 +160,11 @@ Sigue este orden y deja constancia de cada decisión:
    El generador debe producir `cv.docx`, `cv.pdf`,
    `carta-presentacion.docx`, `carta-presentacion.pdf` y `cv.tex` solo después
    de superar todas sus validaciones. Si falla, lee el registro de error,
-   corrige el JSON o las entradas desde la IA y permite una nueva ejecución
-   manual cuando proceda; no hagas reintentos automáticos ni generes
-   manualmente una variante paralela. Completa
+   distingue entre error técnico y bloqueo `revision_humana_requerida`, y
+   aplica el punto de control reanudable anterior. Corrige el JSON o las
+   entradas desde la IA solo después de la revisión humana correspondiente;
+   no hagas reintentos automáticos ni generes manualmente una variante
+   paralela. Completa
    después el veredicto final y el índice de documentos según el playbook.
    Detente ante una contradicción factual, un bloqueo obligatorio abierto, un
    error del generador o una decisión `corregir_antes_de_revisar`.
@@ -148,7 +203,8 @@ Sigue este orden y deja constancia de cada decisión:
   contacto en una sola línea, no apliques centrado y no alteres ninguna
   propiedad de formato al sustituir el contenido.
 - Comprueba Calibri, jerarquía 14/12/11/10,5 pt, colores `#1F2937` y
-  `#5B6573`, una página como objetivo, texto seleccionable y ausencia de
+  `#5B6573`, CV de hasta dos páginas y carta de una página, texto
+  seleccionable y ausencia de
   tablas o columnas en el contenido narrativo.
 - La carta puede resumir el CV, pero no puede introducir ningún hecho, logro,
   herramienta, requisito cumplido, dato de empresa o afirmación que no figure

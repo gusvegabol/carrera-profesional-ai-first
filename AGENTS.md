@@ -39,6 +39,12 @@ Cuando el agente redacte o modifique documentación en español, debe conservar 
 
 Antes de dar por terminada cualquier documentación redactada en español, debe revisarla explícitamente desde el punto de vista ortográfico y corregir los errores detectados.
 
+## Regla operativa de LibreOffice
+
+- No abrir, editar, inspeccionar ni renderizar archivos DOCX con LibreOffice. Para validar un DOCX, usar `python-docx` y comprobaciones OOXML; la revisión visual se realiza sobre el PDF final cuando exista un renderizador operativo.
+- LibreOffice queda limitado a la conversión DOCX→PDF del flujo de candidaturas. Debe invocarse directamente mediante `C:/Program Files/LibreOffice/program/soffice.com`, con un perfil temporal aislado, sin depender de `PATH`.
+- Si la conversión muestra el error de `bootstrap.ini`, no abrir ni lanzar una segunda instancia de LibreOffice, no reintentar automáticamente y registrar el diagnóstico. El playbook de candidaturas concreta el procedimiento de conversión.
+
 ## Rehidratación mínima obligatoria
 
 Si el usuario declara el host o pide retomar trabajo desde contexto general, el agente debe:

@@ -32,7 +32,9 @@ La carta puede seleccionar menos información que el CV, pero nunca puede añadi
 - Jerarquía: 14 pt para títulos principales, 12 pt para subtítulos, 11 pt para cuerpo y 10,5 pt para metadatos y fechas.
 - Colores: `#1F2937` para texto principal y `#5B6573` para información secundaria.
 - Alineación: contenido narrativo justificado. La alineación funcional puede mantenerse en el encabezado, datos de contacto, saludo, asunto, títulos y firma.
-- Extensión: una página como objetivo operativo. Si la legibilidad exige superar una página, se detiene la generación para revisión humana.
+- Extensión: el CV admite hasta dos páginas; la carta de presentación, una. La
+  generación se detiene para revisión humana solo si el CV supera dos páginas
+  o la carta supera una.
 - Fotografía: obligatoria por defecto, tanto en CV como en carta, salvo que la persona responsable indique expresamente lo contrario al invocar la skill.
 - Proporción de fotografía: cuadrada, 1:1. La imagen de referencia es de 270 × 270 px; si se redimensiona, deben modificarse ancho y alto proporcionalmente, nunca solo una dimensión.
 - Texto: seleccionable y extraíble; no se convierten párrafos en imágenes.
@@ -123,7 +125,8 @@ Antes de marcar la candidatura como `pendiente_de_aprobacion`, comprobar:
 - la carta resuelve todos sus marcadores, incluido `[DESPEDIDA]`, y no amplía
   los hechos seleccionados para el CV;
 - CV, carta y LaTeX no contienen contradicciones;
-- la salida cumple una página, texto seleccionable, cuerpo justificado y jerarquía visual;
+- el CV no supera dos páginas, la carta no supera una, el texto es seleccionable,
+  el cuerpo está justificado y la jerarquía visual es correcta;
 - no quedan marcadores, notas internas, hipótesis ni datos no autorizados;
 - no se realiza ningún envío.
 

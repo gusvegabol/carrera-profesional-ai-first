@@ -77,4 +77,4 @@ fecha_version: 2026-07-29
 - [ ] El titular, el resumen y los logros del CV reflejan el perfil principal y no arrastran el enfoque de otra candidatura.
 - [ ] Existe un [[TEMPLATE_GUION_ADAPTACION_CV]] y el documento final se ha construido desde ese guion.
 - [ ] Las palabras clave incorporadas están respaldadas por evidencias del core.
-- [ ] El CV es compatible con ATS y, siempre que la legibilidad lo permita, de una sola página.
+- [ ] El CV es compatible con ATS y no supera dos páginas.

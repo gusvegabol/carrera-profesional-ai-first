@@ -30,10 +30,119 @@ from generar_candidatura import (  # noqa: E402
     _template_paragraph_text,
     validate_latex,
     _replace_docx_paragraph,
+    PdfValidationError,
+    HumanReviewRequired,
+    reopen_obsolete_page_review,
+    validate_resume_decision,
+    preserve_generation_review,
 )
 
 
 class GeneratorContractTests(unittest.TestCase):
+    def test_pdf_page_validation_reports_actual_and_maximum_pages(self):
+        from pypdf import PdfWriter
+
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "cv.pdf"
+            writer = PdfWriter()
+            writer.add_blank_page(width=595, height=842)
+            writer.add_blank_page(width=595, height=842)
+            with path.open("wb") as stream:
+                writer.write(stream)
+            with self.assertRaises(PdfValidationError) as raised:
+                __import__("generar_candidatura").validate_pdf(path)
+            self.assertEqual(raised.exception.actual_pages, 2)
+            self.assertEqual(raised.exception.max_pages, 1)
+            self.assertIn("2 páginas", str(raised.exception))
+
+    def test_cv_accepts_two_pages_and_rejects_three(self):
+        from pypdf import PdfWriter
+
+        with tempfile.TemporaryDirectory() as directory:
+            two_pages = Path(directory) / "cv-dos-paginas.pdf"
+            three_pages = Path(directory) / "cv-tres-paginas.pdf"
+            for path, pages in ((two_pages, 2), (three_pages, 3)):
+                writer = PdfWriter()
+                for _ in range(pages):
+                    writer.add_blank_page(width=595, height=842)
+                with path.open("wb") as stream:
+                    writer.write(stream)
+            self.assertIsNone(__import__("generar_candidatura").validate_pdf(two_pages, max_pages=2))
+            with self.assertRaises(PdfValidationError) as raised:
+                __import__("generar_candidatura").validate_pdf(three_pages, max_pages=2)
+            self.assertEqual(raised.exception.actual_pages, 3)
+            self.assertEqual(raised.exception.max_pages, 2)
+
+    def test_generation_review_preserves_artifacts_and_writes_actionable_state(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            route = root / "boveda-entrevista-profesional/busqueda-empleo/candidaturas/CAND-2026-999-fixture"
+            execution = root / ".tmp/job-up-generador/CAND-2026-999-fixture/abc12345"
+            execution.mkdir(parents=True)
+            (route).mkdir(parents=True)
+            (route / "candidatura.md").write_text(
+                "---\nid: CAND-2026-999\nestado: en_preparacion\npresentada: false\n---\n",
+                encoding="utf-8",
+            )
+            tracking = root / "boveda-entrevista-profesional/busqueda-empleo/seguimiento"
+            tracking.mkdir(parents=True)
+            (tracking / "seguimiento-candidaturas.md").write_text(
+                "| id_candidatura | estado | presentada |\n| --- | --- | --- |\n| CAND-2026-999 | en_preparacion | false |\n",
+                encoding="utf-8",
+            )
+            (execution / "cv.docx").write_bytes(b"docx")
+            (execution / "cv.pdf").write_bytes(b"pdf")
+            review = preserve_generation_review(
+                root,
+                route,
+                execution,
+                "abc12345",
+                "cv.pdf",
+                actual_pages=3,
+                max_pages=2,
+            )
+            self.assertEqual(review["estado"], "detenida_revision_humana")
+            self.assertEqual(review["documento"], "cv.pdf")
+            self.assertEqual(review["paginas_reales"], 3)
+            self.assertEqual(review["paginas_maximas"], 2)
+            self.assertTrue(Path(review["artefactos"]["cv_pdf"]).is_file())
+            self.assertIn("sí o no", review["siguiente_accion"])
+            self.assertIn("estado: detenida", (route / "candidatura.md").read_text(encoding="utf-8"))
+            self.assertIn("| CAND-2026-999 | detenida | false |", (tracking / "seguimiento-candidaturas.md").read_text(encoding="utf-8"))
+
+    def test_resuming_requires_explicit_human_decision(self):
+        with tempfile.TemporaryDirectory() as directory:
+            route = Path(directory) / "candidate"
+            route.mkdir()
+            review = route / "revision-generacion.json"
+            review.write_text(json.dumps({"estado": "detenida_revision_humana"}), encoding="utf-8")
+            with self.assertRaises(ValueError):
+                validate_resume_decision(route)
+            (route / "revision-generacion-decision.json").write_text(
+                json.dumps({"decision": "corregir_y_reanudar", "confirmado_por": "usuario"}),
+                encoding="utf-8",
+            )
+            self.assertEqual(validate_resume_decision(route)["decision"], "corregir_y_reanudar")
+
+    def test_legacy_two_page_cv_review_is_reopened_after_limit_increase(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root, route = self._state_fixture(Path(directory), "detenida", "false")
+            (route / "revision-generacion.json").write_text(
+                json.dumps(
+                    {
+                        "estado": "detenida_revision_humana",
+                        "documento": "cv.pdf",
+                        "paginas_reales": 2,
+                        "paginas_maximas": 1,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            self.assertTrue(reopen_obsolete_page_review(root, route, "CAND-2026-999"))
+            review = json.loads((route / "revision-generacion.json").read_text(encoding="utf-8"))
+            self.assertEqual(review["estado"], "obsoleta_por_limite_actualizado")
+            self.assertIn("estado: en_preparacion", (route / "candidatura.md").read_text(encoding="utf-8"))
+
     def test_canonical_output_paths_are_derived_from_candidate_route(self):
         route = Path("boveda-entrevista-profesional/busqueda-empleo/candidaturas/CAND-2026-999-fixture")
         self.assertEqual(
@@ -57,6 +166,11 @@ class GeneratorContractTests(unittest.TestCase):
         absolute = ROOT / "boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/TEMPLATE_DATOS_GENERACION_CANDIDATURA.json"
         self.assertEqual(resolve_input_json(ROOT, str(absolute)), absolute.resolve())
 
+    def test_cli_input_accepts_windows_separators_inside_project(self):
+        value = r"boveda-entrevista-profesional\busqueda-empleo\proceso\plantillas\TEMPLATE_DATOS_GENERACION_CANDIDATURA.json"
+        expected = ROOT / "boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/TEMPLATE_DATOS_GENERACION_CANDIDATURA.json"
+        self.assertEqual(resolve_input_json(ROOT, value), expected.resolve())
+
     def test_error_record_is_timestamped_and_schema_shaped(self):
         with tempfile.TemporaryDirectory() as directory:
             path = write_error_record(Path(directory), "abc12345", "entrada.json", ValueError("fallo"), "validacion_entradas", "CAND-2026-999")
@@ -65,6 +179,16 @@ class GeneratorContractTests(unittest.TestCase):
             self.assertEqual(record["resultado"], "fallido")
             self.assertEqual(record["id_candidatura"], "CAND-2026-999")
             self.assertTrue(path.name.startswith("error-"))
+
+    def test_error_record_distinguishes_human_review_from_technical_failure(self):
+        with tempfile.TemporaryDirectory() as directory:
+            error = HumanReviewRequired("cv.pdf: tiene 2 páginas; se esperaba 1")
+            error.path = Path(directory) / "cv.pdf"
+            path = write_error_record(Path(directory), "abc12345", "entrada.json", error, "validacion_pdf", "CAND-2026-999")
+            record = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(record["resultado"], "revision_humana_requerida")
+            self.assertEqual(record["codigo_error"], "REVISION_HUMANA_REQUERIDA")
+            self.assertEqual(record["fase"], "validacion_pdf")
 
     def test_state_validation_requires_explicit_presented_value_in_both_sources(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -428,6 +552,31 @@ class GeneratorContractTests(unittest.TestCase):
             self.assertNotIn("[NOMBRE]", text)
             self.assertNotIn("COMPETENCIAS Y HERRAMIENTAS", text)
             self.assertNotIn("INFORMACIÓN ADICIONAL", text)
+
+    def test_docx_preserves_full_bold_experience_header_after_long_replacement(self):
+        from docx import Document
+
+        document = Document()
+        paragraph = document.add_paragraph()
+        header = paragraph.add_run("[EXPERIENCIA 1 CABECERA]")
+        header.bold = True
+        paragraph.add_run(" - ")
+        paragraph.add_run("[EXPERIENCIA 1 DESCRIPCION]")
+
+        experience_header = "Empresa de Automatización y Transformación Operativa"
+        description = "Descripción factual de la experiencia."
+        _replace_docx_paragraph(
+            paragraph,
+            {
+                "[EXPERIENCIA 1 CABECERA]": experience_header,
+                "[EXPERIENCIA 1 DESCRIPCION]": description,
+            },
+        )
+
+        self.assertEqual("".join(run.text or "" for run in paragraph.runs), f"{experience_header} - {description}")
+        self.assertTrue(all(run.bold is True for run in paragraph.runs[:len(experience_header)]))
+        description_start = len(experience_header) + len(" - ")
+        self.assertTrue(all(run.bold is not True for run in paragraph.runs[description_start:]))
 
     def _payload(self):
         template = json.loads(

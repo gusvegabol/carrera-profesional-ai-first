@@ -62,7 +62,7 @@ Este guion gobierna simultáneamente `cv.docx`, `cv.pdf`, `cv.tex`, `carta-prese
 - Jerarquía: 14/12/11/10,5 pt.
 - Colores: `#1F2937` y `#5B6573`.
 - Alineación: el contenido narrativo del CV y de la carta debe quedar justificado; encabezados, contacto, saludo, asunto, títulos y firma pueden conservar alineación funcional.
-- Extensión: una página como objetivo operativo.
+- Extensión: hasta dos páginas.
 - Fotografía: obligatoria en CV y carta salvo exclusión expresa en la invocación de la skill. La imagen-placeholder `[FOTO]` debe sustituirse por la fotografía real autorizada antes de entregar los artefactos y conservar proporción 1:1.
 - Texto: seleccionable, con encabezados estándar y viñetas reales; sin tablas ni columnas para el contenido narrativo.
 
@@ -74,7 +74,7 @@ La carta puede desarrollar solo una selección de las evidencias del CV. No pued
 - **Datos privados autorizados para esta candidatura:**
 - **Contenido que no debe heredarse de otras candidaturas:**
 - **Palabras clave usadas y evidencia que las respalda:**
-- **Elementos visuales permitidos:** una página, texto seleccionable, encabezados estándar, viñetas y fotografía obligatoria, salvo exclusión expresa; sin tablas ni columnas para el contenido narrativo.
+- **Elementos visuales permitidos:** hasta dos páginas, texto seleccionable, encabezados estándar, viñetas y fotografía obligatoria, salvo exclusión expresa; sin tablas ni columnas para el contenido narrativo.
 - **Párrafos:** cada punto y aparte de experiencia y formación debe ser un párrafo real; no se simulan párrafos con saltos internos. Las cabeceras de puesto conservan negrita y sus descripciones usan estilo normal.
 - **Salida limpia:** los DOCX y PDF finales no pueden conservar pies, encabezados, marcadores ni instrucciones que identifiquen el documento como template.
 - [ ] El texto se ha construido desde este guion y el análisis de esta oferta.

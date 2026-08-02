@@ -119,7 +119,10 @@ def resolve_input_json(root: Path, value: str) -> Path:
         _assert_inside(resolved, root, "datos-generacion.json")
         _reject_reparse_points(candidate, value)
         return resolved
-    return _project_relative(root, value)
+    # El argumento del CLI admite la convención nativa de Windows. Las rutas
+    # persistidas en JSON siguen validándose mediante _project_relative, que
+    # exige '/' como separador canónico.
+    return _project_relative(root, value.replace("\\", "/"))
 
 
 def _assert_slot_map(section: Any, expected: tuple[str, ...], label: str) -> None:
@@ -288,6 +291,78 @@ def validate_candidate_state(root: Path, route: Path, candidate_id: str) -> None
         raise ValueError(f"El estado {state} no permite generar documentos.")
 
 
+def _set_candidate_state(root: Path, route: Path, candidate_id: str, state: str) -> None:
+    if state not in VALID_STATES:
+        raise ValueError(f"Estado no permitido: {state}")
+    candidature = route / "candidatura.md"
+    text = candidature.read_text(encoding="utf-8")
+    updated, count = re.subn(r"(?m)^estado:\s*.*$", f"estado: {state}", text, count=1)
+    if count != 1:
+        raise ValueError(f"No se pudo actualizar el estado en {candidature}.")
+    candidature.write_text(updated, encoding="utf-8")
+
+    tracking = root / "boveda-entrevista-profesional/busqueda-empleo/seguimiento/seguimiento-candidaturas.md"
+    lines = tracking.read_text(encoding="utf-8").splitlines()
+    headers = next((_markdown_row(line) for line in lines if line.startswith("| id_candidatura ")), None)
+    if not headers or "estado" not in headers:
+        raise ValueError("El seguimiento no permite actualizar el estado.")
+    state_index = headers.index("estado")
+    matching = [index for index, line in enumerate(lines) if line.startswith(f"| {candidate_id} ")]
+    if len(matching) != 1:
+        raise ValueError(f"No existe una fila única para {candidate_id} en el seguimiento.")
+    fields = _markdown_row(lines[matching[0]])
+    if len(fields) != len(headers):
+        raise ValueError(f"La fila de seguimiento de {candidate_id} no es completa.")
+    fields[state_index] = state
+    lines[matching[0]] = "| " + " | ".join(fields) + " |"
+    tracking.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def validate_resume_decision(route: Path) -> dict[str, Any]:
+    review_path = route / "revision-generacion.json"
+    decision_path = route / "revision-generacion-decision.json"
+    if not review_path.is_file():
+        raise ValueError(f"No existe una revisión de generación pendiente: {review_path}")
+    review = json.loads(review_path.read_text(encoding="utf-8"))
+    if review.get("estado") != "detenida_revision_humana":
+        raise ValueError("La revisión de generación no está pendiente de decisión humana.")
+    if not decision_path.is_file():
+        raise ValueError(
+            "Falta la decisión humana. Crea revision-generacion-decision.json con "
+            "decision=corregir_y_reanudar o decision=aceptar_excepcion."
+        )
+    decision = json.loads(decision_path.read_text(encoding="utf-8"))
+    if decision.get("decision") not in {"corregir_y_reanudar", "aceptar_excepcion"}:
+        raise ValueError("La decisión humana debe ser corregir_y_reanudar o aceptar_excepcion.")
+    if decision["decision"] == "aceptar_excepcion":
+        if review.get("documento") != "cv.pdf":
+            raise ValueError("Solo se admite una excepción de páginas para el CV.")
+        pages = decision.get("paginas_aceptadas")
+        if not isinstance(pages, int) or pages < review.get("paginas_reales", 1):
+            raise ValueError("aceptar_excepcion requiere paginas_aceptadas igual o superior a las páginas reales.")
+    return decision
+
+
+def reopen_obsolete_page_review(root: Path, route: Path, candidate_id: str) -> bool:
+    review_path = route / "revision-generacion.json"
+    if not review_path.is_file():
+        return False
+    review = json.loads(review_path.read_text(encoding="utf-8"))
+    if review.get("estado") != "detenida_revision_humana":
+        return False
+    limits = {"cv.pdf": 2, "carta-presentacion.pdf": 1}
+    document = review.get("documento")
+    actual_pages = review.get("paginas_reales")
+    if document not in limits or not isinstance(actual_pages, int) or actual_pages > limits[document]:
+        return False
+    review["estado"] = "obsoleta_por_limite_actualizado"
+    review["limite_actual"] = limits[document]
+    review["reabierta_en"] = datetime.now(timezone.utc).isoformat()
+    review_path.write_text(json.dumps(review, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    _set_candidate_state(root, route, candidate_id, "en_preparacion")
+    return True
+
+
 def _validate_photo(path: Path) -> None:
     if path.stat().st_size < 1024 or path.stat().st_size > 10 * 1024 * 1024:
         raise ValueError("La fotografía debe ocupar entre 1 KB y 10 MB.")
@@ -354,7 +429,7 @@ def _rpr(run: Any) -> Any:
     return deepcopy(run._r.rPr) if run._r.rPr is not None else None
 
 
-def _set_paragraph_text(paragraph: Any, text: str) -> None:
+def _set_paragraph_text(paragraph: Any, text: str, style_overrides: list[tuple[int, int, Any]] | None = None) -> None:
     runs = list(paragraph.runs)
     styles: list[Any] = []
     for run in runs:
@@ -365,6 +440,10 @@ def _set_paragraph_text(paragraph: Any, text: str) -> None:
         r = OxmlElement("w:r")
         index = min(len(styles) - 1, position) if styles else 0
         style = styles[index] if styles else None
+        for start, end, override in style_overrides or []:
+            if start <= position < end:
+                style = override
+                break
         if style is not None:
             r.append(deepcopy(style))
         t = OxmlElement("w:t")
@@ -402,6 +481,17 @@ def _replace_docx_paragraph(paragraph: Any, values: dict[str, str]) -> None:
     original = "".join(run.text or "" for run in paragraph.runs)
     if not MARKER_RE.search(original):
         return
+    experience_styles: list[tuple[int, int, Any]] = []
+    character_styles: list[Any] = []
+    for run in paragraph.runs:
+        character_styles.extend([_rpr(run)] * len(run.text or ""))
+    for match in EXPERIENCE_RE.finditer(original):
+        value = values.get(match.group(0), "")
+        if not value:
+            continue
+        prefix = _replace_markers(original[:match.start()], values)
+        style = character_styles[match.start()] if match.start() < len(character_styles) else None
+        experience_styles.append((len(prefix), len(prefix) + len(value), style))
     replaced = _replace_markers(original, values)
     if "[EMAIL]" in original or "[TELÉFONO]" in original or "[LINKEDIN]" in original:
         parts = [values.get(key, "").strip() for key in ("[EMAIL]", "[TELÉFONO]", "[LINKEDIN]")]
@@ -411,7 +501,7 @@ def _replace_docx_paragraph(paragraph: Any, values: dict[str, str]) -> None:
     if not replaced.strip():
         paragraph._p.getparent().remove(paragraph._p)
         return
-    _set_paragraph_text(paragraph, replaced)
+    _set_paragraph_text(paragraph, replaced, experience_styles)
 
 
 def build_docx(template_path: Path, output_path: Path, values: dict[str, str], photo_path: Path) -> None:
@@ -539,17 +629,73 @@ def convert_docx_to_pdf(docx_path: Path, out_dir: Path, soffice_path: Path, conv
         shutil.rmtree(staging, ignore_errors=True)
 
 
-def validate_pdf(path: Path, require_image: bool = False) -> None:
+class PdfValidationError(ValueError):
+    def __init__(self, path: Path, actual_pages: int, max_pages: int) -> None:
+        self.path = path
+        self.actual_pages = actual_pages
+        self.max_pages = max_pages
+        super().__init__(
+            f"{path.name}: tiene {actual_pages} páginas; el máximo permitido es {max_pages}. "
+            "Revisa el documento y decide si corregirlo o aceptar expresamente la excepción."
+        )
+
+
+class HumanReviewRequired(RuntimeError):
+    resultado = "revision_humana_requerida"
+    codigo_error = "REVISION_HUMANA_REQUERIDA"
+
+
+def validate_pdf(path: Path, require_image: bool = False, max_pages: int = 1) -> None:
     from pypdf import PdfReader
 
     reader = PdfReader(str(path))
-    if len(reader.pages) != 1:
-        raise ValueError(f"PDF con número de páginas inesperado: {path}")
+    actual_pages = len(reader.pages)
+    if actual_pages > max_pages:
+        raise PdfValidationError(path, actual_pages, max_pages)
     text = "\n".join(page.extract_text() or "" for page in reader.pages)
     if "[" in text and "]" in text:
         raise ValueError(f"PDF contiene marcadores: {path}")
     if require_image and not any(getattr(page, "images", ()) for page in reader.pages):
         raise ValueError(f"PDF sin fotografía embebida: {path}")
+
+
+def preserve_generation_review(
+    root: Path,
+    route: Path,
+    execution_dir: Path,
+    execution_id: str,
+    document: str,
+    actual_pages: int,
+    max_pages: int,
+) -> dict[str, Any]:
+    review_dir = route / "revisiones-generacion" / execution_id
+    review_dir.mkdir(parents=True, exist_ok=False)
+    artifacts: dict[str, str] = {}
+    for name in ("cv.docx", "cv.pdf", "carta-presentacion.docx", "carta-presentacion.pdf"):
+        source = execution_dir / name
+        if source.is_file():
+            destination = review_dir / name
+            shutil.copy2(source, destination)
+            artifacts[name.replace("-", "_").replace(".", "_").rstrip("_")] = str(destination)
+    review = {
+        "schema_version": "1.0",
+        "estado": "detenida_revision_humana",
+        "execution_id": execution_id,
+        "documento": document,
+        "paginas_reales": actual_pages,
+        "paginas_maximas": max_pages,
+        "artefactos": artifacts,
+        "siguiente_accion": (
+            "Mostrar al usuario la ruta del PDF conservado y esperar una "
+            "respuesta explícita de sí o no antes de reanudar."
+        ),
+        "decision_admitida": ["corregir_y_reanudar", "aceptar_excepcion"],
+    }
+    review_path = route / "revision-generacion.json"
+    review_path.write_text(json.dumps(review, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    candidate_id = _frontmatter(route / "candidatura.md").get("id") or route.name.split("-", 3)[0]
+    _set_candidate_state(root, route, candidate_id, "detenida")
+    return review
 
 
 def write_error_record(root: Path, execution_id: str, input_path: str, exc: Exception, phase: str, candidate_id: str | None = None) -> Path | None:
@@ -561,13 +707,13 @@ def write_error_record(root: Path, execution_id: str, input_path: str, exc: Exce
     record = {
         "schema_version": "1.0",
         "fecha": datetime.now(timezone.utc).isoformat(),
-        "resultado": "fallido",
+        "resultado": getattr(exc, "resultado", "fallido"),
         "execution_id": execution_id,
         "id_candidatura": candidate_id,
         "entrada_recibida": input_path,
         "fase": phase,
-        "codigo_error": "GENERACION_FALLIDA",
-        "campo_o_ruta": None,
+        "codigo_error": getattr(exc, "codigo_error", "GENERACION_FALLIDA"),
+        "campo_o_ruta": str(getattr(exc, "path", "")) or None,
         "mensaje": str(exc) or exc.__class__.__name__,
         "documentos_publicados": published,
         "documentos_restaurados": restored,
@@ -707,7 +853,14 @@ def recover_pending_publications(root: Path, candidate_name: str) -> list[Path]:
     return recovered
 
 
-def publish_transaction(root: Path, execution_dir: Path, generated: dict[str, Path], destinations: dict[str, Path], execution_id: str) -> dict[str, Any]:
+def publish_transaction(
+    root: Path,
+    execution_dir: Path,
+    generated: dict[str, Path],
+    destinations: dict[str, Path],
+    execution_id: str,
+    max_pdf_pages: dict[str, int] | None = None,
+) -> dict[str, Any]:
     backup_dir = execution_dir / "backups"
     backup_dir.mkdir(parents=True, exist_ok=True)
     files: list[dict[str, Any]] = []
@@ -740,7 +893,7 @@ def publish_transaction(root: Path, execution_dir: Path, generated: dict[str, Pa
             manifest["publicados"].append(entry["destination"])
             _write_json_atomic(manifest_path, manifest)
         if all(path.suffix.lower() in {".docx", ".pdf", ".tex"} for path in destinations.values()):
-            validate_published_artifacts(destinations)
+            validate_published_artifacts(destinations, max_pdf_pages)
         manifest["phase"] = "completado"
         _write_json_atomic(manifest_path, manifest)
         return manifest
@@ -760,14 +913,15 @@ def cleanup_execution_directory(path: Path) -> None:
         shutil.rmtree(path)
 
 
-def validate_published_artifacts(destinations: dict[str, Path]) -> None:
+def validate_published_artifacts(destinations: dict[str, Path], max_pdf_pages: dict[str, int] | None = None) -> None:
+    max_pdf_pages = max_pdf_pages or {}
     for key, path in destinations.items():
         if not path.is_file() or path.stat().st_size == 0:
             raise ValueError(f"Artefacto publicado ausente o vacío: {key}")
         if key.endswith("docx"):
             Document(path)
         elif key.endswith("pdf"):
-            validate_pdf(path, require_image=True)
+            validate_pdf(path, require_image=True, max_pages=max_pdf_pages.get(key, 1))
         elif key == "cv_tex":
             text = path.read_text(encoding="utf-8")
             if any(marker in text for marker in LATEX_FIELDS):
@@ -777,6 +931,11 @@ def validate_published_artifacts(destinations: dict[str, Path]) -> None:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("json_path")
+    parser.add_argument(
+        "--reanudar",
+        action="store_true",
+        help="reanuda una generación detenida solo con una decisión humana registrada",
+    )
     args = parser.parse_args(argv)
     execution = uuid.uuid4().hex[:12]
     phase = "carga_json"
@@ -797,6 +956,20 @@ def main(argv: list[str] | None = None) -> int:
         route = validate_payload(payload, root)
         phase = "validacion_estado"
         validate_candidate_state(root, route, payload["id_candidatura"])
+        metadata = _frontmatter(route / "candidatura.md")
+        decision: dict[str, Any] | None = None
+        if metadata.get("estado") == "detenida" and (route / "revision-generacion.json").is_file():
+            if reopen_obsolete_page_review(root, route, payload["id_candidatura"]):
+                metadata = _frontmatter(route / "candidatura.md")
+            elif not args.reanudar:
+                raise ValueError(
+                    "La candidatura está detenida para revisión humana. "
+                    "Corrige el CV o registra una excepción y ejecuta de nuevo con --reanudar."
+                )
+            else:
+                decision = validate_resume_decision(route)
+        elif args.reanudar:
+            raise ValueError("--reanudar solo puede usarse con una revisión de generación pendiente.")
         candidate_lock = CandidateLock(root / TEMP_ROOT / route.name / ".lock")
         candidate_lock.__enter__()
         recover_pending_publications(root, route.name)
@@ -810,8 +983,33 @@ def main(argv: list[str] | None = None) -> int:
         phase = "conversion_pdf"
         cv_pdf = convert_docx_to_pdf(cv_docx, execution_dir, Path(env["SOFFICE_PATH"]), root)
         letter_pdf = convert_docx_to_pdf(letter_docx, execution_dir, Path(env["SOFFICE_PATH"]), root)
-        validate_pdf(cv_pdf, require_image=True)
-        validate_pdf(letter_pdf, require_image=True)
+        phase = "validacion_pdf"
+        try:
+            max_cv_pages = 2
+            max_letter_pages = 1
+            if decision and decision.get("decision") == "aceptar_excepcion":
+                review = json.loads((route / "revision-generacion.json").read_text(encoding="utf-8"))
+                if review.get("documento") == "cv.pdf":
+                    max_cv_pages = decision["paginas_aceptadas"]
+            validate_pdf(cv_pdf, require_image=True, max_pages=max_cv_pages)
+            validate_pdf(letter_pdf, require_image=True, max_pages=max_letter_pages)
+        except PdfValidationError as exc:
+            review = preserve_generation_review(
+                root,
+                route,
+                execution_dir,
+                execution,
+                exc.path.name,
+                exc.actual_pages,
+                exc.max_pages,
+            )
+            review_path = route / "revision-generacion.json"
+            review_exc = HumanReviewRequired(str(exc))
+            review_exc.path = exc.path
+            review_exc.actual_pages = exc.actual_pages
+            review_exc.max_pages = exc.max_pages
+            review_exc.review_path = review_path
+            raise review_exc from exc
         phase = "generacion_latex"
         latex_template = (root / Path(payload["entradas"]["template_latex"])).read_text(encoding="utf-8")
         _validate_template_text(latex_template, LATEX_FIELDS, "TEMPLATE_CV_FORMATO.tex", ("[11pt,a4paper]", "[utf8]", "[T1]", "[margin=1.6cm]"))
@@ -827,7 +1025,22 @@ def main(argv: list[str] | None = None) -> int:
         if any(marker in tex for marker in LATEX_FIELDS):
             raise ValueError("cv.tex contiene marcadores sin sustituir.")
         phase = "publicacion"
-        publish_transaction(root, execution_dir, generated, destinations, execution)
+        publish_transaction(
+            root,
+            execution_dir,
+            generated,
+            destinations,
+            execution,
+            {"cv_pdf": max_cv_pages, "carta_pdf": max_letter_pages},
+        )
+        if args.reanudar:
+            _set_candidate_state(root, route, payload["id_candidatura"], "pendiente_de_aprobacion")
+            review_path = route / "revision-generacion.json"
+            review = json.loads(review_path.read_text(encoding="utf-8"))
+            review["estado"] = "resuelta"
+            review["decision"] = decision
+            review["resuelta_en"] = datetime.now(timezone.utc).isoformat()
+            review_path.write_text(json.dumps(review, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         cleanup_execution_directory(execution_dir)
         execution_dir = None
         print(json.dumps({"resultado": "completado", "execution_id": execution, "latex": latex_status, "artefactos": list(destinations)}, ensure_ascii=False))
@@ -835,10 +1048,11 @@ def main(argv: list[str] | None = None) -> int:
     except Exception as exc:
         record = write_error_record(root, execution, args.json_path, exc, phase, candidate_id) if root is not None else None
         if record is not None:
-            print(f"GENERACION_FALLIDA: {exc}; registro={record}", file=sys.stderr)
+            prefix = "REVISION_HUMANA_REQUERIDA" if getattr(exc, "resultado", "") == "revision_humana_requerida" else "GENERACION_FALLIDA"
+            print(f"{prefix}: {exc}; registro={record}", file=sys.stderr)
         else:
             print(f"GENERACION_FALLIDA: {exc}; no se pudo escribir el registro de error", file=sys.stderr)
-        return 1
+        return 2 if getattr(exc, "resultado", "") == "revision_humana_requerida" else 1
     finally:
         if execution_dir is not None and execution_dir.exists():
             manifest = execution_dir / "manifest.json"

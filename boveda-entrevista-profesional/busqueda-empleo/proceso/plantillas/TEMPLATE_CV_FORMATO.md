@@ -35,7 +35,7 @@ Plantilla visual basada en `CAND-2026-010-acciona-administrativo/cv.docx`.
    eliminará el párrafo completo de esa experiencia, incluido su salto de
    línea final; nunca dejará una línea o un párrafo en blanco.
 5. Eliminar cualquier otro marcador no aplicable; nunca dejarlo visible.
-6. Revisar que el contenido narrativo quede justificado y que el documento ocupe una página.
+6. Revisar que el contenido narrativo quede justificado y que el documento no supere dos páginas.
 
 ## Invariantes de sustitución
 

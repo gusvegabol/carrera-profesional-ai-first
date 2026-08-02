@@ -49,6 +49,10 @@ En particular, la referencia viva de gobernanza de hosts está en:
 - Las acciones abiertas viven en `./.pcs/acciones/`.
 - Las decisiones vigentes viven en `./.pcs/decisiones/`.
 
+## Regla operativa de LibreOffice
+
+LibreOffice no se usa para abrir, editar, inspeccionar ni renderizar DOCX. La validación del DOCX es estructural; la revisión visual corresponde al PDF final cuando pueda renderizarse. En el flujo de candidaturas, LibreOffice se limita a convertir DOCX a PDF mediante `C:/Program Files/LibreOffice/program/soffice.com` y un perfil temporal aislado. Ante el error de `bootstrap.ini`, no se abre una segunda instancia ni se reintenta automáticamente.
+
 ## Comandos PCS en Work
 
 Las peticiones que comiencen por `pcs::` deben encaminarse por referencia viva al Core, sin copiar sus flujos dentro de este proyecto. El orden de consulta es:

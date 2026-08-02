@@ -34,6 +34,8 @@ Cada candidatura se identifica con el formato `CAND-YYYY-NNN`.
 
 > Actualización CAND-2026-017 (2026-07-30): la fotografía real se incorporó al CV y a la carta conforme a la regla común de inclusión por defecto. Encaje competitivo: 3/5; media global del veredicto: 3,8/5.
 
+| CAND-2026-019 | 2026-07-31 | ASIC CONSULTORES CANARIAS | Responsable de Automatización e Inteligencia Artificial | <https://www.infojobs.net/las-palmas-de-gran-canaria/responsable-automatizacion-inteligencia-artificial/of-i1ddd25896444669313c437272e0289> | Dirección; Operaciones; automatización de procesos; análisis de datos | parcial condicionado | pendiente_de_aprobacion | false | [[busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia/cv.docx|cv.docx]] | [[busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia/cv.pdf|cv.pdf]] | [[busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia/carta-presentacion.docx|carta-presentacion.docx]] | [[busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia/carta-presentacion.pdf|carta-presentacion.pdf]] | Revisión y aprobación humana pendientes | Oferta presencial e indefinida en Las Palmas de Gran Canaria; jornada completa; 27.000–30.000 € brutos anuales y bonus variable; CV, carta y LaTeX generados; encaje parcial condicionado por Grado, IA profesional y varios entornos Microsoft no acreditados; datos privados autorizados expresamente para esta candidatura el 2026-07-31 |
+
 ## Estados permitidos
 
 - `en_preparacion`
