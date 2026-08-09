@@ -1,0 +1,17 @@
+{
+  "candidatura": "CAND-2026-020",
+  "idioma_cv": "es",
+  "mapa": [
+    {"ref": "M-001", "presencia": "incluir", "obligatoria": true, "seccion": "SEC-01"},
+    {"ref": "M-002", "presencia": "incluir", "obligatoria": true, "seccion": "SEC-02"},
+    {"ref": "M-003", "presencia": "incluir", "obligatoria": true, "seccion": "SEC-02"},
+    {"ref": "M-004", "presencia": "incluir", "obligatoria": true, "seccion": "SEC-02"},
+    {"ref": "M-005", "presencia": "incluir", "obligatoria": true, "seccion": "SEC-02"},
+    {"ref": "M-006", "presencia": "incluir", "obligatoria": true, "seccion": "SEC-02"},
+    {"ref": "M-007", "presencia": "incluir", "obligatoria": false, "seccion": "SEC-02"},
+    {"ref": "M-008", "presencia": "incluir", "obligatoria": true, "seccion": "SEC-03"},
+    {"ref": "M-010", "presencia": "omitir", "obligatoria": false, "seccion": null},
+    {"ref": "M-011", "presencia": "incluir", "obligatoria": true, "seccion": "SEC-01"}
+  ],
+  "lexico": {"prohibidos": ["tesorería", "pagos", "banca", "titulación de FP"]}
+}

@@ -2,13 +2,12 @@
 id: datos-core-busqueda
 titulo: Datos Core para Búsqueda de Empleo
 fecha_creacion: 2026-07-21
-fecha_actualizacion: 2026-07-26
+fecha_actualizacion: 2026-08-08
 estado: en_construccion
 tipo: base_datos
 version: "1.0.0"
 fecha_version: 2026-07-29
 ---
-
 # Datos Core para Búsqueda de Empleo
 
 Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reúne hechos, evidencias, formación y condiciones de búsqueda de Gustavo Vega Bolaños; no es un CV final ni certifica competencias.
@@ -27,7 +26,9 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 | Campo | Dato confirmado |
 | --- | --- |
-| Nombre | Gustavo Vega Bolaños |
+| Nombre | Gustavo |
+| Apellido 1 | Vega |
+| Apellido 2 | Bolaños |
 | Ubicación para trabajo presencial | Gran Canaria |
 | Modalidad | Preferencia presencial; también disponible para puestos híbridos o remotos |
 | Perfiles disponibles | Dirección; Administración; Operaciones |
@@ -36,6 +37,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Sectores | Búsqueda abierta; cada oferta se evalúa según sus condiciones |
 | Idiomas | Castellano nativo. Inglés básico |
 | Disponibilidad de incorporación | Entre 7 y 15 días |
+| Turnos rotativos | Disponibilidad confirmada para turnos rotativos de mañana o tarde |
 | Desplazamiento | Todos los municipios de Gran Canaria, siempre que las condiciones del contrato compensen el desplazamiento en coche |
 | Permisos de conducción | B, A, A1 y A2 |
 | Viajes | Disponibilidad para viajar de forma esporádica por razones del cargo |
@@ -62,11 +64,11 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 ### Perfil C — Operaciones
 
-**Experiencia relacionada:** en Herfrailes S. L., socio de CENCOSU S. L. —titular de los derechos de explotación de la franquicia internacional SPAR en Gran Canaria—, creó una base de datos de ventas y un algoritmo de pedido, implantó un sistema de redistribución de stock entre tiendas con vehículos propios, realizó el seguimiento del mantenimiento de vehículos, reorganizó el trabajo por tiendas y coordinó dos campañas de datos de procedencia de clientes; en Granintra S. A. implantó un sistema para operaciones portuarias.
+**Experiencia relacionada:** en Herfrailes S. L., socio de CENCOSU S. L. —titular de los derechos de explotación de la franquicia internacional SPAR en Gran Canaria—, realizó pedidos diarios a la central de compras y a proveedores directos, creó una base de datos de ventas y algoritmos de pedido automatizado para ambos circuitos, implantó un sistema de redistribución de stock entre tiendas con vehículos propios, realizó el seguimiento del mantenimiento de vehículos, reorganizó el trabajo por tiendas y coordinó dos campañas de datos de procedencia de clientes; en Granintra S. A. implantó un sistema para operaciones portuarias.
 
-**Competencias a priorizar:** análisis de datos de ventas, previsión y pedido, optimización de stock, logística y distribución con vehículos propios, aprovisionamiento, mantenimiento de vehículos, coordinación entre áreas, segmentación de clientes y mejora continua.
+**Competencias a priorizar:** análisis de datos de ventas, previsión y pedido, pedidos centralizados y directos, optimización de stock, logística y distribución con vehículos propios, aprovisionamiento, cuadre de cajas, mantenimiento de vehículos, coordinación entre áreas, segmentación de clientes y mejora continua.
 
-**Logros seleccionables:** `HER-03`, `HER-04`, `HER-05`, `HER-07` y `GRAN-01`.
+**Logros seleccionables:** `HER-03`, `HER-04`, `HER-05`, `HER-07`, `HER-10` y `GRAN-01`.
 
 ## 3. Banco de logros y evidencias
 
@@ -101,8 +103,10 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 | Elemento | Detalle |
 | --- | --- |
-| Contexto | Herfrailes S. L.; operación de supermercados. Las compras, el marketing, las finanzas y la relación con proveedores correspondían a la central de compras de la franquicia SPAR, salvo cuando se indique expresamente |
-| Contribución | Diseñó una base de datos de ventas diarias y un algoritmo de pedido automático a central de compras |
+| Contexto | Herfrailes S. L.; operación de supermercados vinculada a la franquicia SPAR. CENCOSU definía el marco central de compras, marketing y finanzas, mientras que Gustavo realizaba los pedidos diarios a la central y los pedidos directos de artículos no centralizados o de campañas. |
+| Contribución | Diseñó una base de datos de ventas diarias y un algoritmo de pedido automático para la central de compras. |
+| Pedidos directos y proveedores | Trató diariamente con proveedores de artículos no centralizados que admitían pedidos inferiores a 12 unidades y con representantes de grandes empresas que realizaban campañas en los supermercados. También diseñó un sistema de pedido automatizado para ambos casos. |
+| Negociación con proveedores | Durante los tres primeros años en Herfrailes S. L. negoció con proveedores directos. Posteriormente, CENCOSU centralizó progresivamente más productos para obtener mayores márgenes y facilitar la distribución. |
 | Modelo | Clasificó patrones de venta por ofertas, campañas de marketing, estacionalidad, espectáculos cercanos, olas de calor anunciadas con dos semanas de antelación y venta cruzada; el sistema estimaba ventas y generaba cantidades de pedido |
 | Mejora continua | Ante desviaciones, investigaba la causa, retiraba variables que habían dejado de ser relevantes e incorporaba factores previsibles al algoritmo |
 | Resultado | Reducción del 30 % en caducidades y del 80 % en productos sin venta durante más de un mes, sin afectar a las ventas mediante reposición próxima al just-in-time |
@@ -147,14 +151,14 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 
 | Elemento | Detalle |
 | --- | --- |
-| Contexto | Herfrailes S. L., socio de CENCOSU S. L., titular de los derechos de explotación de la franquicia internacional SPAR en Gran Canaria. La operación contaba con tres tiendas y vehículos propios; los productos centralizados los entregaba diariamente CENCOSU y los no centralizados los suministraban directamente los proveedores, con frecuencias de entre tres días y un mes |
+| Contexto | Herfrailes S. L., socio de CENCOSU S. L., titular de los derechos de explotación de la franquicia internacional SPAR en Gran Canaria. La operación contaba con tres tiendas y vehículos propios; Gustavo realizaba pedidos diarios a CENCOSU para los productos centralizados y pedidos directos a proveedores de artículos no centralizados o de campañas. CENCOSU entregaba diariamente los productos centralizados y los proveedores directos los no centralizados, con frecuencias de entre tres días y un mes. |
 | Problema | Los pedidos se realizaban por cajas de un mínimo de 12 unidades. En una tienda con baja rotación, una caja podía mantener capital inmovilizado durante más de un mes, aunque la demanda agregada de las tres tiendas justificase la reposición |
 | Contribución | Programó un sistema que, tras el cierre al público, analizaba el stock y la rotación de las tres tiendas y generaba para cada responsable una lista de unidades que debía preparar para enviar a los otros dos almacenes. Los responsables empaquetaban los pedidos a primera hora y el chófer efectuaba una ruta específica A→B→C→B→A para optimizar las entregas |
 | Segundo ciclo diario | Al mediodía, una vez completada la entrega diaria de productos centralizados por CENCOSU, el sistema repetía el proceso solo para esos productos. Así se distribuían durante la tarde y podían reponerse ese mismo día en los lineales de las tres tiendas |
 | Reglas de surtido | Estableció una rotación mínima diaria de 0,17 unidades. Los productos que no alcanzaban 12 unidades mensuales entre las tres tiendas se retiraban del lineal, salvo que fueran de primera necesidad y no tuvieran sustituto |
 | Resultado | Redujo el stock inmovilizado, acortó el tiempo de retorno de la inversión de las compras y aumentó la rotación mensual a nivel de empresa |
 | Uso en CV | Operaciones; logística; aprovisionamiento; mejora de procesos |
-| Precaución | Atribuir a Gustavo el diseño y la programación del sistema, así como la organización operativa local. No atribuirle las funciones de compra centralizada ni la relación con proveedores, que correspondían a CENCOSU o a los proveedores directos |
+| Precaución | Atribuir a Gustavo los pedidos diarios a la central y a proveedores directos, el diseño y la programación de los sistemas de pedido, la negociación con proveedores directos durante los tres primeros años y la organización operativa local. No atribuirle la definición de la política central de compras, la negociación centralizada posterior, las condiciones contractuales, el marketing ni las finanzas de CENCOSU. |
 
 ### HER-08 — Asignación y seguimiento de tareas operativas con Trello
 
@@ -182,6 +186,17 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Resultado | Sustituyó la distribución física recurrente de comunicaciones por una fuente centralizada y con acceso segmentado para Dirección, Administración y responsables operativos. Ahorró casi cuatro cajas de 500 folios al mes y permitió que los responsables consultaran la información de forma inmediata, sin esperar a la llegada al día siguiente mediante chóferes y valijas |
 | Uso en CV | Dirección; Administración; Operaciones; comunicación interna; gestión de la información |
 | Precaución | No atribuir a Gustavo la emisión de las comunicaciones de la central; su contribución fue el diseño, la automatización parcial y la gestión de acceso al sistema interno |
+
+### HER-10 — Cuadre de cajas y sistema de mejora en Excel
+
+| Elemento | Detalle |
+| --- | --- |
+| Contexto | Herfrailes S. L.; primer año de estancia y evolución posterior de la operativa de cajas |
+| Contribución inicial | Realizó cuadres de caja durante su primer año en la empresa. |
+| Mejora posterior | Diseñó un sistema en Excel para los cuadres de caja que mejoraba el cuadre final de todas las cajas. |
+| Resultado | Mejoró el proceso final de cuadre; no consta una métrica cuantificada. |
+| Uso en CV | Operaciones; tienda; control de caja |
+| Precaución | No presentar esta evidencia como tesorería, pagos, gestión bancaria, responsabilidad contable integral ni gestión genérica del flujo monetario. |
 
 ### GSC-01 — Adjudicación de plazas de profesorado
 
@@ -277,7 +292,7 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | 2020 en adelante | 3 | Sin cambios | — | Descenso hasta 9 M€ | Caída de ventas por la crisis del COVID y nueva competencia en la zona de influencia |
 | 2024 | 3 | 500 + 250 + 350 m² | 65 personas | 9 M€ | Cierre de la etapa en Herfrailes |
 
-Herfrailes S. L. era socio de CENCOSU S. L., titular de los derechos de explotación de la franquicia internacional SPAR en Gran Canaria. Cada tienda tenía dos responsables por turnos, que reportaban directamente a Gustavo. Las funciones de compras centralizadas, marketing, finanzas y relación con proveedores correspondían a CENCOSU o a los proveedores directos; no se atribuyen a Gustavo salvo cuando se indique expresamente.
+Herfrailes S. L. era socio de CENCOSU S. L., titular de los derechos de explotación de la franquicia internacional SPAR en Gran Canaria. Cada tienda tenía dos responsables por turnos, que reportaban directamente a Gustavo. Gustavo realizaba los pedidos diarios a CENCOSU y a proveedores directos, y diseñó sistemas automatizados de pedido para ambos circuitos. Durante los tres primeros años en Herfrailes negoció con proveedores directos; posteriormente, CENCOSU centralizó progresivamente más productos para obtener mayores márgenes y facilitar la distribución. La política central de compras, la negociación centralizada posterior, las condiciones contractuales, el marketing y las finanzas de CENCOSU no se le atribuyen.
 
 ## 5. Competencias y herramientas
 
@@ -331,13 +346,12 @@ La experiencia histórica puede aparecer en un CV cuando sea relevante, pero no 
 ### Títulos oficiales y formación profesional acreditada
 
 - **Título oficial de Graduado Escolar** — Ministerio de Educación; expedido en Las Palmas de Gran Canaria, 28 de octubre de 1980.
-- **Formación Profesional, Técnico Administrativo** — Instituto de Formación Profesional Santa María de Guía, Santa María de Guía (Gran Canaria) (septiembre de 1988–junio de 1989) 
 
 ### Estudios reglados no finalizados
 
 - Ingeniería Técnica en Telecomunicaciones — Universidad Politécnica de Las Palmas, Las Palmas de Gran Canaria (septiembre de 1983–junio de 1985; dos cursos), carrera no finalizada.
 - Ingeniería Técnica en Informática — Universidad Politécnica de Las Palmas, Las Palmas de Gran Canaria (septiembre de 1985–junio de 1986; un curso), carrera no finalizada.
-- Formación Profesional, Técnico Administrativo — Instituto de Formación Profesional Santa María de Guía, Santa María de Guía (Gran Canaria) (septiembre de 1988–junio de 1989).
+- Formación Profesional de Técnico Administrativo — Instituto de Formación Profesional Santa María de Guía, Santa María de Guía (Gran Canaria) (septiembre de 1988–junio de 1989). Cursó únicamente el primer año de los tres que componían la formación; no finalizada y sin titulación obtenida.
 
 ### Formación complementaria relevante
 
@@ -391,4 +405,4 @@ El historial registrado combina formación breve, bibliografía y práctica apli
 
 ---
 
-**Estado de la matriz:** base factual enriquecida a partir de la entrevista, con HER-01 a HER-09 y la escala agregada de Herfrailes. Lista para adaptar CV a una oferta concreta.
+**Estado de la matriz:** base factual enriquecida a partir de la entrevista, con HER-01 a HER-10 y la escala agregada de Herfrailes. Lista para adaptar CV a una oferta concreta.

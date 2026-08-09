@@ -1,94 +1,88 @@
 {
-  "schema_version": "1.0",
-  "id_candidatura": "CAND-2026-019",
-  "ruta_candidatura": "boveda-entrevista-profesional/busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia",
-  "entradas": {
-    "template_cv": "boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/TEMPLATE_CV_FORMATO.docx",
-    "template_carta": "boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/TEMPLATE_CARTA_PRESENTACION_FORMATO.docx",
-    "template_latex": "boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/TEMPLATE_CV_FORMATO.tex",
-    "foto": "boveda-entrevista-profesional/busqueda-empleo/foto-perfil.png"
+  "schema_id": "datos-generacion-cv",
+  "schema_version": "1.2",
+  "template_id": "TEMPLATE_DATOS_GENERACION_CV_v1.json",
+  "template_version": "1.2",
+  "tipo": "datos_generacion_cv",
+  "id": "datos-generacion-cv-CAND-2026-019",
+  "candidatura": {"id": "CAND-2026-019", "empresa": "ASIC CONSULTORES CANARIAS", "puesto_objetivo": "Responsable de Automatización e Inteligencia Artificial", "idioma_cv": "es"},
+  "generacion": {
+    "fecha": "2026-08-08", "sesion": "sesion-20260805-1757-job-up",
+    "playbook": {"id": "PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA", "version": "1.0.1"},
+    "guion_origen": "[[guion-adaptacion-cv]]", "evaluacion_gate_entrada": "[[evaluacion-gate-guion-cv-contenido]]",
+    "gate_entrada": "GATE-GUION-CV-CONTENIDO", "gate_salida_aplicable": "GATE-CONTENIDO-CV-COMPOSICION",
+    "fuentes_factuales": [{"id": "datos-core-busqueda", "ruta": "[[datos-core-busqueda]]", "fecha_lectura": "2026-08-08"}, {"id": "datos-privados-candidatura", "ruta": "[[datos-privados-candidatura]]", "fecha_lectura": "2026-08-08"}],
+    "spec_referencia": "SPEC-Arquitectura-modular-generación-candidatura-v0-4-0.md"
   },
-  "salidas": {
-    "cv_docx": "boveda-entrevista-profesional/busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia/cv.docx",
-    "cv_pdf": "boveda-entrevista-profesional/busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia/cv.pdf",
-    "carta_docx": "boveda-entrevista-profesional/busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia/carta-presentacion.docx",
-    "carta_pdf": "boveda-entrevista-profesional/busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia/carta-presentacion.pdf",
-    "cv_tex": "boveda-entrevista-profesional/busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia/cv.tex"
+  "contenido_cv": {
+    "encabezado": {
+      "nombre_completo": {"id_contenido": "C-001", "tipo": "nombre", "texto": "Gustavo Vega", "trazabilidad": {"modo": "dato_factual", "refs_guion": [], "ref_seccion_guion": null, "origen_factual": [{"fuente": "datos-privados-candidatura", "refs": ["Nombre", "Apellido 1"]}]}},
+      "unidades": [{"id_contenido": "C-002", "tipo": "titular", "orden": 1, "texto": "Automatización de procesos, datos y mejora operativa", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-001"], "ref_seccion_guion": "SEC-01", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-01", "HER-03", "HER-08"]}]}}],
+      "contacto": [{"id_contenido": "C-003", "tipo": "email", "orden": 1, "texto": "gusvegabol@gmail.com", "trazabilidad": {"modo": "dato_factual", "refs_guion": [], "ref_seccion_guion": null, "origen_factual": [{"fuente": "datos-privados-candidatura", "refs": ["Correo"]}]}}, {"id_contenido": "C-014", "tipo": "telefono", "orden": 2, "texto": "669 549 933", "trazabilidad": {"modo": "dato_factual", "refs_guion": [], "ref_seccion_guion": null, "origen_factual": [{"fuente": "datos-privados-candidatura", "refs": ["Teléfono"]}]}}]
+    },
+    "secciones": [
+      {"id_seccion": "SEC-01", "tipo": "perfil", "titulo_visible": "Perfil", "orden": 1, "bloques": [{"id_bloque": "B-001", "tipo": "texto", "orden": 1, "cabecera": [], "unidades": [
+        {"id_contenido": "C-004", "tipo": "parrafo", "orden": 1, "texto": "Profesional orientado a automatización factual de procesos, análisis de datos, previsión y mejora operativa mediante herramientas y sistemas acreditados.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-001"], "ref_seccion_guion": "SEC-01", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-01", "HER-03", "HER-08"]}]}}
+      ]}]},
+      {"id_seccion": "SEC-02", "tipo": "experiencia", "titulo_visible": "Automatización y datos", "orden": 2, "bloques": [{"id_bloque": "B-002", "tipo": "lista", "orden": 1, "cabecera": [], "unidades": [
+        {"id_contenido": "C-005", "tipo": "bullet", "orden": 1, "texto": "Diseñé una solución con programación propia, Trello y Notion para gestionar candidaturas, precontratación, incorporación y seguimiento; modelé datos y separé información personal y profesional.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-002"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-01"]}]}},
+        {"id_contenido": "C-006", "tipo": "bullet", "orden": 2, "texto": "Reduje el trabajo posterior a cada entrevista de 15–20 a 5 minutos y la elaboración de informes económicos en Excel de 20 a 3 minutos; la documentación de contratación y onboarding pasó a generación inmediata.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-003"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-01"]}]}},
+        {"id_contenido": "C-007", "tipo": "bullet", "orden": 3, "texto": "Diseñé una base de datos de ventas diarias y un algoritmo de pedido automático basado en ventas y factores operativos para estimar demanda y generar cantidades de pedido.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-004"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-03"]}]}},
+        {"id_contenido": "C-008", "tipo": "bullet", "orden": 4, "texto": "Programé un sistema de redistribución de stock entre tres tiendas según stock y rotación, reduciendo el stock inmovilizado y aumentando la rotación mensual de la empresa.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-005"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-07"]}]}}
+      ]}]},
+      {"id_seccion": "SEC-03", "tipo": "tecnologias", "titulo_visible": "Integración técnica", "orden": 3, "bloques": [{"id_bloque": "B-003", "tipo": "lista", "orden": 1, "cabecera": [], "unidades": [
+        {"id_contenido": "C-009", "tipo": "bullet", "orden": 1, "texto": "Desarrollé con VB.NET y la API de Trello una automatización parcial del seguimiento y la respuesta a tareas; los botones de la aplicación ejecutaban acciones en Trello.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-006"], "ref_seccion_guion": "SEC-03", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-08"]}]}},
+        {"id_contenido": "C-010", "tipo": "bullet", "orden": 2, "texto": "Implanté Trello para registrar y seguir tareas operativas; las interrupciones por llamadas pasaron a ser insignificantes, aun manteniendo un volumen diario de hasta 200 tareas pendientes de revisión.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-007"], "ref_seccion_guion": "SEC-03", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-08"]}]}}
+      ]}]},
+      {"id_seccion": "SEC-04", "tipo": "proyectos", "titulo_visible": "Evidencia técnica histórica", "orden": 4, "bloques": [{"id_bloque": "B-004", "tipo": "entrada", "orden": 1, "cabecera": [], "unidades": [
+        {"id_contenido": "C-011", "tipo": "parrafo", "orden": 1, "texto": "Creé para el área de Educación del Gobierno de Canarias un algoritmo de adjudicación de plazas de profesorado, validado por muestreo por equipos provinciales: el proceso pasó de aproximadamente una semana manual a 8 horas el primer año y a 2 horas el segundo, más 2–3 horas de comprobación.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-008"], "ref_seccion_guion": "SEC-04", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["GSC-01"]}]}}
+      ]}]},
+      {"id_seccion": "SEC-05", "tipo": "experiencia", "titulo_visible": "Trayectoria", "orden": 5, "bloques": [{"id_bloque": "B-005", "tipo": "entrada", "orden": 1, "cabecera": [
+        {"id_contenido": "C-012", "rol": "cargo", "orden": 1, "texto": "Director Ejecutivo | Herfrailes S. L. | 01/10/2011–03/10/2024", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-009"], "ref_seccion_guion": "SEC-05", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["4.Trayectoria profesional"]}]}}
+      ], "unidades": []}]},
+      {"id_seccion": "SEC-06", "tipo": "formacion", "titulo_visible": "Formación", "orden": 6, "bloques": [{"id_bloque": "B-006", "tipo": "entrada", "orden": 1, "cabecera": [], "unidades": [
+        {"id_contenido": "C-013", "tipo": "linea", "orden": 1, "texto": "Máster en Inteligencia Artificial con Certificación Universitaria, BIG school y Universidad Isabel I — en curso.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-012"], "ref_seccion_guion": "SEC-06", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["6.Formación en curso"]}]}}
+      ]}]}
+    ]
   },
-  "cv": {
-    "[NOMBRE]": "Gustavo Vega",
-    "[TITULAR]": "Automatización de procesos, análisis de datos y mejora operativa",
-    "[EMAIL]": "gusvegabol@gmail.com",
-    "[TELÉFONO]": "669 549 933",
-    "[LINKEDIN]": "linkedin.com/in/gusvegabol",
-    "[PERFIL PROFESIONAL]": "Profesional con trayectoria en dirección operativa y análisis de sistemas. He diseñado soluciones de automatización documental, algoritmos de previsión y herramientas de seguimiento para procesos administrativos y operativos. Combino experiencia en datos, indicadores y mejora iterativa; actualmente curso un Máster en Inteligencia Artificial certificado por la Universidad Isabel I.",
-    "[PROPUESTA DE VALOR]": "Aporto experiencia factual de automatización aplicada a documentación, tareas y operaciones, conectando datos operativos, reglas de negocio y resultados medibles.",
-    "[EXPERIENCIA 1 CABECERA]": "Herfrailes S. L. — Director Ejecutivo | 2011–2024",
-    "[EXPERIENCIA 1 DESCRIPCION]": "Diseñé una solución de automatización para candidaturas, contratación, incorporación y seguimiento con programación propia, Trello y Notion. Elaboré hojas de cálculo avanzadas, dashboards y bases de datos relacionales en Excel con datos de SQL Server y CSV; reduje informes económicos de 20 a 3 minutos y documentación de contratación y onboarding a generación inmediata.",
-    "[EXPERIENCIA 2 CABECERA]": "Herfrailes S. L. — Automatización operativa y análisis de datos | 2011–2024",
-    "[EXPERIENCIA 2 DESCRIPCION]": "Diseñé una base de datos de ventas diarias y un algoritmo de pedido que incorporaba estacionalidad, campañas y otros factores previsibles. Reduje un 30 % las caducidades y un 80 % los productos sin venta durante más de un mes, sin afectar a las ventas mediante reposición próxima al just-in-time.",
-    "[EXPERIENCIA 3 CABECERA]": "Herfrailes S. L. — Seguimiento de tareas con Trello | 2011–2024",
-    "[EXPERIENCIA 3 DESCRIPCION]": "Implanté Trello para asignar y seguir tareas operativas y desarrollé durante los tres últimos años una aplicación en VB.NET con la API de Trello para automatizar parcialmente su seguimiento y respuesta. Las instrucciones quedaron registradas y las interrupciones por llamadas pasaron a ser insignificantes, con hasta 200 tareas pendientes de revisión al día.",
-    "[EXPERIENCIA 4 CABECERA]": "General de Software de Canarias, S. A. U. — Analista programador | 2001–2009",
-    "[EXPERIENCIA 4 DESCRIPCION]": "Creé un algoritmo de adjudicación de plazas de profesorado para una población superior a 24.000 docentes. El proceso pasó de una semana manual a 8 horas el primer año y a 2 horas el segundo, con comprobación posterior por muestreo de equipos provinciales.",
-    "[EXPERIENCIA 5 CABECERA]": "",
-    "[EXPERIENCIA 5 DESCRIPCION]": "",
-    "[EXPERIENCIA 6 CABECERA]": "",
-    "[EXPERIENCIA 6 DESCRIPCION]": "",
-    "[COMPETENCIA 1]": "Automatización de procesos y análisis de requisitos",
-    "[COMPETENCIA 2]": "Modelado de datos, SQL Server, Excel avanzado y dashboards",
-    "[COMPETENCIA 3]": "VB.NET, APIs, previsión, control y KPIs",
-    "[COMPETENCIA 4]": "Mejora continua, documentación y trazabilidad",
-    "[FORMACION 1]": "Máster en Inteligencia Artificial con Certificación Universitaria — en curso",
-    "[FORMACION 2]": "Formación Profesional, Técnico Administrativo",
-    "[FORMACION 3]": "Power BI — formación y experiencia previa no reciente",
-    "[INFORMACION ADICIONAL]": "Castellano nativo. Inglés básico. Permiso B. Disponibilidad de incorporación entre 7 y 15 días."
-  },
-  "carta": {
-    "[NOMBRE]": "Gustavo Vega",
-    "[TITULAR]": "Automatización de procesos, análisis de datos y mejora operativa",
-    "[EMAIL]": "gusvegabol@gmail.com",
-    "[TELÉFONO]": "669 549 933",
-    "[LINKEDIN]": "linkedin.com/in/gusvegabol",
-    "[DESTINATARIO]": "ASIC CONSULTORES CANARIAS",
-    "[FECHA]": "31 de julio de 2026",
-    "[ASUNTO]": "Candidatura — Responsable de Automatización e Inteligencia Artificial",
-    "[SALUDO]": "Estimado equipo de ASIC CONSULTORES CANARIAS:",
-    "[APERTURA]": "Me interesa la posición de Responsable de Automatización e Inteligencia Artificial por su enfoque práctico en procesos, datos y mejora operativa.",
-    "[EVIDENCIA 1]": "En Herfrailes S. L. diseñé soluciones para automatizar documentación, informes y seguimiento; combiné programación propia, Trello y Notion, y elaboré dashboards y bases de datos relacionales en Excel con datos de SQL Server y CSV.",
-    "[EVIDENCIA 2]": "También desarrollé un algoritmo de pedido basado en datos de ventas y factores operativos, y una aplicación en VB.NET con la API de Trello para automatizar parcialmente el seguimiento de tareas. En una etapa anterior creé un algoritmo de adjudicación validado por muestreo para una población superior a 24.000 docentes.",
-    "[ENCAJE]": "Puedo aportar experiencia contrastada de automatización y mejora de procesos, así como una actualización profesional directamente alineada con la oferta: actualmente curso un Máster en Inteligencia Artificial certificado por la Universidad Isabel I.",
-    "[CIERRE]": "Agradecería la oportunidad de ampliar cómo esta experiencia puede contribuir a iniciativas de automatización, análisis y optimización en el proyecto.",
-    "[DESPEDIDA]": "Atentamente,",
-    "[FIRMA]": "Gustavo Vega"
-  },
-  "latex": {
-    "[NOMBRE]": "Gustavo Vega",
-    "[TITULAR]": "Automatización de procesos, análisis de datos y mejora operativa",
-    "[EMAIL]": "gusvegabol@gmail.com",
-    "[TELÉFONO]": "669 549 933",
-    "[LINKEDIN]": "linkedin.com/in/gusvegabol",
-    "[PERFIL PROFESIONAL]": "Profesional con trayectoria en dirección operativa y análisis de sistemas. He diseñado soluciones de automatización documental, algoritmos de previsión y herramientas de seguimiento para procesos administrativos y operativos. Combino experiencia en datos, indicadores y mejora iterativa; actualmente curso un Máster en Inteligencia Artificial certificado por la Universidad Isabel I.",
-    "[PROPUESTA DE VALOR]": "Aporto experiencia factual de automatización aplicada a documentación, tareas y operaciones, conectando datos operativos, reglas de negocio y resultados medibles.",
-    "[EXPERIENCIA 1 CABECERA]": "Herfrailes S. L. — Director Ejecutivo | 2011–2024",
-    "[EXPERIENCIA 1 DESCRIPCION]": "Diseñé una solución de automatización para candidaturas, contratación, incorporación y seguimiento con programación propia, Trello y Notion. Elaboré hojas de cálculo avanzadas, dashboards y bases de datos relacionales en Excel con datos de SQL Server y CSV; reduje informes económicos de 20 a 3 minutos y documentación de contratación y onboarding a generación inmediata.",
-    "[EXPERIENCIA 2 CABECERA]": "Herfrailes S. L. — Automatización operativa y análisis de datos | 2011–2024",
-    "[EXPERIENCIA 2 DESCRIPCION]": "Diseñé una base de datos de ventas diarias y un algoritmo de pedido que incorporaba estacionalidad, campañas y otros factores previsibles. Reduje un 30 % las caducidades y un 80 % los productos sin venta durante más de un mes, sin afectar a las ventas mediante reposición próxima al just-in-time.",
-    "[EXPERIENCIA 3 CABECERA]": "Herfrailes S. L. — Seguimiento de tareas con Trello | 2011–2024",
-    "[EXPERIENCIA 3 DESCRIPCION]": "Implanté Trello para asignar y seguir tareas operativas y desarrollé durante los tres últimos años una aplicación en VB.NET con la API de Trello para automatizar parcialmente su seguimiento y respuesta. Las instrucciones quedaron registradas y las interrupciones por llamadas pasaron a ser insignificantes, con hasta 200 tareas pendientes de revisión al día.",
-    "[EXPERIENCIA 4 CABECERA]": "General de Software de Canarias, S. A. U. — Analista programador | 2001–2009",
-    "[EXPERIENCIA 4 DESCRIPCION]": "Creé un algoritmo de adjudicación de plazas de profesorado para una población superior a 24.000 docentes. El proceso pasó de una semana manual a 8 horas el primer año y a 2 horas el segundo, con comprobación posterior por muestreo de equipos provinciales.",
-    "[EXPERIENCIA 5 CABECERA]": "",
-    "[EXPERIENCIA 5 DESCRIPCION]": "",
-    "[EXPERIENCIA 6 CABECERA]": "",
-    "[EXPERIENCIA 6 DESCRIPCION]": "",
-    "[COMPETENCIA 1]": "Automatización de procesos y análisis de requisitos",
-    "[COMPETENCIA 2]": "Modelado de datos, SQL Server, Excel avanzado y dashboards",
-    "[COMPETENCIA 3]": "VB.NET, APIs, previsión, control y KPIs",
-    "[COMPETENCIA 4]": "Mejora continua, documentación y trazabilidad",
-    "[FORMACION 1]": "Máster en Inteligencia Artificial con Certificación Universitaria — en curso",
-    "[FORMACION 2]": "Formación Profesional, Técnico Administrativo",
-    "[FORMACION 3]": "Power BI — formación y experiencia previa no reciente",
-    "[INFORMACION ADICIONAL]": "Castellano nativo. Inglés básico. Permiso B. Disponibilidad de incorporación entre 7 y 15 días."
+  "control": {
+    "datos_privados": {
+      "autorizacion": {"nombre": "incluir", "apellido_1": "incluir", "apellido_2": "omitir", "email": "incluir", "telefono": "incluir", "linkedin": "omitir", "ubicacion": "omitir", "fotografia": "incluir"},
+      "fecha_decision": "2026-08-08",
+      "decidido_por": "persona_responsable"
+    },
+    "cobertura_mapa": [
+      {"ref_guion": "M-001", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "dividida", "refs_contenido": ["C-002", "C-004"]},
+      {"ref_guion": "M-002", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-005"]},
+      {"ref_guion": "M-003", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-006"]},
+      {"ref_guion": "M-004", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-007"]},
+      {"ref_guion": "M-005", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-008"]},
+      {"ref_guion": "M-006", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-009"]},
+      {"ref_guion": "M-007", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-010"]},
+      {"ref_guion": "M-008", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-011"]},
+      {"ref_guion": "M-009", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-012"]},
+      {"ref_guion": "M-010", "presencia_origen": "omitir", "estado": "cumplida", "modo_materializacion": "omitida_por_guion", "refs_contenido": []},
+      {"ref_guion": "M-011", "presencia_origen": "omitir", "estado": "cumplida", "modo_materializacion": "omitida_por_guion", "refs_contenido": []},
+      {"ref_guion": "M-012", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-013"]},
+      {"ref_guion": "M-013", "presencia_origen": "omitir", "estado": "cumplida", "modo_materializacion": "omitida_por_guion", "refs_contenido": []}
+    ],
+    "cobertura_estrategica": [
+      {"prioridad": "Automatización documental y datos", "estado_origen": "cubierta", "refs_guion": ["M-002", "M-003"], "refs_contenido": ["C-005", "C-006"], "estado_materializacion": "cumplida"},
+      {"prioridad": "Algoritmo de previsión y pedido", "estado_origen": "cubierta", "refs_guion": ["M-004"], "refs_contenido": ["C-007"], "estado_materializacion": "cumplida"},
+      {"prioridad": "Stock y mejora operativa", "estado_origen": "cubierta", "refs_guion": ["M-005"], "refs_contenido": ["C-008"], "estado_materializacion": "cumplida"},
+      {"prioridad": "VB.NET y API de Trello parcial", "estado_origen": "cubierta", "refs_guion": ["M-006", "M-007"], "refs_contenido": ["C-009", "C-010"], "estado_materializacion": "cumplida"},
+      {"prioridad": "Algoritmo GSC-01", "estado_origen": "cubierta", "refs_guion": ["M-008"], "refs_contenido": ["C-011"], "estado_materializacion": "cumplida"},
+      {"prioridad": "FP no finalizada", "estado_origen": "no_requiere_presencia_directa", "refs_guion": ["M-011"], "refs_contenido": [], "estado_materializacion": "no_aplica"}
+    ],
+    "cobertura_continuidad": [{"ref_seccion_guion": "SEC-05", "estado": "cumplida", "refs_contenido": ["C-012"], "fuentes_factuales": [{"fuente": "datos-core-busqueda", "refs": ["4.Trayectoria profesional"]}]}],
+    "restricciones": [
+      {"id_restriccion": "R-ASIC-001", "elemento": "Automatización técnica", "riesgo": "Presentarla como automatización total o como herramientas no acreditadas", "refs_guion": ["M-006"], "refs_contenido": ["C-009"], "tratamiento_aplicado": "Se limita a VB.NET y la API de Trello, con automatización parcial.", "cumple": true},
+      {"id_restriccion": "R-ASIC-002", "elemento": "Formación en Inteligencia Artificial", "riesgo": "Presentarla como experiencia profesional", "refs_guion": ["M-012"], "refs_contenido": ["C-013"], "tratamiento_aplicado": "Se identifica expresamente como formación en curso.", "cumple": true},
+      {"id_restriccion": "R-ASIC-003", "elemento": "Estudios no finalizados", "riesgo": "Presentarlos como titulaciones", "refs_guion": ["M-010", "M-011"], "refs_contenido": [], "tratamiento_aplicado": "Se omiten conforme al guion.", "cumple": true}
+    ],
+    "lexico": {"usos_condicionados": [{"termino": "inteligencia artificial", "refs_guion": ["M-012"], "refs_contenido": ["C-013"], "cumple_limite": true}], "terminos_prohibidos_detectados": []},
+    "primer_escaneo": {"resultado": "apto", "perfil_identificable": true, "encaje_visible": true, "senales_fuertes_visibles": true, "refs_contenido_dominantes": ["C-005", "C-006", "C-007"]},
+    "validaciones": {"idioma_respetado": true, "solo_cv": true, "sin_placeholders": true, "fidelidad_guion": true, "cobertura_incluir_completa": true, "cobertura_estrategica_completa": true, "sin_contenido_omitido": true, "obligatorios_presentes": true, "peso_alto_respetado": true, "ubicacion_y_orden_respetados": true, "continuidad_limitada_a_lo_autorizado": true, "seniority_respetado": true, "tono_respetado": true, "convencion_gramatical_respetada": true, "restricciones_respetadas": true, "lexico_respetado": true, "sin_keyword_stuffing": true, "duplicacion_controlada": true, "trazabilidad_completa": true, "primer_escaneo_textual_apto": true, "sin_decisiones_de_composicion": true},
+    "incidencias": []
   }
 }

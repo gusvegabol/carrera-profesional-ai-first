@@ -7,8 +7,21 @@ puesto_objetivo: [PUESTO_O_AMBITO_OBJETIVO]
 decision_estrategica: [DECISION]
 estado: [en_preparacion / detenida / pendiente_de_aprobacion / aprobada / enviada / rechazada / duplicada / fallida]
 presentada: false
+paquete_presentacion: pendiente_de_preparacion
+gate_candidatura_presentacion: no_abierto
 fecha_creacion: [AAAA-MM-DD]
 sesion_relacionada: [SESION_O_NO_ASIGNADA]
+autorizacion_datos_cv:
+  nombre: pendiente
+  apellido_1: pendiente
+  apellido_2: pendiente
+  email: pendiente
+  telefono: pendiente
+  linkedin: pendiente
+  ubicacion: pendiente
+  fotografia: pendiente
+  fecha_decision:
+  decidido_por:
 ---
 # Ficha de candidatura — [ID_CANDIDATURA]
 
@@ -24,6 +37,25 @@ sesion_relacionada: [SESION_O_NO_ASIGNADA]
 * **Sesión relacionada:** [SESION_O_NO_ASIGNADA]
 * **Artefacto de análisis de origen:** [ENLACE]
 * **Decisión estratégica heredada:** `[DECISION]`
+
+### 1.1 Autorización de datos privados para este CV
+
+La persona responsable debe decidir al iniciar la candidatura qué datos pueden aparecer en el CV. Cada campo admite
+`incluir`, `omitir` o `pendiente`. Cualquier campo `pendiente` bloquea la generación del CV.
+
+| Campo | Decisión |
+| --- | --- |
+| Nombre | `incluir / omitir / pendiente` |
+| Apellido 1 | `incluir / omitir / pendiente` |
+| Apellido 2 | `incluir / omitir / pendiente` |
+| Email | `incluir / omitir / pendiente` |
+| Teléfono | `incluir / omitir / pendiente` |
+| LinkedIn | `incluir / omitir / pendiente` |
+| Ubicación | `incluir / omitir / pendiente` |
+| Fotografía | `incluir / omitir / pendiente` |
+
+**Fecha de decisión:** [AAAA-MM-DD]
+**Decidido por:** [PERSONA_RESPONSABLE]
 
 ## 2. Decisión y estrategia heredada
 
@@ -104,6 +136,13 @@ Si no existen:
 * **Veredicto disponible:** [sí / no]
 * **Enlace:** [ENLACE_O_NO_DISPONIBLE]
 * **Decisión del veredicto:** [DECISION_O_NO_DISPONIBLE]
+* **Revisión humana del CV:** [pendiente / aprobada_para_veredicto / requiere_correccion]
+* **Huella del CV revisado:** [SHA-256_O_NO_DISPONIBLE]
+* **Recomendación de `GATE-VEREDICTO-CV`:** [aprobar / no_aprobar / no_emitida]
+* **Decisión humana de `GATE-VEREDICTO-CV`:** [pendiente / aprobado / bloqueado]
+* **Paquete de presentación:** [pendiente_de_preparacion / incompleto / listo_para_gate / presentado]
+* **Enlace al paquete:** [ENLACE_O_NO_DISPONIBLE]
+* **Estado de `GATE-CANDIDATURA-PRESENTACION`:** [no_abierto / pendiente / aprobado / bloqueado]
 
 > La decisión del veredicto no sustituye la decisión estratégica de la candidatura.
 
@@ -116,9 +155,11 @@ Si no existen:
 | CV DOCX                      | [ESTADO]                                                                                | [RUTA_O_PENDIENTE]   |
 | CV PDF                       | [ESTADO]                                                                                | [RUTA_O_PENDIENTE]   |
 | CV TEX                       | [ESTADO]                                                                                | [RUTA_O_PENDIENTE]   |
+| Revisión humana del CV       | [pendiente / completada / requiere_correccion]                                          | [RUTA_O_PENDIENTE]   |
 | Carta DOCX                   | [ESTADO]                                                                                | [RUTA_O_PENDIENTE]   |
 | Carta PDF                    | [ESTADO]                                                                                | [RUTA_O_PENDIENTE]   |
 | Veredicto final del CV       | [ESTADO]                                                                                | [ENLACE_O_PENDIENTE] |
+| Paquete de presentación      | [pendiente_de_preparacion / incompleto / listo_para_gate / presentado]                 | [ENLACE_O_PENDIENTE] |
 | Informe empresa / entrevista | [ESTADO / no_aplica]                                                                    | [ENLACE_O_PENDIENTE] |
 
 > Añadir nuevos artefactos operativos si aparecen. No incluir capturas ni archivos internos de control.
@@ -137,3 +178,8 @@ Si no existen:
 * [ ] Los enlaces existentes no están rotos.
 * [ ] La ficha no duplica contenido completo de análisis, guion, CV, carta o veredicto.
 * [ ] La próxima fase está claramente identificada.
+* [ ] Si existe CV generado, la revisión humana y su huella están registradas antes del veredicto.
+* [ ] `GATE-VEREDICTO-CV` conserva una decisión humana separada y valida únicamente el CV.
+* [ ] El paquete de presentación identifica el canal y los artefactos requeridos.
+* [ ] `GATE-CANDIDATURA-PRESENTACION` no se abre mientras falte un artefacto requerido.
+* [ ] Ninguna aprobación de gate cambia `presentada` sin evidencia real de envío.

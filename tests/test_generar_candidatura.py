@@ -150,8 +150,6 @@ class GeneratorContractTests(unittest.TestCase):
             {
                 "cv_docx": route / "cv.docx",
                 "cv_pdf": route / "cv.pdf",
-                "carta_docx": route / "carta-presentacion.docx",
-                "carta_pdf": route / "carta-presentacion.pdf",
                 "cv_tex": route / "cv.tex",
             },
         )
@@ -430,8 +428,7 @@ class GeneratorContractTests(unittest.TestCase):
             self.assertEqual(destination.read_bytes(), b"old")
             self.assertEqual(json.loads((execution / "manifest.json").read_text(encoding="utf-8"))["phase"], "restaurado")
 
-    @unittest.skipUnless(Path(r"C:\Program Files\LibreOffice\program\soffice.com").is_file(), "LibreOffice no está instalado")
-    def test_cli_integration_generates_and_publishes_five_artifacts(self):
+    def test_cli_rejects_historical_contract_1_0(self):
         root = Path(__file__).resolve().parents[1]
         source_templates = root / "boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas"
         source_photo = root / "boveda-entrevista-profesional/busqueda-empleo/foto-perfil.png"
@@ -480,28 +477,9 @@ class GeneratorContractTests(unittest.TestCase):
             (script_dir / ".env").write_text(f"RUTA_PROYECTO={fixture}\nSOFFICE_PATH=C:\\Program Files\\LibreOffice\\program\\soffice.com\n", encoding="utf-8")
             with mock.patch("generar_candidatura.SCRIPT_DIR", script_dir):
                 result = main(["boveda-entrevista-profesional/busqueda-empleo/candidaturas/CAND-2026-999-fixture/datos-generacion.json"])
-            self.assertEqual(result, 0)
+            self.assertEqual(result, 1)
             for name in ("cv.docx", "cv.pdf", "carta-presentacion.docx", "carta-presentacion.pdf", "cv.tex"):
-                self.assertTrue((candidate / name).is_file(), name)
-            from pypdfium2 import PdfDocument
-            for name in ("cv.pdf", "carta-presentacion.pdf"):
-                pdf = PdfDocument(str(candidate / name))
-                try:
-                    bitmap = pdf[0].render(scale=1)
-                    self.assertGreater(bitmap.width, 0)
-                    self.assertGreater(bitmap.height, 0)
-                finally:
-                    pdf.close()
-            execution_parent = fixture / ".tmp/job-up-generador/CAND-2026-999-fixture"
-            self.assertFalse(execution_parent.exists() and any(execution_parent.iterdir()))
-            # Simular el único paso humano posterior a la generación: aprobar
-            # los documentos y dejar la candidatura preparada para presentar.
-            ficha = candidate / "candidatura.md"
-            ficha.write_text(ficha.read_text(encoding="utf-8").replace("estado: en_preparacion", "estado: pendiente_de_aprobacion"), encoding="utf-8")
-            seguimiento = tracking / "seguimiento-candidaturas.md"
-            seguimiento.write_text(seguimiento.read_text(encoding="utf-8").replace("| en_preparacion | false |", "| pendiente_de_aprobacion | false |"), encoding="utf-8")
-            self.assertIn("estado: pendiente_de_aprobacion", ficha.read_text(encoding="utf-8"))
-            self.assertIn("| pendiente_de_aprobacion | false |", seguimiento.read_text(encoding="utf-8"))
+                self.assertFalse((candidate / name).exists(), name)
 
     def test_latex_removes_empty_experience_lines_without_blank_lines(self):
         template = (

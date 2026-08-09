@@ -2,7 +2,7 @@
 id: datos-privados-candidatura
 titulo: Datos Privados para Candidaturas
 fecha_creacion: 2026-07-21
-fecha_actualizacion: 2026-07-23
+fecha_actualizacion: 2026-08-08
 estado: plantilla
 tipo: datos_privados
 version: "1.0.0"
@@ -13,14 +13,16 @@ fecha_version: 2026-07-29
 
 | Campo                                   | Dato                                                          |
 | --------------------------------------- | ------------------------------------------------------------- |
-| Nombre completo                         | Gustavo Vega                                                  |
+| Nombre                                   | Gustavo                                                       |
+| Apellido 1                               | Vega                                                          |
+| Apellido 2                               | Bolaños                                                       |
 | Correo                                  | gusvegabol@gmail.com                                          |
 | Teléfono                                | 669549933                                                     |
 | Localidad                               |                                                               |
 | Enlace profesional                      | www.linkedin.com/in/gusvegabol                                |
 | Foto                                    | boveda-entrevista-profesional/busqueda-empleo/foto-perfil.png |
 | Disponibilidad                          |                                                               |
-| Consentimiento de uso para candidaturas |                                                               |
+| Consentimiento de uso para candidaturas | Se decide por candidatura mediante `autorizacion_datos_cv`    |
 
 > **Regla de uso:** estos datos no se copian a [[datos-core-busqueda]] ni se usan fuera de una candidatura aprobada.
 

@@ -1,0 +1,29 @@
+{
+  "schema_id": "datos-generacion-cv",
+  "schema_version": "1.2",
+  "candidatura": {"id": "CAND-2026-019", "empresa": "ASIC", "puesto_objetivo": "Responsable de Automatización", "idioma_cv": "es"},
+  "generacion": {"fuentes_factuales": [{"id": "CORE", "ruta": "fixture", "fecha_lectura": "2026-08-06"}]},
+  "contenido_cv": {
+    "encabezado": {"nombre_completo": {"id_contenido": "C-001", "texto": "Nombre de prueba", "trazabilidad": {"modo": "dato_factual", "refs_guion": [], "ref_seccion_guion": null, "origen_factual": [{"fuente": "CORE", "refs": ["CONTACTO-01"]}]}}},
+    "secciones": [
+      {"id_seccion": "SEC-01", "titulo_visible": "Perfil", "orden": 1, "bloques": [{"id_bloque": "B-001", "orden": 1, "cabecera": [], "unidades": [{"id_contenido": "C-002", "orden": 1, "texto": "Automatización factual de procesos y datos", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-001"], "ref_seccion_guion": "SEC-01", "origen_factual": [{"fuente": "CORE", "refs": ["HER-01"]}]}}]}]},
+      {"id_seccion": "SEC-02", "titulo_visible": "Resultados", "orden": 2, "bloques": [{"id_bloque": "B-002", "orden": 1, "cabecera": [], "unidades": [
+        {"id_contenido": "C-003", "orden": 1, "texto": "Automatización documental, informes y datos", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-002"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "CORE", "refs": ["HER-01"]}]}},
+        {"id_contenido": "C-004", "orden": 2, "texto": "Reducción del trabajo posterior de 15–20 a 5 minutos", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-003"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "CORE", "refs": ["HER-01"]}]}},
+        {"id_contenido": "C-005", "orden": 3, "texto": "Algoritmo de previsión y pedido basado en ventas", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-004"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "CORE", "refs": ["HER-03"]}]}}
+      ]}]},
+      {"id_seccion": "SEC-03", "titulo_visible": "Integración", "orden": 3, "bloques": [{"id_bloque": "B-003", "orden": 1, "cabecera": [], "unidades": [{"id_contenido": "C-006", "orden": 1, "texto": "Automatización parcial del seguimiento con VB.NET y API de Trello", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-006"], "ref_seccion_guion": "SEC-03", "origen_factual": [{"fuente": "CORE", "refs": ["HER-08"]}]}}]}]},
+      {"id_seccion": "SEC-04", "titulo_visible": "Evidencia técnica", "orden": 4, "bloques": [{"id_bloque": "B-004", "orden": 1, "cabecera": [], "unidades": [{"id_contenido": "C-007", "orden": 1, "texto": "Algoritmo GSC-01 validado por muestreo", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-008"], "ref_seccion_guion": "SEC-04", "origen_factual": [{"fuente": "CORE", "refs": ["GSC-01"]}]}}]}]},
+      {"id_seccion": "SEC-05", "titulo_visible": "Trayectoria", "orden": 5, "bloques": [{"id_bloque": "B-005", "orden": 1, "cabecera": [], "unidades": [{"id_contenido": "C-008", "orden": 1, "texto": "Cargo histórico y periodo de Herfrailes", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-009"], "ref_seccion_guion": "SEC-05", "origen_factual": [{"fuente": "CORE", "refs": ["HER-01"]}]}}, {"id_contenido": "C-009", "orden": 2, "texto": "Trayectoria anterior resumida", "trazabilidad": {"modo": "continuidad", "refs_guion": [], "ref_seccion_guion": "SEC-05", "origen_factual": [{"fuente": "CORE", "refs": ["HIST-01"]}]}}]}]},
+      {"id_seccion": "SEC-06", "titulo_visible": "Formación", "orden": 6, "bloques": [{"id_bloque": "B-006", "orden": 1, "cabecera": [], "unidades": [{"id_contenido": "C-010", "orden": 1, "texto": "Formación en IA en curso", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-012"], "ref_seccion_guion": "SEC-06", "origen_factual": [{"fuente": "CORE", "refs": ["FORM-01"]}]}}]}]}
+    ]
+  },
+  "control": {
+    "cobertura_mapa": [
+      {"ref_guion": "M-001", "estado": "cumplida", "refs_contenido": ["C-002"]}, {"ref_guion": "M-002", "estado": "cumplida", "refs_contenido": ["C-003"]}, {"ref_guion": "M-003", "estado": "cumplida", "refs_contenido": ["C-004"]}, {"ref_guion": "M-004", "estado": "cumplida", "refs_contenido": ["C-005"]}, {"ref_guion": "M-006", "estado": "cumplida", "refs_contenido": ["C-006"]}, {"ref_guion": "M-008", "estado": "cumplida", "refs_contenido": ["C-007"]}, {"ref_guion": "M-009", "estado": "cumplida", "refs_contenido": ["C-008"]}, {"ref_guion": "M-010", "estado": "cumplida", "refs_contenido": []}, {"ref_guion": "M-011", "estado": "cumplida", "refs_contenido": []}, {"ref_guion": "M-012", "estado": "cumplida", "refs_contenido": ["C-010"]}
+    ],
+    "restricciones": [{"id_restriccion": "R-IA", "refs_guion": ["M-001"], "refs_contenido": ["C-002"], "cumple": true}, {"id_restriccion": "R-TEC", "refs_guion": ["M-006"], "refs_contenido": ["C-006"], "cumple": true}],
+    "lexico": {"usos_condicionados": [{"termino": "IA", "refs_guion": ["M-012"], "refs_contenido": ["C-010"], "cumple_limite": true}], "terminos_prohibidos_detectados": []},
+    "validaciones": {"solo_cv": true, "trazabilidad_completa": true, "sin_decisiones_de_composicion": true}
+  }
+}

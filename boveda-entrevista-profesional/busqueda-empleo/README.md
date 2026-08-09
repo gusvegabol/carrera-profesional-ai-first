@@ -8,8 +8,8 @@ una oportunidad concreta en un paquete documental revisable por la persona
 candidata, sin enviar candidaturas ni contactar con empresas.
 
 Job-up cubre el análisis de ofertas, la selección factual, la preparación de
-CV, cartas y demás artefactos, el seguimiento y la entrega en
-`pendiente_de_aprobacion`. No sustituye la entrevista metodológica ni amplía
+CV, cartas y demás artefactos, el seguimiento y la preparación del paquete de
+presentación. No sustituye la entrevista metodológica ni amplía
 su alcance a investigación de empresas, networking o relaciones profesionales.
 
 ### Límites de trabajo
@@ -61,7 +61,7 @@ autoriza por sí sola la creación de una sesión PCS.
 ### Mapa de carpetas y enlaces canónicos
 
 - [Fuentes](fuentes/): [datos core](fuentes/datos-core-busqueda.md) y [datos privados de candidatura](fuentes/datos-privados-candidatura.md).
-- [Proceso y plantillas](proceso/plantillas/): [análisis de oferta](proceso/plantillas/TEMPLATE_ANALISIS_OFERTA.md), [ficha de candidatura](proceso/plantillas/TEMPLATE_CANDIDATURA.md), [guion de adaptación](proceso/plantillas/TEMPLATE_GUION_ADAPTACION_CV.md) y [veredicto final](proceso/plantillas/TEMPLATE_VEREDICTO_FINAL_CV.md).
+- [Proceso y plantillas](proceso/plantillas/): [análisis de oferta](proceso/plantillas/TEMPLATE_ANALISIS_OFERTA.md), [ficha de candidatura](proceso/plantillas/TEMPLATE_CANDIDATURA.md), [guion de adaptación](proceso/plantillas/TEMPLATE_GUION_ADAPTACION_CV.md), [revisión humana del CV](../../docs/ideas-y-debates/mejoras-job-up/TEMPLATE_REVISION_HUMANA_CV.md), [veredicto CV-only](../../docs/ideas-y-debates/mejoras-job-up/TEMPLATE_VEREDICTO_FINAL_CV.md) y [paquete de presentación](../../docs/ideas-y-debates/mejoras-job-up/TEMPLATE_PAQUETE_PRESENTACION.md).
 - [Seguimiento](seguimiento/seguimiento-candidaturas.md): estados, fechas, documentos y bloqueos.
 - [Candidaturas](candidaturas/): expedientes concretos y sus artefactos.
 - [Presentación espontánea](presentacion-espontanea/README.md): materiales no vinculados a una oferta.
@@ -73,9 +73,10 @@ autoriza por sí sola la creación de una sesión PCS.
 2. Resolver una única sesión Job-up abierta; ante ambigüedad, pedir elección.
 3. Analizar la oferta y seleccionar un perfil, evidencias y logros respaldados.
 4. Aplicar la compuerta de privacidad antes de consultar datos privados.
-5. Preparar los documentos y completar el veredicto final.
-6. Actualizar la ficha y el seguimiento de la candidatura.
-7. Entregar el paquete en `pendiente_de_aprobacion`, sin enviar ni contactar.
+5. Preparar el CV y completar `GATE-VEREDICTO-CV`.
+6. Preparar `paquete-presentacion.md` y resolver el canal y sus artefactos.
+7. Abrir `GATE-CANDIDATURA-PRESENTACION` solo cuando el paquete esté completo.
+8. Actualizar la ficha y el seguimiento; no enviar ni contactar sin instrucción.
 
 ### Matriz de artefactos
 
@@ -84,10 +85,11 @@ autoriza por sí sola la creación de una sesión PCS.
 | Análisis de oferta | Obligatorio | No aplica |
 | Ficha de candidatura | Obligatoria | Según destinatario concreto |
 | Guion de adaptación | Obligatorio | Selección factual general |
-| Veredicto final | Obligatorio antes de aprobar | Revisión proporcional |
+| Veredicto CV-only | Obligatorio antes de preparar el paquete | Revisión proporcional |
+| Paquete de presentación | Obligatorio antes de `GATE-CANDIDATURA-PRESENTACION` | Según canal |
 | CV DOCX y PDF | Obligatorios | Base obligatoria |
 | CV LaTeX | Obligatorio | Previsto para futuras versiones |
-| Carta DOCX y PDF | Obligatorias | Solo si la solicita el destinatario |
+| Carta DOCX y PDF | Según el canal | Solo si la solicita el destinatario |
 | Email de presentación | Según el canal | Base obligatoria |
 | Informe de empresa o preparación de entrevista | Solo si se genera | Solo si se genera |
 

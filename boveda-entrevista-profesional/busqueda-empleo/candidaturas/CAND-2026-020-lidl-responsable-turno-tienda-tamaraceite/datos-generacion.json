@@ -1,0 +1,123 @@
+{
+  "schema_id": "datos-generacion-cv",
+  "schema_version": "1.2",
+  "template_id": "TEMPLATE_DATOS_GENERACION_CV_v1.json",
+  "template_version": "1.2",
+  "tipo": "datos_generacion_cv",
+  "id": "datos-generacion-cv-CAND-2026-020",
+  "candidatura": {
+    "id": "CAND-2026-020",
+    "empresa": "Lidl Supermercados SAU",
+    "puesto_objetivo": "Responsable de turno Tienda 40h Tamaraceite",
+    "idioma_cv": "es"
+  },
+  "generacion": {
+    "fecha": "2026-08-08",
+    "sesion": "sesion-20260805-1757-job-up",
+    "playbook": {"id": "PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA", "version": "1.0.1"},
+    "guion_origen": "[[guion-adaptacion-cv]]",
+    "evaluacion_gate_entrada": "[[evaluacion-gate-guion-cv-contenido]]",
+    "gate_entrada": "GATE-GUION-CV-CONTENIDO",
+    "gate_salida_aplicable": "GATE-CONTENIDO-CV-COMPOSICION",
+    "fuentes_factuales": [{
+      "id": "datos-core-busqueda",
+      "ruta": "[[datos-core-busqueda]]",
+      "fecha_lectura": "2026-08-08"
+    }, {
+      "id": "datos-privados-candidatura",
+      "ruta": "[[datos-privados-candidatura]]",
+      "fecha_lectura": "2026-08-08"
+    }],
+    "spec_referencia": "SPEC-Arquitectura-modular-generación-candidatura-v0-4-0.md"
+  },
+  "contenido_cv": {
+    "encabezado": {
+      "nombre_completo": {
+        "id_contenido": "C-001",
+        "tipo": "nombre",
+        "texto": "Gustavo Vega",
+        "trazabilidad": {"modo": "dato_factual", "refs_guion": [], "ref_seccion_guion": null, "origen_factual": [{"fuente": "datos-privados-candidatura", "refs": ["Nombre", "Apellido 1"]}]}
+      },
+      "unidades": [{
+        "id_contenido": "C-002", "tipo": "titular", "orden": 1,
+        "texto": "Operaciones de supermercados | Pedidos, stock y mejora de procesos",
+        "trazabilidad": {"modo": "mapa", "refs_guion": ["M-001"], "ref_seccion_guion": "SEC-01", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-03", "HER-07"]}]}
+      }],
+      "contacto": [{
+        "id_contenido": "C-003", "tipo": "email", "orden": 1, "texto": "gusvegabol@gmail.com",
+        "trazabilidad": {"modo": "dato_factual", "refs_guion": [], "ref_seccion_guion": null, "origen_factual": [{"fuente": "datos-privados-candidatura", "refs": ["Correo"]}]}
+      }, {
+        "id_contenido": "C-014", "tipo": "telefono", "orden": 2, "texto": "669 549 933",
+        "trazabilidad": {"modo": "dato_factual", "refs_guion": [], "ref_seccion_guion": null, "origen_factual": [{"fuente": "datos-privados-candidatura", "refs": ["Teléfono"]}]}
+      }]
+    },
+    "secciones": [
+      {
+        "id_seccion": "SEC-01", "tipo": "perfil", "titulo_visible": "Perfil", "orden": 1,
+        "bloques": [{"id_bloque": "B-001", "tipo": "texto", "orden": 1, "cabecera": [], "unidades": [
+          {"id_contenido": "C-004", "tipo": "parrafo", "orden": 1, "texto": "Profesional de operaciones de supermercados con experiencia en previsión de ventas, pedidos, stock, rotación y mejora de procesos entre tiendas.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-001"], "ref_seccion_guion": "SEC-01", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-03", "HER-07"]}]}},
+          {"id_contenido": "C-005", "tipo": "linea", "orden": 2, "texto": "Disponibilidad para turnos rotativos de mañana o tarde.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-011"], "ref_seccion_guion": "SEC-01", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["1.Turnos rotativos"]}]}}
+        ]}]
+      },
+      {
+        "id_seccion": "SEC-02", "tipo": "experiencia", "titulo_visible": "Experiencia operativa relevante", "orden": 2,
+        "bloques": [{"id_bloque": "B-002", "tipo": "lista", "orden": 1, "cabecera": [], "unidades": [
+          {"id_contenido": "C-006", "tipo": "bullet", "orden": 1, "texto": "Diseñé una base de datos de ventas diarias y un algoritmo de pedido automático para prever demanda y generar pedidos diarios a la central de compras.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-002"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-03"]}]}},
+          {"id_contenido": "C-007", "tipo": "bullet", "orden": 2, "texto": "Reduje un 30 % las caducidades y un 80 % los productos sin venta durante más de un mes mediante reposición próxima al just-in-time, sin afectar a las ventas.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-003"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-03"]}]}},
+          {"id_contenido": "C-008", "tipo": "bullet", "orden": 3, "texto": "Programé un sistema de redistribución de stock entre tres tiendas según stock y rotación, con un segundo ciclo diario para productos centralizados y reposición el mismo día.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-004"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-07"]}]}},
+          {"id_contenido": "C-009", "tipo": "bullet", "orden": 4, "texto": "Reorganicé el trabajo en equipos polivalentes por tienda para que caja, reposición y secciones de frescos se apoyaran según la carga de trabajo.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-005"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-04"]}]}},
+          {"id_contenido": "C-010", "tipo": "bullet", "orden": 5, "texto": "Implanté Trello para asignar, registrar y seguir tareas operativas de responsables de tienda y de sección; revisaba las tareas que asignaba y ejecutaba las que tenía asignadas personalmente.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-006"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-08"]}]}},
+          {"id_contenido": "C-011", "tipo": "bullet", "orden": 6, "texto": "Realicé cuadres de caja durante mi primer año y diseñé posteriormente un sistema en Excel que mejoró el proceso final de cuadre de todas las cajas.", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-007"], "ref_seccion_guion": "SEC-02", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["HER-10"]}]}}
+        ]}]
+      },
+      {
+        "id_seccion": "SEC-03", "tipo": "experiencia", "titulo_visible": "Trayectoria", "orden": 3,
+        "bloques": [{"id_bloque": "B-003", "tipo": "entrada", "orden": 1, "cabecera": [
+          {"id_contenido": "C-012", "rol": "cargo", "orden": 1, "texto": "Director Ejecutivo | Herfrailes S. L. | 01/10/2011–03/10/2024", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-008"], "ref_seccion_guion": "SEC-03", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["4.Trayectoria profesional"]}]}}
+        ], "unidades": []}]
+      },
+      {
+        "id_seccion": "SEC-04", "tipo": "formacion", "titulo_visible": "Formación", "orden": 4,
+        "bloques": [{"id_bloque": "B-004", "tipo": "entrada", "orden": 1, "cabecera": [], "unidades": [
+          {"id_contenido": "C-013", "tipo": "linea", "orden": 1, "texto": "Bachillerato y COU | IES Saulo Torón, Gáldar", "trazabilidad": {"modo": "mapa", "refs_guion": ["M-009"], "ref_seccion_guion": "SEC-04", "origen_factual": [{"fuente": "datos-core-busqueda", "refs": ["6.Bachillerato y COU"]}]}}
+        ]}]
+      }
+    ]
+  },
+  "control": {
+    "datos_privados": {
+      "autorizacion": {"nombre": "incluir", "apellido_1": "incluir", "apellido_2": "omitir", "email": "incluir", "telefono": "incluir", "linkedin": "omitir", "ubicacion": "omitir", "fotografia": "incluir"},
+      "fecha_decision": "2026-08-08",
+      "decidido_por": "persona_responsable"
+    },
+    "cobertura_mapa": [
+      {"ref_guion": "M-001", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "dividida", "refs_contenido": ["C-002", "C-004"]},
+      {"ref_guion": "M-002", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-006"]},
+      {"ref_guion": "M-003", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-007"]},
+      {"ref_guion": "M-004", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-008"]},
+      {"ref_guion": "M-005", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-009"]},
+      {"ref_guion": "M-006", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-010"]},
+      {"ref_guion": "M-007", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-011"]},
+      {"ref_guion": "M-008", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-012"]},
+      {"ref_guion": "M-009", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-013"]},
+      {"ref_guion": "M-010", "presencia_origen": "omitir", "estado": "cumplida", "modo_materializacion": "omitida_por_guion", "refs_contenido": []},
+      {"ref_guion": "M-011", "presencia_origen": "incluir", "estado": "cumplida", "modo_materializacion": "directa", "refs_contenido": ["C-005"]},
+      {"ref_guion": "M-012", "presencia_origen": "omitir", "estado": "cumplida", "modo_materializacion": "omitida_por_guion", "refs_contenido": []}
+    ],
+    "cobertura_estrategica": [
+      {"prioridad": "Operación de supermercados", "estado_origen": "cubierta", "refs_guion": ["M-001", "M-002", "M-004"], "refs_contenido": ["C-004", "C-006", "C-008"], "estado_materializacion": "cumplida"},
+      {"prioridad": "Resultados de rotación", "estado_origen": "cubierta", "refs_guion": ["M-003"], "refs_contenido": ["C-007"], "estado_materializacion": "cumplida"},
+      {"prioridad": "Equipos, tareas y caja", "estado_origen": "cubierta", "refs_guion": ["M-005", "M-006", "M-007"], "refs_contenido": ["C-009", "C-010", "C-011"], "estado_materializacion": "cumplida"},
+      {"prioridad": "FP no finalizada", "estado_origen": "no_requiere_presencia_directa", "refs_guion": ["M-010"], "refs_contenido": [], "estado_materializacion": "no_aplica"}
+    ],
+    "cobertura_continuidad": [{"ref_seccion_guion": "SEC-03", "estado": "cumplida", "refs_contenido": ["C-012"], "fuentes_factuales": [{"fuente": "datos-core-busqueda", "refs": ["4.Trayectoria profesional"]}]}],
+    "restricciones": [
+      {"id_restriccion": "R-LID-001", "elemento": "Cuadres de caja", "riesgo": "Extender la experiencia a tesorería o banca", "refs_guion": ["M-007"], "refs_contenido": ["C-011"], "tratamiento_aplicado": "Se limita al cuadre de cajas y a la mejora del proceso con Excel.", "cumple": true},
+      {"id_restriccion": "R-LID-002", "elemento": "FP de Técnico Administrativo no finalizada", "riesgo": "Presentarla como titulación", "refs_guion": ["M-010"], "refs_contenido": [], "tratamiento_aplicado": "Se omite del contenido conforme al guion.", "cumple": true}
+    ],
+    "lexico": {"usos_condicionados": [{"termino": "planificación de equipos", "refs_guion": ["M-005"], "refs_contenido": ["C-009"], "cumple_limite": true}], "terminos_prohibidos_detectados": []},
+    "primer_escaneo": {"resultado": "apto", "perfil_identificable": true, "encaje_visible": true, "senales_fuertes_visibles": true, "refs_contenido_dominantes": ["C-004", "C-006", "C-007"]},
+    "validaciones": {"idioma_respetado": true, "solo_cv": true, "sin_placeholders": true, "fidelidad_guion": true, "cobertura_incluir_completa": true, "cobertura_estrategica_completa": true, "sin_contenido_omitido": true, "obligatorios_presentes": true, "peso_alto_respetado": true, "ubicacion_y_orden_respetados": true, "continuidad_limitada_a_lo_autorizado": true, "seniority_respetado": true, "tono_respetado": true, "convencion_gramatical_respetada": true, "restricciones_respetadas": true, "lexico_respetado": true, "sin_keyword_stuffing": true, "duplicacion_controlada": true, "trazabilidad_completa": true, "primer_escaneo_textual_apto": true, "sin_decisiones_de_composicion": true},
+    "incidencias": []
+  }
+}

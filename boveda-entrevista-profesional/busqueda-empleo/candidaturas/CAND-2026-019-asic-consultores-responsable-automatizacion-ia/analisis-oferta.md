@@ -46,7 +46,7 @@ sesion_pcs: sesion-20260731-2110-job-up
 
 ### Requisitos no acreditados o parcialmente acreditados
 
-- No consta Grado finalizado; sí Bachillerato, FP de Técnico Administrativo y estudios de ingeniería no finalizados.
+- No consta Grado finalizado; sí Bachillerato, primer curso de los tres de la FP de Técnico Administrativo sin titulación obtenida, y estudios de ingeniería no finalizados.
 - No consta experiencia específica de tres a ocho años aplicando IA al negocio.
 - No constan Dynamics 365 Business Central, Salesforce, Power Automate, Power Apps, Copilot Studio ni Azure AI.
 - Power BI consta como formación y experiencia previa no reciente, no como dominio actualizado.
@@ -74,6 +74,7 @@ sesion_pcs: sesion-20260731-2110-job-up
 | Dominio de Power Automate, Power Apps, Copilot Studio, Azure AI, Dynamics 365 Business Central o Salesforce | No acreditado. |
 | Experiencia profesional aplicando IA a procesos de negocio | No acreditada; solo consta formación actual en IA. |
 | Grado universitario finalizado | No acreditado. |
+| Titulación de FP de Técnico Administrativo | No acreditada: solo se cursó el primer curso de los tres y no se obtuvo titulación. |
 
 ### Dudas que bloquean la generación
 

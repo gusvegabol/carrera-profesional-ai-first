@@ -28,6 +28,10 @@ from PIL import Image
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from componer_cv import construir_modelo_cv, renderizar_docx, renderizar_latex
 TEMPLATE_ROOT = Path("boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas")
 CANDIDATURE_ROOT = Path("boveda-entrevista-profesional/busqueda-empleo/candidaturas")
 ERROR_ROOT = Path("boveda-entrevista-profesional/busqueda-empleo/registros-generacion")
@@ -60,7 +64,7 @@ CARTA_FIELDS = (
     "[DESPEDIDA]", "[FIRMA]",
 )
 LATEX_FIELDS = CV_FIELDS
-OUTPUT_KEYS = ("cv_docx", "cv_pdf", "carta_docx", "carta_pdf", "cv_tex")
+OUTPUT_KEYS = ("cv_docx", "cv_pdf", "cv_tex")
 EXPECTED_TEMPLATES = {
     "template_cv": TEMPLATE_ROOT / "TEMPLATE_CV_FORMATO.docx",
     "template_carta": TEMPLATE_ROOT / "TEMPLATE_CARTA_PRESENTACION_FORMATO.docx",
@@ -74,8 +78,6 @@ def canonical_output_paths(route: Path) -> dict[str, Path]:
     return {
         "cv_docx": route / "cv.docx",
         "cv_pdf": route / "cv.pdf",
-        "carta_docx": route / "carta-presentacion.docx",
-        "carta_pdf": route / "carta-presentacion.pdf",
         "cv_tex": route / "cv.tex",
     }
 
@@ -928,6 +930,102 @@ def validate_published_artifacts(destinations: dict[str, Path], max_pdf_pages: d
                 raise ValueError("cv.tex publicado contiene marcadores sin sustituir.")
 
 
+def _contains_placeholder(value: Any) -> bool:
+    if isinstance(value, dict):
+        return any(_contains_placeholder(item) for item in value.values())
+    if isinstance(value, list):
+        return any(_contains_placeholder(item) for item in value)
+    return isinstance(value, str) and bool(re.search(r"{{[^}]+}}", value))
+
+
+PRIVATE_DATA_FIELDS = (
+    "nombre",
+    "apellido_1",
+    "apellido_2",
+    "email",
+    "telefono",
+    "linkedin",
+    "ubicacion",
+    "fotografia",
+)
+
+
+def validate_private_data_manifest(payload: dict[str, Any]) -> None:
+    """Valida la autorización explícita y la materialización de datos privados."""
+    manifest = payload.get("control", {}).get("datos_privados")
+    if not isinstance(manifest, dict):
+        raise ValueError("Falta el contrato de autorización de datos privados.")
+    authorization = manifest.get("autorizacion")
+    if not isinstance(authorization, dict) or set(authorization) != set(PRIVATE_DATA_FIELDS):
+        raise ValueError("La autorización de datos privados debe resolver todos los campos.")
+    if any(value not in {"incluir", "omitir"} for value in authorization.values()):
+        raise ValueError("La autorización de datos privados no puede quedar pendiente.")
+    if not isinstance(manifest.get("fecha_decision"), str) or not manifest["fecha_decision"].strip():
+        raise ValueError("Falta la fecha de decisión de datos privados.")
+    if manifest.get("decidido_por") != "persona_responsable":
+        raise ValueError("La decisión de datos privados debe proceder de la persona responsable.")
+
+    encabezado = payload.get("contenido_cv", {}).get("encabezado", {})
+    nombre = encabezado.get("nombre_completo")
+    if not isinstance(nombre, dict):
+        raise ValueError("Falta el nombre del encabezado.")
+    nombre_refs = {
+        referencia
+        for origen in nombre.get("trazabilidad", {}).get("origen_factual", [])
+        if isinstance(origen, dict) and origen.get("fuente") == "datos-privados-candidatura"
+        for referencia in origen.get("refs", [])
+    }
+    name_field_by_ref = {"Nombre": "nombre", "Apellido 1": "apellido_1", "Apellido 2": "apellido_2"}
+    expected_name_refs = {
+        reference for reference, field in name_field_by_ref.items() if authorization[field] == "incluir"
+    }
+    if nombre_refs != expected_name_refs:
+        raise ValueError("El nombre visible no coincide con la autorización de nombre y apellidos.")
+
+    contact = encabezado.get("contacto", [])
+    if not isinstance(contact, list):
+        raise ValueError("El contacto del encabezado debe ser una lista.")
+    contact_types = {item.get("tipo") for item in contact if isinstance(item, dict)}
+    authorized_contact = {field for field in ("email", "telefono", "linkedin", "ubicacion") if authorization[field] == "incluir"}
+    if contact_types != authorized_contact:
+        raise ValueError("El contacto visible no coincide con la autorización de datos privados.")
+    if any(not isinstance(item, dict) or not item.get("texto", "").strip() for item in contact):
+        raise ValueError("El contacto autorizado no puede estar vacío.")
+    if authorization["fotografia"] != "incluir":
+        raise ValueError("La excepción de fotografía sin imagen requiere una decisión contractual específica.")
+
+
+def validate_composition_payload(payload: dict[str, Any]) -> str:
+    """Valida la frontera mínima que necesita el compositor CV-only."""
+    if not isinstance(payload, dict):
+        raise ValueError("datos-generacion.json debe contener un objeto JSON.")
+    if payload.get("schema_id") != "datos-generacion-cv" or payload.get("schema_version") != "1.2":
+        raise ValueError("El compositor requiere el contrato datos-generacion-cv 1.2.")
+    if payload.get("tipo") != "datos_generacion_cv":
+        raise ValueError("El tipo debe ser datos_generacion_cv.")
+    candidatura = payload.get("candidatura")
+    candidate_id = candidatura.get("id") if isinstance(candidatura, dict) else None
+    if not isinstance(candidate_id, str) or not re.fullmatch(r"CAND-\d{4}-\d{3}", candidate_id):
+        raise ValueError("Identificador de candidatura inválido.")
+    if not isinstance(payload.get("contenido_cv"), dict):
+        raise ValueError("Falta contenido_cv.")
+    validate_private_data_manifest(payload)
+    validations = payload.get("control", {}).get("validaciones", {})
+    if not validations or any(value is not True for value in validations.values()):
+        raise ValueError("El contenido no tiene todas las validaciones aprobadas.")
+    if _contains_placeholder(payload):
+        raise ValueError("El JSON contiene placeholders sin resolver.")
+    return candidate_id
+
+
+def _candidate_route_from_json(root: Path, json_path: Path, candidate_id: str) -> Path:
+    route = json_path.parent.resolve()
+    _assert_inside(route, (root / CANDIDATURE_ROOT).resolve(), "carpeta de candidatura")
+    if not route.name.startswith(candidate_id):
+        raise ValueError("La carpeta de candidatura no coincide con candidatura.id.")
+    return route
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("json_path")
@@ -949,27 +1047,21 @@ def main(argv: list[str] | None = None) -> int:
         phase = "configuracion"
         json_path = resolve_input_json(root, args.json_path)
         payload = json.loads(json_path.read_text(encoding="utf-8"))
-        candidate_value = payload.get("id_candidatura") if isinstance(payload, dict) else None
+        candidate_value = payload.get("candidatura", {}).get("id") if isinstance(payload, dict) else None
         candidate_id = candidate_value if isinstance(candidate_value, str) and re.fullmatch(r"CAND-\d{4}-\d{3}", candidate_value) else None
         phase = "validacion_entradas"
-        validate_json_schema(payload, root)
-        route = validate_payload(payload, root)
-        phase = "validacion_estado"
-        validate_candidate_state(root, route, payload["id_candidatura"])
-        metadata = _frontmatter(route / "candidatura.md")
-        decision: dict[str, Any] | None = None
-        if metadata.get("estado") == "detenida" and (route / "revision-generacion.json").is_file():
-            if reopen_obsolete_page_review(root, route, payload["id_candidatura"]):
-                metadata = _frontmatter(route / "candidatura.md")
-            elif not args.reanudar:
-                raise ValueError(
-                    "La candidatura está detenida para revisión humana. "
-                    "Corrige el CV o registra una excepción y ejecuta de nuevo con --reanudar."
-                )
-            else:
-                decision = validate_resume_decision(route)
-        elif args.reanudar:
-            raise ValueError("--reanudar solo puede usarse con una revisión de generación pendiente.")
+        candidate_id = validate_composition_payload(payload)
+        route = _candidate_route_from_json(root, json_path, candidate_id)
+        if args.reanudar:
+            raise ValueError("La reanudación del flujo histórico no forma parte del contrato CV-only 1.2.")
+        template = (root / TEMPLATE_ROOT / "TEMPLATE_CV_FORMATO.docx").resolve()
+        photo = (root / "boveda-entrevista-profesional/busqueda-empleo/foto-perfil.png").resolve()
+        if not template.is_file():
+            raise ValueError(f"Falta la plantilla canónica: {template}")
+        if not photo.is_file():
+            raise ValueError(f"Falta la fotografía canónica: {photo}")
+        _validate_photo(photo)
+        model = construir_modelo_cv(payload)
         candidate_lock = CandidateLock(root / TEMP_ROOT / route.name / ".lock")
         candidate_lock.__enter__()
         recover_pending_publications(root, route.name)
@@ -977,22 +1069,13 @@ def main(argv: list[str] | None = None) -> int:
         execution_dir.mkdir(parents=True, exist_ok=False)
         phase = "generacion_docx"
         cv_docx = execution_dir / "cv.docx"
-        letter_docx = execution_dir / "carta-presentacion.docx"
-        build_docx(root / Path(payload["entradas"]["template_cv"]), cv_docx, payload["cv"], root / Path(payload["entradas"]["foto"]))
-        build_docx(root / Path(payload["entradas"]["template_carta"]), letter_docx, payload["carta"], root / Path(payload["entradas"]["foto"]))
+        renderizar_docx(model, template, cv_docx, photo)
         phase = "conversion_pdf"
         cv_pdf = convert_docx_to_pdf(cv_docx, execution_dir, Path(env["SOFFICE_PATH"]), root)
-        letter_pdf = convert_docx_to_pdf(letter_docx, execution_dir, Path(env["SOFFICE_PATH"]), root)
         phase = "validacion_pdf"
         try:
             max_cv_pages = 2
-            max_letter_pages = 1
-            if decision and decision.get("decision") == "aceptar_excepcion":
-                review = json.loads((route / "revision-generacion.json").read_text(encoding="utf-8"))
-                if review.get("documento") == "cv.pdf":
-                    max_cv_pages = decision["paginas_aceptadas"]
             validate_pdf(cv_pdf, require_image=True, max_pages=max_cv_pages)
-            validate_pdf(letter_pdf, require_image=True, max_pages=max_letter_pages)
         except PdfValidationError as exc:
             review = preserve_generation_review(
                 root,
@@ -1011,19 +1094,15 @@ def main(argv: list[str] | None = None) -> int:
             review_exc.review_path = review_path
             raise review_exc from exc
         phase = "generacion_latex"
-        latex_template = (root / Path(payload["entradas"]["template_latex"])).read_text(encoding="utf-8")
-        _validate_template_text(latex_template, LATEX_FIELDS, "TEMPLATE_CV_FORMATO.tex", ("[11pt,a4paper]", "[utf8]", "[T1]", "[margin=1.6cm]"))
-        tex = build_latex(latex_template, payload["latex"])
+        tex = renderizar_latex(model)
         (execution_dir / "cv.tex").write_text(tex, encoding="utf-8", newline="\n")
         latex_status = validate_latex(execution_dir / "cv.tex")
-        generated = {"cv_docx": cv_docx, "cv_pdf": cv_pdf, "carta_docx": letter_docx, "carta_pdf": letter_pdf, "cv_tex": execution_dir / "cv.tex"}
-        destinations = {key: root / Path(payload["salidas"][key]) for key in OUTPUT_KEYS}
+        generated = {"cv_docx": cv_docx, "cv_pdf": cv_pdf, "cv_tex": execution_dir / "cv.tex"}
+        destinations = canonical_output_paths(route)
         phase = "validacion_salidas"
         for key, source in generated.items():
             if not source.is_file() or source.stat().st_size == 0:
                 raise ValueError(f"Artefacto temporal ausente o vacío: {key}")
-        if any(marker in tex for marker in LATEX_FIELDS):
-            raise ValueError("cv.tex contiene marcadores sin sustituir.")
         phase = "publicacion"
         publish_transaction(
             root,
@@ -1031,16 +1110,16 @@ def main(argv: list[str] | None = None) -> int:
             generated,
             destinations,
             execution,
-            {"cv_pdf": max_cv_pages, "carta_pdf": max_letter_pages},
+            {"cv_pdf": max_cv_pages},
         )
-        if args.reanudar:
-            _set_candidate_state(root, route, payload["id_candidatura"], "pendiente_de_aprobacion")
-            review_path = route / "revision-generacion.json"
-            review = json.loads(review_path.read_text(encoding="utf-8"))
-            review["estado"] = "resuelta"
-            review["decision"] = decision
-            review["resuelta_en"] = datetime.now(timezone.utc).isoformat()
-            review_path.write_text(json.dumps(review, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        manifest_summary = {
+            "schema_version": "1.0",
+            "execution_id": execution,
+            "id_candidatura": candidate_id,
+            "fotografia": "incluida",
+            "artefactos": list(OUTPUT_KEYS),
+        }
+        _write_json_atomic(route / "manifest-generacion-cv.json", manifest_summary)
         cleanup_execution_directory(execution_dir)
         execution_dir = None
         print(json.dumps({"resultado": "completado", "execution_id": execution, "latex": latex_status, "artefactos": list(destinations)}, ensure_ascii=False))

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "execution_id": "eadd2499d0fb",
+  "id_candidatura": "CAND-2026-020",
+  "fotografia": "incluida",
+  "artefactos": [
+    "cv_docx",
+    "cv_pdf",
+    "cv_tex"
+  ]
+}

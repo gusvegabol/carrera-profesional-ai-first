@@ -32,6 +32,21 @@ No es función de `candidatura.md`:
 * generar el guion de adaptación;
 * ejecutar el veredicto final.
 
+La fase posterior a composición se ejecuta así:
+
+```text
+cv.pdf / cv.docx / cv.tex
+→ revisión humana del PDF
+→ revision-humana-cv.md
+→ PLAYBOOK_VEREDICTO_FINAL_CV
+→ veredicto-final-cv.md
+→ GATE-VEREDICTO-CV
+```
+
+El estado operativo solo puede avanzar después de la revisión humana y del
+veredicto. El gate tiene decisión humana separada; Job-up no envía candidaturas
+automáticamente.
+
 ---
 
 ## 2. Posición dentro de la arquitectura
@@ -121,6 +136,12 @@ Si una fase posterior demuestra que la estrategia necesita cambiar:
 2. revisar el artefacto que originó la decisión;
 3. propagar después el cambio a `candidatura.md`.
 
+`revision-humana-cv.md` acredita que la persona responsable revisó el PDF
+concreto y registra su huella SHA-256. `veredicto-final-cv.md` diagnostica
+integridad, fidelidad y competitividad aplicando los dos roles definidos por
+`PLAYBOOK_VEREDICTO_FINAL_CV`. Ninguno de los dos artefactos modifica el CV ni
+sustituye la decisión humana de `GATE-VEREDICTO-CV` ni abre el gate de candidatura completa.
+
 ---
 
 ## 5. Diferencia entre decisión y estado
@@ -187,6 +208,15 @@ Crear la ficha y continuar.
 ### `preparar_con_advertencias`
 
 Crear la ficha, registrar advertencias y continuar.
+
+En toda creación o reanudación de una candidatura debe preguntarse antes de redactar el CV:
+
+> ¿Qué datos privados autorizas a incorporar en este CV: nombre, apellido 1, apellido 2, email, teléfono, LinkedIn,
+> ubicación y fotografía?
+
+Registrar cada respuesta como `incluir`, `omitir` o `pendiente` en `autorizacion_datos_cv`. La persona responsable de
+la candidatura tiene la autoridad final. Un campo `pendiente` bloquea la generación del contenido y del CV, pero no
+impide completar el análisis de la oferta.
 
 ### `pedir_datos_adicionales_antes_de_redactar`
 
@@ -346,6 +376,7 @@ Artefactos previstos inicialmente:
 * carta DOCX;
 * carta PDF;
 * veredicto final del CV;
+* paquete de presentación;
 * informe de empresa / entrevista cuando corresponda.
 
 La incorporación futura de nuevos artefactos no debe requerir modificar el modelo conceptual.
@@ -376,7 +407,7 @@ Actualizar:
 
 No duplicar el contenido completo del guion.
 
-### 11.3 Después de generar CV y carta
+### 11.3 Después de generar los artefactos documentales
 
 Registrar:
 
@@ -385,33 +416,43 @@ Registrar:
 * estados;
 * incidencias.
 
-No copiar el contenido de CV o carta a `candidatura.md`.
+No copiar el contenido de CV, carta, email o formulario a `candidatura.md`.
 
-### 11.4 Después del veredicto
+### 11.4 Después del veredicto del CV
 
-Registrar:
+Registrar el enlace, el resultado y la decisión del gate `GATE-VEREDICTO-CV`.
+La aprobación de este gate valida únicamente el CV. No convierte la candidatura
+en `aprobada` ni autoriza la presentación.
 
-* enlace;
-* decisión del veredicto;
-* incidencias activas.
+Mientras no exista un paquete completo, mantener:
 
-Si el veredicto obliga a corregir:
+```yaml
+estado: en_preparacion
+presentada: false
+```
 
-la candidatura continúa en `en_preparacion`.
+### 11.5 Preparación del paquete de presentación
 
-Si el veredicto permite revisión humana:
+Crear `paquete-presentacion.md` y registrar el canal real, sus requisitos y los
+artefactos necesarios. Si exige carta, email o formulario, ejecutar el módulo
+específico correspondiente antes de abrir `GATE-CANDIDATURA-PRESENTACION`.
 
-puede pasar a:
+### 11.6 Después del gate de candidatura completa
 
-`pendiente_de_aprobacion`
+Solo cuando todos los artefactos requeridos estén presentes y revisados puede la
+persona responsable decidir `GATE-CANDIDATURA-PRESENTACION`.
 
-### 11.5 Después de aprobación humana
+Si se aprueba:
 
-Actualizar:
+```yaml
+estado: aprobada
+presentada: false
+```
 
-`estado: aprobada`
+Esta aprobación no registra un envío. Requiere una instrucción posterior y una
+acción real con evidencia.
 
-### 11.6 Después del envío
+### 11.7 Después del envío
 
 Solo tras confirmación real del envío:
 
