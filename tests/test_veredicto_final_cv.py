@@ -72,8 +72,11 @@ class ContratoVeredictoFinalCVTests(unittest.TestCase):
         self.assertIn("paquete_presentacion: pendiente_de_preparacion", ficha)
         self.assertIn("gate_candidatura_presentacion: no_abierto", ficha)
         self.assertIn("estado: pendiente_de_preparacion", paquete)
-        self.assertIn("| Canal de envío confirmado | pendiente de comprobar |", paquete)
-        self.assertIn("Faltan canal confirmado", paquete)
+        self.assertIn("| Canal | `portal_empresa` (acceso desde Indeed) |", paquete)
+        self.assertIn("| Contenido semántico de carta | sí | generado_apto |", paquete)
+        self.assertIn("| Carta DOCX/PDF | sí | no compuesta |", paquete)
+        self.assertIn("persona responsable", paquete)
+        self.assertIn("contenido semántico de la carta está apto", paquete)
 
 
 if __name__ == "__main__":

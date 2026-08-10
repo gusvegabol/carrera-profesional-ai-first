@@ -433,14 +433,22 @@ presentada: false
 
 ### 11.5 Preparación del paquete de presentación
 
-Crear `paquete-presentacion.md` y registrar el canal real, sus requisitos y los
-artefactos necesarios. Si exige carta, email o formulario, ejecutar el módulo
-específico correspondiente antes de abrir `GATE-CANDIDATURA-PRESENTACION`.
+Crear `paquete-presentacion.md` y registrar el canal u origen conocido. El
+paquete mínimo siempre debe contener el CV y la carta de presentación. La carta
+se produce mediante su propio playbook, guion, revisión y decisión, separados
+del flujo exclusivo del CV.
+
+Los formularios, preguntas, credenciales y cargas específicas de Indeed,
+LinkedIn, Lidl, Mercadona u otros portales quedan bajo responsabilidad de la
+persona responsable. Job-up no inicia sesión ni presenta candidaturas en
+portales externos como parte del flujo general.
 
 ### 11.6 Después del gate de candidatura completa
 
-Solo cuando todos los artefactos requeridos estén presentes y revisados puede la
-persona responsable decidir `GATE-CANDIDATURA-PRESENTACION`.
+Solo cuando el CV y la carta estén presentes y revisados puede la persona
+responsable decidir `GATE-CANDIDATURA-PRESENTACION`. Los artefactos adicionales
+del canal se registran si se conocen, pero no son una condición general para
+generar el paquete mínimo.
 
 Si se aprueba:
 
@@ -449,8 +457,8 @@ estado: aprobada
 presentada: false
 ```
 
-Esta aprobación no registra un envío. Requiere una instrucción posterior y una
-acción real con evidencia.
+Esta aprobación no registra un envío. La presentación siempre la realiza la
+persona responsable y después debe aportar la evidencia de la acción real.
 
 ### 11.7 Después del envío
 

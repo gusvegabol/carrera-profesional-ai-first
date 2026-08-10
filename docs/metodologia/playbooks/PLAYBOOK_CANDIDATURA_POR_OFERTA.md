@@ -13,7 +13,7 @@ sustituye: PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0
 
 Este playbook convierte el texto completo de una oferta en un CV y una carta de presentación adaptados, revisables y trazables. Es una rama operativa de búsqueda de empleo: consume evidencias ya documentadas y no modifica la metodología de investigación de la entrevista profesional.
 
-La fase CV termina con el CV preparado y el gate `GATE-VEREDICTO-CV` decidido. La candidatura completa requiere además `paquete-presentacion.md`, canal identificado y los artefactos que ese canal exija. Solo entonces puede abrirse `GATE-CANDIDATURA-PRESENTACION`. No incluye enviar candidaturas, completar formularios ni remitir documentos sin aprobación humana.
+La fase CV termina con el CV preparado y el gate `GATE-VEREDICTO-CV` decidido. La candidatura completa requiere además `paquete-presentacion.md` con CV y carta como mínimo. Solo entonces puede abrirse `GATE-CANDIDATURA-PRESENTACION`. No incluye iniciar sesión, completar formularios, cargar documentos ni remitir candidaturas: la presentación siempre corre a cargo de la persona responsable.
 
 ## 2. Entradas y artefactos de trabajo
 
@@ -113,7 +113,7 @@ Una vez resueltos los bloqueos, seguir este orden fijo:
 11. Si una investigación contextual autorizada justifica ajustar el lenguaje corporativo, aplicar el mismo criterio de tono al CV, al CV en LaTeX y a la carta de presentación. No se adapta solo uno de los documentos; la adaptación no puede añadir hechos, funciones, tecnologías, métricas o resultados no acreditados.
 12. Al crear cada artefacto, actualizar el índice «Documentos de la candidatura» de [[TEMPLATE_CANDIDATURA]]. Debe enumerar todos los documentos operativos existentes en la carpeta —análisis, guion, revisión humana, veredicto, informe de empresa y preparación de entrevista cuando exista, CV en DOCX, PDF y LaTeX, y carta en DOCX y PDF—, no solo el CV y la carta. Si posteriormente se añade, sustituye o elimina cualquier documento, actualizar de nuevo ese índice y comprobar que no queden enlaces a archivos inexistentes. Las capturas y otros archivos internos de control visual no forman parte del índice.
 13. Registrar en [[TEMPLATE_CANDIDATURA]] y [[seguimiento-candidaturas]] el estado, el enlace a la revisión humana, el veredicto CV y la decisión de `GATE-VEREDICTO-CV`.
-14. Mantener la candidatura en `en_preparacion` mientras no exista `paquete-presentacion.md` completo. Solo después de resolver canal y artefactos requeridos puede pasar a `pendiente_de_aprobacion` para `GATE-CANDIDATURA-PRESENTACION`.
+14. Mantener la candidatura en `en_preparacion` mientras no exista `paquete-presentacion.md` completo con CV y carta revisados. Solo después puede pasar a `pendiente_de_aprobacion` para `GATE-CANDIDATURA-PRESENTACION`; los formularios y credenciales del canal quedan bajo responsabilidad de la persona responsable.
 
 La existencia de DOCX y PDF verificados, e incluso la aprobación del gate CV,
 no autoriza el envío. La aprobación de la candidatura completa y cualquier
@@ -136,9 +136,10 @@ Antes de cerrar la preparación, una persona debe revisar:
 
 La salida válida de la fase CV es un CV documentado, con revisión humana y
 veredicto trazables. La salida válida de candidatura completa requiere además
-`paquete-presentacion.md` listo y `GATE-CANDIDATURA-PRESENTACION` abierto para
-decisión. El playbook no autoriza enviar candidaturas ni realizar un envío sin
-aprobación humana y evidencia posterior.
+`paquete-presentacion.md` listo con CV y carta revisados y
+`GATE-CANDIDATURA-PRESENTACION` abierto para decisión. La presentación posterior
+la realiza la persona responsable; el playbook no inicia sesión, completa
+formularios ni realiza envíos.
 
 ## 8. Lista de control final
 
@@ -164,7 +165,7 @@ aprobación humana y evidencia posterior.
 - [ ] El DOCX se validó estructuralmente y la exportación se realizó con el método directo documentado cuando correspondía.
 - [ ] Existe `cv.tex`, su contenido coincide con el CV revisado y se puede procesar como texto UTF-8.
 - [ ] El índice de [[TEMPLATE_CANDIDATURA]] enumera todos los artefactos operativos existentes de la carpeta, se actualizó al crear o modificar documentos y no contiene enlaces rotos.
-- [ ] Existe `paquete-presentacion.md` con canal y artefactos requeridos.
+- [ ] Existe `paquete-presentacion.md` con CV y carta revisados como mínimo.
 - [ ] `GATE-VEREDICTO-CV` tiene decisión humana separada y valida únicamente el CV.
 - [ ] `GATE-CANDIDATURA-PRESENTACION` solo se abre cuando el paquete completo está listo.
 - [ ] No se ha realizado ni autorizado ningún envío.

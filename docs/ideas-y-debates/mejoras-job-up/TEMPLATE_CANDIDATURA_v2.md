@@ -180,6 +180,7 @@ Si no existen:
 * [ ] La próxima fase está claramente identificada.
 * [ ] Si existe CV generado, la revisión humana y su huella están registradas antes del veredicto.
 * [ ] `GATE-VEREDICTO-CV` conserva una decisión humana separada y valida únicamente el CV.
-* [ ] El paquete de presentación identifica el canal y los artefactos requeridos.
-* [ ] `GATE-CANDIDATURA-PRESENTACION` no se abre mientras falte un artefacto requerido.
+* [ ] El paquete de presentación contiene CV y carta revisados como mínimo.
+* [ ] El canal u origen conocido queda registrado; los formularios y credenciales los gestiona la persona responsable.
+* [ ] `GATE-CANDIDATURA-PRESENTACION` no se abre mientras falte el CV o la carta.
 * [ ] Ninguna aprobación de gate cambia `presentada` sin evidencia real de envío.

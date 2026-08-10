@@ -29,15 +29,15 @@ def validar_paquete(paquete_path: Path, candidatura_dir: Path) -> list[str]:
     if candidatura.is_file() and _campo_frontmatter(candidatura.read_text(encoding="utf-8"), "presentada").lower() != "false":
         bloqueos.append("candidatura_presentada_no_es_false")
 
-    canal = re.search(r"\|\s*Canal de envío confirmado\s*\|\s*([^|]+?)\s*\|", texto, re.IGNORECASE)
-    if canal is None or canal.group(1).strip().lower() in {"", "pendiente de comprobar", "pendiente"}:
-        bloqueos.append("canal_envio_no_confirmado")
-
     filas_pendientes = []
+    filas_carta = []
     for linea in texto.splitlines():
-        if any(nombre in linea.lower() for nombre in ("| carta |", "email de presentación", "respuestas de formulario")):
-            if any(marca in linea.lower() for marca in ("pendiente", "no creada", "no resueltas", "no resuelto")):
+        if re.match(r"^\|\s*carta(?:\s|\|)", linea.lower()):
+            filas_carta.append(linea)
+            if any(marca in linea.lower() for marca in ("pendiente", "no creada", "no compuesta", "no resueltas", "no resuelto")):
                 filas_pendientes.append(linea)
+    if not filas_carta:
+        bloqueos.append("carta_presentacion_faltante")
     if filas_pendientes:
         bloqueos.append("artefactos_presentacion_pendientes")
 

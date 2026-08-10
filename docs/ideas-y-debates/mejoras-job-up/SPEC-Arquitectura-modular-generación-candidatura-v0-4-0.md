@@ -609,7 +609,7 @@ datos-generacion.json
 ```
 
 En la rama arquitectónica actualmente diseñada, esta frontera corresponde exclusivamente al contenido del CV. No
-implica un artefacto, schema ni traspaso común con la carta de presentación, cuya rama permanece pendiente de diseño.
+implica un artefacto, schema ni traspaso común con la carta de presentación, cuya rama independiente ya está diseñada y se prueba por separado.
 
 ---
 
@@ -749,7 +749,7 @@ futura generación de contenido del CV
 ↓
 CV
 
-Rama de carta de presentación: pendiente de diseño (`INC-001`).
+Rama de carta de presentación: diseñada y en prueba mediante `PLAYBOOK_GUION_CARTA_PRESENTACION` y `TEMPLATE_GUION_CARTA_PRESENTACION.md` (`INC-001` resuelto para diseño; pendiente de completar la interacción humana del caso real).
 
 Las fases posteriores de generación, composición, veredicto y envío permanecen fuera de alcance de esta sincronización.
 No se infiere que compartan artefactos, playbooks ni una fase de contenido común entre CV y carta.
@@ -765,9 +765,9 @@ No se infiere que compartan artefactos, playbooks ni una fase de contenido comú
 | Candidatura | Gobernar estrategia heredada y ciclo de vida | `candidatura.md` |
 | Guion CV | Traducir estrategia común a decisiones editoriales exclusivas del CV | `guion-adaptacion-cv.md` |
 | Contenido CV | Redactar el contenido final del CV a partir de `guion-adaptacion-cv.md` aprobado | `datos-generacion.json` |
-| Carta de presentación futura | Adaptar la estrategia común a una carta cuando se diseñe su módulo | Pendiente de definición (`INC-001`) |
+| Carta de presentación | Adaptar la estrategia común a una carta mediante su módulo independiente | `guion-carta-presentacion.md`; obligatoria para el paquete mínimo |
 | Composición y veredicto CV | Fases CV-only diseñadas e implantadas | `GATE-VEREDICTO-CV` |
-| Paquete y presentación de candidatura | Contrato de frontera diseñado; módulos de carta/canal aún pendientes | `paquete-presentacion.md` + `GATE-CANDIDATURA-PRESENTACION` |
+| Paquete y presentación de candidatura | Contrato de paquete mínimo diseñado; presentación manual por la persona responsable | `paquete-presentacion.md` + `GATE-CANDIDATURA-PRESENTACION` |
 | Entrevista | Preparar defensa posterior | informe |
 
 ---
@@ -1065,8 +1065,9 @@ correccion_necesaria:
 | revisión humana CV | `completada` para CAND-2026-019 y CAND-2026-020 |
 | veredictos actuales | `completados`: ASIC `no_competitivo`; Lidl `apto_para_presentacion` |
 | `GATE-VEREDICTO-CV` | Lidl `aprobado`; ASIC `bloqueado` (2026-08-09) |
-| `paquete-presentacion.md` | Contrato diseñado; instancia de Lidl incompleta hasta resolver canal y artefactos requeridos |
-| `GATE-CANDIDATURA-PRESENTACION` | No abierto; requiere paquete completo |
+| `PLAYBOOK_GUION_CARTA_PRESENTACION` | Probado; CAND-2026-020 queda `apto` con decisión humana del gate pendiente |
+| `paquete-presentacion.md` | Contrato diseñado; CAND-2026-020 tiene CV disponible y carta pendiente |
+| `GATE-CANDIDATURA-PRESENTACION` | No abierto; requiere CV + carta revisados |
 
 ---
 
@@ -1184,7 +1185,7 @@ La composición del CV consume contenido ya decidido y redactado, sin reinterpre
 `generar_candidatura.py` como orquestador técnico sobre el contrato JSON 1.2 y delega la representación en el modelo
 intermedio pasivo compartido por DOCX y LaTeX.
 
-La composición de carta permanece pendiente bajo `INC-001` y no forma parte de esta rama de composición del CV.
+La composición de carta sigue fuera de esta rama de composición del CV. Su módulo de guion ya está diseñado y probado por separado; la redacción y composición final requieren sus propios gates.
 
 La composición CV-only implantada consume `contenido_cv` 1.2 mediante un modelo intermedio pasivo. DOCX y LaTeX
 consumen ese mismo modelo; el texto se conserva literalmente y las colecciones se ordenan exclusivamente por
@@ -1237,38 +1238,56 @@ exige repetir la secuencia completa.
 ### 31.2 Paquete de candidatura completa y gate de presentación
 
 La aprobación de `GATE-VEREDICTO-CV` no convierte la candidatura en una
-candidatura completa. La candidatura debe preparar primero
-`paquete-presentacion.md`, que identifica el canal concreto y declara los
-artefactos que ese canal exige.
+candidatura completa. Toda candidatura por oferta debe preparar como mínimo un
+CV y una carta de presentación. La carta tiene su propio playbook, guion,
+revisión y decisión; no se incorpora al guion ni al compositor exclusivos del
+CV.
+
+La candidatura debe preparar primero `paquete-presentacion.md`, que identifica
+el canal cuando sea conocido y declara el paquete mínimo y cualquier requisito
+adicional conocido. No es necesario auditar ni completar formularios de
+Indeed, LinkedIn, Lidl, Mercadona u otros portales para poder generar el
+paquete mínimo.
 
 ```text
 GATE-VEREDICTO-CV
         ↓
-paquete-presentacion.md
+PLAYBOOK_GUION_CARTA_PRESENTACION
         ↓
-carta / email / formulario, si el canal los exige
+guion-carta-presentacion.md
+        ↓
+carta de presentación revisada
+        ↓
+paquete-presentacion.md (CV + carta como mínimo)
         ↓
 GATE-CANDIDATURA-PRESENTACION
         ↓
-instrucción humana de presentación
+presentación manual por la persona responsable
         ↓
-presentación real + evidencia
+presentación real + evidencia aportada por la persona responsable
 ```
 
 `GATE-CANDIDATURA-PRESENTACION` solo puede abrirse cuando:
 
-- el canal de presentación está identificado y su origen o URL está registrado;
-- `paquete-presentacion.md` enumera los artefactos requeridos y disponibles;
-- el CV tiene `GATE-VEREDICTO-CV` aprobado;
-- cada carta, email o respuesta de formulario requerida tiene su propio módulo,
-  revisión y decisión humana, o consta expresamente que el canal no la exige;
+- existe un CV con `GATE-VEREDICTO-CV` aprobado;
+- existe una carta de presentación generada por su módulo propio, revisada y
+  aprobada por la persona responsable;
+- `paquete-presentacion.md` enumera el CV y la carta y no contiene artefactos
+  mínimos pendientes;
+- el canal u origen conocido queda registrado, sin convertir la comprobación
+  del formulario en una precondición general;
 - la persona responsable puede comprobar el paquete completo antes de decidir.
 
+Los formularios, preguntas adicionales, credenciales y pasos específicos del
+portal quedan bajo responsabilidad de la persona responsable. Job-up no debe
+iniciar sesión, introducir credenciales, cargar documentos ni enviar la
+candidatura en portales externos como parte del flujo general.
+
 El gate completo aprobado tampoco registra por sí solo un envío. `presentada`
-solo puede cambiar de `false` a `true` después de una acción real, con canal,
-fecha, persona que la ejecutó y confirmación o evidencia del envío. La ausencia
-de paquete completo mantiene la candidatura en `en_preparacion`; no se usa
-`aprobada` para representar un CV aislado.
+solo puede cambiar de `false` a `true` después de que la persona responsable
+realice la presentación y aporte canal, fecha, persona ejecutora y confirmación
+o evidencia del envío. La ausencia de CV o carta mantiene la candidatura en
+`en_preparacion`; no se usa `aprobada` para representar un CV aislado.
 
 El nombre `GATE-VEREDICTO-CV-PRESENTACION` queda deprecado como denominación
 histórica del gate CV-only. No debe aparecer en nuevos artefactos activos.
@@ -1326,13 +1345,13 @@ Un defecto puede pertenecer a varias categorías.
 #### DEF-ARQ-002 — Frontera entre validación del CV y presentación de la candidatura
 
 - **Clasificación:** `ARQUITECTURA`.
-- **Estado:** resuelto en diseño; pendiente de validar el módulo de paquete y canal con un caso real.
+- **Estado:** resuelto en diseño e implantación; pendiente de validar el paquete mínimo con una carta real.
 - **Alcance:** candidaturas con `presentada: false` que hayan superado la composición y el veredicto del CV.
 - **Problema:** `GATE-VEREDICTO-CV-PRESENTACION` podía interpretarse como autorización de la candidatura completa aunque la carta, el email, el formulario, el canal y el paquete documental no estuvieran definidos.
 - **Evidencia:** CAND-2026-020 tenía el CV validado y el gate aprobado, pero no disponía de carta, email de presentación ni paquete contractual del canal Indeed.
-- **Resolución:** el gate activo pasa a llamarse `GATE-VEREDICTO-CV` y queda limitado al CV. Se introduce `paquete-presentacion.md` y el gate independiente `GATE-CANDIDATURA-PRESENTACION`, que solo puede abrirse cuando el canal y todos los artefactos requeridos estén resueltos.
+- **Resolución:** el gate activo pasa a llamarse `GATE-VEREDICTO-CV` y queda limitado al CV. Se introduce `paquete-presentacion.md` y el gate independiente `GATE-CANDIDATURA-PRESENTACION`, que solo puede abrirse cuando existan CV y carta revisados. El canal y sus formularios se documentan cuando se conocen, pero no son una precondición general; la presentación externa siempre la realiza la persona responsable.
 - **Impacto operativo:** CAND-2026-020 vuelve a `en_preparacion` con CV validado y paquete pendiente; CAND-2026-019 permanece `detenida` por su gate CV bloqueado.
-- **Límite:** no se diseña todavía el playbook de carta; cuando el canal requiera carta, email o formulario, deberá existir su módulo específico antes de abrir el gate completo.
+- **Límite:** el playbook de carta sigue pendiente y es obligatorio antes de abrir el gate completo. Email, formularios y credenciales no forman parte del paquete mínimo ni se ejecutan automáticamente.
 
 ---
 
@@ -1351,26 +1370,29 @@ resolucion_necesaria:
 
 Una incertidumbre no debe rellenarse mediante suposición.
 
-### `INC-001` — Rama específica de carta pendiente de diseño
+### `INC-001` — Rama específica de carta diseñada y en prueba
 
 ```text
 ID: INC-001
 elemento: Arquitectura posterior de adaptación y generación de la carta de presentación.
-motivo: ARQ-22 separa el adaptador de CV de la futura carta, cuya responsabilidad y artefactos no se han diseñado.
-impacto: No puede inferirse una fase, guion, generación ni composición compartida con el CV.
-bloquea_plan: false
-resolucion_necesaria: Diseñar y validar posteriormente el módulo específico de carta.
+motivo: ARQ-22 separa el adaptador de CV de la carta y exigía un módulo, guion y gate propios.
+impacto: El paquete mínimo sigue incompleto hasta generar y revisar la carta, pero ya no falta el diseño del módulo.
+bloquea_plan: true para GATE-CANDIDATURA-PRESENTACION; false para el CV-only.
+resolucion_necesaria: Mantener la prueba del módulo, registrar la interacción humana y ejecutar la redacción posterior.
+estado: resuelto_para_diseño; en_prueba
+artefactos: PLAYBOOK_GUION_CARTA_PRESENTACION, TEMPLATE_GUION_CARTA_PRESENTACION.md, guion-carta-presentacion.md, GATE-GUION-CARTA-CONTENIDO
 ```
 
-### `INC-002` — Semántica futura de `GATE-CANDIDATURA-GUION`
+### `INC-002` — Semántica de `GATE-CANDIDATURA-GUION` para adaptadores adicionales
 
 ```text
 ID: INC-002
 elemento: Semántica y posible especialización por rama de GATE-CANDIDATURA-GUION.
-motivo: El gate está probado como entrada del adaptador de CV, pero todavía no existen otros adaptadores documentales.
-impacto: No debe asumirse que su semántica futura será idéntica para carta u otros canales.
+motivo: El gate estaba probado inicialmente como entrada del adaptador de CV y la rama de carta necesitaba una decisión explícita sobre su reutilización.
+impacto: Un gate de entrada específico de carta no existe ni debe inventarse sin una necesidad independiente.
 bloquea_plan: false
-resolucion_necesaria: Revisar el gate al diseñar un adaptador adicional.
+resolucion_necesaria: Resuelto en la prueba del módulo de carta: `GATE-CANDIDATURA-GUION` es la entrada común para adaptadores documentales; cada rama conserva su gate de salida propio.
+estado: resuelto_en_prueba
 ```
 
 ### `INC-003` — Alcance residual de `ARQ-09` y generación común
@@ -1692,10 +1714,25 @@ Estado: `vigente`.
 ### ARQ-22 — Separación de responsabilidades CV/carta
 
 `PLAYBOOK_GUION_ADAPTACION_CV` es exclusivo del CV. `candidatura.md` conserva la estrategia común para los distintos
-adaptadores documentales. La futura carta de presentación tendrá un módulo independiente cuando se diseñe.
+adaptadores documentales. La carta de presentación utiliza un módulo independiente de guion, contenido y revisión.
 
 Esta decisión prevalece sobre cualquier interpretación incompatible de ARQ-09 — Redacción única: ARQ-09 no puede
 utilizarse para imponer un guion ni una fase de generación común CV/carta.
+
+Estado: `vigente`.
+
+### ARQ-23 — Paquete mínimo y presentación manual
+
+Toda candidatura por oferta debe producir como mínimo un CV y una carta de
+presentación, cada uno gobernado por su módulo y revisión propios. La
+presentación en Indeed, LinkedIn, Lidl, Mercadona u otros portales la realiza
+siempre la persona responsable. Job-up no autentica, introduce credenciales,
+completa formularios, carga documentos ni envía candidaturas como parte del
+flujo general.
+
+Los requisitos adicionales del canal se registran cuando se conocen, pero no
+pueden impedir la generación del paquete mínimo ni convertir la automatización
+del portal en una dependencia del flujo.
 
 Estado: `vigente`.
 
@@ -1709,20 +1746,20 @@ Estado: `vigente`.
 via_actual: oferta
 
 fase_completada:
-PLAYBOOK_GUION_ADAPTACION_CV
-→ guion-adaptacion-cv.md
+PLAYBOOK_VEREDICTO_FINAL_CV
+→ veredicto-final-cv.md
 
-estado_fase_completada: en_prueba (candidata a validada)
+estado_fase_completada: implantada y verificada; CAND-2026-020 aprobado y CAND-2026-019 bloqueado en su gate CV
 
 gate_completado:
-GATE-GUION-CV-CONTENIDO
+GATE-VEREDICTO-CV
 
-estado_gate: aprobado
+estado_gate: Lidl aprobado; ASIC bloqueado (2026-08-09)
 
 fase_siguiente:
-GATE-CONTENIDO-CV-COMPOSICION
+PLAYBOOK_GUION_CARTA_PRESENTACION
 
-estado_fase_siguiente: composición CV-only y veredicto implantados y verificados técnicamente; Lidl aprobado y ASIC bloqueado en el gate de presentación
+estado_fase_siguiente: en_prueba; CAND-2026-020 tiene el guion `apto` y espera decisión humana del gate; la carta es obligatoria para completar el paquete mínimo CV + carta
 
 caso_base:
 CAND-2026-020
@@ -1740,11 +1777,13 @@ El contrato de `PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA` y su plantilla 1.2 se va
 
 ## 45. Siguiente transición permitida
 
-La siguiente transición operativa de CAND-2026-020 es preparar
-`paquete-presentacion.md`, resolver el canal Indeed y determinar si exige carta,
-email o formulario. Solo después podrá abrirse `GATE-CANDIDATURA-PRESENTACION`.
-CAND-2026-019 permanece detenida por gate bloqueado. La aprobación de un gate no
-equivale a un envío automático.
+La siguiente transición operativa de CAND-2026-020 es aprobar humanamente el
+gate del guion, redactar la carta y revisarla humanamente. Después se completará
+`paquete-presentacion.md` con CV + carta y
+podrá abrirse `GATE-CANDIDATURA-PRESENTACION`. Resolver formularios o credenciales
+de Indeed/Lidl no es una condición de este flujo. CAND-2026-019 permanece
+detenida por gate bloqueado. La aprobación de un gate no equivale a un envío
+automático.
 
 El gate de entrada ya satisfecho para la composición fue:
 
@@ -1767,7 +1806,7 @@ No debe planificarse todavía como implementación hasta que exista y se apruebe
 ```text id="3iu8j1"
 nuevo veredicto
 PLAYBOOK_ANALISIS_EMPRESA_OBJETIVO
-rama de carta de presentación
+redacción o composición de la carta antes de aprobar su guion y su gate de contenido
 excepción sin fotografía hasta resolver INC-004
 ```
 
@@ -1813,7 +1852,21 @@ guion-adaptacion-cv.md
 ↓
 GATE-GUION-CV-CONTENIDO
 ↓
-futura generación de contenido del CV
+datos-generacion.json
+↓
+composición CV-only
+↓
+GATE-VEREDICTO-CV
+↘
+PLAYBOOK_GUION_CARTA_PRESENTACION
+↓
+guion-carta-presentacion.md → carta revisada
+↓
+paquete-presentacion.md (CV + carta)
+↓
+GATE-CANDIDATURA-PRESENTACION
+↓
+presentación manual por la persona responsable
 ```
 
 ---
@@ -1838,6 +1891,18 @@ PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA
 
 GATE-CONTENIDO-CV-COMPOSICION
 → aprobado para CAND-2026-019 y CAND-2026-020
+
+PLAYBOOK_VEREDICTO_FINAL_CV
+→ implantado y verificado técnicamente
+
+GATE-VEREDICTO-CV
+→ Lidl aprobado; ASIC bloqueado
+
+PLAYBOOK_GUION_CARTA_PRESENTACION
+→ probado; CAND-2026-020 apto, decisión humana del gate pendiente; obligatorio para el paquete mínimo
+
+GATE-CANDIDATURA-PRESENTACION
+→ no abierto; presentación manual por la persona responsable
 ```
 
 ---
@@ -1959,6 +2024,38 @@ Cambios principales:
 - `scripts/job-up/verificar_paquete_presentacion.py` valida de forma determinista
   el paquete incompleto y la evidencia mínima de un envío real;
 - CAND-2026-020 conserva su CV aprobado, pero vuelve a `en_preparacion` porque
-  no tiene carta, email, formulario ni paquete de canal resuelto;
+  todavía no tiene carta ni paquete mínimo completo; email y formularios quedan
+  bajo responsabilidad de la persona responsable;
 - CAND-2026-019 permanece detenida por su gate CV bloqueado;
 - no se ha realizado ningún envío ni se ha cambiado `presentada` a `true`.
+
+## Sincronización del paquete mínimo y presentación manual — 2026-08-09
+
+- se incorpora `ARQ-23`: toda candidatura debe producir como mínimo CV y carta;
+- la carta mantiene módulo, guion, revisión y gate propios, separados del CV;
+- los formularios, credenciales y pasos específicos de Indeed, LinkedIn, Lidl,
+  Mercadona u otros portales quedan bajo responsabilidad de la persona
+  responsable y fuera de la automatización general;
+- `GATE-CANDIDATURA-PRESENTACION` pasa a validar la existencia y revisión del
+  paquete mínimo, no la ejecución de un formulario externo;
+- la transición a `presentada: true` requiere evidencia aportada después de que
+  la persona responsable realice manualmente la presentación;
+- CAND-2026-020 queda pendiente del diseño y generación de su carta, no de la
+  auditoría del formulario de Lidl.
+
+## Prueba del módulo de guion de carta — 2026-08-09
+
+- se completa el diseño de `PLAYBOOK_GUION_CARTA_PRESENTACION` y
+  `TEMPLATE_GUION_CARTA_PRESENTACION.md`, manteniendo la estrategia común en
+  `candidatura.md` y la separación respecto del CV;
+- se generan y evalúan `guion-carta-presentacion.md` y
+  `evaluacion-gate-guion-carta-contenido.md` para CAND-2026-020;
+- el contrato supera las pruebas T1–T9, incluido el caso sintético de empresa
+  anónima, y queda `apto_para_implantacion`;
+- CAND-2026-020 queda `apto`: el usuario declaró que no tiene motivación
+  personal ni relación previa con Lidl y autorizó consultar la URL oficial de
+  empleo, que fue leída el 2026-08-09;
+- la carta final, su composición y el gate de candidatura completa permanecen
+  pendientes de la siguiente fase y de la revisión humana.
+- se resuelve `INC-002` en la prueba: la carta reutiliza el gate de entrada común
+  `GATE-CANDIDATURA-GUION` y no se crea un gate de entrada específico no definido.

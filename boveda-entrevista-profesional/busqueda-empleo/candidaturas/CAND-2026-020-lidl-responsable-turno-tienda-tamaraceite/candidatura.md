@@ -114,9 +114,9 @@ Profesional de operaciones de supermercados capaz de mejorar la disponibilidad d
 
 * **Estado actual:** `en_preparacion`
 * **Presentada:** `false`
-* **Última actualización:** 2026-08-08
-* **Próxima fase prevista:** preparar el paquete de presentación y resolver el canal y sus artefactos requeridos.
-* **Motivo del estado actual:** el CV y `GATE-VEREDICTO-CV` están aprobados, pero falta carta/email/formulario según canal y todavía no existe un paquete completo de candidatura.
+* **Última actualización:** 2026-08-09
+* **Próxima fase prevista:** revisión humana de `contenido-carta-presentacion.md` y decisión de `GATE-CONTENIDO-CARTA-COMPOSICION`; después, si se aprueba, composición y revisión de la carta.
+* **Motivo del estado actual:** el contrato v1.1.0 está implantado en prueba y el contenido de carta fue regenerado desde cero con resultado técnico `apto`, pero la decisión humana del gate sigue pendiente. La presentación en Lidl y cualquier formulario los realizará la persona responsable.
 
 ### 5.1 Veredicto documental
 
@@ -147,8 +147,12 @@ Profesional de operaciones de supermercados capaz de mejorar la disponibilidad d
 | CV PDF | generado_composicion_cv_only | [[cv.pdf]] |
 | CV TEX | generado_composicion_cv_only | [[cv.tex]] |
 | Revisión humana del CV | completada | [[revision-humana-cv]] |
-| Carta DOCX | fuera_de_alcance_cv_only | pendiente de módulo propio |
-| Carta PDF | fuera_de_alcance_cv_only | pendiente de módulo propio |
+| Guion de carta de presentación | generado_apto | [[guion-carta-presentacion]] |
+| Evaluación GATE-GUION-CARTA-CONTENIDO | aprobado | [[evaluacion-gate-guion-carta-contenido]] |
+| Contenido semántico de carta | generado_v1_1_0_apto_gate_composicion_pendiente | [[contenido-carta-presentacion]] |
+| Evaluación GATE-CONTENIDO-CARTA-COMPOSICION | pendiente_revision_humana | [[evaluacion-gate-contenido-carta-composicion]] |
+| Carta DOCX | pendiente_composicion_carta | pendiente de composición y revisión |
+| Carta PDF | pendiente_composicion_carta | pendiente de composición y revisión |
 | Veredicto final del CV | completado_apto_para_presentacion_gate_cv_aprobado | [[veredicto-final-cv]] |
 | Paquete de presentación | pendiente_de_preparacion | [[paquete-presentacion]] |
 | Informe empresa / entrevista | no_aplica | — |

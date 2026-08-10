@@ -56,7 +56,7 @@ class SpecContractTests(unittest.TestCase):
         self.assertIn("ID: INC-002", spec)
         self.assertIn("ID: INC-003", spec)
         self.assertIn("`PLAYBOOK_GUION_ADAPTACION_CV` | `en_prueba`", spec)
-        self.assertIn("Rama de carta de presentación: pendiente de diseño", spec)
+        self.assertIn("Rama de carta de presentación: diseñada y en prueba", spec)
 
 
 class TemplateAndPlaybookTests(unittest.TestCase):

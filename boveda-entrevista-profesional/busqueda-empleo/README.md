@@ -74,9 +74,9 @@ autoriza por sí sola la creación de una sesión PCS.
 3. Analizar la oferta y seleccionar un perfil, evidencias y logros respaldados.
 4. Aplicar la compuerta de privacidad antes de consultar datos privados.
 5. Preparar el CV y completar `GATE-VEREDICTO-CV`.
-6. Preparar `paquete-presentacion.md` y resolver el canal y sus artefactos.
+6. Generar y revisar el paquete mínimo `CV + carta` en `paquete-presentacion.md`.
 7. Abrir `GATE-CANDIDATURA-PRESENTACION` solo cuando el paquete esté completo.
-8. Actualizar la ficha y el seguimiento; no enviar ni contactar sin instrucción.
+8. Actualizar la ficha y el seguimiento; la presentación manual corresponde siempre a la persona responsable.
 
 ### Matriz de artefactos
 
@@ -89,8 +89,8 @@ autoriza por sí sola la creación de una sesión PCS.
 | Paquete de presentación | Obligatorio antes de `GATE-CANDIDATURA-PRESENTACION` | Según canal |
 | CV DOCX y PDF | Obligatorios | Base obligatoria |
 | CV LaTeX | Obligatorio | Previsto para futuras versiones |
-| Carta DOCX y PDF | Según el canal | Solo si la solicita el destinatario |
-| Email de presentación | Según el canal | Base obligatoria |
+| Carta DOCX y PDF | Obligatorios como paquete mínimo | Obligatorios como paquete mínimo |
+| Email de presentación | Según el canal; lo gestiona la persona responsable | Según el canal; lo gestiona la persona responsable |
 | Informe de empresa o preparación de entrevista | Solo si se genera | Solo si se genera |
 
 ### Trazabilidad, PCS e histórico
