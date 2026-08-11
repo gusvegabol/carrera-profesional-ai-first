@@ -514,3 +514,11 @@ queda en 186 tests OK; también pasan la compilación de scripts/tests y
 `git diff --check`. El siguiente gesto es crear el commit coherente e
 integrarlo localmente en `main`. No se hará push, PR, presentación externa ni
 nueva candidatura.
+
+### Integración local completada — 2026-08-11
+
+El commit `eff2d2d` se integró en `main` mediante el merge `784eadd`, sin
+conflictos. La verificación posterior volvió a ejecutar 186 tests, la
+compilación de scripts/tests, `git diff --check` y el smoke test del
+orquestador; todo quedó en verde. La rama temporal se eliminó tras confirmar
+su integración y no existe un worktree adicional. No se hizo push ni PR.
