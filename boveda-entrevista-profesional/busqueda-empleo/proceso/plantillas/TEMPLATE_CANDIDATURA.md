@@ -1,88 +1,183 @@
 ---
-id: template-candidatura
-tipo: plantilla
-proposito: candidatura
-version: "1.0.0"
-estado: vigente
-fecha_version: 2026-07-29
----
-
-# Ficha de candidatura
-
-> Crear una copia de esta ficha dentro de la carpeta de la candidatura. Usar [[datos-core-busqueda]] para las evidencias y actualizar [[seguimiento-candidaturas]] cuando proceda.
-
-## Identificación y trazabilidad
-
-- **Identificador:** `CAND-YYYY-NNN`
-- **Empresa:**
-- **Puesto:**
-- **Enlace al análisis:**
-- **Enlace al guion de adaptación:**
-- **Enlace al veredicto final del CV:**
-- **Versión de CV evaluada:**
-- **Decisión de veredicto:** `corregir_antes_de_revisar` | `revisar_antes_de_aprobar` | `lista_para_aprobacion_humana`
-- **Fecha de preparación:**
-
-## Selección factual
-
-- **perfil principal:**
-- **perfil secundario:**
-- **Nivel de encaje:**
-
-### Logros utilizados (tres a cinco)
-
--
--
--
-
-### Afirmaciones descartadas
-
-| Afirmación | Motivo de descarte |
-| --- | --- |
-|  |  |
-
-### Dudas y bloqueos
-
--
-
-## Estado
-
-El frontmatter de la ficha debe contener también:
-
-```yaml
-estado: en_preparacion
+id: [ID_CANDIDATURA]
+tipo: candidatura
+tipo_origen: [oferta / empresa_objetivo]
+empresa: [EMPRESA]
+puesto_objetivo: [PUESTO_O_AMBITO_OBJETIVO]
+decision_estrategica: [DECISION]
+estado: [en_preparacion / detenida / pendiente_de_aprobacion / documentalmente_completa / aprobada / enviada / rechazada / duplicada / fallida]
 presentada: false
-```
+paquete_presentacion: fuera_de_alcance_actual
+gate_candidatura_presentacion: no_aplica_en_esta_fase
+fecha_creacion: [AAAA-MM-DD]
+sesion_relacionada: [SESION_O_NO_ASIGNADA]
+autorizacion_datos_cv:
+  nombre: pendiente
+  apellido_1: pendiente
+  apellido_2: pendiente
+  email: pendiente
+  telefono: pendiente
+  linkedin: pendiente
+  ubicacion: pendiente
+  fotografia: pendiente
+  fecha_decision:
+  decidido_por:
+---
+# Ficha de candidatura — [ID_CANDIDATURA]
 
-- **Estado:** `en_preparacion` | `pendiente_de_aprobacion` | `aprobada` | `enviada` | `rechazada` | `detenida` | `duplicada` | `fallida`
-- **Presentada:** `true` | `false` (obligatorio; no se infiere de observaciones)
-- **Ruta de la carpeta:** `candidaturas/CAND-YYYY-NNN-slug/`
+> Esta ficha gobierna el ciclo de vida de la candidatura. No sustituye el análisis de origen ni los artefactos posteriores.
 
-## Documentos de la candidatura
+## 1. Identificación y origen
 
-> Mantener este índice completo al crear la candidatura y actualizarlo de nuevo cada vez que se añada, sustituya o elimine un documento de esta carpeta. Incluir todos los artefactos operativos existentes; no incluir capturas ni archivos internos de control visual.
+* **Identificador:** `[ID_CANDIDATURA]`
+* **Tipo de origen:** `[oferta / empresa_objetivo]`
+* **Empresa:** [EMPRESA]
+* **Puesto o ámbito objetivo:** [PUESTO_O_AMBITO]
+* **Fecha de creación:** [AAAA-MM-DD]
+* **Sesión relacionada:** [SESION_O_NO_ASIGNADA]
+* **Artefacto de análisis de origen:** [ENLACE]
+* **Decisión estratégica heredada:** `[DECISION]`
 
-### Análisis y preparación
+### 1.1 Autorización de datos privados para este CV
 
-- [[analisis-oferta|Análisis de la oferta]]
-- [[guion-adaptacion-cv|Guion de adaptación del CV]]
-- [[veredicto-final-cv|Veredicto final del CV]]
-- [[informe-empresa-entrevista|Informe de empresa y preparación de entrevista]] (si se ha generado)
+La persona responsable debe decidir al iniciar la candidatura qué datos pueden aparecer en el CV. Cada campo admite
+`incluir`, `omitir` o `pendiente`. Cualquier campo `pendiente` bloquea la generación del CV.
 
-### Documentos para revisión y envío
+| Campo | Decisión |
+| --- | --- |
+| Nombre | `incluir / omitir / pendiente` |
+| Apellido 1 | `incluir / omitir / pendiente` |
+| Apellido 2 | `incluir / omitir / pendiente` |
+| Email | `incluir / omitir / pendiente` |
+| Teléfono | `incluir / omitir / pendiente` |
+| LinkedIn | `incluir / omitir / pendiente` |
+| Ubicación | `incluir / omitir / pendiente` |
+| Fotografía | `incluir / omitir / pendiente` |
 
-- [[cv.docx|CV editable]]
-- [[cv.pdf|CV en PDF]]
-- [[cv.tex|CV en LaTeX para procesamiento automático]]
-- [[carta-presentacion.docx|Carta de presentación editable]]
-- [[carta-presentacion.pdf|Carta de presentación en PDF]]
+**Fecha de decisión:** [AAAA-MM-DD]
+**Decidido por:** [PERSONA_RESPONSABLE]
 
-## Control antes del envío
+## 2. Decisión y estrategia heredada
 
-- [ ] Los tres a cinco logros están respaldados por [[datos-core-busqueda]].
-- [ ] Las afirmaciones descartadas no aparecen en los documentos.
-- [ ] Las dudas bloqueantes están resueltas.
-- [ ] El veredicto final existe y sus incidencias de integridad están resueltas.
-- [ ] El índice de documentos coincide con los artefactos operativos de esta carpeta y no contiene enlaces rotos.
-- [ ] La revisión humana es obligatoria antes de cualquier envío.
-- [ ] La candidatura se ha registrado en [[seguimiento-candidaturas]].
+### 2.1 Justificación compacta
+
+[SÍNTESIS_DE_POR_QUE_SE_CONTINUA_O_BAJO_QUE_CONDICIONES]
+
+### 2.2 Ángulo de candidatura
+
+[ARGUMENTO_COMPETITIVO_COMPACTO]
+
+### 2.3 Posicionamiento
+
+* **Principal:** [POSICIONAMIENTO]
+* **Secundario:** [POSICIONAMIENTO_O_NO_APLICA]
+* **A evitar:** [ENFOQUES_A_EVITAR]
+
+## 3. Evidencias y límites
+
+### 3.1 Evidencias prioritarias
+
+| Evidencia      | Función en la candidatura                      |
+| -------------- | ---------------------------------------------- |
+| [ID_EVIDENCIA] | [POR_QUE_DEBE_ALIMENTAR_LAS_FASES_POSTERIORES] |
+
+> No existe un número fijo de evidencias. Incluir únicamente las necesarias para sostener la estrategia.
+
+### 3.2 Afirmaciones excluidas
+
+| Afirmación que no debe aparecer | Motivo   | Alternativa permitida     |
+| ------------------------------- | -------- | ------------------------- |
+| [AFIRMACION]                    | [MOTIVO] | [ALTERNATIVA_O_NO_APLICA] |
+
+## 4. Advertencias, datos pendientes y bloqueos
+
+### 4.1 Advertencias activas
+
+| Advertencia   | Tratamiento             |
+| ------------- | ----------------------- |
+| [ADVERTENCIA] | [COMO_DEBE_GESTIONARSE] |
+
+Si no existen:
+
+`ninguna`
+
+### 4.2 Datos pendientes
+
+| Dato   | Estado                                                | Impacto                         |
+| ------ | ----------------------------------------------------- | ------------------------------- |
+| [DATO] | [pendiente / confirmado / descartado / no_disponible] | [NO_BLOQUEANTE / FASE_AFECTADA] |
+
+Si no existen:
+
+`ninguno`
+
+### 4.3 Bloqueos activos
+
+| Bloqueo   | Fase afectada | Resolución necesaria |
+| --------- | ------------- | -------------------- |
+| [BLOQUEO] | [FASE]        | [RESOLUCION]         |
+
+Si no existen:
+
+`ninguno`
+
+> Si existe un bloqueo activo que impida continuar, el estado de la candidatura debe ser `detenida`.
+
+## 5. Estado operativo
+
+* **Estado actual:** `[ESTADO]`
+* **Presentada:** `[true / false]`
+* **Última actualización:** [AAAA-MM-DD]
+* **Próxima fase prevista:** [FASE]
+* **Motivo del estado actual:** [EXPLICACION_COMPACTA]
+
+### 5.1 Veredicto documental
+
+* **Veredicto disponible:** [sí / no]
+* **Enlace:** [ENLACE_O_NO_DISPONIBLE]
+* **Decisión del veredicto:** [DECISION_O_NO_DISPONIBLE]
+* **Revisión humana del CV:** [pendiente / aprobada_para_veredicto / requiere_correccion]
+* **Huella del CV revisado:** [SHA-256_O_NO_DISPONIBLE]
+* **Recomendación de `GATE-VEREDICTO-CV`:** [aprobar / no_aprobar / no_emitida]
+* **Decisión humana de `GATE-VEREDICTO-CV`:** [pendiente / aprobado / bloqueado]
+* **Cierre documental:** [pendiente / documentalmente_completa]
+* **Presentada:** `false` mientras no exista evidencia real de envío.
+
+> La decisión del veredicto no sustituye la decisión estratégica de la candidatura.
+
+## 6. Artefactos de la candidatura
+
+| Artefacto                    | Estado                                                                                  | Enlace o ruta        |
+| ---------------------------- | --------------------------------------------------------------------------------------- | -------------------- |
+| Análisis de origen           | [completado]                                                                            | [ENLACE]             |
+| Guion de adaptación del CV   | [no_iniciado / en_preparacion / completado / requiere_revision / bloqueado / no_aplica] | [ENLACE_O_PENDIENTE] |
+| CV DOCX                      | [ESTADO]                                                                                | [RUTA_O_PENDIENTE]   |
+| CV PDF                       | [ESTADO]                                                                                | [RUTA_O_PENDIENTE]   |
+| CV TEX                       | [ESTADO]                                                                                | [RUTA_O_PENDIENTE]   |
+| Revisión humana del CV       | [pendiente / completada / requiere_correccion]                                          | [RUTA_O_PENDIENTE]   |
+| Carta DOCX                   | [ESTADO]                                                                                | [RUTA_O_PENDIENTE]   |
+| Carta PDF                    | [ESTADO]                                                                                | [RUTA_O_PENDIENTE]   |
+| Veredicto final del CV       | [ESTADO]                                                                                | [ENLACE_O_PENDIENTE] |
+| Informe empresa / entrevista | [ESTADO / no_aplica]                                                                    | [ENLACE_O_PENDIENTE] |
+
+> Añadir nuevos artefactos operativos si aparecen. No incluir capturas ni archivos internos de control.
+
+## 7. Control de coherencia
+
+* [ ] La decisión estratégica coincide con el artefacto de análisis de origen.
+* [ ] La ficha no vuelve a analizar la oferta o empresa.
+* [ ] Las evidencias mantienen trazabilidad factual.
+* [ ] No existe un número fijo artificial de evidencias.
+* [ ] Las afirmaciones excluidas permanecen visibles para las fases posteriores.
+* [ ] Advertencias, datos pendientes y bloqueos están diferenciados.
+* [ ] Todo bloqueo activo está reflejado en el estado.
+* [ ] `presentada` refleja un hecho real y no una inferencia.
+* [ ] El índice de artefactos refleja únicamente documentos realmente existentes o pendientes.
+* [ ] Los enlaces existentes no están rotos.
+* [ ] La ficha no duplica contenido completo de análisis, guion, CV, carta o veredicto.
+* [ ] La próxima fase está claramente identificada.
+* [ ] Si existe CV generado, la revisión humana y su huella están registradas antes del veredicto.
+* [ ] `GATE-VEREDICTO-CV` conserva una decisión humana separada y valida únicamente el CV.
+* [ ] CV y carta finales están aprobados cuando la candidatura los requiere.
+* [ ] El cierre documental está registrado; los formularios y credenciales quedan fuera de este flujo.
+* [ ] Ninguna aprobación de gate cambia `presentada` sin evidencia real de envío.

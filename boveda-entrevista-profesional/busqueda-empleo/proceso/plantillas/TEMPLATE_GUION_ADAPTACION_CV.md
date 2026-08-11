@@ -1,88 +1,192 @@
 ---
-id: template-guion-adaptacion-cv
-tipo: plantilla
-proposito: guion_adaptacion_cv
-version: "1.0.0"
-estado: vigente
-fecha_version: 2026-07-29
+id: "[ID_GUIÓN]"
+tipo: guion_adaptacion_cv
+version_diseno: 0.3.4
+version_playbook: 1.0.1
+version_template: 2.1
+candidatura: "[ID_CANDIDATURA]"
+empresa: "[EMPRESA]"
+puesto: "[PUESTO]"
+idioma_cv: "[CODIGO_IDIOMA]"
+fecha_generacion: "[AAAA-MM-DD]"
+sesion: "[SESION_O_NO_ASIGNADA]"
+candidatura_origen: "[ENLACE_A_CANDIDATURA]"
+analisis_origen: "[ENLACE_A_ANALISIS]"
+fuentes_factuales:
+  - "[ENLACE_A_DATOS_CORE]"
+fecha_lectura_fuentes: "[AAAA-MM-DD]"
+gate_entrada: GATE-CANDIDATURA-GUION
+evaluacion_gate_entrada: "[ENLACE_A_EVALUACION_O_NO_APLICA]"
+gate_salida: GATE-GUION-CV-CONTENIDO
 ---
 
-# Guion de adaptación de CV y carta por candidatura
+# Guion de adaptación de CV — [ID_CANDIDATURA]
 
-> Este guion se completa después del análisis de la oferta y antes de redactar el CV o la carta. Su objetivo es separar la selección factual de la composición narrativa y evitar que una candidatura anterior arrastre su enfoque.
+> Adaptador editorial exclusivo del CV. No sustituye la estrategia de `candidatura.md`, no redacta el CV final y no contiene el estado oficial del gate de salida.
 
-## Dirección de la candidatura
+## 1. Entrada validada y trazabilidad
 
-- **Puesto objetivo:**
-- **Perfil principal:**
-- **Perfil secundario:**
-- **Palabras clave prioritarias de la oferta:**
-- **Nivel del puesto y riesgo de sobrecualificación:**
-- **Requisitos no acreditados o parcialmente acreditados:**
-- **Funciones que deben ocupar el primer plano:**
-- **Funciones o áreas que no deben dominar el documento:**
+| Elemento | Valor |
+| --- | --- |
+| Candidatura | [ID_CANDIDATURA] |
+| Empresa / puesto | [EMPRESA] — [PUESTO] |
+| Idioma del CV | `[CODIGO_IDIOMA]` |
+| Autoridad usada para determinar idioma | [INSTRUCCION_EXPLICITA / REQUISITO_OFERTA / IDIOMA_INEQUIVOCO_OFERTA / CV_BASE_AUTORIZADO] |
+| Gate de entrada | `GATE-CANDIDATURA-GUION: aprobado` |
+| Candidatura de origen | [ENLACE] |
+| Análisis de origen | [ENLACE] |
+| Fuentes factuales | [ENLACES] |
+| Fecha de lectura de fuentes | [AAAA-MM-DD] |
+| Sesión | [SESION] |
 
-## Estructura narrativa prevista
+## 2. Instrucción editorial heredada
 
-### Titular
+* **Posicionamiento heredado:** [SIN REJUSTIFICARLO].
+* **Mensaje profesional principal:** [MENSAJE].
+* **Gancho heredado:** [GANCHO_O_NO_APLICA].
+* **Objetivo del CV:** [OBJETIVO DE SELECCIÓN].
+* **Idioma del CV:** [CODIGO_IDIOMA].
+* **Percepción a provocar:** [PERCEPCIÓN].
+* **Percepción a evitar:** [PERCEPCIÓN_O_NO_APLICA].
 
-Una línea que combine el puesto objetivo con dos o tres áreas respaldadas por la matriz factual.
+### 2.1 Seniority
 
-En puestos auxiliares o técnicos, el titular debe ser reconocible para un ATS y evitar un encuadre directivo si la oferta no lo requiere.
+* **Seniority histórico:** [HECHOS RESPALDADOS].
+* **Seniority objetivo:** [NIVEL REAL DEL PUESTO].
+* **Tratamiento editorial:** [CÓMO MODULAR EL ÉNFASIS SIN ALTERAR CARGOS, RESPONSABILIDADES NI CRONOLOGÍA].
 
-### Perfil profesional
+### 2.2 Tono editorial
 
-Tres o cuatro líneas que expliquen el valor para esta oferta. No repetir la trayectoria completa ni introducir competencias no seleccionadas.
+* **Descriptores:** [UNO A TRES DESCRIPTORES].
+* **Justificación factual y estratégica:** [JUSTIFICACIÓN].
 
-### Competencias clave
+## 3. Mapa de edición
 
-Entre seis y ocho competencias o herramientas agrupadas por relación con la oferta. Deben proceder de [[datos-core-busqueda]] y reflejar el perfil principal.
+Cada fila usa una referencia local `M-NNN`. Los campos no aplicables deben decir `no_aplica`.
 
-### Experiencia relevante
+Contrato de campos del mapa: `ref_local`, `contenido`, `tipo`, `evidencia`, `presencia`, `obligatoriedad`, `peso_editorial`, `criterio_objetivo`, `motivo`, `funcion_estrategica`, `seccion_destino`, `orden_en_seccion`, `nivel_detalle`, `limitaciones_redaccion` y `defecto_relacionado`.
 
-Seleccionar solo las organizaciones y logros que respondan a la oferta. No se exige reproducir toda la cronología.
+| Ref. local | Contenido | Tipo | Evidencia | Presencia | Obligatoriedad | Peso editorial | Criterio objetivo | Motivo | Función estratégica | Sección destino | Orden en sección | Nivel detalle | Limitaciones de redacción | Defecto relacionado |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| M-001 | [CONTENIDO] | [perfil / titular / competencia / experiencia / cargo / funcion / responsabilidad / logro / resultado / metrica / herramienta / tecnologia / formacion / certificacion / idioma / proyecto / otro] | [ID_EVIDENCIA] | [incluir / omitir] | [obligatoria / opcional] | [alto / medio / bajo / minimo / no_aplica] | [REQUISITO, RESPONSABILIDAD, COMPETENCIA, SEÑAL O ARGUMENTO] | [MOTIVO_O_NO_APLICA] | [sostener_posicionamiento / demostrar_requisito / diferenciar / dar_continuidad / proteger_factualidad / mitigar_riesgo / respaldar_keyword] | [SEC-NN / no_aplica] | [NÚMERO / no_aplica] | [amplio / normal / breve / mencion / no_aplica] | [LÍMITE_O_no_aplica] | [DEF-ARQ-001 / no_aplica] |
 
-| Organización o etapa | Evidencia seleccionada | Necesidad de la oferta que responde |
+### 3.1 Reglas aplicadas al mapa
+
+* `obligatoria` implica `incluir`; `omitir` implica `opcional` y peso `no_aplica`.
+* Todo contenido de peso `alto` o `medio` identifica el criterio que ayuda a demostrar.
+* Las omisiones no pueden falsear, romper cronología necesaria ni ocultar una carencia relevante.
+* El peso y el detalle son dimensiones independientes.
+* Si aparece evidencia factual nueva, `defecto_relacionado: DEF-ARQ-001` es obligatorio; la unidad no puede incorporarse al mapa como hecho utilizable.
+
+## 4. Experiencias, logros y contenidos seleccionados
+
+### 4.1 Experiencias de mayor protagonismo
+
+| Experiencia | Evidencia | Qué debe demostrar | Tratamiento |
+| --- | --- | --- | --- |
+| [EXPERIENCIA] | [ID] | [DEMANDA DEL PUESTO] | [ÉNFASIS, ORDEN Y DETALLE] |
+
+### 4.2 Experiencias secundarias o de continuidad
+
+| Experiencia | Evidencia | Función | Tratamiento |
+| --- | --- | --- | --- |
+| [EXPERIENCIA] | [ID] | [FUNCIÓN] | [RESUMIR, MENCIONAR O CONSERVAR] |
+
+### 4.3 Logros y evidencias de impacto utilizables
+
+| Logro o evidencia | Referencia factual | Uso permitido | Límite |
+| --- | --- | --- | --- |
+| [LOGRO] | [ID] | [USO] | [LÍMITE_O_no_aplica] |
+
+## 5. Arquitectura editorial y presupuesto de contenido
+
+| Sección | Objetivo | Contenido dominante | Profundidad relativa | Restricciones |
+| --- | --- | --- | --- | --- |
+| SEC-01 | [OBJETIVO] | [CONTENIDOS] | [ALTA / MEDIA / BAJA] | [RESTRICCIONES] |
+
+* **Progresión narrativa:** [PROGRESIÓN].
+* **Contenido que debe comprimirse:** [CONTENIDO].
+* **Límite documental aplicable:** [LÍMITE_O_NO_DISPONIBLE].
+
+## 6. Léxico respaldado
+
+### 6.1 Utilizable
+
+| Término | Evidencia factual | Uso |
 | --- | --- | --- |
-|  |  |  |
+| [TÉRMINO] | [ID] | [CONTEXTO] |
 
-### Valor diferencial
+### 6.2 Uso condicionado
 
-Dos o tres afirmaciones breves, verificables y específicas para la oferta. No añadir una sección genérica si no aporta información nueva.
+| Término | Alcance permitido | Prohibición asociada |
+| --- | --- | --- |
+| [TÉRMINO] | [ALCANCE] | [LÍMITE] |
 
-### Frase de encaje cuando exista sobrecualificación
+### 6.3 Prohibido
 
-Si procede, una frase breve que explique el interés por el puesto y la aportación operativa. No debe ocultar cargos ni crear experiencia inexistente.
+| Término o afirmación | Motivo | Alternativa permitida |
+| --- | --- | --- |
+| [TÉRMINO] | [MOTIVO] | [ALTERNATIVA_O_NO_APLICA] |
 
-## Aplicación documental
+## 7. Carencias, advertencias y límites de redacción
 
-Este guion gobierna simultáneamente `cv.docx`, `cv.pdf`, `cv.tex`, `carta-presentacion.docx` y `carta-presentacion.pdf`. La composición visual debe seguir [[GUIA_FORMATO_CV_Y_CARTA]] y las plantillas `TEMPLATE_CV_FORMATO.docx` y `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx`.
+| Elemento | Riesgo | Tratamiento editorial | Permitido | Prohibido |
+| --- | --- | --- | --- | --- |
+| [ELEMENTO] | [RIESGO] | [TRATAMIENTO] | [PERMITIDO] | [PROHIBIDO] |
 
-- Fuente: Calibri.
-- Jerarquía: 14/12/11/10,5 pt.
-- Colores: `#1F2937` y `#5B6573`.
-- Alineación: el contenido narrativo del CV y de la carta debe quedar justificado; encabezados, contacto, saludo, asunto, títulos y firma pueden conservar alineación funcional.
-- Extensión: hasta dos páginas.
-- Fotografía: obligatoria en CV y carta salvo exclusión expresa en la invocación de la skill. La imagen-placeholder `[FOTO]` debe sustituirse por la fotografía real autorizada antes de entregar los artefactos y conservar proporción 1:1.
-- Texto: seleccionable, con encabezados estándar y viñetas reales; sin tablas ni columnas para el contenido narrativo.
+## 8. Control editorial
 
-La carta puede desarrollar solo una selección de las evidencias del CV. No puede ampliar su selección factual ni introducir hechos, logros, herramientas, requisitos cumplidos o información de empresa que no estén en este guion y el análisis.
+### 8.1 Cobertura estratégica
 
-## Límites y control de arrastre
+| Prioridad de `candidatura.md` | Estado | Mapa relacionado | Justificación |
+| --- | --- | --- | --- |
+| [PRIORIDAD] | [cubierta / no_requiere_presencia_directa / no_cubierta_justificada / bloqueo] | [M-NNN] | [JUSTIFICACIÓN] |
 
-- **Afirmaciones excluidas:**
-- **Datos privados autorizados para esta candidatura:**
-- **Contenido que no debe heredarse de otras candidaturas:**
-- **Palabras clave usadas y evidencia que las respalda:**
-- **Elementos visuales permitidos:** hasta dos páginas, texto seleccionable, encabezados estándar, viñetas y fotografía obligatoria, salvo exclusión expresa; sin tablas ni columnas para el contenido narrativo.
-- **Párrafos:** cada punto y aparte de experiencia y formación debe ser un párrafo real; no se simulan párrafos con saltos internos. Las cabeceras de puesto conservan negrita y sus descripciones usan estilo normal.
-- **Salida limpia:** los DOCX y PDF finales no pueden conservar pies, encabezados, marcadores ni instrucciones que identifiquen el documento como template.
-- [ ] El texto se ha construido desde este guion y el análisis de esta oferta.
-- [ ] No se ha copiado contenido factual de otra candidatura sin volver a validarlo contra [[datos-core-busqueda]].
-- [ ] La experiencia histórica no pertinente, el histórico municipal restringido y la actividad independiente no autorizada no aparecen.
-- [ ] El perfil principal domina el titular, el resumen y la selección de experiencia.
-- [ ] La carta no amplía la selección factual del CV ni introduce información no respaldada.
-- [ ] La fotografía está incorporada, salvo que exista una exclusión expresa registrada en la invocación.
-- [ ] La imagen incorporada es la fotografía real autorizada y no el placeholder `[FOTO]`.
-- [ ] Los pies y encabezados de los artefactos finales están limpios de texto de template.
-- [ ] El contenido narrativo del CV y de la carta está justificado.
+### 8.2 Duplicación
+
+| Evidencia | Apariciones permitidas | Función distinta de cada aparición | Acción |
+| --- | --- | --- | --- |
+| [ID] | [UBICACIONES] | [FUNCIONES] | [MANTENER / REDUCIR / ELIMINAR] |
+
+### 8.3 Previsión de primer escaneo
+
+* **Perfil identificable de inmediato:** [SÍ / NO Y EVIDENCIA].
+* **Dos o tres señales fuertes visibles:** [SEÑALES].
+* **Riesgo de sobrecualificación controlado:** [TRATAMIENTO].
+* **Credenciales o keywords que no deben dominar:** [ELEMENTOS].
+
+## 9. Brief cerrado para la futura generación de contenido del CV
+
+* **Idioma del CV:** [CODIGO_IDIOMA].
+* **Objetivo y posicionamiento:** [SÍNTESIS DERIVADA].
+* **Gancho, seniority y tono:** [SÍNTESIS DERIVADA].
+* **Contenidos y evidencias prioritarias:** [M-NNN].
+* **Arquitectura y contenido a minimizar:** [SÍNTESIS DERIVADA].
+* **Léxico, restricciones y riesgos:** [SÍNTESIS DERIVADA].
+
+> Este brief resume el cuerpo del guion. En caso de discrepancia prevalece el cuerpo detallado y la discrepancia debe corregirse antes de la evaluación.
+
+## 10. Incidencias e invalidación
+
+| Incidencia | Clasificación | Defecto relacionado | Resultado requerido | Acción |
+| --- | --- | --- | --- | --- |
+| [INCIDENCIA_O_NINGUNA] | [editorial / origen / factual / bloqueo] | [DEF-ARQ-001 / no_aplica] | [requiere_correccion / requiere_revision_origen / requiere_actualizacion_factual / bloqueado / no_aplica] | [ACCIÓN] |
+
+> Si surge evidencia factual nueva o contradictoria, no se parchea este guion: debe resolverse aguas arriba y producirse una **regeneración completa** desde la `candidatura.md` sincronizada. `DEF-ARQ-001` continúa abierto.
+
+> Se registran todas las incidencias detectadas, aunque la precedencia del gate determine un único resultado global.
+
+## 11. Control de coherencia previo a evaluación
+
+* [ ] Gate de entrada aprobado y fuentes resolubles.
+* [ ] No hay bloqueo activo ni hechos nuevos incorporados directamente.
+* [ ] `idioma_cv` está determinado y posee autoridad explícita.
+* [ ] El mapa contiene todos los campos obligatorios y las prioridades estratégicas tienen cobertura.
+* [ ] Seniority, tono, léxico, carencias y exclusiones están tratados.
+* [ ] No hay omisiones engañosas, duplicaciones injustificadas, carta ni redacción final del CV.
+* [ ] El brief coincide con el cuerpo detallado.
+
+## 12. Referencia a la evaluación del gate de salida
+
+* **Artefacto de evaluación:** `evaluacion-gate-guion-cv-contenido.md`.
+* **Regla:** la evaluación, recomendación, decisión humana y estado oficial de `GATE-GUION-CV-CONTENIDO` se registran exclusivamente en ese artefacto separado.

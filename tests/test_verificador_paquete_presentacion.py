@@ -16,13 +16,23 @@ def load_module():
 
 
 class VerificadorPaquetePresentacionTests(unittest.TestCase):
-    def test_lidl_no_bloquea_por_formulario_y_bloquea_mientras_falte_la_carta(self):
+    def test_lidl_no_bloquea_por_formulario_y_reconoce_gate_final_de_carta_aprobado(self):
         module = load_module()
         candidate = ROOT / "boveda-entrevista-profesional" / "busqueda-empleo" / "candidaturas" / "CAND-2026-020-lidl-responsable-turno-tienda-tamaraceite"
-        blockers = module.validar_paquete(candidate / "paquete-presentacion.md", candidate)
-        self.assertIn("artefactos_presentacion_pendientes", blockers)
+        package_path = ROOT / "historico" / "boveda-entrevista-profesional" / "busqueda-empleo" / "candidaturas" / "CAND-2026-020-lidl-responsable-turno-tienda-tamaraceite" / "paquete-presentacion.md"
+        blockers = module.validar_paquete(package_path, candidate)
+        self.assertNotIn("gate_veredicto_carta_no_aprobado", blockers)
         self.assertNotIn("canal_envio_no_confirmado", blockers)
         self.assertNotIn("presentada_debe_ser_false", blockers)
+        with tempfile.TemporaryDirectory() as directory:
+            package = Path(directory) / "paquete-presentacion.md"
+            package.write_text(
+                package_path.read_text(encoding="utf-8")
+                .replace("`GATE-VEREDICTO-CARTA` aprobado", "`GATE-VEREDICTO-CARTA` pendiente"),
+                encoding="utf-8",
+            )
+            blocked = module.validar_paquete(package, candidate)
+            self.assertIn("gate_veredicto_carta_no_aprobado", blocked)
 
     def test_no_permite_transicion_a_presentada_sin_evidencia_completa(self):
         module = load_module()

@@ -9,15 +9,17 @@ candidatura: CAND-2026-020
 empresa: Lidl Supermercados SAU
 puesto: Responsable de turno Tienda 40h Tamaraceite
 idioma: es
-fecha_generacion: 2026-08-09
-motivo_regeneracion: implantacion_contrato_v1_1_0_regeneracion_desde_fuentes_canonicas
+fecha_generacion: 2026-08-10
+motivo_regeneracion: correccion_expansion_semantica_y_regeneracion_desde_fuentes_canonicas
 gate_entrada: GATE-GUION-CARTA-CONTENIDO
 estado_gate_entrada: aprobado
 gate_salida: GATE-CONTENIDO-CARTA-COMPOSICION
 estado_contenido: apto
 recomendacion_gate: aprobar
-decision_humana: pendiente
-estado_gate_salida: pendiente
+decision_humana: aprobado
+estado_gate_salida: aprobado
+fecha_decision_humana: 2026-08-10
+motivo_decision_humana: contenido_factual_editorialmente_autorizado_y_trazable; autoriza_unicamente_composicion_futura
 sesion: sesion-20260805-1757-job-up
 ---
 
@@ -75,7 +77,8 @@ objetivo_comunicativo: demostrar_encaje_operativo_transferible_para_responsable_
 argumento_central: experiencia_practica_en_pedidos_stock_rotacion_ejecucion_y_caja
 motivaciones_autorizadas: []
 cultura_utilizable: [formacion_y_desarrollo_como_contexto_de_lidl]
-evidencias_prioritarias: [HER-03, HER-07, HER-04, HER-08, HER-10]
+evidencias_prioritarias: [HER-03, HER-07, HER-04, HER-08]
+evidencias_factuales_no_seleccionadas: [HER-10]
 longitud_objetivo: 220
 rango_admisible: 180-280
 tono: profesional_humano_directo
@@ -132,7 +135,7 @@ privacidad: conforme
 accion: mantener_formulaciones_positivas_y_no_exponer_precauciones
 ```
 
-La auditoría confirmó que los pedidos centralizados y la negociación directa permanecen dentro del alcance acreditado de HER-03.
+La auditoría confirmó los pedidos centralizados y directos autorizados por A-002. La negociación con proveedores existe en datos-core, pero no fue seleccionada por ningún A-NNN de este guion y queda excluida del contenido.
 
 ### 5.4 Segunda lectura recruiter tras corrección factual
 
@@ -159,15 +162,33 @@ La segunda lectura es obligatoria y confirma que la revisión factual no convirt
 | B-02 | apertura y encaje | A-001 | operaciones de supermercado |
 | B-03 | pedidos y disponibilidad | A-002 | HER-03 |
 | B-04 | stock, rotación y ejecución | A-003, A-004 | HER-07, HER-04, HER-08 |
-| B-05 | caja y turnos | A-004, A-005 | HER-10, disponibilidad confirmada |
+| B-05 | disponibilidad y turnos | A-005 | disponibilidad confirmada |
 | B-06 | adaptación contextual y cierre | A-005, A-006 | formación de Lidl como contexto; conversación profesional |
+
+## 6.1 Conjunto cerrado de afirmaciones autorizadas
+
+Cada afirmación profesional visible se vincula a una decisión editorial del guion y a la evidencia factual compatible con esa decisión.
+
+| claim_id | Refs. guion | Evidencia factual compatible | Frase visible exacta |
+| --- | --- | --- | --- |
+| CL-001 | A-001 | HER-03, HER-07 | Me gustaría poner mi experiencia en operaciones de supermercados a disposición del puesto de Responsable de turno en Tamaraceite. |
+| CL-002 | A-001, A-004 | HER-03, HER-04, HER-07, HER-08 | He trabajado con la disponibilidad de producto, la organización diaria y el seguimiento de tareas que sostienen el funcionamiento de una tienda. |
+| CL-003 | A-002 | HER-03 | En Herfrailes preparaba previsiones a partir de las ventas y diseñaba pedidos diarios para la central y para proveedores directos. |
+| CL-004 | A-002 | HER-03 | Automatizar parte de ese proceso me ayudaba a ajustar las cantidades al consumo real y a mantener el surtido disponible. |
+| CL-005 | A-003 | HER-03, HER-07 | En la gestión de stock y rotación conseguí reducir un 30 % las caducidades y un 80 % los productos sin venta durante más de un mes, y coordiné la redistribución de existencias entre tres tiendas. |
+| CL-006 | A-004 | HER-04, HER-08 | Organizaba el trabajo por tienda, seguía las tareas y atendía las incidencias escaladas. |
+| CL-007 | A-005 | CONTEXTO | Tengo disponibilidad para trabajar en turnos rotativos de mañana o tarde. |
+| CL-008 | A-005 | CONTEXTO | La formación inicial de Lidl ofrece un marco para conocer sus procedimientos y trasladar esta experiencia a la operativa de Tamaraceite. |
+| CL-009 | A-006 | — | Quedo a su disposición para conversar sobre cómo podría contribuir al equipo. |
+
+La negociación con proveedores y los cuadres de caja existen en datos-core, pero no pertenecen a ningún `A-NNN` autorizado en este guion; por ello no forman parte de este conjunto.
 
 ## 7. Controles editoriales
 
 | Control | Resultado | Observación interna |
 | --- | --- | --- |
 | Restricción ≠ contenido | conforme | se afirma la experiencia permitida; no se explican límites |
-| Formulación positiva | conforme | pedidos, negociación acotada, caja y Excel expresados directamente |
+| Formulación positiva | conforme | pedidos, caja y Excel expresados directamente; negociación no incorporada |
 | Voz del candidato | conforme | primera persona y tono profesional |
 | Lenguaje metaanalítico | no detectado | no se habla del análisis ni del expediente |
 | Utilidad frase por frase | conforme | cada párrafo explica encaje, evidencia o continuidad |
@@ -177,7 +198,7 @@ La segunda lectura es obligatoria y confirma que la revisión factual no convirt
 | Anti-IA | conforme | lenguaje directo, sin clichés ni simetría artificial |
 | Elogios genéricos | no | no hay elogios vacíos a Lidl |
 | ATS / recruiter IA | conforme | vocabulario respaldado, sin keyword stuffing |
-| Factualidad | conforme | solo A-001–A-006 y HER-03/HER-04/HER-07/HER-08/HER-10 |
+| Factualidad | conforme | solo afirmaciones del conjunto cerrado A-001–A-006 |
 | No expansión semántica | conforme | no se detectan afirmaciones profesionales nuevas |
 
 ## 8. Saludo
@@ -198,13 +219,13 @@ Me gustaría poner mi experiencia en operaciones de supermercados a disposición
 
 ### Trazabilidad
 
-`B-02` / `A-001` / HER-03, HER-04, HER-07, HER-08
+`B-02` / `A-001`, `A-004` / HER-03, HER-04, HER-07, HER-08
 
 ## 10. Desarrollo argumental
 
 ### Texto
 
-En Herfrailes preparaba previsiones a partir de las ventas y diseñaba pedidos diarios para la central y para proveedores directos. Automatizar parte de ese proceso me ayudaba a ajustar las cantidades al consumo real y a mantener el surtido disponible. Durante los tres primeros años también negociaba directamente con proveedores en los artículos que no estaban centralizados.
+En Herfrailes preparaba previsiones a partir de las ventas y diseñaba pedidos diarios para la central y para proveedores directos. Automatizar parte de ese proceso me ayudaba a ajustar las cantidades al consumo real y a mantener el surtido disponible.
 
 ### Trazabilidad
 
@@ -214,11 +235,11 @@ En Herfrailes preparaba previsiones a partir de las ventas y diseñaba pedidos d
 
 ### Texto
 
-En la gestión de stock y rotación conseguí reducir un 30 % las caducidades y un 80 % los productos sin venta durante más de un mes, y coordiné la redistribución de existencias entre tres tiendas. Organizaba el trabajo por tienda, seguía las tareas y atendía las incidencias escaladas. Además, realizaba cuadres de caja y desarrollé en Excel un sistema para mejorar su control.
+En la gestión de stock y rotación conseguí reducir un 30 % las caducidades y un 80 % los productos sin venta durante más de un mes, y coordiné la redistribución de existencias entre tres tiendas. Organizaba el trabajo por tienda, seguía las tareas y atendía las incidencias escaladas.
 
 ### Trazabilidad
 
-`B-04` / `A-003`, `A-004` / HER-07, HER-04, HER-08, HER-10
+`B-04` / `A-003`, `A-004` / HER-07, HER-04, HER-08
 
 ## 12. Cultura y contexto de empresa
 
@@ -270,9 +291,9 @@ Estimado equipo de selección:
 
 Me gustaría poner mi experiencia en operaciones de supermercados a disposición del puesto de Responsable de turno en Tamaraceite. He trabajado con la disponibilidad de producto, la organización diaria y el seguimiento de tareas que sostienen el funcionamiento de una tienda.
 
-En Herfrailes preparaba previsiones a partir de las ventas y diseñaba pedidos diarios para la central y para proveedores directos. Automatizar parte de ese proceso me ayudaba a ajustar las cantidades al consumo real y a mantener el surtido disponible. Durante los tres primeros años también negociaba directamente con proveedores en los artículos que no estaban centralizados.
+En Herfrailes preparaba previsiones a partir de las ventas y diseñaba pedidos diarios para la central y para proveedores directos. Automatizar parte de ese proceso me ayudaba a ajustar las cantidades al consumo real y a mantener el surtido disponible.
 
-En la gestión de stock y rotación conseguí reducir un 30 % las caducidades y un 80 % los productos sin venta durante más de un mes, y coordiné la redistribución de existencias entre tres tiendas. Organizaba el trabajo por tienda, seguía las tareas y atendía las incidencias escaladas. Además, realizaba cuadres de caja y desarrollé en Excel un sistema para mejorar su control.
+En la gestión de stock y rotación conseguí reducir un 30 % las caducidades y un 80 % los productos sin venta durante más de un mes, y coordiné la redistribución de existencias entre tres tiendas. Organizaba el trabajo por tienda, seguía las tareas y atendía las incidencias escaladas.
 
 Tengo disponibilidad para trabajar en turnos rotativos de mañana o tarde. La formación inicial de Lidl ofrece un marco para conocer sus procedimientos y trasladar esta experiencia a la operativa de Tamaraceite.
 
@@ -287,7 +308,7 @@ gusvegabol@gmail.com
 ## 17. Control final del contenido
 
 ```yaml
-palabras_reales: 217
+palabras_reales: 185
 resultado: interpreta_y_conecta
 podria_enviarse_a_otra_empresa_cambiando_solo_el_nombre: no
 restricciones_internas_expuestas: no
@@ -325,12 +346,12 @@ No se detectan afirmaciones profesionales nuevas.
 ```yaml
 estado_contenido: apto
 recomendacion_ia: aprobar
-decision_humana: pendiente
-estado_gate: pendiente
+decision_humana: aprobado
+estado_gate: aprobado
 ```
 
-La recomendación técnica solo autoriza la revisión humana del contenido. No autoriza composición, revisión final de la carta ni presentación externa.
+La aprobación humana autoriza únicamente el avance a la futura fase de composición de la carta. No autoriza el gate final de la carta, incorporar la carta al paquete como aprobada, abrir `GATE-CANDIDATURA-PRESENTACION` ni presentar o enviar externamente la candidatura.
 
 ## 20. Postcondición
 
-El artefacto queda listo para revisión humana de `GATE-CONTENIDO-CARTA-COMPOSICION`. No se han creado carta DOCX/PDF/LaTeX, ni se ha iniciado sesión, cargado archivo o enviado información a Lidl.
+El contenido semántico queda aprobado para pasar a la futura composición. No se han creado carta DOCX/PDF/LaTeX, ni se ha iniciado sesión, cargado archivo o enviado información a Lidl. La composición se diseñará primero en ChatGPT.

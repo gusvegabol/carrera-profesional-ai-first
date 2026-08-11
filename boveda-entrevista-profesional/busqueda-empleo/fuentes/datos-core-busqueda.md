@@ -2,7 +2,7 @@
 id: datos-core-busqueda
 titulo: Datos Core para Búsqueda de Empleo
 fecha_creacion: 2026-07-21
-fecha_actualizacion: 2026-08-08
+fecha_actualizacion: 2026-08-11
 estado: en_construccion
 tipo: base_datos
 version: "1.0.0"
@@ -39,8 +39,10 @@ Esta nota es la fuente factual única para adaptar CV a ofertas concretas. Reún
 | Disponibilidad de incorporación | Entre 7 y 15 días |
 | Turnos rotativos | Disponibilidad confirmada para turnos rotativos de mañana o tarde |
 | Desplazamiento | Todos los municipios de Gran Canaria, siempre que las condiciones del contrato compensen el desplazamiento en coche |
+| Vehículo propio | Confirmado por declaración humana registrada en CAND-2026-021 el 2026-08-11; dato profesional reutilizable |
 | Permisos de conducción | B, A, A1 y A2 |
 | Viajes | Disponibilidad para viajar de forma esporádica por razones del cargo |
+| Movilidad territorial fuera de Gran Canaria | No confirmada como disponibilidad habitual; resolver la movilidad concreta antes del gate candidatura→guion cuando la oferta la exija |
 | Visibilidad en Indeed | Las empresas pueden encontrar el perfil |
 | Contacto visible en el perfil de Indeed | Solo correo electrónico; no publicar el teléfono |
 

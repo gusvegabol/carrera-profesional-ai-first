@@ -6,8 +6,8 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PLAYBOOK = ROOT / "docs" / "ideas-y-debates" / "mejoras-job-up" / "PLAYBOOK_GUION_CARTA_PRESENTACION.md"
-TEMPLATE = ROOT / "docs" / "ideas-y-debates" / "mejoras-job-up" / "TEMPLATE_GUION_CARTA_PRESENTACION.md"
+PLAYBOOK = ROOT / "docs" / "metodologia" / "playbooks" / "PLAYBOOK_GUION_CARTA_PRESENTACION.md"
+TEMPLATE = ROOT / "boveda-entrevista-profesional" / "busqueda-empleo" / "proceso" / "plantillas" / "TEMPLATE_GUION_CARTA_PRESENTACION.md"
 CAND_DIR = ROOT / "boveda-entrevista-profesional" / "busqueda-empleo" / "candidaturas" / "CAND-2026-020-lidl-responsable-turno-tienda-tamaraceite"
 GUIDE = CAND_DIR / "guion-carta-presentacion.md"
 GATE = CAND_DIR / "evaluacion-gate-guion-carta-contenido.md"

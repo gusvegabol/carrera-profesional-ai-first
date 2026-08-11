@@ -6,9 +6,8 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DIRECTORIO = ROOT / "docs" / "ideas-y-debates" / "mejoras-job-up"
-PLAYBOOK = DIRECTORIO / "PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA.md"
-TEMPLATE = DIRECTORIO / "TEMPLATE_DATOS_GENERACION_CV_v1_FINAL.json"
+PLAYBOOK = ROOT / "docs" / "metodologia" / "playbooks" / "PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA.md"
+TEMPLATE = ROOT / "boveda-entrevista-profesional" / "busqueda-empleo" / "proceso" / "plantillas" / "TEMPLATE_DATOS_GENERACION_CV.json"
 TRAZABILIDAD = {"modo", "refs_guion", "ref_seccion_guion", "origen_factual"}
 CONTROL = {
     "datos_privados",
@@ -63,12 +62,12 @@ class ContratoContenidoCVTests(unittest.TestCase):
         self.template = json.loads(leer(TEMPLATE))
 
     def test_declara_la_plantilla_final_y_las_versiones_1_2(self) -> None:
-        self.assertIn("TEMPLATE_DATOS_GENERACION_CV_v1_FINAL.json", self.playbook)
+        self.assertIn("TEMPLATE_DATOS_GENERACION_CV.json", self.playbook)
         self.assertIn("schema_version: 1.2", self.playbook)
         self.assertIn("template_version: 1.2", self.playbook)
         self.assertEqual("datos-generacion-cv", self.template["schema_id"])
         self.assertEqual("1.2", self.template["schema_version"])
-        self.assertEqual("TEMPLATE_DATOS_GENERACION_CV_v1.json", self.template["template_id"])
+        self.assertEqual("TEMPLATE_DATOS_GENERACION_CV.json", self.template["template_id"])
         self.assertEqual("1.2", self.template["template_version"])
 
     def test_contrasta_trazabilidad_y_control_del_playbook_con_la_plantilla(self) -> None:

@@ -43,6 +43,8 @@ def validar_paquete(paquete_path: Path, candidatura_dir: Path) -> list[str]:
 
     if "GATE-VEREDICTO-CV` aprobado" not in texto and "GATE-VEREDICTO-CV: aprobado" not in texto:
         bloqueos.append("gate_cv_no_aprobado")
+    if "GATE-VEREDICTO-CARTA` aprobado" not in texto and "GATE-VEREDICTO-CARTA: aprobado" not in texto:
+        bloqueos.append("gate_veredicto_carta_no_aprobado")
 
     return bloqueos
 

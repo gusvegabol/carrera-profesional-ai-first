@@ -4,11 +4,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOCS = ROOT / "docs" / "ideas-y-debates" / "mejoras-job-up"
-PLAYBOOK = DOCS / "PLAYBOOK_VEREDICTO_FINAL_CV.md"
-TEMPLATE = DOCS / "TEMPLATE_VEREDICTO_FINAL_CV.md"
-REVISION_TEMPLATE = DOCS / "TEMPLATE_REVISION_HUMANA_CV.md"
-PACKAGE_TEMPLATE = DOCS / "TEMPLATE_PAQUETE_PRESENTACION.md"
+PLAYBOOK = ROOT / "docs" / "metodologia" / "playbooks" / "PLAYBOOK_VEREDICTO_FINAL_CV.md"
+TEMPLATE = ROOT / "boveda-entrevista-profesional" / "busqueda-empleo" / "proceso" / "plantillas" / "TEMPLATE_VEREDICTO_FINAL_CV.md"
+REVISION_TEMPLATE = ROOT / "boveda-entrevista-profesional" / "busqueda-empleo" / "proceso" / "plantillas" / "TEMPLATE_REVISION_HUMANA_CV.md"
 
 
 class ContratoVeredictoFinalCVTests(unittest.TestCase):
@@ -17,15 +15,11 @@ class ContratoVeredictoFinalCVTests(unittest.TestCase):
         template = TEMPLATE.read_text(encoding="utf-8")
         revision = REVISION_TEMPLATE.read_text(encoding="utf-8")
 
-        package = PACKAGE_TEMPLATE.read_text(encoding="utf-8")
-
         self.assertIn('version: "1.1.0"', playbook)
         self.assertIn('version: "1.1.0"', template)
         self.assertIn("revision-humana-cv.md", playbook)
         self.assertIn("GATE-VEREDICTO-CV", playbook)
         self.assertNotIn("GATE-VEREDICTO-CV-PRESENTACION", playbook)
-        self.assertIn("GATE-CANDIDATURA-PRESENTACION", package)
-        self.assertIn("presentada: true", package)
         self.assertIn("Rol A", playbook)
         self.assertIn("Rol B", playbook)
         for criterio in ("C1", "C2", "C3", "C4", "C5", "C6"):
@@ -64,19 +58,16 @@ class ContratoVeredictoFinalCVTests(unittest.TestCase):
         historic = ROOT / "boveda-entrevista-profesional" / "busqueda-empleo" / "candidaturas" / "CAND-2026-019-asic-consultores-responsable-automatizacion-ia" / "historico" / "veredicto-final-cv-flujo-anterior.md"
         self.assertTrue(historic.exists())
 
-    def test_lidl_no_se_considera_candidatura_completa_solo_por_aprobar_el_cv(self):
+    def test_lidl_cierra_documentalmente_sin_abrir_presentacion(self):
         candidate = ROOT / "boveda-entrevista-profesional" / "busqueda-empleo" / "candidaturas" / "CAND-2026-020-lidl-responsable-turno-tienda-tamaraceite"
         ficha = (candidate / "candidatura.md").read_text(encoding="utf-8")
-        paquete = (candidate / "paquete-presentacion.md").read_text(encoding="utf-8")
-        self.assertIn("estado: en_preparacion", ficha)
-        self.assertIn("paquete_presentacion: pendiente_de_preparacion", ficha)
-        self.assertIn("gate_candidatura_presentacion: no_abierto", ficha)
-        self.assertIn("estado: pendiente_de_preparacion", paquete)
-        self.assertIn("| Canal | `portal_empresa` (acceso desde Indeed) |", paquete)
-        self.assertIn("| Contenido semántico de carta | sí | generado_apto |", paquete)
-        self.assertIn("| Carta DOCX/PDF | sí | no compuesta |", paquete)
-        self.assertIn("persona responsable", paquete)
-        self.assertIn("contenido semántico de la carta está apto", paquete)
+        self.assertIn("estado: documentalmente_completa", ficha)
+        self.assertIn("paquete_presentacion: fuera_de_alcance_actual", ficha)
+        self.assertIn("gate_candidatura_presentacion: no_aplica_en_esta_fase", ficha)
+        self.assertIn("presentada: false", ficha)
+        self.assertTrue((candidate / "cv.pdf").exists())
+        self.assertTrue((candidate / "carta-presentacion.pdf").exists())
+        self.assertFalse((candidate / "paquete-presentacion.md").exists())
 
 
 if __name__ == "__main__":

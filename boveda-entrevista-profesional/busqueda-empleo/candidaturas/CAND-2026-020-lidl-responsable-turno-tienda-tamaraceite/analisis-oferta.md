@@ -11,7 +11,7 @@ sesion_pcs: sesion-20260805-1757-job-up
 
 # Análisis de oferta — CAND-2026-020
 
-> Artefacto experimental elaborado con `PLAYBOOK_ANALISIS_OFERTA.md` y `TEMPLATE_ANALISIS_OFERTA_v2.md`. No sustituye el flujo vigente de Job-up.
+> Artefacto elaborado con `PLAYBOOK_ANALISIS_OFERTA.md` y `TEMPLATE_ANALISIS_OFERTA.md`. No sustituye el playbook vigente de Job-up.
 
 ## 1. Identificación de la oferta
 
