@@ -5,9 +5,10 @@ tipo_origen: oferta
 empresa: Lidl Supermercados SAU
 puesto_objetivo: Responsable de turno Tienda 40h Tamaraceite
 decision_estrategica: preparar_con_advertencias
-estado: en_preparacion
-paquete_presentacion: pendiente_de_preparacion
-gate_candidatura_presentacion: no_abierto
+estado: documentalmente_completa
+paquete_presentacion: fuera_de_alcance_actual
+gate_candidatura_presentacion: no_aplica_en_esta_fase
+gate_carta_revision_humana: aprobado
 presentada: false
 fecha_creacion: 2026-08-05
 sesion_relacionada: sesion-20260805-1757-job-up
@@ -112,11 +113,11 @@ Profesional de operaciones de supermercados capaz de mejorar la disponibilidad d
 
 ## 5. Estado operativo
 
-* **Estado actual:** `en_preparacion`
+* **Estado actual:** `documentalmente_completa`
 * **Presentada:** `false`
-* **Última actualización:** 2026-08-09
-* **Próxima fase prevista:** revisión humana de `contenido-carta-presentacion.md` y decisión de `GATE-CONTENIDO-CARTA-COMPOSICION`; después, si se aprueba, composición y revisión de la carta.
-* **Motivo del estado actual:** el contrato v1.1.0 está implantado en prueba y el contenido de carta fue regenerado desde cero con resultado técnico `apto`, pero la decisión humana del gate sigue pendiente. La presentación en Lidl y cualquier formulario los realizará la persona responsable.
+* **Última actualización:** 2026-08-10
+* **Próxima fase prevista:** fin del alcance documental actual; la presentación externa queda fuera de este flujo.
+* **Motivo del estado actual:** el CV y la carta tienen veredictos finales aprobados, por lo que la candidatura está documentalmente completa. `presentada` permanece en `false`; no se inició sesión, no se introdujeron datos y no se envió nada.
 
 ### 5.1 Veredicto documental
 
@@ -127,8 +128,10 @@ Profesional de operaciones de supermercados capaz de mejorar la disponibilidad d
 * **Revisión humana:** `aprobado_para_veredicto` — [[revision-humana-cv]]
 * **Recomendación de `GATE-VEREDICTO-CV`:** `aprobar`
 * **Decisión humana de `GATE-VEREDICTO-CV`:** `aprobado` el 2026-08-09
-* **Paquete de presentación:** `pendiente_de_preparacion` — [[paquete-presentacion]]
-* **Estado de `GATE-CANDIDATURA-PRESENTACION`:** `no_abierto`
+* **Veredicto final de carta:** `APTA` — [[veredicto-final-carta]]
+* **Valor incremental frente al CV:** `medio`
+* **Recomendación de inclusión:** `incluir`
+* **Estado de `GATE-VEREDICTO-CARTA`:** `aprobado` por decisión humana el 2026-08-10
 
 > La decisión del veredicto no sustituye la decisión estratégica de la candidatura.
 
@@ -149,12 +152,14 @@ Profesional de operaciones de supermercados capaz de mejorar la disponibilidad d
 | Revisión humana del CV | completada | [[revision-humana-cv]] |
 | Guion de carta de presentación | generado_apto | [[guion-carta-presentacion]] |
 | Evaluación GATE-GUION-CARTA-CONTENIDO | aprobado | [[evaluacion-gate-guion-carta-contenido]] |
-| Contenido semántico de carta | generado_v1_1_0_apto_gate_composicion_pendiente | [[contenido-carta-presentacion]] |
-| Evaluación GATE-CONTENIDO-CARTA-COMPOSICION | pendiente_revision_humana | [[evaluacion-gate-contenido-carta-composicion]] |
-| Carta DOCX | pendiente_composicion_carta | pendiente de composición y revisión |
-| Carta PDF | pendiente_composicion_carta | pendiente de composición y revisión |
+| Contenido semántico de carta | aprobado_gate_composicion | [[contenido-carta-presentacion]] |
+| Evaluación GATE-CONTENIDO-CARTA-COMPOSICION | aprobado | [[evaluacion-gate-contenido-carta-composicion]] |
+| Carta DOCX | generado_composicion_revision_humana_aprobada | [[carta-presentacion.docx]] |
+| Carta PDF | generado_composicion_revision_humana_aprobada | [[carta-presentacion.pdf]] |
+| Evaluación de composición de carta | apta_revision_humana_aprobada | [[evaluacion-composicion-carta-presentacion]] |
 | Veredicto final del CV | completado_apto_para_presentacion_gate_cv_aprobado | [[veredicto-final-cv]] |
-| Paquete de presentación | pendiente_de_preparacion | [[paquete-presentacion]] |
+| Veredicto final de carta | completado_apta_incluir_gate_aprobado | [[veredicto-final-carta]] |
+| Candidatura documental | completa | CV y carta finales aprobados |
 | Informe empresa / entrevista | no_aplica | — |
 
 ## 7. Control de coherencia
@@ -170,4 +175,4 @@ Profesional de operaciones de supermercados capaz de mejorar la disponibilidad d
 * [x] El índice de artefactos refleja únicamente documentos realmente existentes o pendientes.
 * [x] Los enlaces existentes no están rotos.
 * [x] La ficha no duplica contenido completo de análisis, guion, CV, carta o veredicto.
-* [x] La próxima fase está claramente identificada.
+* [x] El fin del alcance documental está claramente identificado.

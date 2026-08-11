@@ -11,6 +11,7 @@ assert _SPEC and _SPEC.loader
 _SPEC.loader.exec_module(_MODULE)
 auditar_texto_visible = _MODULE.auditar_texto_visible
 extract_visible_letter = _MODULE.extract_visible_letter
+validar_autorizacion_editorial = _MODULE.validar_autorizacion_editorial
 
 
 CAND_DIR = (
@@ -24,8 +25,8 @@ CONTENT = CAND_DIR / "contenido-carta-presentacion.md"
 CONTENT_GATE = CAND_DIR / "evaluacion-gate-contenido-carta-composicion.md"
 GUIDE_GATE = CAND_DIR / "evaluacion-gate-guion-carta-contenido.md"
 GUIDE = CAND_DIR / "guion-carta-presentacion.md"
-PLAYBOOK = ROOT / "docs/ideas-y-debates/mejoras-job-up/PLAYBOOK_GENERAR_CONTENIDO_CARTA_PRESENTACION.md"
-TEMPLATE = ROOT / "docs/ideas-y-debates/mejoras-job-up/TEMPLATE_CONTENIDO_CARTA_PRESENTACION.md"
+PLAYBOOK = ROOT / "docs/metodologia/playbooks/PLAYBOOK_GENERAR_CONTENIDO_CARTA_PRESENTACION.md"
+TEMPLATE = ROOT / "boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/TEMPLATE_CONTENIDO_CARTA_PRESENTACION.md"
 
 
 class CartaContentContractTests(unittest.TestCase):
@@ -42,6 +43,11 @@ class CartaContentContractTests(unittest.TestCase):
         self.assertIn('version: "1.1.0"', self.template)
         self.assertIn("estado: en_prueba", self.playbook)
         self.assertIn("estado: en_prueba", self.template)
+        self.assertIn("conjunto cerrado de afirmaciones autorizadas", self.playbook.casefold())
+        self.assertIn("conjunto cerrado de afirmaciones autorizadas", self.template.casefold())
+        for test_id in ("T19", "T20", "T21", "T22"):
+            self.assertIn(test_id, self.playbook)
+            self.assertIn(test_id, self.template)
 
     def test_real_artifact_and_gate_preconditions(self):
         self.assertTrue(CONTENT.exists())
@@ -50,9 +56,19 @@ class CartaContentContractTests(unittest.TestCase):
         self.assertIn("estado_guion: apto", self.guide)
         self.assertIn("estado_contenido: apto", self.content)
         self.assertIn("recomendacion_gate: aprobar", self.content)
-        self.assertFalse((CAND_DIR / "carta-presentacion.docx").exists())
-        self.assertFalse((CAND_DIR / "carta-presentacion.pdf").exists())
+        self.assertTrue((CAND_DIR / "carta-presentacion.docx").exists())
+        self.assertTrue((CAND_DIR / "carta-presentacion.pdf").exists())
+        self.assertTrue((CAND_DIR / "evaluacion-composicion-carta-presentacion.md").exists())
         self.assertFalse((CAND_DIR / "carta-presentacion.tex").exists())
+
+    def test_real_artifact_requires_editorial_and_factual_authority(self):
+        guide = GUIDE.read_text(encoding="utf-8")
+        result = validar_autorizacion_editorial(guide, self.content, self.consolidated)
+        self.assertTrue(result["autorizacion_editorial"])
+        self.assertTrue(result["trazabilidad_factual"])
+        self.assertEqual("apto", result["estado"])
+        self.assertNotIn("negociaba directamente", self.consolidated.casefold())
+        self.assertNotIn("cuadres de caja", self.consolidated.casefold())
 
     def test_roles_and_mandatory_sequence_are_recorded(self):
         for phrase in (
@@ -69,13 +85,15 @@ class CartaContentContractTests(unittest.TestCase):
         self.assertIn("ROL 3 — Auditor", self.playbook)
         self.assertIn("segunda lectura como recruiter", self.playbook)
 
-    def test_second_pass_keeps_human_gate_pending(self):
+    def test_human_gate_approval_records_only_composition_authorization(self):
         gate = CONTENT_GATE.read_text(encoding="utf-8")
         self.assertIn('version_contenido: "1.1.0"', gate)
         self.assertIn("decision_humana_anterior: no_aprobado", gate)
         self.assertIn("estado_gate_anterior: requiere_correccion", gate)
-        self.assertIn("decision_humana: pendiente", gate)
-        self.assertIn("estado_gate: pendiente", gate)
+        self.assertIn("decision_humana: aprobado", gate)
+        self.assertIn("estado_gate: aprobado", gate)
+        self.assertIn("autoriza únicamente el avance desde el contenido semántico a la futura composición", gate)
+        self.assertIn("GATE-CANDIDATURA-PRESENTACION", gate)
 
     def test_t1_no_personal_motivation(self):
         self.assertIn("motivaciones_autorizadas: []", self.content)
@@ -160,6 +178,36 @@ class CartaContentContractTests(unittest.TestCase):
         self.assertTrue(result["requiere_segunda_lectura_recruiter"])
         self.assertEqual("requiere_correccion", result["estado"])
         self.assertIn("Control de regresión tras auditoría", self.template)
+
+    def test_t19_factual_evidence_not_selected_is_rejected(self):
+        guide = "| A-001 | función | idea | hecho | HER-03 | necesidad | incluir | 1 | límite |"
+        content = "## 6.1 Conjunto cerrado de afirmaciones autorizadas\n\n| claim_id | Refs. guion | Evidencia | Frase |\n| --- | --- | --- | --- |\n| CL-001 | A-001 | HER-09 | Gestioné pedidos. |\n"
+        result = validar_autorizacion_editorial(guide, content, "Gestioné pedidos.")
+        self.assertFalse(result["trazabilidad_factual"])
+        self.assertEqual("requiere_correccion", result["estado"])
+        self.assertIn("evidencia_no_seleccionada", " ".join(result["errores_factuales"]))
+
+    def test_t20_factual_trace_without_editorial_authorization_is_rejected(self):
+        guide = "| A-001 | función | idea | hecho | HER-03 | necesidad | incluir | 1 | límite |"
+        content = "## 6.1 Conjunto cerrado de afirmaciones autorizadas\n\n| claim_id | Refs. guion | Evidencia | Frase |\n| --- | --- | --- | --- |\n| CL-001 |  | HER-03 | Gestioné pedidos. |\n"
+        result = validar_autorizacion_editorial(guide, content, "Gestioné pedidos.")
+        self.assertFalse(result["autorizacion_editorial"])
+        self.assertIn("sin_A-NNN", " ".join(result["errores_autorizacion"]))
+
+    def test_t21_block_with_insufficient_a_ref_is_rejected(self):
+        guide = "| A-001 | función | idea | hecho | HER-03 | necesidad | incluir | 1 | límite |"
+        content = "## 6.1 Conjunto cerrado de afirmaciones autorizadas\n\n| claim_id | Refs. guion | Evidencia | Frase |\n| --- | --- | --- | --- |\n| CL-001 | A-001 | HER-03 | Gestioné pedidos. |\n"
+        result = validar_autorizacion_editorial(guide, content, "Gestioné pedidos. También negocié contratos.")
+        self.assertFalse(result["autorizacion_editorial"])
+        self.assertTrue(result["afirmaciones_visibles_no_declaradas"])
+
+    def test_t22_auditor_requires_editorial_and_factual_authority(self):
+        guide = "| A-001 | función | idea | hecho | HER-03 | necesidad | incluir | 1 | límite |"
+        content = "## 6.1 Conjunto cerrado de afirmaciones autorizadas\n\n| claim_id | Refs. guion | Evidencia | Frase |\n| --- | --- | --- | --- |\n| CL-001 | A-001 | HER-03 | Gestioné pedidos. |\n"
+        result = validar_autorizacion_editorial(guide, content, "Gestioné pedidos.")
+        self.assertTrue(result["autorizacion_editorial"])
+        self.assertTrue(result["trazabilidad_factual"])
+        self.assertEqual("apto", result["estado"])
 
 
 if __name__ == "__main__":

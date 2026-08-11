@@ -11,6 +11,7 @@ from docx import Document
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = ROOT / "scripts/job-up/componer_cv.py"
+sys.path.insert(0, str(ROOT / "scripts/job-up"))
 FIXTURE = ROOT / "boveda-entrevista-profesional/busqueda-empleo/candidaturas/CAND-2026-020-lidl-responsable-turno-tienda-tamaraceite/datos-generacion.json"
 TEMPLATE = ROOT / "boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/TEMPLATE_CV_FORMATO.docx"
 PHOTO = ROOT / "boveda-entrevista-profesional/busqueda-empleo/foto-perfil.png"
@@ -78,6 +79,13 @@ class CompositorCVTests(unittest.TestCase):
             self.assertIn("Gustavo Vega", table_text)
             self.assertEqual(len(document.inline_shapes), 1)
             self.assertNotIn("[EXPERIENCIA", text + table_text)
+
+    def test_cabecera_cv_procede_del_helper_canonico_compartido(self):
+        header = self.module.construir_cabecera_candidatura(self.payload)
+        model = self.module.construir_modelo_cv(self.payload)
+        self.assertEqual(model.encabezado.nombre, header.nombre)
+        self.assertEqual(model.encabezado.unidades[0].texto, header.titular)
+        self.assertEqual(tuple(item.texto for item in model.encabezado.contacto), header.contacto)
 
 
 if __name__ == "__main__":

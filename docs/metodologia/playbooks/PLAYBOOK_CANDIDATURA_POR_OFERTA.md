@@ -13,7 +13,7 @@ sustituye: PLAYBOOK_CANDIDATURA_POR_OFERTA_v1_0_0
 
 Este playbook convierte el texto completo de una oferta en un CV y una carta de presentación adaptados, revisables y trazables. Es una rama operativa de búsqueda de empleo: consume evidencias ya documentadas y no modifica la metodología de investigación de la entrevista profesional.
 
-La fase CV termina con el CV preparado y el gate `GATE-VEREDICTO-CV` decidido. La candidatura completa requiere además `paquete-presentacion.md` con CV y carta como mínimo. Solo entonces puede abrirse `GATE-CANDIDATURA-PRESENTACION`. No incluye iniciar sesión, completar formularios, cargar documentos ni remitir candidaturas: la presentación siempre corre a cargo de la persona responsable.
+La fase documental termina con el CV preparado y el gate `GATE-VEREDICTO-CV` decidido, seguido por la rama de carta cuando la candidatura la requiera. La candidatura documental completa se alcanza con CV final aprobado y carta final aprobada cuando sea necesaria. No requiere paquete ni gate de presentación. No incluye iniciar sesión, completar formularios, cargar documentos ni remitir candidaturas: la presentación queda fuera de alcance y corre a cargo de la persona responsable.
 
 ## 2. Entradas y artefactos de trabajo
 
@@ -28,10 +28,10 @@ El proceso utiliza:
 - [[TEMPLATE_CANDIDATURA]] para documentar la selección factual, los bloqueos y los archivos producidos.
 - [[TEMPLATE_GUION_ADAPTACION_CV]] para fijar el enfoque narrativo antes de generar los documentos.
 - [[GUIA_FORMATO_CV_Y_CARTA]] como contrato semántico y visual común del CV y la carta.
-- `TEMPLATE_CV_FORMATO.docx` y `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx` como plantillas visuales de salida.
+- `TEMPLATE_CV_FORMATO.docx` como plantilla visual activa del CV. `TEMPLATE_CARTA_PRESENTACION_FORMATO.docx` se conserva como referencia visual histórica; el compositor vigente de carta no la utiliza ni interpreta su antiguo slot de imagen como requisito.
 - [[TEMPLATE_VEREDICTO_FINAL_CV]] para documentar la revisión de integridad, calidad y decisión antes de la aprobación humana.
 - `TEMPLATE_REVISION_HUMANA_CV.md` para persistir la revisión humana del PDF y su huella SHA-256 antes del veredicto.
-- `TEMPLATE_PAQUETE_PRESENTACION.md` para declarar el canal y los artefactos requeridos antes del gate de candidatura completa.
+- `PLAYBOOK_COMPONER_CV` para producir los tres artefactos del CV desde el JSON aprobado.
 
 ## 3. Análisis de entrada y descarte
 
@@ -83,6 +83,39 @@ La redacción debe conservar estos límites:
 
 ## 5. Bloqueos obligatorios
 
+### Resolución previa al gate de candidatura→guion
+
+Antes de cerrar `GATE-CANDIDATURA-GUION`, comprobar que cada requisito relevante
+de la oferta tiene evidencia o una decisión registrada. Si falta información,
+preguntar y registrar el resultado antes del gate; no dejar que el guion sea el
+primer lugar donde aparezca una limitación de elegibilidad o movilidad.
+
+Clasificar la respuesta en una de estas capas:
+
+- **Hecho reutilizable:** dato factual que puede vivir en [[datos-core-busqueda]], como `vehículo propio`.
+- **Preferencia reutilizable:** disponibilidad o límite general, como la movilidad territorial habitual.
+- **Decisión específica:** aceptación o rechazo de la movilidad concreta de esta oferta.
+
+Tras identificar la empresa, localizar o solicitar el contexto corporativo útil
+antes de cerrar el análisis, la candidatura o el guion que pueda verse afectado.
+La cultura es contexto con procedencia; no es evidencia del candidato ni permite
+atribuir afinidad personal.
+
+### Regla de preguntas y continuidad
+
+Solo se pregunta cuando la respuesta puede cambiar el flujo y no existe un
+valor por defecto, una fuente factual o una decisión aprobada. Un gate aprobado
+con siguiente acción determinista continúa automáticamente cuando no requiere
+dato nuevo, decisión humana, revisión humana ni acción irreversible. Las pausas
+solo se conservan ante esas excepciones o ante un bloqueo técnico.
+
+La decisión efectiva se comprueba con `scripts/job-up/orquestar_transiciones.py`.
+En la rama de carta, `GATE-CONTENIDO-CARTA-COMPOSICION = aprobado` selecciona
+la composición automática si aún no existe carta compuesta; una vez aprobada
+`GATE-CARTA-REVISION-HUMANA`, se selecciona inmediatamente
+`PLAYBOOK_VEREDICTO_FINAL_CARTA`. No se debe emitir una respuesta terminal que
+solo anuncie ese veredicto y espere una confirmación adicional.
+
 Detener la producción documental y registrar el motivo cuando ocurra cualquiera de estas condiciones:
 
 - falta información factual necesaria para sostener una afirmación relevante;
@@ -98,8 +131,8 @@ Una vez resueltos los bloqueos, seguir este orden fijo:
 
 1. Revisar cada logro seleccionado: identificar su sujeto, usar primera persona si la acción corresponde a la persona candidata y conservar tercera persona solo para otros sujetos.
 2. Preparar el texto del CV y de la carta de presentación.
-   El CV y la carta se generan a partir de sus plantillas visuales, con un máximo de dos páginas para el CV y una para la carta, con estructura compatible con ATS: encabezados estándar, texto seleccionable y viñetas. El encabezado puede usar una tabla de dos celdas únicamente para distribuir identidad y fotografía; no se usan tablas ni columnas para el contenido narrativo.
-   La fotografía es obligatoria en CV y carta salvo exclusión expresa registrada al invocar la skill. Sustituir la imagen-placeholder `[FOTO]` por la fotografía real autorizada; conservar la proporción cuadrada 1:1 y modificar ancho y alto conjuntamente si se redimensiona. En ambos documentos, establecer el idioma de revisión en Español (España), usar Calibri con la jerarquía 14/12/11/10,5 pt y justificar el contenido; los títulos, saludos, despedidas y datos de contacto pueden conservar su alineación funcional.
+   El CV y la carta se generan a partir de sus plantillas visuales, con un máximo de dos páginas para el CV y una para la carta, con estructura compatible con ATS: encabezados estándar, texto seleccionable y viñetas. La identidad visual compartida puede incluir nombre, título profesional, contacto autorizado, lenguaje visual y una cabecera coherente; no implica duplicar la fotografía.
+   En el CV, la fotografía se incluye por defecto salvo exclusión humana expresa registrada al iniciar la candidatura. La ausencia de mención de la fotografía no genera pregunta, pendiente ni bloqueo. En la carta, la fotografía no se incluye por defecto: solo puede incorporarse mediante una decisión o configuración humana expresa específica para esa carta. La autorización de disponer de una fotografía no constituye autorización editorial para mostrarla en todos los artefactos. En ambos documentos, establecer el idioma de revisión en Español (España), usar Calibri con la jerarquía 14/12/11/10,5 pt y justificar el contenido; los títulos, saludos, despedidas y datos de contacto pueden conservar su alineación funcional.
    En el CV, cada etapa profesional y cada titulación debe ocupar un párrafo real. No introducir varios párrafos mediante saltos internos en un único slot: eliminar los slots no aplicables. La cabecera de cada puesto debe conservar su negrita y la descripción debe quedar en estilo normal; no aplicar negrita a todo el párrafo por accidente.
    Antes de entregar cualquier DOCX o PDF, eliminar pies y encabezados que contengan `Plantilla`, `template`, marcadores o instrucciones internas de composición. Esos textos solo pueden permanecer en los templates reutilizables.
 3. Realizar la revisión factual completa contra [[datos-core-busqueda]].
@@ -110,10 +143,11 @@ Una vez resueltos los bloqueos, seguir este orden fijo:
 8. Comprobar los DOCX mediante validación estructural y comprobar visualmente los PDF cuando exista un renderizador operativo: estructura, cortes, desbordamientos, legibilidad, datos y coherencia entre formatos.
 9. Solicitar la revisión humana del PDF y registrar `revision-humana-cv.md` con decisión, fecha, persona responsable y huella SHA-256. Si la decisión es `requiere_correccion`, devolver el defecto a su capa propietaria y regenerar desde la fuente correspondiente.
 10. Completar [[PLAYBOOK_VEREDICTO_FINAL_CV]] sobre el CV cuya huella coincide con `revision-humana-cv.md`: comprobar integridad, fidelidad, puntuar los seis criterios recruiter, registrar evidencia y mejoras y calcular la salida sin usar la media como puerta. Una huella discordante bloquea el veredicto.
-11. Si una investigación contextual autorizada justifica ajustar el lenguaje corporativo, aplicar el mismo criterio de tono al CV, al CV en LaTeX y a la carta de presentación. No se adapta solo uno de los documentos; la adaptación no puede añadir hechos, funciones, tecnologías, métricas o resultados no acreditados.
-12. Al crear cada artefacto, actualizar el índice «Documentos de la candidatura» de [[TEMPLATE_CANDIDATURA]]. Debe enumerar todos los documentos operativos existentes en la carpeta —análisis, guion, revisión humana, veredicto, informe de empresa y preparación de entrevista cuando exista, CV en DOCX, PDF y LaTeX, y carta en DOCX y PDF—, no solo el CV y la carta. Si posteriormente se añade, sustituye o elimina cualquier documento, actualizar de nuevo ese índice y comprobar que no queden enlaces a archivos inexistentes. Las capturas y otros archivos internos de control visual no forman parte del índice.
-13. Registrar en [[TEMPLATE_CANDIDATURA]] y [[seguimiento-candidaturas]] el estado, el enlace a la revisión humana, el veredicto CV y la decisión de `GATE-VEREDICTO-CV`.
-14. Mantener la candidatura en `en_preparacion` mientras no exista `paquete-presentacion.md` completo con CV y carta revisados. Solo después puede pasar a `pendiente_de_aprobacion` para `GATE-CANDIDATURA-PRESENTACION`; los formularios y credenciales del canal quedan bajo responsabilidad de la persona responsable.
+11. Tras la revisión humana aprobada de la carta, completar [[PLAYBOOK_VEREDICTO_FINAL_CARTA]] sobre `carta-presentacion.pdf`: evaluar recruiter, editorial y auditoría de coherencia de forma independiente, sintetizar sin votación y registrar el valor incremental y la recomendación editorial de inclusión de la carta. `GATE-VEREDICTO-CARTA` requiere decisión humana y cierra la rama documental.
+12. Si una investigación contextual autorizada justifica ajustar el lenguaje corporativo, aplicar el mismo criterio de tono al CV, al CV en LaTeX y a la carta de presentación. No se adapta solo uno de los documentos; la adaptación no puede añadir hechos, funciones, tecnologías, métricas o resultados no acreditados.
+13. Al crear cada artefacto, actualizar el índice «Documentos de la candidatura» de [[TEMPLATE_CANDIDATURA]]. Debe enumerar todos los documentos operativos existentes en la carpeta —análisis, guion, revisión humana, veredicto, informe de empresa y preparación de entrevista cuando exista, CV en DOCX, PDF y LaTeX, y carta en DOCX y PDF—, no solo el CV y la carta. Si posteriormente se añade, sustituye o elimina cualquier documento, actualizar de nuevo ese índice y comprobar que no queden enlaces a archivos inexistentes. Las capturas y otros archivos internos de control visual no forman parte del índice.
+14. Registrar en [[TEMPLATE_CANDIDATURA]] y [[seguimiento-candidaturas]] el estado, el enlace a las revisiones humanas, los veredictos CV y carta y las decisiones de sus gates.
+15. Marcar la candidatura como `documentalmente_completa` cuando existan el CV final aprobado y la carta final aprobada cuando sea requerida. La presentación externa queda fuera de este flujo.
 
 La existencia de DOCX y PDF verificados, e incluso la aprobación del gate CV,
 no autoriza el envío. La aprobación de la candidatura completa y cualquier
@@ -135,10 +169,9 @@ Antes de cerrar la preparación, una persona debe revisar:
 - la presentación visual de los documentos y que el índice de [[TEMPLATE_CANDIDATURA]] enumere todos los artefactos operativos de la carpeta sin enlaces rotos.
 
 La salida válida de la fase CV es un CV documentado, con revisión humana y
-veredicto trazables. La salida válida de candidatura completa requiere además
-`paquete-presentacion.md` listo con CV y carta revisados y
-`GATE-CANDIDATURA-PRESENTACION` abierto para decisión. La presentación posterior
-la realiza la persona responsable; el playbook no inicia sesión, completa
+veredicto trazables. La salida válida de candidatura completa requiere el CV
+final aprobado y la carta final aprobada cuando sea requerida. La presentación
+posterior queda fuera del alcance; el playbook no inicia sesión, completa
 formularios ni realiza envíos.
 
 ## 8. Lista de control final
@@ -150,7 +183,7 @@ formularios ni realiza envíos.
 - [ ] Cada frase del CV y de la carta se rastrea hasta [[datos-core-busqueda]].
 - [ ] Existe un guion de adaptación y el documento no arrastra el enfoque ni el contenido factual de otra candidatura.
 - [ ] El titular, el resumen, las competencias y la experiencia priorizada responden a las funciones de la oferta.
-- [ ] CV y carta usan las plantillas visuales comunes, el contenido narrativo está justificado y la fotografía está incluida, salvo exclusión expresa registrada.
+- [ ] CV y carta usan las plantillas visuales comunes, el contenido narrativo está justificado, el CV incluye fotografía por defecto y la carta permanece sin fotografía salvo decisión expresa específica.
 - [ ] Las palabras clave integradas están respaldadas por el core y los requisitos no acreditados aparecen identificados.
 - [ ] Si existe riesgo de sobrecualificación, el lenguaje prioriza tareas y resultados operativos sin falsear los cargos.
 - [ ] Existe `revision-humana-cv.md`, su huella coincide con el PDF y su decisión es `aprobado_para_veredicto`.
@@ -165,7 +198,7 @@ formularios ni realiza envíos.
 - [ ] El DOCX se validó estructuralmente y la exportación se realizó con el método directo documentado cuando correspondía.
 - [ ] Existe `cv.tex`, su contenido coincide con el CV revisado y se puede procesar como texto UTF-8.
 - [ ] El índice de [[TEMPLATE_CANDIDATURA]] enumera todos los artefactos operativos existentes de la carpeta, se actualizó al crear o modificar documentos y no contiene enlaces rotos.
-- [ ] Existe `paquete-presentacion.md` con CV y carta revisados como mínimo.
+- [ ] La candidatura documental está completa: CV final aprobado y carta final aprobada cuando sea requerida.
 - [ ] `GATE-VEREDICTO-CV` tiene decisión humana separada y valida únicamente el CV.
-- [ ] `GATE-CANDIDATURA-PRESENTACION` solo se abre cuando el paquete completo está listo.
-- [ ] No se ha realizado ni autorizado ningún envío.
+- [ ] El cierre documental no propone ningún módulo activo posterior.
+- [ ] No se ha realizado ningún envío desde Job-up.

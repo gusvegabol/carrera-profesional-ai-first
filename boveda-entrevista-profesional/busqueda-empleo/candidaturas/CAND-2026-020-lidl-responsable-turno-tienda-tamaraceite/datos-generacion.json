@@ -1,7 +1,7 @@
 {
   "schema_id": "datos-generacion-cv",
   "schema_version": "1.2",
-  "template_id": "TEMPLATE_DATOS_GENERACION_CV_v1.json",
+  "template_id": "TEMPLATE_DATOS_GENERACION_CV.json",
   "template_version": "1.2",
   "tipo": "datos_generacion_cv",
   "id": "datos-generacion-cv-CAND-2026-020",

@@ -2,7 +2,7 @@
 id: datos-privados-candidatura
 titulo: Datos Privados para Candidaturas
 fecha_creacion: 2026-07-21
-fecha_actualizacion: 2026-08-08
+fecha_actualizacion: 2026-08-11
 estado: plantilla
 tipo: datos_privados
 version: "1.0.0"
@@ -137,3 +137,34 @@ Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-017-lidl-responsa
 | Alcance del consentimiento | Uso exclusivo para `CAND-2026-019`; autorización expresa comunicada el 2026-07-31. |
 
 Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-019-asic-consultores-responsable-automatizacion-ia/candidatura|CAND-2026-019]].
+
+### CAND-2026-021 — OBRAMAT — Coordinador/a de línea de Cajas Evolutivo/a
+
+| Campo | Dato autorizado |
+| --- | --- |
+| Nombre | Gustavo |
+| Apellido 1 | Vega |
+| Correo electrónico | gusvegabol@gmail.com |
+| Teléfono | 669 549 933 |
+| Enlace profesional | linkedin.com/in/gusvegabol |
+| Apellido 2 y ubicación | No incorporar |
+| Fotografía | Sí, fotografía de perfil disponible en la bóveda de búsqueda de empleo |
+| Alcance del consentimiento | Uso exclusivo para `CAND-2026-021`; autorización expresa comunicada el 2026-08-11 para nombre, apellido 1, correo electrónico, teléfono, LinkedIn y fotografía. |
+
+Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-021-obramat-coordinador-linea-cajas/candidatura|CAND-2026-021]].
+
+### CAND-2026-023 — ESTUDIO SANTA LUCIA DE TIRAJANA, S. L. — Auxiliar administrativo/a
+
+| Campo | Dato autorizado |
+| --- | --- |
+| Nombre | Gustavo |
+| Apellido 1 | Vega |
+| Apellido 2 | No incorporar |
+| Correo electrónico | gusvegabol@gmail.com |
+| Teléfono | 669 549 933 |
+| Ubicación | Las Palmas |
+| Enlace profesional | No incorporar |
+| Fotografía | Sí, fotografía de perfil disponible en la bóveda de búsqueda de empleo |
+| Alcance del consentimiento | Uso exclusivo para `CAND-2026-023`; autorización expresa comunicada el 2026-08-11 para nombre, apellido 1, correo electrónico, teléfono, fotografía y ubicación. |
+
+Registro relacionado: [[busqueda-empleo/candidaturas/CAND-2026-023-estudio-santa-lucia-auxiliar-administrativo/candidatura|CAND-2026-023]].

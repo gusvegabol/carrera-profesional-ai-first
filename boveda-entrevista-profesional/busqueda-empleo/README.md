@@ -8,8 +8,7 @@ una oportunidad concreta en un paquete documental revisable por la persona
 candidata, sin enviar candidaturas ni contactar con empresas.
 
 Job-up cubre el análisis de ofertas, la selección factual, la preparación de
-CV, cartas y demás artefactos, el seguimiento y la preparación del paquete de
-presentación. No sustituye la entrevista metodológica ni amplía
+CV, cartas y demás artefactos y el seguimiento documental. No sustituye la entrevista metodológica ni amplía
 su alcance a investigación de empresas, networking o relaciones profesionales.
 
 ### Límites de trabajo
@@ -61,7 +60,8 @@ autoriza por sí sola la creación de una sesión PCS.
 ### Mapa de carpetas y enlaces canónicos
 
 - [Fuentes](fuentes/): [datos core](fuentes/datos-core-busqueda.md) y [datos privados de candidatura](fuentes/datos-privados-candidatura.md).
-- [Proceso y plantillas](proceso/plantillas/): [análisis de oferta](proceso/plantillas/TEMPLATE_ANALISIS_OFERTA.md), [ficha de candidatura](proceso/plantillas/TEMPLATE_CANDIDATURA.md), [guion de adaptación](proceso/plantillas/TEMPLATE_GUION_ADAPTACION_CV.md), [revisión humana del CV](../../docs/ideas-y-debates/mejoras-job-up/TEMPLATE_REVISION_HUMANA_CV.md), [veredicto CV-only](../../docs/ideas-y-debates/mejoras-job-up/TEMPLATE_VEREDICTO_FINAL_CV.md) y [paquete de presentación](../../docs/ideas-y-debates/mejoras-job-up/TEMPLATE_PAQUETE_PRESENTACION.md).
+- [Proceso y plantillas](proceso/plantillas/): [análisis de oferta](proceso/plantillas/TEMPLATE_ANALISIS_OFERTA.md), [ficha de candidatura](proceso/plantillas/TEMPLATE_CANDIDATURA.md), [guion de adaptación](proceso/plantillas/TEMPLATE_GUION_ADAPTACION_CV.md), [contenido CV](proceso/plantillas/TEMPLATE_DATOS_GENERACION_CV.json), [revisión humana del CV](proceso/plantillas/TEMPLATE_REVISION_HUMANA_CV.md), [veredicto CV-only](proceso/plantillas/TEMPLATE_VEREDICTO_FINAL_CV.md), [guion de carta](proceso/plantillas/TEMPLATE_GUION_CARTA_PRESENTACION.md), [contenido de carta](proceso/plantillas/TEMPLATE_CONTENIDO_CARTA_PRESENTACION.md), [composición de carta](proceso/plantillas/TEMPLATE_COMPOSICION_CARTA_PRESENTACION.md) y [veredicto final de carta](proceso/plantillas/TEMPLATE_VEREDICTO_FINAL_CARTA.md).
+- [Playbooks operativos](../../docs/metodologia/playbooks/): análisis, candidatura, adaptación CV, composición CV, veredicto CV y módulos independientes de carta.
 - [Seguimiento](seguimiento/seguimiento-candidaturas.md): estados, fechas, documentos y bloqueos.
 - [Candidaturas](candidaturas/): expedientes concretos y sus artefactos.
 - [Presentación espontánea](presentacion-espontanea/README.md): materiales no vinculados a una oferta.
@@ -74,9 +74,9 @@ autoriza por sí sola la creación de una sesión PCS.
 3. Analizar la oferta y seleccionar un perfil, evidencias y logros respaldados.
 4. Aplicar la compuerta de privacidad antes de consultar datos privados.
 5. Preparar el CV y completar `GATE-VEREDICTO-CV`.
-6. Generar y revisar el paquete mínimo `CV + carta` en `paquete-presentacion.md`.
-7. Abrir `GATE-CANDIDATURA-PRESENTACION` solo cuando el paquete esté completo.
-8. Actualizar la ficha y el seguimiento; la presentación manual corresponde siempre a la persona responsable.
+6. Ejecutar la rama de carta cuando la candidatura la requiera: guion, contenido, composición, revisión y `GATE-VEREDICTO-CARTA`.
+7. Marcar la candidatura como `documentalmente_completa` cuando los artefactos requeridos estén aprobados.
+8. Mantener `presentada: false`; la presentación externa queda fuera del flujo actual y corresponde a la persona responsable.
 
 ### Matriz de artefactos
 
@@ -85,12 +85,12 @@ autoriza por sí sola la creación de una sesión PCS.
 | Análisis de oferta | Obligatorio | No aplica |
 | Ficha de candidatura | Obligatoria | Según destinatario concreto |
 | Guion de adaptación | Obligatorio | Selección factual general |
-| Veredicto CV-only | Obligatorio antes de preparar el paquete | Revisión proporcional |
-| Paquete de presentación | Obligatorio antes de `GATE-CANDIDATURA-PRESENTACION` | Según canal |
+| Veredicto CV-only | Obligatorio antes del cierre documental | Revisión proporcional |
+| Candidatura documental completa | CV aprobado + carta aprobada cuando se requiera | Según contrato de la candidatura |
 | CV DOCX y PDF | Obligatorios | Base obligatoria |
 | CV LaTeX | Obligatorio | Previsto para futuras versiones |
-| Carta DOCX y PDF | Obligatorios como paquete mínimo | Obligatorios como paquete mínimo |
-| Email de presentación | Según el canal; lo gestiona la persona responsable | Según el canal; lo gestiona la persona responsable |
+| Carta DOCX y PDF | Obligatorios cuando la candidatura la requiera | Según el contrato del destinatario |
+| Email de presentación | Fuera del alcance actual; lo gestiona la persona responsable | Fuera del alcance actual; lo gestiona la persona responsable |
 | Informe de empresa o preparación de entrevista | Solo si se genera | Solo si se genera |
 
 ### Trazabilidad, PCS e histórico
@@ -102,3 +102,26 @@ README. La [sesión de origen](../../.pcs/sesiones/sesion-20260721-1651-tension-
 
 `INICIO_SESION_WORK.md` ya no es una entrada operativa paralela. Su contenido
 histórico se conserva en [historico](../../historico/boveda-entrevista-profesional/busqueda-empleo/INICIO_SESION_WORK.md); la orientación conceptual queda aquí y el ciclo exacto de sesiones corresponde a `job-up-inicia-sesion`.
+
+## Flujo canónico vigente
+
+```text
+OFERTA
+  ↓
+ANÁLISIS DE OFERTA
+  ↓
+CANDIDATURA
+  ↓
+CV: guion → contenido → composición → revisión/veredicto
+  ↓
+CARTA (si la candidatura la requiere): guion → contenido → composición → revisión/veredicto
+  ↓
+CANDIDATURA DOCUMENTALMENTE COMPLETA
+  ↓
+FIN DEL ALCANCE ACTUAL
+```
+
+La presentación automatizada asistida por IA y el entorno inicial de preguntas
+y configuración son líneas futuras independientes. Sus documentos se
+conservan en `docs/ideas-y-debates/mejoras-job-up/futuro/presentacion/` y en la
+SPEC, pero no intervienen en la generación documental normal.

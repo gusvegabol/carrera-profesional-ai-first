@@ -1,0 +1,371 @@
+{
+  "schema_id": "datos-generacion-cv",
+  "schema_version": "1.2",
+  "template_id": "TEMPLATE_DATOS_GENERACION_CV.json",
+  "template_version": "1.2",
+  "tipo": "datos_generacion_cv",
+  "id": "{{ID_ARTEFACTO_DATOS_GENERACION}}",
+  "candidatura": {
+    "id": "{{CANDIDATURA_ID}}",
+    "empresa": "{{EMPRESA}}",
+    "puesto_objetivo": "{{PUESTO_OBJETIVO}}",
+    "idioma_cv": "{{IDIOMA_CV}}"
+  },
+  "generacion": {
+    "fecha": "{{YYYY-MM-DD}}",
+    "sesion": "{{SESION_ID}}",
+    "playbook": {
+      "id": "PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA",
+      "version": "1.0.1"
+    },
+    "guion_origen": "{{RUTA_GUION_ADAPTACION_CV}}",
+    "evaluacion_gate_entrada": "{{RUTA_EVALUACION_GATE_GUION_CV_CONTENIDO}}",
+    "gate_entrada": "GATE-GUION-CV-CONTENIDO",
+    "gate_salida_aplicable": "GATE-CONTENIDO-CV-COMPOSICION",
+    "fuentes_factuales": [
+      {
+        "id": "{{FUENTE_FACTUAL_ID}}",
+        "ruta": "{{RUTA_FUENTE_FACTUAL}}",
+        "fecha_lectura": "{{YYYY-MM-DD}}"
+      }
+    ],
+    "spec_referencia": "SPEC-Arquitectura-modular-generación-candidatura-v0-4-0.md"
+  },
+  "contenido_cv": {
+    "encabezado": {
+      "nombre_completo": {
+        "id_contenido": "{{C-NNN}}",
+        "tipo": "nombre",
+        "texto": "{{NOMBRE_COMPLETO}}",
+        "trazabilidad": {
+          "modo": "dato_factual",
+          "refs_guion": [],
+          "ref_seccion_guion": null,
+          "origen_factual": [
+            {
+              "fuente": "{{FUENTE_FACTUAL_ID}}",
+              "refs": [
+                "{{REF_FACTUAL_NOMBRE}}"
+              ]
+            }
+          ]
+        }
+      },
+      "unidades": [
+        {
+          "id_contenido": "{{C-NNN}}",
+          "tipo": "{{titular|subtitular|linea}}",
+          "orden": 1,
+          "texto": "{{TEXTO_FINAL}}",
+          "trazabilidad": {
+            "modo": "mapa",
+            "refs_guion": [
+              "{{M-NNN}}"
+            ],
+            "ref_seccion_guion": "{{SEC-NN}}",
+            "origen_factual": [
+              {
+                "fuente": "{{FUENTE_FACTUAL_ID}}",
+                "refs": [
+                  "{{REF_EVIDENCIA}}"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "contacto": [
+        {
+          "id_contenido": "{{C-NNN}}",
+          "tipo": "{{telefono|email|ubicacion|linkedin|web|otro}}",
+          "orden": 1,
+          "texto": "{{VALOR_VISIBLE_CONTACTO}}",
+          "trazabilidad": {
+            "modo": "dato_factual",
+            "refs_guion": [],
+            "ref_seccion_guion": null,
+            "origen_factual": [
+              {
+                "fuente": "{{FUENTE_FACTUAL_ID}}",
+                "refs": [
+                  "{{REF_FACTUAL_CONTACTO}}"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "secciones": [
+      {
+        "id_seccion": "{{SEC-NN}}",
+        "tipo": "{{perfil|experiencia|formacion|competencias|herramientas|tecnologias|idiomas|certificaciones|proyectos|otro}}",
+        "titulo_visible": "{{TITULO_VISIBLE_SECCION_O_NULL}}",
+        "orden": 1,
+        "bloques": [
+          {
+            "id_bloque": "{{B-NNN}}",
+            "tipo": "{{texto|lista|entrada}}",
+            "orden": 1,
+            "cabecera": [
+              {
+                "id_contenido": "{{C-NNN}}",
+                "rol": "{{cargo|empresa|periodo|ubicacion|titulo|subtitulo|otro}}",
+                "orden": 1,
+                "texto": "{{TEXTO_FINAL}}",
+                "trazabilidad": {
+                  "modo": "mapa",
+                  "refs_guion": [
+                    "{{M-NNN}}"
+                  ],
+                  "ref_seccion_guion": "{{SEC-NN}}",
+                  "origen_factual": [
+                    {
+                      "fuente": "{{FUENTE_FACTUAL_ID}}",
+                      "refs": [
+                        "{{REF_FACTUAL}}"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "unidades": [
+              {
+                "id_contenido": "{{C-NNN}}",
+                "tipo": "{{parrafo|bullet|linea}}",
+                "orden": 1,
+                "texto": "{{TEXTO_FINAL}}",
+                "trazabilidad": {
+                  "modo": "mapa",
+                  "refs_guion": [
+                    "{{M-NNN}}"
+                  ],
+                  "ref_seccion_guion": "{{SEC-NN}}",
+                  "origen_factual": [
+                    {
+                      "fuente": "{{FUENTE_FACTUAL_ID}}",
+                      "refs": [
+                        "{{REF_FACTUAL}}"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id_seccion": "{{SEC-NN_CONTINUIDAD}}",
+        "tipo": "experiencia",
+        "titulo_visible": "{{TITULO_VISIBLE_SECCION_O_NULL}}",
+        "orden": 2,
+        "bloques": [
+          {
+            "id_bloque": "{{B-NNN}}",
+            "tipo": "entrada",
+            "orden": 1,
+            "cabecera": [
+              {
+                "id_contenido": "{{C-NNN}}",
+                "rol": "{{cargo|empresa|periodo|ubicacion|titulo|subtitulo|otro}}",
+                "orden": 1,
+                "texto": "{{TEXTO_FINAL}}",
+                "trazabilidad": {
+                  "modo": "continuidad",
+                  "refs_guion": [],
+                  "ref_seccion_guion": "{{SEC-NN_CONTINUIDAD}}",
+                  "origen_factual": [
+                    {
+                      "fuente": "{{FUENTE_FACTUAL_ID}}",
+                      "refs": [
+                        "{{REF_FACTUAL_CONTINUIDAD}}"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ],
+            "unidades": [
+              {
+                "id_contenido": "{{C-NNN}}",
+                "tipo": "{{parrafo|bullet|linea}}",
+                "orden": 1,
+                "texto": "{{TEXTO_FINAL}}",
+                "trazabilidad": {
+                  "modo": "continuidad",
+                  "refs_guion": [],
+                  "ref_seccion_guion": "{{SEC-NN_CONTINUIDAD}}",
+                  "origen_factual": [
+                    {
+                      "fuente": "{{FUENTE_FACTUAL_ID}}",
+                      "refs": [
+                        "{{REF_FACTUAL_CONTINUIDAD}}"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "control": {
+    "datos_privados": {
+      "autorizacion": {
+        "nombre": "{{incluir|omitir}}",
+        "apellido_1": "{{incluir|omitir}}",
+        "apellido_2": "{{incluir|omitir}}",
+        "email": "{{incluir|omitir}}",
+        "telefono": "{{incluir|omitir}}",
+        "linkedin": "{{incluir|omitir}}",
+        "ubicacion": "{{incluir|omitir}}",
+        "fotografia": "{{incluir|omitir}}"
+      },
+      "fecha_decision": "{{YYYY-MM-DD}}",
+      "decidido_por": "persona_responsable"
+    },
+    "cobertura_mapa": [
+      {
+        "ref_guion": "{{M-NNN_INCLUIR}}",
+        "presencia_origen": "incluir",
+        "estado": "{{cumplida|incumplida}}",
+        "modo_materializacion": "{{directa|fusionada|dividida}}",
+        "refs_contenido": [
+          "{{C-NNN}}"
+        ]
+      },
+      {
+        "ref_guion": "{{M-NNN_OMITIR}}",
+        "presencia_origen": "omitir",
+        "estado": "{{cumplida|incumplida}}",
+        "modo_materializacion": "omitida_por_guion",
+        "refs_contenido": []
+      }
+    ],
+    "cobertura_estrategica": [
+      {
+        "prioridad": "{{PRIORIDAD_ESTRATEGICA}}",
+        "estado_origen": "{{cubierta|no_requiere_presencia_directa|no_cubierta_justificada|bloqueo}}",
+        "refs_guion": [
+          "{{M-NNN}}"
+        ],
+        "refs_contenido": [
+          "{{C-NNN}}"
+        ],
+        "estado_materializacion": "{{cumplida|incumplida|no_aplica}}"
+      }
+    ],
+    "cobertura_continuidad": [
+      {
+        "ref_seccion_guion": "{{SEC-NN}}",
+        "estado": "{{cumplida|incumplida}}",
+        "refs_contenido": [
+          "{{C-NNN}}"
+        ],
+        "fuentes_factuales": [
+          {
+            "fuente": "{{FUENTE_FACTUAL_ID}}",
+            "refs": [
+              "{{REF_FACTUAL_CONTINUIDAD}}"
+            ]
+          }
+        ]
+      }
+    ],
+    "restricciones": [
+      {
+        "id_restriccion": "{{R-NNN}}",
+        "elemento": "{{ELEMENTO}}",
+        "riesgo": "{{RIESGO}}",
+        "refs_guion": [
+          "{{M-NNN}}"
+        ],
+        "refs_contenido": [
+          "{{C-NNN}}"
+        ],
+        "tratamiento_aplicado": "{{TRATAMIENTO_APLICADO}}",
+        "cumple": null
+      },
+      {
+        "id_restriccion": "{{R-NNN_OMISION}}",
+        "elemento": "{{ELEMENTO_OMITIDO}}",
+        "riesgo": "{{RIESGO}}",
+        "refs_guion": [
+          "{{M-NNN_OMITIR}}"
+        ],
+        "refs_contenido": [],
+        "tratamiento_aplicado": "{{TRATAMIENTO_APLICADO}}",
+        "cumple": null
+      }
+    ],
+    "lexico": {
+      "usos_condicionados": [
+        {
+          "termino": "{{TERMINO_CONDICIONADO}}",
+          "refs_guion": [
+            "{{M-NNN}}"
+          ],
+          "refs_contenido": [
+            "{{C-NNN}}"
+          ],
+          "cumple_limite": null
+        }
+      ],
+      "terminos_prohibidos_detectados": [
+        {
+          "termino": "{{TERMINO_PROHIBIDO}}",
+          "refs_contenido": [
+            "{{C-NNN}}"
+          ]
+        }
+      ]
+    },
+    "primer_escaneo": {
+      "resultado": null,
+      "perfil_identificable": null,
+      "encaje_visible": null,
+      "senales_fuertes_visibles": null,
+      "refs_contenido_dominantes": [
+        "{{C-NNN_O_VACIO}}"
+      ]
+    },
+    "validaciones": {
+      "idioma_respetado": null,
+      "solo_cv": null,
+      "sin_placeholders": null,
+      "fidelidad_guion": null,
+      "cobertura_incluir_completa": null,
+      "cobertura_estrategica_completa": null,
+      "sin_contenido_omitido": null,
+      "obligatorios_presentes": null,
+      "peso_alto_respetado": null,
+      "ubicacion_y_orden_respetados": null,
+      "continuidad_limitada_a_lo_autorizado": null,
+      "seniority_respetado": null,
+      "tono_respetado": null,
+      "convencion_gramatical_respetada": null,
+      "restricciones_respetadas": null,
+      "lexico_respetado": null,
+      "sin_keyword_stuffing": null,
+      "duplicacion_controlada": null,
+      "trazabilidad_completa": null,
+      "primer_escaneo_textual_apto": null,
+      "sin_decisiones_de_composicion": null
+    },
+    "incidencias": [
+      {
+        "id_incidencia": "{{INC-CONT-NNN}}",
+        "clasificacion": "{{redaccion|origen|factual|bloqueo|template}}",
+        "descripcion": "{{DESCRIPCION}}",
+        "resultado": "{{requiere_correccion|requiere_revision_origen|requiere_actualizacion_factual|bloqueado}}",
+        "refs_guion": [],
+        "refs_contenido": [],
+        "defecto_relacionado": "{{DEF-ARQ-001|no_aplica}}"
+      }
+    ]
+  }
+}

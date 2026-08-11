@@ -10,12 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SPEC = ROOT / "docs" / "ideas-y-debates" / "mejoras-job-up" / (
     "SPEC-Arquitectura-modular-generación-candidatura-v0-4-0.md"
 )
-TEMPLATE = ROOT / "docs" / "ideas-y-debates" / "mejoras-job-up" / (
-    "TEMPLATE_GUION_ADAPTACION_CV_v2.md"
-)
-PLAYBOOK = ROOT / "docs" / "ideas-y-debates" / "mejoras-job-up" / (
-    "PLAYBOOK_GUION_ADAPTACION_CV.md"
-)
+TEMPLATE = ROOT / "boveda-entrevista-profesional" / "busqueda-empleo" / "proceso" / "plantillas" / "TEMPLATE_GUION_ADAPTACION_CV.md"
+PLAYBOOK = ROOT / "docs" / "metodologia" / "playbooks" / "PLAYBOOK_GUION_ADAPTACION_CV.md"
 LIDL_DIR = (
     ROOT
     / "boveda-entrevista-profesional"
@@ -51,12 +47,12 @@ class SpecContractTests(unittest.TestCase):
         self.assertIn("GATE-GUION-CV-CONTENIDO", spec)
         self.assertIn("DEF-ARQ-001", spec)
         self.assertIn("**Estado:** abierto.", spec)
-        self.assertIn("futura generación de contenido del CV", spec)
+        self.assertIn("PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA", spec)
         self.assertIn("ID: INC-001", spec)
         self.assertIn("ID: INC-002", spec)
         self.assertIn("ID: INC-003", spec)
         self.assertIn("`PLAYBOOK_GUION_ADAPTACION_CV` | `en_prueba`", spec)
-        self.assertIn("Rama de carta de presentación: diseñada y en prueba", spec)
+        self.assertIn("cierre documental", spec.lower())
 
 
 class TemplateAndPlaybookTests(unittest.TestCase):

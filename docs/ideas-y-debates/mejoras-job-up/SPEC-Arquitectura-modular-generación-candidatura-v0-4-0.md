@@ -745,14 +745,34 @@ guion-adaptacion-cv.md
 ↓
 GATE-GUION-CV-CONTENIDO
 ↓
-futura generación de contenido del CV
+PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA
 ↓
-CV
+datos-generacion.json
+↓
+PLAYBOOK_COMPONER_CV
+↓
+cv.docx / cv.pdf / cv.tex
+↓
+GATE-VEREDICTO-CV
+↓
+PLAYBOOK_GUION_CARTA_PRESENTACION (si la candidatura requiere carta)
+↓
+guion-carta-presentacion.md
+↓
+PLAYBOOK_GENERAR_CONTENIDO_CARTA_PRESENTACION
+↓
+contenido-carta-presentacion.md
+↓
+PLAYBOOK_COMPONER_CARTA_PRESENTACION
+↓
+carta-presentacion.docx / carta-presentacion.pdf
+↓
+GATE-VEREDICTO-CARTA
+↓
+CANDIDATURA DOCUMENTALMENTE COMPLETA
 
-Rama de carta de presentación: diseñada y en prueba mediante `PLAYBOOK_GUION_CARTA_PRESENTACION` y `TEMPLATE_GUION_CARTA_PRESENTACION.md` (`INC-001` resuelto para diseño; pendiente de completar la interacción humana del caso real).
-
-Las fases posteriores de generación, composición, veredicto y envío permanecen fuera de alcance de esta sincronización.
-No se infiere que compartan artefactos, playbooks ni una fase de contenido común entre CV y carta.
+La presentación externa automatizada y la UI inicial de configuración quedan
+fuera de este flujo y se documentan como líneas futuras independientes.
 ```
 
 ---
@@ -765,9 +785,9 @@ No se infiere que compartan artefactos, playbooks ni una fase de contenido comú
 | Candidatura | Gobernar estrategia heredada y ciclo de vida | `candidatura.md` |
 | Guion CV | Traducir estrategia común a decisiones editoriales exclusivas del CV | `guion-adaptacion-cv.md` |
 | Contenido CV | Redactar el contenido final del CV a partir de `guion-adaptacion-cv.md` aprobado | `datos-generacion.json` |
-| Carta de presentación | Adaptar la estrategia común a una carta mediante su módulo independiente | `guion-carta-presentacion.md`; obligatoria para el paquete mínimo |
+| Carta de presentación | Adaptar la estrategia común a una carta mediante su módulo independiente cuando se requiera | `guion-carta-presentacion.md` y sus artefactos posteriores |
 | Composición y veredicto CV | Fases CV-only diseñadas e implantadas | `GATE-VEREDICTO-CV` |
-| Paquete y presentación de candidatura | Contrato de paquete mínimo diseñado; presentación manual por la persona responsable | `paquete-presentacion.md` + `GATE-CANDIDATURA-PRESENTACION` |
+| Cierre documental | Confirmar CV y carta aprobados cuando corresponda | candidatura documentalmente completa |
 | Entrevista | Preparar defensa posterior | informe |
 
 ---
@@ -1049,10 +1069,10 @@ correccion_necesaria:
 | Unidad | Estado |
 | --- | --- |
 | `PLAYBOOK_ANALISIS_OFERTA` | `en_prueba` |
-| `TEMPLATE_ANALISIS_OFERTA_v2` | `en_prueba` |
+| `TEMPLATE_ANALISIS_OFERTA` | `vigente` en `busqueda-empleo/proceso/plantillas` |
 | `analisis-oferta.md` | `en_prueba` |
 | `PLAYBOOK_CANDIDATURA` | `en_prueba` |
-| `TEMPLATE_CANDIDATURA_v2` | `en_prueba` |
+| `TEMPLATE_CANDIDATURA` | `vigente` en `busqueda-empleo/proceso/plantillas` |
 | `candidatura.md` | `en_prueba` |
 | `GATE-CANDIDATURA-GUION` | `aprobado` |
 | `PLAYBOOK_GUION_ADAPTACION_CV` | `en_prueba` (candidata a validada) |
@@ -1065,9 +1085,12 @@ correccion_necesaria:
 | revisión humana CV | `completada` para CAND-2026-019 y CAND-2026-020 |
 | veredictos actuales | `completados`: ASIC `no_competitivo`; Lidl `apto_para_presentacion` |
 | `GATE-VEREDICTO-CV` | Lidl `aprobado`; ASIC `bloqueado` (2026-08-09) |
-| `PLAYBOOK_GUION_CARTA_PRESENTACION` | Probado; CAND-2026-020 queda `apto` con decisión humana del gate pendiente |
-| `paquete-presentacion.md` | Contrato diseñado; CAND-2026-020 tiene CV disponible y carta pendiente |
-| `GATE-CANDIDATURA-PRESENTACION` | No abierto; requiere CV + carta revisados |
+| `PLAYBOOK_GUION_CARTA_PRESENTACION` | Probado; CAND-2026-020 queda `apto` con la rama de carta cerrada |
+| `PLAYBOOK_VEREDICTO_FINAL_CARTA` | `en_prueba`; CAND-2026-020 `APTA`, valor incremental medio, inclusión recomendada |
+| `GATE-VEREDICTO-CARTA` | `aprobado` humanamente el 2026-08-10 para CAND-2026-020 |
+| `PLAYBOOK_COMPONER_CV` | `vigente`; composición determinista desde el JSON 1.2 |
+| `CAND-2026-020` | `documentalmente_completa`; CV y carta aprobados, `presentada: false` |
+| presentación automatizada | `fuera_de_alcance_actual`; documentada como línea futura |
 
 ---
 
@@ -1192,6 +1215,14 @@ consumen ese mismo modelo; el texto se conserva literalmente y las colecciones s
 `orden`. El orquestador publica solo `cv.docx`, `cv.pdf` y `cv.tex`, conserva fotografía por defecto y reutiliza
 resolución segura de rutas, bloqueo, conversión aislada, validación, publicación transaccional, restauración y logging.
 
+La política de fotografía es específica por artefacto: el CV incluye fotografía
+por defecto salvo exclusión humana expresa; la carta no incluye fotografía por
+defecto y solo podría incorporarla mediante una decisión o configuración
+humana expresa específica. La identidad visual compartida —nombre, título,
+contacto autorizado, lenguaje visual y cabecera coherente— no obliga a duplicar
+la fotografía. La autorización de disponer de una fotografía y la autorización
+editorial para mostrarla son capas distintas.
+
 Los datos privados no se solicitan ni se infieren durante la composición. Al iniciar cada candidatura, la persona
 responsable debe resolver `autorizacion_datos_cv` para nombre, apellido 1, apellido 2, email, teléfono, LinkedIn,
 ubicación y fotografía. La fase de contenido copia únicamente los campos autorizados desde
@@ -1235,62 +1266,58 @@ paquete de candidatura ni envío. La decisión del gate sigue siendo humana.
 Una regeneración material invalida la revisión y el veredicto anteriores y
 exige repetir la secuencia completa.
 
-### 31.2 Paquete de candidatura completa y gate de presentación
+### 31.2 Cierre documental y presentación fuera de alcance
 
-La aprobación de `GATE-VEREDICTO-CV` no convierte la candidatura en una
-candidatura completa. Toda candidatura por oferta debe preparar como mínimo un
-CV y una carta de presentación. La carta tiene su propio playbook, guion,
-revisión y decisión; no se incorpora al guion ni al compositor exclusivos del
-CV.
-
-La candidatura debe preparar primero `paquete-presentacion.md`, que identifica
-el canal cuando sea conocido y declara el paquete mínimo y cualquier requisito
-adicional conocido. No es necesario auditar ni completar formularios de
-Indeed, LinkedIn, Lidl, Mercadona u otros portales para poder generar el
-paquete mínimo.
+La aprobación de `GATE-VEREDICTO-CV` da paso a la rama independiente de carta
+cuando la candidatura la requiere. La candidatura documental termina cuando
+existen el CV final aprobado y la carta final aprobada cuando corresponda.
 
 ```text
 GATE-VEREDICTO-CV
         ↓
-PLAYBOOK_GUION_CARTA_PRESENTACION
+PLAYBOOK_GUION_CARTA_PRESENTACION (si procede)
         ↓
-guion-carta-presentacion.md
+PLAYBOOK_GENERAR_CONTENIDO_CARTA_PRESENTACION
         ↓
-carta de presentación revisada
+PLAYBOOK_COMPONER_CARTA_PRESENTACION
         ↓
-paquete-presentacion.md (CV + carta como mínimo)
+GATE-VEREDICTO-CARTA
         ↓
-GATE-CANDIDATURA-PRESENTACION
-        ↓
-presentación manual por la persona responsable
-        ↓
-presentación real + evidencia aportada por la persona responsable
+CANDIDATURA DOCUMENTALMENTE COMPLETA
 ```
 
-`GATE-CANDIDATURA-PRESENTACION` solo puede abrirse cuando:
+`GATE-CANDIDATURA-PRESENTACION`, `paquete-presentacion.md` y la validación de
+canal no son precondiciones del cierre documental. La presentación externa,
+incluidos portales, cuentas, formularios, credenciales, consentimientos y
+envíos, queda fuera de esta arquitectura. `presentada` solo puede cambiar de
+`false` a `true` tras una acción humana real y su evidencia, bajo un contrato
+futuro independiente.
 
-- existe un CV con `GATE-VEREDICTO-CV` aprobado;
-- existe una carta de presentación generada por su módulo propio, revisada y
-  aprobada por la persona responsable;
-- `paquete-presentacion.md` enumera el CV y la carta y no contiene artefactos
-  mínimos pendientes;
-- el canal u origen conocido queda registrado, sin convertir la comprobación
-  del formulario en una precondición general;
-- la persona responsable puede comprobar el paquete completo antes de decidir.
+### 31.3 Veredicto final independiente de la carta
 
-Los formularios, preguntas adicionales, credenciales y pasos específicos del
-portal quedan bajo responsabilidad de la persona responsable. Job-up no debe
-iniciar sesión, introducir credenciales, cargar documentos ni enviar la
-candidatura en portales externos como parte del flujo general.
+La carta mantiene una fase de veredicto propia, posterior a la composición y
+a la aprobación humana de su representación:
 
-El gate completo aprobado tampoco registra por sí solo un envío. `presentada`
-solo puede cambiar de `false` a `true` después de que la persona responsable
-realice la presentación y aporte canal, fecha, persona ejecutora y confirmación
-o evidencia del envío. La ausencia de CV o carta mantiene la candidatura en
-`en_preparacion`; no se usa `aprobada` para representar un CV aislado.
+```text
+carta-presentacion.docx / carta-presentacion.pdf
+→ GATE-CARTA-REVISION-HUMANA = aprobado
+→ PLAYBOOK_VEREDICTO_FINAL_CARTA v1.0.0
+→ veredicto-final-carta.md
+→ GATE-VEREDICTO-CARTA
+```
 
-El nombre `GATE-VEREDICTO-CV-PRESENTACION` queda deprecado como denominación
-histórica del gate CV-only. No debe aparecer en nuevos artefactos activos.
+`PLAYBOOK_VEREDICTO_FINAL_CARTA` trabaja exclusivamente sobre la carta y
+separa la calidad de la conveniencia de incluirla en el paquete. Usa tres
+roles independientes —recruiter, responsable editorial/documental y auditor de
+coherencia— y una síntesis determinista sin votación. Sus resultados son
+`APTA`, `APTA_CON_RESERVAS` y `NO_APTA`; el valor incremental frente al CV y la
+recomendación de inclusión se registran por separado.
+
+`GATE-VEREDICTO-CARTA` requiere decisión humana y no se aprueba
+automáticamente. `APTA` y `APTA_CON_RESERVAS` lo dejan en `pendiente`; `NO_APTA`
+lo deja `bloqueado` hasta corregir en la fase responsable, propagar y repetir
+el veredicto. Este gate no abre `GATE-CANDIDATURA-PRESENTACION` ni autoriza
+presentación externa.
 
 ---
 
@@ -1308,7 +1335,10 @@ Debe evaluar en el futuro:
 - privacidad;
 - adecuación.
 
-La severidad y los umbrales se definirán cuando esta fase pase a `diseñada`.
+El veredicto final de carta queda definido por `PLAYBOOK_VEREDICTO_FINAL_CARTA`
+v1.0.0, en prueba. La severidad se clasifica como `bloqueante`,
+`reserva_relevante`, `reserva_menor` u `observacion`; la precedencia es
+determinista y no utiliza puntuaciones ni mayoría.
 
 ---
 
@@ -1345,13 +1375,13 @@ Un defecto puede pertenecer a varias categorías.
 #### DEF-ARQ-002 — Frontera entre validación del CV y presentación de la candidatura
 
 - **Clasificación:** `ARQUITECTURA`.
-- **Estado:** resuelto en diseño e implantación; pendiente de validar el paquete mínimo con una carta real.
+- **Estado:** resuelto en diseño e implantación; el paquete y la presentación quedan fuera del flujo vigente.
 - **Alcance:** candidaturas con `presentada: false` que hayan superado la composición y el veredicto del CV.
 - **Problema:** `GATE-VEREDICTO-CV-PRESENTACION` podía interpretarse como autorización de la candidatura completa aunque la carta, el email, el formulario, el canal y el paquete documental no estuvieran definidos.
 - **Evidencia:** CAND-2026-020 tenía el CV validado y el gate aprobado, pero no disponía de carta, email de presentación ni paquete contractual del canal Indeed.
-- **Resolución:** el gate activo pasa a llamarse `GATE-VEREDICTO-CV` y queda limitado al CV. Se introduce `paquete-presentacion.md` y el gate independiente `GATE-CANDIDATURA-PRESENTACION`, que solo puede abrirse cuando existan CV y carta revisados. El canal y sus formularios se documentan cuando se conocen, pero no son una precondición general; la presentación externa siempre la realiza la persona responsable.
-- **Impacto operativo:** CAND-2026-020 vuelve a `en_preparacion` con CV validado y paquete pendiente; CAND-2026-019 permanece `detenida` por su gate CV bloqueado.
-- **Límite:** el playbook de carta sigue pendiente y es obligatorio antes de abrir el gate completo. Email, formularios y credenciales no forman parte del paquete mínimo ni se ejecutan automáticamente.
+- **Resolución:** el gate activo pasa a llamarse `GATE-VEREDICTO-CV` y queda limitado al CV. El cierre vigente es documental: CV y carta finales aprobados cuando corresponda. No se exige `paquete-presentacion.md` ni `GATE-CANDIDATURA-PRESENTACION`; la presentación externa siempre la realiza la persona responsable.
+- **Impacto operativo:** CAND-2026-020 permanece `documentalmente_completa` con `presentada: false`; CAND-2026-019 permanece `detenida` por su gate CV bloqueado.
+- **Límite:** email, formularios y credenciales no forman parte del flujo vigente ni se ejecutan automáticamente.
 
 ---
 
@@ -1406,15 +1436,15 @@ bloquea_plan: false
 resolucion_necesaria: Decidir el alcance residual de ARQ-09 antes de diseñar una infraestructura común CV/carta o la rama de carta.
 ```
 
-### `INC-004` — Excepción contractual para omitir fotografía
+### `INC-004` — Excepción contractual para omitir fotografía del CV
 
 ```text
 ID: INC-004
-elemento: Decisión inicial de exclusión de fotografía y transporte determinista hasta el compositor CV-only.
+elemento: Decisión inicial de exclusión de fotografía del CV y transporte determinista hasta el compositor CV-only.
 motivo: La inclusión por defecto estaba decidida, pero faltaba un registro persistente de la decisión de datos privados y su transporte determinista hacia el compositor.
-impacto: La inclusión predeterminada queda resuelta y se aplica. La excepción sin fotografía sigue bloqueada hasta que exista una decisión expresa registrada y aprobada para una candidatura concreta.
-bloquea_plan: true para la excepción sin fotografía; false para la composición con fotografía.
-resolucion_necesaria: Resuelto el vacío mediante `autorizacion_datos_cv.fotografia` en `candidatura.md`, materializado en `control.datos_privados` del JSON 1.2. El compositor exige actualmente `fotografia: incluir`; no implementa la omisión heurística ni una excepción no aprobada.
+impacto: La inclusión predeterminada del CV queda resuelta y se aplica. La excepción sin fotografía del CV sigue bloqueada hasta que exista una decisión expresa registrada y aprobada para una candidatura concreta. La carta tiene una política independiente: sin fotografía por defecto.
+bloquea_plan: true para la excepción sin fotografía del CV; false para la composición CV con fotografía y para la carta sin fotografía.
+resolucion_necesaria: Resuelto el vacío del CV mediante `autorizacion_datos_cv.fotografia` en `candidatura.md`, materializado en `control.datos_privados` del JSON 1.2. El compositor CV exige actualmente `fotografia: incluir`; el compositor de carta no renderiza fotografía. No se implementan omisiones heurísticas ni inclusiones de fotografía en carta sin decisión específica.
 ```
 
 ---
@@ -1721,6 +1751,26 @@ utilizarse para imponer un guion ni una fase de generación común CV/carta.
 
 Estado: `vigente`.
 
+### ARQ-24 — Política de fotografía específica por artefacto
+
+La fotografía se gobierna por artefacto y no por una regla visual común:
+
+```text
+CV:
+fotografía incluida por defecto, salvo exclusión humana expresa.
+
+Carta:
+sin fotografía por defecto; inclusión solo mediante decisión o configuración
+humana expresa específica para esa carta.
+```
+
+La autorización de uso de la fotografía para el CV no implica autorización
+editorial para mostrarla en la carta. La identidad visual compartida no obliga a
+duplicar la fotografía. La futura configuración podrá representar decisiones
+separadas para CV y carta, pero no se implementa en esta fase.
+
+Estado: `vigente`.
+
 ### ARQ-23 — Paquete mínimo y presentación manual
 
 Toda candidatura por oferta debe producir como mínimo un CV y una carta de
@@ -1748,6 +1798,8 @@ via_actual: oferta
 fase_completada:
 PLAYBOOK_VEREDICTO_FINAL_CV
 → veredicto-final-cv.md
+→ PLAYBOOK_VEREDICTO_FINAL_CARTA
+→ veredicto-final-carta.md
 
 estado_fase_completada: implantada y verificada; CAND-2026-020 aprobado y CAND-2026-019 bloqueado en su gate CV
 
@@ -1757,9 +1809,9 @@ GATE-VEREDICTO-CV
 estado_gate: Lidl aprobado; ASIC bloqueado (2026-08-09)
 
 fase_siguiente:
-PLAYBOOK_GUION_CARTA_PRESENTACION
+cerrar documentalmente CAND-2026-020 y mantener la presentación fuera de alcance
 
-estado_fase_siguiente: en_prueba; CAND-2026-020 tiene el guion `apto` y espera decisión humana del gate; la carta es obligatoria para completar el paquete mínimo CV + carta
+estado_fase_siguiente: `documentalmente_completa`; `presentada: false`; no se ha enviado la candidatura
 
 caso_base:
 CAND-2026-020
@@ -1771,19 +1823,15 @@ CAND-2026-020
 
 La validación de entrada se completó con `CAND-2026-020`, un caso controlado de bloqueo y un caso controlado `no_recomendada`. La persona responsable aprobó explícitamente `GATE-CANDIDATURA-GUION` el 2026-08-05 para Lidl y el 2026-08-06 para ASIC. Tras regenerar los guiones conforme al contrato 1.0.1/2.1, ambos `GATE-GUION-CV-CONTENIDO` fueron reevaluados técnicamente y aprobados expresamente por la persona responsable el 2026-08-07.
 
-El contrato de `PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA` y su plantilla 1.2 se validaron técnicamente mediante fixtures aislados. Los gates aprobados autorizaron la ejecución productiva para Lidl y ASIC. La composición CV-only se implantó y se ejecutó en ambos casos: generó `cv.docx`, `cv.pdf` y `cv.tex`, con fotografía incluida, una página y cobertura literal de los textos del JSON. Las revisiones humanas se registraron y los veredictos se completaron: Lidl `apto_para_presentacion` y ASIC `no_competitivo`. No se ha realizado ningún envío.
+El contrato de `PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA` y su plantilla 1.2 se validaron técnicamente mediante fixtures aislados. Los gates aprobados autorizaron la ejecución productiva para Lidl y ASIC. La composición CV-only se implantó y se ejecutó en ambos casos: generó `cv.docx`, `cv.pdf` y `cv.tex`, con fotografía incluida, una página y cobertura literal de los textos del JSON. Las revisiones humanas se registraron y los veredictos se completaron: Lidl `apto_para_presentacion` y ASIC `no_competitivo`. La rama de carta de CAND-2026-020 está compuesta, revisada humanamente y evaluada por `PLAYBOOK_VEREDICTO_FINAL_CARTA` v1.0.0 con resultado `APTA`, valor incremental `medio` y recomendación `incluir`; `GATE-VEREDICTO-CARTA` fue aprobado humanamente el 2026-08-10. CAND-2026-020 queda documentalmente completa y `presentada` permanece en `false`; los artefactos de presentación se conservan como línea futura.
 
 ---
 
 ## 45. Siguiente transición permitida
 
-La siguiente transición operativa de CAND-2026-020 es aprobar humanamente el
-gate del guion, redactar la carta y revisarla humanamente. Después se completará
-`paquete-presentacion.md` con CV + carta y
-podrá abrirse `GATE-CANDIDATURA-PRESENTACION`. Resolver formularios o credenciales
-de Indeed/Lidl no es una condición de este flujo. CAND-2026-019 permanece
-detenida por gate bloqueado. La aprobación de un gate no equivale a un envío
-automático.
+CAND-2026-020 ha alcanzado el cierre documental. No se abre ninguna fase de
+presentación en este flujo. CAND-2026-019 permanece detenida por gate CV
+bloqueado. La aprobación de un gate no equivale a un envío automático.
 
 El gate de entrada ya satisfecho para la composición fue:
 
@@ -1804,10 +1852,10 @@ PLAYBOOK_GENERAR_CONTENIDO_CANDIDATURA
 No debe planificarse todavía como implementación hasta que exista y se apruebe su contrato:
 
 ```text id="3iu8j1"
-nuevo veredicto
 PLAYBOOK_ANALISIS_EMPRESA_OBJETIVO
-redacción o composición de la carta antes de aprobar su guion y su gate de contenido
-excepción sin fotografía hasta resolver INC-004
+presentación automatizada y validación de canales externos
+entorno inicial de preguntas y configuración
+decisiones separadas de fotografía por artefacto mediante futura configuración
 ```
 
 Puede aparecer únicamente como:
@@ -1862,11 +1910,11 @@ PLAYBOOK_GUION_CARTA_PRESENTACION
 ↓
 guion-carta-presentacion.md → carta revisada
 ↓
-paquete-presentacion.md (CV + carta)
+PLAYBOOK_VEREDICTO_FINAL_CARTA
 ↓
-GATE-CANDIDATURA-PRESENTACION
+veredicto-final-carta.md → GATE-VEREDICTO-CARTA
 ↓
-presentación manual por la persona responsable
+CANDIDATURA DOCUMENTALMENTE COMPLETA
 ```
 
 ---
@@ -1899,10 +1947,19 @@ GATE-VEREDICTO-CV
 → Lidl aprobado; ASIC bloqueado
 
 PLAYBOOK_GUION_CARTA_PRESENTACION
-→ probado; CAND-2026-020 apto, decisión humana del gate pendiente; obligatorio para el paquete mínimo
+→ probado; CAND-2026-020 apto y con gate de contenido aprobado; carta revisada humanamente
 
-GATE-CANDIDATURA-PRESENTACION
-→ no abierto; presentación manual por la persona responsable
+PLAYBOOK_VEREDICTO_FINAL_CARTA
+→ en_prueba; CAND-2026-020 `APTA`, valor incremental `medio`, recomendación `incluir`
+
+GATE-VEREDICTO-CARTA
+→ aprobado humanamente el 2026-08-10 para CAND-2026-020
+
+CAND-2026-020
+→ documentalmente completa; `presentada: false`
+
+PRESENTACIÓN AUTOMATIZADA / UI DE CONFIGURACIÓN
+→ fuera de alcance; líneas futuras independientes
 ```
 
 ---
@@ -1931,7 +1988,176 @@ GATE-CANDIDATURA-PRESENTACION
 
 ---
 
+## 54. Cierre arquitectónico documental — 2026-08-11
+
+Esta sección fija el estado vigente de la arquitectura y prevalece sobre los
+registros históricos anteriores que describían la presentación como fase de
+cierre.
+
+### Fin del alcance actual
+
+```text
+oferta
+→ análisis
+→ candidatura
+→ CV (guion → contenido → composición → revisión/veredicto)
+→ carta, si la candidatura la requiere
+   (guion → contenido → composición → revisión/veredicto)
+→ candidatura documentalmente completa
+→ fin del alcance actual
+```
+
+La candidatura documentalmente completa exige el CV final aprobado y la carta
+final aprobada cuando sea requerida. No exige `paquete-presentacion.md`,
+`GATE-CANDIDATURA-PRESENTACION` ni evaluación de un portal. `presentada` sigue
+siendo un hecho externo y permanece en `false` hasta que la persona responsable
+realice una presentación real bajo un contrato futuro.
+
+### Ubicaciones canónicas
+
+- Playbooks operativos: `docs/metodologia/playbooks/`.
+- Templates operativos de Job-up:
+  `boveda-entrevista-profesional/busqueda-empleo/proceso/plantillas/`.
+- Scripts: `scripts/job-up/`.
+- Diseños y contratos experimentales: `docs/ideas-y-debates/mejoras-job-up/`.
+- Presentación futura: `docs/ideas-y-debates/mejoras-job-up/futuro/presentacion/`.
+
+### Líneas futuras separadas
+
+1. Entorno inicial de preguntas/configuración: descubrir opciones, aplicar
+   defaults y persistir decisiones; no se implementan UI, wizard ni campos
+   nuevos en esta fase.
+2. Presentación automatizada asistida por IA: navegación supervisada,
+   formularios y envío bajo contrato específico; no se implementa en el flujo
+   vigente.
+
+### Caso de referencia
+
+`CAND-2026-020` queda `documentalmente_completa`, con CV y carta aprobados y
+`presentada: false`. `CAND-2026-019` continúa detenida por su gate CV
+bloqueado. No se abre una sesión PCS nueva ni se realiza integración Git en este
+cierre.
+
+### Política de fotografía — cierre contractual 2026-08-11
+
+La decisión arquitectónica vigente distingue la representación de fotografía
+por artefacto:
+
+```text
+CV:
+fotografía incluida por defecto, salvo exclusión humana expresa.
+
+Carta:
+sin fotografía por defecto; inclusión solo mediante decisión o configuración
+humana expresa específica para esa carta.
+```
+
+La autorización `control.datos_privados.autorizacion.fotografia = incluir`
+confirma que la fotografía está disponible y autorizada para el CV; no implica
+mostrarla automáticamente en la carta. La identidad visual compartida no
+obliga a duplicar la fotografía. La carta actual de CAND-2026-020, sin
+fotografía, es conforme y conserva su veredicto `APTA`, su gate aprobado y el
+estado `documentalmente_completa`.
+
+---
+
+## 55. Reglas consolidadas tras la prueba E2E de CAND-2026-021 — 2026-08-11
+
+Estas reglas forman parte del contrato vigente y no son un registro de
+incidencias:
+
+1. **Fotografía del CV:** la fotografía es un recurso técnico privado incluido
+   por defecto. La ausencia de mención no genera pregunta, pendiente ni
+   bloqueo; solo una exclusión humana expresa cambia el valor a `omitir`. La
+   carta mantiene su política independiente sin fotografía por defecto.
+2. **Datos reutilizables y decisiones:** los hechos profesionales reutilizables
+   (como `vehículo propio`) se conservan en Data Core; las preferencias
+   generales (como la movilidad territorial) se distinguen de la decisión
+   concreta de una oferta. Un requisito relevante sin evidencia se resuelve
+   antes de `GATE-CANDIDATURA-GUION`.
+3. **Contexto corporativo:** tras identificar la empresa, el contexto cultural
+   útil se localiza o solicita antes de cerrar decisiones afectadas. Es contexto
+   con procedencia, nunca evidencia ni afinidad personal del candidato.
+4. **Transiciones:** gate aprobado + siguiente acción determinista + ausencia
+   de dato, decisión, revisión humana o acción irreversible implica continuidad
+   automática al siguiente playbook. Las excepciones se detienen y registran.
+5. **Composición de carta:** las líneas físicas consecutivas no vacías del
+   Markdown forman un único párrafo semántico; la línea vacía separa párrafos.
+   No se generan saltos manuales de Word por hard wrapping. Fecha y asunto se
+   derivan solo de datos confirmados y la jerarquía vigente es nombre 18 pt,
+   titular 11 pt, contacto 10,5 pt y cuerpo 11 pt justificado.
+6. **Inspección visual:** `render_generado` y `render_inspeccionado` son estados
+   distintos. No se declara `revision_visual: ejecutada` sin evidencia de
+   inspección real de los PNG/renderizados. La comprobación automática no
+   sustituye la revisión humana.
+7. **Cierre:** la aprobación de CV y carta deja la candidatura
+   `documentalmente_completa` con `presentada: false` y sin módulo activo
+   posterior. La presentación externa y sus artefactos siguen en la línea
+   futura, bajo responsabilidad de la persona usuaria.
+
+---
+
 # Changelog
+
+## Separación contractual de fotografía CV/carta — 2026-08-11
+
+- se formaliza `ARQ-24` para separar la política de fotografía por artefacto;
+- el CV mantiene fotografía por defecto salvo exclusión humana expresa;
+- la carta queda sin fotografía por defecto y sin renderizado automático;
+- se alinean el playbook operativo, la guía de formato y la plantilla de carta;
+- no se modifica el compositor de carta ni se regenera CAND-2026-020.
+
+## Cierre arquitectónico y reorganización documental — 2026-08-11
+
+- se cierra el alcance vigente en la generación y validación de artefactos
+  documentales;
+- se promocionan los playbooks y templates maduros a sus ubicaciones canónicas;
+- se reclasifican los artefactos de presentación como línea futura/experimental;
+- CAND-2026-020 pasa a `documentalmente_completa` con `presentada: false`;
+- se documentan por separado las líneas futuras de configuración y presentación
+  automatizada;
+- no se implementan UI, navegador, formularios, credenciales ni envíos.
+
+## Registro histórico: validación operativa de presentación — 2026-08-11
+
+- se incorporan `PLAYBOOK_VALIDAR_PRESENTACION_CANDIDATURA` y
+  `TEMPLATE_EVALUACION_PRESENTACION_CANDIDATURA`, ambos v1.0.0 en `en_prueba`;
+- se abre `GATE-CANDIDATURA-PRESENTACION` en `pendiente` para CAND-2026-020 el 2026-08-11;
+- la primera evaluación real resulta `APTA_CON_PENDIENTES_HUMANOS` por cuenta,
+  credenciales, preferencias de privacidad y campos obligatorios del portal;
+- `presentada` permanece en `false` y no se realiza ningún envío.
+
+## Aprobación humana del veredicto final de carta — 2026-08-10
+
+- se registró `GATE-VEREDICTO-CARTA` como `aprobado`, con decisión humana
+  aprobada y fecha 2026-08-10;
+- se mantuvieron `APTA`, el valor incremental `medio` y la recomendación
+  `incluir`;
+- la rama documental de carta queda cerrada y el paquete pasa a
+  `listo_para_gate`;
+- `GATE-CANDIDATURA-PRESENTACION` continúa sin abrir y no se ha realizado
+  ningún envío.
+
+## Corrección de propagación y regeneración del veredicto de carta — 2026-08-10
+
+- se propagó a la evaluación directa la decisión humana ya existente de
+  `GATE-CARTA-REVISION-HUMANA` (`aprobado`, 2026-08-10);
+- se regeneró completamente `veredicto-final-carta.md` para CAND-2026-020;
+- el caso obtuvo `APTA`, valor incremental `medio`, recomendación `incluir` y
+  `GATE-VEREDICTO-CARTA` `pendiente` de decisión humana;
+- `GATE-CANDIDATURA-PRESENTACION` continúa cerrado y no se ha realizado ningún
+  envío.
+
+## Veredicto final independiente de carta — 2026-08-10
+
+- se incorpora `PLAYBOOK_VEREDICTO_FINAL_CARTA` v1.0.0 y
+  `TEMPLATE_VEREDICTO_FINAL_CARTA`, ambos en `en_prueba`;
+- se formaliza `GATE-VEREDICTO-CARTA`, separado de la revisión humana y del
+  gate de presentación;
+- se intenta probar CAND-2026-020, pero la fuente directa de la revisión humana
+  sigue en `pendiente` mientras los resúmenes declaran `aprobado`; el caso
+  queda bloqueado y no emite resultado competitivo;
+- el gate completo sigue sin abrirse y `presentada` permanece en `false`.
 
 ## 0.4.0 — 2026-08-04
 

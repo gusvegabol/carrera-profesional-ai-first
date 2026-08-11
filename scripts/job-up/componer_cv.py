@@ -12,6 +12,8 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 from PIL import Image
 
+from cabecera_candidatura import construir_cabecera_candidatura
+
 
 @dataclass(frozen=True)
 class RenderTexto:
@@ -62,6 +64,7 @@ def _texto(item: dict[str, Any], discriminator: str) -> RenderTexto:
 def construir_modelo_cv(documento: dict[str, Any]) -> RenderCV:
     """Construye el árbol visible usando exclusivamente ``contenido_cv``."""
     contenido = documento["contenido_cv"]
+    canonical_header = construir_cabecera_candidatura(documento, validar_privacidad=False)
     encabezado = contenido["encabezado"]
     unidades = tuple(_texto(item, "tipo") for item in sorted(encabezado.get("unidades", []), key=_orden))
     contacto = tuple(_texto(item, "tipo") for item in sorted(encabezado.get("contacto", []), key=_orden))
@@ -84,7 +87,7 @@ def construir_modelo_cv(documento: dict[str, Any]) -> RenderCV:
             bloques=tuple(blocks),
         ))
     return RenderCV(
-        RenderEncabezado(str(encabezado["nombre_completo"]["texto"]), unidades, contacto),
+        RenderEncabezado(canonical_header.nombre, unidades, contacto),
         tuple(secciones),
     )
 
